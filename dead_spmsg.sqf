@@ -1,0 +1,1 @@
+format['server globalChat "// %1 Has Joined Our Life RPG as %2!"', name player, player] call broadcast;
