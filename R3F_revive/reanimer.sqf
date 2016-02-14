@@ -24,6 +24,12 @@ _blesse setVariable ["KOED",false,true];
 _joueur attachTo [_blesse, [-0.666, 0.222, 0]];
 _joueur setDir 90;
 _joueur playMoveNow "AinvPknlMstpSnonWrflDnon_medic";  
+sleep 5;
+player groupchat format["You have been payed $2000 for reviving %1, They still need more medical attention!", _blesse];
+['geld',2000] call INV_AddInventoryItem;
+sleep 7;
+player groupchat "If there are any Officers on scene, consult them before providing medical attention!";
+
 
 R3F_REV_code_distant = [_blesse, "playMoveNow", "AinjPpneMstpSnonWrflDnon_rolltoback"];
 publicVariable "R3F_REV_code_distant";

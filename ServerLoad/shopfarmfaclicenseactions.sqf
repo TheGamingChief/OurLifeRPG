@@ -115,8 +115,15 @@ _flag        = ((INV_Lizenzen select _i) select 1);
 _licensename = ((INV_Lizenzen select _i) select 2);								
 _cost        = ((INV_Lizenzen select _i) select 3);								
 _added       = _Arr2 select _i;	
-																																							
-if ((player distance ((INV_Lizenzen select _i) select 1) <= 5) and !(((INV_Lizenzen select _i) select 0) call INV_HasLicense) and (_Arr2 select _i == 0)) then 
+									
+_closestLicShop = 999;
+{
+  if (player distance _x < _closestLicShop) then {
+	_closestLicShop = player distance _x;
+  };
+} forEach ((INV_Lizenzen select _i) select 1);
+
+if ((_closestLicShop <= 5) and !(((INV_Lizenzen select _i) select 0) call INV_HasLicense) and (_Arr2 select _i == 0)) then 
 
 	{
 																											
@@ -125,13 +132,18 @@ if ((player distance ((INV_Lizenzen select _i) select 1) <= 5) and !(((INV_Lizen
 
 	};																																				
 
-if ((player distance ((INV_Lizenzen select _i) select 1) > 5) and (_Arr2 select _i == 1) || (_license call INV_HasLicense)) then 
+if ((_closestLicShop > 5) and (_Arr2 select _i == 1) || (_license call INV_HasLicense)) then 
 
 	{																														
 
-	call compile format ["player removeaction a_license%1; ", _i];
-	
-	_Arr2 set [_i,0];
+		_autismLicName = format["a_license%1", _i];
+		
+		if (!(isNil(_autismLicName))) then {
+		
+			call compile format ["player removeaction %1;", _autismLicName];
+			_Arr2 set [_i,0];
+		
+		};
 
 	};		
 

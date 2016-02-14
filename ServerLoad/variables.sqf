@@ -158,6 +158,11 @@ if(debug)then{drugstockinc = 6;druguserate = 20};
 maxcasinomoney = 150000;
 wantedamountforcasino = 100000;
 
+//===== Chop Shop
+wantedamountforstriping = 20000;
+wantedamountforchoping = 20000;
+
+
 //===== Bank robbing
 wantedamountforbank = 100000;
 
@@ -365,6 +370,7 @@ copmarker_on             = 1;
 despawnarray	 	 = [["EvMoney", 300], ["Suitcase", 300]];
 workplacearray           = [[workplace1, 80], [workplace2, 80], [workplace3, 60]];
 huntingarray             = [["hunting1", 450]];
+doingSomething            = false;
 nonlethalweapons	 = ["Binocular", "NVGoggles", "ItemMap", "ItemCompass", "ItemRadio", "ItemWatch", "ItemGPS"];
 slavearray               = workplacearray;
 hurenarray               = [[brothel1, 15], [brothel2, 15], [brothel3, 15]];
@@ -535,5 +541,15 @@ TankenCost = 100; publicvariable "TankenCost";
 bombactive = false; publicvariable "bombactive";
 fireactive = true; publicvariable "fireactive";
 fireactive2 = false; publicvariable "fireactive2";
+randomfire = false; publicvariable "randomfire";
+fireIsSpawned = false; publicVariable "fireIsSpawned";
+gasIsSpawned = false; publicVariable "gasIsSpawned";
+fixinggas = false; publicVariable "fixinggas";
+fixingfire = false;	publicVariable "fixingfire";
+wreckIsSpawned = false;	publicVariable "wreckIsSpawned";
+fixingwreck = false; publicVariable "fixingwreck";
+still1on = false; publicVariable "still1on";
+still2on = false; publicVariable "still2on";
+still3on = false; publicVariable "still3on";
 onplayerconnected 'publicVariable "GesetzArray";publicVariable "allowedcamera";publicVariable "allowedwar";publicVariable "allowedcarrier";publicVariable "INV_ItemTypenArray";publicvariable "INV_itemstocks";currentTime = daytime; publicvariable "currentTime";';
 };

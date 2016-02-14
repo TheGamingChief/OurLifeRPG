@@ -55,6 +55,7 @@ _h = [] execVM "ServerLoad\animList.sqf";
 waitUntil{scriptDone  _h};
 [1112, "Exec Misc Functions",45] call RL_LoadingSetText;
 _h = []	execVM "ServerLoad\miscfunctions.sqf";
+_h = [] execVM "lottoexec.sqf";
 waitUntil{scriptDone  _h};
 [1112, "Exec Main Variables",50] call RL_LoadingSetText;
 _h = [] execVM "ServerLoad\variables.sqf";
@@ -118,11 +119,24 @@ D_OkayImInNowCUNThahaha = true;
 
 execVM "ServerCleaner.sqf";
 execVM "Buildingfixer.sqf";
-
+	
 ["schluesselbund",1] call INV_AddInvItem;
 waitUntil{!isNil "INV_AddInvItem"};
-OL_InitComplete = true;
 
+
+fn_netSay3D = compile preprocessFileLineNumbers "scripts\foster\fn_netSay3D.sqf";
+
+if (isNil "PVEH_netSay3D") then {
+    PVEH_NetSay3D = [objNull,0];
+};
+
+"PVEH_netSay3D" addPublicVariableEventHandler {
+      private["_array"];
+      _array = _this select 1;
+     (_array select 0) say3D (_array select 1);
+};
+
+OL_InitComplete = true;
 chopavailable = true;
 slotsavailable = true;
 robcasinoavailable = true;

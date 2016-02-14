@@ -6,6 +6,8 @@ _w3 = 0;
 _streetrepold = 0;
 _LetzterKontostand = 0;
 _prevINV_InventarArray = [];
+_player = player;
+
 while {true} do 
 
 	{
@@ -145,8 +147,55 @@ while {true} do
 	pmcarray          = [];
 	unarray           = [];
 	medicarray        = [civ31,civ32,civ33,civ48,civ49,civ50,civ51,civ52,civ53,civ54,civ55,civ56];
+     
+	if (player distance getmarkerpos "fire" <= 15 && !(playerside == resistance)) then 
+
+		{
+		player setdamage .5;
+		vehicle player setdamage .3;
 		};
+
+	if (player distance getmarkerpos "fire" <= 10 && !(playerside == resistance)) then 
+
+		{
+		player setdamage .8;
+		vehicle player setdamage .6;
+		titlecut [" ","BLACK IN",1];
+		};
+		
+	if (player distance getmarkerpos "fire" <= 5 && !(playerside == resistance)) then 
+
+		{
+		player setdamage .9;
+		vehicle player setdamage .8;
+		titleCut ["", "BLACK FADED", 30];
+		};
+		
+		if (player distance getmarkerpos "GasLeak" <= 15 && !(playerside == resistance)) then 
+
+		{
+		player setdamage .5;
+		vehicle player setdamage .3;
+		};
+
+	if (player distance getmarkerpos "GasLeak" <= 10 && !(playerside == resistance)) then 
+
+		{
+		player setdamage .8;
+		vehicle player setdamage .6;
+		titlecut [" ","BLACK IN",1];
+		};
+		
+	if (player distance getmarkerpos "GasLeak" <= 5 && !(playerside == resistance)) then 
+
+		{
+		player setdamage .9;
+		vehicle player setdamage .8;
+		titleCut ["", "BLACK FADED", 30];
+		};
+	
+	
+	};
 	if (Kontostand > bank_limit) then {Kontostand = bank_limit;player groupChat localize "STRS_maxbank";};
 	if (_geld > money_limit) then {['geld', money_limit] call INV_SetItemAmount; player groupChat localize "STRS_maxmoney";};
-
 };

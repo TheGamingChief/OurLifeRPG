@@ -285,6 +285,18 @@ if (player distance cvault >= 3) exitWith {[] call fn_LeftCasinoNotification;};
 sleep 2;
 
 if (player distance cvault >= 3) exitWith {[] call fn_LeftCasinoNotification;};		
+player playMove "AinvPknlMstpSnonWrflDnon_medic";
+sleep 2;
+playsound "Drill";		
+player groupchat "Begins Drilling into third bolt...";
+sleep 5;
+
+
+if (player distance cvault >= 3) exitWith {[] call fn_LeftCasinoNotification;};	
+1001 cutText ["Shit... Is that the cops...","PLAIN DOWN"];
+sleep 2;
+
+if (player distance cvault >= 3) exitWith {[] call fn_LeftCasinoNotification;};		
 player playMove "AinvPknlMstpSlayWrflDnon_medic";
 sleep 2;
 playsound "Drill";	

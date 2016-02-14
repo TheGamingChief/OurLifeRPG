@@ -113,6 +113,6 @@ R3F_REV_CFG_player_can_drag_body = true;
  * 
  * Ces trois variables peuvent-être modifiées par un script externe à n'importe quelle moment avec effet immédiat.
  */
-R3F_REV_CFG_list_of_classnames_who_can_revive = ["KPFS_THW_Worker_helmet","KPFS_THW_Worker","KPFS_THW_Press","ibr_paramedic"];
+R3F_REV_CFG_list_of_classnames_who_can_revive = ["KPFS_THW_Worker_helmet","KPFS_THW_Worker","KPFS_THW_Press","ibr_paramedic","a2l_firefighter1","a2l_firefighter","hazmatRed","hazmatYellow"];
 R3F_REV_CFG_list_of_slots_who_can_revive = [];
 R3F_REV_CFG_all_medics_can_revive = false;

@@ -41,6 +41,8 @@ sleep 5;
 
 player groupchat format["You made $%1 from the car parts!",_payout];
 ['geld',_payout] call INV_AddInvItem;
+(format['if(!("Striped A Vehicle In The Chopshop" in %1_reason))then{%1_reason = %1_reason + ["Striped A Vehicle In The Chopshop"]}; %1_wanted = 1; kopfgeld_%1 = kopfgeld_%1 + wantedamountforstriping;', player]) call broadcast;
+
 
 sleep 5;
 chopavailable = true;

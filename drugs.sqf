@@ -88,7 +88,8 @@ if (_item == "Cocaine") then
 	while {time < _endeZeit} do 
 
 		{
-
+        _player = player;
+		[_player,"coke"] call fn_netSay3D;
 		_force = random 10;
 		"chromAberration" ppEffectEnable true;
 		"chromAberration" ppEffectAdjust [_force / 12, _force / 12, false];
@@ -111,7 +112,8 @@ if (_item == "Cocaine") then
 if (_item == "marijuana") then 
 
 	{
-
+    _player = player;
+	[_player,"weed"] call fn_netSay3D;
 	Flare = "SmokeShellGreen" createVehicle position player;
 	if (vehicle player != player) then { Flare attachTo [vehicle player,[0,0,0.]];}
 		else {Flare attachTo [player,[0,0,0.]];};
@@ -136,7 +138,8 @@ if (_item == "marijuana") then
 if (_item == "meth") then 
 
 	{
-
+     _player = player;
+	[_player,"coke"] call fn_netSay3D;
 	Flare = "SmokeShellred" createVehicle position player;
 	if (vehicle player != player) then { Flare attachTo [vehicle player,[0,0,0.]];}
 		else {Flare attachTo [player,[0,0,0.]];};

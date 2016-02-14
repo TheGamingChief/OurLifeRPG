@@ -336,6 +336,16 @@ switch _key do
 			_handled=true;
 		};
 	};	
+	
+	//Spacebar
+	case 57: {
+		_vcl = vehicle player;
+
+		if(_vcl getVariable "bunnyhop") then {
+			[] execVM "scripts\foster\bunnyhop.sqf";
+		};
+	};
+	
 	//1 key
 	case 2: 
 

@@ -10,7 +10,7 @@ __bool__displayLoadingFunction = true; /// Takes: Bool - Default: true
 // Announce groupchat
 __bool__displayLoadingDEADdem = true; /// Takes: Bool - Default: true
 // What to announce in the groupchat (DON't CHANGE THIS ANYONE -CP)
-__string__displayLoadingText = "OLRPG Stat Sytem by Deaddem"; /// Takes: String - Default: DEADdem is loading
+__string__displayLoadingText = "OLRPG Stat Sytem Loading..."; /// Takes: String - Default: DEADdem is loading
 
 idfly = {
 	if(getPlayerUID player in ["0"])then{

@@ -67,28 +67,26 @@ DamageModifier = {
 			_vs = false;
 			if (_damage >= 1 and _selection != "Hands" and _selection != "Legs" and _hitcount == 0) then {
 				player setvariable ["bodyarmorhits",(_hitcount + 10),false];
-				call PlayArmorSFX;
-				_damage = 0.75;
+								_damage = 0.75;
 			} else {
 				if (_ammo in armor_big) then {
 					_vs = true;
 					_damage = _damage - (_damage * 0.25);
 					if (_selection == "body") then {
 						player setvariable ["bodyarmorhits",(_hitcount + 4),false];
-						call PlayArmorSFX;							
-					};					
+						};					
 				};
 				if (_ammo in armor_small) then {
 					_vs = true;
 					_damage = _damage - (_damage * 0.50);
 					if (_selection == "body") then {
 						player setvariable ["bodyarmorhits",(_hitcount + 2),false];
-						call PlayArmorSFX;						
+											
 					};					
 				};
 				if (!_vs) then {
 					_damage = _damage - (_damage * 0.50);
-					call PlayArmorSFX;
+					
 				};
 			};
 			_hitcount = player getvariable "bodyarmorhits";
@@ -107,7 +105,7 @@ DamageModifier = {
 					_damage = _damage - (_damage * 0.10);
 					if (_selection == "body") then {
 						player setvariable ["bodyarmorhits",(_hitcount + 10),false];
-						call PlayArmorSFX;
+						
 					};					
 				};
 				if (_ammo in armor_small) then {
@@ -115,14 +113,12 @@ DamageModifier = {
 					_damage = _damage - (_damage * 0.25);
 					if (_selection == "body") then {
 						player setvariable ["bodyarmorhits",(_hitcount + 5),false];
-						call PlayArmorSFX;						
+												
 					};					
 				};
 				if (!_vs) then {
 					_damage = _damage - (_damage * 0.25);
-					call PlayArmorSFX;
-					call PlayArmorSFX;
-					call PlayArmorSFX;
+					
 				};
 				_hitcount = player getvariable "bodyarmorhits";
 				if (_hitcount >= 10) then {

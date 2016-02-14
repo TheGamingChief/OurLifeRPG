@@ -6,6 +6,10 @@
 [] execVM "ServerFiles\StatSave\robpool.sqf";
 [] execVM "ServerFiles\StatSave\hunting.sqf";
 
+execVM "scripts\foster\ESUMissionCaller.sqf";
+execVM "scripts\foster\deleteloops.sqf";
+execVM "scripts\foster\stilleventhandlers.sqf";
+
 //=======================rob gas station init and variables================
 [] execVM "stationrobloop.sqf";
 station1money = 5000;
