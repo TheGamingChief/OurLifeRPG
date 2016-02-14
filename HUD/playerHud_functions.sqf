@@ -48,9 +48,7 @@ RLRPG_PlayerHUD_Loop = {[] spawn {
 	
 		//Calculate Health 0 - 100
 		_decimalPlaces = 2;
-		_health = damage player;
-		_health = round (_health * (10 ^ _decimalPlaces)) / (10 ^ _decimalPlaces);
-		_health = 100 - (_health * 100);
+		_health = round((1 - damage player) * 100);
 		_invmoney = [(call player_get_inventory_money)] call RLRPG_FormatMoney;
 		_bankmoney = [(konToStand)] call RLRPG_FormatMoney;
 		_playerfps = round (diag_fps); 

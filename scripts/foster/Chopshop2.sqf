@@ -32,6 +32,7 @@ deleteVehicle _vcl;
  
 player groupchat format["Heres your money!$ %1",_pay];
 ['geld',_pay] call INV_AddInvItem;
+(format['if(!("Chopped A Vehicle" in %1_reason))then{%1_reason = %1_reason + ["Chopped A Vehicle"]}; %1_wanted = 1; kopfgeld_%1 = kopfgeld_%1 + wantedamountforchoping;', player]) call broadcast;
 
 sleep 5;
 chopavailable = true;

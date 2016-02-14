@@ -57,6 +57,8 @@ sounds[] = {};
 
 #include "1614524.hpp"
 
+#include "2085272.hpp"
+
 #include "INVdialogs.hpp"
 
 #include "4782911.hpp"

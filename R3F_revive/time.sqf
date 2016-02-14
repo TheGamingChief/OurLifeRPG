@@ -53,7 +53,7 @@ if (_timer <= 0) then {
 	player addWeapon "ItemCompass";
 	player addWeapon "ItemWatch";
 	player addWeapon "ItemGPS";
-	player setVariable ["KOED",false,true];
+	player setVariable ["KOED2",false,true];
 	player enableSimulation true;
 };
 		
@@ -64,6 +64,25 @@ if (player getVariable "KOED") then
 	player allowDamage true;
 	[nil,player,rSwitchMove,"amovppnemstpsnonwnondnon"] call RE;
 	hintSilent parseText format["<t color='#ff0000'>%1 You have been revived</t>", name player];
+	player addWeapon "ItemMap";
+	player addWeapon "ItemRadio";
+	player addWeapon "ItemCompass";
+	player addWeapon "ItemWatch";
+	player addWeapon "ItemGPS";
+	sleep 15;
+	player groupchat "Your legs are broken and need to be healed by EMS!";
+	player setHit ["legs", 1];
+	player enableSimulation true;
+};
+
+if (player getVariable "KOED2") then
+{
+	player allowDamage true;
+} else {
+	player allowDamage true;
+	[nil,player,rSwitchMove,"amovppnemstpsnonwnondnon"] call RE;
+	hintSilent parseText format["<t color='#ff0000'>%1 You have respawn</t>", name player];
+	player setVariable ["KOED",false,false];
 	player addWeapon "ItemMap";
 	player addWeapon "ItemRadio";
 	player addWeapon "ItemCompass";

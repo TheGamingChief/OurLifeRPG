@@ -11,7 +11,6 @@ if(_art == "use")then
 	if(_vcl iskindof _type call INV_getitemTypeKg > 2)exitwith{player groupchat "you cannot tune this vehicle"};
 	if(_vcl iskindof "Motorcycle")exitwith{player groupchat "you cannot upgrade this!"};
 	if(_vcl iskindof "ship")exitwith{player groupchat "you cannot upgrade boats"};
-	if(_vcl iskindof "Air")exitwith{player groupchat "you cannot upgrade air vehicles!"};
 	if (!(player == driver vehicle player)) exitWith {player groupChat "You must be the driver to tune this";};
 	_check = _vcl getVariable "tuning";
 

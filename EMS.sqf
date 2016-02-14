@@ -1,72 +1,29 @@
-private ["_unit"];
-_unit = player;
-_int = 1; //intensity of fog (0 to 1)
+_fireobject = nearestObject [player, "HeliHEmpty"];
+_player = player;
 
-if (player distance getmarkerpos "Fire" <= 45) then
+if (_fireobject getVariable "isonfire" == 1) then
 {
 
-
-_source = "logic" createVehicleLocal (getpos _unit);
-	_fog = "#particlesource" createVehicleLocal getpos _source;
-	_fog setParticleParams [["\Ca\Data\ParticleEffects\Universal\Universal", 16, 12, 13,0],
-	"", 
-	"Billboard", 
-	0.5, 
-	0.5, 
-	[0,.25,0],
-	[0, 0, -.2], 
-	1, 2.8,	1, 1.3, 
-	[0, 0.2,0], 
-	[[1,1,1, _int], [1,1,1, 0.01], [1,1,1, 0]], 
-	[1000], 
-	1, 
-	0.04,
-	"", 
-	"", 
-	_source];
-	_fog setParticleRandom [2, [0, 0, 0], [0.25, 0.25, 0.25], 0, 0.5, [0, 0, 0, 0.1], 0, 0, 10];
-	_fog setDropInterval 0.001;
-
-_source attachto [_unit,[0,0.15,.5], "lefthand"]; // get fog to come out of player mouth
-{deleteVehicle _x;_deleted = _deleted + 1;} forEach (nearestObjects [player,["Land_Campfire_burning"], 30]);
-deletemarker "Fire";
-['geld', 5000] call INV_AddInvItem;
-player groupChat "You have been paid $5000 for putting out a fire";
-
-sleep 5; // 1/2 second exhalation
-deletevehicle _source;
-
-
-}
-
-else
-{
-	_source = "logic" createVehicleLocal (getpos _unit);
-	_fog = "#particlesource" createVehicleLocal getpos _source;
-	_fog setParticleParams [["\Ca\Data\ParticleEffects\Universal\Universal", 16, 12, 13,0],
-	"", 
-	"Billboard", 
-	0.5, 
-	0.5, 
-	[0,.25,0],
-	[0, 0, -.2], 
-	1, 2.8,	1, 1.3, 
-	[0, 0.2,0], 
-	[[1,1,1, _int], [1,1,1, 0.01], [1,1,1, 0]], 
-	[1000], 
-	1, 
-	0.04, 
-	"", 
-	"", 
-	_source];
-	_fog setParticleRandom [2, [0, 0, 0], [0.25, 0.25, 0.25], 0, 0.5, [0, 0, 0, 0.1], 0, 0, 10];
-	_fog setDropInterval 0.001;
-
-	_source attachto [_unit,[0,0.15,.5], "lefthand"]; 
-	{deleteVehicle _x;_deleted = _deleted + 1;} forEach (nearestObjects [player,["Land_Campfire_burning"], 30]);
-
-
-sleep 5; // 1/2 second exhalation
-deletevehicle _source;
-
+	if (fixingfire) exitWith {player groupChat "Someone else is already extinguishing the fire."};
+    if (!(call INV_isArmed)) exitWith {player groupChat "You need a Fire Hose to put out this fire!";}; 
+	
+	fixingfire = true;
+	publicVariable "fixingfire";
+		
+	titleText ["You are extinguishing the fire...","PLAIN DOWN"]; titleFadeOut 6;
+	
+	[_player,"firehose"] call fn_netSay3D;
+	sleep 30;
+	
+	if (!(alive player)) exitWith {fixingfire = false; publicVariable "fixingfire";};
+	
+	deleteVehicle _fireobject;
+	deleteMarker "Fire";
+	deleteMarker "Fire2";
+	bnkgeld = bnkgeld + 15000;
+	player groupChat "You have been paid $15,000 for putting out a fire! Good work!";
+	fireIsSpawned = false;
+	publicVariable "fireIsSpawned";
+	fixingfire = false;
+	publicVariable "fixingfire";
 };

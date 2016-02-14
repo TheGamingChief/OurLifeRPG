@@ -135,7 +135,8 @@ action123 = _role addaction ["Sign-up for Debit Card","debitcardsignup.sqf",["ma
 //======================================== PMC ==========================================================
 actionpmc1 = _role addaction ["Raise / Lower Gates","gateController.sqf",[cgate1],1,false,true,"","isciv and ((player distance pmcgatecp < 2) or (player distance pmcgatecp2 < 2)) and ((getPlayerUID player) in PMC_id)"];
 actionpmc2 = _role addaction ["Raise / Lower Gates","gateController.sqf",[cgate3],1,false,true,"","isciv and ((player distance pmcgatecp3 < 2) or (player distance pmcgatecp4 < 2)) and ((getPlayerUID player) in PMC_id)"];
-actionpmcskin = _role addaction ["Switch to PMC Uniform","noscript.sqf",'["Soldier_PMC"] call clothes;',1,true,true,"",'player distance pmcbank < 2 and isciv and ((getplayeruid player) in PMC_id)'];
+actionpmcskin = _role addaction ["Switch to PMC Uniform","noscript.sqf",'["CZ_Soldier_DES_EP1"] call clothes;',1,true,true,"",'player distance pmcbank < 2 and isciv and ((getplayeruid player) in PMC_id)'];
+actionpmcskin1 = _role addaction ["Switch to PMC Command Uniform","noscript.sqf",'["CZ_Special_Forces_TL_DES_EP1"] call clothes;',1,true,true,"",'player distance pmcbank < 2 and isciv and ((getplayeruid player) in CommandPMC_id)'];
 actionrep = _role addaction ["[Service Helicopter]","scripts\foster\Pmcrepair.sqf",[],1,false,true,"",'player distance pmchelipad2 <= 8 and ((getplayeruid player) in PMC_id)'];
 //========================================MAFIA==========================================================
 action48 = _role addaction ["Impound vehicle","noscript.sqf",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);[_vcl, "impound"] execVM "impound.sqf";',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);_vcl in INV_ServerVclArray and player distance _vcl < 10 and _vcl distance towgate < 50'];

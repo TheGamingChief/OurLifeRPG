@@ -43,8 +43,17 @@ switch _key do
             call adminMenuOpen;
         };
     };
-
-	//O Key
+	 //P
+   case 25: {
+   _vcl = vehicle player;
+   _uid = getplayeruid player;
+   if (vehicle player == player) exitWith {};    
+   if ( _uid in Chief_id) then 
+    {
+    [_vcl,"sound_police"] call fn_netSay3D;
+   };
+   };
+//O Key
 	case 24:
 	{
 		execVM "Scripts\Misc\HolsterPWeapon.sqf";

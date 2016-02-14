@@ -45,16 +45,20 @@ Speedy_Police_RestrainUnit = {
 		if (!(_man isKindOf "Man")) exitWith {hintSilent parseText format ["<t size='1.25' font='Zeppelin33' color='#D80C0C'>Nobody To Handcuff!</t>"];};
 		if (_man getVariable "Cuffed") exitWith {hintSilent parseText format ["<t size='1.25' font='Zeppelin33' color='#D80C0C'>Nobody To Handcuff!</t>"];};
 		hintSilent parseText format ["<t size='1.25' font='Zeppelin33' color='#D80C0C'>%1 Cuffed</t>", _man];
+		[_man,"restrain"] call fn_netSay3D;
 		[nil,_man,rSwitchMove,"actspercmstpsnonwrfldnon_interrogate02_forgoten"] call RE;
 		_man enableSimulation false;
 		_man setVariable ["Cuffed",true,true];
-	} else {
+		 format['server globalChat "%2 was handcuffed by %1";',name player, name _man] call broadcast;
+       	} else {
 		if (!(_man isKindOf "Man")) exitWith {hintSilent parseText format ["<t size='1.25' font='Zeppelin33' color='#D80C0C'>Nobody To Unhandcuff!</t>"];};
 		if (!(_man getVariable "Cuffed")) exitWith {hintSilent parseText format ["<t size='1.25' font='Zeppelin33' color='#D80C0C'>Nobody To Unhandcuff!</t>"];};
 		hintSilent parseText format ["<t size='1.25' font='Zeppelin33' color='#D80C0C'>%1 Released</t>", _man];
+		[_man,"restrain"] call fn_netSay3D;
 		[nil,_man,rSwitchMove,"Normal"] call RE;
 		_man enableSimulation true;
 		_man setVariable ["Cuffed",false,true];
+		format['server globalChat "%2 was released by %1";',name player, name _man] call broadcast;
 	};
 };
 

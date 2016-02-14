@@ -73,6 +73,33 @@ switch _key do
 		if (!AM_temp_carrying) then {[] call AM_CheckpointBuilder;}else{[] call AM_CheckpointBuilder_Drop;};
 	};
 	
+	case 22: {
+		if (isamedic) then 
+		{	
+			private["_tgt"];
+			if (!_shift) then
+			{
+				_tgt = cursorTarget;
+				if (!(_tgt in playableUnits)) exitWith {};
+				if (_tgt distance player > 3 || (!(_tgt isKindOf "Man"))) exitWith {};
+				if (_tgt getVariable "Attached") exitWith {};
+				ATT_PLY = _tgt;
+				_tgt attachTo [player,[0.6,0.3,0]];
+				hintSilent format ["%1 Attached!", name _tgt];
+				_tgt setVariable ["Attached",true,true];
+				_handled = true;
+			} else {
+				if (isNull ATT_PLY) exitWith {};
+				detach ATT_PLY;
+				hintSilent format ["%1 Released!", name _tgt];
+				ATT_PLY setVariable ["Attached",false,true];
+				ATT_PLY = objNull;
+				_handled = true;
+			};
+				
+		};
+	};
+	
 	//F5 key
 	case 63: 
 

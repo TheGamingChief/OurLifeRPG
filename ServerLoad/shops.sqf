@@ -29,7 +29,7 @@ _ass = ["RH_m9sd","15Rnd_9x19_M9SD","RH_g17sd","RH_17Rnd_9x19_g17SD","RH_m1911sd
 //9
 _mgs = ["RH_mk22","RH_8Rnd_9x19_Mk","KPFS_MP2","KPFS_32Rnd_MP2","RH_muzi","RH_32rnd_9x19_Muzi","RH_uzi","RH_9mm_32RND_Mag","RH_tmpeot","30Rnd_9x19_MP5","RH_fmg9","RH_9mm_32RND_Mag","GPS","NVGoggles","CHRYSLER_B_limmo","tcg_taurus_security", "ilpd_ags_cvpi"];
 //10. Equiptment shop
-_es = ["Binocular","GPS","NVGoggles","hideout","fishingpole","A_nav","drill"];
+_es = ["Binocular","GPS","NVGoggles","hideout","fishingpole","A_nav","bunnyhop","drill"];
 //11. Car Upgrades
 _cu = ["supgrade1","supgrade2"];
 //12. Car Shop
@@ -142,7 +142,7 @@ _gds = ["bread","straw"];
 //43
 _gds1 = ["supgrade1","supgrade2","reparaturkit"];
 //44
-_gds3 = ["roadblock","glt_roadsign_octagon","bargate","SearchLight_UN_EP1","roadcone","bunkersmall","FlagCarrierUSA","FlagCarrierRU","FlagCarrierTakistanKingdom_EP1","FlagCarrierCzechRepublic_EP1","FlagCarrierGermany_EP1","FlagCarrierBAF"];
+_gds3 = [];
 //45. Oil Trader/Seller
 _os = ["OilBarrel","Oil"];
 //46. Whale Sale
@@ -479,6 +479,8 @@ _copchief =
 //68
 _copk9 =
 [
+"x26",
+"x26_Mag",
 "RH_M4aim_k9",
 "RH_M4eotech_k9",
 "RH_M4acog_k9",
@@ -527,6 +529,8 @@ _copswat1 =
 "SmokeShell",
 "SWAT",
 "Rnd_9x19_M9",
+"x26",
+"x26_Mag",
 "M1014_pd",
 "8Rnd_B_Beneli_Pellets",
 "G36C_swat",
@@ -540,6 +544,8 @@ _copswat2 =
 "RAB_L111A1_swat",
 "SWAT",
 "Rnd_9x19_M9",
+"x26",
+"x26_Mag",
 "RH_usp_swat",
 "RH_15Rnd_9x19_usp_swat",
 "RH_M4a1aim_swat",
@@ -558,6 +564,8 @@ _copswat3 =
 "RAB_L111A1_swat",
 "SWAT",
 "Rnd_9x19_M9",
+"x26",
+"x26_Mag",
 "RH_usp_swat",
 "RH_15Rnd_9x19_usp_swat",
 "RH_M4sdaim_swat",
@@ -572,6 +580,8 @@ _copswat3 =
 //71.4
 _copswat4 =
 [
+"x26",
+"x26_Mag",
 "RH_uspsd_swat",
 "RH_15Rnd_9x19_uspsd_swat",
 "RH_M4sdaim_wdl_swat",
@@ -590,6 +600,8 @@ _copswat5 =
 "RAB_L111A1_swat",
 "SWAT",
 "Rnd_9x19_M9",
+"x26",
+"x26_Mag",
 "RH_usp_swat",
 "RH_15Rnd_9x19_usp_swat",
 "KPFS_HK416_Aim_swat",
@@ -610,7 +622,7 @@ _copswatvehicle =
 [
 "swat_tahoe",
 "ilf350swat",
-"suburban_pd_black",
+"swat_sub",
 "suburban_swat",
 "il_bearcat"
 ];
@@ -953,7 +965,7 @@ _PMC =
 _PMCAIR =
 [
 "MH6J_EP1",
-"pmo_mh6dl_desert"
+"pmo_mh6dl_urban"
 ];
 
 _PMCBOAT =
@@ -1247,7 +1259,7 @@ INV_ItemShops = [
 [fuel2,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
 [fuel4,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
 [fuel5,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
-[fuel6,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
+[fuel7,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
 [fuel8,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
 [shop1,"Food Shop",dummyobj,dummyobj,_is,_is,true],
 [shop2,"Food Shop",dummyobj,dummyobj,_is,_is,true],

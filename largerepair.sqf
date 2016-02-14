@@ -13,7 +13,14 @@ if (player distance _vcl <= 6) then
 {
 player groupchat "REPAIRING";
 [_item, -1] call INV_AddInvItem;
-sleep 15;
+player playMove "ainvpknlmstpslaywrfldnon_medic";
+sleep 2;
+playsound "Drill";
+sleep 5;
+player playMove "ainvpknlmstpslaywrfldnon_medic";
+sleep 2;
+playsound "Drill";
+sleep 5;
 _vcl setDamage 0;
 player groupchat "REPAIRED";
 };
