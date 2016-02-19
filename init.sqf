@@ -19,9 +19,9 @@ isClient = !isServer || (isServer && !isDedicated);
 version        	= "32";
 debug          	= false;
 dedicatedServer = false;
-copmcount      	= 31;
-civscount      	= 54;
-playercount    	= 85;
+copmcount      	= 24;
+civscount      	= 44;
+playercount    	= 80;
 debugarray     	= [];
 loadNotFinsihed = true;
 22254 cutRsc["RL_Dialog_loading", "plain"];
@@ -105,7 +105,7 @@ if(isNil "45983450u34h77y5646ccvd4tjdsjncx7y3h") exitWith
 };
 if(isServer) then
 {	
-	call compile preProcessFile "\iniDB\init.sqf";
+	//call compile preProcessFile "\iniDB\init.sqf";
 	[] call resetSafeCode;
 	sleep 2;
 	[] call autoUpdateSafeCode;
