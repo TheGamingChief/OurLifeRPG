@@ -182,15 +182,15 @@ hammermax=4;
 working=false;
 //===============================GANGS=============================================
 gangincome		 = 3200;
-gangcreatecost	 = 125000;
+gangcreatecost		 = 125000;
 gangdeltime		 = 900;
 gangsarray		 = [];
 gangmember		 = false;
 gangleader		 = false;
 gangareas		 = [gangarea1,gangarea2,gangarea3,gangarea4];
 //=================================================================================	      							
-CityLocationArray        = [[CityLogic1, 500], [CityLogic2, 400], [CityLogic4, 500], [CityLogic5, 200]];
-respawnarray		 = [respawn_civilian,respawn_guerrila,respawn_west_SOBR,respawn_west];
+CityLocationArray        = [[CityLogic1, 500], [CityLogic2, 400], [CityLogic4, 500], [CityLogic5, 200], [Militarybase, 200]];
+respawnarray		 = [respawn1,respawn2,respawn3,respawn4,respawn5,respawn6,respawn7,respawn8,respawn9,respawn10,respawn11,respawn12];
 //=========== cop patrol array ==========
 coppatrolarray  = 
 [
@@ -368,8 +368,7 @@ marker_CopDistance       = 50;   //controls distance cops need to be to make civ
 CivMarkerUngenau         = 20;     								
 copmarker_on             = 1; 
 despawnarray	 	 = [["EvMoney", 300], ["Suitcase", 300]];
-//workplacearray           = [[workplace1, 80], [workplace2, 80], [workplace3, 60]];
-workplacearray           = [];
+workplacearray           = [[workplace1, 80], [workplace2, 80], [workplace3, 60]];
 huntingarray             = [["hunting1", 450]];
 doingSomething            = false;
 nonlethalweapons	 = ["Binocular", "NVGoggles", "ItemMap", "ItemCompass", "ItemRadio", "ItemWatch", "ItemGPS"];

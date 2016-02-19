@@ -18,14 +18,6 @@ if ("PatrolBasic_license" call INV_HasLicense) then
 
 	};
 
-if ("Fto_license" call INV_HasLicense) then 
-
-	{
-
-	_income = _income + 2000;
-
-	};	
-
 if ("K9_license" call INV_HasLicense) then 
 
 	{
@@ -50,29 +42,13 @@ if ("SWAT_license" call INV_HasLicense) then
 
 	};
 	
-if ("Corporal_license" call INV_HasLicense) then 
-
-	{
-
-	_income = _income + 2000;
-
-	};		
-
-if ("Sergeant_license" call INV_HasLicense) then 
+if ("Deputy_license" call INV_HasLicense) then 
 
 	{
 
 	_income = _income + 3000;
 
-};
-
-if ("Deputy_license" call INV_HasLicense) then 
-
-	{
-
-	_income = _income + 2000;
-
-};	
+	};		
 
 if ("Sheriff_license" call INV_HasLicense) then 
 
@@ -103,10 +79,28 @@ if ("Chief_license" call INV_HasLicense) then
 	_income = _income + 10000;
 
 	};	
+if ((getPlayerUID player) in FTO_id) then
 
-if ((getPlayerUID player) in Donate_id) then
 {
-			_income = _income + 2000;
+	
+	_income = _income + 2000;
+
+};
+
+if ((getPlayerUID player) in Cpl_id) then
+
+{
+	
+	_income = _income + 2000;
+
+};
+
+if ((getPlayerUID player) in Sgt_id) then
+
+{
+	
+	_income = _income + 3000;
+
 };
 	
 if ((getPlayerUID player) in TierX_id) then
