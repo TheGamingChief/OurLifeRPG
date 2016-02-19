@@ -41,12 +41,12 @@ if (_art == "serverloop") then
 
 	while {true} do
 	{																																																													
-		for [{_i=0}, {_i < 61}, {_i=_i+1}] do 
+		for [{_i=0}, {_i < 10}, {_i=_i+1}] do 
 		{																																								
-			sleep 10;																					
-
+			sleep 60;					
+			
 			for [{_k=0}, {_k < count(WahlArray)}, {_k=_k+1}] do
-			{																																								
+			{
 				if (not((playerstringarray select _k) call ISSE_UnitExists)) then {WahlArray SET [_k, [] ];};
 			};			
 		};																																																
