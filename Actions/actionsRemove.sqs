@@ -284,6 +284,7 @@ _role RemoveAction actionemst1;
 _role RemoveAction actionemst2;
 _role RemoveAction gasaction;
 _role RemoveAction wreckaction;
+_role RemoveAction fdmedaction;
 fuelshop1 RemoveAction gsshop1;
 fuelshop2 RemoveAction gsshop2;
 fuelshop3 RemoveAction gsshop3;

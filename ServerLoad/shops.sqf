@@ -526,6 +526,7 @@ _copairweapon =
 //71.1
 _copswat1 =
 [
+"PDArmor",
 "SmokeShell",
 "SWAT",
 "Rnd_9x19_M9",
@@ -540,6 +541,7 @@ _copswat1 =
 //71.2
 _copswat2 =
 [
+"PDArmor",
 "SmokeShell",
 "RAB_L111A1_swat",
 "SWAT",
@@ -560,6 +562,7 @@ _copswat2 =
 //71.3
 _copswat3 =
 [
+"PDArmor",
 "SmokeShell",
 "RAB_L111A1_swat",
 "SWAT",
@@ -580,6 +583,7 @@ _copswat3 =
 //71.4
 _copswat4 =
 [
+"PDArmor",
 "x26",
 "x26_Mag",
 "RH_uspsd_swat",
@@ -596,6 +600,7 @@ _copswat4 =
 //71.5
 _copswat5 =
 [
+"PDArmor",
 "SmokeShell",
 "RAB_L111A1_swat",
 "SWAT",
@@ -620,9 +625,9 @@ _copswat5 =
 //72
 _copswatvehicle =
 [
-"swat_tahoe",
+"tahoe_uc_black",
 "ilf350swat",
-"swat_sub",
+"suburban_pd_black",
 "suburban_swat",
 "il_bearcat"
 ];
@@ -651,8 +656,7 @@ _copcoastguardair =
 //73.5
 _copfto =
 [
-"fto_ilpd_beat_f101",
-"instructor_tahoe_pd"
+"fto_ilpd_beat_f101"
 ]; 
  
 //74
@@ -929,6 +933,10 @@ _helix =
 
 _CommandPMC =
 [
+"ziptie",
+"reparaturkit",
+"medikit",
+"bjerk",
 "M40A3",
 "5Rnd_762x51_M24",
 "G36C_camo",
@@ -949,6 +957,10 @@ _CommandPMC =
 
 _PMC =
 [
+"ziptie",
+"reparaturkit",
+"medikit",
+"bjerk",
 "RH_m4aim_PMC",
 "M16A4pmc",
 "30Rnd_556x45_Stanag",
@@ -1262,7 +1274,7 @@ INV_ItemShops = [
 [fuel7,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
 [fuel8,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
 [shop1,"Food Shop",dummyobj,dummyobj,_is,_is,true],
-[shop2,"Food Shop",dummyobj,dummyobj,_is,_is,true],
+//[shop2,"Food Shop",dummyobj,dummyobj,_is,_is,true],
 [shop4,"Food Shop",dummyobj,dummyobj,_is,_is,true],
 [bailflag,"Food and Gun Locker",dummyobj,dummyobj,_cf,_cf,true],
 [pub1,"Pub",dummyobj,dummyobj,_pub,_pub,true],
@@ -1299,11 +1311,11 @@ INV_ItemShops = [
 [airshop,"Airplane Shop",dummyobj,asairspawn,_as,_as,true],
 [airshop2,"Chopper and Jet Shop",dummyobj,asairspawn,_assa,_assa,true],
 [airshop3,"Commercial Air Shop",dummyobj,asairspawn,_asc,_asc,true],
-[airshop4,"Chopper and Jet Shop",dummyobj,asairspawn2,_assa,_assa,true],
+//[airshop4,"Chopper and Jet Shop",dummyobj,asairspawn2,_assa,_assa,true],
 [scubashop, "Boat Shop",dummyobj,bs1spawn,_bs,_bs,true],      
 [boatshop2, "Boat Shop",dummyobj,boatspawn2,_bs,_bs,true],
-[boatshop4, "Sea Plane Shop",dummyobj,boatspawn4,_bsp,_bsp,false],
-[tboatshop1,"Boat Shop",dummyobj,tboatspawn1,_bt,_bt,true],
+//[boatshop4, "Sea Plane Shop",dummyobj,boatspawn4,_bsp,_bsp,false],
+//[tboatshop1,"Boat Shop",dummyobj,tboatspawn1,_bt,_bt,true],
 [insure,"Insurance",insure,dummyobj,_ins, _emptyshop,false],
 [tdoc,"FireFighter 1",dummyobj,tdocspawn,_td4,_td4,true],
 [tdoc6sub,"FireFighter 1",dummyobj,tdocspawnsub,_td4,_td4,true],
@@ -1320,7 +1332,7 @@ INV_ItemShops = [
 [tdoc7,"EMT 2 Equipment",dummyobj,tdocspawn,_td3,_td3,true],
 [tdoc7sub,"EMT 2 Equipment",dummyobj,tdocspawnsub,_td3,_td3,true],
 [resourcesell,"Sell Resources",dummyobj,dummyobj,_rs,_rs,true],
-[cheeseburger,"Jackos Cheeseburgers",dummyobj,dummyobj,_gds,_gds,true],
+//[cheeseburger,"Jackos Cheeseburgers",dummyobj,dummyobj,_gds,_gds,true],
 [workplace_getjobflag_4,"OL Emporium",dummyobj,dummyobj,_gds1,_gds1,true],
 [workplace_getjobflag_6,"Wigworths",dummyobj,dummyobj,_gds3,_gds3,true],
 [OilSell1,"Oil Dealer", dummyobj,dummyobj, _emptyshop,_os,true],
@@ -1339,17 +1351,17 @@ INV_ItemShops = [
 [pharmacy,"Pharmacy",dummyobj,pharmspawn,_psc,_emptyshop,false],
 [copbasic1,"Basic Police Gear",copbasic1,ccarspawn, _copbasic,_copbasic,true],
 [copbasic2,"Basic Police Gear",copbasic2,ccarspawn, _copbasic,_copbasic,true],
-[copbasic3,"Basic Police Gear",copbasic3,ccarspawn, _copbasic,_copbasic,true],
+//[copbasic3,"Basic Police Gear",copbasic3,ccarspawn, _copbasic,_copbasic,true],
 [copbasic4,"Basic Police Gear",copbasic4,ccarspawn, _copbasic,_copbasic,true],
-[copbasic5,"Basic Police Gear",copbasic5,ccarspawn3, _copbasic,_copbasic,true],
+//[copbasic5,"Basic Police Gear",copbasic5,ccarspawn3, _copbasic,_copbasic,true],
 [copbasic6,"Basic Police Gear",copbasic6,ccarspawn1, _copbasic,_copbasic,true],
 [copswate,"Basic Police Gear",copswate,dummyobj, _copbasic,_copbasic,true],
-[coptraffic1,"Traffic Equipment",coptraffic1,dummyobj,_coptraffic,_coptraffic,true],
-[coptraffic2,"Traffic Equipment",coptraffic2,dummyobj,_coptraffic,_coptraffic,true],
-[coptraffic3,"Traffic Equipment",coptraffic3,dummyobj,_coptraffic,_coptraffic,true],
-[coptraffic4,"Traffic Equipment",coptraffic4,dummyobj,_coptraffic,_coptraffic,true],
-[coptraffic5,"Traffic Equipment",coptraffic5,dummyobj,_coptraffic,_coptraffic,true],
-[coptraffic6,"Traffic Equipment",coptraffic6,dummyobj,_coptraffic,_coptraffic,true],
+//[coptraffic1,"Traffic Equipment",coptraffic1,dummyobj,_coptraffic,_coptraffic,true],
+//[coptraffic2,"Traffic Equipment",coptraffic2,dummyobj,_coptraffic,_coptraffic,true],
+//[coptraffic3,"Traffic Equipment",coptraffic3,dummyobj,_coptraffic,_coptraffic,true],
+//[coptraffic4,"Traffic Equipment",coptraffic4,dummyobj,_coptraffic,_coptraffic,true],
+//[coptraffic5,"Traffic Equipment",coptraffic5,dummyobj,_coptraffic,_coptraffic,true],
+//[coptraffic6,"Traffic Equipment",coptraffic6,dummyobj,_coptraffic,_coptraffic,true],
 [copuntrained,"Untrained Patrol Officer Equipment",copuntrained,ccarspawn,_copuntrained,_copuntrained,true],
 [coppo1,"Rookie Patrol Officer Equipment",coppo1,ccarspawn,_coppo1,_coppo1,true],
 [coppo2,"Patrol Officer Equipment",coppo2,ccarspawn,_coppo2,_coppo2,true],
@@ -1360,14 +1372,14 @@ INV_ItemShops = [
 [copsgtdeputy,"Sheriff Sgt Deputy Equipment",copsgtdeputy,ccarspawn1,_copsgtdeputy,_copsgtdeputy,true],
 [copsheriffdnr,"Sheriff D.N.R",copsheriffdnr,ccarspawn1,_copsheriffdnr,_copsheriffdnr,true],
 [copsheriff,"Sheriff Equipment",copsheriff,ccarspawn1,_copsheriff,_copsgt,true],
-[copdispatch,"Patrol Sergeant Equipment",copdispatch,ccarspawn3,_copsgt,_copsgt,true],
+//[copdispatch,"Patrol Sergeant Equipment",copdispatch,ccarspawn3,_copsgt,_copsgt,true],
 [coplt,"Patrol Lieutenant Equipment",coplt,ccarspawnlt,_coplt,_coplt,true],
 [copcpt,"Patrol Captain Equipment",copcpt,ccarspawncpt,_copcpt,_copcpt,true],
 [copchief,"Chief of Police Equipment",copchief,ccarspawnchief,_copchief,_copchief,true],
-[coptrafficdivision,"Traffic Division Equipment",coptrafficdivision,ccarspawn,_coptrafficdivision,_coptrafficdivision,true],
+//[coptrafficdivision,"Traffic Division Equipment",coptrafficdivision,ccarspawn,_coptrafficdivision,_coptrafficdivision,true],
 [copk9,"K-9 Officer Equipment",copk9,ck9spawn,_copk9,_copk9,true],
 [copk92,"Sheriff K-9 Equipment",copk92,ccarspawn1,_copk9sheriff,_copk9sheriff,true],
-[k9sheriff,"K-9 Officer Equipment",copk9,ck9spawn,_copk9,_copk9,true],
+//[k9sheriff,"K-9 Officer Equipment",copk9,ck9spawn,_copk9,_copk9,true],
 [copair,"Police Aircraft",dummyobj, cairspawn,_copair,_copair,true],
 [copair2,"Police Aircraft",dummyobj, airsheriff,_copair,_copair,true],
 [copairweapon,"Aviation Weapons",copairweapon, dummyobj,_copairweapon,_copairweapon,true],
@@ -1394,18 +1406,18 @@ INV_ItemShops = [
 [dshop6,"Donator Shop (Tier 6)",donateshop6,donatespawn6,_Donate6,_Donate6,true],
 [milp,"Rifle & Vehicle shop",milp,milps,_milpolice,_milpolice,true],
 [milpb,"Boat shop",milpb,milpsb,_milpoliceb,_milpoliceb,true],
-[tow,"Tow truck shop",tow,towv,_tows,_tows,true],
-[cia,"Cicada International Shop",cia,ciav,_cia,_cia,true],
+//[tow,"Tow truck shop",tow,towv,_tows,_tows,true],
+//[cia,"Cicada International Shop",cia,ciav,_cia,_cia,true],
 [terrorvip,"Terror VIP Shop",terrorvip,VIPterrorcarspawn,_VIPterror,_VIPterror,true],
-[vipshop1,"Tier-X Cars",vipshop1,vipcar,_vip4shoplist,_vip4shoplist,true],
+//[vipshop1,"Tier-X Cars",vipshop1,vipcar,_vip4shoplist,_vip4shoplist,true],
 [Diamond_1,"Pawn Shop",dummyobj,dummyobj,_js,_js,true],
 [vipterrorair,"VIP Terror Air Shop",vipterrorair,vipterroraswpawn,_vipterrorairlist,_vipterrorairlist,true],
 [hospsell,"Sell Organs",dummyobj,dummyobj,_hsc,_hsc,true],
-[bhunt,"Bounty Hunter Shop",bhunt,bhuntv,_bountyshop,_bountyshop,true],
-[txvipguns,"Tier-X Weapons",txvipguns,vipcar,_txvipguns,_txvipguns,true],
-[pirategearbox,"Piracy Gear",pirategearbox,pirateboatspawn,_pirategearshop,_pirategearshop,true],
-[IRAveh,"IRA Vehicles",dummyobj, IRAcarspawn,_IRAvehicles,_IRAvehicles,true],
-[IRAwep,"IRA Weapons",IRAweaponbox,IRAweaponbox,_IRAweapons,_IRAweapons,true],
+//[bhunt,"Bounty Hunter Shop",bhunt,bhuntv,_bountyshop,_bountyshop,true],
+//[txvipguns,"Tier-X Weapons",txvipguns,vipcar,_txvipguns,_txvipguns,true],
+//[pirategearbox,"Piracy Gear",pirategearbox,pirateboatspawn,_pirategearshop,_pirategearshop,true],
+//[IRAveh,"IRA Vehicles",dummyobj, IRAcarspawn,_IRAvehicles,_IRAvehicles,true],
+//[IRAwep,"IRA Weapons",IRAweaponbox,IRAweaponbox,_IRAweapons,_IRAweapons,true],
 [pmcbox1,"PMC Command",pmcbox1,pmcspawn,_CommandPMC,_CommandPMC,true],
 [pmcbox,"PMC Operator",pmcbox,pmcspawn,_PMC,_PMC,true],
 [pmcbox2,"PMC Boat",dummyobj,pmcboatspawn,_PMCBOAT,_PMCBOAT,true],
