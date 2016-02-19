@@ -23,7 +23,7 @@ workplacejob_deliveryflagarray   =
 [
 
 workplacejob_deliveryflag1, 
-workplacejob_deliveryflag2, 
+//workplacejob_deliveryflag2, 
 workplacejob_deliveryflag3, 
 workplacejob_deliveryflag4, 
 workplacejob_deliveryflag5, 

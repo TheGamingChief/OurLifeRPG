@@ -1,8 +1,8 @@
 _act = _this select 0;
 if(_act == "mds_open_home") then{
 	if(!createDialog "D_MDS_Home") exitWith{hint "Could not create dialog!"};
-	for[{_c = 0},{_c < count civstringarray},{_c = _c + 1}] do{
-		_civ = civstringarray select _c;
+	for[{_c = 0},{_c < count fuckingKillYourselfCopTMPArray},{_c = _c + 1}] do{
+		_civ = fuckingKillYourselfCopTMPArray select _c;
 		lbAdd [1,format['%1',_civ]];
 	};
 };
@@ -20,8 +20,8 @@ if(_act == "mdc_fill_home") then{
 	}else{
 		ctrlSetText [1003, format['Account: %1', name d_resultciv]];
 	};
-	for[{_c = 0},{_c < count civstringarray},{_c = _c + 1}] do{
-		_civ = civstringarray select _c;
+	for[{_c = 0},{_c < count fuckingKillYourselfCopTMPArray},{_c = _c + 1}] do{
+		_civ = fuckingKillYourselfCopTMPArray select _c;
 		lbAdd [1,format['%1',_civ]];
 	};
 	for[{_i = 0}, {_i < count D_Result_Warrants},{_i = _i +1}] do{
