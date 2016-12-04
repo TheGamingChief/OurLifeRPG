@@ -1,0 +1,10 @@
+titleText ["Ending Match....","BLACK"];
+removeAllWeapons player;
+D_PB_InSession = false;
+player setPos [getpos player select 0, (getpos player select 1)+55, (getpos player select 2)];
+sleep 1;
+titleText ["You have been ejected from the arena.", "PLAIN"];
+D_PB_TeamRed = [];
+D_PB_TeamBlue = [];
+publicVariable "D_PB_TeamRed";
+publicVariable "D_PB_TeamRed";

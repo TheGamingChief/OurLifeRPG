@@ -1,0 +1,1 @@
+{player removeAction _x} forEach RLRPG_RB_ActionArr;

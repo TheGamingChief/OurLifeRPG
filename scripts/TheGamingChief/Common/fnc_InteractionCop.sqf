@@ -1,0 +1,33 @@
+disableSerialization;
+_civ = civmenuciv;
+_RealName = name _civ;
+_Name = (findDisplay 6960) displayCtrl 6584;
+_TicketName = (findDisplay 65248) displayCtrl 1001;
+_JailName = (findDisplay 65458) displayCtrl 1001;
+_HandCuff = (findDisplay 6960) displayCtrl 54848;
+_Escort = (findDisplay 6960) displayCtrl 54847;
+_DrugSearch = (findDisplay 6960) displayCtrl 844526;
+_PatDown = (findDisplay 6960) displayCtrl 56478;
+_CheckInventory = (findDisplay 6960) displayCtrl 35489;
+_Gag = (findDisplay 6960) displayCtrl 23548;
+_ForceFeed = (findDisplay 6960) displayCtrl 624258;
+_JailSubject = (findDisplay 6960) displayCtrl 1609;
+
+_Name ctrlSetText format["Interact - %1", _RealName];
+_TicketName ctrlSetText format["Ticket - %1", _RealName];
+_JailName ctrlSetText format["Arrest - %1", _RealName];
+
+if (_civ getVariable "ZipTied") then {_HandCuff ctrlSetText "Remove Zip Ties";_HandCuff ctrlEnable true};
+if (_civ getVariable "Cuffed") then {_HandCuff ctrlSetText "Remove HandCuffs";_HandCuff ctrlEnable true};
+if (!(_civ getVariable "Cuffed")) then {_Escort ctrlEnable false};
+if (!(_civ getVariable "Cuffed")) then {_ForceFeed ctrlEnable false};
+if (_civ getVariable "Escort") then {_Escort ctrlSetText "Stop Escorting";_Escort ctrlEnable true};
+if (!(_civ call ISSE_IsVictim)) then {_DrugSearch ctrlEnable false};
+if (!(_civ call ISSE_IsVictim)) then {_PatDown ctrlEnable false};
+if (!(_civ call ISSE_IsVictim)) then {_CheckInventory ctrlEnable false};
+if (!(_civ call ISSE_IsVictim)) then {_CheckInventory ctrlEnable false};
+if (!(_civ call ISSE_IsVictim)) then {_Gag ctrlEnable false};
+if("Gag" call INV_GetItemAmount == 0) then{_Gag ctrlEnable false};
+if (_civ getVariable "Gagged") then {_Gag ctrlSetText "Remove Gag";_Gag ctrlEnable true};
+if("Donut" call INV_GetItemAmount == 0) then{_ForceFeed ctrlEnable false};
+if (!(_civ getVariable "Cuffed")) then {_JailSubject ctrlEnable false};
