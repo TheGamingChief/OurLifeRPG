@@ -26,16 +26,23 @@ CodeBroadcast = [];
     };
 };
 
-player setVariable ["Attached",false,true];
-player setVariable ["Cuffed",false,true];
-player setVariable ["ZipTied",false,true];
-player setVariable ["Gagged",false,true];
-player setVariable ["Escort",false,true];
+if (!isServer) then {
+  player setVariable ["Attached",false,true];
+  player setVariable ["Cuffed",false,true];
+  player setVariable ["ZipTied",false,true];
+  player setVariable ["Gagged",false,true];
+  player setVariable ["Escort",false,true];
 
-player addEventHandler ["fired", {["fired", (_this select 4), (_this select 1)] execVM "stun.sqf";}];
-player addEventHandler ["handleDamage", {_this call compile preprocessfile "sethit.sqf"}];
-//player addEventHandler ["HandleDamage",{_this call DDOPP_taser_handleHit}];
-//player addEventHandler ["handleDamage", {_this call RLRPG_Cfg_Inv_HandleDamage;}];
+  player addEventHandler ["fired", {["fired", (_this select 4), (_this select 1)] execVM "stun.sqf";}];
+  player addEventHandler ["handleDamage", {_this call compile preprocessfile "sethit.sqf"}];
+
+  handleStationUpdate = {
+    {
+      call compile format["%1 = %2;", _x select 0, _x select 1];
+		} forEach (_this select 1);
+  };
+  "serverStationUpdate" addPublicVariableEventHandler {_this call handleStationUpdate};
+};
 waitUntil{vehicle player == player};
 
 player addEventHandler ["fired",{_this execVM "fired.sqf"}];

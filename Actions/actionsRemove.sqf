@@ -323,4 +323,7 @@ if (playerSide == resistance) then {
 	_role removeAction actionems9;
 	_role removeAction actionemst1;
 	_role removeAction actionemst2;
+	_role removeAction actionemsTele;
+	_role removeAction actionemsTele1;
+	_role removeAction actionemsClear;
 };

@@ -58,7 +58,7 @@ _sc9 = ["m5_red","m5_grey","m5_blue","m5_c_green","m5_c_black","m5_c_white","BMW
 //23. Tahoe shop
 _tahoe = ["tahoe_grey","tahoe_darkblue","tahoe_blue","tahoe_yellow","tahoe_white","tahoe_green","tahoe_black","tahoe_orange","tahoe_pink","tahoe_darkblue_cb","tahoe_grey_cb","tahoe_blue_cb","tahoe_yellow_cb","tahoe_pink_cb","tahoe_white_cb","tahoe_green_cb","tahoe_black_cb","tahoe_orange_cb"];
 //24. Pickup Shop -
-_ps = ["il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_white","tcg_suburban_red","tcg_suburban_yellow","tcg_suburban_grey","tcg_suburban_white","tcg_suburban_green","suburban_blue","suburban_black","suburban_maroon","suburban_sandstone","suburban_grey","suburban_white"];
+_ps = ["il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_white","il_silverado_pink", "tcg_suburban_red","tcg_suburban_yellow","tcg_suburban_grey","tcg_suburban_white","tcg_suburban_green","suburban_blue","suburban_black","suburban_maroon","suburban_sandstone","suburban_grey","suburban_white"];
 //25. taxi shop
 _tx = ["GLT_M300_LT","GLT_M300_ST","il_fordcv_taxi","tcg_taurus_taxi"];
 //26. motorcycle shop
@@ -495,6 +495,28 @@ _copchief =
 "supgrade5_pd",
 "Bait_Kit"
 ];
+
+//66
+_copmedal =
+[
+"MakarovSD",
+"8Rnd_9x18_MakarovSD",
+"RH_m4maim_cmd",
+"RH_m4meotech_cmd",
+"RH_m4macog_cmd",
+"30Rnd_556x45_Stanag",
+"olrpg_umcv_dblue",
+"olrpg_umcv_maroon",
+"olrpg_umcv_grey",
+"olrpg_uctahoe_maroon",
+"olrpg_uctahoe_grey",
+"olrpg_uctahoe_dblue",
+"olrpg_pdtaurus_um",
+"olrpg_pdcharger_um",
+"supgrade3_pd",
+"supgrade4_pd",
+"supgrade5_pd"
+];
  
 _corrections =
 [
@@ -651,6 +673,7 @@ _copav2 =
 //70
 _copav1 =
 [
+"bjerk",
 "RH_m9",
 "Rnd_9x19_M9",
 "RH_mp5a5aim_av",
@@ -715,11 +738,11 @@ _copswat3 =
 "x26_Mag",
 "RH_usp_swat",
 "RH_15Rnd_9x19_usp_swat",
-"RH_mk18_swat",
-"RH_mk18eot_swat",
-"RH_mk18aim_swat",
 "RH_mk18acog_swat",
+"RH_mk18sdeot_swat",
+"RH_mk18sdaim_swat",
 "30Rnd_556x45_Stanag_swat",
+"30Rnd_556x45_StanagSD_swat",
 "LEXX_M32_EP1_BLACK_swat",
 "6Rnd_Smoke_M203",
 "DMR_swat",
@@ -733,6 +756,8 @@ _copswat4 =
 "x26_Mag",
 "RH_uspsd_swat",
 "RH_15Rnd_9x19_uspsd_swat",
+"RH_mk18dcsdaim_swat",
+"30Rnd_556x45_StanagSD_swat",
 "DMR_swat",
 "RH_mk14ebrsp_swat",
 "20Rnd_762x51_DMR",
@@ -752,11 +777,10 @@ _copswat5 =
 "x26_Mag",
 "RH_usp_swat",
 "RH_15Rnd_9x19_usp_swat",
-"RH_mk18_swat",
-"RH_mk18eot_swat",
-"RH_mk18aim_swat",
-"RH_mk18acog_swat",
-"30Rnd_556x45_Stanag_swat",
+"RH_mk18sdeot_swat",
+"RH_mk18sdaim_swat",
+"RH_mk18sdacog_swat",
+"30Rnd_556x45_StanagSD_swat",
 "LEXX_M32_EP1_BLACK_swat",
 "6Rnd_Smoke_M203",
 "DMR_swat",
@@ -1561,6 +1585,7 @@ INV_ItemShops = [
 [copsheriff,"Sheriff Equipment",copsheriff,ccarspawn1,_copsheriff,_copsgt,true],
 [coplt,"Lieutenant Equipment",coplt,ccarspawnlt,_coplt,_coplt,true],
 [copcpt,"Captain Equipment",copcpt,ccarspawncpt,_copcpt,_copcpt,true],
+[copmedalbox,"Medal Recipients Equipment",copmedalbox,ccarspawnchief,_copmedal,_copmedal,true],
 [copchief,"Chief of Police Equipment",copchief,ccarspawnchief,_copchief,_copchief,true],
 [corbox,"Corrections Equipment",corbox,corvehspawn,_corrections,_corrections,true],
 [corsbox,"Corrections Supervisor",corsbox,corvehspawn,_corrections2,_corrections2,true],
@@ -1588,6 +1613,7 @@ INV_ItemShops = [
 [copVIPBox2,"Cop Donator Equipment",copVIPBox2,ccarspawn1,_copvip,_copvip,true],
 [copVIPBox3,"Cop Donator Equipment",copVIPBox3,ccarspawn2,_copvip,_copvip,true],
 [copswatd,"Cop Donator Equipment",copswatd,ccarspawn2,_copvip,_copvip,true],
+[copcidd,"Cop Donator Equipment",copcidd,cidcarspawn,_copvip,_copvip,true],
 [dshop1,"Donator Shop (Tier 1)",maindonateshop,dummyobj,_Donate,_Donate,true],
 [dshop2,"Donator Shop (Tier 2)",donateshop2,donatespawn2,_Donate2,_Donate2,true],
 [dshop3,"Donator Shop (Tier 3)",donateshop3,donatespawn3,_Donate3,_Donate3,true],

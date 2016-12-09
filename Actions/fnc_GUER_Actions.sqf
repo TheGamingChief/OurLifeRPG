@@ -110,3 +110,7 @@ actionems9 = _role addaction ["Switch to Hazmat Yellow Unifrom","noscript.sqf",'
 //======================================== Skins ===================================================
 actionemst1 = _role addaction ["[Transfer to Main Fire House]","scripts\foster\ems1.sqf",[],1,false,true,"",'player distance fire2tele <= 3'];
 actionemst2 = _role addaction ["[Transfer to Sub Fire Station]","scripts\foster\ems2.sqf",[],1,false,true,"",'player distance fire1tele <= 3'];
+//
+actionemsTele = _role addaction ["[Take Elevator To Second Floor]","scripts\foster\EmsFunctions.sqf",["Elevator1"],1,false,true,"","player distance EMSELI1 <= 5"];
+actionemsTele1 = _role addaction ["[Take Elevator To First Floor]","scripts\foster\EmsFunctions.sqf",["Elevator2"],1,false,true,"","player distance EMSELI2 <= 5"];
+actionemsClear = _role addaction ["[Clear Helipad]","scripts\foster\EmsFunctions.sqf",["clear"],1,false,true,"","(player distance jailpad2_1 <= 5 || player distance jailpad2_1_1 <=5) && ((getPlayerUID player) in AirESU_id)"];

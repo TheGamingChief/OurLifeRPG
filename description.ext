@@ -28,7 +28,7 @@ class Header
 {
  gameType = OurLife;            //DM, Team, Coop, ...
  minPlayers = 1;             //min # of players the mission supports
- maxPlayers = 80;            //Max # of players the mission supports
+ maxPlayers = 100;            //Max # of players the mission supports
 };
 
 

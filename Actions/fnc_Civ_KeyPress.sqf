@@ -50,6 +50,14 @@ fnc_KeyPress_7 = {
 	};
 };
 
+fnc_KeyPress_9 = {
+	if (dialog) exitWith {closeDialog 0;};
+	if (!INV_shortcuts) exitWith {};
+	if ((getPlayerUID player) in adminlevel4 || (getplayeruid player) in SwagDevs || (typeOf player == "Flyers_Mechanic") || (typeOf player == "Flyers_Mechanic_Vest") || (typeOf player == "Flyers_Supervisor") || (typeOf player == "Flyers_Supervisor_Vest")) then {
+	if (!AM_temp_carrying) then {[] call AM_CheckpointBuilder;}else{[] call AM_CheckpointBuilder_Drop;};
+	};
+};
+
 fnc_KeyPress_Home = {
 
 	if(isStaff) then

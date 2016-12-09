@@ -420,8 +420,20 @@ DD_f_LoadStats = {
                                                         player groupChat "Welcome Chief, Go Kick Some Ass!!!";
                                                 };
                                         };
-                                } foreach copchiefarray;
+                                } foreach CopChiefArray;
  
+ 								{
+									if (_civnum == _x) then {
+										if !(_uid in Cpt_ID) then {
+											player groupChat "This slot is reserved for captains only!";
+											sleep 10;
+											endMission "LOSER";
+										} else {
+											player groupChat "Welcome Captain!";
+										};
+									};
+ 								}forEach CopCptArray;
+ 								
                                 {
                                         if (_civnum == _x) then
                                         {
@@ -436,7 +448,7 @@ DD_f_LoadStats = {
                                                         player groupChat "Welcome Sheriff, remember to set an example for the Patrol Division.";
                                                 };
                                         };
-                                } foreach copsheriffarray;
+                                } foreach CopSheriffArray;
  
                                 {
                                         if (_civnum == _x) then
@@ -453,22 +465,7 @@ DD_f_LoadStats = {
                                                 };
                                         };
                                 } foreach copdeputyarray;
- 
-                                {
-                                        if (_civnum == _x) then
-                                        {
-                                                if !(_uid in Deputy_id) then
-                                                {
-                                                        player groupChat "This slot is reserved for a Sheriff's Deputy! You will be kicked back to lobby in 10 seconds!";
-                                                        sleep 10;
-                                                        endMission "LOSER";
-                                                }
-                                                else
-                                                {
-                                                        player groupChat "Welcome Deputy, remember to set an example for the Patrol Division.";
-                                                };
-                                        };
-                                } foreach copdeputyarray2;
+
                         };
                         case civilian:
                         {

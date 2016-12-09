@@ -51,6 +51,7 @@ INV_Lizenzen =
 ["PDAviation_license",     [copairbank],                                             "PD Aviation License",10000],
 ["SWAT_license",           [copswatbank],                                            "S.W.A.T. License",10000],
 ["CoastGuard_license",     [copcoastguardbank],                                      "Sheriff Marine License",10000],
+["Medal_Winner",           [copmedalbox],                                            "Medal Recipient",1000],
 ["Chief_license",          [copcmdbank],                                             "Chief of Police License",10000],
 ["Captain_license",        [copcmdbank],                                             "Captain License",10000],
 ["Lieutenant_license",     [copcmdbank],                                             "Lieutenant License",10000],

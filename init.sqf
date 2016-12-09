@@ -1,6 +1,6 @@
 /*
 Init Modified For Our Life RPG By Speedy
-Edited by CP3088 & TheGamingChief <3
+Edited by CP3088 & TheGamingChief & Garry_3088 <3
 */
 
 if (isServer) then 
@@ -14,13 +14,13 @@ if (isServer) then
 
 player enableSimulation false;
 enableSaving [false, false];
-isClient = !isServer || (isServer && !isDedicated); 
+isClient 		= !isServer || (isServer && !isDedicated); 
 version        	= "32";
 debug          	= false;
 dedicatedServer = false;
-copmcount      	= 24;
-civscount      	= 56;
-playercount    	= 80;
+copmcount      	= 40;
+civscount      	= 60;
+playercount    	= 100;
 debugarray     	= [];
 loadNotFinsihed = true;
 OL_StatsLoadedFromDB = false;

@@ -12,7 +12,7 @@ _income = add_copmoney;
 
 if ((typeOf player == "olrpg_ftouni" || typeOf player == "olrpg_snrftouni")) then {systemChat "test"};
 
-if ((typeOf player == "olrpg_ftouni" || typeOf player == "olrpg_snrftouni")) then {_income = _income + 5000};
+if ((typeOf player == "olrpg_ftouni" || typeOf player == "olrpg_snrftouni")) then {_income = _income + 6000};
 
 if ((typeOf player == "olrpg_k9nor" || typeOf player == "olrpg_depk9uni" || typeOf player == "olrpg_k9marksman" || typeOf player == "olrpg_k9com")) then {_income = _income + 5000};	
 
@@ -22,29 +22,29 @@ if ((typeOf player == "olrpg_sdpilot" || typeOf player == "olrpg_pdpilot" || typ
 
 if ((typeOf player == "olrpg_swatprob" || typeOf player == "olrpg_swatnor" || typeOf player == "olrpg_swatmark" || typeOf player == "olrpg_swatspec" || typeOf player == "olrpg_swatcom")) then {_income = _income + 7500};
 	
-if ((typeOf player == "olrpg_pdcid" || typeOf player == "olrpg_iauni")) then {_income = _income + 7500};
+if ((typeOf player == "olrpg_pdcid" || typeOf player == "olrpg_iauni")) then {_income = _income + 5000};
 
-if (typeOf player == "olrpg_patuni") then {_income = _income + 1000};
+if (typeOf player == "olrpg_patuni") then {_income = _income + 1500};
 
-if (typeOf player == "olrpg_snruni") then {_income = _income + 3000};
+if (typeOf player == "olrpg_snruni") then {_income = _income + 3500};
 	
-if (typeOf player == "olrpg_cpluni") then {_income = _income + 5000};
+if (typeOf player == "olrpg_cpluni") then {_income = _income + 5500};
 
-if (typeOf player == "olrpg_sgtuni") then {_income = _income + 7000};
+if (typeOf player == "olrpg_sgtuni") then {_income = _income + 7500};
 	
-if ((typeOf player == "olrpg_depuni" || typeOf player == "olrpg_dnrdepuni")) then {_income = _income + 1000};
+if ((typeOf player == "olrpg_depuni" || typeOf player == "olrpg_dnrdepuni")) then {_income = _income + 1500};
 
-if (typeOf player == "olrpg_snrpdepuni") then {_income = _income + 3000};
+if (typeOf player == "olrpg_snrpdepuni") then {_income = _income + 3500};
 
-if (typeOf player == "olrpg_corpdepuni") then {_income = _income + 5000};
+if (typeOf player == "olrpg_corpdepuni") then {_income = _income + 5500};
 
-if (typeOf player == "olrpg_sgtdepuni2") then {_income = _income + 7000};
+if (typeOf player == "olrpg_sgtdepuni2") then {_income = _income + 7500};
 
-if (typeOf player == "olrpg_ltdepuni") then {_income = _income + 9000};
+if (typeOf player == "olrpg_ltdepuni") then {_income = _income + 9500};
 
 if (typeOf player == "olrpg_cptdepuni") then {_income = _income + 11000};
 
-if (typeOf player == "olrpg_pdltvest") then {_income = _income + 9000};
+if (typeOf player == "olrpg_pdltvest") then {_income = _income + 9500};
 
 if (typeOf player == "olrpg_pdcptvest") then {_income = _income + 11000};
 
@@ -52,6 +52,14 @@ if (typeOf player == "olrpg_astchiefsuni") then {_income = _income + 12000};
 
 if (typeOf player == "olrpg_chiefsuni") then {_income = _income + 13000};
 
+if ("Medal_Winner" call INV_HasLicense) then 
+
+	{
+
+	_income = _income + 5000;
+
+	}; 
+	
 if ((getPlayerUID player) in Donate_id) then
 {
 			_income = _income + 1500;
