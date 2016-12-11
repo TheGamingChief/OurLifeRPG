@@ -15,6 +15,7 @@ switch (adminCMD) do
 	};
 	case 2: //Delete
 	{
+		if (typeOf cursorTarget == "Land_revier") exitWith {systemChat "No, just no (Hint: Don't delete jail)"};
 		deleteVehicle cursorTarget;
 		closeDialog 0;
 		hint "OBJECT DELETED";
@@ -204,24 +205,4 @@ switch (adminCMD) do
 /*
 -----------------------------------------------------------------------------------------
 */
-
-// 
-if (TarGetPLayer == "") then
-{
-	CoDeString = cmdLine;
-}
-else
-{
-	CoDeString = "if (name vehicle player == TarGetPLayer) then {_comp = compile cmdLine; call _comp;}";
-};
-
-publicVariable "TarGetPLayer";
-sleep 0.3;
-publicVariable "cmdLine";
-sleep 0.3;
-publicVariable "CoDeString";
-sleep 0.3;
-
-// nil = [CoDeString] execVM "public.sqf";
-_O0O0 = player;
 hint "Code Actiavted";

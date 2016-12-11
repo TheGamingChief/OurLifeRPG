@@ -4,25 +4,25 @@ _art = (_this select 3) select 0;
 
 if (isNil "workplacejob_assassin_serverarray") then {workplacejob_assassin_serverarray = []};
 
-if (_art == "serverloop") then 
+if (_art == "serverloop") then
 
 {
 
-while {true} do 
+while {true} do
 
 	{
 
-	for [{_i=0}, {_i < (count workplacejob_assassin_serverarray)}, {_i=_i+1}] do 
+	for [{_i=0}, {_i < (count workplacejob_assassin_serverarray)}, {_i=_i+1}] do
 
 		{
 
-		if (isNull ((workplacejob_assassin_serverarray select _i) select 0)) then 
+		if (isNull ((workplacejob_assassin_serverarray select _i) select 0)) then
 
 			{
 
-			if (!(isNull ((workplacejob_assassin_serverarray select _i) select 1))) then 
+			if (!(isNull ((workplacejob_assassin_serverarray select _i) select 1))) then
 
-				{	
+				{
 
 				deleteVehicle ((workplacejob_assassin_serverarray select _i) select 1);
 				deletemarker "targetmarker";
@@ -32,11 +32,11 @@ while {true} do
 			workplacejob_assassin_serverarray set [_i,""];
 			workplacejob_assassin_serverarray = workplacejob_assassin_serverarray - [""];
 			"if(iscop)then{player sidechat ""The threat to the VIP has been removed""}" call broadcast;
-			sleep ((workplacejob_assassin_break)*60);			
-			workplacejob_assassin_active = false; 
+			sleep 600;
+			workplacejob_assassin_active = false;
 			publicvariable "workplacejob_assassin_active";
-			
-			};				
+
+			};
 
 		};
 	sleep 10;
@@ -45,7 +45,7 @@ while {true} do
 
 };
 
-if (_art == "getajob_assassin") then 
+if (_art == "getajob_assassin") then
 
 {
 
@@ -53,7 +53,7 @@ if(workplacejob_assassin_active)exitWith{player groupChat "There are currently n
 if(workplacejob_assassion_failed)exitWith{player groupChat "You have failed an assassination recently, maybe you'll be hired again later.";};
 
 _array  = [[VIPspawn1, 10], [VIPspawn2, 10], [VIPspawn3, 10]];
-_city   = (floor(random(count _array)));						
+_city   = (floor(random(count _array)));
 _pos    = (_array select _city) select 0;
 _radius = (_array select _city) select 1;
 _a1	= 0;
@@ -67,50 +67,28 @@ deletevehicle VIPbodyguard2;
 
 //creating VIP
 _group = createGroup west;
-VIPtarget = _group createUnit ["Functionary1_EP1", _pos, [], _radius, "FORM"]; 
+VIPtarget = _group createUnit ["Functionary1_EP1", _pos, [], _radius, "FORM"];
 VIPtarget setvehicleinit 'VIPtarget = this;this setVehicleVarName "VIPtarget";';
 //give vip weapon and clips
 VIPtarget addweapon "RH_M4";
 VIPtarget addweapon "M9";
-VIPtarget addmagazine "30Rnd_556x45_Stanag";
-VIPtarget addmagazine "30Rnd_556x45_Stanag";
-VIPtarget addmagazine "30Rnd_556x45_Stanag";
-VIPtarget addmagazine "30Rnd_556x45_Stanag";
-VIPtarget addmagazine "30Rnd_556x45_Stanag";
-VIPtarget addmagazine "15Rnd_9x19_M9";
-VIPtarget addmagazine "15Rnd_9x19_M9";
-VIPtarget addmagazine "15Rnd_9x19_M9";
-VIPtarget addmagazine "15Rnd_9x19_M9";
-VIPtarget addmagazine "15Rnd_9x19_M9";
-VIPtarget addmagazine "15Rnd_9x19_M9";
+VIPtarget addmagazineCargo ["30Rnd_556x45_Stanag", 5];
+VIPtarget addmagazineCargo ["15Rnd_9x19_M9", 6];
 
 //creating body guards
 VIPbodyguard1 = _group createUnit ["Functionary2_EP1", _pos, [], _radius, "FORM"];
 VIPbodyguard1 setvehicleinit 'VIPbodyguard1 = this;this setVehicleVarName "VIPbodyguard1";';
 VIPbodyguard1 addweapon "m9";
 VIPbodyguard1 addweapon "RH_M4";
-VIPbodyguard1 addmagazine "30Rnd_556x45_Stanag";
-VIPbodyguard1 addmagazine "30Rnd_556x45_Stanag";
-VIPbodyguard1 addmagazine "30Rnd_556x45_Stanag";
-VIPbodyguard1 addmagazine "30Rnd_556x45_Stanag";
-VIPbodyguard1 addmagazine "30Rnd_556x45_Stanag";
-VIPbodyguard1 addmagazine "15Rnd_9x19_M9";
-VIPbodyguard1 addmagazine "15Rnd_9x19_M9";
-VIPbodyguard1 addmagazine "15Rnd_9x19_M9";
-VIPbodyguard1 addmagazine "15Rnd_9x19_M9";
+VIPbodyguard1 addmagazineCargo ["30Rnd_556x45_Stanag", 5];
+VIPbodyguard1 addmagazineCargo ["15Rnd_9x19_M9", 6];
 
 VIPbodyguard2 = _group createUnit ["Functionary2_EP1", _pos, [], _radius, "FORM"];
 VIPbodyguard2 setvehicleinit 'VIPbodyguard2 = this;this setVehicleVarName "VIPbodyguard2";';
 VIPbodyguard2 addweapon "m9";
 VIPbodyguard2 addweapon "RH_M4";
-VIPbodyguard2 addmagazine "30Rnd_556x45_Stanag";
-VIPbodyguard2 addmagazine "30Rnd_556x45_Stanag";
-VIPbodyguard2 addmagazine "30Rnd_556x45_Stanag";
-VIPbodyguard2 addmagazine "30Rnd_556x45_Stanag";
-VIPbodyguard2 addmagazine "15Rnd_9x19_M9";
-VIPbodyguard2 addmagazine "15Rnd_9x19_M9";
-VIPbodyguard2 addmagazine "15Rnd_9x19_M9";
-VIPbodyguard2 addmagazine "15Rnd_9x19_M9";
+VIPbodyguard2 addmagazineCargo ["30Rnd_556x45_Stanag", 5];
+VIPbodyguard2 addmagazineCargo ["15Rnd_9x19_M9", 6];
 
 
 
@@ -132,14 +110,14 @@ if ((!(VIPtarget in assveh)) and (alive VIPtarget))
 		VIPbodyguard1 moveInDriver assveh;
 		VIPtarget doFollow VIPbodyguard1;
 		VIPbodyguard2 doFollow VIPbodyguard1;
-		
+
 		//VIPtarget assignAsDriver assveh;
 		VIPtarget moveInCargo assveh;
 		//VIPbodyguard1 assignAsCargo assveh;
 		VIPbodyguard2 moveInCargo assveh;
 		//VIPbodyguard2 assignAsCargo assveh;
-		
-		
+
+
 	};
 
 
@@ -154,16 +132,16 @@ if ((!(VIPtarget in assveh)) and (alive VIPtarget))
 
 format["workplacejob_assassin_serverarray = workplacejob_assassin_serverarray + [[%1, VIPtarget]];", player] call broadcast;
 
-_markerobj = createMarker ["targetmarker",[0,0]];																				
-_markername= "targetmarker";																														
-_markerobj setMarkerShape "ICON";								
-"targetmarker" setMarkerType "Marker";										
-"targetmarker" setMarkerColor "ColorRed";																														
-"targetmarker" setMarkerText "Assassination target";								
+_markerobj = createMarker ["targetmarker",[0,0]];
+_markername= "targetmarker";
+_markerobj setMarkerShape "ICON";
+"targetmarker" setMarkerType "Marker";
+"targetmarker" setMarkerColor "ColorRed";
+"targetmarker" setMarkerText "Assassination target";
 _markername SetMarkerPos _start;
 
 workplacejob_assassin_active = true; publicvariable "workplacejob_assassin_active";
-																
+
 player groupChat "The VIP target has been marked on the map. Kill him before the police can take him to safety.";
 
 "if (iscop) then {player sideChat ""Someone is trying to kill a government VIP. The target has been marked on the map. Rescue the target before its too late!""};" call broadcast;
@@ -171,18 +149,11 @@ player groupChat "The VIP target has been marked on the map. Kill him before the
 player groupchat "The police are on to you and the VIP knows your coming, hurry up!";
 (format['if(!("Assassin" in %1_reason))then{%1_reason = %1_reason + ["Assassin"]}; %1_wanted = 1; kopfgeld_%1 = kopfgeld_%1 + 50000;', player]) call broadcast;
 VIPtarget domove getmarkerpos "policebase";
-while {true} do 
+while {true} do
 
 	{
 
-	/* removed this so the mission keeps going even if assassin dies
-	if(!alive player)exitwith
-		{
-		deletevehicle VIPtarget;
-		deletemarker "targetmarker";
-				
-		};
-	*/
+
 	"if(alive player and isciv and player distance assveh <= 150)then{titleText [""The Government is operating in this area! Turn back or you will be shot!"", ""plain down""]};" call broadcast;
 	"targetmarker" setmarkerpos getpos VIPtarget;
 	if (_secondcounter >= 15) then
@@ -192,9 +163,9 @@ while {true} do
 		VIPtarget domove getmarkerpos "policebase";
 		_secondcounter = 0;
 		};
-		
+
 	if (_minutecounter >= 1200) exitWith
-	
+
 		{
 		"server globalchat ""Assassination mission not completed within 20mins the mission has ended."";" call broadcast;
 		sleep 3;
@@ -205,11 +176,11 @@ while {true} do
 		deletevehicle VIPbodyguard2;
 		_minutecounter = 0;
 		};
-				
-	if (!alive VIPtarget and alive player) exitWith 
-	
+
+	if (!alive VIPtarget and alive player) exitWith
+
 		{
-			
+
 		kontostand = kontostand + 100000;
 		player groupchat "Well done. Target elimated. $100000 has been transfered to your account.";
 		sleep 10;
@@ -220,7 +191,7 @@ while {true} do
 		deletevehicle assveh;
 		deletevehicle VIPbodyguard1;
 		deletevehicle VIPbodyguard2;
-		
+
 		};
 
 	if(VIPtarget distance getmarkerpos "policebase" < 100) exitwith
@@ -241,7 +212,7 @@ while {true} do
 		deletevehicle assveh;
 		deletevehicle VIPbodyguard1;
 		deletevehicle VIPbodyguard2;
-		
+
 		};
 	_minutecounter = _minutecounter + 1;
 	_secondcounter = _secondcounter + 1;
@@ -252,17 +223,17 @@ deletevehicle VIPtarget;
 deletemarker "targetmarker";
 deletevehicle assveh;
 deletevehicle VIPbodyguard1;
-deletevehicle VIPbodyguard2;																				
-sleep ((workplacejob_assassin_break)*60);			
-workplacejob_assassin_active = false; 
+deletevehicle VIPbodyguard2;
+sleep 600;
+workplacejob_assassin_active = false;
 publicvariable "workplacejob_assassin_active";
 
-if (workplacejob_assassion_failed) then 
+if (workplacejob_assassion_failed) then
 
 	{
 
-	sleep ((workplacejob_assassin_break)*60);
-	workplacejob_assassion_failed = false;	
+	sleep 600;
+	workplacejob_assassion_failed = false;
 
 	};
 

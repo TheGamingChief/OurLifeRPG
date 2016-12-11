@@ -5,14 +5,21 @@ _type = _this select 2;
 _quantity = _this select 3;
 _individualCost = _this select 4;
 _otherValue1 = _this select 5;
-
+_name = _this select 6;
+ 
 _logic = ((INV_ItemShops select INV_ActiveShopNumber) select 3);
-_name = _className call INV_getitemName;
-_wallet = "geld" call INV_GetItemAmount; 
+_wallet = "geld" call INV_GetItemAmount;
 _bankBalance = Kontostand;
 _DebitCardCount = "Debit_Card" call INV_GetItemAmount;
 _totalCost = (_costWithTax * _quantity);
 _gridPos = mapGridPosition getpos player;
+
+
+if((_type == "Vehicle") && (count (nearestObjects [getPos _logic,["Ship","car","motorcycle","truck","Air"], 3]) > 0))exitWith
+{
+    player groupChat "There is a vehicle blocking the spawn!";
+};
+
 
 _fn_AddTaxes =
 {
@@ -117,12 +124,6 @@ if (_type == "Item") then
 		};
 	};
 };
-
-if (_type == "Vehicle") then
-{
-	if(count (nearestobjects [getpos _logic,["Ship","car","motorcycle","truck","Air"], 3]) > 0)exitwith{player groupchat "There is a vehicle blocking the spawn!";};
-};
-
 
 
 if(_totalCost > _wallet) then	

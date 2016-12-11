@@ -45,11 +45,11 @@ if (_art == "Harvest") then
 	{
 		_Weight = call INV_GetOwnWeight;
 		_Plant = nearestobject [player, "as_p_fiberPlant_EP1"];
-		deletevehicle _Plant;
 		
-		if (_Weight > 59) exitwith { player groupchat localize "STRS_inv_buyitems_get_zuschwer"; };
+		if (_Weight >= INV_Tragfaehigkeit) exitwith {player groupchat localize "STRS_inv_buyitems_get_zuschwer";};
 		if (IsCop) exitwith { player groupchat "Cops cannot do this"; };
 		
+		deletevehicle _Plant;
 		['Unprocessed_Marijuana', +(5)] call INV_AddInvItem;
 		['MarijuanaSeed', +(2)] call INV_AddInvItem;
 		
@@ -60,11 +60,12 @@ if (_art == "Harvest") then
 	{
 		_Weight = call INV_GetOwnWeight;
 		_Plant = nearestobject [player, "as_b_PinusM1s_EP1"];
-		deletevehicle _Plant;
 		
-		if (_Weight > 59) exitwith { player groupchat localize "STRS_inv_buyitems_get_zuschwer"; };
+		if (_Weight >= INV_Tragfaehigkeit) exitwith {player groupchat localize "STRS_inv_buyitems_get_zuschwer";};
 		if (IsCop) exitwith { player groupchat "Cops cannot do this"; };
 		
+		deletevehicle _Plant;
+
 		['Unprocessed_Heroin', +(5)] call INV_AddInvItem;
 		['HeroinSeed', +(2)] call INV_AddInvItem;
 		
@@ -75,10 +76,11 @@ if (_art == "Harvest") then
 	{
 		_Weight = call INV_GetOwnWeight;
 		_Plant = nearestobject [player, "as_b_PistaciaL1s_EP1"];
-		deletevehicle _Plant;
 		
-		if (_Weight > 59) exitwith { player groupchat localize "STRS_inv_buyitems_get_zuschwer"; };
+		if (_Weight >= INV_Tragfaehigkeit) exitwith {player groupchat localize "STRS_inv_buyitems_get_zuschwer";};
 		if (IsCop) exitwith { player groupchat "Cops cannot do this"; };
+		
+		deletevehicle _Plant;
 		
 		['Unprocessed_Cocaine', +(5)] call INV_AddInvItem;
 		['CocaineSeed', +(2)] call INV_AddInvItem;
@@ -87,6 +89,3 @@ if (_art == "Harvest") then
 	};
 	
 };
-
-
-
