@@ -28,18 +28,10 @@ actionfac2 = _role addaction ["Factory Guide","scripts\foster\Factoryintro.sqf",
 actionfac3 = _role addaction ["Factory Guide","scripts\foster\Factoryintro.sqf", [], 1, false, true, "", 'player distance illegalweaponfactory <= 5'];
 
 //==================================== Casino Slot Machines =================================================
-actionsm1 = _role addaction ["Pay the Slots - $1000","scripts\foster\Slots.sqf", [], 1, false, true, "", "(player distance slots1 <= 2) and slotsavailable"];
-actionsm2 = _role addaction ["Pay the Slots - $1000","scripts\foster\Slots.sqf", [], 1, false, true, "", "(player distance slots2 <= 2) and slotsavailable"];
-actionsm3 = _role addaction ["Pay the Slots - $1000","scripts\foster\Slots.sqf", [], 1, false, true, "", "(player distance slots3 <= 2) and slotsavailable"];
-actionsm4 = _role addaction ["Pay the Slots - $1000","scripts\foster\Slots.sqf", [], 1, false, true, "", "(player distance slots4 <= 2) and slotsavailable"];
-actionsm5 = _role addaction ["Pay the Slots - $1000","scripts\foster\Slots.sqf", [], 1, false, true, "", "(player distance slots5 <= 2) and slotsavailable"];
-actionsm6 = _role addaction ["Pay the Slots - $1000","scripts\foster\Slots.sqf", [], 1, false, true, "", "(player distance slots6 <= 2) and slotsavailable"];
-actionsm7 = _role addaction ["Pay the Slots - $1000","scripts\foster\Slots.sqf", [], 1, false, true, "", "(player distance slots7 <= 2) and slotsavailable"];
-actionsm8 = _role addaction ["Pay the Slots - $1000","scripts\foster\Slots.sqf", [], 1, false, true, "", "(player distance slots8 <= 2) and slotsavailable"];
-actionsm9 = _role addaction ["Pay the Slots - $1000","scripts\foster\Slots.sqf", [], 1, false, true, "", "(player distance slots9 <= 2) and slotsavailable"];
-actionsm10 = _role addaction ["Pay the Slots - $1000","scripts\foster\Slots.sqf", [], 1, false, true, "", "(player distance slots10 <= 2) and slotsavailable"];
-actionsm11 = _role addaction ["Pay the Slots - $1000","scripts\foster\Slots.sqf", [], 1, false, true, "", "(player distance slots11 <= 2) and slotsavailable"];
-actionsm12 = _role addaction ["Pay the Slots - $1000","scripts\foster\Slots.sqf", [], 1, false, true, "", "(player distance slots12 <= 2) and slotsavailable"];
+actionsm1 = _role addaction ["Pay 1 Line Slots - $1000","scripts\foster\Slots.sqf",["1line"],1,false,true,"", "(player distance slots1 <= 2 or player distance slots2 <= 2 or player distance slots3 <= 2 or player distance slots4 <= 2 or player distance slots5 <= 2 or player distance slots6 <= 2 or player distance slots7 <= 2 or player distance slots8 <= 2 or player distance slots9 <= 2 or player distance slots10 <= 2 or player distance slots11 <= 2 or player distance slots12 <= 2) and slots1available and !IsSpinningSlots"];
+actionsm2 = _role addaction ["Pay 2 Line Slots - $10000","scripts\foster\Slots.sqf",["2line"],1,false,true,"", "(player distance slots1 <= 2 or player distance slots2 <= 2 or player distance slots3 <= 2 or player distance slots4 <= 2 or player distance slots5 <= 2 or player distance slots6 <= 2 or player distance slots7 <= 2 or player distance slots8 <= 2 or player distance slots9 <= 2 or player distance slots10 <= 2 or player distance slots11 <= 2 or player distance slots12 <= 2) and slots2available and !IsSpinningSlots"];
+actionsm3 = _role addaction ["Pay MAX Line Slots - $25000","scripts\foster\Slots.sqf",["maxline"],1,false,true,"", "(player distance slots1 <= 2 or player distance slots2 <= 2 or player distance slots3 <= 2 or player distance slots4 <= 2 or player distance slots5 <= 2 or player distance slots6 <= 2 or player distance slots7 <= 2 or player distance slots8 <= 2 or player distance slots9 <= 2 or player distance slots10 <= 2 or player distance slots11 <= 2 or player distance slots12 <= 2) and slots3available and !IsSpinningSlots"];
+actioncsrob = _role addaction ["Rob Casino Vault","robbar.sqf",["casino"],1,false,true,"","isciv and casinomoney >= 50000 and player distance cvault <= 2 and casinoavailable"];
 
 actioncsrob = _role addaction ["Rob Casino Vault","robbar.sqf",["casino"],1,false,true,"","isciv and casinomoney >= 50000 and player distance cvault <= 2 and casinoavailable"];
 //===================================== PIRACY =================================================
