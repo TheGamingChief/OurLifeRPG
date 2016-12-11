@@ -213,7 +213,6 @@ _copuntrained =
 //57
 _coppo1 =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "RH_m9",
@@ -229,7 +228,6 @@ _coppo1 =
 //58
 _coppo2 =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "RH_m9",
@@ -249,7 +247,6 @@ _coppo2 =
 //59
 _coppo3 =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "RH_m9",
@@ -273,7 +270,6 @@ _coppo3 =
 //60
 _copcpl =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "RH_m9",
@@ -295,7 +291,6 @@ _copcpl =
 //61
 _copsgt =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "RH_m9",
@@ -319,7 +314,6 @@ _copsgt =
 //62
 _copdeputy =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "RH_python_sheriff",
@@ -355,7 +349,6 @@ _copsheriffmks =
 
 _copsgtdeputy =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "RH_python_sheriff",
@@ -381,7 +374,6 @@ _copsgtdeputy =
 //63
 _copsheriff =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "RH_python_sheriff",
@@ -418,7 +410,6 @@ _copsheriff =
 //64
 _coplt =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "LEXX_glock17_EP1_BLACK_pd",
@@ -447,7 +438,6 @@ _coplt =
 //65
 _copcpt =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "LEXX_glock17_EP1_BLACK_pd",
@@ -477,7 +467,6 @@ _copcpt =
 //66
 _copchief =
 [
-"PDArmor",
 "MakarovSD",
 "8Rnd_9x18_MakarovSD",
 "RH_deaglemzb_cmd",

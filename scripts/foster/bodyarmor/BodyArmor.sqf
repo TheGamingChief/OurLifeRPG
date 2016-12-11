@@ -1,8 +1,5 @@
 //Made by Foster - OLRPG
-
-player addEventHandler["HandleDamage", {[_this select 1, _this select 2, _this select 4] call DamageModifier;}];
-
-armor_rounds = [
+armor_big = [
 	"B_545x39_SD",
 	"B_545x39_Ball",
 	"B_762x39_Ball",
@@ -27,7 +24,10 @@ armor_rounds = [
 	"B_303_Ball",
 	"B_127x108_APHE",
 	"G_40mm_HE",
-	"G_30mm_HE",
+	"G_30mm_HE"
+];
+
+armor_small = [
 	"RH_44mag_Ball",
 	"RH_357mag_Ball",
 	"RH_50_AE_Ball",
@@ -48,6 +48,12 @@ armor_rounds = [
 	"RH_B_9x19_SD",
 	"B_9x19_SD"
 ];
+PlayArmorSFX = {
+	call compile format['SFXPvEh_%1 = ["%2","armorsfx",0.1];',rolenumber,rolestring];
+	publicVariable format["SFXPvEh_%1", rolenumber];					
+	vehicle player say ["armorsfx",50];
+true;
+};
 
 DamageModifier = {
 	private ["_vs","_damage","_hitcount","_selection","_ammo"];
@@ -55,7 +61,7 @@ DamageModifier = {
 	_damage = _this select 1;
 	_ammo = _this select 2;
 	if (_selection != "head_hit" and _damage > 0.01) then {
-		if (('PDArmor' call INV_GetItemAmount) > 0) then {
+		if (('SwatArmor' call INV_GetItemAmount) > 0) then {
 			_hitcount = player getvariable "bodyarmorhits";
 			if (isnil "_hitcount") then {player setvariable ["bodyarmorhits",0,false];};
 			_vs = false;
@@ -63,24 +69,64 @@ DamageModifier = {
 				player setvariable ["bodyarmorhits",(_hitcount + 10),false];
 								_damage = 0.75;
 			} else {
-				if (_ammo in armor_rounds) then {
+				if (_ammo in armor_big) then {
 					_vs = true;
-					_damage = _damage - (_damage * 0.50);
+					_damage = _damage - (_damage * 0.25);
 					if (_selection == "body") then {
 						player setvariable ["bodyarmorhits",(_hitcount + 4),false];
 						};					
 				};
+				if (_ammo in armor_small) then {
+					_vs = true;
+					_damage = _damage - (_damage * 0.50);
+					if (_selection == "body") then {
+						player setvariable ["bodyarmorhits",(_hitcount + 2),false];
+											
+					};					
+				};
 				if (!_vs) then {
-					_damage = _damage - (_damage * 0.25);
+					_damage = _damage - (_damage * 0.50);
 					
 				};
 			};
 			_hitcount = player getvariable "bodyarmorhits";
 			if (_hitcount >= 10) then {
-			    ['PDArmor', -1] call INV_AddInventoryItem;	
+				['SwatArmor', (-1)] call INV_SetItemAmount;
 				player setvariable ["bodyarmorhits",0,false];
 				player GroupChat "Your body armor has been depleted!";
 			};				
+		} else {
+			if (('PDArmor' call INV_GetItemAmount) > 0) then {
+				_hitcount = player getvariable "bodyarmorhits";
+				if (isnil "_hitcount") then {player setvariable ["bodyarmorhits",0,false];};
+				_vs = false;
+				if (_ammo in armor_big) then {
+					_vs = true;
+					_damage = _damage - (_damage * 0.10);
+					if (_selection == "body") then {
+						player setvariable ["bodyarmorhits",(_hitcount + 10),false];
+						
+					};					
+				};
+				if (_ammo in armor_small) then {
+					_vs = true;
+					_damage = _damage - (_damage * 0.25);
+					if (_selection == "body") then {
+						player setvariable ["bodyarmorhits",(_hitcount + 5),false];
+												
+					};					
+				};
+				if (!_vs) then {
+					_damage = _damage - (_damage * 0.25);
+					
+				};
+				_hitcount = player getvariable "bodyarmorhits";
+				if (_hitcount >= 10) then {
+					['PDArmor', (-1)] call INV_SetItemAmount;
+					player setvariable ["bodyarmorhits",0,false];
+					player GroupChat "Your body armor has been depleted!";
+				};			
+			};
 		};
 	};
 _damage;
