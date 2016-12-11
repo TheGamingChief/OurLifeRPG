@@ -90,7 +90,7 @@ Tow_classnames_total = [
 	["Tent_Event",1000,2.3]
 ];
 
-AM_classnames_priceincrease = 1; // price * priceincrease
+AM_classnames_priceincrease = 1;
 
 AM_CheckpointBuilder = {
 
@@ -111,8 +111,6 @@ AM_CheckpointBuilder = {
 			classnames_total = nil;
 		}; 
 	};
-
-	if(isNil "classnames_total") exitWith { player groupChat "Something broke... -CP" };
 	if(AM_temp_carrying)exitWith{player groupChat "You seem to be already carrying an item"};
 	if(!createDialog "AM_CheckpointBuilder") exitWith{hint "Couldn't create this menu!"};
 	
@@ -126,11 +124,12 @@ AM_CheckpointBuilder = {
 		if(isNil "_sexy")exitWith {hint "Invalid selection given"};
 		lbAdd[1500,format["Buy %1($%2)",_name,_me]];
 	};
+	player groupChat format["Checkpoint builder complete with %1 entries",count(classnames_total)];
 };
 
 AM_CheckpointBuilder_Purchase = {
 	_selection = _this select 0;
-	if(_selection == -1)exitWith{hint "You need to select an item first"};
+	if(isNil "_selection")exitWith{hint "You need to select an item first"};
 	AM_temp_carrying = true;
 	_item = classnames_total select _selection;
 	_price = _item select 1;
@@ -159,55 +158,36 @@ AM_CheckpointBuilder_Drop = {
 AM_CheckpointBuilder_Clear = 
 {
 	_uid = getplayeruid player;
-	_gridPos = mapGridPosition getPos player;
-
-	switch (true) do { 
-		case ((_uid in adminlevel4) || (_uid in SwagDevs)) : {  
-			format['if((getPlayerUID player in adminlevel4) || (getPlayerUID player in SwagDevs)) then {player groupChat "%1 has cleared a checkpoint (200m)."}', name player] call swag;
+	
+	if (isamedic) then 
+	{
+		if (_uid in EMT1_ID) then
+		{
+			format['if(isamedic) then{player sideChat "%1 has cleared a checkpoint (200m)."}', name player] call swag;
 			{
-				if((_x getVariable "AM_CP") == 1) then {
-		            deleteVehicle _x;
-		        };
-	    	} foreach nearestObjects[player,["All"],200];
-
-	    	["CheckPointClear_Log", format ["Admin %1 (%2) has Cleared a Checkpoint at %3", name player, getPlayerUID player, _gridPos]] call fn_RMLogToServer;
-		}; 
-		case (isCop) : { 
-			if ((_uid in cpl_id) or (_uid in Deputy_id)) then {		
-		  		
-		  		format['if(isCop) then{player sideChat "%1 has cleared a checkpoint (200m)."}', name player] call swag; 
+				if((_x getVariable "AM_CP") == 1) then 
 				{
-			        if((_x getVariable "AM_CP") == 1) then {
-			            deleteVehicle _x;
-			        };
-			    } foreach nearestObjects[player,["All"],200];
+					deleteVehicle _x;
+				};
+			}foreach nearestObjects[player,["All"],200];
+		};
+	};
 
-			    ["CheckPointClear_Log", format ["Officer %1 (%2) has Cleared a Checkpoint at %3", name player, getPlayerUID player, _gridPos]] call fn_RMLogToServer;
-
-	  		} else {
-	  			format['if(isCop) then{player sideChat "%1 has attempted to clear a checkpoint (200m). This can only be done by a Corporal or higher."}', name player] call swag;
-	  		};
-		}; 
-		case (isaMedic) : { 
-			format['if(isaMedic) then{player sideChat "%1 has cleared a checkpoint (200m)."}', name player] call swag; 
+	if (iscop) then
+	{
+		if ((_uid in Cpl_id) or (_uid in Sgt_id) or (_uid in Lt_id) or (_uid in Cpt_id) or (_uid in Chief_id) or (_uid in Deputy_id) or (_uid in Sheriff_id)) then
+		{
+			format['if(isCop) then{player sideChat "%1 has cleared a checkpoint (200m)."}', name player] call swag;
 			{
-		        if((_x getVariable "AM_CP") == 1) then 
-	        	{
-		            deleteVehicle _x;
-		        };
-		    }foreach nearestObjects[player,["All"],200];
-
-		    ["CheckPointClear_Log", format ["Medic %1 (%2) has Cleared a Checkpoint at %3", name player, getPlayerUID player, _gridPos]] call fn_RMLogToServer;
-		}; 
-		case (_uid in Tow_ID) : { 
-			{
-		        if((_x getVariable "AM_CP") == 1) then 
-	        	{
-		            deleteVehicle _x;
-		        };
-		    }foreach nearestObjects[player,["All"],200];
-
-		    ["CheckPointClear_Log", format ["Mechanic %1 (%2) has Cleared a Checkpoint at %3", name player, getPlayerUID player, _gridPos]] call fn_RMLogToServer;
-		}; 
+				if((_x getVariable "AM_CP") == 1) then 
+				{
+					deleteVehicle _x;
+				};
+			}foreach nearestObjects[player,["All"],200];
+		}
+		else
+		{
+			format['if(isCop) then{player sideChat "%1 has attempted to clear a checkpoint (200m). This can only be done by a Corporal or higher."}', name player] call swag;
+		};
 	};
 };

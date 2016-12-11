@@ -24,7 +24,6 @@ while {true} do {
 	{[_x] execVM "BTK\Cargo Drop\InitAction.sqf";} forEach (nearestObjects [player, ["datsun1_civil_1_open"], 15]);
 	{[_x] execVM "BTK\Cargo Drop\InitAction.sqf";} forEach (nearestObjects [player, ["oltruc3"], 15]);
 	{[_x] execVM "BTK\Cargo Drop\InitAction.sqf";} forEach (nearestObjects [player, ["cooter"], 15]);
-	{[_x] execVM "BTK\Cargo Drop\InitAction.sqf";} forEach (nearestObjects [player, ["flyers"], 15]);
 	{[_x] execVM "BTK\Cargo Drop\InitAction.sqf";} forEach (nearestObjects [player, ["il_silverado_red"], 15]);
 	{[_x] execVM "BTK\Cargo Drop\InitAction.sqf";} forEach (nearestObjects [player, ["il_silverado_orange"], 15]);
 	{[_x] execVM "BTK\Cargo Drop\InitAction.sqf";} forEach (nearestObjects [player, ["qantas_C130"], 20]);

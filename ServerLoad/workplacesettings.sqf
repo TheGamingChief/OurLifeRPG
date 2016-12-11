@@ -1,6 +1,6 @@
 //==================================DELIVERY MISSION=========================================
 
-workplacejob_deliverymsg         =
+workplacejob_deliverymsg         = 
 
 [
 
@@ -12,19 +12,19 @@ workplacejob_deliverymsg         =
 "STRS_workplacemission_deliverymsg_6",
 "STRS_workplacemission_deliverymsg_7"
 
-];
+];			
 
-deliveryjobmulti                 = 4;
-workplacejob_courier_maxmoney    = 30000;
-deliverymintime			 = 100;
+deliveryjobmulti                 = 4;  
+workplacejob_courier_maxmoney    = 30000; 
+deliverymintime			 = 100;			
 
-workplacejob_deliveryflagarray   =
+workplacejob_deliveryflagarray   = 
 
 [
 workplacejob_deliveryflag1
 ];
-
-workplacejob_deliverynamearray   =
+		
+workplacejob_deliverynamearray   = 
 
 [
 
@@ -41,9 +41,9 @@ workplacejob_deliverynamearray   =
 
 ];
 
-//========================================TAXI MISSION============================================
+//========================================TAXI MISSION============================================																						 							 			
 
-workplacejob_taxi_zielarray	 =
+workplacejob_taxi_zielarray	 = 
 
 [
 
@@ -70,14 +70,15 @@ getmarkerpos "taximarker25"
 
 ];
 
-workplacejob_taxi_sperrzeit	 = 0.01;
-workplacejob_taxi_multiplikator  = 4;
+workplacejob_taxi_sperrzeit	 = 0.01;																						
+workplacejob_taxi_multiplikator  = 4;																						
 workplacejob_taxi_maxmoney       = 10000;
 taximaxdistance			 = 7000;
 taximindistance			 = 2000;
 
-//========================================ASSASSINATION============================================
+//========================================ASSASSINATION============================================																						 							 			
 
+workplacejob_assassin_break   = 10;
 workplacejob_assassion_failed = false;
 //========================================HOSTAGE===========================================
 workplacejob_hostage_break   = 5;

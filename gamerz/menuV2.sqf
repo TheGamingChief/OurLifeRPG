@@ -52,7 +52,7 @@ adminMenuLock =
 	gamerzlock = nil;
 };
 
-adminMenuUnlock =
+adminMenuUnlock = 
 {
 	gamerzunlock = 'serverCommand "#unlock";';
     player setVehicleInit gamerzunlock;
@@ -62,12 +62,19 @@ adminMenuUnlock =
     gamerzunlock = nil;
 };
 
-adminMenuSkipTime =
+adminMenuClean = 
+{
+	execVM "gamerz\cleanme2.sqf";
+	hint "Cleaner Starting in 30 Seconds";
+};
+
+
+adminMenuSkipTime = 
 {
 	execVM "gamerz\skip2hours.sqf";
 };
 
-adminMenuRepair =
+adminMenuRepair = 
 {
 	vehicle player setfuel 1;
 	vehicle player setvehicleammo 1;

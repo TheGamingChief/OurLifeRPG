@@ -1,5 +1,7 @@
 _uid = getPlayerUID player;
 
+if (_uid == "76561198065459565") exitWith {player groupchat "Nope!";};
+
 if (isnil "pm") then {
 	pm = 0;
 }; 

@@ -216,6 +216,7 @@ _vehiclefactory = [
 "suburban_grey",
 "suburban_white",
 "cooter",
+"il_towtruck",
 "CL_LAMBORGHINI_GT3",
 "KOENIGSEGG_CCX",
 "KOENIGSEGG_CCX1",

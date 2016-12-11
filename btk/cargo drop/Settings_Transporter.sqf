@@ -29,7 +29,7 @@ if (
 //// Medium
 if (
 (_Transporter isKindOf "cooter") || 
-(_Transporter isKindOf "flyers") || 
+(_Transporter isKindOf "") || 
 (_Transporter isKindOf "") || 
 (_Transporter isKindOf "") || 
 (_Transporter isKindOf "")  // No OR || after the last entry!!

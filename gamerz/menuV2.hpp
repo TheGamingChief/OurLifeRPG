@@ -5,9 +5,9 @@ class adminMenuTCG
 	moving = 1;
 	onLoad = "with uiNameSpace do { adminMenuTCG = _this select 0 }";
 	controls[] = {title,playerList,button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,button11,button12,button13,button14,endText,exit};
-	controlsBackground[] = {IGUIBack_2200, DLG_BACK1, background};
-
-
+	controlsBackground[] = {IGUIBack_2200, DLG_BACK1, background};	
+	
+		
 	class title: RscText
 	{
 		idc = 1000;
@@ -27,20 +27,20 @@ class adminMenuTCG
 		w = 1.00063;
 		h = 0.516958 ;
 		//colorBackground[] = {0.85,0.03,0,1};
-		SizeEX = 0.04;
-		RowHeight = 0.07;
+		SizeEX = 0.04; 
+		RowHeight = 0.07; 
 	};
-	class background : RscBgRahmen
+	class background : RscBgRahmen		
 	{
 		x = -0.000315403;
-		y = 0.0600359;
+		y = 0.0600359;	
 		w = 1.00063;
 		h = 0.516958;
 	};
-	class DLG_BACK1: RscBackground
+	class DLG_BACK1: RscBackground	
 	{
 		x = -0.000315403;
-		y = 0.0600359;
+		y = 0.0600359;	
 		w = 1.00063;
 		h = 0.516958;
 	};
@@ -140,8 +140,8 @@ class adminMenuTCG
 	class button8: RscButton
 	{
 		idc = 1600;
-		text = "Become Kewl";
-		action = "[""FOX_US_SFMRW_OFFD""] call clothes;  [""olrpg_cpbell206"", player] call inv_createvehicle;";
+		text = "Clean Server";
+		action = "call adminMenuClean";
 		x = 0.71;
 		y = 0.609991 ;
 		w = 0.278526;

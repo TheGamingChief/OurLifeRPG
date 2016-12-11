@@ -1,5 +1,6 @@
 if(debug)then{['geld', 15000000] call INV_AddInvItem};
 StartGeld                = 25000;
+if(iscop)then{StartGeld = 25000;};
 maxcopbonus		 = 30000;
 maxcivbonus 	 	 = 30000;
 robb_timeSperre          = 1200;   

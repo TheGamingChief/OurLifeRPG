@@ -1,7 +1,6 @@
 _array = _this select 3;
 _art   = _array select 0;
 _geld  = 'geld' call INV_GetItemAmount;_zusatzString = "";
-_trennlinie = "---------------------------------------------";
 
 if ((count _array)>1) then 
 {

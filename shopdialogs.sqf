@@ -1,4 +1,3 @@
-closedialog 0;
 if (!(createDialog "itemkaufdialog")) exitWith {hint "Dialog Error!"};
 
 if (isNil "INV_ShopDialoge") then {INV_ShopDialoge = 0} else {INV_ShopDialoge = INV_ShopDialoge + 1};

@@ -3,13 +3,6 @@ _selection = ((_this select 3) select 0);
 if (_selection == "donut 1") then
 {
 _wallet = "geld" call INV_GetItemAmount; 
-_cost = 125;
-
-if(_cost > _wallet) exitWith	
-{
-	player groupChat "You do not have enough money in your wallet to purchase 1 Donut.";
-}; 
-
 1001 cutText ["Employee: Welcome to Dunkin Bronuts, How may I take your order?","PLAIN DOWN"];
 sleep 5;
 1001 cutText ["One Donut Please!","PLAIN DOWN"];
@@ -23,13 +16,6 @@ player groupchat "You have Received (1) Donuts!";
 if (_selection == "donut 6") then
 {
 _wallet = "geld" call INV_GetItemAmount; 
-_cost = 750;
-
-if(_cost > _wallet) exitWith	
-{
-	player groupChat "You do not have enough money in your wallet to purchase 6 Donuts.";
-};
-
 1001 cutText ["Employee: Welcome to Dunkin Bronuts, How may I take your order?","PLAIN DOWN"];
 sleep 5;
 1001 cutText ["Half a Dozen Donut's Please!","PLAIN DOWN"];
@@ -43,13 +29,6 @@ player groupchat "You have Received (6) Donuts!";
 if (_selection == "donut 12") then
 {
 _wallet = "geld" call INV_GetItemAmount; 
-_cost = 1500;
-
-if(_cost > _wallet) exitWith	
-{
-	player groupChat "You do not have enough money in your wallet to purchase 12 Donuts.";
-};
-
 1001 cutText ["Employee: Welcome to Dunkin Bronuts, How may I take your order?","PLAIN DOWN"];
 sleep 5;
 1001 cutText ["A Dozen Donut's Please!","PLAIN DOWN"];

@@ -1,6 +1,6 @@
 /*
 Init Modified For Our Life RPG By Speedy
-Edited by CP3088 & TheGamingChief
+Edited by CP3088 & TheGamingChief & Garry_3088 <3
 */
 
 if (isServer) then 

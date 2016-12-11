@@ -1,6 +1,5 @@
 if (!backupavailable) exitwith {player sidechat format["Your Panic Button Is Disabled, Try again in 60 seconds"];};
 backupavailable = false;
-if (player getVariable "KOED")exitWith{player groupChat "You are dead and can't press your Panic Button!";backupavailable = true;};
 player groupchat format["You have requested backup. Your location has been marked on the map."];
 
 _gridPos = mapGridPosition getpos player;
