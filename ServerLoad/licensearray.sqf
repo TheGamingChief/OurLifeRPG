@@ -65,7 +65,7 @@ INV_Lizenzen =
 ["Sheriff_license",        [copsheriffbank],                                         "Sheriff License",10000],
 ["CID_license",            [cidbank],                                                "CID License",10000],
 ["Undercover_license",     [specbox],                                                "Undercover License",10000],
-["towl",                   [truckshop],                                              "Towing License",50000],
+["towl",                   [truckshop, towatm],                                      "Towing License",50000],
 ["PMC_license",            [pmcbank],                                                "PMC License",100000],
 ["CommandPMC_license",     [pmcbank],                                                "PMC Command License",50000]
 ];
