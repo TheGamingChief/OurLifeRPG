@@ -121,7 +121,7 @@ _prisondauer = (_this select 1)*60;
 _copobj      = _this select 2;															
 _exitart     = "";
 
-if (!(player call ISSE_IsVictim)) exitwith {(format ["if (rolestring == ""%1"") then {player groupchat localize ""STRS_inventory_checknohands""};", _copobj]) call broadcast;};
+if (!(player call ISSE_IsVictim)) exitwith {(format ["if (player == %1) then {player groupchat localize ""STRS_inventory_checknohands""};", _copobj]) call broadcast;};
 isstunned = false;
 player setVariable ["Attached",false,true];
 player setVariable ["Cuffed",false,true];
@@ -135,7 +135,7 @@ if (_civkopfgeld != 0) then
 
 	{
 
-	(format['if(rolestring == "%1")then{kontostand = kontostand + %2; player groupChat "This civ had a bounty of $%2! You got that bounty!"}', _copobj, _civkopfgeld]) call broadcast;
+	(format['if(player == %1)then{kontostand = kontostand + %2; player groupChat "This civ had a bounty of $%2! You got that bounty!"}', _copobj, _civkopfgeld]) call broadcast;
 
 	};
 
@@ -214,7 +214,7 @@ if (_loopart == "inventcheck") then
 
 _aktionsStarter = _this select 1;
 										
-(format ['if (rolestring == "%1") then {[0, 0, 0, ["inventorycheck", %2, %3, %4]] execVM "maindialogs.sqf";};',_aktionsStarter, INV_LizenzOwner, INV_InventarArray, player]) call broadcast;
+(format ['if (player == %1) then {[0, 0, 0, ["inventorycheck", %2, %3, %4]] execVM "maindialogs.sqf";};',_aktionsStarter, INV_LizenzOwner, INV_InventarArray, player]) call broadcast;
 
 };
 
@@ -224,7 +224,7 @@ if (_loopart == "patdown") then
 
 _aktionsStarter = _this select 1;
 										
-(format ['if (rolestring == "%2") then {execVM "scripts\TheGamingChief\Common\fnc_PatDown.sqf"; systemChat format["Your weapons have been removed by %1"];};', _aktionsStarter, player]) call broadcast;
+(format ['if (player == %2) then {execVM "scripts\TheGamingChief\Common\fnc_PatDown.sqf"; systemChat format["Your weapons have been removed by %1"];};', name _aktionsStarter, player]) call broadcast;
 
 };
 
@@ -234,7 +234,7 @@ if (_loopart == "licheck") then
 {		
 _aktionsStarter = _this select 1;
 										
-(format ['if (rolestring == "%1") then {[0, 0, 0, ["licensecheck", %2, %3, %4]] execVM "maindialogs.sqf";};',_aktionsStarter, INV_LizenzOwner, INV_InventarArray, player]) call broadcast;
+(format ['if (player == %1) then {[0, 0, 0, ["licensecheck", %2, %3, %4]] execVM "maindialogs.sqf";};',_aktionsStarter, INV_LizenzOwner, INV_InventarArray, player]) call broadcast;
 
 };
 
@@ -245,13 +245,16 @@ if (_loopart == "stealmoney") then
 _aktionsStarter = _this select 1; 
 if(stolenfromtimeractive) exitwith 
 {
-	(format ['if (rolestring == "%1") then {hint "%2 has been stolen from recently";};', _aktionsStarter, player]) call broadcast;	
+	(format ['if (player == %1) then {hint "%2 has been stolen from recently";};', _aktionsStarter, player]) call broadcast;	
 };
 _geld  = 'geld' call INV_GetItemAmount;
 _amounttosteal = (floor(random _geld));
+_gridPos = mapGridPosition getpos player;
 ["geld", -(_amounttosteal)] call INV_AddInvItem;
+["Rob_Log", format ["%1 (%2) has robbed %3 (%4) for $%5 at %6", name _aktionsStarter, getPlayerUID _aktionsStarter, player, getPlayerUID player, _amounttosteal, _gridPos]] call fn_RMLogToServer;
 
-(format ['if (rolestring == "%1") then {["geld", %2] call INV_AddInvItem;};hint "%1 stole %2 from %3";',_aktionsStarter, _amounttosteal, player]) call broadcast;
+(format ['if (player == %1) then {["geld", %2] call INV_AddInvItem;};hint "%1 stole %2 from %3";',_aktionsStarter, _amounttosteal, player]) call broadcast;
+
 stolenfromtimeractive = true;
 uiSleep 900;
 stolenfromtimeractive = false;

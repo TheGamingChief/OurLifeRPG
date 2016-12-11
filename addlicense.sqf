@@ -48,7 +48,6 @@ if ((_art == "remove") or (_art == "add")) then
 		if(_license == "devlic" and !(_uid in SwagDev)) exitWith { player groupChat "Restricted to Developers"};
 		if(_license == "CID_license" and !(_uid in Undercover_id)) exitWith { player groupChat "Restricted to CID!"};
 		if(_license == "Undercover_license" and !(_uid in Undercover_id)) exitWith { player groupChat "Restricted to Undercover Cops!"};
-		if(_license == "Undercover_license" and (_uid in Undercover_id)) then {isCop = true; isCiv = true; isUC = true;};
 		if(_license == "RLRPG_Clothing_license" and !(isciv)) exitWith { player groupChat "You need to be civilian!"};
 		if(_license == "esul2" and !(_uid in EMT1_id)) exitWith { player groupChat "You are not EMT 1"};
 		if(_license == "esul3" and !(_uid in EMT2_id)) exitWith { player groupChat "You are not EMT 2"};

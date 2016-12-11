@@ -72,11 +72,6 @@ if (spectate) then
 		_name = selecteditem;
 		{if(format[name _x] == _name) then {[_x] call spect;};} forEach Entities "CAManBase";
 		{if ((count crew _x)>0) then {if(format[name _x] == _name) then {[_x] call spect;};};} foreach (Entities "LandVehicle"+ Entities "Air" + Entities"Ship");
-		detach player;
-		player setVelocity [0,0,0];
-		sleep 2;
-		player setPosATL OriginalPOS;
-		[] execVM "addons\proving_ground\fnc_inon.sqf";
 	};
 	spectate = false;
 	
@@ -87,4 +82,9 @@ if (!spectate) then
 	format['if(getplayeruid player in Developer_id) then {player sideChat "[Admin Log] Admin %1 (%2) has stopped Spectating"}',name player, getPlayerUID player] call swag;
 	format['if(getplayeruid player in adminlevel4) then {player sideChat "[Admin Log] Admin %1 (%2) has stopped Spectating"}',name player, getPlayerUID player] call swag;
 	["Admin_Log", format ["Admin %1 (%2) has stopped Spectating",name player, getPlayerUID player]] call fn_LogToServer;
+	detach player;
+	player setVelocity [0,0,0];
+	sleep 2;
+	player setPosATL OriginalPOS;
+	[] execVM "addons\proving_ground\fnc_inon.sqf";
 };

@@ -15,7 +15,4 @@ _this lock false;
 
 player switchMove "AmovPercMstpSnonWnonDnon_AcrgPknlMstpSnonWnonDnon_getInLow";
 sleep 0.4;
-format['%1 setVariable ["tf_unable_to_use_radio", false]', _target] call broadcast;
 format['if(player == %2)then{player action["eject", vehicle player]}; server globalChat "%1 pulled %2 out of a car!";', player, _target] call broadcast;
-
-

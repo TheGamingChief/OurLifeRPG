@@ -16,7 +16,7 @@ fn_LeftgussNotification =
     if (_weapons < 1) exitWith {player groupChat "You have walked away from Guss, Deals off!";deleteMarker "GunRunner";deleteMarker "GunRunner2";gunrunavailable = true;};
 };
 
-//if (_west < 4) exitwith {player groupchat "Guss: Sorry man, no missions avaliable at the moment!";gunrunavailable = true;};
+if (_west < 4) exitwith {player groupchat "Guss: Sorry man, no missions avaliable at the moment!";gunrunavailable = true;};
 
 1001 cutText ["Guss: So here's the Job...","PLAIN DOWN"];
 if (player distance guss >= 5) exitWith {[] call fn_LeftgussNotification;};	

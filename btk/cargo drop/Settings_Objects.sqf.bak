@@ -35,9 +35,6 @@ _ObjectsS = [
 //// Medium
 //// UH1_Base, UH60_Base, UH60M_base_EP1, AW159_Lynx_BAF, BAF_Merlin_HC3_D, Mi17_base, Mi171Sh_Base_EP1, Mi24_Base, UH1H_base
 _ObjectsM = [
-"VIL_passat_civil",
-"VIL_octavia_policeEU",
-"vil_sprinter_armamb",
 "tahoe_grey",
 "tahoe_darkblue",
 "tahoe_blue",
@@ -478,9 +475,6 @@ _ObjectsM = [
 //// Large
 //// CH47_base_EP1, MV22
 _ObjectsL = [
-"VIL_passat_civil",
-"VIL_octavia_policeEU",
-"vil_sprinter_armamb",
 "tahoe_grey",
 "tahoe_darkblue",
 "tahoe_blue",

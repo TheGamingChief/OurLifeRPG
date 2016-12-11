@@ -9,7 +9,7 @@ if (vehicle player != player) then
 	player action ["eject", (vehicle player)];
 };
 player setVariable ["KOED",true,true];
-player setVariable ["tf_unable_to_use_radio", true];
+player setVariable ["tf_unable_to_use_radio", true, true];
 player setVariable ["tf_voiceVolume", 0, true];
 player setVariable ["ZipTied",false,true];
 player setVariable ["Gagged",false,true];
@@ -18,11 +18,12 @@ _civ setVariable ["Escort",false,true];
 detach _civ;
 _timer = 720;
 _esOnline = false;
-player allowDamage false;
+format['%1 allowDamage false', player]call swag;	
 [] execVM "actions\actionsRemove.sqf";
 [] execVM format ['Actions\fnc_%1_Actions.sqf',playerSide];
+INV_shortcuts=true;
 
-for "_i" from 0 to (count playableUnits) do
+for "_i" from 0 to (count playableUnits -1) do
 {
 	if (side (playableUnits select _i) == Resistance) then
 	{
@@ -34,7 +35,6 @@ if (!_esOnline) then
 	_timer = 60;
 };
 
-player allowDamage false;
 [nil,player,rSwitchMove,"adthppnemstpsraswpstdnon_2"] call RE;
 
 while {_timer >= 0 && player getVariable "KOED"} do
@@ -53,22 +53,22 @@ if (_timer <= 0) then {
 	player addWeapon "ItemWatch";
 	player addWeapon "ItemGPS";
 	player setVariable ["KOED2",false,true];
-	player setVariable ["tf_unable_to_use_radio", false];
+	player setVariable ["tf_unable_to_use_radio", false, true];
 	player setVariable ["tf_voiceVolume", 1.0, true];
 	player enableSimulation true;
-	deleteMarker ("OL_DeadTracker_" + name player);	
+	format['deleteMarker ("OL_DeadTracker_" + name %1)', player]call broadcast;	
 	sleep 2;
 	call AddRadioBack;
 };
 		
 if (player getVariable "KOED") then
 {
-	player allowDamage true;
+	format['%1 allowDamage true', player]call swag;
 } else {
-	player allowDamage true;
+	format['%1 allowDamage true', player]call swag;
 	[nil,player,rSwitchMove,"amovppnemstpsnonwnondnon"] call RE;
 	hintSilent parseText format["<t color='#ff0000'>%1 You have been revived</t>", name player];
-	player setVariable ["tf_unable_to_use_radio", false];
+	player setVariable ["tf_unable_to_use_radio", false, true];
 	player setVariable ["tf_voiceVolume", 1.0, true];
 	player addWeapon "ItemMap";
 	player addWeapon "ItemCompass";
@@ -80,27 +80,27 @@ if (player getVariable "KOED") then
 		player setHit ["legs", 1];
 	};
 	player enableSimulation true;
-	deleteMarker ("OL_DeadTracker_" + name player);	
+	format['deleteMarker ("OL_DeadTracker_" + name %1)', player]call broadcast;	
 	sleep 2;
 	call AddRadioBack;
 };
 
 if (player getVariable "KOED2") then
 {
-	player allowDamage true;
+	format['%1 allowDamage true', player]call swag;
 } else {
-	player allowDamage true;
+	format['%1 allowDamage true', player]call swag;
 	[nil,player,rSwitchMove,"amovppnemstpsnonwnondnon"] call RE;
-	hintSilent parseText format["<t color='#ff0000'>%1 You have respawn</t>", name player];
+	hintSilent parseText format["<t color='#ff0000'>%1 You have respawned</t>", name player];
 	player setVariable ["KOED",false,false];
-	player setVariable ["tf_unable_to_use_radio", false];
+	player setVariable ["tf_unable_to_use_radio", false, true];
 	player setVariable ["tf_voiceVolume", 1.0, true];
 	player addWeapon "ItemMap";
 	player addWeapon "ItemCompass";
 	player addWeapon "ItemWatch";
 	player addWeapon "ItemGPS";
 	player enableSimulation true;
-	deleteMarker ("OL_DeadTracker_" + name player);	
+	format['deleteMarker ("OL_DeadTracker_" + name %1)', player]call broadcast;	
 	sleep 2;
 	call AddRadioBack;
 };

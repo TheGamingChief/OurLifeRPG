@@ -1,16 +1,12 @@
-//hint "Started";
 waitUntil {(getPlayerUID player) != ""};
 _UID = getPlayerUID player;
 
-rankPlayer="";
-if (_UID in SwagDevs)then{rankPlayer="Admin";};
-if(rankPlayer != "") then {isStaff = true;};
-if(isStaff) then {execVM "gamerz\menuV2.sqf";};
-if(isStaff) then 
-{	
-	player globalchat format["Loaded in as %1", rankPlayer];
+rankPlayer = "";
+isStaff = false;
+
+if (_UID in SwagDevs) then {
+	rankPlayer = "Admin";
+	isStaff = true;
+	execVM "gamerz\menuV2.sqf";
+	player globalchat "Loaded in as Admin";
 };
-
-
-
-//player globalChat format["Loaded in as %1", rankPlayer];
