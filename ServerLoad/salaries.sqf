@@ -10,8 +10,6 @@ sleep 60;
 
 _income = add_copmoney;
 
-if ((typeOf player == "olrpg_ftouni" || typeOf player == "olrpg_snrftouni")) then {systemChat "test"};
-
 if ((typeOf player == "olrpg_ftouni" || typeOf player == "olrpg_snrftouni")) then {_income = _income + 6000};
 
 if ((typeOf player == "olrpg_k9nor" || typeOf player == "olrpg_depk9uni" || typeOf player == "olrpg_k9marksman" || typeOf player == "olrpg_k9com")) then {_income = _income + 5000};	
