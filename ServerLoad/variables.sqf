@@ -116,7 +116,10 @@ cmissionactive2			 = false;
 TimerActive 			 = false;
 //========Yup======
 chopavailable 			 = true;
-slotsavailable 			 = true;
+IsSpinningSlots			 = false;
+slots1available 		 = true;
+slots2available 		 = true;
+slots3available 		 = true;
 robcasinoavailable		 = true;
 Brycesavailable 		 = true;
 casinoavailable 		 = true;

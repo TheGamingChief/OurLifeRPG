@@ -139,15 +139,6 @@ if (playerSide == civilian) then {
 	_role removeAction actionsm1;
 	_role removeAction actionsm2;
 	_role removeAction actionsm3;
-	_role removeAction actionsm4;
-	_role removeAction actionsm5;
-	_role removeAction actionsm6;
-	_role removeAction actionsm7;
-	_role removeAction actionsm8;
-	_role removeAction actionsm9;
-	_role removeAction actionsm10;
-	_role removeAction actionsm11;
-	_role removeAction actionsm12;
 	_role removeAction actioncsrob;
 	_role removeAction action15;
 	_role removeAction action16;
