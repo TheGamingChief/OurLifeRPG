@@ -158,11 +158,11 @@ actionrep = _role addaction ["[Service Helicopter]","scripts\foster\Pmcrepair.sq
 //========================================MAFIA==========================================================
 action48 = _role addaction ["Impound vehicle","noscript.sqf",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);[_vcl, "impound"] execVM "impound.sqf";',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);_vcl in INV_ServerVclArray and player distance _vcl < 10 and _vcl distance towgate < 50'];
 actionass = _role addaction ["Switch to Assassin Clothes","noscript.sqf",'["TK_INS_Soldier_EP1"] call clothes;',1,true,true,"",'player distance assassinshop < 10 and ("assassinlic" call INV_HasLicense)'];
-actionSave8 = _role addaction ["[Take Land Vehicle From Storage]","retrieveVehicleLand2.sqf",[],1,false,true,"","player distance savepoint <= 3"];
-actionSave9 = _role addaction ["[Take Land Vehicle From Storage]","retrieveVehicleLand3.sqf",[],1,false,true,"","player distance savepointx <= 3"];
+action222 = _role addaction ["[Take Land Vehicle From Storage]","retrieveVehicle.sqf",["EastCivSpawn"],1,false,true,"","player distance LandSavePoint <= 3"];
+actionSave8 = _role addaction ["[Take Land Vehicle From Storage]","retrieveVehicle.sqf",["WestCivSpawn"],1,false,true,"","player distance savepoint <= 3"];
+actionSave9 = _role addaction ["[Take Land Vehicle From Storage]","retrieveVehicle.sqf",["DonorSpawn"],1,false,true,"","player distance savepointx <= 3"];
 actionSave = _role addaction ["[Take Boat From Storage]","retrieveVehicleBoat.sqf",[],1,false,true,"","player distance BoatSavePoint <= 5"];
 actionSave2 = _role addaction ["[SAVE YOUR LAND VEHICLE]","noscript.sqf",'(nearestobjects [getpos player, ["LandVehicle"], 3] select 0) execVM "saveVehicleLand.sqf";',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["LandVehicle"], 3] select 0);player distance _vcl < 5 and _vcl in INV_ServerVclArray and _vcl in INV_VehicleArray and (player distance savepoint <= 30 or player distance savepointx <= 30 or player distance LandSavePoint <= 30)'];
-action222 = _role addaction ["[Take Land Vehicle From Storage]","retrieveVehicleLand.sqf",[],1,false,true,"","player distance LandSavePoint <= 3"];
 actionSave4 = _role addaction ["[SAVE YOUR AIR VEHICLE]","noscript.sqf",'(nearestobjects [getpos player, ["Air"], 3] select 0) execVM "saveVehicleAir.sqf";',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air"], 3] select 0);player distance _vcl < 5 and _vcl in INV_ServerVclArray and _vcl in INV_VehicleArray and (player distance AirSavePoint <= 50)'];
 actionSave5 = _role addaction ["[Take Air Vehicle From Storage]","retrieveVehicleAir.sqf",[],1,false,true,"","player distance AirSavePoint <= 3"];
 actionSave6 = _role addaction ["[Take Air Vehicle From Storage]","retrieveVehicleAir.sqf",[],1,false,true,"","player distance AirSavePoint2 <= 3"];

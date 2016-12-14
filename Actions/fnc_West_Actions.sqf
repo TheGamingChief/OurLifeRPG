@@ -77,8 +77,8 @@ action123 = _role addaction ["Cancel patrol mission","coppatrol.sqf",["end"],1,f
 action124 = _role addaction ["Get Security mission","coppatrol.sqf",["start1"],1,false,true,"","iscop and player distance copbank <= 4 and !pmissionactive1 and !patrolwaittime1"];
 action125 = _role addaction ["Cancel Security mission","coppatrol.sqf",["end1"],1,false,true,"","iscop and pmissionactive1 and player distance copbank <= 4"];
 //=======================Cherry light ===================================================
-actionPolice = _role addaction ["[Take Vehicle from the Saver]","retrieveVehicleCop.sqf",[],1,false,true,"","player distance savepoint2 <= 3"];
-actionPolice = _role addaction ["[Take Vehicle from the Saver]","retrieveVehicleCop2.sqf",[],1,false,true,"","player distance savepoint2s <= 3"];
+actionPolice = _role addaction ["[Take Land Vehicle From Storage]","retrieveVehicle.sqf",["PDSpawn"],1,false,true,"","player distance savepoint2 <= 3"];
+actionPolice1 = _role addaction ["[Take Land Vehicle From Storage]","retrieveVehicle.sqf",["SheriffSpawn"],1,false,true,"","player distance savepoint2s <= 3"];
 actionPolice2 = _role addaction ["[SAVE YOUR POLICE VEHICLE]","noscript.sqf",'(nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0) execVM "saveVehicleCop.sqf";',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and _vcl in INV_ServerVclArray and _vcl in INV_VehicleArray and (player distance savepoint2 <= 30 or player distance savepoint2s <= 30)'];
 busaction2 = _role addaction ["Get in the bus","specialveh.sqf",["busgetin"],1,false,true,"","player distance bus1 <= 5"];
 //======================================== Aviation Actions ===================================================
