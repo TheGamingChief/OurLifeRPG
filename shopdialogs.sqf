@@ -1,3 +1,4 @@
+closedialog 0;
 if (!(createDialog "itemkaufdialog")) exitWith {hint "Dialog Error!"};
 
 if (isNil "INV_ShopDialoge") then {INV_ShopDialoge = 0} else {INV_ShopDialoge = INV_ShopDialoge + 1};
@@ -13,7 +14,7 @@ _itembuyarray   = ((INV_ItemShops select INV_ActiveShopNumber) select 4);
 _itemsellarray  = ((INV_ItemShops select INV_ActiveShopNumber) select 5);
 
 //--------------------------------------BUY-----------------------------------------
-_CopOnlyShops = [copuntrained,copbasic1,copbasic2,copbasic4,copbasic6,coppo1,coppo2,coppo3,copcpl,copsgt,ftobox,cidbox,copdeputy,copsheriff,copsheriffdnr,coplt,copcpt,copchief,copair2,copswat1,copswat2,copswat3,copswat4,copswat5,copswat6,copswate,copswatd,copmedalbox,copswatvehicle,swatcg,copcoastguard,copcoastguardair,copairweapon2,copVIPBox,copVIPBox2,copk92,corbox,corsbox,corcbox,copsgtdeputy];
+_CopOnlyShops = [corbox,copuntrained,copbasic1,copbasic2,copbasic4,copbasic6,coppo1,coppo2,coppo3,copcpl,copsgt,ftobox,cidbox,copdeputy,copsheriff,copsheriffdnr,copsheriffmks,coplt,copcpt,copchief,copair2,copswat1,copswat2,copswat3,copswat4,copswat5,copswate,copswatd,copswatvehicle,copcoastguard,copcoastguardair,copairweapon2,copVIPBox,copVIPBox2,copk92,corsbox,corcbox,copsgtdeputy];
 _ESUOnlyShops = [tdoc,tdoc2,tdoc3,tdoc4,tdoc5,tdoc6,tdocsub,tdoc2sub,tdoc3sub,tdoc4sub,tdoc5sub,tdoc6sub,tdoc7,tdoc7sub];
 _EMT1 = [tdoc3,tdoc3sub];
 _EMT2 = [tdoc7,tdoc7sub];
@@ -21,7 +22,7 @@ _EMT3 = [tdoc,tdoc6sub];
 _EMT_FD = [tdoc4,tdoc4sub];
 _EMT_Air = [tdoc5,tdoc5sub];
 _EMT_Command = [tdoc6,tdocsub];
-_vipCop = [copVIPBox,copVIPBox2,copVIPBox3,copswatd,copcidd];
+_vipCop = [copVIPBox,copVIPBox2,copVIPBox3,copswatd];
 _donor1 = [dshop1];
 _donor2 = [dshop2];
 _donor3 = [dshop3];
@@ -39,12 +40,12 @@ _SgtDeputy = [copsgtdeputy];
 _Sheriff = [copsheriff];
 _Lt = [coplt];
 _Cpt = [copcpt];
-_Chief = [copchief,copmedalbox];
+_Chief = [copchief];
 _K9 = [copk9,copk9p,copk9c];
 _PDAviation = [copav1,copav2,copav3,copair2];
-_SWAT = [copswat1,copswat2,copswat3,copswat4,copswat5,copswat6,copswatvehicle,swatcg];
+_SWAT = [copswat1,copswat2,copswat3,copswat4,copswat5,copswatvehicle];
 _CID = [cidbox];
-_COR = [corbox,corsbox,corcbox];
+_COR = [corbox,corsbox,corcbox],
 _CoastGuard = [copcoastguard,copcoastguardair];
 _undercoverbox = [specbox];
 _terrorVIP = [terrorvip,vipterrorair];
@@ -55,7 +56,7 @@ _helix = [helix];
 _boatx = [boatx];
 _CommandPMC = [pmcbox1];
 _PMC = [pmcbox,pmcbox2,pmcbox3];
-_Tow = [tow_box,towcarshop,towcarshop_1,towcarshop_2];
+_Tow = [tow_box];
 
 if (_shop in _CopOnlyShops) then 
 {
@@ -67,6 +68,7 @@ if (_shop in _ESUOnlyShops) then
 	_PlayerTeam = str(playerSide);
 	if (_PlayerTeam != "GUER") exitWith {player groupchat "Only EMS may use this shop!"; closedialog 0};
 };
+
 if(_shop in _Tow and !((getPlayerUID player) in Tow_id)) exitwith {player groupchat "You are not a Flyer's Auto Repair & Towing employee!"; closedialog 0};
 
 if(_shop in _undercoverbox and !((getPlayerUID player) in Undercover_id)) exitwith {player groupchat "You are not an Undercover Officer!"; closedialog 0};

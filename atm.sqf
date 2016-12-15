@@ -1,4 +1,3 @@
-if (local_robbsperre == 1)  exitWith {player groupChat format [localize "STRS_bank_dialoge_robbsperre",(local_robbsperre_zeit call ISSE_str_IntToStr)]};
 if (!(createDialog "bank")) exitWith {hint "Dialog Error!";};
 _liste = [1, true, false] call INV_DialogPlayers;
 if ((_liste select 1) >= 0) then {lbSetCurSel [1, (_liste select 1)];};

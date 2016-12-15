@@ -73,6 +73,7 @@ RL_LoadingSetText =
 	((uiNamespace getVariable "RL_Dialog_loading") displayCtrl 1111) ctrlSetText format["ol_textures\misc\progressbar\progressbar%1.paa",_percent];
 	((uiNamespace getVariable "RL_Dialog_loading") displayCtrl 1113) ctrlSetText format["%1%2",_percent,"%"];
 };
+
 OL_CallEMS =
 {
 	private ["_unit","_location","_timeout","_ReSpawnTime","_OL_TrackMarker"];
@@ -90,6 +91,7 @@ OL_CallEMS =
 			_OL_TrackMarker setMarkerTextLocal format [STR_DEADGUY, name %1];
 	}',_unit, name _unit,_gridPos]call broadcast;
 };
+
 OL_CallPolice =
 {
 	private ["_unit","_location","_timeout","_ReSpawnTime","_OL_TrackMarker"];
@@ -106,6 +108,53 @@ OL_CallPolice =
 			_OL_TrackMarker setMarkerSizeLocal [0.6,0.6];
 			_OL_TrackMarker setMarkerTextLocal format [STR_DEADGUY, name %1];
 	}',_unit, name _unit,_gridPos]call broadcast;
+};
+
+OL_CheckWater =
+{
+	_isWater = surfaceIsWater position player;
+	_ret = [];
+	_cycle = 0;
+	_foundLand = false;
+
+	if(_isWater)then
+	{
+		// Distance Loop
+		for "_i" from 10 to 4500 step 10 do
+		{
+			// Direction Loop
+			for "_y" from 0 to 360 do
+			{
+				_cycle = _cycle + 1;
+				_pos = [(getPos player select 0) + (sin _y) * _i,(getPos player select 1) + (cos _y) * _i, 0];
+				if(!(surfaceIsWater _pos))exitWith
+				{
+					_ret set[count(_ret),_pos];
+					_foundLand = true;
+				};
+			};
+			if(_foundLand)exitWith{};
+		};
+
+		_landPos = _ret select 0;
+		_safePos = _landPos findEmptyPosition[0,75];
+		(vehicle player)setVelocity[0,0,0];
+
+		if(count _safePos > 0)then
+		{
+			player setPos _safePos;
+		}
+		else
+		{
+			player setPosATL _landPos;
+		};
+
+		if (getPlayerUID player == "76561198073512197") then
+		{
+			diag_log format["Found Land In (%1) Cycles!",_cycle];
+		};
+		systemChat "Your body has washed up on shore!";
+	};
 };
 
 RL_Msg_fnc_SrvMsg =

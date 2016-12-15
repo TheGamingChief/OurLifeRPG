@@ -1,5 +1,5 @@
 //Edit by Sgt Stewart <- Kys Edited By Garry.
-waitUntil {alive player};
+waitUntil {player getVariable "KOED"};
 player removeweapon "ItemGPS";
 execVM "briefing.sqf";
 closeDialog 0;
@@ -44,9 +44,7 @@ if (isciv) then {
 	_obj setPosASL [ getPosASL role select 0, (getPosASL role select 1), getPosASL role select 2];
 	hidebody role;
 	sleep 5;
-	execVM "Actions\actionsRemove.sqf";
-	sleep 1;
-	execVM format ['Actions\fnc_%1_Actions.sqf',playerSide];
+	[] call OL_Events_ActionToggle;
 	waituntil {alive player};
 
 	if (local_arrest == 0) then {

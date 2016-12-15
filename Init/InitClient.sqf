@@ -1,5 +1,4 @@
 [1112, "Init Client",60] call RL_LoadingSetText;
-[] execVM "ServerLoad\respawn.sqf";
 ["ol_textures\images\Gps.paa",-0.06,-0.36] call bis_fnc_customGPS;
 ["clientloop"] execVM "ServerLoad\clientloop.sqf";
 [0,0,0,["clientloop"]] execVM "gangs.sqf";

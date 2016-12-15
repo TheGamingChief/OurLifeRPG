@@ -1,5 +1,5 @@
 _civmenuciv  = civmenuciv;
-_civmenu_civ = civmenu_civ;
+//_civmenuciv = civmenu_civ;
 _art         = _this select 0;
 _geld        = 'geld' call INV_GetItemAmount;
 
@@ -15,7 +15,7 @@ if (_art == 5) exitWith
 
 {
 
-(format ["if (rolestring == ""%1"") then {[""licheck"", ""%2""] execVM ""civmenu.sqf"";}", _civmenu_civ, rolestring]) call broadcast;
+(format ["if (player == %1) then {[""licheck"", %2] execVM ""civmenu.sqf"";}", _civmenuciv, player]) call broadcast;
 
 };
 
@@ -33,7 +33,7 @@ if (_art == 6) exitWith
 
 if(!(_civmenuciv call ISSE_IsVictim))exitwith{hint localize "STRS_inventory_checknohands"};		
 
-(format ["if (rolestring == ""%1"") then {[""inventcheck"", ""%2""] execVM ""civmenu.sqf"";}", _civmenu_civ, rolestring]) call broadcast;
+(format ["if (player == %1) then {[""inventcheck"", %2] execVM ""civmenu.sqf"";}", _civmenuciv, player]) call broadcast;
 
 };
 
@@ -43,7 +43,7 @@ if (_art == 20) exitWith
 
 if(!(_civmenuciv call ISSE_IsVictim))exitwith{hint localize "STRS_inventory_checknohands"};
 
-(format ["if (rolestring == ""%1"") then {[""stealmoney"", ""%2""] execVM ""civmenu.sqf"";};", _civmenu_civ, rolestring]) call broadcast;
+(format ["if (player == %1) then {[""stealmoney"", %2] execVM ""civmenu.sqf"";};", _civmenuciv, player]) call broadcast;
 
 };
 
@@ -51,7 +51,7 @@ if (_art == 69) exitWith
 
 {
 
-(format ["if (rolestring == ""%1"") then {[""patdown"", ""%2""] execVM ""civmenu.sqf"";};", _civmenu_civ, rolestring]) call broadcast;
+(format ["if (player == %1) then {[""patdown"", %2] execVM ""civmenu.sqf"";};", _civmenuciv, player]) call broadcast;
 
 };
 
@@ -71,7 +71,7 @@ if(!(_civmenuciv call ISSE_IsVictim))exitwith{hint localize "STRS_inventory_chec
 
 (format ["if (player == %1) then {[""disarm""] execVM ""civmenu.sqf"";};", _civmenuciv]) call broadcast;
 
-player groupChat format [localize "STRS_civmenu_disarm", _civmenu_civ];
+player groupChat format [localize "STRS_civmenu_disarm", _civmenuciv];
 
 };
 
@@ -80,10 +80,10 @@ if ((_art == 3) and (player distance prisonflag <= 70)) exitWith
 {
 
 _dauer = round(_this select 1);
-format ["if (player == %1) then {[""arrest"", %2, %3] execVM ""civmenu.sqf"";};", _civmenu_civ, _dauer, player] call broadcast;
+format ["if (player == %1) then {[""arrest"", %2, %3] execVM ""civmenu.sqf"";};", _civmenuciv, _dauer, player] call broadcast;
 ["HandCuffs", 1] call INV_AddInvItem;
 
-player groupChat format[localize "STRS_civmenu_arrested", _civmenu_civ];
+player groupChat format[localize "STRS_civmenu_arrested", _civmenuciv];
 
 };
 

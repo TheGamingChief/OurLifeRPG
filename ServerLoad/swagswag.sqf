@@ -1,3 +1,4 @@
+closedialog 0;
 if (!(createDialog "swagswag_life")) exitWith {hint "Dialog Error!";};
 _items = 0;
 for [{_i=0}, {_i < (count INV_InventarArray)}, {_i=_i+1}] do 
@@ -32,24 +33,3 @@ lbSetCurSel [1501,0];
 buttonSetAction [16009,format["[""use"",  lbData [15009, (lbCurSel 15009)], ctrlText 10009, lbData [21009, (lbCurSel 21009)]] execVM ""INVactions.sqf""; closedialog 0;"] ];
 buttonSetAction [16019,format["[""drop"", lbData [15009, (lbCurSel 15009)], ctrlText 10009, lbData [21009, (lbCurSel 21009)]] execVM ""INVactions.sqf""; closedialog 0;"] ];
 buttonSetAction [16029,format["[""give"", lbData [15009, (lbCurSel 15009)], ctrlText 10009, lbData [21009, (lbCurSel 21009)]] execVM ""INVactions.sqf""; closedialog 0;"] ];
-Banking_Swag_Life = {
-	private["_yolo"];
-	_yolo = false;
-	if (getplayeruid player in Donate_id) then 
-	{
-	_yolo = true;
-	};
-	if (("Bankingapp" call INV_GetItemAmount) >= 1) then 
-	{
-	_yolo = true;
-	};
-	_yolo
-};
-Bank_Swag = {
-	if (call Banking_Swag_Life) then 
-	{
-		execVM "atm.sqf";
-	} else {
-		player groupchat "You don't have a Banking-App, you may wana checkout the App Store/Make sure you are a Donator.";
-           };
-};
