@@ -1,9 +1,9 @@
 /*
 Init Modified For Our Life RPG By Speedy
-Edited by CP3088 & TheGamingChief & Garry_3088 <3
+Edited by CP3088 & TheGamingChief
 */
 
-if (isServer) then 
+if (isServer) then
 {
 	execVM "ServerFiles\InitOLServer.sqf";
 	[] execVM "DServer\init.sqf";
@@ -21,7 +21,6 @@ dedicatedServer = false;
 copmcount      	= 40;
 civscount      	= 60;
 playercount    	= 100;
-debugarray     	= [];
 loadNotFinsihed = true;
 OL_StatsLoadedFromDB = false;
 22254 cutRsc["RL_Dialog_loading", "plain"];
@@ -33,7 +32,7 @@ execVM "briefing.sqf";
 call compile preprocessfile "triggers.sqf";
 [] call compile preprocessFileLineNumbers "addons\proving_Ground\init.sqf";
 [1112, "Exec Player Array",10]		call RL_LoadingSetText;
-_h = [] execVM "ServerLoad\playerarrays.sqf";																												
+_h = [] execVM "ServerLoad\playerarrays.sqf";
 waitUntil{scriptDone  _h};
 [1112, "Init Functions",20] 		call RL_LoadingSetText;
 _h = [playercount, rolenumber] execVM "ServerLoad\initfuncs.sqf";
@@ -66,7 +65,7 @@ execVM "BTK\Cargo Drop\Start.sqf";
 setPitchBank = compile preprocessfile "setPitchBank.sqf";
 onHit = compile preprocessfilelinenumbers "onhit.sqf";
 /*BIS_Effects_Burn=compile preprocessFile "\ca\Data\ParticleEffects\SCRIPTS\destruction\burn.sqf";*/
-if (isServer) then 
+if (isServer) then
 {
 	_initServer = execVM "init\InitServer.sqf";
 };
@@ -75,7 +74,6 @@ if (isClient) then {
 	//[] execVM "PurchaseItems.sqf";
 	[] execVM "ServerLoad\dead_spmsg.sqf";
 	[] execVM "deaddem\config.sqf";
-	
 	[] call compile preprocessFile "manderza\init.sqf";
 	[] call compile preprocessFileLineNumbers "HUD\playerHud_functions.sqf";
 	call RLRPG_PlayerHUD_Loop;
@@ -85,11 +83,10 @@ if (isClient) then {
 if(!dedicatedserver) then
 {
 	_initClient = execVM "init\InitClient.sqf";
-	[] execVM "ServerLoad\saveVars.sqf";
 	[] execVM "R3F_revive\revive_init.sqf";
 	[] execVM "ServerLoad\clothes.sqf";
 	[] execVM "deaddem\checkpoint\config.sqf";
-	if(isMultiplayer)then{	
+	if(isMultiplayer)then{
 		[1112, "Loading Statistics",80] 	call RL_LoadingSetText;
 		[] execVM "deaddem2\init.sqf";
 		[] call fnc_SetupEvents;
@@ -106,8 +103,7 @@ if(isNil "45983450u34h77y5646ccvd4tjdsjncx7y3h") exitWith
 	clearVehicleInit player;
 };
 if(isServer) then
-{	
-	//call compile preProcessFile "\iniDB\init.sqf";
+{
 	[] call resetSafeCode;
 	sleep 2;
 	[] call autoUpdateSafeCode;

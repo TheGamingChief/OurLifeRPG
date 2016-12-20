@@ -53,5 +53,5 @@ if (_CarCheck != 1) then
 		
 	player sideChat format ["Vehicle Saved, You may retrieve it at the cop vehicle retriever! You have %1 vehicle(s).",_ArryLength + 1];
 };
-
+sleep 1;
 [] call fnc_SaveStats;

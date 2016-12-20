@@ -56,7 +56,7 @@ _helix = [helix];
 _boatx = [boatx];
 _CommandPMC = [pmcbox1];
 _PMC = [pmcbox,pmcbox2,pmcbox3];
-_Tow = [tow_box];
+_Tow = [tow_box,towcarshop,towcarshop_1,towcarshop_2];
 
 if (_shop in _CopOnlyShops) then 
 {

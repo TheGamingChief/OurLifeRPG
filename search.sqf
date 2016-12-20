@@ -167,7 +167,7 @@ if (_art == "info") then
 
 if(inf == 0)then{inf=1}else{inf=0; hint "";};
 
-while{inf == 1 and alreadygotaworkplacejob == 2 and alive player} do
+while {inf == 1 and alreadygotaworkplacejob == 2 and alive player} do
 
 	{
 

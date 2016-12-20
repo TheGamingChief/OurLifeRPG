@@ -54,7 +54,7 @@ if (_art == "hit") then
 	{player removeWeapon _x} forEach _weapons;
 	{_holder addWeaponCargoGlobal [_x,1];}forEach _weapons;	
 	};
-while{StunActiveTime > 0} do {if(StunActiveTime > MaxStunTime)then{StunActiveTime = MaxStunTime}; StunActiveTime = StunActiveTime - 1; sleep 1;};
+while {StunActiveTime > 0} do {if(StunActiveTime > MaxStunTime)then{StunActiveTime = MaxStunTime}; StunActiveTime = StunActiveTime - 1; sleep 1;};
 StunActiveTime = 0;
 	if (animationstate player != "civillying01" and animationstate player != "civilsitting" and animationstate player != "actspercmstpsnonwrfldnon_interrogate02_forgoten" and animationstate player != "civilsitting02" and animationstate player != "civilsitting03") then  
 	{

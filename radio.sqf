@@ -5,7 +5,7 @@ _s = _this select 1;
 _l = _this select 2;
 _d = _this select 3;
 
-while{alive HQ}do
+while {alive HQ} do
 
 {
 

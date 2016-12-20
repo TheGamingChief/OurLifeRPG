@@ -7,7 +7,7 @@ _time  = _this select 3;
 
 _x = 0;
 
-while{alive _obj} do
+while {alive _obj} do
 
 {
 

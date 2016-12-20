@@ -33,7 +33,7 @@ _whereto = floor(random (count workplacejob_deliveryflagarray));
 _msg = (workplacejob_deliverymsg select (round(random((count workplacejob_deliverymsg)-1))));
 workplacejob_deliveryflag = workplacejob_deliveryflagarray select (_whereto);
 workplacejob_deliveryname = workplacejob_deliverynamearray select (_whereto);
-while{workplacejob_deliveryflag distance player < 1500}do{_whereto = floor(random (count workplacejob_deliveryflagarray));workplacejob_deliveryflag = workplacejob_deliveryflagarray select (_whereto);workplacejob_deliveryname = workplacejob_deliverynamearray select (_whereto);};
+while {workplacejob_deliveryflag distance player < 1500} do{_whereto = floor(random (count workplacejob_deliveryflagarray));workplacejob_deliveryflag = workplacejob_deliveryflagarray select (_whereto);workplacejob_deliveryname = workplacejob_deliverynamearray select (_whereto);};
 player groupChat format[localize _msg, workplacejob_deliveryname];
 workplacemissioninfos = ["Delivery Mission", format["%1", (_whereto+1)]];
 timetaken = 0;

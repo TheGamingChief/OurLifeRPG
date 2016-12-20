@@ -96,7 +96,7 @@ if (_art == "itemkauf") then
 			};
 		};
 		
-		[_CostMitTax, (_infos call INV_getitemClassName), "Item", _menge, _einzelCost, _item] execVM "PurchaseItems.sqf";
+		[_CostMitTax, (_infos call INV_getitemClassName), "Item", _menge, _einzelCost, _item, (_item call INV_getitemName)] execVM "PurchaseItems.sqf";
 	};
 
 	if (((_itemart == "waffe") or (_itemart == "magazin")) and instock) then 
@@ -106,11 +106,11 @@ if (_art == "itemkauf") then
 
 		if (_itemart == "Waffe") then 
 		{
-			[_CostMitTax, (_infos call INV_getitemClassName), "Weapon", _menge, _einzelCost, _crate] execVM "PurchaseItems.sqf";
+			[_CostMitTax, (_infos call INV_getitemClassName), "Weapon", _menge, _einzelCost, _crate, (_item call INV_getitemName)] execVM "PurchaseItems.sqf";
 		} 
 		else 
 		{	
-			[_CostMitTax, (_infos call INV_getitemClassName), "Magazine", _menge, _einzelCost, _crate] execVM "PurchaseItems.sqf";
+			[_CostMitTax, (_infos call INV_getitemClassName), "Magazine", _menge, _einzelCost, _crate, (_item call INV_getitemName)] execVM "PurchaseItems.sqf";
 		};			
 	};
 														
@@ -121,7 +121,7 @@ if (_art == "itemkauf") then
 		if (!(_license2 call INV_HasLicense) and iscop and _license) exitWith {player groupChat format[localize "STRS_inv_buyitems_nolicensecop", (_license2 call INV_GetLicenseName)]; _exitvar = 1};
 		//if(_shopnumber == 89 && !("mafial" call INV_HasLicense)) exitwith {Player groupchat "You need mafia license for vehicles in this shop."};
 		if (INV_UsingCarshop == 1)  exitWith {player groupChat localize "STRS_inv_buyvehicles_store_in_use"; _exitvar = 1};
-		[_CostMitTax, (_infos call INV_getitemClassName), "Vehicle", _menge, _einzelCost, _item] execVM "PurchaseItems.sqf";																						
+		[_CostMitTax, (_infos call INV_getitemClassName), "Vehicle", _menge, _einzelCost, _item, (_item call INV_getitemName)] execVM "PurchaseItems.sqf";																						
 	};
 
 	if (_shopnumber == 89) then 
@@ -217,7 +217,8 @@ if (_itemart == "magazin") then
 																						
 	_verkauft  = 0;										
 	_gewinn    = 0;								
-	_mags      = {_x == (_infos call INV_getitemClassName)} count magazines player;																														
+	_mags      = {_x == (_infos call INV_getitemClassName)} count magazines player;
+	_gridPos = mapGridPosition getpos player;	
 	if (_mags == 0) exitWith {player groupChat localize "STRS_inv_buyitems_sell_notenough"; _exitvar = 1};						
 	if (_mags < _menge) then {_menge = _mags;};																																						
 	_cost = _menge*_CostMitTax;																						
@@ -233,30 +234,29 @@ if (_itemart == "magazin") then
 		};
 	
 	player groupChat format [localize "STRS_inv_buyitems_verkauft", (_menge call ISSE_str_IntToStr), (_infos call INV_getitemName), (_cost call ISSE_str_IntToStr)];
+	["Sell_Log", format ["%1 (%2) has sold %3 %4 at %5 for $%6", name player, getPlayerUID player, _menge, (_infos call INV_getitemName), _gridPos, _cost]] call fn_RMLogToServer;
 	_exitvar = 1;
 
 
 	};
 
-if (_itemart == "fahrzeug") then 
+if(_itemart == "fahrzeug")then
+{
+	_menge = 1;
+	_vehicle = call compile format["%1",_extrainfo];
+	_gridPos = mapGridPosition getPos player;
 
-	{
-																																														
-	_menge = 1;																																						
-	_vehicle = call compile format ["%1", _extrainfo];																								
-	_posInVclArray = INV_VehicleArray find _vehicle;	
-	_gridPos = mapGridPosition getpos player;
-	if (_posInVclArray == -1) exitWith {player groupChat localize "STRS_inv_buyvehicles_noowner"; _exitvar = 1};																								
-	if (not (alive _vehicle))            exitWith {player groupChat localize "STRS_inv_buyvehicles_destroyed"; _exitvar = 1};										
-	if ((_vehicle distance player) > 25) exitWith {player groupChat localize "STRS_inv_buyitems_sell_toofar"; _exitvar = 1};																												
-	['geld', (_CostMitTax)] call INV_AddInvItem;												
+	if((_vehicle distance player) > 25)exitWith{player groupChat "You are too far away from the vehicle!"};
+	if(!(_vehicle in INV_VehicleArray))exitWith{player groupChat "You do not own this vehicle!"};
+	if(!alive _vehicle)exitWith{player groupChat "The vehicle you are trying to sell if blowen up!"};
+
+	["geld", (_CostMitTax)] call INV_AddInvItem;
 	player groupChat format [localize "STRS_inv_shop_vehiclesold", (_CostMitTax call ISSE_str_IntToStr)];
-	["Sell_Log", format ["%1 (%2) has sold %3 at %4 for $%5", name player, getPlayerUID player, _vehicle, _gridPos, _CostMitTax]] call fn_RMLogToServer;	
-	INV_VehicleArray = INV_VehicleArray - [_vehicle];				
-	deleteVehicle _vehicle;
-		
 
-	};
+	["Sell_Log", format ["%1 (%2) has sold %3 at %4 for $%5", name player, getPlayerUID player, _vehicle, _gridPos, _CostMitTax]] call fn_RMLogToServer;	
+	INV_VehicleArray = INV_VehicleArray - [_vehicle];
+	deleteVehicle _vehicle;
+};
 
 if (_stock != -1 and _exitvar == 0) then
 
@@ -288,18 +288,5 @@ if(maxstock)then{player groupchat "the shop has reached its maximum stock for th
 
 }; 
 
-
-
 sleep 3;
 shopactivescript = 0;
-
-
-
-
-
-
-
-
-
-
-

@@ -219,8 +219,6 @@ fnc_KeyPress_E = {
 	_vcl  = vehicle player;
 	if(_vcl != player) exitwith
 		{
-		if(_vcl == bus1 and speed _vcl > 10)exitwith{player groupchat "The vehicle is moving too fast"};
-		if(_vcl == bus1)exitwith{moveout player};
 		if(locked _vcl)exitwith{player groupchat "The vehicle is locked."};
 		if(speed _vcl > 30)exitwith{player groupchat "The vehicle is moving too fast"};
 		player action ["getOut", _vcl];

@@ -1,7 +1,7 @@
 
 private["_i","_car","_carsKilled","_xCar"];
 
-for "_i" from 0 to (count bc_baitcars) do
+for "_i" from 0 to (count bc_baitcars - 1) do
 {
 	_car = bc_baitcars select _i;
 	if (isNull _car) then {bc_baitcars = bc_baitcars - _car;};

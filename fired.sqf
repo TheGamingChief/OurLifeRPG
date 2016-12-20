@@ -8,7 +8,7 @@ _detector =
 _pos = _this select 0;
 _timenow = time;
 _array = [];
-	while{time < (_timenow + 10) || (!(isnull _pos))}do
+	while {time < (_timenow + 10) || (!(isnull _pos))} do
 	{
 		sleep 1;
 		if(!(isnull _pos))then
@@ -42,7 +42,7 @@ _detectorB =
 _pos = _this select 0;
 _timenow = time;
 _array = [];
-	while{time < (_timenow + 10) || (!(isnull _pos))}do
+	while {time < (_timenow + 10) || (!(isnull _pos))} do
 	{
 		sleep 1;
 		if(!(isnull _pos))then

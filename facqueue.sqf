@@ -39,7 +39,7 @@ call compile format['%1avail = 0;%1prod = 0;%1eta = 0;%1pend = 0;', _list select
  
 };
  
-while{true}do
+while {true} do
  
 {
  
