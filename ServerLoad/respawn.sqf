@@ -3,6 +3,7 @@ waitUntil {player getVariable "KOED"};
 player removeweapon "ItemGPS";
 execVM "briefing.sqf";
 closeDialog 0;
+execVM "Scripts\Misc\DeathCall.sqf";
 
 if (isciv) then {
 	for [{_i=0}, {_i < (count INV_InventarArray)}, {_i=_i+1}] do {

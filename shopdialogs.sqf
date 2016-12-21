@@ -14,7 +14,7 @@ _itembuyarray   = ((INV_ItemShops select INV_ActiveShopNumber) select 4);
 _itemsellarray  = ((INV_ItemShops select INV_ActiveShopNumber) select 5);
 
 //--------------------------------------BUY-----------------------------------------
-_CopOnlyShops = [corbox,copuntrained,copbasic1,copbasic2,copbasic4,copbasic6,coppo1,coppo2,coppo3,copcpl,copsgt,ftobox,cidbox,copdeputy,copsheriff,copsheriffdnr,copsheriffmks,coplt,copcpt,copchief,copair2,copswat1,copswat2,copswat3,copswat4,copswat5,copswate,copswatd,copswatvehicle,copcoastguard,copcoastguardair,copairweapon2,copVIPBox,copVIPBox2,copk92,corsbox,corcbox,copsgtdeputy];
+_CopOnlyShops = [corbox,copuntrained,copbasic1,copbasic2,copbasic4,copbasic6,coppo1,coppo2,coppo3,copcpl,copsgt,ftobox,cidbox,copdeputy,copsheriff,copsheriffdnr,copsheriffmks,coplt,copcpt,copchief,copmedalbox,copair2,copswat1,copswat2,copswat3,copswat4,copswat5,copswate,copswatd,copswatvehicle,copcoastguard,copcoastguardair,copairweapon2,copVIPBox,copVIPBox2,copk92,corsbox,corcbox,copsgtdeputy];
 _ESUOnlyShops = [tdoc,tdoc2,tdoc3,tdoc4,tdoc5,tdoc6,tdocsub,tdoc2sub,tdoc3sub,tdoc4sub,tdoc5sub,tdoc6sub,tdoc7,tdoc7sub];
 _EMT1 = [tdoc3,tdoc3sub];
 _EMT2 = [tdoc7,tdoc7sub];
@@ -41,6 +41,7 @@ _Sheriff = [copsheriff];
 _Lt = [coplt];
 _Cpt = [copcpt];
 _Chief = [copchief];
+_Medal = [copmedalbox];
 _K9 = [copk9,copk9p,copk9c];
 _PDAviation = [copav1,copav2,copav3,copair2];
 _SWAT = [copswat1,copswat2,copswat3,copswat4,copswat5,copswatvehicle];
@@ -98,6 +99,7 @@ if(_shop in _Sheriff and !((getPlayerUID player) in Sheriff_id)) exitwith {playe
 if(_shop in _Lt and !((getPlayerUID player) in Lt_id)) exitwith {player groupchat "You're not a Patrol Lieutenant!"; closedialog 0};
 if(_shop in _Cpt and !((getPlayerUID player) in Cpt_id)) exitwith {player groupchat "You're not a Patrol Captain!"; closedialog 0};
 if(_shop in _Chief and !((getPlayerUID player) in Chief_id)) exitwith {player groupchat "You're not the Chief of Police!"; closedialog 0};
+if(_shop in _Medal and !((getPlayerUID player) in Chief_id)) exitwith {player groupchat "You're not the Medal winner!"; closedialog 0};
 if(_shop in _K9 and !((getPlayerUID player) in K9_id)) exitwith {player groupchat "You're not a K-9 Officer!"; closedialog 0};
 if(_shop in _PDAviation and !((getPlayerUID player) in PDAviation_id)) exitwith {player groupchat "You're not a Police Pilot!"; closedialog 0};
 if(_shop in _CID and !((getPlayerUID player) in Undercover_id)) exitwith {player groupchat "You're not a C.I.D Officer!"; closedialog 0};

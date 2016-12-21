@@ -131,7 +131,6 @@ R3F_REV_fil_exec_attente_reanimation = [] spawn
 	  };
 
 		execVM "R3F_revive\time.sqf";
-		execVM "Scripts\Misc\DeathCall.sqf";
 		sleep 5;
 
 		// Ramener le nouveau corps au lieu du décès
