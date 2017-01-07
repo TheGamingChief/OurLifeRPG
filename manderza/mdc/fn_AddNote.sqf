@@ -10,7 +10,7 @@ if(isNil "DD_LastCiv")exitWith{
 _notes = DD_LastCiv getVariable ["Notes", []];
 _notes set[count(_notes), [_note, name player]];
 
-DD_LasCiv setVariable ["Notes", _notes, true];
+DD_LastCiv setVariable ["Notes", _notes, true];
 
 [(civarray find DD_LastCiv)] call DD_MDC_RunSearch;
 hint "Note added successfully!";
