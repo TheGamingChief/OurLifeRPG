@@ -20,7 +20,7 @@ if ((typeOf player == "olrpg_sdpilot" || typeOf player == "olrpg_pdpilot" || typ
 
 if ((typeOf player == "olrpg_swatprob" || typeOf player == "olrpg_swatnor" || typeOf player == "olrpg_swatmark" || typeOf player == "olrpg_swatspec" || typeOf player == "olrpg_swatcom")) then {_income = _income + 7500};
 	
-if ((typeOf player == "olrpg_pdcid" || typeOf player == "olrpg_iauni")) then {_income = _income + 5000};
+if ((typeOf player == "olrpg_pdcid" || typeOf player == "olrpg_iauni" || typeOf player == "olrpg_pdcidc")) then {_income = _income + 5000};
 
 if (typeOf player == "olrpg_patuni") then {_income = _income + 1500};
 
