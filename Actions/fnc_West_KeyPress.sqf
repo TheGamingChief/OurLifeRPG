@@ -25,6 +25,14 @@ fnc_KeyPress_1 = {
 	execVM "serverload\swagswagcop.sqf";	
 };
 
+fnc_KeyPress_CtrlF4 = {
+	if(!INV_shortcuts)exitwith{};
+	if(dialog)exitwith{closeDialog 0;};
+	if(isstunned) exitwith {player groupchat "You are stunned!"};
+	execVM "scripts\foster\ratiochecker.sqf";
+};
+
+
 fnc_KeyPress_3 = {
 
 	if(!INV_shortcuts)exitwith{};
