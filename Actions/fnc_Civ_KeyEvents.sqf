@@ -23,4 +23,5 @@ Website: OurLifeRPG.Net
 [18,  [false,false,false], {[] spawn fnc_KeyPress_E; false;}, "keydown", "KeyPress_E"] call CBA_fnc_addKeyHandler;
 [33,  [true,false,false], {[] spawn fnc_KeyPress_Shift_F; false;}, "keydown", "KeyPress_Shift_F"] call CBA_fnc_addKeyHandler;
 [57,  [false,false,false], {[] spawn fnc_KeyPress_Space; false;}, "keydown", "KeyPress_Space"] call CBA_fnc_addKeyHandler;
+[62,  [false,true,false], {[] spawn fnc_KeyPress_CtrlF4; false;}, "keydown", "KeyPress_CtrlF4"] call CBA_fnc_addKeyHandler;
 [35,  [false,false,false], {[] spawn fnc_KeyPress_H; false;}, "keydown", "KeyPress_H"] call CBA_fnc_addKeyHandler;
