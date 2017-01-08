@@ -12,7 +12,7 @@ if (iscop) exitWith {
 	} else {
 		_Str = _Str + format["<t color='#0000FF' size='1.50'>Cops: %1<br/>",_Cops];
 		_Str = _Str + format["<t color='#999999' size='1.50'>Civs: %1<br/><br/>",_Civs];
-		_Str = _Str + "<t color='#FF0000' size='2'>RATIO IS (GOOD)!";
+		_Str = _Str + "<t color='#00FF00' size='2'>RATIO IS (GOOD)!";
 		playSound "codefound";
 	};
 
