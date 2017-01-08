@@ -1,4 +1,3 @@
-//execVM "scripts\TheGamingChief\Common\fnc_VersionCheck.sqf";
 execVM "scripts\TheGamingChief\TaskForceRadio\TFR_Variables.sqf";
 waitUntil{OL_StatsLoadedFromDB};
 execVM "scripts\TheGamingChief\TaskForceRadio\TSCheck.sqf";

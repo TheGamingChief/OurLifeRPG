@@ -113,6 +113,7 @@ if (playerSide == west) then {
 	_role removeAction actioncop34;
 	_role removeAction actioncop35;
 	_role removeAction actioncop36;
+	_role removeAction actioncop37;
 	_role removeAction actionfed;		
 };
 

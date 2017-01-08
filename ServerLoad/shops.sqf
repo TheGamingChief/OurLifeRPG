@@ -1,18 +1,6 @@
 ﻿//AIDS
-if(isServer)then
-{
-INV_itemstocks =
-[
--1
-];
- 
-publicvariable "INV_itemstocks";
-};
- 
-INV_itemmaxstocks =
-[
--1
-];
+INV_itemstocks = [-1];
+INV_itemmaxstocks = [-1];
 //1. Shop items
 _emptyshop = [];
 //2. Fuel Shop
@@ -1128,50 +1116,43 @@ _helix =
 "USEC_ch53_e"
 ];
 
+_PMC =
+[
+"ziptie",
+"RepairKitsBreaksShops",
+"medikit",
+"bjerk",
+"M24_PMC",
+"5Rnd_762x51_M24",
+"RH_m4aim_PMC",
+"M16A4pmc",
+"30Rnd_556x45_Stanag",
+"C1987_P99_black_PMC",
+"15Rnd_9x19_p99",
+"RH_usp_pmc",
+"RH_15Rnd_9x19_usp",
+"HMMWV_DES_EP1"
+];
 
 _CommandPMC =
 [
-"ziptie",  //Ziptie
-"RepairKitsBreaksShops",  //Repair Kit
-"medikit", //Medikit
-"bjerk", //Beef Jerky
-"M24_PMC", //M24 Desert
-"5Rnd_762x51_M24", //M24 Mags
-"M16A4pmc", //M16a4
-"30Rnd_556x45_Stanag", //Stanag Mags
-"G36C_camo", //G36C Camo
-"30Rnd_556x45_G36", //G36 Mags
-"RH_p90", //P90
-"RH_57x28mm_50RND_Mag", //P90 Mags
-"C1987_P99_black_PMC", //P99
-"15Rnd_9x19_p99", //P99 Mags
-"RH_usp_pmc", //USP
-"RH_15Rnd_9x19_usp", //USP Mags
-"olrpg_pmcsub6", //2006 Marked Suburban
-"olrpg_pmccharger", //Charger Marked
-"olrpg_pmcsub12", //2012 Marked Suburban
-"olrpg_pmctahoe", //Tahoe Marked
-"h1_black" //Hummer
-];
-
-_PMC =
-[
-"ziptie", //Ziptie
-"RepairKitsBreaksShops", //Reapair Kit
-"medikit", //Medikit
-"bjerk", //Beef Jerky
-"M24_PMC", //M24 Desert
-"5Rnd_762x51_M24", //M24 Mags
-"RH_m4aim_PMC", //M4 Aimpoint
-"M16A4pmc", //M16a4
-"30Rnd_556x45_Stanag", //Stanag Mags
-"C1987_P99_black_PMC", //P99
-"15Rnd_9x19_p99", //P99 Mags
-"RH_usp_pmc", //USP
-"RH_15Rnd_9x19_usp", //USP Mags
-"olrpg_pmcsub6", //2006 Marked Suburban
-"olrpg_pmccharger", //Charger Marked
-"olrpg_pmcsub12" //2012 Marked Suburban
+"ziptie",
+"RepairKitsBreaksShops",
+"medikit",
+"bjerk",
+"M24_PMC",
+"5Rnd_762x51_M24",
+"M16A4pmc",
+"30Rnd_556x45_Stanag",
+"G36C_camo",
+"30Rnd_556x45_G36",
+"RH_p90",
+"RH_57x28mm_50RND_Mag",
+"C1987_P99_black_PMC",
+"15Rnd_9x19_p99",
+"RH_usp_pmc",
+"RH_15Rnd_9x19_usp",
+"HMMWV_DES_EP1"
 ];
 
 _PMCAIR =
@@ -1179,11 +1160,6 @@ _PMCAIR =
 "MH6J_EP1", //Black LB
 "pmo_mh6dl_urban", //PMC LB
 "olrpg_pmcjayhunarmed" //Unarmed Jayhawk
-];
-
-_PMCBOAT =
-[
-"RHIB" //Rhib
 ];
  
 _pistol =
@@ -1422,7 +1398,6 @@ _td7 =
 _td8 =
 [
 "olrpg_firemarshal_hub_tahoe",
-"olrpg_firemarshal_smartcar",
 "olrpg_firemarshal_tahoe_slk",
 "olrpg_2006_firemarshal_slk",
 "olrpg_firemarshalf350",
@@ -1645,10 +1620,9 @@ INV_ItemShops = [
 [Diamond_1,"Pawn Shop",dummyobj,dummyobj,_js,_js,true],
 [vipterrorair,"VIP Terror Air Shop",vipterrorair,vipterroraswpawn,_vipterrorairlist,_vipterrorairlist,true],
 [hospsell,"Sell Organs",dummyobj,dummyobj,_hsc,_hsc,true],
-[pmcbox1,"PMC Command",pmcbox1,pmcspawn,_CommandPMC,_CommandPMC,true],
 [pmcbox,"PMC Operator",pmcbox,pmcspawn,_PMC,_PMC,true],
-[pmcbox2,"PMC Boat",dummyobj,pmcboatspawn,_PMCBOAT,_PMCBOAT,true],
-[pmcbox3,"PMC Air",dummyobj,pmchelipad,_PMCAIR,_PMCAIR,true],
+[pmcbox1,"PMC Command",pmcbox1,pmcspawn,_CommandPMC,_CommandPMC,true],
+[pmcbox2,"PMC Air",dummyobj,pmchelipad,_PMCAIR,_PMCAIR,true],
 [towfoodshop,"Flyer's Vending Machine",dummyobj,dummyobj,_Tow,_Tow,true],
 [tow_box,"Parts Box",dummyobj,dummyobj,_Tow1,_Tow1,true],
 [towcarshop,"Junior Mechanic",dummyobj,tow_spawn,_Tow2,_Tow2,true],

@@ -3,8 +3,8 @@ _role = player;
 //========================   Help info and tutorials  ================================
 //action1a = _role addaction ["Test","test.sqf",[1],1,false,true,"",""];
 action1 = _role addaction ["Fire Rescue Rules and Tutorials","esuhelp.sqf",[1],1,false,true,"","player distance atm5 <= 10"];
-action2 = _role addaction ["Use Fire Hose","ems.sqf",[],1,false,true,"",'_vcl = (nearestobjects [getpos player, ["firetruck","ibr_as350","Laddertruck","il_f350_brush","engine","rescue","a2l_brush","a2l_kme_res"], 40] select 0);player distance _vcl < 50'];
-gasaction = _role addaction ["Fix Gas Leak","fixgas.sqf",[],1,false,true,"",'_vcl = (nearestobjects [getpos player, ["firetruck","ibr_as350","Laddertruck","il_f350_brush","engine","rescue","a2l_brush","a2l_kme_res"], 40] select 0);player distance _vcl < 50'];
+action2 = _role addaction ["Use Fire Hose","ems.sqf",[],1,false,true,"",'_vcl = (nearestobjects [getpos player, ["firetruck","ibr_as350","Laddertruck","il_f350_brush","engine","rescue","a2l_brush","a2l_kme_res","a2l_kme","a2l_kme_air","a2l_kme_res116"], 40] select 0);player distance _vcl < 50'];
+gasaction = _role addaction ["Fix Gas Leak","fixgas.sqf",[],1,false,true,"",'_vcl = (nearestobjects [getpos player, ["firetruck","ibr_as350","Laddertruck","il_f350_brush","engine","rescue","a2l_brush","a2l_kme_res","a2l_kme","a2l_kme_air","a2l_kme_res116"], 40] select 0);player distance _vcl < 50'];
 wreckaction = _role addaction ["Clear Accident","clearaccident.sqf",[],1,false,true,"",'_vcl = (nearestobjects [getpos player, ["firetruck","ibr_as350","Laddertruck","il_f350_brush","engine","rescue","a2l_brush","a2l_kme_res"], 40] select 0);player distance _vcl < 50'];
 fdmedaction = _role addaction ["Take Medic Kit","scripts\foster\ems3.sqf",[],1,false,true,"",'_vcl = (nearestobjects [getpos player, ["firetruck","ibr_as350","Laddertruck","il_f350_brush","engine","rescue","a2l_brush","a2l_kme_res"], 40] select 0);player distance _vcl < 5'];
 

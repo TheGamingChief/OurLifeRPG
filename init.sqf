@@ -31,6 +31,8 @@ sleep 1;
 execVM "briefing.sqf";
 call compile preprocessfile "triggers.sqf";
 [] call compile preprocessFileLineNumbers "addons\proving_Ground\init.sqf";
+_h = execVM "scripts\TheGamingChief\Common\fnc_VersionCheck.sqf";
+waitUntil{scriptDone  _h};
 [1112, "Exec Player Array",10]		call RL_LoadingSetText;
 _h = [] execVM "ServerLoad\playerarrays.sqf";
 waitUntil{scriptDone  _h};

@@ -24499,7 +24499,7 @@ class Mission
 			vehicle="UNBasicAmmunitionBox_EP1";
 			leader=1;
 			skill=0.60000002;
-			text="pmcbox1";
+			text="pmcbox2";
 			init="clearMagazineCargo this; clearWeaponCargo this;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+.7];this allowdamage false;";
 		};
 		class Item1890
@@ -25645,7 +25645,7 @@ class Mission
 			vehicle="UNBasicAmmunitionBox_EP1";
 			leader=1;
 			skill=0.60000002;
-			text="pmcbox2";
+			text="pmcbox1";
 			init="clearMagazineCargo this; clearWeaponCargo this;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+.7];this allowdamage false;";
 		};
 		class Item1998
