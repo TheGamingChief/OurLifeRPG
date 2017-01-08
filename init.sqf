@@ -146,5 +146,9 @@ if (isciv && !isServer) then {
 	player globalChat "Choose where you want to spawn!";
 };
 
+if (iscop && !isServer) then {
+	[] execVM "scripts\foster\ratiochecker.sqf";
+};
+
 player enableSimulation true;
 OL_InitComplete = true;
