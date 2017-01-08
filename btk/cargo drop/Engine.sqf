@@ -43,9 +43,9 @@ if (!(_SelectedTransporterTypeS) && !(_SelectedTransporterTypeM) && !(_SelectedT
 	//// BTK_Hint - Not supported
 	hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'>This vehicle does not support cargo transports!</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	"];
 	
 _Transporter removeAction _Action;
@@ -60,9 +60,9 @@ if ((_Unit in _Transporter) && !(_Selected == "UnloadCargo")) exitWith {
 	//// BTK_Hint - You have to get out
 	hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'>You have to <t color='#fdd785'>get out</t> to load cargo!</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	"];
 
 _Transporter removeAction _Action;
@@ -78,11 +78,11 @@ if (_Selected == "UnloadCargo") exitWith {
 		//// BTK_Hint - Flying too low
 		hint parseText format ["
 			<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-			<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+			<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 			<t align='left' color='#eaeaea' size='1.0'>You have to fly above <t color='#fdd785'>50m</t> to drop the cargo!</t>
 			<br />
 			<t align='left' color='#eaeaea' size='1.0'>Or hover below <t color='#fdd785'>2m</t> to unload the cargo!</t>
-			<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+			<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		"];
 	};
 
@@ -119,9 +119,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeS)) exitWith {
 		//// BTK_Hint - Nothing to load in range
 		hint parseText format ["
 			<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-			<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+			<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 			<t align='left' color='#eaeaea' size='1.0'>Nothing to load in range!<br /><br />Please move the object closer to the transporter.</t>
-			<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+			<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		"];
 	};
 	
@@ -137,9 +137,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeS)) exitWith {
 	//// BTK_Hint - Loading in...
 	hint parseText format ["
 	<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-	<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+	<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	<t align='left' color='#eaeaea' size='1.0'>Loading <t color='#fdd785'>%1</t> into <t color='#fdd785'>%2</t> ...</t>
-	<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+	<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	",_ObjectName,_TransporterName];
 
 	//// remove the Action
@@ -182,9 +182,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeS)) exitWith {
 	//// BTK_Hint - Loaded
 	hint parseText format ["
 	<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-	<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+	<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	<t align='left' color='#eaeaea' size='1.0'><t color='#fdd785'>%1</t> loaded.</t>
-	<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+	<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	", _ObjectName,_TransporterName];
 
 	//// add unload/drop Action
@@ -211,9 +211,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeS)) exitWith {
 		//// BTK_Hint - Unloading...
 		hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'>Unloading <t color='#fdd785'>%1</t> from <t color='#fdd785'>%2</t> ...</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		",_ObjectName,_TransporterName];
 
 		//// Animate ramp
@@ -240,9 +240,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeS)) exitWith {
 		//// BTK_Hint - Unloaded
 		hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'><t color='#fdd785'>%1</t> unloaded.</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		",_ObjectName,_TransporterName];
 	};
 
@@ -252,9 +252,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeS)) exitWith {
 		//// BTK_Hint - Dropping...
 		hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'>Dropping <t color='#fdd785'>%1</t> ...</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		",_ObjectName,_TransporterName];
 
 		//// Reset variables
@@ -295,9 +295,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeS)) exitWith {
 		//// BTK_Hint - Dropped
 		hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'><t color='#fdd785'>%1</t> dropped.</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		",_ObjectName,_TransporterName];
 
 		//// Wait until ground reached
@@ -332,9 +332,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeM)) exitWith {
 		//// BTK_Hint - Nothing to load in range
 		hint parseText format ["
 			<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-			<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+			<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 			<t align='left' color='#eaeaea' size='1.0'>Nothing to load in range!<br /><br />Please move the object closer to the transporter.</t>
-			<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+			<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		"];
 	};
 	
@@ -350,9 +350,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeM)) exitWith {
 	//// BTK_Hint - Loading in...
 	hint parseText format ["
 	<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-	<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+	<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	<t align='left' color='#eaeaea' size='1.0'>Loading <t color='#fdd785'>%1</t> into <t color='#fdd785'>%2</t> ...</t>
-	<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+	<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	",_ObjectName,_TransporterName];
 
 	//// remove the Action
@@ -404,9 +404,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeM)) exitWith {
 	//// BTK_Hint - Loaded
 	hint parseText format ["
 	<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-	<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+	<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	<t align='left' color='#eaeaea' size='1.0'><t color='#fdd785'>%1</t> loaded.</t>
-	<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+	<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	", _ObjectName,_TransporterName];
 
 	//// add unload/drop Action
@@ -432,9 +432,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeM)) exitWith {
 		//// BTK_Hint - Unloading...
 		hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'>Unloading <t color='#fdd785'>%1</t> from <t color='#fdd785'>%2</t> ...</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		",_ObjectName,_TransporterName];
 
 		//// Animate ramp
@@ -461,9 +461,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeM)) exitWith {
 		//// BTK_Hint - Unloaded
 		hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'><t color='#fdd785'>%1</t> unloaded.</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		",_ObjectName,_TransporterName];
 	};
 
@@ -473,9 +473,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeM)) exitWith {
 		//// BTK_Hint - Dropping...
 		hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'>Dropping <t color='#fdd785'>%1</t> ...</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		",_ObjectName,_TransporterName];
 
 		//// Reset variables
@@ -514,9 +514,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeM)) exitWith {
 		//// BTK_Hint - Dropped
 		hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'><t color='#fdd785'>%1</t> dropped.</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		",_ObjectName,_TransporterName];
 
 		//// Wait until ground reached
@@ -551,9 +551,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeL)) exitWith {
 		//// BTK_Hint - Nothing to load in range
 		hint parseText format ["
 			<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-			<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+			<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 			<t align='left' color='#eaeaea' size='1.0'>Nothing to load in range!<br /><br />Please move the object closer to the transporter.</t>
-			<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+			<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		"];
 	};
 	
@@ -569,9 +569,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeL)) exitWith {
 	//// BTK_Hint - Loading in...
 	hint parseText format ["
 	<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-	<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+	<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	<t align='left' color='#eaeaea' size='1.0'>Loading <t color='#fdd785'>%1</t> into <t color='#fdd785'>%2</t> ...</t>
-	<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+	<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	",_ObjectName,_TransporterName];
 
 	//// remove the Action
@@ -613,9 +613,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeL)) exitWith {
 	//// BTK_Hint - Loaded
 	hint parseText format ["
 	<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-	<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+	<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	<t align='left' color='#eaeaea' size='1.0'><t color='#fdd785'>%1</t> loaded.</t>
-	<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+	<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	", _ObjectName,_TransporterName];
 
 	//// add unload/drop Action
@@ -641,9 +641,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeL)) exitWith {
 		//// BTK_Hint - Unloading...
 		hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'>Unloading <t color='#fdd785'>%1</t> from <t color='#fdd785'>%2</t> ...</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		",_ObjectName,_TransporterName];
 
 		//// Animate ramp
@@ -670,9 +670,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeL)) exitWith {
 		//// BTK_Hint - Unloaded
 		hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'><t color='#fdd785'>%1</t> unloaded.</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		",_ObjectName,_TransporterName];
 	};
 
@@ -682,9 +682,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeL)) exitWith {
 		//// BTK_Hint - Dropping...
 		hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'>Dropping <t color='#fdd785'>%1</t> ...</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		",_ObjectName,_TransporterName];
 
 		//// Reset variables
@@ -723,9 +723,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeL)) exitWith {
 		//// BTK_Hint - Dropped
 		hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'><t color='#fdd785'>%1</t> dropped.</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		",_ObjectName,_TransporterName];
 
 		//// Wait until ground reached
@@ -760,9 +760,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeXL)) exitWith {
 		//// BTK_Hint - Nothing to load in range
 		hint parseText format ["
 			<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-			<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+			<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 			<t align='left' color='#eaeaea' size='1.0'>Nothing to load in range!<br /><br />Please move the object closer to the transporter.</t>
-			<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+			<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		"];
 	};
 	
@@ -778,9 +778,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeXL)) exitWith {
 	//// BTK_Hint - Loading in...
 	hint parseText format ["
 	<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-	<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+	<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	<t align='left' color='#eaeaea' size='1.0'>Loading <t color='#fdd785'>%1</t> into <t color='#fdd785'>%2</t> ...</t>
-	<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+	<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	",_ObjectName,_TransporterName];
 
 	//// remove the Action
@@ -822,9 +822,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeXL)) exitWith {
 	//// BTK_Hint - Loaded
 	hint parseText format ["
 	<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-	<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+	<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	<t align='left' color='#eaeaea' size='1.0'><t color='#fdd785'>%1</t> loaded.</t>
-	<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+	<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	", _ObjectName,_TransporterName];
 
 	//// add unload/drop Action
@@ -850,9 +850,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeXL)) exitWith {
 		//// BTK_Hint - Unloading...
 		hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'>Unloading <t color='#fdd785'>%1</t> from <t color='#fdd785'>%2</t> ...</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		",_ObjectName,_TransporterName];
 
 		//// Animate ramp
@@ -879,9 +879,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeXL)) exitWith {
 		//// BTK_Hint - Unloaded
 		hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'><t color='#fdd785'>%1</t> unloaded.</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		",_ObjectName,_TransporterName];
 	};
 
@@ -891,9 +891,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeXL)) exitWith {
 		//// BTK_Hint - Dropping...
 		hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'>Dropping <t color='#fdd785'>%1</t> ...</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		",_ObjectName,_TransporterName];
 
 		//// Reset variables
@@ -932,9 +932,9 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeXL)) exitWith {
 		//// BTK_Hint - Dropped
 		hint parseText format ["
 		<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		<t align='left' color='#eaeaea' size='1.0'><t color='#fdd785'>%1</t> dropped.</t>
-		<img color='#ffffff' image='BTK\Cargo Drop\Images\img_line_ca.paa' align='left' size='0.79' />
+		<img color='#ffffff' image='\ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 		",_ObjectName,_TransporterName];
 
 		//// Wait until ground reached

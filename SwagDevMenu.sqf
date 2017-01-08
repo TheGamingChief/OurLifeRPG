@@ -3,7 +3,12 @@ TarGetPLayer = ctrlText 2000;
 liafu = player;
 _inputText = ctrlText 2000;
 messagestatus = "nothing";
-_Developer_Id = ["76561198073512197","76561198122962728"];
+_Developer_Id =
+[
+	"76561198073512197",     //CP3088
+	"76561198291985397",     //TheGamingChief
+	"76561198122962728"      //TheGamingChief | Old Account
+];
 
 switch (adminCMD) do
 {

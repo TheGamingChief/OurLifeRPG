@@ -210,10 +210,13 @@ if (playerSide == civilian) then {
 	_role removeAction action123;
 	_role removeAction actionpmc1;
 	_role removeAction actionpmc2;
-	_role removeAction actionpmcskin;
+	_role removeAction actionpmcskin1;
 	_role removeAction actionpmcskin2;
 	_role removeAction actionpmcskin3;
 	_role removeAction actionpmcskin4;
+	_role removeAction actionpmcskin5;
+	_role removeAction actionpmcskin6;
+	_role removeAction actionpmcskin7;
 	_role removeAction actionrep;
 	_role removeAction action48;
 	_role removeAction actionass;
@@ -312,6 +315,10 @@ if (playerSide == resistance) then {
 	_role removeAction actionems7;
 	_role removeAction actionems8;
 	_role removeAction actionems9;
+	_role removeAction actionems10;
+	_role removeAction actionems11;
+	_role removeAction actionems12;
+	_role removeAction actionems13;
 	_role removeAction actionemst1;
 	_role removeAction actionemst2;
 	_role removeAction actionemsTele;

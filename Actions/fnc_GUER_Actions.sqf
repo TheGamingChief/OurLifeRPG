@@ -98,15 +98,20 @@ _num15 = (donatebuy call INV_getshopnum);
 actiondonate = _role addaction ["Donator Shop","shopdialogs.sqf",[_num15],1,false,true,"","player distance donatebuy <= 5"];
 //======================================== Skins ===================================================
 actionems0 = _role addaction ["Switch to Paramedic Uniform","noscript.sqf",'["KPFS_THW_Press"] call clothes;',1,true,true,"",'player distance atm5 < 2 and ((getplayeruid player) in EMT1_id)'];
-actionems1 = _role addaction ["Switch to Turn Out Uniform","noscript.sqf",'["a2l_firefighter1"] call clothes;',1,true,true,"",'player distance atm5 < 2 and ((getplayeruid player) in EMT3_id)'];
-actionems2 = _role addaction ["Switch to Turn Out SCBA Uniform","noscript.sqf",'["a2l_firefighter"] call clothes;',1,true,true,"",'player distance atm5 < 2 and ((getplayeruid player) in EMT3_id)'];
-actionems3 = _role addaction ["Switch to Hazmat Red Unifrom","noscript.sqf",'["hazmatRed"] call clothes;',1,true,true,"",'player distance atm5 < 2 and ((getplayeruid player) in EMT3_id)'];
-actionems4 = _role addaction ["Switch to Hazmat Yellow Unifrom","noscript.sqf",'["hazmatYellow"] call clothes;',1,true,true,"",'player distance atm5 < 2 and ((getplayeruid player) in EMT3_id)'];
-actionems5 = _role addaction ["Switch to Paramedic Uniform","noscript.sqf",'["KPFS_THW_Press"] call clothes;',1,true,true,"",'player distance atmsubfire < 2 and ((getplayeruid player) in EMT1_id)'];
-actionems6 = _role addaction ["Switch to Turn Out Uniform","noscript.sqf",'["a2l_firefighter1"] call clothes;',1,true,true,"",'player distance atmsubfire < 2 and ((getplayeruid player) in EMT3_id)'];
-actionems7 = _role addaction ["Switch to Turn Out SCBA Uniform","noscript.sqf",'["a2l_firefighter"] call clothes;',1,true,true,"",'player distance atmsubfire < 2 and ((getplayeruid player) in EMT3_id)'];
-actionems8 = _role addaction ["Switch to Hazmat Red Unifrom","noscript.sqf",'["hazmatRed"] call clothes;',1,true,true,"",'player distance atmsubfire < 2 and ((getplayeruid player) in EMT3_id)'];
-actionems9 = _role addaction ["Switch to Hazmat Yellow Unifrom","noscript.sqf",'["hazmatYellow"] call clothes;',1,true,true,"",'player distance atmsubfire < 2 and ((getplayeruid player) in EMT3_id)'];
+actionems1 = _role addaction ["Switch to EMS Pilot Uniform","noscript.sqf",'["yup_uscg_Pilot"] call clothes;',1,true,true,"",'player distance atm5 < 2 and ((getplayeruid player) in EMT1_id)'];
+actionems2 = _role addaction ["Switch to Turn Out Uniform","noscript.sqf",'["a2l_firefighter1"] call clothes;',1,true,true,"",'player distance atm5 < 2 and ((getplayeruid player) in EMT3_id)'];
+actionems3 = _role addaction ["Switch to Turn Out SCBA Uniform","noscript.sqf",'["a2l_firefighter"] call clothes;',1,true,true,"",'player distance atm5 < 2 and ((getplayeruid player) in EMT3_id)'];
+actionems4 = _role addaction ["Switch to Hazmat Red Unifrom","noscript.sqf",'["hazmatRed"] call clothes;',1,true,true,"",'player distance atm5 < 2 and ((getplayeruid player) in EMT3_id)'];
+actionems5 = _role addaction ["Switch to Hazmat Yellow Unifrom","noscript.sqf",'["hazmatYellow"] call clothes;',1,true,true,"",'player distance atm5 < 2 and ((getplayeruid player) in EMT3_id)'];
+actionems6 = _role addaction ["Switch to Fire Marshal Unifrom","noscript.sqf",'["olrpg_firemarshal"] call clothes;',1,true,true,"",'player distance atm5 < 2 and ((getplayeruid player) in EMT1_id)'];
+//
+actionems7 = _role addaction ["Switch to Paramedic Uniform","noscript.sqf",'["KPFS_THW_Press"] call clothes;',1,true,true,"",'player distance atmsubfire < 2 and ((getplayeruid player) in EMT1_id)'];
+actionems8 = _role addaction ["Switch to EMS Pilot Uniform","noscript.sqf",'["yup_uscg_Pilot"] call clothes;',1,true,true,"",'player distance atmsubfire < 2 and ((getplayeruid player) in EMT1_id)'];
+actionems9 = _role addaction ["Switch to Turn Out Uniform","noscript.sqf",'["a2l_firefighter1"] call clothes;',1,true,true,"",'player distance atmsubfire < 2 and ((getplayeruid player) in EMT3_id)'];
+actionems10 = _role addaction ["Switch to Turn Out SCBA Uniform","noscript.sqf",'["a2l_firefighter"] call clothes;',1,true,true,"",'player distance atmsubfire < 2 and ((getplayeruid player) in EMT3_id)'];
+actionems11 = _role addaction ["Switch to Hazmat Red Unifrom","noscript.sqf",'["hazmatRed"] call clothes;',1,true,true,"",'player distance atmsubfire < 2 and ((getplayeruid player) in EMT3_id)'];
+actionems12 = _role addaction ["Switch to Hazmat Yellow Unifrom","noscript.sqf",'["hazmatYellow"] call clothes;',1,true,true,"",'player distance atmsubfire < 2 and ((getplayeruid player) in EMT3_id)'];
+actionems13 = _role addaction ["Switch to Fire Marshal Unifrom","noscript.sqf",'["olrpg_firemarshal"] call clothes;',1,true,true,"",'player distance atmsubfire < 2 and ((getplayeruid player) in EMT1_id)'];
 //======================================== Skins ===================================================
 actionemst1 = _role addaction ["[Transfer to Main Fire House]","scripts\foster\ems1.sqf",[],1,false,true,"",'player distance fire2tele <= 3'];
 actionemst2 = _role addaction ["[Transfer to Sub Fire Station]","scripts\foster\ems2.sqf",[],1,false,true,"",'player distance fire1tele <= 3'];

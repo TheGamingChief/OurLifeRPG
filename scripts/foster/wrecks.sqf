@@ -12,7 +12,7 @@ Format['if (playerside == resistance) then {player sidechat "Check your map for 
 Format['if (playerside == west) then {playsound "beepsimple"};'] call broadcast;
 Format['if (playerside == west) then {player sidechat "Dispatch: Reports of a 10-50, all available units respond. Check your map for the location."};'] call broadcast;
 
-_wreckLocation = ["wreckspawn1","wreckspawn2","wreckspawn3","wreckspawn4","wreckspawn5","wreckspawn6","wreckspawn7","wreckspawn8","wreckspawn9","wreckspawn10"];
+_wreckLocation = ["wreckspawn1","wreckspawn2","wreckspawn3","wreckspawn4","wreckspawn5","wreckspawn6","wreckspawn7","wreckspawn8","wreckspawn9","wreckspawn10","wreckspawn11"];
 _wreckSelection = _wreckLocation call bis_fnc_selectrandom;
 	
 _wreckMarker = createMarker ["CarWreck", (getMarkerPos _wreckSelection)];

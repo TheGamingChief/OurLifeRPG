@@ -1319,100 +1319,120 @@ M_rlrpgclothing_2 =
  
 _td =
 [
-"il_ambulance",
-"gmc_ambulance",
+"olrpg_f350_ambo_untrained",
+"olrpg_gmc_untrained_ambo",
 "supgrade1",
 "supgrade2",
+"wulf",
 "Bread",
+"doshd",
 "TreeFixer"
 ];
 _td2 =
 [
-"il_ambulance",
-"gmc_ambulance",
+"olrpg_f350_ambo_emt1",
+"olrpg_gmc_emt2_ambo",
 "il_f350_brush",
 "supgrade1",
 "supgrade2",
+"wulf",
 "Bread",
+"doshd",
 "TreeFixer"
 ];
 _td3 =
 [
-"il_ambulance",
-"gmc_ambulance",
-"olrpg_2006_Ems",
+"olrpg_f350_ambo_emt2",
+"olrpg_gmc_emt1_ambo",
 "olrpg_2012_EMS",
-"il_f350_brush",
 "supgrade1",
 "supgrade2",
+"wulf",
 "Bread",
+"doshd",
 "TreeFixer"
 ];
 _td4 =
 [
+"olrpg_gmc_fire_ambo",
 "firetruck",
 "il_kw_tanker",
-"a2l_brush",
 "laddertruck",
+"il_f350_brush",
 "supgrade1",
 "supgrade2",
+"wulf",
 "Bread",
+"doshd",
 "TreeFixer"
 ];
 _td5 =
 [
-"firetruck",
-"il_kw_tanker",
 "rescue",
 "a2l_kme_res",
-"olrpg_2006_fire_dpt",
-"olrpg_2012_fire_dpt",
+"a2l_kme",
 "laddertruck2",
-"a2l_brush",
 "supgrade1",
 "supgrade2",
+"wulf",
 "Bread",
+"doshd",
 "TreeFixer"
 ];
 _td6 =
 [
-"yup_HH60J",
 "UH60M_MEV_EP1",
+"yup_HH60J",
 "ibr_as350",
-"pmo_mh6me",
+"olrpg_coastguard_bell206",
 "NVGoggles",
-"supgrade1",
-"supgrade2",
+"wulf",
 "Bread",
+"doshd",
 "TreeFixer"
 ];
 
 _td7 =
 [
-"olrpg_ems_slick_pb",
-"olrpg_fd_slick_pb",
-"olrpg_EMS_supervisor",
-"olrpg_FD_supervisor",
-"olrpg_2006_Ems",
-"olrpg_2012_EMS",
-"olrpg_2006_fire_dpt",
-"olrpg_2012_fire_dpt",
+"olrpg_ems_chief_cv_ptrl",
+"olrpg_ems_chief",
+"olrpg_ems_chief_slk",
+"olrpg_firedepartment_districtchief",
+"olrpg_firedepartment_districtc_slk",
+"olrpg_firedepartment_sup",
+"olrpg_firedepartment_lt",
+"olrpg_firedepartment_lt_slk",
+"olrpg_ems_supervisor",
+"olrpg_ems_lt",
+"olrpg_ems_lt_tahoe_slk",
+"olrpg_firemarshal_hub_tahoe",
 "il_silverado_pd",
-"il_f350_brush",
-"a2l_brush",
 "fire_atv",
 "engine",
-"firetruck",
-"rescue",
-"Laddertruck",
-"a2l_kme_res",
-"laddertruck2",
-"il_kw_tanker",
-"il_ambulance",
-"gmc_ambulance",
+"a2l_kme_air",
+"olrpg_gmc_breast_ambo",
 "supgrade1",
 "supgrade2",
+"wulf",
 "Bread",
+"doshd",
+"TreeFixer"
+];
+
+_td8 =
+[
+"olrpg_firemarshal_hub_tahoe",
+"olrpg_firemarshal_smartcar",
+"olrpg_firemarshal_tahoe_slk",
+"olrpg_2006_firemarshal_slk",
+"olrpg_firemarshalf350",
+"a2l_kme_res116",
+"olrpg_gmc_fire_ambo",
+"supgrade1",
+"supgrade2",
+"wulf",
+"Bread",
+"doshd",
 "TreeFixer"
 ];
 
@@ -1549,6 +1569,7 @@ INV_ItemShops = [
 [tdocsub,"Command Equipment",dummyobj,tdocspawnsub,_td7,_td7,true],
 [tdoc7,"EMT 2 Equipment",dummyobj,tdocspawn,_td3,_td3,true],
 [tdoc7sub,"EMT 2 Equipment",dummyobj,tdocspawnsub,_td3,_td3,true],
+[tdoc8,"Fire Marshal Equipment",dummyobj,tdocspawn,_td8,_td8,true],
 [resourcesell,"Sell Resources",dummyobj,dummyobj,_rs,_rs,true],
 //[cheeseburger,"Jackos Cheeseburgers",dummyobj,dummyobj,_gds,_gds,true],
 [workplace_getjobflag_4,"OL Emporium",dummyobj,dummyobj,_gds1,_gds1,true],

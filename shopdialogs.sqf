@@ -15,11 +15,11 @@ _itemsellarray  = ((INV_ItemShops select INV_ActiveShopNumber) select 5);
 
 //--------------------------------------BUY-----------------------------------------
 _CopOnlyShops = [corbox,copuntrained,copbasic1,copbasic2,copbasic4,copbasic6,coppo1,coppo2,coppo3,copcpl,copsgt,ftobox,cidbox,copdeputy,copsheriff,copsheriffdnr,copsheriffmks,coplt,copcpt,copchief,copmedalbox,copair2,copswat1,copswat2,copswat3,copswat4,copswat5,copswate,copswatd,copswatvehicle,copcoastguard,copcoastguardair,copairweapon2,copVIPBox,copVIPBox2,copk92,corsbox,corcbox,copsgtdeputy];
-_ESUOnlyShops = [tdoc,tdoc2,tdoc3,tdoc4,tdoc5,tdoc6,tdocsub,tdoc2sub,tdoc3sub,tdoc4sub,tdoc5sub,tdoc6sub,tdoc7,tdoc7sub];
+_ESUOnlyShops = [tdoc,tdoc2,tdoc3,tdoc4,tdoc5,tdoc6,tdocsub,tdoc2sub,tdoc3sub,tdoc4sub,tdoc5sub,tdoc6sub,tdoc7,tdoc7sub,tdoc8];
 _EMT1 = [tdoc3,tdoc3sub];
 _EMT2 = [tdoc7,tdoc7sub];
 _EMT3 = [tdoc,tdoc6sub];
-_EMT_FD = [tdoc4,tdoc4sub];
+_EMT_FD = [tdoc4,tdoc4sub,tdoc8];
 _EMT_Air = [tdoc5,tdoc5sub];
 _EMT_Command = [tdoc6,tdocsub];
 _vipCop = [copVIPBox,copVIPBox2,copVIPBox3,copswatd];

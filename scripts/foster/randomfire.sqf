@@ -8,7 +8,7 @@ Format['if (playerside == resistance) then {player sidechat "Check your map for 
 Format['if (playerside == west) then {playsound "beepsimple"};'] call broadcast;
 Format['if (playerside == west) then {player sidechat "Dispatch: Reports of a 10-70, all available units respond. Check your map for the location."};'] call broadcast;
 	
-_fireLocation = ["firespawn1","firespawn2","firespawn3","firespawn4","firespawn5","firespawn6","firespawn7","firespawn8","firespawn9","firespawn10"];
+_fireLocation = ["firespawn1","firespawn2","firespawn3","firespawn4","firespawn5","firespawn6","firespawn7","firespawn8","firespawn9","firespawn10","firespawn11","firespawn12","firespawn13","firespawn14","firespawn15","firespawn16"];
 _fireSelection = _fireLocation call bis_fnc_selectrandom;  
 	
 _fireMarker = createMarker ["Fire", (getMarkerPos _fireSelection)];

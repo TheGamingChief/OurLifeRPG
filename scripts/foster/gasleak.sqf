@@ -8,7 +8,7 @@ Format['if (playerside == resistance) then {player sidechat "Check your map for 
 Format['if (playerside == west) then {playsound "beepsimple"};'] call broadcast;
 Format['if (playerside == west) then {player sidechat "Dispatch: Reports of a 10-80, all available units respond. Check your map for the location."};'] call broadcast;
 	
-_gasLocation = ["gasspawn1","gasspawn2","gasspawn3","gasspawn4","gasspawn5"];
+_gasLocation = ["gasspawn1","gasspawn2","gasspawn3","gasspawn4","gasspawn5","gasspawn6","gasspawn7"];
 _gasSelection = _gasLocation call bis_fnc_selectrandom;  
 	
 _gasMarker = createMarker ["GasLeak", (getMarkerPos _gasSelection)];
