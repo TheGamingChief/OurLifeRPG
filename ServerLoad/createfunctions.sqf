@@ -88,7 +88,7 @@ _sirenSys = [];/*["tcg_taurus_pb_2","tcg_taurus_uc","tcg_taurus","tcg_taurus_wop
         {
             if (_classname in _CID) then {
                 call compile format['
-                newvehicle = "ATV_US_EP1" createVehicle %4;
+                newvehicle = _classname createVehicle %4;
                 newvehicle setPos %4;
                 newvehicle setDir %5;
                 newvehicle setVehicleInit "
