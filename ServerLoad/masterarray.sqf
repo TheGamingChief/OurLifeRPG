@@ -159,7 +159,7 @@ INV_AlleWaffenObjekte = [
 ["RH_pythonmaf",["Waffe", "pistol"],["RH_python", "Colt Python 357 Magnum"],[20000, 20000], [1, "", ""],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
 ["RH_mp5kmaf",["Waffe", "rifle"],["RH_mp5k", "MP5k"],[28000, 28000], [1, "", "PatrolBasic_license"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
 ["KPFS_MP2maf",["Waffe", "rifle"],["KPFS_MP2", "MP2"],[30000, 30000], [1, "", "mayorlic"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
-["RH_m14maf",["Waffe", "rifle"],["RH_m14", "M14 Long Rifle"],[150000, 150000], [2, "", ""],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
+["RH_m14maf",["Waffe", "rifle"],["RH_m14", "M14 Long Rifle"],[400000, 150000], [2, "", ""],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
 ["LeeEnfieldmaf",["Waffe", "rifle"],["LeeEnfield", "Lee Enfield"],[35000, 35000], [2, "rifle", "PatrolBasic_license"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
 //
 ["cal68_angel_dye",["Waffe", "rifle"],["cal68_angel_dye", "Angel A4 Marker"],[100, 100], [1, "", ""],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
