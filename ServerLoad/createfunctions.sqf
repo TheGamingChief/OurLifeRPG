@@ -605,25 +605,6 @@ _sirenSys = [];/*["tcg_taurus_pb_2","tcg_taurus_uc","tcg_taurus","tcg_taurus_wop
                  ', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getDir _logic];
                  newvehicle setVariable ["vcl_owner", getPlayerUID player, true];
                 };
-				if(_classname in _k9traffic) then {
-                call compile format['
-                newvehicle = _classname createVehicle %4;
-                newvehicle setPos %4;
-                newvehicle setDir %5;
-                newvehicle setVehicleInit "
-                this setObjectTexture [0,""scripts\foster\k9cv.paa""];this setObjectTexture [44,""scripts\foster\k9cv.paa""];this setObjectTexture [45,""scripts\foster\k9cv.paa""];this setObjectTexture [46,""scripts\foster\k9cv.paa""];this setObjectTexture [47,""scripts\foster\k9cv.paa""];this setObjectTexture [48,""scripts\foster\k9cv.paa""];
-                this setVehicleVarName ""vehicle_%1_%2"";
-                vehicle_%1_%2 = this;
-                clearWeaponCargo this;
-                clearMagazineCargo this;
-                newvehicle lock true;
-                ";
-                 processInitCommands;
-                 INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2];
-                 "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if(""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeof vehicle_%1_%2, %4] execVM ""%3"";};" call broadcast;
-                 ', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getDir _logic];
-                 newvehicle setVariable ["vcl_owner", getPlayerUID player, true];
-                };
                 if(_classname in _traffic) then {
                 call compile format['
                 newvehicle = _classname createVehicle %4;
