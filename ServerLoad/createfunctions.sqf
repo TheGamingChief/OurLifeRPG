@@ -72,10 +72,40 @@ _traffic = [""];
 _fireDeptTahoe=["firetahoe_sh"];
 _fireDeptCrownVics = ["fireilpd_beat_f101"];
 _fireDeptATV = ["fire_atv"];
+
+_CID = [
+    "ilpd_Traffic_black",
+    "ilpd_Traffic_darkblue",
+    "ilpd_Traffic_grey",
+    "ilpd_Traffic_maroon",
+    "ilpd_Traffic_sandstone",
+    "ilpd_Traffic_white"
+];
+
 _sirenSys = [];/*["tcg_taurus_pb_2","tcg_taurus_uc","tcg_taurus","tcg_taurus_wopb","tcg_taurus_shpb","tcg_taurus_sh","il_charger_pd","ilpd_charger_black","ilpd_charger_white","jailbus","il_bearcat","patrol","patrol_pb","patrol_np","patrol_slick","sheriff","whiteuc","blackuc","whited","greyd","whited","blackd","tcg_suburban_uc_black","tcg_suburban_uc_grey","tcg_suburban_uc_white","ilpd_beat_f101","ilpd_beat_f101_sh","ilpd_scu_black","ilpd_scu_white","ilpd_unmarked_scu","ilpd_unmarked_sandstone","ilpd_unmarked_maroon","ilpd_unmarked_darkblue","ilpd_unmarked_black","ilpd_unmarked_grey","ilpd_unmarked_white","ilpd_slick_b40_npb","ilpd_slick_f220_npb","ilpd_slick_b40_PBG","ilpd_slick_f220_PBG","ilpd_Traffic_black","ilpd_Traffic_white","tcg_suburban_patrol","tcg_suburban_sheriff","suburban_pd_k9","suburban_pd","suburban_pd_sheriff","suburban_pd_stealth","suburban_pd_black","ilpd_scu_darkblue","ilpd_scu_grey","ilpd_scu_maroon","ilpd_scu_sandstone","ilpd_Traffic_sandstone","ilpd_Traffic_maroon","ilpd_Traffic_grey","ilpd_Traffic_darkblue","il_fordcv_taxi","tahoe_pd","tahoe_sh","tahoe_uc_black","tahoe_uc_grey","tahoe_uc_1_grey","tahoe_uc_1_blue","tahoe_uc_1_green","ilpd_slick_b40_pb","ilpd_traffic_t101","pd_cvpi_hub","pd_cvpi","tahoe_uc_maroon","tahoe_uc_white","tahoe_uc_1_maroon","tahoe_uc_1_white","tahoe_uc_1_black","ilf350swat","il_f350sheriff","m5_pd_traffic"];                       */
  
-        if ((_classname in _type1) or (_classname in _type2) or (_classname in _crowns) or  (_classname in _sheriff220) or (_classname in _sherifsub) or (_classname in _crownsherif) or (_classname in _tahoesherif) or (_classname in _tahoe) or (_classname in _k9) or (_classname in _k9sub) or (_classname in _k9traffic) or (_classname in _traffic) or (_classname in _fireDeptCrownVics) or (_classname in _fireDeptTahoe)  or (_classname in _fireDeptATV) or _classname == "cpl_ilpd_beat_f101" or _classname == "fto_ilpd_beat_f101" or _classname == "theJammySmith" or _classname == "chief_tahoe_pd" or _classname == "tahoe_sheriff" or _classname == "tahoe_sheriff_DNR" or _classname == "k9_sheriff" or _classname == "dd_ilpd_beat_f101" or _classname == "olrpg_cortahoe" or _classname == "HMMWV_DES_EP1")  then
-        {   
+        if ((_classname in _type1) or (_classname in _type2) or (_classname in _crowns) or  (_classname in _sheriff220) or (_classname in _sherifsub) or (_classname in _crownsherif) or (_classname in _tahoesherif) or (_classname in _tahoe) or (_classname in _k9) or (_classname in _k9sub) or (_classname in _k9traffic) or (_classname in _traffic) or (_classname in _fireDeptCrownVics) or (_classname in _fireDeptTahoe)  or (_classname in _fireDeptATV) or _classname == "cpl_ilpd_beat_f101" or _classname == "fto_ilpd_beat_f101" or _classname == "theJammySmith" or _classname == "chief_tahoe_pd" or _classname == "tahoe_sheriff" or _classname == "tahoe_sheriff_DNR" or _classname == "k9_sheriff" or _classname == "dd_ilpd_beat_f101" or _classname == "olrpg_cortahoe" or _classname == "HMMWV_DES_EP1" or (_classname in _CID))  then
+        {
+            if (_classname in _CID) then {
+                call compile format['
+                newvehicle = "ATV_US_EP1" createVehicle %4;
+                newvehicle setPos %4;
+                newvehicle setDir %5;
+                newvehicle setVehicleInit "
+                this setVehicleVarName ""vehicle_%1_%2"";
+                vehicle_%1_%2 = this;
+                clearWeaponCargo this;
+                clearMagazineCargo this;
+                newvehicle lock true;
+                ";
+                 processInitCommands;
+                 INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2];
+                 "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if(""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeof vehicle_%1_%2, %4] execVM ""%3"";};" call broadcast;
+                 ', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getDir _logic];
+                 {newvehicle removeWeapon _x} forEach weapons newvehicle;
+                 {newvehicle addWeapon _x}forEach ["SportCarHorn","gunner_takedown","gunner_howler","gunner_manual","gunner_airhorn","gunner_pullover","gunner_clearstreet"];
+                 newvehicle setVariable ["vcl_owner", getPlayerUID player, true];   
+            };
 		        if(_classname in _fireDeptATV) then {
  
                 call compile format['
@@ -370,8 +400,11 @@ _sirenSys = [];/*["tcg_taurus_pb_2","tcg_taurus_uc","tcg_taurus","tcg_taurus_wop
                     ";
                      processInitCommands;
                      INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2];
+                     newvehicle setVariable ["TF_RadioType", "tf_mr6000l", true];
                      "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if(""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeof vehicle_%1_%2, %4] execVM ""%3"";};" call broadcast;
                      ', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getDir _logic];
+                     {newvehicle removeWeapon _x}forEach weapons newvehicle;
+                     newvehicle addWeapon "TruckHorn";
                      newvehicle setVariable ["vcl_owner", getPlayerUID player, true];
                 };
                 if (_classname in _type1) then
