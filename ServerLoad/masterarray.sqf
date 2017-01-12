@@ -1947,7 +1947,7 @@ INV_AlleItemsArray = [
 ["donateRH_acreotech",["Waffe", "rifle"], ["RH_acreotech", "ACR Eotech"], [15000, 15000], [2, "Donator_license5", "Donator_license5"], [], "Mossberg_M590" call ISSE_Cfg_Weapons_GetName, "Mossberg_M590" call ISSE_Cfg_Weapons_GetDesc, [["steel", 10],["plastic", 2],["copper", 2]]],
 ["MBG_Compound_Bow",["Waffe", "rifle"],["MBG_Compound_Bow", "Compound Bow"],[500, 500], [1, "rifle", "Donator_license5"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
 ["donateRH_20Rnd_762x51_hk417",["Magazin", "rifle"],["RH_20Rnd_762x51_hk417", "HK417 Mag"],[500, 500], [1, "Donator_license5", "Donator_license5"], [], "8Rnd_127x51_ball_TR" call ISSE_Cfg_MagazineInfo, "8Rnd_127x51_ball_TR" call ISSE_Cfg_MagazineInfo, [["copper", 1],["blackpowder", 1]]],
-["MBG_Arrow_HE",["Magazin", "rifle"],["MBG_Arrow_HE", "Crossbow Explosive Round"],[3000000, 3000000], [1, "Donator_license5", "Donator_license5"], [], "MBG_B_Arrow_HE" call ISSE_Cfg_MagazineInfo, "MBG_B_Arrow_HE" call ISSE_Cfg_MagazineInfo, [["copper", 1],["blackpowder", 1]]],
+["MBG_Arrow_HE",["Magazin", "rifle"],["MBG_Arrow_HE", "Crossbow Explosive Round"],[700000, 300000], [1, "Donator_license5", "Donator_license5"], [], "MBG_B_Arrow_HE" call ISSE_Cfg_MagazineInfo, "MBG_B_Arrow_HE" call ISSE_Cfg_MagazineInfo, [["copper", 1],["blackpowder", 1]]],
 
 ["donateRH_m4sd",["Waffe", "rifle"], ["RH_m4sd", "M4 SD"], [15000, 15000], [2, "Donator_license6", "Donator_license6"], [], "Mossberg_M590" call ISSE_Cfg_Weapons_GetName, "Mossberg_M590" call ISSE_Cfg_Weapons_GetDesc, [["steel", 10],["plastic", 2],["copper", 2]]],
 ["donateRH_m4sdaim",["Waffe", "rifle"], ["RH_m4sdaim", "M4 SD Aim"], [15000, 15000], [2, "Donator_license6", "Donator_license6"], [], "Mossberg_M590" call ISSE_Cfg_Weapons_GetName, "Mossberg_M590" call ISSE_Cfg_Weapons_GetDesc, [["steel", 10],["plastic", 2],["copper", 2]]],
@@ -2217,7 +2217,7 @@ INV_AlleItemsArray = [
 ["xIgla",["Waffe", "launcher"],["Igla", "CB Igla Launcher"],[200000, 200000], [3, "tierx", "PatrolBasic_license"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
 ["xIgla_mag",["Magazin", "rifle"],["Igla", "Igla Missle"],[60000, 60000], [1, ""], [], "8Rnd_127x51_ball_TR" call ISSE_Cfg_MagazineInfo, "8Rnd_127x51_ball_TR" call ISSE_Cfg_MagazineInfo, [["copper", 1],["blackpowder", 1]] ],
 ["x30Rnd_762x39_AK47",["Magazin", "rifle"],["30Rnd_762x39_AK47", "30rd AK Mag"],[800, 800], [1, ""], [], "20Rnd_B_765x17_Ball" call ISSE_Cfg_MagazineInfo, "20Rnd_B_765x17_Ball" call ISSE_Cfg_MagazineInfo, [["copper", 1],["blackpowder", 1]] ],
-["xMBG_Arrow_HE",["Magazin", "rifle"],["MBG_Arrow_HE", "Crossbow Explosive Round"],[500000, 100000], [1, "", "Donator_license5"], [], "MBG_B_Arrow_HE" call ISSE_Cfg_MagazineInfo, "MBG_B_Arrow_HE" call ISSE_Cfg_MagazineInfo, [["copper", 1],["blackpowder", 1]]]
+["xMBG_Arrow_HE",["Magazin", "rifle"],["MBG_Arrow_HE", "Crossbow Explosive Round"],[700000, 300000], [1, "", "Donator_license5"], [], "MBG_B_Arrow_HE" call ISSE_Cfg_MagazineInfo, "MBG_B_Arrow_HE" call ISSE_Cfg_MagazineInfo, [["copper", 1],["blackpowder", 1]]]
 
 
 ];
