@@ -865,7 +865,7 @@ if (_classname == "olrpg_swat_command") then
 		newvehicle setVehicleInit 'this addmagazineCargo ["RAB_L111A1",4];';processInitCommands;
 		newvehicle setVehicleInit 'this addweaponCargo ["M32_EP1",1];';processInitCommands;
         newvehicle setVehicleInit 'this addmagazineCargo ["6Rnd_Smoke_M203",4];';processInitCommands;
-		newvehicle setVehicleInit 'this addweaponCargo ["DMR",1];';processInitCommands;
+		newvehicle setVehicleInit 'this addweaponCargo ["RH_mk14ebrsp",1];';processInitCommands;
         newvehicle setVehicleInit 'this addmagazineCargo ["20Rnd_762x51_DMR",4];';processInitCommands;
 };
 // Swat
@@ -888,7 +888,7 @@ if (_classname == "olrpg_swat_bearcat") then
 		newvehicle setVehicleInit 'this addmagazineCargo ["RAB_L111A1",4];';processInitCommands;
 		newvehicle setVehicleInit 'this addweaponCargo ["M32_EP1",1];';processInitCommands;
         newvehicle setVehicleInit 'this addmagazineCargo ["6Rnd_Smoke_M203",4];';processInitCommands;
-		newvehicle setVehicleInit 'this addweaponCargo ["DMR",1];';processInitCommands;
+		newvehicle setVehicleInit 'this addweaponCargo [""RH_mk14ebrsp",",1];';processInitCommands;
         newvehicle setVehicleInit 'this addmagazineCargo ["20Rnd_762x51_DMR",4];';processInitCommands;
 };
 if (_classname == "olrpg_swat_f350") then

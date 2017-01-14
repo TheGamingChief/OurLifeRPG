@@ -203,11 +203,11 @@ _coppo1 =
 [
 "x26",
 "x26_Mag",
-"RH_m9",
-"Rnd_9x19_M9",
+"rh_p226",
+"RH_15Rnd_9x19_usp_swat",
 "M1014_pd",
 "8Rnd_B_Beneli_Pellets",
-"RH_m16a2_pd",
+"RH_hk416_pd",
 "30Rnd_556x45_Stanag",
 "olrpg_pdcv_pb",
 "olrpg_pdtaurus"
@@ -218,15 +218,11 @@ _coppo2 =
 [
 "x26",
 "x26_Mag",
-"RH_m9",
-"Rnd_9x19_M9",
-"LEXX_glock17_EP1_BLACK_pd",
-"Rnd_9x19_glock17",
+"rh_p226",
+"RH_15Rnd_9x19_usp_pd",
 "M1014_pd",
 "8Rnd_B_Beneli_Pellets",
-"RH_m16a2_pd",
-"RH_m16a2aim_pd",
-"RH_hk416saim_pd",
+"RH_hk416eotech_pd",
 "30Rnd_556x45_Stanag",
 "olrpg_pdcv_fpb",
 "olrpg_pdtauruspb"
@@ -237,17 +233,11 @@ _coppo3 =
 [
 "x26",
 "x26_Mag",
-"RH_m9",
-"Rnd_9x19_M9",
-"LEXX_glock17_EP1_BLACK_pd",
-"Rnd_9x19_glock17",
+"rh_p226",
+"RH_15Rnd_9x19_usp_pd",
 "M1014_pd",
 "8Rnd_B_Beneli_Pellets",
-"RH_m16a2_pd",
-"RH_m16a2aim_pd",
-"RH_M16a2s_pd",
-"RH_hk416saim_pd",
-"RH_hk416sacog_pd",
+"RH_hk416aim_pd",
 "30Rnd_556x45_Stanag",
 "olrpg_pdcv_slick_npb",
 "olrpg_pdtaurusfpb",
@@ -260,10 +250,8 @@ _copcpl =
 [
 "x26",
 "x26_Mag",
-"RH_m9",
-"Rnd_9x19_M9",
-"LEXX_glock17_EP1_BLACK_pd",
-"Rnd_9x19_glock17",
+"rh_p226",
+"RH_15Rnd_9x19_usp_pd",
 "M1014_pd",
 "8Rnd_B_Beneli_Pellets",
 "RH_m4sbraim_cmd",
@@ -281,10 +269,8 @@ _copsgt =
 [
 "x26",
 "x26_Mag",
-"RH_m9",
-"Rnd_9x19_M9",
-"LEXX_glock17_EP1_BLACK_pd",
-"Rnd_9x19_glock17",
+"rh_p226",
+"RH_15Rnd_9x19_usp_pd",
 "M1014_pd",
 "8Rnd_B_Beneli_Pellets",
 "RH_m4sbraim_cmd",
@@ -400,8 +386,8 @@ _coplt =
 [
 "x26",
 "x26_Mag",
-"LEXX_glock17_EP1_BLACK_pd",
-"Rnd_9x19_glock17",
+"rh_p226",
+"RH_15Rnd_9x19_usp_pd",
 "M1014_pd",
 "8Rnd_B_Beneli_Pellets",
 "RH_m4maim_cmd",
@@ -428,8 +414,8 @@ _copcpt =
 [
 "x26",
 "x26_Mag",
-"LEXX_glock17_EP1_BLACK_pd",
-"Rnd_9x19_glock17",
+"rh_p226",
+"RH_15Rnd_9x19_usp_pd",
 "M1014_pd",
 "8Rnd_B_Beneli_Pellets",
 "RH_m4maim_cmd",
@@ -517,8 +503,8 @@ _corrections =
 "SmokeShell",
 "x26",
 "x26_Mag",
-"LEXX_glock17_EP1_BLACK_pd",
-"Rnd_9x19_glock17",
+"rh_p226",
+"RH_15Rnd_9x19_usp_pd",
 "m4a1_cor",
 "m4a1_aim_cor",
 "30Rnd_556x45_Stanag",
@@ -542,8 +528,8 @@ _corrections2 =
 "SmokeShell",
 "x26",
 "x26_Mag",
-"LEXX_glock17_EP1_BLACK_pd",
-"Rnd_9x19_glock17",
+"rh_p226",
+"RH_15Rnd_9x19_usp_pd",
 "m4a1_cor",
 "m4a1_aim_cor",
 "RH_M4a1acog_cor",
@@ -569,8 +555,8 @@ _corrections3 =
 "SmokeShell",
 "x26",
 "x26_Mag",
-"LEXX_glock17_EP1_BLACK_pd",
-"Rnd_9x19_glock17",
+"rh_p226",
+"RH_15Rnd_9x19_usp_pd",
 "m4a1_cor",
 "m4a1_aim_cor",
 "RH_M4a1acog_cor",
@@ -684,13 +670,15 @@ _copavsh =
 _copswat1 =
 [
 "SmokeShell",
+"RAB_L111A1_swat",
 "SWAT",
 "Rnd_9x19_M9",
 "x26",
 "x26_Mag",
 "M1014_pd",
 "8Rnd_B_Beneli_Pellets",
-"RH_mk18_swat",
+"RH_Mk18gl_swat",
+"1Rnd_Smoke_M203_swat",
 "30Rnd_556x45_Stanag_swat"
 ];
 
@@ -705,13 +693,14 @@ _copswat2 =
 "x26_Mag",
 "RH_usp_swat",
 "RH_15Rnd_9x19_usp_swat",
-"RH_mk18_swat",
-"RH_mk18eot_swat",
-"RH_mk18aim_swat",
+"RH_Mk18gl_swat",
+"RH_Mk18gleot_swat",
+"RH_Mk18glaim_swat",
 "30Rnd_556x45_Stanag_swat",
+"1Rnd_Smoke_M203_swat",
 "LEXX_M32_EP1_BLACK_swat",
 "6Rnd_Smoke_M203",
-"DMR_swat",
+"RH_mk14ebrsp_swat",
 "20Rnd_762x51_DMR"
 ];
 
@@ -726,14 +715,15 @@ _copswat3 =
 "x26_Mag",
 "RH_usp_swat",
 "RH_15Rnd_9x19_usp_swat",
-"RH_mk18acog_swat",
+"RH_Mk18glacog_swat",
 "RH_mk18sdeot_swat",
 "RH_mk18sdaim_swat",
 "30Rnd_556x45_Stanag_swat",
 "30Rnd_556x45_StanagSD_swat",
+"1Rnd_Smoke_M203_swat",
 "LEXX_M32_EP1_BLACK_swat",
 "6Rnd_Smoke_M203",
-"DMR_swat",
+"RH_mk14ebrsp_swat",
 "20Rnd_762x51_DMR"
 ];
 
@@ -747,7 +737,7 @@ _copswat4 =
 "RH_mk18dcsdaim_swat",
 "30Rnd_556x45_StanagSD_swat",
 "DMR_swat",
-"RH_mk14ebrsp_swat",
+"RH_mk14ebrsp_sd_swat",
 "20Rnd_762x51_DMR",
 "BAF_LRR_scoped_swat",
 "5Rnd_86x70_L115A1",
@@ -771,7 +761,7 @@ _copswat5 =
 "30Rnd_556x45_StanagSD_swat",
 "LEXX_M32_EP1_BLACK_swat",
 "6Rnd_Smoke_M203",
-"DMR_swat",
+"RH_mk14ebrsp_swat",
 "20Rnd_762x51_DMR",
 "Stinger_swat",
 "Stinger_mag"
@@ -824,6 +814,7 @@ _cid =
 "olrpg_dettahoe_pink",
 "olrpg_dettahoe_green",
 "olrpg_dettahoe_orange",
+"olrpg_cv_taxi_npb",
 "Bait_Kit"
 ];
  
@@ -847,6 +838,8 @@ _copcoastguardair =
 //73.5
 _copfto =
 [
+"rh_m16a1_fto",
+"30Rnd_556x45_Stanag",
 "olrpg_snrftotahoe",
 "olrpg_pdftocharger",
 "olrpg_pdcv_slick_fpb_fto"
