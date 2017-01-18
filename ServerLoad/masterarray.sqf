@@ -69,7 +69,7 @@ INV_AlleWaffenObjekte = [
 //COP WEAPONS
 ["rh_p226_pd",["Waffe", "pistol"],["rh_p226", "SIGG P226"],[2000, 500], [2, "", "PatrolBasic_license"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
 ["M1014_pd",["Waffe", "rifle"], ["M1014", "M1014 Shotgun"], [5000, 2000], [2, "", "PatrolBasic_license"], [], "Mossberg_M590" call ISSE_Cfg_Weapons_GetName, "Mossberg_M590" call ISSE_Cfg_Weapons_GetDesc, [["steel", 10],["plastic", 2],["copper", 2]]],
-["rh_hk416_pd",["Waffe", "rifle"],["RH_hk416sacog", "HK416"],[30000, 20000], [1, "", "PatrolBasic_license"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
+["rh_hk416_pd",["Waffe", "rifle"],["RH_hk416", "HK416"],[30000, 20000], [1, "", "PatrolBasic_license"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
 ["RH_hk416eotech_pd",["Waffe", "rifle"],["RH_hk416saim", "HK416 Eotech"],[30000, 20000], [1, "", "PatrolBasic_license"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
 ["RH_hk416aim_pd",["Waffe", "rifle"],["RH_hk416sacog", "HK416 Aimpoint"],[30000, 20000], [1, "", "PatrolBasic_license"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
 // K9
