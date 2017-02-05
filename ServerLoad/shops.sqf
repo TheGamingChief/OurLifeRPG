@@ -843,7 +843,7 @@ _copvip =
 "RH_57x28mm_50RND_Mag",
 "MakarovSD",
 "8Rnd_9x18_MakarovSD",
-"m5_pd_traffic"
+"DD_FOR13Taurus_P_P"
 ];
  
 //75
