@@ -859,40 +859,6 @@ INV_AlleFahrzeugeArray = [
 ["DD_FOR13Taurus_P_APO",["Fahrzeug", "car"],["DD_FOR13Taurus_P_APO", "APO Interceptor"],[21000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["DD_CHE10Impala_P_P_APO",["Fahrzeug", "car"],["DD_CHE10Impala_P_P_APO", "APO Impala"],[18000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //COP VEHICLES
 ["olrpg_pdcv_pb",["Fahrzeug", "car"],["olrpg_pdcv_pb", "Crown Victoria (Pushbar)"],[15000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["olrpg_pdcv_fpb",["Fahrzeug", "car"],["olrpg_pdcv_fpb", "Crown Victoria (Full Pushbar)"],[15000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],

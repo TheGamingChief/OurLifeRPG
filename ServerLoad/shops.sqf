@@ -343,7 +343,6 @@ _copsgtdeputy =
 "DD_CHE10Impala_P_P_S",
 "DD_FOR13Taurus_P_S",
 "DD_DOD12Charger_P_S",
-"DD_CHE08Tahoe_P_S",
 "DD_CHE15Suburban_P_P_K9",
 "supgrade3_pd",
 "supgrade4_pd"
@@ -371,7 +370,6 @@ _copsheriff =
 "DD_FOR13Taurus_P_S",
 "DD_DOD12Charger_P_S",
 "DD_DOD15Charger_P_S",
-"DD_CHE08Tahoe_P_S",
 "DD_CHE15Suburban_P_P_K9",
 "supgrade3_pd",
 "supgrade4_pd",
