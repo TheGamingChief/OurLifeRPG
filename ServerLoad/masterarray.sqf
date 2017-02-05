@@ -797,9 +797,103 @@ INV_AlleFahrzeugeArray = [
 ["ilpd_beat_f101",["Fahrzeug", "car"],["ilpd_beat_f101", "Patrol CV"],[15000, 5000], [1, "car", "PatrolBasic_license", 150], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["ilpd_cvpi_pool_f101",				["Vehicle", "car"],				["ilpd_cvpi_pool_f101", "Patrol CV Bubble Lightbar"],				[15000, 15000], 	[1, "car", "", 150], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 
-
-
 //NEW COP VEHICLES
+
+//HIGH Command
+["DD_DOD12Charger_U_P_Black",["Fahrzeug", "car"],["DD_DOD12Charger_U_P_Black", "Dodge Charger 2012 Black"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD15Charger_U_P_Black",["Fahrzeug", "car"],["DD_DOD15Charger_U_P_Black", "Dodge Charger 2015 Black"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+
+//PD
+["DD_FOR06CV_P_P",["Fahrzeug", "car"],["DD_FOR06CV_P_P", "Crown Victoria 2006"],[15000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_CHE10Impala_P_P",["Fahrzeug", "car"],["DD_CHE10Impala_P_P", "Impala SS 2010"],[18000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_FOR13Taurus_P_P",["Fahrzeug", "car"],["DD_FOR13Taurus_P_P", "Interceptor 2013"],[21000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD12Charger_P_P",["Fahrzeug", "car"],["DD_DOD12Charger_P_P", "Dodge Charger 2012"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD15Charger_P_P",["Fahrzeug", "car"],["DD_DOD15Charger_P_P", "Dodge Charger 2015"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD06charger_P_P",["Fahrzeug", "car"],["DD_DOD06charger_P_P", "Dodge Charger 2006"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_CHE08Tahoe_P_P",["Fahrzeug", "car"],["DD_CHE08Tahoe_P_P", "Tahoe 2008"],[30000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_CHE15Suburban_P_P",["Fahrzeug", "car"],["DD_CHE15Suburban_P_P", "Suburban 2015"],[30000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+//SHERIFF
+["DD_FOR06CV_P_S",["Fahrzeug", "car"],["DD_FOR06CV_P_S", "Crown Victoria 2006"],[15000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_CHE10Impala_P_P_S",["Fahrzeug", "car"],["DD_CHE10Impala_P_P_S", "Impala SS 2010"],[18000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_FOR13Taurus_P_S",["Fahrzeug", "car"],["DD_FOR13Taurus_P_S", "Interceptor 2013"],[21000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD12Charger_P_S",["Fahrzeug", "car"],["DD_DOD12Charger_P_S", "Dodge Charger 2012"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD15Charger_P_S",["Fahrzeug", "car"],["DD_DOD15Charger_P_S", "Dodge Charger 2015"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_CHE08Tahoe_P_S",["Fahrzeug", "car"],["DD_CHE08Tahoe_P_S", "Tahoe 2008"],[30000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_CHE15Suburban_P_P_K9",["Fahrzeug", "car"],["DD_CHE15Suburban_P_P_K9", "Suburban 2015"],[30000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+
+//SWAT
+["DD_CHE08Tahoe_P_SWAT",["Fahrzeug", "car"],["DD_CHE08Tahoe_P_SWAT", "S.W.A.T. Tahoe"],[40000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_CHE15Suburban_U_P_SWAT",["Fahrzeug", "car"],["DD_CHE15Suburban_U_P_SWAT", "S.W.A.T. Suburban"],[50000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+
+//K9
+["DD_FOR06CV_P_K9",["Fahrzeug", "car"],["DD_FOR06CV_P_K9", "K9 Crown Victoria"],[15000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_FOR13Taurus_P_K9",["Fahrzeug", "car"],["DD_FOR13Taurus_P_K9", "K9 Interceptor"],[21000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD12Charger_P_P_K9",["Fahrzeug", "car"],["DD_DOD12Charger_P_P_K9", "K9 Dodge Charger"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_CHE08Tahoe_P_K9",["Fahrzeug", "car"],["DD_CHE08Tahoe_P_K9", "K9 Tahoe"],[30000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+
+["DD_FOR06CV_P_SK9",["Fahrzeug", "car"],["DD_FOR06CV_P_SK9", "K9 Crown Victoria"],[15000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD12Charger_P_SK9",["Fahrzeug", "car"],["DD_DOD12Charger_P_SK9", "K9 Dodge Charger"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_CHE08Tahoe_P_SK9",["Fahrzeug", "car"],["DD_CHE08Tahoe_P_SK9", "K9 Tahoe"],[30000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+
+//CORR
+["DD_FOR06CV_P_Corrections",["Fahrzeug", "car"],["DD_FOR06CV_P_Corrections9", "Corrections Crown Victoria"],[15000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_FOR13Taurus_P_Corrections",["Fahrzeug", "car"],["DD_FOR13Taurus_P_Corrections", "Corrections Interceptor"],[21000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD12Charger_P_P_Corrections",["Fahrzeug", "car"],["DD_DOD12Charger_P_P_Corrections", "Corrections Dodge Charger"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+
+//CID
+["DD_CHE10Impala_U_P_Black",["Fahrzeug", "car"],["DD_CHE10Impala_U_P_Black", "Impala Black"],[18000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_CHE10Impala_U_P_DarkRed",["Fahrzeug", "car"],["DD_CHE10Impala_U_P_DarkRed", "Impala DarkRed"],[18000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_CHE10Impala_U_P_Red",["Fahrzeug", "car"],["DD_CHE10Impala_U_P_Red", "Impala Red"],[18000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_CHE10Impala_U_P_DarkBlue",["Fahrzeug", "car"],["DD_CHE10Impala_U_P_DarkBlue", "Impala DarkBlue"],[18000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_CHE15Suburban_U_P_Black",["Fahrzeug", "car"],["DD_CHE15Suburban_U_P_Black", "Suburban Black"],[30000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_CHE15Suburban_U_P_DarkRed",["Fahrzeug", "car"],["DD_CHE15Suburban_U_P_DarkRed", "Suburban DarkRed"],[30000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_CHE15Suburban_U_P_DarkBlue",["Fahrzeug", "car"],["DD_CHE15Suburban_U_P_DarkBlue", "Suburban DarkBlue"],[30000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD12Charger_U_P_DarkRed",["Fahrzeug", "car"],["DD_DOD12Charger_U_P_DarkRed", "Dodge Charger 2012 DarkRed"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD12Charger_U_P_Red",["Fahrzeug", "car"],["DD_DOD12Charger_U_P_Red", "Dodge Charger 2012 Red"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD12Charger_U_P_DarkBlue",["Fahrzeug", "car"],["DD_DOD12Charger_U_P_DarkBlue", "Dodge Charger 2012 DarkBlue"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD15Charger_U_P_DarkRed",["Fahrzeug", "car"],["DD_DOD15Charger_U_P_DarkRed", "Dodge Charger 2015 DarkRed"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD15Charger_U_P_Red",["Fahrzeug", "car"],["DD_DOD15Charger_U_P_Red", "Dodge Charger 2015 Red"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD15Charger_U_P_DarkBlue",["Fahrzeug", "car"],["DD_DOD15Charger_U_P_DarkBlue", "Dodge Charger 2015 DarkBlue"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+
+//APO
+["DD_FOR13Taurus_P_APO",["Fahrzeug", "car"],["DD_FOR13Taurus_P_APO", "APO Interceptor"],[21000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_CHE10Impala_P_P_APO",["Fahrzeug", "car"],["DD_CHE10Impala_P_P_APO", "APO Impala"],[18000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//COP VEHICLES
 ["olrpg_pdcv_pb",["Fahrzeug", "car"],["olrpg_pdcv_pb", "Crown Victoria (Pushbar)"],[15000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["olrpg_pdcv_fpb",["Fahrzeug", "car"],["olrpg_pdcv_fpb", "Crown Victoria (Full Pushbar)"],[15000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call ISSE_Cfg_Vehicle_GetName, "Skoda" call ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 

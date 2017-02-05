@@ -195,7 +195,7 @@ _copuntrained =
 "Rnd_9x19_M9",
 "M1014_pd",
 "8Rnd_B_Beneli_Pellets",
-"olrpg_pdcv_pb"
+"DD_FOR06CV_P_P"
 ];
  
 //57
@@ -209,8 +209,8 @@ _coppo1 =
 "8Rnd_B_Beneli_Pellets",
 "RH_hk416_pd",
 "30Rnd_556x45_Stanag",
-"olrpg_pdcv_pb",
-"olrpg_pdtaurus"
+"DD_FOR06CV_P_P",
+"DD_CHE10Impala_P_P"
 ];
  
 //58
@@ -224,8 +224,9 @@ _coppo2 =
 "8Rnd_B_Beneli_Pellets",
 "RH_hk416eotech_pd",
 "30Rnd_556x45_Stanag",
-"olrpg_pdcv_fpb",
-"olrpg_pdtauruspb"
+"DD_FOR06CV_P_P",
+"DD_CHE10Impala_P_P",
+"DD_FOR13Taurus_P_P"
 ];
  
 //59
@@ -239,9 +240,10 @@ _coppo3 =
 "8Rnd_B_Beneli_Pellets",
 "RH_hk416aim_pd",
 "30Rnd_556x45_Stanag",
-"olrpg_pdcv_slick_npb",
-"olrpg_pdtaurusfpb",
-"olrpg_pdcharger",
+"DD_FOR06CV_P_P",
+"DD_CHE10Impala_P_P",
+"DD_FOR13Taurus_P_P",
+"DD_DOD12Charger_P_P",
 "supgrade3_pd"
 ];
  
@@ -257,9 +259,11 @@ _copcpl =
 "RH_m4sbraim_cmd",
 "RH_M4sbreotech_cmd",
 "30Rnd_556x45_Stanag",
-"olrpg_pdcv_slick_pb",
-"olrpg_pdtaurus_slick",
-"olrpg_pdcharger_slick",
+"DD_FOR06CV_P_P",
+"DD_CHE10Impala_P_P",
+"DD_FOR13Taurus_P_P",
+"DD_DOD12Charger_P_P",
+"DD_CHE08Tahoe_P_P",
 "supgrade3_pd",
 "supgrade4_pd"
 ];
@@ -277,10 +281,12 @@ _copsgt =
 "RH_M4sbreotech_cmd",
 "RH_M4sbracog_cmd",
 "30Rnd_556x45_Stanag",
-"olrpg_pdcv_slick_pb",
-"olrpg_pdtaurus_slick",
-"olrpg_pdcharger_slick",
-"olrpg_pdsuptahoe",
+"DD_FOR06CV_P_P",
+"DD_CHE10Impala_P_P",
+"DD_FOR13Taurus_P_P",
+"DD_DOD12Charger_P_P",
+"DD_CHE08Tahoe_P_P",
+"DD_CHE15Suburban_P_P",
 "supgrade3_pd",
 "supgrade4_pd"
 ];
@@ -297,11 +303,10 @@ _copdeputy =
 "RH_acrbaim_sheriff",
 "RH_acrbeotech_sheriff",
 "30Rnd_556x45_Stanag",
-"olrpg_sdcv_pb",
-"olrpg_sdcharger",
-"tcg_taurus_shpb",
-"olrpg_sdtahoe",
-"olrpg_sdsub6",
+"DD_FOR06CV_P_S",
+"DD_CHE10Impala_P_P_S",
+"DD_FOR13Taurus_P_S",
+"DD_DOD12Charger_P_S",
 "supgrade1",
 "supgrade2",
 "supgrade3_pd"
@@ -310,8 +315,7 @@ _copdeputy =
 //62
 _copsheriffdnr =
 [
-"olrpg_sdtahoe_dnr",
-"olrpg_sdf350_dnr"
+"DD_CHE15Suburban_P_P_K9"
 ];
 
 _copsheriffmks =
@@ -335,12 +339,12 @@ _copsgtdeputy =
 "30Rnd_556x45_Stanag",
 "M24_sheriff",
 "5Rnd_762x51_M24",
-"olrpg_sdcv_slick_npb",
-"olrpg_sdcharger_slick",
-"olrpg_sdtaurus_slick",
-"olrpg_sdtahoe",
-"olrpg_sdsub6",
-"olrpg_sdf350",
+"DD_FOR06CV_P_S",
+"DD_CHE10Impala_P_P_S",
+"DD_FOR13Taurus_P_S",
+"DD_DOD12Charger_P_S",
+"DD_CHE08Tahoe_P_S",
+"DD_CHE15Suburban_P_P_K9",
 "supgrade3_pd",
 "supgrade4_pd"
 ];
@@ -362,19 +366,13 @@ _copsheriff =
 "5Rnd_762x51_M24",
 "Stinger_swat",
 "Stinger_mag",
-"olrpg_sdcv_slick_npb",
-"olrpg_sdcharger_slick",
-"olrpg_sdtaurus_slick",
-"olrpg_sdtahoe",
-"olrpg_sdf350",
-"olrpg_sdsub6",
-"olrpg_sdcv_pool_pb",
-"olrpg_umcv_dblue",
-"olrpg_umcv_maroon",
-"olrpg_umcv_grey",
-"olrpg_uctahoe_maroon",
-"olrpg_uctahoe_grey",
-"olrpg_uctahoe_dblue",
+"DD_FOR06CV_P_S",
+"DD_CHE10Impala_P_P_S",
+"DD_FOR13Taurus_P_S",
+"DD_DOD12Charger_P_S",
+"DD_DOD15Charger_P_S",
+"DD_CHE08Tahoe_P_S",
+"DD_CHE15Suburban_P_P_K9",
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd",
@@ -396,13 +394,13 @@ _coplt =
 "30Rnd_556x45_Stanag",
 "Stinger_swat",
 "Stinger_mag",
-"olrpg_pdlttahoe",
-"olrpg_umcv_dblue",
-"olrpg_umcv_maroon",
-"olrpg_umcv_grey",
-"olrpg_uctahoe_maroon",
-"olrpg_uctahoe_grey",
-"olrpg_uctahoe_dblue",
+"DD_FOR06CV_P_P",
+"DD_CHE10Impala_P_P",
+"DD_FOR13Taurus_P_P",
+"DD_DOD12Charger_P_P",
+"DD_DOD15Charger_P_P",
+"DD_CHE08Tahoe_P_P",
+"DD_CHE15Suburban_P_P",
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd",
@@ -424,14 +422,14 @@ _copcpt =
 "30Rnd_556x45_Stanag",
 "Stinger_swat",
 "Stinger_mag",
-"olrpg_pdcpttahoe",
-"olrpg_umcv_dblue",
-"olrpg_umcv_maroon",
-"olrpg_umcv_grey",
-"olrpg_uctahoe_maroon",
-"olrpg_uctahoe_grey",
-"olrpg_uctahoe_dblue",
-"olrpg_pdtaurus_um",
+"DD_FOR06CV_P_P",
+"DD_CHE10Impala_P_P",
+"DD_FOR13Taurus_P_P",
+"DD_DOD12Charger_P_P",
+"DD_DOD15Charger_P_P",
+"DD_CHE08Tahoe_P_P",
+"DD_CHE15Suburban_P_P",
+"DD_DOD12Charger_U_P_Black",
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd",
@@ -453,17 +451,16 @@ _copchief =
 "20Rnd_762x51_B_SCAR_pd",
 "Stinger_swat",
 "Stinger_mag",
-"olrpg_pdcv_chief",
-"olrpg_pdcoftahoe",
-"olrpg_pdastcoftahoe",
-"olrpg_umcv_dblue",
-"olrpg_umcv_maroon",
-"olrpg_umcv_grey",
-"olrpg_uctahoe_maroon",
-"olrpg_uctahoe_grey",
-"olrpg_uctahoe_dblue",
-"olrpg_pdtaurus_um",
-"olrpg_pdcharger_um",
+"DD_FOR06CV_P_P",
+"DD_CHE10Impala_P_P",
+"DD_FOR13Taurus_P_P",
+"DD_DOD12Charger_P_P",
+"DD_DOD15Charger_P_P",
+"DD_CHE08Tahoe_P_P",
+"DD_CHE15Suburban_P_P",
+"DD_DOD12Charger_U_P_Black",
+"DD_DOD15Charger_U_P_Black",
+"DD_DOD06charger_P_P",
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd",
@@ -479,14 +476,13 @@ _copmedal =
 "RH_m4meotech_cmd",
 "RH_m4macog_cmd",
 "30Rnd_556x45_Stanag",
-"olrpg_umcv_dblue",
-"olrpg_umcv_maroon",
-"olrpg_umcv_grey",
-"olrpg_uctahoe_maroon",
-"olrpg_uctahoe_grey",
-"olrpg_uctahoe_dblue",
-"olrpg_pdtaurus_um",
-"olrpg_pdcharger_um",
+"DD_FOR06CV_P_P",
+"DD_CHE10Impala_P_P",
+"DD_FOR13Taurus_P_P",
+"DD_DOD12Charger_P_P",
+"DD_DOD15Charger_P_P",
+"DD_CHE08Tahoe_P_P",
+"DD_CHE15Suburban_P_P",
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd"
@@ -508,9 +504,7 @@ _corrections =
 "m4a1_cor",
 "m4a1_aim_cor",
 "30Rnd_556x45_Stanag",
-"olrpg_pdcv_corrections_pb",
-"olrpg_pdcortauruspb",
-"olrpg_pdcorcharger",
+"DD_FOR06CV_P_Corrections",
 "olrpg_policebus",
 "supgrade1",
 "supgrade2",
@@ -534,10 +528,8 @@ _corrections2 =
 "m4a1_aim_cor",
 "RH_M4a1acog_cor",
 "30Rnd_556x45_Stanag",
-"olrpg_pdcv_corrections_pb",
-"olrpg_pdcortauruspb",
-"olrpg_pdcorcharger",
-"olrpg_cortahoe",
+"DD_FOR06CV_P_Corrections",
+"DD_FOR13Taurus_P_Corrections",
 "olrpg_policebus",
 "supgrade1",
 "supgrade2",
@@ -561,10 +553,9 @@ _corrections3 =
 "m4a1_aim_cor",
 "RH_M4a1acog_cor",
 "30Rnd_556x45_Stanag",
-"olrpg_pdcv_corrections_pb",
-"olrpg_pdcortauruspb",
-"olrpg_pdcorcharger",
-"olrpg_cortahoe",
+"DD_FOR06CV_P_Corrections",
+"DD_FOR13Taurus_P_Corrections",
+"DD_DOD12Charger_P_P_Corrections",
 "olrpg_policebus",
 "supgrade1",
 "supgrade2",
@@ -581,7 +572,8 @@ _copk9p =
 "RH_8Rnd_45cal_m1911",
 "LEXX_SCAR_L_CQC_BLACK_k9",
 "30Rnd_556x45_Stanag",
-"olrpg_pdk9cv_fpb"
+"DD_FOR06CV_P_K9",
+"DD_FOR13Taurus_P_K9"
 ]; 
  
 //68
@@ -594,9 +586,9 @@ _copk9 =
 "LEXX_SCAR_L_CQC_BLACK_k9",
 "LEXX_SCAR_L_CQC_Holo_BLACK_k9",
 "30Rnd_556x45_Stanag",
-"olrpg_pdk9cv_fpb",
-"olrpg_pdk9taurusfpb",
-"olrpg_pdk9suburban"
+"DD_FOR06CV_P_K9",
+"DD_FOR13Taurus_P_K9",
+"DD_DOD12Charger_P_P_K9"
 ];
  
 //68
@@ -614,21 +606,24 @@ _copk9c =
 "20Rnd_762x51_DMR",
 "M24_k9",
 "5Rnd_762x51_M24",
-"olrpg_pdk9cv_slick_fpb",
-"olrpg_pdk9taurusfpb",
-"olrpg_pdk9charger",
-"olrpg_pdk9suburban_slick"
+"DD_FOR06CV_P_K9",
+"DD_FOR13Taurus_P_K9",
+"DD_DOD12Charger_P_P_K9",
+"DD_CHE08Tahoe_P_K9"
 ];
  
  //68.5
 _copk9sheriff =
 [
-"olrpg_sdk9suburban"
+"DD_FOR06CV_P_SK9",
+"DD_DOD12Charger_P_SK9",
+"DD_CHE08Tahoe_P_SK9"
 ];
  
 _copav3 =
 [
-"olrpg_pdcv_pool_pb"
+"DD_CHE10Impala_P_P_APO",
+"DD_FOR13Taurus_P_APO"
 ];
  
 //69
@@ -776,9 +771,8 @@ _copswat6 =
 //72
 _copswatvehicle =
 [
-"olrpg_tahoe_swat_um",
-"olrpg_swat_suburban_um",
-"olrpg_swat_f350",
+"DD_CHE08Tahoe_P_SWAT",
+"DD_CHE15Suburban_U_P_SWAT",
 "olrpg_swat_command",
 "olrpg_swat_bearcat"
 ];
@@ -794,27 +788,19 @@ _cid =
 "RH_M4eotech_cid",
 "RH_M4acog_cid",
 "30Rnd_556x45_Stanag",
-"ilpd_Traffic_black",
-"ilpd_Traffic_darkblue",
-"ilpd_Traffic_grey",
-"ilpd_Traffic_maroon",
-"ilpd_Traffic_sandstone",
-"ilpd_Traffic_white",
-"olrpg_detcv_black",
-"olrpg_detcv_sands",
-"olrpg_detcv_maroon",
-"olrpg_detcv_dblue",
-"olrpg_detcv_grey",
-"olrpg_detcv_white",
-"olrpg_dettahoe_maroon",
-"olrpg_dettahoe_grey",
-"olrpg_dettahoe_blue",
-"olrpg_dettahoe_black",
-"olrpg_dettahoe_white",
-"olrpg_dettahoe_pink",
-"olrpg_dettahoe_green",
-"olrpg_dettahoe_orange",
-"olrpg_cv_taxi_npb",
+"DD_CHE10Impala_U_P_Black",
+"DD_CHE10Impala_U_P_DarkRed",
+"DD_CHE10Impala_U_P_Red",
+"DD_CHE10Impala_U_P_DarkBlue",
+"DD_CHE15Suburban_U_P_Black",
+"DD_CHE15Suburban_U_P_DarkRed",
+"DD_CHE15Suburban_U_P_DarkBlue",
+"DD_DOD12Charger_U_P_DarkRed",
+"DD_DOD12Charger_U_P_Red",
+"DD_DOD12Charger_U_P_DarkBlue",
+"DD_DOD15Charger_U_P_DarkRed",
+"DD_DOD15Charger_U_P_Red",
+"DD_DOD15Charger_U_P_DarkBlue",
 "Bait_Kit"
 ];
  
@@ -840,9 +826,10 @@ _copfto =
 [
 "rh_m16a1_fto",
 "30Rnd_556x45_Stanag",
-"olrpg_snrftotahoe",
-"olrpg_pdftocharger",
-"olrpg_pdcv_slick_fpb_fto"
+"DD_FOR06CV_P_P",
+"DD_CHE10Impala_P_P",
+"DD_DOD12Charger_P_P",
+"DD_CHE08Tahoe_P_P"
 ]; 
  
 //74
