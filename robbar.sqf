@@ -263,7 +263,7 @@ player groupChat "Employee has handed you the money and donuts! Now get out of t
 
 (format['if(!("Robbed Dunkin Bronuts" in %1_reason))then{%1_reason = %1_reason + ["Robbed Dunkin Bronuts"]}; %1_wanted = 1; kopfgeld_%1 = kopfgeld_%1 + wantedamountforrobbing;', player]) call broadcast;
 ['geld', donutmoney1] call INV_AddInvItem;
-['donut', 12] call INV_AddInvItem;
+['Donut', 12] call INV_AddInvItem;
 (format ['server globalChat "Someone robbed East Dunkin Bronuts!";']) call broadcast;
 player sidechat format ["You stole $%1!", donutmoney1];
 streetrep = streetrep + 0.5;
@@ -304,7 +304,7 @@ player groupChat "Employee has handed you the money and donuts! Now get out of t
 
 (format['if(!("Robbed Dunkin Bronuts" in %1_reason))then{%1_reason = %1_reason + ["Robbed Dunkin Bronuts"]}; %1_wanted = 1; kopfgeld_%1 = kopfgeld_%1 + wantedamountforrobbing;', player]) call broadcast;
 ['geld', donutmoney2] call INV_AddInvItem;
-['donut', 12] call INV_AddInvItem;
+['Donut', 12] call INV_AddInvItem;
 (format ['server globalChat "Someone robbed West Dunkin Bronuts!";']) call broadcast;
 player sidechat format ["You stole $%1!", donutmoney2];
 streetrep = streetrep + 0.5;

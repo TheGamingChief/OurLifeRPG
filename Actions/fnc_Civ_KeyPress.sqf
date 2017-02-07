@@ -108,13 +108,7 @@ fnc_KeyPress_W = {
 		if(_spd <= 40 and _spd > 30)then{_vcl setVelocity [(_vel select 0) * 1.003, (_vel select 1) * 1.003, (_vel select 2) * 0.99]};
 
 		};
-
-	if(_class in cararray) then
-	{
-	_vel = velocity _vcl;
-	_vcl setVelocity [(_vel select 0) * 1.005, (_vel select 1) * 1.005, (_vel select 2) * 0.99];
 	
-	}; 
 	_lvl = _vcl getvariable "tuning";
 	if(isEngineOn _vcl and !isnil "_lvl") then
 

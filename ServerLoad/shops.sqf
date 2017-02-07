@@ -570,8 +570,7 @@ _copk9p =
 "RH_8Rnd_45cal_m1911",
 "LEXX_SCAR_L_CQC_BLACK_k9",
 "30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_K9",
-"DD_FOR13Taurus_P_K9"
+"DD_FOR06CV_P_K9"
 ]; 
  
 //68
@@ -585,7 +584,6 @@ _copk9 =
 "LEXX_SCAR_L_CQC_Holo_BLACK_k9",
 "30Rnd_556x45_Stanag",
 "DD_FOR06CV_P_K9",
-"DD_FOR13Taurus_P_K9",
 "DD_DOD12Charger_P_P_K9"
 ];
  
@@ -605,7 +603,6 @@ _copk9c =
 "M24_k9",
 "5Rnd_762x51_M24",
 "DD_FOR06CV_P_K9",
-"DD_FOR13Taurus_P_K9",
 "DD_DOD12Charger_P_P_K9",
 "DD_CHE08Tahoe_P_K9"
 ];
