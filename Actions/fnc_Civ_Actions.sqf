@@ -131,6 +131,7 @@ action118 = _role addaction ["Rob Bar","robbar.sqf",["bar"],1,false,true,"","isc
 action119 = _role addaction ["Rob Bar","robbar.sqf",["bar1"],1,false,true,"","isciv and barmoney1 >= 5000 and player distance pub2 <= 2 and southavailable"];
 action120 = _role addaction ["Rob Bar","robbar.sqf",["bar2"],1,false,true,"","isciv and barmoney2 >= 5000 and player distance pub3 <= 2 and macksavailable"];
 action121 = _role addaction ["Rob Bar","robbar.sqf",["bar3"],1,false,true,"","isciv and barmoney3 >= 5000 and player distance pub4 <= 2 and hermannsavailable"];
+actionbar5 = _role addaction ["Rob Saloon","robbar.sqf",["bar5"],1,false,true,"","isciv and barmoney5 >= 5000 and player distance pub5 <= 2 and binkysavailable"];
 actionrobd = _role addaction ["Rob Store","robbar.sqf",["donutstore"],1,false,true,"","isciv and donutmoney1 >= 5000 and player distance donutguy <= 5 and robdonutavailable"];
 actionrobd1 = _role addaction ["Rob Store","robbar.sqf",["donutstore2"],1,false,true,"","isciv and donutmoney2 >= 5000 and player distance donutguy2 <= 5 and robdonut1available"];
 

@@ -869,7 +869,7 @@ if (_classname == "olrpg_swat_command") then
         newvehicle setVehicleInit 'this addmagazineCargo ["20Rnd_762x51_DMR",4];';processInitCommands;
 };
 // Swat
-if (_classname == "olrpg_tahoe_swat_um") then
+if (_classname == "DD_CHE08Tahoe_P_SWAT") then
 {
         newvehicle setVehicleInit 'this addweaponCargo  ["SWAT",1];'; processInitCommands;
 		newvehicle setVehicleInit 'this addmagazineCargo ["15Rnd_9x19_M9",8];';processInitCommands;
@@ -900,7 +900,7 @@ if (_classname == "olrpg_swat_f350") then
 		newvehicle setVehicleInit 'this addweaponCargo ["BAF_LRR_scoped_w",1];';processInitCommands;
         newvehicle setVehicleInit 'this addmagazineCargo ["5Rnd_86x70_L115A1",4];';processInitCommands;
 };
-if (_classname == "olrpg_swat_suburban_um") then
+if (_classname == "DD_CHE15Suburban_U_P_SWAT") then
 {
         newvehicle setVehicleInit 'this addweaponCargo  ["SWAT",1];'; processInitCommands;
 		newvehicle setVehicleInit 'this addmagazineCargo ["15Rnd_9x19_M9",8];';processInitCommands;

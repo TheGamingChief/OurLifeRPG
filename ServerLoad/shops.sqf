@@ -154,6 +154,7 @@ _msc = ["meth","GymMem3","GymMem4"];
 //54
 _copbasic =
 [
+"PDArmor",
 "HandCuffs",
 "Gag",
 "spikestrip",
@@ -189,6 +190,7 @@ _coptraffic =
 //56
 _copuntrained =
 [
+"PDArmor",
 "x26",
 "x26_Mag",
 "RH_m9",
@@ -201,6 +203,7 @@ _copuntrained =
 //57
 _coppo1 =
 [
+"PDArmor",
 "x26",
 "x26_Mag",
 "rh_p226_pd",
@@ -216,6 +219,7 @@ _coppo1 =
 //58
 _coppo2 =
 [
+"PDArmor",
 "x26",
 "x26_Mag",
 "rh_p226_pd",
@@ -232,6 +236,7 @@ _coppo2 =
 //59
 _coppo3 =
 [
+"PDArmor",
 "x26",
 "x26_Mag",
 "rh_p226_pd",
@@ -250,6 +255,7 @@ _coppo3 =
 //60
 _copcpl =
 [
+"PDArmor",
 "x26",
 "x26_Mag",
 "rh_p226_pd",
@@ -271,6 +277,7 @@ _copcpl =
 //61
 _copsgt =
 [
+"PDArmor",
 "x26",
 "x26_Mag",
 "rh_p226_pd",
@@ -294,6 +301,7 @@ _copsgt =
 //62
 _copdeputy =
 [
+"PDArmor",
 "x26",
 "x26_Mag",
 "RH_python_sheriff",
@@ -327,6 +335,7 @@ _copsheriffmks =
 
 _copsgtdeputy =
 [
+"PDArmor",
 "x26",
 "x26_Mag",
 "RH_python_sheriff",
@@ -351,6 +360,7 @@ _copsgtdeputy =
 //63
 _copsheriff =
 [
+"PDArmor",
 "x26",
 "x26_Mag",
 "RH_python_sheriff",
@@ -380,6 +390,7 @@ _copsheriff =
 //64
 _coplt =
 [
+"PDArmor",
 "x26",
 "x26_Mag",
 "rh_p226_pd",
@@ -408,6 +419,7 @@ _coplt =
 //65
 _copcpt =
 [
+"PDArmor",
 "x26",
 "x26_Mag",
 "rh_p226_pd",
@@ -437,6 +449,7 @@ _copcpt =
 //66
 _copchief =
 [
+"PDArmor",
 "MakarovSD",
 "8Rnd_9x18_MakarovSD",
 "RH_deaglemzb_cmd",
@@ -488,7 +501,9 @@ _copmedal =
  
 _corrections =
 [
+"PDArmor",
 "HandCuffs",
+"Donut",
 "Gag",
 "Itembag",
 "medikit",
@@ -513,6 +528,7 @@ _corrections2 =
 [
 "HandCuffs",
 "Gag",
+"Donut",
 "Itembag",
 "medikit",
 "Binocular",
@@ -539,6 +555,7 @@ _corrections3 =
 "HandCuffs",
 "Gag",
 "Itembag",
+"Donut",
 "medikit",
 "Binocular",
 "NVGoggles",
@@ -637,7 +654,7 @@ _copav2 =
 //70
 _copav1 =
 [
-"bjerk",
+"Donut",
 "RH_m9",
 "Rnd_9x19_M9",
 "RH_mp5a5aim_av",
@@ -866,7 +883,7 @@ _undercover =
 "RH_20Rnd_762x51_AR10",
 "Huntingrifle_uc",
 "5x_22_LR_17_HMR",
-"ziptie",
+"HandCuffs",
 "RepairKitsBreaksShops",
 "Itembag",
 "bjerk",
@@ -1453,6 +1470,8 @@ INV_ItemShops = [
 [rlrpgclothingshop,"Civilian Clothing Shop",dummyobj,dummyobj,M_rlrpgclothing,M_rlrpgclothing,true],
 [rlrpgclothingshop_1,"Military Surplus",dummyobj,dummyobj,M_rlrpgclothing_1,M_rlrpgclothing_1,true],
 [rlrpgclothingshop_2,"Tactical Military Clothing",dummyobj,dummyobj,M_rlrpgclothing_2,M_rlrpgclothing_2,true],
+[rlrpgclothingshop_3,"Civilian Clothing Shop",dummyobj,dummyobj,M_rlrpgclothing,M_rlrpgclothing,true],
+[rlrpgclothingshop_4,"Military Surplus",dummyobj,dummyobj,M_rlrpgclothing_1,M_rlrpgclothing_1,true],
 [pistol,"Licensed Pistol",pistol,pistol,_pistol,_pistol,true],
 [sub,"Submachine Gun",sub,sub,_sub,_sub,true],
 [rifle,"Licensed Rifle",rifle,rifle,_rifle,_rifle,true],
@@ -1478,10 +1497,12 @@ INV_ItemShops = [
 [pub2,"Pub",dummyobj,dummyobj,_pub,_pub,true],
 [pub3,"Pub",dummyobj,dummyobj,_pub,_pub,true],
 [pub4,"Pub",dummyobj,dummyobj,_pub,_pub,true],
+[pub5,"Saloon",dummyobj,dummyobj,_pub,_pub,true],
 [martpub,"Alcohol",dummyobj,dummyobj,_pub,_pub,true],
 [assassinshop,"Assassin Shop",assassinshop,dummyobj,_ass,_ass,true],
 [mayorguns,"Government Equip Shop",mayorguns,mayorcarspawn,_mgs,_mgs,true],
 [equipbox,"Equipment Shop",equipbox,dummyobj,_es,_es,true],
+[equipbox2,"Equipment Shop",equipbox2,dummyobj,_es,_es,true],
 [tuning1,"Car Upgrades",dummyobj,dummyobj,_cu,_cu,true],
 [rMart,"Car Items",dummyobj,dummyobj,_rm,_rm,true],
 [carshop1,"Used Cars",dummyobj,carspawn1,_cs1,_cs1,true],
@@ -1508,6 +1529,8 @@ INV_ItemShops = [
 [airshop,"Airplane Shop",dummyobj,asairspawn,_as,_as,true],
 [airshop2,"Chopper and Jet Shop",dummyobj,asairspawn,_assa,_assa,true],
 [airshop3,"Commercial Air Shop",dummyobj,asairspawn,_asc,_asc,true],
+[AFP,"Dem Airoplanes Store",dummyobj,AFPspawn,_as,_as,true],
+[AFH,"Dem Helamacopters Store",dummyobj,AFHspawn,_assa,_assa,true],
 [scubashop, "Boat Shop",dummyobj,bs1spawn,_bs,_bs,true],      
 [boatshop2, "Boat Shop",dummyobj,boatspawn2,_bs,_bs,true],
 [insure,"Insurance",insure,dummyobj,_ins, _emptyshop,false],

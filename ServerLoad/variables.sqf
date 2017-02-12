@@ -134,6 +134,7 @@ fionasavailable 		 = true;
 macksavailable 			 = true;
 southavailable 			 = true;
 hermannsavailable 		 = true;
+binkysavailable 		 = true;
 chipsavailable 			 = true;
 platesavailable 		 = true;
 gunrunavailable 		 = true;
@@ -175,9 +176,9 @@ convoyrespawntime        = 60;  //reset to 30 after testing
 marketrespawntime	 = 60;
 moneyintruck 		 = true; //dont change
 //===== Gas station robbing
-maxstationmoney = 25000;
+maxstationmoney = 10000;
 wantedamountforrobbing = 20000;
-maxbarmoney = 25000;
+maxbarmoney = 20000;
 if(debug)then{drugstockinc = 6;druguserate = 20};
 //===== Casino robbing
 maxcasinomoney = 150000;
@@ -186,6 +187,7 @@ wantedamountforcasino = 100000;
 //===== Chop Shop
 wantedamountforstriping = 20000;
 wantedamountforchoping = 20000;
+wantedamountforgus = 25000;
 
 
 //===== Bank robbing
@@ -369,7 +371,7 @@ localslave               = 0;
 localslavecounter        = 0;
 huren_cost               = 40000;  								
 
-hoemoneyprosekunde       = 13000;   							
+hoemoneyprosekunde       = 20000;   							
 maxhuren                 = 3;     			
 copworkerallowed         = 0;     										
 pimpactive               = 0;			

@@ -74,6 +74,11 @@ if (barmoney3 < maxbarmoney) then
 	barmoney3 = barmoney3 + _randomamount;
 	if (barmoney3 > maxbarmoney) then {barmoney3 = maxbarmoney;};
 	};
+if (barmoney5 < maxbarmoney) then
+	{
+	barmoney5 = barmoney3 + _randomamount;
+	if (barmoney5 > maxbarmoney) then {barmoney5 = maxbarmoney;};
+	};	
 if (donutmoney2 < maxbarmoney) then
 	{
 	donutmoney2 = donutmoney2 + _randomamount;
@@ -103,6 +108,7 @@ publicvariable "barmoney";
 publicvariable "barmoney1";
 publicvariable "barmoney2";
 publicvariable "barmoney3";
+publicvariable "barmoney5";
 publicvariable "donutmoney1";
 publicvariable "donutmoney2";
 publicvariable "casinomoney";

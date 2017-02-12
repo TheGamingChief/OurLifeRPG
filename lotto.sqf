@@ -1,7 +1,7 @@
 _lotto     = (_this  select 0) call GetLottoArray;
 _lottocost = (_lotto select 2);
 _lottowin  = (_lotto select 3);
-_winner    = random 20;
+_winner    = random 10;
 _geld      = 'geld' call INV_GetItemAmount;
 _player = player;
 

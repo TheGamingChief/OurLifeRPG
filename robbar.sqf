@@ -42,6 +42,14 @@ fn_LeftBarNotification4 =
 	publicvariable "barmoney3";
 };
 
+fn_LeftBarNotification5 = 
+{
+	player groupChat "You are gone to far away from the Cashier and he has called the cops!.";
+	(format ['server globalChat "Someone left Binkys Casket Saloon mid robbery and the owner has called 911! And locked the cash register!";']) call broadcast;
+	barmoney5 = 0;
+	publicvariable "barmoney5";
+};
+
 fn_LeftDonutNotification = 
 {
 	player groupChat "You are gone to far away from the Cashier and he has called the cops!.";
@@ -229,6 +237,46 @@ streetrep = streetrep + 0.5;
 barmoney3 = 0;
 publicvariable "barmoney3";
 hermannsavailable = true;
+};
+
+if (_selection == "bar5") then
+{
+if (!(call INV_isArmed)) exitwith
+	{
+	player groupchat "You need a gun to rob the saloon!";
+	};
+	
+_west = playersNumber west;
+if (_west < 2) exitwith {player groupchat "You need 2 Police Officers online to rob Binkys Casket Saloon!";};
+binkysavailable = false;	
+"if (iscop) then {player sideChat ""The silent alarm at Binkys Casket Saloon has gone off, Go investigate!""};" call broadcast;
+('if(iscop) then {playsound "beep";}') call broadcast;
+1001 cutText ["Put your hands up bro this is a robbery!","PLAIN DOWN"];
+sleep 2;
+player groupChat "You are now robbing the saloon, Please stay near the Binky for 30 seconds to receive the money";
+sleep 4;
+1001 cutText ["Binky: What The Hell Are You Doing Over There, Get Your Hands Off My Caskets!","PLAIN DOWN"];
+if (player distance pub5 >= 5) exitWith {[] call fn_LeftBarNotification5;};	
+sleep 7;
+1001 cutText ["Binky: Theres No Need For A Gun Put That Away.","PLAIN DOWN"];
+sleep 7;
+1001 cutText ["Binky: Ok, Ok Let Me Get You The Money.","PLAIN DOWN"];
+if (player distance pub5 >= 5) exitWith {[] call fn_LeftBarNotification5;};	
+sleep 7;
+1001 cutText ["Binky: Here Take The Money, Just Remember I Will Be Your Final Designated Driver.","PLAIN DOWN"];
+if (player distance pub5 >= 5) exitWith {[] call fn_LeftBarNotification5;};	
+sleep 5;
+if (player distance pub5 >= 5) exitWith {[] call fn_LeftBarNotification5;};
+player groupChat "Binky has handed you the money! Now get out of there before the cops show up!";	
+
+(format['if(!("Robbed a bar" in %1_reason))then{%1_reason = %1_reason + ["Robbed bar"]}; %1_wanted = 1; kopfgeld_%1 = kopfgeld_%1 + wantedamountforrobbing;', player]) call broadcast;
+['geld', barmoney5] call INV_AddInvItem;
+(format ['server globalChat "Someone robbed Binkys Casket Saloon!";']) call broadcast;
+player sidechat format ["You stole $%1!", barmoney5];
+streetrep = streetrep + 0.5;
+barmoney5 = 0;
+publicvariable "barmoney5";
+binkysavailable = true;
 };
 
 if (_selection == "donutstore") then

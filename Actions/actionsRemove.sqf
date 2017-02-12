@@ -199,6 +199,7 @@ if (playerSide == civilian) then {
 	_role removeAction action119;
 	_role removeAction action120;
 	_role removeAction action121;
+	_role removeAction actionbar5;
 	_role removeAction actionrobd;
 	_role removeAction actionrobd1;
 	_role removeAction actiondonut1;

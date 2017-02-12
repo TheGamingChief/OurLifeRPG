@@ -9,7 +9,7 @@ Website: OurLifeRPG.Net
 */
 
 disableSerialization;
-_SpawnPoints = ["San Milovitz (East Civilian Spawn)","Crosino (West Civilian Spawn)","Pueblo (Tier X Spawn)","Hidden (Undercover Spawn)"];
+_SpawnPoints = ["San Milovitz (East Civilian Spawn)","Nanchuk (West Civilian Spawn)","Pueblo (Tier X Spawn)","Hidden (Undercover Spawn)"];
 
 for [{_c=0}, {_c < (count _SpawnPoints)}, {_c=_c+1}] do 
 {

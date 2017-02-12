@@ -13,9 +13,9 @@ _rNumber = random 1000;
 _wallet = "geld" call INV_GetItemAmount; 
 _player = player; 
 
-_payout1 = round(_rNumber*20);
-_payout2 = round(_rNumber*200);
-_payout3 = round(_rNumber*1000);
+_payout1 = round(_rNumber*15);
+_payout2 = round(_rNumber*150);
+_payout3 = round(_rNumber*750);
 
 if(_art == "1line") then
 {

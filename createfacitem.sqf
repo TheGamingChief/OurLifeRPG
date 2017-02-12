@@ -83,7 +83,7 @@ if (_type == "export") then {
  
     if (_itemart == "Fahrzeug") then {
         _iarr = _item call INV_getitemArray;
-        _price = (_iarr call INV_getitemCostWithTax)*1;
+        _price = (_iarr call INV_getitemCostWithTax)*.2;
         ['geld',_price] call INV_AddInvItem;
 		["Factory_Log", format ["%1 just got %2 for selling a vehicle!", name player,_price]] call fn_RMLogToServer;
         player groupchat format["The vehicle has been sold for $%1!",_price];

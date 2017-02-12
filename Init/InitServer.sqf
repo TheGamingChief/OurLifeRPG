@@ -40,6 +40,8 @@ barmoney2 = 5000;
 publicvariable "barmoney2";
 barmoney3 = 5000;
 publicvariable "barmoney3";
+barmoney5 = 5000;
+publicvariable "barmoney5";
 donutmoney1 = 5000;
 publicvariable "donutmoney1";
 donutmoney2 = 5000;

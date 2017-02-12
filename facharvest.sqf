@@ -274,14 +274,14 @@ _weaponfactory = [
 ];
 
 _illegalweaponfactory = [
-"RH_ak47w",
-"RH_ak74w",
-"RH_aks74w",
-"Sa58P_EP1w",
-"Sa58V_EP1w",
-"Rnd_762x39_AK47w",
-"Rnd_545x39_AKw",
-"Rnd_762x39_SA58w"
+"RH_ak47",
+"RH_ak74",
+"RH_aks74",
+"Sa58P_EP1",
+"Sa58V_EP1",
+"Rnd_762x39_AK47",
+"Rnd_545x39_AK",
+"Rnd_762x39_SA58"
 ];
 
 

@@ -5,10 +5,10 @@ LottoArray =
 [
 
 //	0			 	1				 2			3		Position im Array
-["lotto1", 	"Penny Saver Scratch Card",	 		1000,		15000],							
-["lotto2", 	"Money Lover Scratch Card",		    5000,       75000],	
-["lotto3", 	"Big Bucks Scratch Card",         	10000,  	150000],								
-["lotto4",	"Fosters Fortune Scratch Card",			25000, 	    400000]
+["lotto1", 	"Penny Saver Scratch Card",	 		1000,		10000],							
+["lotto2", 	"Money Lover Scratch Card",		    5000,       50000],	
+["lotto3", 	"Big Bucks Scratch Card",         	10000,  	100000],								
+["lotto4",	"Fosters Fortune Scratch Card",			25000, 	    250000]
 
 ];
 

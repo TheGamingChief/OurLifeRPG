@@ -1,4 +1,11 @@
-//Made by Foster - OLRPG
+/*
+Script made by : Foster for OurLifeRPG
+Version 1.1 (Stable)
+File: BodyArmor.sqf
+Description: Body Armor
+TeamSpeak: TS.OurLifeRPG.Net
+Website: OurLifeRPG.Net
+*/
 
 player addEventHandler["HandleDamage", {[_this select 1, _this select 2, _this select 4] call DamageModifier;}];
 
@@ -80,6 +87,7 @@ DamageModifier = {
 			    ['PDArmor', -1] call INV_AddInventoryItem;	
 				player setvariable ["bodyarmorhits",0,false];
 				player GroupChat "Your body armor has been depleted!";
+				player removeEventHandler["HandleDamage", {[_this select 1, _this select 2, _this select 4] call DamageModifier;}];
 			};				
 		};
 	};
