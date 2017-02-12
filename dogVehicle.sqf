@@ -15,17 +15,14 @@ switch (_this select 0) do
 			_pos = [0,-2.5,-.6];
 			_dir = 270;
 			
-			if (_vehicle isKindOf "olrpg_pdk9taurusfpb") then {
-			_pos = [0,-0.7,0.3];
+			if (_vehicle isKindOf "DD_FOR06CV_P_K9" || _vehicle isKindOf "DD_FOR06CV_P_SK9") then {
+				_pos = [0.07,-0.6,0.5];
 			};
-			if (_vehicle isKindOf "olrpg_pdk9cv_fpb") then {
-			_pos = [0,-0.7,0.5];
+			if (_vehicle isKindOf "DD_DOD12Charger_P_P_K9" || _vehicle isKindOf "DD_DOD12Charger_P_SK9") then {
+				_pos = [0.07,-0.6,-0.9];
 			};
-			if (_vehicle isKindOf "olrpg_pdk9cv_slick_fpb") then {
-			_pos = [0,-0.7,0.5];
-			};
-			if (_vehicle isKindOf "olrpg_pdk9charger") then {
-			_pos = [0,-1,-0.3];
+			if (_vehicle isKindOf "DD_CHE08Tahoe_P_K9" || _vehicle isKindOf "DD_CHE08Tahoe_P_SK9") then {
+				_pos = [0.07,-0.7,0.9];
 			};
 
 			while {alive _dog && _dog distance _vehicle > 10 && player getVariable "CLAY_DogStatus" == "Boarding"} do
