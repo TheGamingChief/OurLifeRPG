@@ -28,7 +28,38 @@ _cs2 = ["MMT_USMC","tractor","oldtruc2","oldtruc2a"];
 //14. Sports Car Shop
 _sc1 = ["440cuda","roadrunner","roadrunner2","CHEVROLET_CAMARO_SS_396","chevrolet_chevelle","cuda","hemicuda","cd71hm","barcuda","fury","FORD_MUSTANG_SHELBY_COBRA","FORD_MUSTANG_SHELBY_COBRA1","FORD_MUSTANG_SHELBY_COBRA2","FORD_MUSTANG_SHELBY_COBRA3","FORD_GT","monaco_grey","monaco_blue","monaco_white","monaco_green","monaco_red","challenger_grey","challenger_blue","challenger_yellow","challenger_pink","challenger_white","challenger_green","challenger_red","challenger_orange"];
 //15
-_sc2 = ["cl_charger","cl_charger_black","il_charger_blue","il_charger_black","il_charger_red","il_charger_orange","MAZDA_RX_7","MAZDA_RX_71","MAZDA_RX_72","MAZDA_RX_73","MAZDA_RX_75","MAZDA_RX_74","MAZDA_MAZDASPEED_3"];
+_sc2 = 
+[
+	"DD_DOD12Charger_Black",		// 2012 Dodge Charger (Black)
+	"DD_DOD12Charger_Blue",			// 2012 Dodge Charger (Blue)
+	"DD_DOD12Charger_Camo",			// 2012 Dodge Charger (Camo)
+	"DD_DOD12Charger_DarkGreen",	// 2012 Dodge Charger (Dark Green)
+	"DD_DOD12Charger_DarkRed",		// 2012 Dodge Charger (Dark Red)
+	"DD_DOD12Charger_Green",		// 2012 Dodge Charger (Green)
+	"DD_DOD12Charger_Orange",		// 2012 Dodge Charger (Orange)
+	"DD_DOD12Charger_Red",			// 2012 Dodge Charger (Red)
+	"DD_DOD12Charger_UrbanCamo",	// 2012 Dodge Charger (Urban Camo)
+	"DD_DOD12Charger_White",		// 2012 Dodge Charger (White)
+	"DD_DOD12Charger_Yellow",		// 2012 Dodge Charger (Yellow)
+	"DD_DOD15Charger_Black",		// 2015 Dodge Charger (Black)
+	"DD_DOD15Charger_Blue",			// 2015 Dodge Charger (Blue)
+	"DD_DOD15Charger_Camo",			// 2015 Dodge Charger (Camo)
+	"DD_DOD15Charger_DarkGreen",	// 2015 Dodge Charger (Dark Green)
+	"DD_DOD15Charger_DarkRed",		// 2015 Dodge Charger (Dark Red)
+	"DD_DOD15Charger_Green",		// 2015 Dodge Charger (Green)
+	"DD_DOD15Charger_Orange",		// 2015 Dodge Charger (Orange)
+	"DD_DOD15Charger_Red",			// 2015 Dodge Charger (Red)
+	"DD_DOD15Charger_UrbanCamo",	// 2015 Dodge Charger (Urban Camo)
+	"DD_DOD15Charger_White",		// 2015 Dodge Charger (White)
+	"DD_DOD15Charger_Yellow",		// 2015 Dodge Charger (Yellow)
+	"MAZDA_RX_7",
+	"MAZDA_RX_71",
+	"MAZDA_RX_72",
+	"MAZDA_RX_73",
+	"MAZDA_RX_75",
+	"MAZDA_RX_74",
+	"MAZDA_MAZDASPEED_3"
+];
 //16
 _sc3 = ["CHRYSLER_300","RENAULT_CLIO_SPORT_V6","SUBARU_IMPREZA_WRX_STI_AWD","SUBARU_IMPREZA_STI_AWD","FIAT_PUNTO","ALFA_ROMEO_BRERA","NISSAN_240SX_SE","PONTIAC_GTO_6"];
 //17
@@ -40,13 +71,106 @@ _sc6 = ["NISSAN_GTR_SPECV","NISSAN_GTR_SPECV1","NISSAN_GTR_SPECV2","NISSAN_GTR_S
 //20
 _sc7 = ["350z_red","350z_kiwi","350z_black","350z_silver","350z_green","350z_blue","350z_gold","350z_white","350z_pink","350z_mod","350z_ruben","350z_v","350z_yellow"];
 //21
-_sc8 = ["tcg_taurus_civ1","tcg_taurus_civ2","tcg_taurus_civ3","tcg_taurus_civ4","tcg_taurus_civ5","tcg_taurus_civ6","il_fordcv_white","il_fordcv_grey","il_fordcv_black","il_fordcv_darkblue","il_fordcv_maroon","il_fordcv_sandstone"];
+_sc8 = 
+[
+	"tcg_taurus_civ1",
+	"tcg_taurus_civ2",
+	"tcg_taurus_civ3",
+	"tcg_taurus_civ4",
+	"tcg_taurus_civ5",
+	"tcg_taurus_civ6",
+	"il_fordcv_white",
+	"il_fordcv_grey",
+	"il_fordcv_black",
+	"il_fordcv_darkblue",
+	"il_fordcv_maroon",
+	"il_fordcv_sandstone",
+	"DD_CHE10Impala_Black",			// Impala SS 2010 (Black)
+	"DD_CHE10Impala_Blue",			// Impala SS 2010 (Blue)
+	"DD_CHE10Impala_Camo",			// Impala SS 2010 (Camo)
+	"DD_CHE10Impala_DarkGreen",		// Impala SS 2010 (Dark Green)
+	"DD_CHE10Impala_DarkRed",		// Impala SS 2010 (Dark Red)
+	"DD_CHE10Impala_Green",			// Impala SS 2010 (Green)
+	"DD_CHE10Impala_Orange",		// Impala SS 2010 (Orange)
+	"DD_CHE10Impala_Red",			// Impala SS 2010 (Red)
+	"DD_CHE10Impala_UrbanCamo",		// Impala SS 2010 (Urban Camo)
+	"DD_CHE10Impala_White",			// Impala SS 2010 (White)
+	"DD_CHE10Impala_Yellow"			// Impala SS 2010 (Yellow)
+];
 //22
-_sc9 = ["m5_red","m5_grey","m5_blue","m5_c_green","m5_c_black","m5_c_white","BMW_M6","BMW_M3_GTR","BMW_M3","BMW_M3_RALLY","BMW_135I","tcg_bmw_m3","tcg_bmw_m3_hamwhite","tcg_bmw_m3_c1","tcg_bmw_m3_c3","tcg_bmw_m3_c4","tcg_bmw_m3_c5","tcg_bmw_m3_c6","tcg_bmw_m3_c7","tcg_bmw_m3_c8","tcg_bmw_m3_c9"];
+_sc9 = 
+[
+	"DD_BMWM5_Black",			// BMW M5 (Black)
+	"DD_BMWM5_Blue",			// BMW M5 (Blue)
+	"DD_BMWM5_Camo",			// BMW M5 (Camo)
+	"DD_BMWM5_DarkGreen",		// BMW M5 (Dark Green)
+	"DD_BMWM5_DarkRed",			// BMW M5 (Dark Red)
+	"DD_BMWM5_Green",			// BMW M5 (Green)
+	"DD_BMWM5_Orange",			// BMW M5 (Orange)
+	"DD_BMWM5_Red",				// BMW M5 (Red)
+	"DD_BMWM5_UrbanCamo",		// BMW M5 (Urban Camo)
+	"DD_BMWM5_White",			// BMW M5 (White)
+	"DD_BMWM5_Yellow",			// BMW M5 (Yellow)
+	"BMW_M6",
+	"BMW_M3_GTR",
+	"BMW_M3",
+	"BMW_M3_RALLY",
+	"BMW_135I",
+	"tcg_bmw_m3",
+	"tcg_bmw_m3_hamwhite",
+	"tcg_bmw_m3_c1",
+	"tcg_bmw_m3_c3",
+	"tcg_bmw_m3_c4",
+	"tcg_bmw_m3_c5",
+	"tcg_bmw_m3_c6",
+	"tcg_bmw_m3_c7",
+	"tcg_bmw_m3_c8",
+	"tcg_bmw_m3_c9"
+];
 //23. Tahoe shop
 _tahoe = ["tahoe_grey","tahoe_darkblue","tahoe_blue","tahoe_yellow","tahoe_white","tahoe_green","tahoe_black","tahoe_orange","tahoe_pink","tahoe_darkblue_cb","tahoe_grey_cb","tahoe_blue_cb","tahoe_yellow_cb","tahoe_pink_cb","tahoe_white_cb","tahoe_green_cb","tahoe_black_cb","tahoe_orange_cb"];
 //24. Pickup Shop -
-_ps = ["il_silverado_black","il_silverado_red","il_silverado_orange","il_silverado_white","il_silverado_pink", "tcg_suburban_red","tcg_suburban_yellow","tcg_suburban_grey","tcg_suburban_white","tcg_suburban_green","suburban_blue","suburban_black","suburban_maroon","suburban_sandstone","suburban_grey","suburban_white"];
+_ps = 
+[
+	"DD_FOR16F150_Black",			// 2016 Ford F150 (Black)
+	"DD_FOR16F150_Blue",				// 2016 Ford F150 (Blue)
+	"DD_FOR16F150_Camo",			// 2016 Ford F150 (Camo)
+	"DD_FOR16F150_DarkGreen",		// 2016 Ford F150 (Dark Green)
+	"DD_FOR16F150_DarkRed",			// 2016 Ford F150 (Dark Red)
+	"DD_FOR16F150_Green",			// 2016 Ford F150 (Green)
+	"DD_FOR16F150_Orange",			// 2016 Ford F150 (Orange)
+	"DD_FOR16F150_Red",				// 2016 Ford F150 (Red)
+	"DD_FOR16F150_UrbanCamo",		// 2016 Ford F150 (Urban Camo)
+	"DD_FOR16F150_White",			// 2016 Ford F150 (White)
+	"DD_FOR16F150_Yellow",			// 2016 Ford F150 (Yellow)
+	"DD_CHE15Suburban_Black",		// 2015 Suburban (Black)
+	"DD_CHE15Suburban_Blue",			// 2015 Suburban (Blue)
+	"DD_CHE15Suburban_Camo",			// 2015 Suburban (Camo)
+	"DD_CHE15Suburban_DarkGreen",	// 2015 Suburban (Dark Green)
+	"DD_CHE15Suburban_DarkRed",		// 2015 Suburban (Dark Red)
+	"DD_CHE15Suburban_Green",		// 2015 Suburban (Green)
+	"DD_CHE15Suburban_Orange",		// 2015 Suburban (Orange)
+	"DD_CHE15Suburban_Red",			// 2015 Suburban (Red)
+	"DD_CHE15Suburban_UrbanCamo",	// 2015 Suburban (Urban Camo)
+	"DD_CHE15Suburban_White",		// 2015 Suburban (White)
+	"DD_CHE15Suburban_Yellow",		// 2015 Suburban (Yellow)
+	"il_silverado_black",
+	"il_silverado_red",
+	"il_silverado_orange",
+	"il_silverado_white",
+	"il_silverado_pink",
+	"tcg_suburban_red",
+	"tcg_suburban_yellow",
+	"tcg_suburban_grey",
+	"tcg_suburban_white",
+	"tcg_suburban_green",
+	"suburban_blue",
+	"suburban_black",
+	"suburban_maroon",
+	"suburban_sandstone",
+	"suburban_grey",
+	"suburban_white"
+];
 //25. taxi shop
 _tx = ["GLT_M300_LT","GLT_M300_ST","il_fordcv_taxi","tcg_taurus_taxi"];
 //26. motorcycle shop
