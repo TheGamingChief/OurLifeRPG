@@ -134,6 +134,12 @@ INV_AlleWaffenObjekte = [
 ["RH_M4acog_cid",["Waffe", "rifle"],["RH_M4acog", "M4 Acog"],[50000, 1000], [1, "", "CID_license"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
 ["RH_17Rnd_9x19_g19",["Magazin", "pistol"],["RH_17Rnd_9x19_g17", "Glock 19 Mag"],[500, 500], [1, "", ""], [], "20Rnd_B_765x17_Ball" call ISSE_Cfg_MagazineInfo, "20Rnd_B_765x17_Ball" call ISSE_Cfg_MagazineInfo, [["copper", 1],["blackpowder", 1]]],
 
+// cid new weapons
+["RH_M16a4_cid",["Waffe", "rifle"],["RH_M16a4", "M16A4 Iron Sights"],[50000, 1000], [1, "", "CID_license"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
+["RH_M16A4aim_cid",["Waffe", "rifle"],["RH_M16A4aim", "M16A4 Aimpoint"],[50000, 1000], [1, "", "CID_license"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
+["RH_M16A4eotech_cid",["Waffe", "rifle"],["RH_M16A4eotech", "M16A4 EOTech"],[50000, 1000], [1, "", "CID_license"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
+["RH_M16A4acog_cid",["Waffe", "rifle"],["RH_M16A4acog", "M16A4 Acog"],[50000, 1000], [1, "", "CID_license"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
+
 //Corrections
 ["m4a1_cor",["Waffe", "rifle"],["m4a1", "M4A1"],[40000, 30000], [2, "", "cor_license"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
 ["m4a1_aim_cor",["Waffe", "rifle"],["m4a1_aim", "M4A1 Aimpoint"],[40000, 30000], [2, "", "cor_license"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]] ],
