@@ -1,0 +1,2 @@
+OL_MainWebsiteURL = "WWW.OURLIFERPG.NET";
+OL_MainTeamspeak  = "TS.OURLIFERPG.NET";
