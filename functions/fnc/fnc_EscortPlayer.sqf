@@ -3,7 +3,7 @@ if (player distance civmenuciv >= 3) exitWith {hint "The person is too far away!
 if (civmenuciv getVariable "Escorted") exitwith {
   civmenuciv setVariable ["Escorted",false,true];
   uiSleep 0.5;
-  format['if (rolestring == "%1") then {systemchat "You are no longer being escorted.";}', civmenuciv] call swag;
+  format['if (rolestring == "%1") then {systemchat "You are no longer being escorted.";}', civmenuciv] call OL_network_Swag;
   detach civmenuciv;
 };
 

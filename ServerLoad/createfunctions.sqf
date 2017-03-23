@@ -33,6 +33,7 @@ INV_CreateVehicle = {
   _type1     = ["MH6J_EP1"];
   _type2     = ["Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","GazelleD","Gazelle","Gazelle1","Gazelle3","adf_as350","ibr_as350_specops","ibr_as350_jungle","OH58g","UH1H_TK_GUE_EP1","MH60S","HH65C","ibr_as350_civ"];
   _haloHelis = ["An2_TK_EP1","An2_1_TK_CIV_EP1","MH6J_EP1","UH1H_TK_EP1","UH1H_TK_GUE_EP1","UH60M_MEV_EP1","CH_47F_EP1","C130J_US_EP1","AH6X_EP1","Mi17_CDF","Mi17_Ins","Mi17_Civilian","C130J"];
+  _f150      = ["DD_FOR16F150_U_P_DarkRed","DD_FOR16F150_U_P_DarkBlue"];
 
   hint format['Buying a %1 from %2', getText(configFile >> "cfgVehicles" >> _classname >> "displayName"), _logic];
 
@@ -52,7 +53,7 @@ INV_CreateVehicle = {
       ";
       processInitCommands;
       INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2];
-      "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if(""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeof vehicle_%1_%2, %4] execVM ""%3"";};" call swag;
+      "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if(""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeof vehicle_%1_%2, %4] execVM ""%3"";};" call OL_network_Swag;
       ', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getDir _logic];
       {newvehicle removeWeapon _x} forEach weapons newvehicle;
       newvehicle addWeapon "SportCarHorn";
@@ -76,7 +77,7 @@ INV_CreateVehicle = {
          processInitCommands;
          INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2];
          newvehicle setVariable ["TF_RadioType", "tf_mr6000l", true];
-         "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if(""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeof vehicle_%1_%2, %4] execVM ""%3"";};" call swag;
+         "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if(""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeof vehicle_%1_%2, %4] execVM ""%3"";};" call OL_network_Swag;
          ', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getDir _logic];
          {newvehicle removeWeapon _x}forEach weapons newvehicle;
          newvehicle addWeapon "TruckHorn";
@@ -97,7 +98,7 @@ INV_CreateVehicle = {
       ";
       processInitCommands;
       INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2];
-      "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call swag;
+      "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call OL_network_Swag;
       ', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
       newvehicle setVariable ["vcl_owner", getPlayerUID player, true];
     };
@@ -116,7 +117,7 @@ INV_CreateVehicle = {
       ";
       processInitCommands;
       INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2];
-      "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call swag;
+      "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call OL_network_Swag;
       ', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
       newvehicle setVariable ["vcl_owner", getPlayerUID player, true];
     };
@@ -134,7 +135,7 @@ INV_CreateVehicle = {
       ";
       processInitCommands;
       INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2];
-      "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call swag;
+      "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call OL_network_Swag;
     ', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
     newvehicle setVariable ["vcl_owner", getPlayerUID player, true];
   };
@@ -149,6 +150,64 @@ INV_CreateVehicle = {
   };
   if (_classname in _haloHelis) then {
     newvehicle setVehicleInit 'this addAction ["HALO Jump","jump.sqf",[],1,false,true,"","_this in _target"]'; processInitCommands;
+  };
+  if (_classname == "olrpg_swat_command") then {
+    newvehicle setVehicleInit '
+      this addweaponCargo  ["SWAT",1];
+      this addmagazineCargo ["15Rnd_9x19_M9",8];
+      this addmagazineCargo ["SmokeShell",4];
+      this addmagazineCargo ["RAB_L111A1",4];
+      this addweaponCargo ["M32_EP1",1];
+      this addmagazineCargo ["6Rnd_Smoke_M203",4];
+      this addweaponCargo ["RH_mk14ebrsp",1];
+      this addmagazineCargo ["20Rnd_762x51_DMR",4];
+    '; processInitCommands;
+  };
+  if (_classname == "DD_CHE08Tahoe_P_SWAT") then {
+    newvehicle setVehicleInit '
+      this addweaponCargo  ["SWAT",1];
+      this addmagazineCargo ["15Rnd_9x19_M9",8];
+      this addmagazineCargo ["SmokeShell",4];
+      this addmagazineCargo ["RAB_L111A1",4];
+      this addweaponCargo ["M32_EP1",1];
+      this addmagazineCargo ["6Rnd_Smoke_M203",4];
+      this addweaponCargo ["RH_mk14ebrsp",1];
+      this addmagazineCargo ["20Rnd_762x51_DMR",4];
+    '; processInitCommands;
+  };
+  if (_classname == "olrpg_swat_bearcat") then {
+    newvehicle setVehicleInit '
+      this addweaponCargo  ["SWAT",1];
+      this addmagazineCargo ["15Rnd_9x19_M9",8];
+      this addmagazineCargo ["SmokeShell",4];
+      this addmagazineCargo ["RAB_L111A1",4];
+      this addweaponCargo ["M32_EP1",1];
+      this addmagazineCargo ["6Rnd_Smoke_M203",4];
+      this addweaponCargo [""RH_mk14ebrsp",",1];
+      this addmagazineCargo ["20Rnd_762x51_DMR",4];
+    ';processInitCommands;
+  };
+  if (_classname == "olrpg_swat_f350") then {
+    newvehicle setVehicleInit '
+      this addmagazineCargo ["SmokeShell",4];
+      this addmagazineCargo ["RAB_L111A1",4];
+      this addweaponCargo ["DMR",1];
+      this addmagazineCargo ["20Rnd_762x51_DMR",4];
+      this addweaponCargo ["BAF_LRR_scoped_w",1];
+      this addmagazineCargo ["5Rnd_86x70_L115A1",4];
+    ';processInitCommands;
+  };
+  if (_classname == "DD_CHE15Suburban_U_P_SWAT") then {
+    newvehicle setVehicleInit '
+      this addweaponCargo  ["SWAT",1];
+      this addmagazineCargo ["15Rnd_9x19_M9",8];
+      this addmagazineCargo ["SmokeShell",4];
+      this addmagazineCargo ["RAB_L111A1",4];
+      this addweaponCargo ["M32_EP1",1];
+      this addmagazineCargo ["6Rnd_Smoke_M203",4];
+      this addweaponCargo ["RH_mk14ebrsp",1];
+      this addmagazineCargo ["20Rnd_762x51_DMR",4];
+    '; processInitCommands;
   };
 };
 

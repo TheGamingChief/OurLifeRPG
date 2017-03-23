@@ -1,31 +1,20 @@
 private ["_obj"];
-if ((typeName _this) == "STRING") then
-{
-  if ((isnil(_this)) or (_this == "scalar bool array string 0xe0ffffef") or (_this == "<NULL-Object>") or (_this == "Error: No vehicle")) then
-  {
+if ((typeName _this) == "STRING") then {
+  if ((isnil(_this)) or (_this == "scalar bool array string 0xe0ffffef") or (_this == "<NULL-Object>") or (_this == "Error: No vehicle")) then {
     false
-  }
-  else
-  {
+  } else {
     _obj = call compile format ["%1", _this];
-    if (format ["%1", isplayer _obj] == "true") then
-    {
+
+    if (format ["%1", isPlayer _obj] == "true") then {
       true
-    }
-    else
-    {
+    } else {
       false
     };
   };
-}
-else
-{
-  if (isNull _this) then
-  {
+} else {
+  if (isNull _this) then {
     false
-  }
-  else
-  {
+  } else {
     true
   };
 };

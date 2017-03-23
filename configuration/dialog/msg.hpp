@@ -44,7 +44,7 @@ class MSG
 		{
 			idc=-1;
 			text="Admin Message";
-			onButtonClick = "format['server globalChat ""(ADMIN) %1"";',(ctrlText 5090)] call swag;";
+			onButtonClick = "format['server globalChat ""(ADMIN) %1"";',(ctrlText 5090)] call OL_network_Swag;";
 			x=0.40;
 			y=0.74;
 			w=0.22;
@@ -54,7 +54,7 @@ class MSG
 		{
 			idc=-1;
 			text="Dev Message";
-			onButtonClick = "format['server globalChat ""(DEV) %1"";',(ctrlText 5090)] call swag;";
+			onButtonClick = "format['server globalChat ""(DEV) %1"";',(ctrlText 5090)] call OL_network_Swag;";
 			x=0.40;
 			y=0.60;
 			w=0.22;

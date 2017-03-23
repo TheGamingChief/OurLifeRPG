@@ -152,7 +152,7 @@ class gang_menu
 		h = 0.04;
 
 		text = $STRD_description_gildehauptmenu_button_join;
-		action = "[(lbData [202, (lbCurSel 202)])] call OL_gangs_Join; closeDialog 0;";
+		action = "[0, 0, 0, [""join"", (lbData [202, (lbCurSel 202)])]] execVm ""gangs.sqf""; closedialog 0;";
 	};
 
 	class button_leave : RscButton
@@ -163,7 +163,7 @@ class gang_menu
 		h = 0.04;
 
 		text = $STRD_description_gildehauptmenu_button_leave;
-		action = "[] call OL_gangs_Leave; closeDialog 0;";
+		action = "[0, 0, 0, [""leave""]] execVm ""gangs.sqf""; closedialog 0;";
 	};
 
 	class button_manage : RscButton
@@ -245,8 +245,9 @@ class gilde_gruenden
 		y = 0.47;
 		w = 0.20;
 		h = 0.04;
+
 		text = $STRD_description_gildegruenden_submit;
-		action = "[(ctrlText 1)] call OL_gangs_Create; closeDialog 0;";
+		action = "[0, 0, 0, [""create"", (ctrlText 1)]] execVm ""gangs.sqf""; closedialog 0;";
 	};
 
 	class cancel : RscButton
@@ -497,7 +498,7 @@ class gilde_verwaltung
 		idc = 103;
 
 		text = $STRD_description_gildeverwalten_rauswerfen_submit;
-		action = "[(lbData [102, (lbCurSel 102)])] call OL_gangs_Leave; closeDialog 0;";
+		action = "[0, 0, 0, [""kick"", (lbData [102, (lbCurSel 102)]), (lbCurSel 102)]] execVm ""gangs.sqf""; closedialog 0;";
 	};
 
 	class sperren_liste : RscListBox
@@ -528,8 +529,9 @@ class gilde_verwaltung
 		w = 0.20;
 		h = 0.04;
 		idc = 203;
+
 		text = $STRD_description_gildeverwalten_sperren_submit;
-		action = "[(lbData [201, (lbCurSel 201)])] call OL_gangs_allowJoin; closeDialog 0;";
+		action = "[0,0,0,[""allowjoin"", (lbData [201, (lbCurSel 201)]), (lbCurSel 201)]] execVM ""gangs.sqf""; closedialog 0;";
 	};
 
 	class dummybutton : RscDummy

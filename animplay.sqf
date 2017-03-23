@@ -17,12 +17,12 @@ if (_callScript != "") exitWith {[_animnumber, _animScriptName] execVM _callScri
 
 if (_animart == "anim") then {
 	if (vehicle player == player) then {
-		(format ["%1 switchmove ""%2"";", player, _animname]) call swag;
+		(format ["%1 switchmove ""%2"";", player, _animname]) call OL_network_Swag;
 	};
 } else {
-	(format ["%1 playMoveNow ""%2"";", player, _animname]) call swag;
+	(format ["%1 playMoveNow ""%2"";", player, _animname]) call OL_network_Swag;
 };
 
 if ((_animart == "playMoveNow") && (vehicle player == player)) then {
-	(format ["%1 playMoveNow ""%2"";", player, _animname]) call swag;
+	(format ["%1 playMoveNow ""%2"";", player, _animname]) call OL_network_Swag;
 };

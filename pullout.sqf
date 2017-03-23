@@ -5,7 +5,7 @@ _exitvar = false;
 if (locked _this) then {player groupChat "The car is locked. This might take a while."; _n = 16;};
 			
 player groupChat format ["You're pulling out %1. Stay close to the car!", _target];
-format['if(player == %1)then{player groupChat "%2 is pulling you out of the car!"}', _target, player] call swag;
+format['if(player == %1)then{player groupChat "%2 is pulling you out of the car!"}', _target, player] call OL_network_Swag;
 	
 for [{_i=0}, {_i < _n}, {_i=_i+1}] do {if (player distance _target > 3) exitWith {player groupChat "You are too far away."; _exitvar = true;};sleep 0.3;};
 
@@ -15,6 +15,6 @@ _this lock false;
 
 player switchMove "AmovPercMstpSnonWnonDnon_AcrgPknlMstpSnonWnonDnon_getInLow";
 sleep 0.4;
-format['if(player == %2)then{player action["eject", vehicle player]}; server globalChat "%1 pulled %2 out of a car!";', player, _target] call swag;
+format['if(player == %2)then{player action["eject", vehicle player]}; server globalChat "%1 pulled %2 out of a car!";', player, _target] call OL_network_Swag;
 
 

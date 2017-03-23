@@ -1,7 +1,7 @@
 _this = _this select 3;
 _art  = _this select 0;
 
-/*if(_art == "create") then
+if(_art == "create") then
 
 {
 
@@ -24,13 +24,13 @@ if(_geld < gangcreatecost)exitwith{player groupchat "You don't have enough money
 
 ['geld', -gangcreatecost] call INV_addinventoryitem;
 
-format['gangsarray = gangsarray + [["%1", ["%2"], true]]', _text, _name] call swag;
+format['gangsarray = gangsarray + [["%1", ["%2"], true]]', _text, _name] call OL_network_Swag;
 
 player groupchat format["you have created a new gang called %1!", _text];
 
-};*/
+};
 
-/*if(_art == "join") then
+if(_art == "join") then
 
 {
 
@@ -57,13 +57,13 @@ if(!_canjoin)exitwith{player groupchat "You are not able to join this gang becau
 _members   = _members + [_name];
 _gangarray set[1, _members];
 
-format['gangsarray set[%1, %2]', _id, _gangarray] call swag;
+format['gangsarray set[%1, %2]', _id, _gangarray] call OL_network_Swag;
 
 player groupchat format["you have joined %1!", _gang];
 
-};*/
+};
 
-/*if(_art == "leave") then
+if(_art == "leave") then
 
 {
 
@@ -84,7 +84,7 @@ for "_c" from 0 to (count gangsarray - 1) do
 
 		_members = _members - [_name];
 		_gangarray set[1, _members];
-		format['gangsarray set[%1, %2]', _c, _gangarray] call swag;
+		format['gangsarray set[%1, %2]', _c, _gangarray] call OL_network_Swag;
 		player groupchat "you left your gang!";
 		gangmember=false;
 
@@ -92,9 +92,9 @@ for "_c" from 0 to (count gangsarray - 1) do
 
 	};
 
-};*/
+};
 
-/*if(_art == "kick") then
+if(_art == "kick") then
 
 {
 
@@ -119,7 +119,7 @@ for "_c" from 0 to (count gangsarray - 1) do
 
 		_members = _members - [(name _civ)];
 		_gangarray set[1, _members];
-		format['if(player == %3)then{player groupchat "You have been kicked out of your gang!"; gangmember = false;}; gangsarray set[%1, %2]', _c, _gangarray, _civ] call swag;
+		format['if(player == %3)then{player groupchat "You have been kicked out of your gang!"; gangmember = false;}; gangsarray set[%1, %2]', _c, _gangarray, _civ] call OL_network_Swag;
 
 		};
 
@@ -127,9 +127,9 @@ for "_c" from 0 to (count gangsarray - 1) do
 
 	};
 
-};*/
+};
 
-/*if(_art == "allowjoin") then
+if(_art == "allowjoin") then
 
 {
 
@@ -151,14 +151,14 @@ for "_c" from 0 to (count gangsarray - 1) do
 		{
 
 		_gangarray set[2, _bool];
-		format['gangsarray set[%1, %2]', _c, _gangarray] call swag;
+		format['gangsarray set[%1, %2]', _c, _gangarray] call OL_network_Swag;
 		if(_bool)then{player groupchat "civilians can now join your gang"}else{player groupchat "civilians can no longer join your gang"};
 
 		};
 
 	};
 
-};*/
+};
 
 if(_art == "clientloop") then
 
@@ -185,7 +185,7 @@ for "_c" from 0 to (count gangsarray - 1) do
 
 		_members = _members - [_name];
 		_gangarray set[1, _members];
-		format['gangsarray set[%1, %2]', _c, _gangarray] call swag;
+		format['gangsarray set[%1, %2]', _c, _gangarray] call OL_network_Swag;
 
 		};
 
@@ -266,7 +266,7 @@ while {true} do
 		_gangarray = gangsarray select _c;
 		_members   = _gangarray select 1;
 
-		if(_counter >= gangdeltime and count _members == 0)exitwith{format['gangsarray set[%1, 0]; gangsarray = gangsarray - [0];', _c] call swag};
+		if(_counter >= gangdeltime and count _members == 0)exitwith{format['gangsarray set[%1, 0]; gangsarray = gangsarray - [0];', _c] call OL_network_Swag};
 
 		_lname	   = _members select 0;
 
@@ -276,7 +276,7 @@ while {true} do
 
 			_members = _members - [_lname];
 			_gangarray set[1, _members];
-			format['gangsarray set[%1, %2]', _c, _gangarray] call swag;
+			format['gangsarray set[%1, %2]', _c, _gangarray] call OL_network_Swag;
 
 			};
 

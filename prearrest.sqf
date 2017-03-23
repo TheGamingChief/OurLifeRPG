@@ -20,7 +20,7 @@ if(isNull _target)then
 {
     _cop sideChat "No Civilians restrained Close to Vehicle";
 }else{
-    format['if (player == %1) then {[%2,%1] execVM "ClientArrest.sqf"};',_target,_vcl] call swag;
+    format['if (player == %1) then {[%2,%1] execVM "ClientArrest.sqf"};',_target,_vcl] call OL_network_Swag;
   	detach _target;
   	_target setVariable ["Escorted",false,true];
 };

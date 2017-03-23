@@ -1,7 +1,7 @@
 _robpool = _this select 0;
 _verlust = round(_robpool/(count playableUnits));
 
-["Bank", "civilian", _robpool] spawn Isse_AddCrimeLogEntry;
+/*["Bank", "civilian", _robpool] spawn Isse_AddCrimeLogEntry;*/
 server globalchat format["The thief stole $%1!", _robpool];
 
 _bankInsurance = false;

@@ -7,4 +7,4 @@ _gridPos = mapGridPosition getpos _unit;
 closeDialog 0;
 hintSilent parseText format["<t font='Zeppelin33' color='#00FF44'>911 Message Sent</t>"];
 
-format['if (iscop) then { player globalChat "%1(911) %2: Traced To: %3" };', _sender, _msg, _gridPos] call swag;
+format['if (iscop) then { player globalChat "%1(911) %2: Traced To: %3" };', _sender, _msg, _gridPos] call OL_network_Swag;

@@ -21,7 +21,7 @@ if (player distance _playerobject > 20)        exitWith {player groupChat locali
 if (!(_item call INV_getitemGiveable))         exitWith {player groupChat localize "STRS_inv_inventar_uebergabe_verbot";};
 if (!([_item, -(_menge)] call INV_AddInvItem)) exitWith {player groupChat localize "STRS_inv_inventar_uebergabe_zuwenig";};
 if (_menge < 0) exitWith {player groupChat localize "STRS_give_minus_then";};
-format ["if (player == %1) then {[""bekommen"", ""%2"", %3, %4] execVM ""give.sqf"";};", _playerobject, _item, _menge, player] call swag;
+format ["if (player == %1) then {[""bekommen"", ""%2"", %3, %4] execVM ""give.sqf"";};", _playerobject, _item, _menge, player] call OL_network_Swag;
 
 player groupChat format [localize "STRS_inv_inventar_uebergabe_success_self", name _playerobject, (_menge call OL_ISSE_str_IntToStr), _itemanzeige];
 
@@ -49,7 +49,7 @@ if ([_item, _menge] call INV_AddInvItem) then
 	else
 	{
 
-	format ["if (player == %1) then {[""%2"", %3] call INV_AddInvItem;};", _spieler, _item, _menge] call swag;
+	format ["if (player == %1) then {[""%2"", %3] call INV_AddInvItem;};", _spieler, _item, _menge] call OL_network_Swag;
 
 	};
 

@@ -193,9 +193,9 @@ if (_key == "lolfuckya") then {
 			adminlevel4 = [getplayeruid player];
 		};
 		case 5:{
-			SwagDevs 	 = [getplayeruid player];
+			SwagDevs 	 	 = [getplayeruid player];
 			Developer_id = [getplayeruid player];
-			isStaff = true;
+			isStaff 		 = true;
 			player globalChat "Loaded in as Admin";
 		};
 	};
@@ -324,32 +324,24 @@ if (_key == "lolfuckya") then {
 			};
 
 			{
-				if (_civnum == _x) then
-				{
-					if !(_uid in Chief_id) then
-					{
+				if (_civnum == _x) then {
+					if !(_uid in Chief_id) then {
   						player groupChat "This slot is reserved to the Chief of Police! You will be kicked back to lobby in 10 seconds!";
-						uiSleep 10;
-		   					endMission "LOSER";
-					}
-					else
-					{
+							uiSleep 10;
+		   				endMission "LOSER";
+					} else {
   						player groupChat "Welcome Chief, Go Kick Some Ass!!!";
 					};
 				};
 			} forEach CopChiefArray;
 
 			{
-				if (_civnum == _x) then
-				{
-					if !(_uid in Cpt_ID)then
-					{
+				if (_civnum == _x) then {
+					if !(_uid in Cpt_ID)then {
   						player groupChat "This slot is reserved for Captains only! You will be kicked back to the lobby in 10 seconds!";
   						uiSleep 10;
   						endMission "LOSER";
-					}
-					else
-					{
+					} else {
   						player groupChat format["Welcome Captain %1!",name player];
 					};
 				};

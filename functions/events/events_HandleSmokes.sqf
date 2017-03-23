@@ -24,9 +24,9 @@ while {time < (_timenow + 10) || (!(isnull _bullet))} do {
 	if (count _array > 0) then {
     //You must reconfig this IF when changing the handles.
 		if (_ammotype == "SmokeShell" || _ammotype == "G_40mm_Smoke") then {
-			format["if ((player in %1) && (isciv)) then { [] spawn OL_fnc_TearGassed };", _array] call swag;
+			format["if ((player in %1) && (isciv)) then { [] spawn OL_fnc_TearGassed };", _array] call OL_network_Swag;
 		} else {
-			format["if (player in %1) then { [] spawn OL_fnc_FlashBanged };", _array] call swag;
+			format["if (player in %1) then { [] spawn OL_fnc_FlashBanged };", _array] call OL_network_Swag;
 		};
 		_arrayDone = _arrayDone + _array;
 	};

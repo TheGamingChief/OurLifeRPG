@@ -17,7 +17,7 @@ enableSaving [false, false];
 /************************ Init Mission Addons ************************/
 
 [] execVM "addons\proving_Ground\init.sqf";
-//[] execVM "addons\btk\Cargo Drop\init.sqf";
+[] execVM "addons\btk\Cargo Drop\init.sqf";
 
 /************************ Graphical Settings *************************/
 

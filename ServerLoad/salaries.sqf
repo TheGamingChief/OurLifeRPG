@@ -220,7 +220,7 @@ if (isamedic) then {
 
 			{
 
-			(format["if (isMayor) then {MayorSteuern = MayorSteuern + %1;};", INV_SteuernGezahlt]) call swag;
+			(format["if (isMayor) then {MayorSteuern = MayorSteuern + %1;};", INV_SteuernGezahlt]) call OL_network_Swag;
 
 			};
 

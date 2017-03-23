@@ -27,26 +27,142 @@ OL_SpawnPoints =  [
 ];
 
 OL_ATM_Clothes = [
-	[atmjail,						[["olrpg_corcmduni","Corrections_ID"],["olrpg_corsupuni","Corrections_ID"],["olrpg_corcuni","Corrections_ID"]]],
-	[copswatbank,				[["olrpg_swatcom","SWAT_ID"],["olrpg_swatspec","SWAT_ID"],["olrpg_swatmark","SWAT_ID"],["olrpg_swatnor","SWAT_ID"],["olrpg_swatprob","SWAT_ID"]]],
-	[copcmdbank,				[["olrpg_chiefsuni","Chief_ID"],["olrpg_astchiefsuni","Chief_ID"],["olrpg_pdcptvest","Cpt_ID"],["olrpg_pdltvest","Lt_ID"]]],
-	[copsgtbank,				[["olrpg_sgtuni","Sgt_ID"],["olrpg_cpluni","Cpl_ID"]]],
-	[copbank,						[["olrpg_snruni","PO3_id"],["olrpg_patuni","[getPlayerUID player]"]]],
-	[IRAatm,						[["olrpg_snrftouni","FTO_ID"],["olrpg_ftouni","FTO_ID"]]],
-	[cidbank,						[["olrpg_pdcid","Undercover_ID"],["olrpg_iauni","Undercover_ID"],["olrpg_pdcidc","Undercover_ID"]]],
-	[copdispatchbank, 	[["olrpg_k9com","K9_ID"],["olrpg_k9nor","K9_ID"]]],
-	[copairbank, 				[["olrpg_pdpilotcom","PDAviation_ID"],["olrpg_oppilot","PDAviation_ID"],["olrpg_pdpilot","PDAviation_ID"]]],
-	[copsheriffbank,		[["olrpg_cptdepuni","Sheriff_id"],["olrpg_ltdepuni","Sheriff_id"],["olrpg_sgtdepuni2","SgtDeputy_id"],["olrpg_corpdepuni","Deputy_id"],["olrpg_snrpdepuni","Deputy_id"],["olrpg_depuni","Deputy_id"],["olrpg_depk9uni","K9_id"],["olrpg_dnrdepuni","Deputy_id"]]],
-	[copair2,						[["olrpg_sdpilot","PDAviation_id"]]],
-	[copcoastguardbank,	[["olrpg_sdpilot","Deputy_id"]]],
+	[atmjail,
+		[
+			["olrpg_corcmduni",	"Corrections_ID", "Corrections Command Uniform"],
+			["olrpg_corsupuni",	"Corrections_ID", "Corrections Supervisor Uniform"],
+			["olrpg_corcuni",		"Corrections_ID", "Corrections Uniform"]
+		]
+	],
+	[copswatbank,
+		[
+			["olrpg_swatcom",		"SWAT_ID", "S.W.A.T. Command Uniform"],
+			["olrpg_swatspec",	"SWAT_ID", "S.W.A.T. Specialist Uniform"],
+			["olrpg_swatmark",	"SWAT_ID", "S.W.A.T. Marksman Uniform"],
+			["olrpg_swatnor",		"SWAT_ID", "S.W.A.T. Operator Uniform"],
+			["olrpg_swatprob",	"SWAT_ID", "S.W.A.T. Probationary Uniform"]
+		]
+	],
+	[copcmdbank,
+		[
+			["olrpg_chiefsuni",		 "Chief_ID", "Chief Of Police Uniform"],
+			["olrpg_astchiefsuni", "Chief_ID", "Assistant Chief Uniform"],
+			["olrpg_pdcptvest",		 "Cpt_ID",	 "Captain Uniform"],
+			["olrpg_pdltvest",		 "Lt_ID",		 "Lieutenant Uniform"]
+		]
+	],
+	[copsgtbank,
+		[
+			["olrpg_sgtuni", "Sgt_ID", "Sergeant Uniform"],
+			["olrpg_cpluni", "Cpl_ID", "Corporal Uniform"]
+		]
+	],
+	[copbank,
+		[
+			["olrpg_snruni", "PO3_id",								"Senior Patrol Officer Uniform"],
+			["olrpg_patuni", "[getPlayerUID player]", "Patrol Officer Uniform"]
+		]
+	],
+	[IRAatm,
+		[
+			["olrpg_snrftouni",	"FTO_ID", "Senior FTO Uniform"],
+			["olrpg_ftouni",		"FTO_ID", "FTO Uniform"]
+		]
+	],
+	[cidbank,
+		[
+			["olrpg_pdcid",	 "Undercover_ID", "CID Command Uniform"],
+			["olrpg_iauni",	 "Undercover_ID", "Internal Affairs Uniform"],
+			["olrpg_pdcidc", "Undercover_ID", "CID Uniform"]
+		]
+	],
+	[copdispatchbank,
+		[
+			["olrpg_k9com", "K9_ID", "K9 Command Uniform"],
+			["olrpg_k9nor", "K9_ID", "K9 Uniform"]
+		]
+	],
+	[copairbank,
+		[
+			["olrpg_pdpilotcom", "PDAviation_ID", "Aviation Command Uniform"],
+			["olrpg_oppilot",		 "PDAviation_ID", "OP Pilot Uniform"],
+			["olrpg_pdpilot",		 "PDAviation_ID", "Aviation Pilot Uniform"]
+		]
+	],
+	[copsheriffbank,
+		[
+			["olrpg_cptdepuni",	 "Sheriff_id", 	 "Captain Deputy Uniform"],
+			["olrpg_ltdepuni",	 "Sheriff_id", 	 "Lieutenant Deputy Uniform"],
+			["olrpg_sgtdepuni2", "SgtDeputy_id", "Sergeant Deputy Uniform"],
+			["olrpg_corpdepuni", "Deputy_id",		 "Corporal Deputy Uniform"],
+			["olrpg_snrpdepuni", "Deputy_id",		 "Senior Deputy Uniform"],
+			["olrpg_depuni",		 "Deputy_id",		 "Deputy Uniform"],
+			["olrpg_depk9uni",	 "K9_id",				 "Deputy K9 Uniform"],
+			["olrpg_dnrdepuni",	 "Deputy_id",		 "DNR Uniform"]
+		]
+	],
+	[copair2,
+		[
+			["olrpg_sdpilot", "PDAviation_id", "Deputy Pilot Uniform"]
+		]
+	],
+	[copcoastguardbank,
+		[
+			["olrpg_sdpilot", "Deputy_id", "Deputy Pilot Uniform"]
+		]
+	],
 
-	[atm5,							[["KPFS_THW_Press","EMT1_id"],["yup_uscg_Pilot","EMT1_id"],["a2l_firefighter1","EMT3_id"],["a2l_firefighter","EMT3_id"],["hazmatRed","EMT3_id"],["hazmatYellow","EMT3_id"],["olrpg_firemarshal","EMT1_id"]]],
-	[atmsubfire,				[["KPFS_THW_Press","EMT1_id"],["yup_uscg_Pilot","EMT1_id"],["a2l_firefighter1","EMT3_id"],["a2l_firefighter","EMT3_id"],["hazmatRed","EMT3_id"],["hazmatYellow","EMT3_id"],["olrpg_firemarshal","EMT1_id"]]],
+	[atm5,
+		[
+			["KPFS_THW_Press",		"EMT1_id", "Paramedic Uniform"],
+			["yup_uscg_Pilot",		"EMT1_id", "Aviation Pilot Uniform"],
+			["a2l_firefighter1",	"EMT3_id", "Turn Out Uniform"],
+			["a2l_firefighter",		"EMT3_id", "Turn Out SCBA Uniform"],
+			["hazmatRed",					"EMT3_id", "Hazmat Red Unifrom"],
+			["hazmatYellow", 			"EMT3_id", "Hazmat Yellow Unifrom"],
+			["olrpg_firemarshal", "EMT1_id", "Fire Marshal Uniform"]
+		]
+	],
+	[atmsubfire,
+		[
+			["KPFS_THW_Press",		"EMT1_id", "Paramedic Uniform"],
+			["yup_uscg_Pilot",		"EMT1_id", "Aviation Pilot Uniform"],
+			["a2l_firefighter1",	"EMT3_id", "Turn Out Uniform"],
+			["a2l_firefighter",		"EMT3_id", "Turn Out SCBA Uniform"],
+			["hazmatRed",					"EMT3_id", "Hazmat Red Unifrom"],
+			["hazmatYellow", 			"EMT3_id", "Hazmat Yellow Unifrom"],
+			["olrpg_firemarshal", "EMT1_id", "Fire Marshal Uniform"]
+		]
+	],
 
-	[towatm,						[["Flyers_Supervisor_Vest","Tow_id"],["Flyers_Supervisor","Tow_id"],["Flyers_Mechanic_Vest","Tow_id"],["Flyers_Mechanic","Tow_id"]]],
-	[atmuc,							[["Functionary1","Undercover_id"],["ibr_lingorman2","Undercover_id"],["sah_civilian5_shorts","Undercover_id"],["Rocker1","Undercover_id"],["TK_CIV_Takistani04_EP1","Undercover_id"]]],
-
-	[pmcbank,						[["FR_Commander","CommandPMC_id","General"],["FR_TL","CommandPMC_id","Commander"],["FR_AR","CommandPMC_id","Lieutenant"],["FR_Sapper","PMC_id","Corporal"],["FR_Assault_R","PMC_id","Private"],["FR_Marksman","PMC_id","Marksman"],["USMC_Soldier_Light","PMC_id","Pilot"]]]
+	[towatm,
+		[
+			["Flyers_Supervisor_Vest", "Tow_id", "Supervisor w/ Vest Uniform"],
+			["Flyers_Supervisor",			 "Tow_id", "Supervisor Uniform"],
+			["Flyers_Mechanic_Vest",	 "Tow_id", "Mechanic w/ Vest Uniform"],
+			["Flyers_Mechanic",				 "Tow_id", "Mechanic Uniform"]
+		]
+	],
+	[atmuc,
+		[
+			["Functionary1",					 "Undercover_id", "Black Suit (Uniform)"],
+			["ibr_lingorman2",				 "Undercover_id", "Camo Pants (Uniform)"],
+			["sah_civilian5_shorts",	 "Undercover_id", "Shorts (Uniform)"],
+			["Rocker1",								 "Undercover_id", "Rocker (Uniform)"],
+			["TK_CIV_Takistani04_EP1", "Undercover_id", "Turban (Uniform)"]
+		]
+	],
+	[pmcbank,
+		[
+			["FR_Commander",			 "CommandPMC_id",	"General Uniform"],
+			["FR_TL",							 "CommandPMC_id",	"Commander Uniform"],
+			["FR_AR",							 "CommandPMC_id",	"Lieutenant Uniform"],
+			["FR_Sapper",					 "PMC_id",				"Corporal Uniform"],
+			["FR_Assault_R",			 "PMC_id",				"Private Uniform"],
+			["FR_Marksman",				 "PMC_id",				"Marksman Uniform"],
+			["USMC_Soldier_Light", "PMC_id",				"Pilot Uniform"]
+		]
+	]
 ];
 
 {

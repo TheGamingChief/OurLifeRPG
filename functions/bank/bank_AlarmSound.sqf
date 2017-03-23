@@ -2,4 +2,4 @@
   copbase1 say3D "Bank_alarm";
   copsheriffbank say3D "Bank_alarm";
   if (iscop) then { playsound "beep" };
-' call swag;
+' call OL_network_Swag;

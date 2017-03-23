@@ -48,12 +48,12 @@ if (_art == "schluessel") then
  {
 
 
-   format ["%1 lock true;", _vcl] call swag;
+   format ["%1 lock true;", _vcl] call OL_network_Swag;
    player groupChat localize "STRS_inv_items_vehiclelock_locked";
  } else {
 
 
-   format ["%1 lock false;", _vcl] call swag;
+   format ["%1 lock false;", _vcl] call OL_network_Swag;
    player groupChat localize "STRS_inv_items_vehiclelock_unlocked";
  };
 
@@ -93,7 +93,7 @@ if (player distance _playerobject > 20) exitWith {player groupChat localize "STR
 INV_VehicleArray = INV_VehicleArray + [%2];
  player groupChat localize ""STRS_inv_items_uebergabe_schluessel_success""};
 
-", _spieler, _vcl] call swag;
+", _spieler, _vcl] call OL_network_Swag;
  //INV_VehicleArray = INV_VehicleArray - [_vcl];
   player groupChat localize "STRS_inv_items_uebergabe_schluessel_success_self";
 };

@@ -1,3 +1,3 @@
-if (isserver) then {
+if (isServer) then {
   DD_Cloud = [];
 };

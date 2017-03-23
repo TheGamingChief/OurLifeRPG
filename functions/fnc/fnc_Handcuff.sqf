@@ -10,7 +10,7 @@ if (animationstate civmenuciv == "actspercmstpsnonwrfldnon_interrogate02_forgote
   civmenuciv setVariable ["Gagged",false,true];
 
   if (player getVariable "Gagged") then {
-	   format['if (rolestring == "%1") then {systemChat "Your Gag has been removed!";}', civmenuciv] call swag;
+	   format['if (rolestring == "%1") then {systemChat "Your Gag has been removed!";}', civmenuciv] call OL_network_Swag;
   };
 
   [civmenuciv,"restrain",30] call CBA_fnc_globalSay3d;
@@ -21,7 +21,7 @@ if (animationstate civmenuciv == "actspercmstpsnonwrfldnon_interrogate02_forgote
   if (rolestring == "%1") then {
     isstunned = false;
     StunActiveTime = 0;
-  }', civmenuciv, "Normal"] call swag;
+  }', civmenuciv, "Normal"] call OL_network_Swag;
 };
 
 if ("HandCuffs" call INV_GetItemAmount == 0) exitwith {systemChat "You don't have any HandCuffs on you!"};
@@ -30,7 +30,7 @@ if ("HandCuffs" call INV_GetItemAmount > 0) then {
   ["HandCuffs", -1] call INV_AddInvItem;
   [civmenuciv,"restrain",30] call CBA_fnc_globalSay3d;
   hintSilent parseText format ["<t size='1.25' font='Zeppelin33' color='#D80C0C'>%1 Cuffed</t>", civmenuciv];
-  (format ['if (rolestring == "%1") then {isstunned=true;}', civmenuciv]) call swag;
+  (format ['if (rolestring == "%1") then {isstunned=true;}', civmenuciv]) call OL_network_Swag;
   civmenuciv setVariable ["tf_unable_to_use_radio", true, true];
   civmenuciv setVariable ["Cuffed",true,true];
   ["HandCuff_Log", format ["%1 (%2) was handcuffed by %3 (%4)", name civmenuciv, getPlayerUID civmenuciv, name player, getPlayerUID player]] call RM_fnc_LogToServer;
@@ -39,5 +39,5 @@ if ("HandCuffs" call INV_GetItemAmount > 0) then {
   if (player == %1) then {
     isstunned = true;
     [] spawn OL_events_isHandCuffed;
-  };', civmenuciv, "actspercmstpsnonwrfldnon_interrogate02_forgoten"] call swag;
+  };', civmenuciv, "actspercmstpsnonwrfldnon_interrogate02_forgoten"] call OL_network_Swag;
 };

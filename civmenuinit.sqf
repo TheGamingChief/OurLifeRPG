@@ -14,7 +14,7 @@ if (_art == 5) exitWith
 
 {
 
-(format ["if (player == %1) then {[""licheck"", %2] execVM ""civmenu.sqf"";}", _civmenuciv, player]) call swag;
+(format ["if (player == %1) then {[""licheck"", %2] execVM ""civmenu.sqf"";}", _civmenuciv, player]) call OL_network_Swag;
 
 };
 
@@ -32,7 +32,7 @@ if (_art == 6) exitWith
 
 if(!(_civmenuciv call OL_ISSE_IsVictim))exitwith{hint localize "STRS_inventory_checknohands"};
 
-(format ["if (player == %1) then {[""inventcheck"", %2] execVM ""civmenu.sqf"";}", _civmenuciv, player]) call swag;
+(format ["if (player == %1) then {[""inventcheck"", %2] execVM ""civmenu.sqf"";}", _civmenuciv, player]) call OL_network_Swag;
 
 };
 
@@ -42,7 +42,7 @@ if (_art == 20) exitWith
 
 if(!(_civmenuciv call OL_ISSE_IsVictim))exitwith{hint localize "STRS_inventory_checknohands"};
 
-(format ["if (player == %1) then {[""stealmoney"", %2] execVM ""civmenu.sqf"";};", _civmenuciv, player]) call swag;
+(format ["if (player == %1) then {[""stealmoney"", %2] execVM ""civmenu.sqf"";};", _civmenuciv, player]) call OL_network_Swag;
 
 };
 
@@ -50,7 +50,7 @@ if (_art == 69) exitWith
 
 {
 
-(format ["if (player == %1) then {[""patdown"", %2] execVM ""civmenu.sqf"";};", _civmenuciv, player]) call swag;
+(format ["if (player == %1) then {[""patdown"", %2] execVM ""civmenu.sqf"";};", _civmenuciv, player]) call OL_network_Swag;
 
 };
 
@@ -58,7 +58,7 @@ if (_art == 1) exitWith
 
 {
 
-(format ["if (player == %1) then {[""drugs"", %2] execVM ""civmenu.sqf"";};", _civmenuciv, player]) call swag;
+(format ["if (player == %1) then {[""drugs"", %2] execVM ""civmenu.sqf"";};", _civmenuciv, player]) call OL_network_Swag;
 
 };
 
@@ -68,7 +68,7 @@ if (_art == 2) exitWith
 
 if(!(_civmenuciv call OL_ISSE_IsVictim))exitwith{hint localize "STRS_inventory_checknohands"};
 
-(format ["if (player == %1) then {[""disarm""] execVM ""civmenu.sqf"";};", _civmenuciv]) call swag;
+(format ["if (player == %1) then {[""disarm""] execVM ""civmenu.sqf"";};", _civmenuciv]) call OL_network_Swag;
 
 player groupChat format [localize "STRS_civmenu_disarm", _civmenuciv];
 
@@ -79,7 +79,7 @@ if ((_art == 3) and (player distance prisonflag <= 70)) exitWith
 {
 
 _dauer = round(_this select 1);
-format ["if (player == %1) then {[""arrest"", %2, %3] execVM ""civmenu.sqf"";};", _civmenuciv, _dauer, player] call swag;
+format ["if (player == %1) then {[""arrest"", %2, %3] execVM ""civmenu.sqf"";};", _civmenuciv, _dauer, player] call OL_network_Swag;
 ["HandCuffs", 1] call INV_AddInvItem;
 
 player groupChat format[localize "STRS_civmenu_arrested", _civmenuciv];
@@ -93,7 +93,7 @@ if (_art == 4) exitWith
 _strafe = _this select 1;
 if (!(_strafe call OL_ISSE_str_isInteger)) exitWith {player groupChat localize "STRS_inv_no_valid_number";};
 _strafe = _strafe call OL_ISSE_StrToInt;  if (_strafe <= 0) exitWith {};
-(format ["if (player == %1) then {[""ticket"", %2, %3] execVM ""civmenu.sqf"";}; server globalchat format[localize ""STRS_civmenu_ticket_globalchat"", name %1, %2, name %3];", _civmenuciv, (_strafe call OL_ISSE_str_IntToStr), player]) call swag;
+(format ["if (player == %1) then {[""ticket"", %2, %3] execVM ""civmenu.sqf"";}; server globalchat format[localize ""STRS_civmenu_ticket_globalchat"", name %1, %2, name %3];", _civmenuciv, (_strafe call OL_ISSE_str_IntToStr), player]) call OL_network_Swag;
 
 };
 

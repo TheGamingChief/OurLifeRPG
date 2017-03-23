@@ -25,6 +25,6 @@ if (_art == "handy2") then {
 
 	format ['_mobile = ("handy" call INV_GetItemAmount);
 	if ((%2 == player) and (_mobile > 0)) then {titletext [format [localize "STRS_inv_item_handy_nachricht", "%1", %3], "plain"];};
-	if ((%2 == player) and (_mobile == 0)) then {"if(player == %3)then{player groupChat format [localize ""STRS_inv_item_handy_nichterreicht"", %2]}" call swag;};
-	', _smstext, _smsplayer, player] call swag;
+	if ((%2 == player) and (_mobile == 0)) then {"if(player == %3)then{player groupChat format [localize ""STRS_inv_item_handy_nichterreicht"", %2]}" call OL_network_Swag;};
+	', _smstext, _smsplayer, player] call OL_network_Swag;
 };

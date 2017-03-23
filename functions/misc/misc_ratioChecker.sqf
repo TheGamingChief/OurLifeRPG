@@ -1,6 +1,6 @@
-_cops = { _x in coparray && !(isNull _x) } count playerarray;
-_ems  = { _x in medicarray && !(isNull _x) } count playerarray;
-_civs = { _x in civarray && !(isNull _x) } count playerarray;
+_cops = west countSide playableUnits;
+_ems  = resistance countSide playableUnits;
+_civs = civilian countSide playableUnits;
 _str  = "<t color='#FFFFFF' size='1.75'>Ratio Checker!</t><br/><br/>";
 
 if (iscop) exitWith {

@@ -5,4 +5,4 @@ _sender = name player;
 closeDialog 0;
 hintSilent parseText format["<t font='Zeppelin33' color='#00FF44'>311 Message Sent</t>"];
 
-format['player globalChat "%1(311) %2"',_sender,_msg] call swag;
+format['player globalChat "%1(311) %2"',_sender,_msg] call OL_network_Swag;

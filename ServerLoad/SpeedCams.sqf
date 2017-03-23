@@ -29,7 +29,7 @@ _type   = typeof _car;
 
 		sleep 2;
 
-		//(format['if(!%3) then {server globalchat "Someone was photographed at %4 driving without a license!";', player, _license, (_license call INV_HasLicense), _x]) call swag; 
+		//(format['if(!%3) then {server globalchat "Someone was photographed at %4 driving without a license!";', player, _license, (_license call INV_HasLicense), _x]) call OL_network_Swag; 
 		if(demerits == 0)exitwith{};
 
 		demerits = demerits - _penalty;
@@ -37,7 +37,7 @@ _type   = typeof _car;
 
 		player groupchat format["Demerit points lost: %1. Demerit points remaining: %2", _penalty, demerits];
 
-		(format['if(%3 == 0) then {server globalchat "%1 has lost his %2 license!";if(player == %1)then{INV_LizenzOwner = INV_LizenzOwner - ["%2"];};}', player, _license, demerits]) call swag; 
+		(format['if(%3 == 0) then {server globalchat "%1 has lost his %2 license!";if(player == %1)then{INV_LizenzOwner = INV_LizenzOwner - ["%2"];};}', player, _license, demerits]) call OL_network_Swag; 
 
 		}; 
 

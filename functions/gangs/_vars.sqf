@@ -1,11 +1,3 @@
-OL_GangCost             = 125000;
-OL_BlacklistedGangNames = [
-  "NIGGER",
-  "COPS",
-  "COP",
-  "UNDERCOVER",
-  "CUNT",
-  "NONE"
-];
+OL_GangCost = 125000;
 
 player setVariable ["OL_Gang", "None", true];

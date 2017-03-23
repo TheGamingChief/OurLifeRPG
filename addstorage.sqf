@@ -248,7 +248,7 @@ if (_packed) then
 
 	{
 
-	format ["%1 playmove ""AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"";", player] call swag;
+	format ["%1 playmove ""AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"";", player] call OL_network_Swag;
 
 	};
 

@@ -2,7 +2,7 @@
 //Editied by CP3088
 //@CP'sDevs: "IF YOU DONT FUCKING KEEP THIS FORMAT I WILL SLIT YOUR THROAT"
 
-INV_Lizenzen = 
+INV_Lizenzen =
 [
   ["RLRPG_Clothing_license", [atmmall, rlrpgclothingshop_1, rlrpgclothingshop_2],      "Our Life RPG Clothing License",150000],
   ["hunting_license",        [atmswag],                                                "Hunting license",20000],
@@ -11,9 +11,9 @@ INV_Lizenzen =
   ["sub",                    [atmswag],                                                "Submachine Gun license",100000],
   ["rifle",                  [atmswag, specbox],                                       "Rifle license",150000],
   ["mayorlic",               [dmv],                                                    "Governors license",1000],
-  ["boat",                   [dmv, atm10, atm1],                                       localize "STRS_license_boat",1500],
+  ["boat",                   [dmv, atm10, atm1],                                       "Boat License",1500],
   ["fboat",                  [dmv, atm1],                                              "Ferry Captain License",2500],
-  ["air",                    [atm1, airshop, pmcbank],                                 localize "STRS_license_air",35000],
+  ["air",                    [atm1, airshop, pmcbank],                                 "Pilots License",35000],
   ["comair",                 [atm1, airshop3],                                         "Commerical Air License",100000],
   ["viptl",                  [atm1, terrorvip],                                        "Terror VIP License",800000],
   ["esul",                   [atm5, atmsubfire],                                       "Untrained License",100],
@@ -24,9 +24,9 @@ INV_Lizenzen =
   ["esul5",                  [atm5, atmsubfire],                                       "EMT Air License",100],
   ["esul6",                  [atm5, atmsubfire],                                       "ESU Command  License",100],
   ["bus_license",            [truckshop],                                              "Bus License",1000],
-  ["truck",                  [truckshop],                                              localize "STRS_license_truck",5000],
+  ["truck",                  [truckshop],                                              "Truck License",5000],
   ["taxi",                   [taxishop],                                               "Taxi License",5000],
-  ["car",                    [dmv, specbox, atm1, atm10],                              localize "STRS_license_car",2500],
+  ["car",                    [dmv, specbox, atm1, atm10],                              "Drivers License",2500],
   ["oil",                    [Oil_1],                                                  "Oil processor's license",10000],
   ["Baker",                  [Bakery],                                                 "Baker's license",10000],
   ["cocaine ga1",            [gangarea1],                                              "West Cocaine Drug processor's license",50000],

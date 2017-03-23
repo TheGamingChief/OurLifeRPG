@@ -26,8 +26,8 @@ if (isCrackingSafe == 0) then
 			player sideChat "Speedys Security INC Has Detected You Trying To Crack The Safe";
 			[] call OL_bank_AlarmSound;
 
-			('if(iscop) then {playsound "beep";}') call swag;
-			format ['server globalchat "Speedys Security INC Has Detected An Attempt To Hack Into The Bank Safe";'] call swag;
+			('if(iscop) then {playsound "beep";}') call OL_network_Swag;
+			format ['server globalchat "Speedys Security INC Has Detected An Attempt To Hack Into The Bank Safe";'] call OL_network_Swag;
 
 			safeCrackFailed = 0;
 		};

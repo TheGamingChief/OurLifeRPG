@@ -31,7 +31,11 @@ fnc_UpdatePlayerArray = {
 
 [] call fnc_UpdatePlayerArray;
 
-rolenumber = (playerarray find player) + 1;
+if (isServer) then {
+	rolenumber = 0;
+} else {
+	rolenumber = (playerarray find player) + 1;
+};
 
 role = player;
 rolestring_ucase = toUpper str player;

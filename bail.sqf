@@ -22,7 +22,7 @@ if (_geld > _bail) exitwith {
     };
 
     titletext [format[localize ""STRS_bail_payed"",%3, %1], ""plain""];
-  ", (_bail call OL_ISSE_str_IntToStr), (_copbail call OL_ISSE_str_IntToStr), rolenumber] call swag;
+  ", (_bail call OL_ISSE_str_IntToStr), (_copbail call OL_ISSE_str_IntToStr), rolenumber] call OL_network_Swag;
 
   jail_time = jail_time - round(_bail / jail_multiplier);
 };
@@ -38,7 +38,7 @@ if (kontostand > _bail) exitWith {
     };
 
     titletext [format[localize ""STRS_bail_payed"",%3, %1], ""plain""];
-  ", (_bail call OL_ISSE_str_IntToStr), (_copbail call OL_ISSE_str_IntToStr), rolenumber, player] call swag;
+  ", (_bail call OL_ISSE_str_IntToStr), (_copbail call OL_ISSE_str_IntToStr), rolenumber, player] call OL_network_Swag;
 
   jail_time = jail_time - round(_bail / jail_multiplier);
 };

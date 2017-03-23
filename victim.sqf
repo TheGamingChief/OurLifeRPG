@@ -17,19 +17,25 @@ if (_killer call OL_ISSE_UnitExists) then {
 
 			{
 				if ((speed _x > 10) && (!(isNull(driver _x)))) then {
-					_killer		 = driver _x;
+					_killer		 			 = driver _x;
 					_killedByVehicle = true;
 					_vehicle         = typeof _x;
 					_infos           = _vehicle call INV_getitemArray;
-					_killerlicense    = (_infos select 4) select 1;
+					_killerlicense   = (_infos select 4) select 1;
 					_killerstring 	 = format["%1", _killer];
 				};
 			} forEach _nearVehicles;
 		};
 
-	(format ["
-	if(%7 and !%5)then{server globalChat ""%3 was killed by %4""};
-	if (%5) then {server globalChat ""%4 killed %3 with a vehicle. Intentionally running over another player with out reason is against server rules"";};
-	if(player == %8) then {[%1, %5] execVM ""killer.sqf""};
-	", player,  _killer, name player, name _killer, _killedByVehicle, _killerLicense, _murdered, _killerstring]) call swag;
+	format ["
+		if (%7 and !%5) then {
+			server globalChat ""%3 was killed by %4""
+		};
+		if (%5) then {
+			server globalChat ""%4 killed %3 with a vehicle. Intentionally running over another player with out reason is against server rules""
+		};
+		if (player == %8) then {
+			[%1, %5] execVM ""killer.sqf""
+		};
+	", player, _killer, name player, name _killer, _killedByVehicle, _killerLicense, _murdered, _killerstring] call OL_network_Swag;
 };

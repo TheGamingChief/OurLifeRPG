@@ -6,7 +6,7 @@ if (_art == "use") then
 
 _item   = _this select 1;
 _anzahl = _this select 2;
-"hint localize ""STRS_inv_item_selbstmordbombe_globalmsg"";" call swag;
+"hint localize ""STRS_inv_item_selbstmordbombe_globalmsg"";" call OL_network_Swag;
 
 for [{_i=5}, {_i >= 0}, {_i=_i-1}] do 
 

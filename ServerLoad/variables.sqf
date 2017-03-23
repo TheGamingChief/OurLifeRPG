@@ -11,7 +11,7 @@ add_workplace		        = 1000;
 copchoprespawntime      = 120;
 CopWaffenAvailable      = 0;
 CopIsInPrison           = false;
-CopInPrisonTime         = 0;
+CopInPrisonTime         = 300;
 shooting_self           = 0;
 srHinbewegen            = 0;
 isstunned               = false;
@@ -122,7 +122,6 @@ pmissionactive1 = false;
 patrolwaittime1 = false;
 patrolmoneyperkm1 = 5.0;  // 1 would be equal to $3,000 for 1KM
 pitavailable = true;
-AM_temp_carrying = false;
 //=========government convoy=============
 govconvoybonus 		 = 45000;
 govconvoythiefbonus	 = 45000;
@@ -203,7 +202,7 @@ RadioTextArt_2 = "direct";
 RadioTextArt_3 = "direct";
 RadioTextArt_4 = "direct";
 
-if (isciv) then {
+if (isciv && !isServer) then {
 	call compile format['
 		%1_mayor = 0;
 		%1_reason = [];
@@ -310,4 +309,4 @@ civclassarray =
 "Dixon_PMC"
 ];
 civslavearray = ["Worker1","Worker2","Worker3","Worker4"];
-civworkerarray = ["Hooker1","Hooker2","Hooker3","Hooker4","RU_Hooker1","RU_Hooker2","RU_Hooker3","RU_Hooker4"];
+civworkerarray = ["Hooker1","Hooker2","Hooker3","RU_Hooker1","RU_Hooker2","RU_Hooker3","RU_Hooker4"];

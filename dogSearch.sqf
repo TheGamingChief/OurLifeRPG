@@ -8,7 +8,7 @@ If (_dog distance _target <= 4) Then
 _dog doMove getPos _target;		
 player groupchat format ["Checking %1 for Drugs", _target];
 drugsvalue = 0;	
-(format ["if (player == %1) then {[""drugs"", %2] execVM ""civmenu.sqf"";};", _target, player]) call swag;								
+(format ["if (player == %1) then {[""drugs"", %2] execVM ""civmenu.sqf"";};", _target, player]) call OL_network_Swag;								
 
 }
 

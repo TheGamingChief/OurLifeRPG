@@ -1,7 +1,7 @@
 private["_str", "_search", "_pos", "_found", "_i", "_j"];
 
-_str    = (_this select 0) call OL_OL_ISSE_str_StrToArr;
-_search = (_this select 1) call OL_OL_ISSE_str_StrToArr;
+_str    = (_this select 0) call OL_ISSE_str_StrToArr;
+_search = (_this select 1) call OL_ISSE_str_StrToArr;
 _found  = true;
 _pos    = -1;
 

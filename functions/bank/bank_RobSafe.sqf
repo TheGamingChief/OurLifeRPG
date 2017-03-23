@@ -12,7 +12,7 @@ if (alive player) then {
 	player groupChat format["You successfully robbed the Bank for %1. Escape before the cops show up!", robpoolsafe1];
 };
 
-format['[%1] call OL_bank_BankRobbed', robpoolsafe1] call swag;
+format['[%1] call OL_bank_BankRobbed', robpoolsafe1] call OL_network_Swag;
 
 robpoolsafe1 = 0;
 publicvariable "robpoolsafe1";
@@ -20,6 +20,6 @@ publicvariable "robpoolsafe1";
 'if ((isciv) and (player distance mainbank < 50)) then {
 	local_useBankPossible = false;
 	["local_useBankPossible", true, 300, [false, false]] call CP_fnc_VarQueueAdd;
-};' call swag;
+};' call OL_network_Swag;
 
 ["local_robBankPossible", true, 300, [false, false]] call CP_fnc_VarQueueAdd;

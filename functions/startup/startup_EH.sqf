@@ -17,7 +17,6 @@ player addEventHandler ["handleDamage", { _this call compile preprocessfile "set
   switch (_this select 0) do {
     case (format["%1_Warrants", getPlayerUID player]): {
         player setVariable ["PlayerWarrants", _this select 1, true];
-        player groupChat "I ran it!";
     };
     default {
         call compile format["%1 = %2", _this select 0, _this select 1];

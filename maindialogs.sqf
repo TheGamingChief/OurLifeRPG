@@ -90,7 +90,9 @@ if (!(createDialog "liste_1_button")) exitWith {hint "Dialog Error!";};
 	lbAdd [1, "Island Bank Funds:"];
 	lbAdd [1, (format ["Est. total funds in the main bank safe: $%1", robpoolsafe1])];
 };
-if (_art == "gangsswag") exitWith {
+
+if (_art == "gangsswag") then
+{
 if (!(createDialog "liste_1_button")) exitWith {hint "Dialog Error!";};
 	lbAdd [1, _trennlinie];
 	lbAdd [1, "GANGS:"];

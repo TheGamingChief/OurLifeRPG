@@ -29,8 +29,8 @@ if (pselect5 != "exit") then
 			_x attachTo [vehicle player, [2, 2, 0]];
 			sleep 0.25;
 			detach _x;
-			format['if(getplayeruid player in Developer_id) then {player sideChat "[Admin Log] Admin %1 Has Teleported %2 To Him"}',name player, _name] call swag;
-			format['if(getplayeruid player in adminlevel4) then {player sideChat "[Admin Log] Admin %1 Has Teleported %2 To Him"}',name player, _name] call swag;
+			format['if(getplayeruid player in Developer_id) then {player sideChat "[Admin Log] Admin %1 Has Teleported %2 To Him"}',name player, _name] call OL_network_Swag;
+			format['if(getplayeruid player in adminlevel4) then {player sideChat "[Admin Log] Admin %1 Has Teleported %2 To Him"}',name player, _name] call OL_network_Swag;
 			["Admin_Log", format ["Admin %1 (%2) has Teleported %3 (%4) To Him", name player, getPlayerUID player, _name, getPlayerUID _name]] call RM_fnc_LogToServer;
 		};
 	} forEach entities "CAManBase";

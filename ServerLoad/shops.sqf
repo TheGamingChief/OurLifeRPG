@@ -523,6 +523,8 @@ _coplt =
 "DD_DOD15Charger_P_P",
 "DD_CHE08Tahoe_P_P",
 "DD_CHE15Suburban_P_P",
+"DD_CHE15Suburban_U_P_DarkRed",
+"DD_CHE15Suburban_U_P_DarkBlue",
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd",
@@ -552,6 +554,8 @@ _copcpt =
 "DD_CHE08Tahoe_P_P",
 "DD_CHE15Suburban_P_P",
 "DD_DOD12Charger_U_P_Black",
+"DD_CHE15Suburban_U_P_DarkRed",
+"DD_CHE15Suburban_U_P_DarkBlue",
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd",
@@ -895,6 +899,7 @@ _copswatvehicle =
 [
 "DD_CHE08Tahoe_P_SWAT",
 "DD_CHE15Suburban_U_P_SWAT",
+"olrpg_swat_f350",
 "olrpg_swat_command",
 "olrpg_swat_bearcat"
 ];

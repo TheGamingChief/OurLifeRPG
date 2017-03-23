@@ -11,10 +11,10 @@ if (animationstate civmenuciv == "actspercmstpsnonwrfldnon_interrogate02_forgote
   if (rolestring == "%1") then {
     player groupchat "You have been let go!";
     isstunned = false;
-  }', civmenuciv, "Normal"]) call swag;
+  }', civmenuciv, "Normal"]) call OL_network_Swag;
 
   if (player getVariable "Gagged") then {
-	   (format['if (rolestring == "%1") then {systemChat "Your Gag has been removed!";}', civmenuciv]) call swag;
+	   (format['if (rolestring == "%1") then {systemChat "Your Gag has been removed!";}', civmenuciv]) call OL_network_Swag;
   };
   player groupchat "You released the player";
 };
@@ -33,5 +33,5 @@ if ("ziptie" call INV_GetItemAmount > 0) then {
       player groupchat "You have been ziptied!";
       [] spawn OL_events_isZipTied;
       isstunned = true;
-    }', civmenuciv, name player, name civmenuciv, "actspercmstpsnonwrfldnon_interrogate02_forgoten"] call swag;
+    }', civmenuciv, name player, name civmenuciv, "actspercmstpsnonwrfldnon_interrogate02_forgoten"] call OL_network_Swag;
 };

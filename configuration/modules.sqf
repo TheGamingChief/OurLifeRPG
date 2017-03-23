@@ -18,6 +18,7 @@ _activeModules = [
 	"misc",
 	"phone",
 	"player",
+	//"gangs",
 	"tfar",
 	"stats",
 	"ui",

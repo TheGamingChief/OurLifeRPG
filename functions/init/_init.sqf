@@ -3,30 +3,25 @@ if (isServer) then {execVM "ServerFiles\InitOLServer.sqf"};
 22254 cutRsc["RL_Dialog_loading", "plain"];
 
 ["Init Functions", 10] 			call OL_Misc_LoadingSetText;
-_h = [playercount, rolenumber] execVM "ServerLoad\broadcast.sqf";
-waitUntil{scriptDone  _h};
-
+[playercount, rolenumber] call OL_network_SwagSetup;
 ["Exec Inv Variables", 20] 	call OL_Misc_LoadingSetText;
+
+waitUntil {!isNil "playerarray"};
 _h = [playerarray, playerstringarray, !iscop] execVM "ServerLoad\INVvars.sqf";
 waituntil{scriptDone  _h};
-
 ["Exec Bank", 30] 						call OL_Misc_LoadingSetText;
 _h = [] execVM "functions\bank\_vars.sqf";
 waitUntil{scriptDone  _h};
-
 ["Exec WP Missions", 40] 		call OL_Misc_LoadingSetText;
 _h = [] execVM "ServerLoad\workplacesettings.sqf";
 waitUntil {scriptDone _h};
-
 ["Exec Misc Functions", 50] 	call OL_Misc_LoadingSetText;
 _h = []	execVM "ServerLoad\miscfunctions.sqf";
 _h = [] execVM "lottoexec.sqf";
 waitUntil{scriptDone  _h};
-
 ["Exec Main Variables", 60] 	call OL_Misc_LoadingSetText;
 _h = [] execVM "ServerLoad\variables.sqf";
 waitUntil{scriptDone  _h};
-
 ["Exec Misc Scripts", 70] 		call OL_Misc_LoadingSetText;
 
 if (isClient) then {

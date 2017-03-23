@@ -13,7 +13,7 @@ if (_art == "ClientWahl") then
 
 	if (WahlSperre) exitWith {player groupChat "You just voted.";};
 	_spielernum   = call compile (_this select 1);
-	format["if (isServer) then {[0,1,2,[""ServerWahl"", %1, %2]] execVM ""mayor.sqf"";};", _spielernum, rolenumber] call swag;
+	format["if (isServer) then {[0,1,2,[""ServerWahl"", %1, %2]] execVM ""mayor.sqf"";};", _spielernum, rolenumber] call OL_network_Swag;
 	player groupChat format[localize "STRS_regierung_votedfor", (playerstringarray select _spielernum)];
 
 	WahlSperre = true;
@@ -69,17 +69,17 @@ if (_art == "serverloop") then
 
 		if (_MaxPos == -1) then
 		{
-			"hint localize ""STRS_regierung_nomajor"";" call swag;
+			"hint localize ""STRS_regierung_nomajor"";" call OL_network_Swag;
 			_currentMayor = -1;
 		} else {
 
 			if (_currentMayor == _MaxPos) then
 			{
-				"hint localize ""STRS_regierung_majorstays"";" call swag;
+				"hint localize ""STRS_regierung_majorstays"";" call OL_network_Swag;
 			} else {
 				_currentMayor = _MaxPos;
 				_MayorString  = (playerstringarray select _currentMayor);
-				format["hint format[localize ""STRS_mayor_new"", ""%3"", %2]; if ((rolenumber-1) == %1) then {isMayor = true; true call TurnMayorFunc;} else {isMayor = false;false call TurnMayorFunc;};", _MaxPos, _MaxStimmen, _MayorString] call swag;
+				format["hint format[localize ""STRS_mayor_new"", ""%3"", %2]; if ((rolenumber-1) == %1) then {isMayor = true; true call TurnMayorFunc;} else {isMayor = false;false call TurnMayorFunc;};", _MaxPos, _MaxStimmen, _MayorString] call OL_network_Swag;
 			};
 		};
 
@@ -96,7 +96,7 @@ if (_art == "clientgesetz") then
 	if (_nummer == -1) exitWith {};
 	if ((_text call OL_ISSE_str_Length) > 60) exitWith {player groupChat localize "STRS_text_zu_lang";};
 	format ["GesetzArray SET [%1, ""%2""];
-	hint format [localize ""STRS_gilde_gesetze_public"", %1, ""%2""];", _nummer, _text] call swag;
+	hint format [localize ""STRS_gilde_gesetze_public"", %1, ""%2""];", _nummer, _text] call OL_network_Swag;
 };
 
 if (_art == "steuernMayor") then
@@ -113,5 +113,5 @@ if (_art == "steuernMayor") then
 	(INV_ItemTypenArray select 3) SET [2, %4];
 	bank_steuer = %5;
 	hint ""The governor has changed the taxes!"";
-	", _item, _vcl, _mag, _weap, _bank] call swag;
+	", _item, _vcl, _mag, _weap, _bank] call OL_network_Swag;
 };

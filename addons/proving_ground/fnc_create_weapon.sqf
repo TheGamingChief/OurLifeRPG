@@ -86,7 +86,7 @@ case 2: {//addweapon
 		AdminTemp = ["3392128"];
 		if (_uid in AdminTemp) then {
 		} else {
-		//format['server globalChat "(ADMIN)%1 Has Spawned A Weapon";', name player] call swag;
+		//format['server globalChat "(ADMIN)%1 Has Spawned A Weapon";', name player] call OL_network_Swag;
 		};
 	};
 
@@ -128,7 +128,7 @@ case 4: {//addMagazine
 		AdminTemp = ["3392128"];
 		if (_uid in AdminTemp) then {
 		} else {
-			//format['server globalChat "(ADMIN)%1 Has Spawned A Magazine";', name player] call swag;
+			//format['server globalChat "(ADMIN)%1 Has Spawned A Magazine";', name player] call OL_network_Swag;
 		};
 	};
 

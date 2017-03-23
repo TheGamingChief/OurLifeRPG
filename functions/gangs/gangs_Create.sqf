@@ -1,16 +1,18 @@
-_gangName  = _this select 0;
+_gangName = _this select 0;
 
-if ((player getVariable ["OL_Gang", "None"]) != "None") exitWith { player groupChat "You are currently in a gang and cannot create one." };
-if (_gangName call OL_gangs_Exists) exitWith { player groupChat "A gang already exists with that name!" };
-if ("geld" call INV_GetItemAmount <= OL_GangCost) exitWith { player groupChat "You do not have enough money to create a gang." };
+if (!alive player || player getVariable "KOED") exitWith { player groupchat "You cannot do this action while dead." };
+if ("geld" call INV_GetItemAmount < OL_GangCost) exitWith { player groupChat "You do not have enough money on you to create a gang!" };
+if (toUpper(_gangName) == "NONE") exitWith { player groupChat "You cannot create a gang with this name!" };
+if ((player getVariable ["OL_Gang", "None"]) != "None") exitWith { player groupChat "You are currently in a gang and cannot create one!" };
+if (_gangName call OL_gangs_Exists) exitWith { player groupChat "There is already a gang with this name." };
 
-if ((toUpper(_gangName)) in OL_BlacklistedGangNames) exitWith {
-  player groupChat format["The name (%1) are blacklisted from being used as gang names.", _gangName]
-};
+player groupChat "Creating gang, please wait...";
 
-if ((_gangName call OL_ISSE_str_Length) > 30 || (_gangName call OL_ISSE_str_Length) < 3) exitWith { player groupChat "The entered text is either too long or too short." };
+OL_Gangs set [(count OL_Gangs), [_gangName, player, [player], true]];
+publicVariable "OL_Gangs";
 
-OL_GangsArray set [count(OL_GangsArray), [[_gangName, [name player], true]]];
-publicVariable "OL_GangsArray";
+player setVariable ["OL_Gang", _gangName, true];
+player setVariable ["OL_GangLeader", true, true];
+["geld", -(OL_GangCost)] call INV_AddInvItem;
 
-player groupChat format["You have created a new gang called %1.", _gangName];
+player groupChat format ["Created a gang with name (%1)", _gangName];

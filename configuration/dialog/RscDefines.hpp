@@ -117,7 +117,7 @@ class IGUIBack
 	idc = 124;
 	style = 128;
 	text = "";
-	colorText[] = 
+	colorText[] =
 	{
 		0,
 		0,
@@ -131,7 +131,7 @@ class IGUIBack
 	y = 0.1;
 	w = 0.1;
 	h = 0.1;
-	colorbackground[] = 
+	colorbackground[] =
 	{
 		"(profilenamespace getvariable ['IGUI_BCG_RGB_R',0])",
 		"(profilenamespace getvariable ['IGUI_BCG_RGB_G',1])",
@@ -150,14 +150,14 @@ class RscFrame
   w = 1.0;
   h = 1.0;
   sizeEx = Dlg_TEXTHGT;
-  
+
   colorBackground[] = {Dlg_ColorScheme_Red, 1}; // unused?
   colorText[] = {Dlg_ColorScheme_Yellow, 1}; // unused?
   font = FontM_R;
 
   text = "";
 };
-class RscShortcutButton 
+class RscShortcutButton
 {
 	type = 16;
 	idc = -1;
@@ -396,7 +396,7 @@ colorText[]               = {1, 1, 1, 1};
 font                      = FontHTML;
 sizeEx                    = 0.025;
 soundPush[]               = {"", 0.2, 1};
-soundClick[]              = {"ui\ui_ok", 0.2, 1};
+soundClick[]              = {"", 0.2, 1};
 soundEscape[]             = {"ui\ui_cc", 0.2, 1};
 default                   = false;
 text                      = "";

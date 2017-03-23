@@ -4,7 +4,7 @@ _pitcar = (nearestobjects [getpos player, ["LandVehicle"], 7] select 1);
 _pitcarspeed = speed _pitcar;
 _rdmpit = floor random 2;
 
-//format['if(getplayeruid player in Developer_id) then {player sideChat "DEBUG: %4 has Pit Car: %1 Car Speed: %2 Random Number (0 - 2): %3"}', _pitcar, _pitcarspeed, _rdmpit, name player] call swag;
+//format['if(getplayeruid player in Developer_id) then {player sideChat "DEBUG: %4 has Pit Car: %1 Car Speed: %2 Random Number (0 - 2): %3"}', _pitcar, _pitcarspeed, _rdmpit, name player] call OL_network_Swag;
 
 if (isNil "_pitcar") exitwith {pitavailable = true; player sidechat format["Your are not in range to pit a vehicle."];};
 	

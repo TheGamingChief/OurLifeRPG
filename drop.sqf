@@ -6,7 +6,7 @@ if ((!INV_CanUseInventory) or (!INV_CanDropItem)) exitWith {player groupChat loc
 
 if(!isnull (nearestobjects[getpos player,["EvMoney","Suitcase"], 1] select 0))exitwith{player groupchat "You cannot drop items on top of each other. move and try again."};
 
-if (_amount <= 0) exitwith {format["hint ""%1 has dropped %2!"";", (name player), _amount] call swag;};
+if (_amount <= 0) exitwith {format["hint ""%1 has dropped %2!"";", (name player), _amount] call OL_network_Swag;};
 
 if (_item call INV_getitemDropable) then 
 

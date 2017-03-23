@@ -4,5 +4,8 @@
 DD_Modules = DD_Modules + [
 	["OL", "network", "CreateEvents", 	0],
 	["OL", "network", "MP", 						1],
-	["OL", "network", "MPExec", 				1]
+	["OL", "network", "MPExec", 				1],
+
+	["OL", "network", "SwagSetup", 			1],
+	["OL", "network", "Swag", 					1]
 ];

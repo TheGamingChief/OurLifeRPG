@@ -91,7 +91,7 @@ if (_art == "itemkauf") then
 				if(_control == _gang and count _members > 0)then
 				{
 					_income = _cost/(count _members);
-					format['if(name player in %1)then{player groupchat "You received $%2 from a drug sale"; kontostand = kontostand + %2};', _members, _income] call swag;
+					format['if(name player in %1)then{player groupchat "You received $%2 from a drug sale"; kontostand = kontostand + %2};', _members, _income] call OL_network_Swag;
 				};
 			};
 		};
@@ -134,7 +134,7 @@ if (_art == "itemkauf") then
 
 	if (_stock != -1 and _exitvar == 0) then
 	{
-		format['["%1", (%2 - %3), %4] call INV_itemstocksupdate;', _item, _stock, _menge, INV_ActiveShopNumber] call swag;
+		format['["%1", (%2 - %3), %4] call INV_itemstocksupdate;', _item, _stock, _menge, INV_ActiveShopNumber] call OL_network_Swag;
 	};	
 }; 
 
@@ -262,7 +262,7 @@ if (_stock != -1 and _exitvar == 0) then
 
 	{
 
-	format['["%1", (%2 + %3), %4] call INV_itemstocksupdate;', _item, _stock, _menge, INV_ActiveShopNumber] call swag;
+	format['["%1", (%2 + %3), %4] call INV_itemstocksupdate;', _item, _stock, _menge, INV_ActiveShopNumber] call OL_network_Swag;
 	
 	};
 

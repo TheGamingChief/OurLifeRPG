@@ -45,15 +45,15 @@ if(_art == "impound") then
 		publicVariable "SpeedyServerImpound";
 	};
 
-	format['hint format[localize "STRS_inventar_impound_gesehen", %1, %2]', player, _vcl] call swag;
+	format['hint format[localize "STRS_inventar_impound_gesehen", %1, %2]', player, _vcl] call OL_network_Swag;
 
 	deleteVehicle _vcl;
 };
 
 if(_art == "fedimpound") then
 {
-	format['hint format[localize "STRS_inventar_impound_gesehen", %1, %2]', player, _vcl] call swag;
-    format['server globalChat "%1 Has Federally Impounded a Vehicle. Vehicle VIN #: %2";', name player, _vcl] call swag;
+	format['hint format[localize "STRS_inventar_impound_gesehen", %1, %2]', player, _vcl] call OL_network_Swag;
+    format['server globalChat "%1 Has Federally Impounded a Vehicle. Vehicle VIN #: %2";', name player, _vcl] call OL_network_Swag;
 	deleteVehicle _vcl;
 };
 

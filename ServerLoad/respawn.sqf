@@ -52,7 +52,7 @@ if (isciv) then {
 		_civnum = player;
 		//player setpos getpos (respawnarray select (floor(random(count respawnarray))));
 	} else {
-		(format ["%1 switchmove ""%2"";", player, "ActsPercMstpSnonWrflDnon_interrogate02_forgoten"]) call swag;
+		(format ["%1 switchmove ""%2"";", player, "ActsPercMstpSnonWrflDnon_interrogate02_forgoten"]) call OL_network_Swag;
 		waituntil {animationstate player == "ActsPercMstpSnonWrflDnon_interrogate02_forgoten"};
 		["arrest", CivTimeInPrison, player] execVM "civmenu.sqf";
 	};

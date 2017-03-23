@@ -20,7 +20,7 @@ fnc_KeyPress_F1 = {
 	if (fn_SirenMode == 1) exitWith {};
 	fn_SirenMode = 1;
 	if (!(typeName strn == "STRING")) then {
-		format['["DD_Wail", %1] spawn DD_fnc_PlaySirenSound;', player] call swag;
+		format['["DD_Wail", %1] spawn DD_fnc_PlaySirenSound;', player] call OL_network_Swag;
 	};
 };
 
@@ -31,7 +31,7 @@ fnc_KeyPress_F1_Up = {
 			strn = objNull;
 			fn_SirenMode = 0;
 			deleteVehicle (call compile format["%1",_x]);
-		}forEach strn_array;' call swag;
+		}forEach strn_array;' call OL_network_Swag;
 	};
 };
 
@@ -40,7 +40,7 @@ fnc_KeyPress_F2 = {
 	if (fn_SirenMode == 1) exitWith {};
 	fn_SirenMode = 1;
 	if (!(typeName strn == "STRING")) then {
-		format['["DD_Yelp", %1] spawn DD_fnc_PlaySirenSound;', player] call swag;
+		format['["DD_Yelp", %1] spawn DD_fnc_PlaySirenSound;', player] call OL_network_Swag;
 	};
 };
 
@@ -51,7 +51,7 @@ fnc_KeyPress_F2_Up = {
 			strn = objNull;
 			fn_SirenMode = 0;
 			deleteVehicle (call compile format["%1",_x]);
-		}forEach strn_array;' call swag;
+		}forEach strn_array;' call OL_network_Swag;
 	};
 };
 
@@ -61,7 +61,7 @@ fnc_KeyPress_F4 = {
 		strn = objNull;
 		fn_SirenMode = 0;
 		deleteVehicle (call compile format["%1",_x]);
-	}forEach strn_array;' call swag;
+	}forEach strn_array;' call OL_network_Swag;
 };
 
 fnc_KeyPress_1 = {
@@ -363,8 +363,8 @@ fnc_KeyPress_Shift_F = {
 				_civ = _this select 0;
 				if (_civ getVariable "KOED" || !(alive _civ)) exitWith {};
 				if (_civ distance player > 2 or !isPlayer _civ) exitwith {};
-				format ["%1 switchmove ""%2"";", player, "AwopPercMstpSgthWnonDnon_end"] call swag;
-				format ["if (player == %1) then {[""hit"", %2, ""Melee"", 1] spawn OL_fnc_Stun};", _civ, player] call swag;
+				format ["%1 switchmove ""%2"";", player, "AwopPercMstpSgthWnonDnon_end"] call OL_network_Swag;
+				format ["if (player == %1) then {[""hit"", %2, ""Melee"", 1] spawn OL_fnc_Stun};", _civ, player] call OL_network_Swag;
 				player groupchat "You stunned this player!";
 			};
 		};
@@ -389,7 +389,7 @@ fnc_KeyPress_Tilde = {
 
 		player sideChat "%2 (%1) Has hit their panic button, they need immediate backup! Their location has been marked on the map via a map marker! GRID: %3";
 		playSound "beepsimple";
-	}', player, name player, mapGridPosition player] call swag;
+	}', player, name player, mapGridPosition player] call OL_network_Swag;
 
 	player sidechat "Your panic button is now disabled. It will be available in 60 seconds.";
 	uiSleep 60;

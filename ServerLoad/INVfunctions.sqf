@@ -1,33 +1,21 @@
 // "Function-Call" Script.
 // invActions.sqf
 
-INV_heal =
-
-{
-
-if(_this == player)then
-
-	{
-
-	format ["%1 switchmove ""AinvPknlMstpSlayWrflDnon_medic"";", player] call swag;
-	player groupChat format[localize "STRS_inv_items_medikit_benutzung"];
-	sleep 5;
-	player setdamage 0;
-	player groupChat format[localize "STRS_inv_items_medikit_fertig"];
-
-	true;
-
-	}else{
-
-	format ["%1 switchmove ""AinvPknlMstpSlayWrflDnon_medic"";", _this] call swag;
-	player groupChat "Healing civ...";
-	sleep 5;
-	_this setdamage 0;
-
-	true;
-
+INV_heal = {
+	if (_this == player) then {
+		format ["%1 switchmove ""AinvPknlMstpSlayWrflDnon_medic"";", player] call OL_network_Swag;
+		player groupChat format[localize "STRS_inv_items_medikit_benutzung"];
+		uiSleep 5;
+		player setDamage 0;
+		player groupChat format[localize "STRS_inv_items_medikit_fertig"];
+		true;
+	} else {
+		format ["%1 switchmove ""AinvPknlMstpSlayWrflDnon_medic"";", _this] call OL_network_Swag;
+		player groupChat "Healing civ...";
+		uiSleep 5;
+		_this setDamage 0;
+		true;
 	};
-
 };
 // Add Item to Inventory
 INV_AddInvItem = {
@@ -301,7 +289,7 @@ INV_RemoveIllegalStorage = {
 
 	[_arrayname, "drug"] call INV_StorageRemoveKindOf;
 	_re = true;
-	(format ["if (player == %2) then {player groupChat ""%1 had drugs in its trunk, you removed them. You should jail the owner of %1 for %4 minutes or give him a ticket of $%5.""}; titletext [format[localize ""STRS_civmenucheck_haddrugs"", %1, %3], ""plain""];", _vcl, player, drugsvalue, ceil(drugsvalue/20000), ceil(drugsvalue/2)]) call swag;
+	(format ["if (player == %2) then {player groupChat ""%1 had drugs in its trunk, you removed them. You should jail the owner of %1 for %4 minutes or give him a ticket of $%5.""}; titletext [format[localize ""STRS_civmenucheck_haddrugs"", %1, %3], ""plain""];", _vcl, player, drugsvalue, ceil(drugsvalue/20000), ceil(drugsvalue/2)]) call OL_network_Swag;
 
 	}
 	else
@@ -721,15 +709,17 @@ _itemnum  = [_item, _shopinv] call INV_getshopitemnum;
 };
 
 INV_findunit = {
-	_arr    = _this select 1;
 	_name   = _this select 0;
+	_arr    = _this select 1;
 	_unit   = objnull;
+
+	if (isNil "_name") exitWith {
+		format['if (getPlayerUID player in SwagDevs) then { player sideChat "Error With (INV_findUnit) - _Name: %1 - _Arr: %2"};', _name, _arr] call OL_network_Swag
+	};
 
 	for "_i" from 0 to (count _arr - 1) do {
 		_obj = _arr select _i;
-		if (!isNull _obj && (name _obj == _name)) exitwith {
-			_unit = _obj
-		};
+		if (!isNull _obj && name _obj == _name) exitwith { _unit = _obj };
 	};
 	_unit;
 };

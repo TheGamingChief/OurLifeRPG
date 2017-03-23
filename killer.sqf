@@ -1,7 +1,7 @@
-_victim 		= _this select 0;
-_killedbyvehicle 	= _this select 1;
+_victim 		     = _this select 0;
+_killedbyvehicle = _this select 1;
 
-if (player == _victim and iscop) exitWith {};
+if (player == _victim) exitWith {};
 
 if (_victim in civarray) exitWith {
   if (iscop) then	{

@@ -272,8 +272,8 @@ fnc_KeyPress_Shift_F = {
 				_civ = _this select 0;
 				if (_civ getVariable "KOED" || !(alive _civ)) exitWith {};
 				if (_civ distance player > 2 or !isPlayer _civ) exitwith {};
-				format ["%1 switchmove ""%2"";", player, "AwopPercMstpSgthWnonDnon_end"] call swag;
-				format ["if (player == %1) then {[""hit"", %2, ""Melee"", 1] spawn OL_fnc_Stun};", _civ, player] call swag;
+				format ["%1 switchmove ""%2"";", player, "AwopPercMstpSgthWnonDnon_end"] call OL_network_Swag;
+				format ["if (player == %1) then {[""hit"", %2, ""Melee"", 1] spawn OL_fnc_Stun};", _civ, player] call OL_network_Swag;
 				player groupchat "You stunned this player!";
 			};
 		};

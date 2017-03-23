@@ -3,7 +3,7 @@ while {player getVariable "Cuffed"} do
     _civ = player;
     _civ setVariable ["tf_unable_to_use_radio", true];
     if (!(animationstate player == "actspercmstpsnonwrfldnon_interrogate02_forgoten") && (player == vehicle player)) then {
-    (format ["%1 switchmove ""%2"";", _civ, "actspercmstpsnonwrfldnon_interrogate02_forgoten"]) call swag;
+    (format ["%1 switchmove ""%2"";", _civ, "actspercmstpsnonwrfldnon_interrogate02_forgoten"]) call OL_network_Swag;
     };
   _state = vehicle player;
 
@@ -24,7 +24,7 @@ while {player getVariable "Cuffed"} do
     _civ setVariable ["tf_unable_to_use_radio", false];
     isstunned = false;
     if(animationstate _civ == "actspercmstpsnonwrfldnon_interrogate02_forgoten") then {
-      (format ["%1 switchmove ""%2"";", _civ, "adthppnemstpsraswpstdnon_2"]) call swag;
+      (format ["%1 switchmove ""%2"";", _civ, "adthppnemstpsraswpstdnon_2"]) call OL_network_Swag;
     };
   };
 

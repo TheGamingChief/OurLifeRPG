@@ -17,7 +17,7 @@ player setVariable ["ZipTied",false,true];
 player setVariable ["Gagged",false,true];
 player setVariable ["Escorted",false,true];
 
-format['%1 allowDamage false', player] call swag;
+format['%1 allowDamage false', player] call OL_network_Swag;
 [] call OL_Events_ActionToggle;
 INV_shortcuts = true;
 
@@ -38,16 +38,16 @@ if (_timer <= 0) then {
 	player setVariable ["tf_unable_to_use_radio", false, true];
 	player setVariable ["tf_voiceVolume", 1.0, true];
 	player enableSimulation true;
-	format['deleteMarker ("OL_DeadTracker_" + name %1)', player] call swag;
+	format['deleteMarker ("OL_DeadTracker_" + name %1)', player] call OL_network_Swag;
 	uiSleep 2;
 	[RadioArr] call OL_tfar_addRadiosBack;
 };
 
 if (player getVariable "KOED") then
 {
-	format['%1 allowDamage true', player] call swag;
+	format['%1 allowDamage true', player] call OL_network_Swag;
 } else {
-	format['%1 allowDamage true', player] call swag;
+	format['%1 allowDamage true', player] call OL_network_Swag;
 	[nil,player,rSwitchMove,"amovppnemstpsnonwnondnon"] call RE;
 	hintSilent parseText format["<t color='#ff0000'>%1 You have been revived</t>", name player];
 	player setVariable ["tf_unable_to_use_radio", false, true];
@@ -58,7 +58,7 @@ if (player getVariable "KOED") then
 		player setHit ["legs", 1];
 	};
 	player enableSimulation true;
-	format['deleteMarker ("OL_DeadTracker_" + name %1)', player] call swag;
+	format['deleteMarker ("OL_DeadTracker_" + name %1)', player] call OL_network_Swag;
 	uiSleep 2;
 	[RadioArr] call OL_tfar_addRadiosBack;
 	OL_isDead = false;
@@ -66,9 +66,9 @@ if (player getVariable "KOED") then
 
 if (player getVariable "KOED2") then
 {
-	format['%1 allowDamage true', player]call swag;
+	format['%1 allowDamage true', player]call OL_network_Swag;
 } else {
-	format['%1 allowDamage true', player]call swag;
+	format['%1 allowDamage true', player]call OL_network_Swag;
 	[nil,player,rSwitchMove,"amovppnemstpsnonwnondnon"] call RE;
 	hintSilent parseText format["<t color='#ff0000'>%1 You have respawned</t>", name player];
 	player setVariable ["KOED",false,false];
@@ -76,7 +76,7 @@ if (player getVariable "KOED2") then
 	player setVariable ["tf_voiceVolume", 1.0, true];
 	{	if (!(_x in weapons player)) then { player addWeapon _x }	} forEach OL_DefaultItems;
 	player enableSimulation true;
-	format['deleteMarker ("OL_DeadTracker_" + name %1)', player]call swag;
+	format['deleteMarker ("OL_DeadTracker_" + name %1)', player]call OL_network_Swag;
 	sleep 2;
 	[RadioArr] call OL_tfar_addRadiosBack;
 	OL_isDead = false;
