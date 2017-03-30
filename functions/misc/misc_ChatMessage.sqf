@@ -1,7 +1,7 @@
 private["_chat","_text","_cond"];
 _chat = _this select 0;
 _text = _this select 1;
-_cond = _this select 2;
+_cond = call compile format["%1", _this select 2];
 
 if (typeName _chat != "SCALAR") exitWith { player globalChat "Tell Foster to fix his chat message." };
 

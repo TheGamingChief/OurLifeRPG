@@ -12,7 +12,7 @@ RespawnDialog = 0;
 disabledAI    = 1;
 enableItemsDropping = 0;
 disableChannels[]={2};
-loadScreen = "text\loading.jpg";
+loadScreen = "\ol_textures\images\loading.jpg";
 onMinimapScript[] = {"BIS_fnc_customGPS_Spawn"};
 
 titleParam1 = $STRD_description_param1;

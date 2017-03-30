@@ -10,7 +10,6 @@ switch (_this select 0) do
 
 		if (_vehicle iskindof "all") then
 		{
-			//_i = _index select 0;
 			_pos = [0,-2.5, 0];
 			_dir = 270;
 
@@ -22,6 +21,9 @@ switch (_this select 0) do
 			};
 			if (_vehicle isKindOf "DD_CHE08Tahoe_P_K9" || _vehicle isKindOf "DD_CHE08Tahoe_P_SK9") then {
 				_pos = [0.07,-0.7,0.9];
+			};
+			if (_vehicle isKindOf "DD_FOR13Taurus_P_K9") then {
+				_pos = [0,-0.7,-0.2];
 			};
 
 			while {alive _dog && _dog distance _vehicle > 10 && player getVariable "CLAY_DogStatus" == "Boarding"} do

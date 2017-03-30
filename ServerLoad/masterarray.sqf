@@ -881,14 +881,19 @@ INV_AlleFahrzeugeArray = [
 ["DD_CHE15Suburban_White",["Fahrzeug", "car"],["DD_CHE15Suburban_White", "2015 Suburban (White)"],[50000, 25000], [2, "car", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["DD_CHE15Suburban_Yellow",["Fahrzeug", "car"],["DD_CHE15Suburban_Yellow", "2015 Suburban (Yellow)"],[50000, 25000], [2, "car", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 
+//NEW EMS VEHICLES
+["DD_CHE15Suburban_U_F",["Fahrzeug", "car"],["DD_CHE15Suburban_U_F", "2015 Suburban (Fire Marshal)"],[50000, 25000], [2, "car", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD15Charger_U_F",["Fahrzeug", "car"],["DD_DOD15Charger_U_F", "2015 Charger (Fire Marshal)"],[50000, 25000], [2, "car", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+
 //NEW COP VEHICLES
 
 //HIGH Command
 ["DD_DOD12Charger_U_P_Black",["Fahrzeug", "car"],["DD_DOD12Charger_U_P_Black", "Dodge Charger 2012 Black"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["DD_DOD15Charger_U_P_Black",["Fahrzeug", "car"],["DD_DOD15Charger_U_P_Black", "Dodge Charger 2015 Black"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 
-["DD_FOR16F150_U_P_DarkRed",["Fahrzeug", "car"],["DD_FOR16F150_U_P_DarkRed", "Ford F150 (Dark Red)"],[15000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
-["DD_FOR16F150_U_P_DarkBlue",["Fahrzeug", "car"],["DD_FOR16F150_U_P_DarkBlue", "Ford F150 (Dark Blue)"],[18000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD16Challenger_P_P",["Fahrzeug", "car"],["DD_DOD16Challenger_P_P", "2016 Dodge Challenger (Black)"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD16Challenger_P_Blue",["Fahrzeug", "car"],["DD_DOD16Challenger_P_Blue", "2016 Dodge Challenger (Dark Blue)"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_DOD16Challenger_P_Red",["Fahrzeug", "car"],["DD_DOD16Challenger_P_Red", "2016 Dodge Challenger (Red)"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 
 //PD
 ["DD_FOR06CV_P_P",["Fahrzeug", "car"],["DD_FOR06CV_P_P", "Crown Victoria 2006"],[15000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
@@ -941,6 +946,10 @@ INV_AlleFahrzeugeArray = [
 ["DD_DOD15Charger_U_P_DarkRed",["Fahrzeug", "car"],["DD_DOD15Charger_U_P_DarkRed", "Dodge Charger 2015 DarkRed"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["DD_DOD15Charger_U_P_Red",["Fahrzeug", "car"],["DD_DOD15Charger_U_P_Red", "Dodge Charger 2015 Red"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["DD_DOD15Charger_U_P_DarkBlue",["Fahrzeug", "car"],["DD_DOD15Charger_U_P_DarkBlue", "Dodge Charger 2015 DarkBlue"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_FOR13Mustang_P_P",["Fahrzeug", "car"],["DD_FOR13Mustang_P_P", "2013 Ford Mustang (Black)"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_FOR13Mustang_P_Blue",["Fahrzeug", "car"],["DD_FOR13Mustang_P_Blue", "2013 Ford Mustang (Blue)"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_FOR13Mustang_P_Red",["Fahrzeug", "car"],["DD_FOR13Mustang_P_Red", "2013 Ford Mustang (Red)"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+
 
 //APO
 ["DD_FOR13Taurus_P_APO",["Fahrzeug", "car"],["DD_FOR13Taurus_P_APO", "APO Interceptor"],[21000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],

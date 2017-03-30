@@ -1,7 +1,6 @@
-private["_nearATM","_clothesArray","_index","_displayName"];
+private["_nearATM","_clothesArray","_index"];
 
-
-_nearStuff = (nearestObjects [getPos player, ["tcg_atm", "olrpg_pdpilot"], 10] - [player]);
+_nearStuff = nearestObjects [getPos player, ["tcg_atm", "olrpg_pdpilot"], 10] - [player];
 
 if (isNil "_nearStuff") exitWith { player groupChat "wut...... - Garry" };
 if (!createDialog "UI_ClothesMenu") exitWith { hint "Dialog Error!" };

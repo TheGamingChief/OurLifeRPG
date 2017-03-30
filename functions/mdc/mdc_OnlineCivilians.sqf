@@ -1,9 +1,9 @@
 _return = [];
-if(!isMultiplayer)exitWith{civarray};
+if (!isMultiplayer) exitWith {};
 
-{	
-	if(side _x == civilian)then{
+{
+	if (!isNull _x && !(_x in coparray)) then {
 		_return set[count(_return), _x];
 	};
-}forEach playableUnits;
+} forEach playerarray;
 _return;

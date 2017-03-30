@@ -11,26 +11,26 @@ _vcl removeAction _load;
 sleep 1;
 
 while {alive _vcl} do
-{ 	
+{
 	if (!(_vcl getVariable "NORRN_mountOn_vcl_pos1") && count (crew _vcl) == 0 || !(_vcl getVariable "NORRN_mountOn_vcl_pos1") && count (crew _vcl) == 1 && (driver _vcl) != objnull) then
 	{
 		_vcl removeAction _load;
 		_c = 0;
 	};
 	if (!(_vcl getVariable "NORRN_mountOn_vcl_pos1") && _c == 0 && count (crew _vcl) == 1 && (driver _vcl) == objnull || !(_vcl getVariable "NORRN_mountOn_vcl_pos1") && _c == 0 && count (crew _vcl) > 1 && player != (driver _vcl)) then
-	{	
+	{
 		switch (typeOf _vcl) do {
 			case "MH6J_EP1":  {_load = _vcl addAction ["Move to left door", "addons\heliDoor\mount_vcl1.sqf", "", 0, false, true];};
-				
-};
+
+		};
 		_c = 1;
 	};
 	if ((_vcl getVariable "NORRN_mountOn_vcl_pos1") && _c == 1) then
-	{	
+	{
 		_vcl removeAction _load;
-		_c = 0;	
+		_c = 0;
 	};
-	if (!(player in (crew _vcl)) && _c == 1) then 
+	if (!(player in (crew _vcl)) && _c == 1) then
 	{
 		_vcl removeAction _load;
 		_c = 0;

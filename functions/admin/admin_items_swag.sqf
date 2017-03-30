@@ -36,7 +36,6 @@ switch (adminCMD) do
 		closeDialog 0;
 		openMap true;
 		onMapSingleClick "onMapSingleClick """";liafu = true; (vehicle player) setpos [_pos select 0, _pos select 1, 0]; openMap false;";
-		if ((getPlayerUID player) in _Developer_Id) then {player sideChat format["(ADMIN)%1 Has Teleported", name player];};
 		format['if(getplayeruid player in _Developer_Id) then {player sideChat "[Admin Log] Dev %1 has Ran Teleport!"}',name player] call OL_network_Swag;
 		[format["[ADMIN_PANNEL_LOG] Dev %1 has Ran Teleport!",name player]] call fn_LogToServer;
 	};

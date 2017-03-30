@@ -911,24 +911,27 @@ _cid =
 "x26_Mag",
 "RH_p226_cid",
 "RH_15Rnd_9x19_usp",
-"RH_M16a4_cid",						// M16A4 Iron Sights
-"RH_M16A4aim_cid",					// M16A4 Aimpoint
-"RH_M16A4eotech_cid",				// M16A4 EOTech
-"RH_M16A4acog_cid",					// M16A4 Acog
-"30Rnd_556x45_Stanag",				// 30Rnd 5.56x45 Stanag Mag
-"DD_CHE10Impala_U_P_Black",			// Impala (Black)
-"DD_CHE10Impala_U_P_DarkRed",		// Impala (Dark Red)
-"DD_CHE10Impala_U_P_Red",			// Impala (Red)
+"RH_M16a4_cid",										// M16A4 Iron Sights
+"RH_M16A4aim_cid",								// M16A4 Aimpoint
+"RH_M16A4eotech_cid",							// M16A4 EOTech
+"RH_M16A4acog_cid",								// M16A4 Acog
+"30Rnd_556x45_Stanag",						// 30Rnd 5.56x45 Stanag Mag
+"DD_CHE10Impala_U_P_Black",				// Impala (Black)
+"DD_CHE10Impala_U_P_DarkRed",			// Impala (Dark Red)
+"DD_CHE10Impala_U_P_Red",					// Impala (Red)
 "DD_CHE10Impala_U_P_DarkBlue",		// Impala (Dark Blue)
-"DD_CHE15Suburban_U_P_Black",		// Suburban (Black)
+"DD_CHE15Suburban_U_P_Black",			// Suburban (Black)
 "DD_CHE15Suburban_U_P_DarkRed",		// Suburban (Dark Red)
 "DD_CHE15Suburban_U_P_DarkBlue",	// Suburban (Dark Blue)
 "DD_DOD12Charger_U_P_DarkRed",		// Dodge Charger 2012 (Dark Red)
-"DD_DOD12Charger_U_P_Red",			// Dodge Charger 2012 (Red)
+"DD_DOD12Charger_U_P_Red",				// Dodge Charger 2012 (Red)
 "DD_DOD12Charger_U_P_DarkBlue",		// Dodge Charger 2012 (Dark Blue)
 "DD_DOD15Charger_U_P_DarkRed",		// Dodge Charger 2015 (Dark Red)
-"DD_DOD15Charger_U_P_Red",			// Dodge Charger 2015 (Red)
+"DD_DOD15Charger_U_P_Red",				// Dodge Charger 2015 (Red)
 "DD_DOD15Charger_U_P_DarkBlue",		// Dodge Charger 2015 (Dark Blue)
+"DD_FOR13Mustang_P_P",						// 2013 Ford Mustang (Black)
+"DD_FOR13Mustang_P_Blue",					// 2013 Ford Mustang (Blue)
+"DD_FOR13Mustang_P_Red",					// 2013 Ford Mustang (Red)
 "Bait_Kit"
 ];
 
@@ -1513,6 +1516,8 @@ _td7 =
 
 _td8 =
 [
+"DD_DOD15Charger_U_F",
+"DD_CHE15Suburban_U_F",
 "olrpg_firemarshal_hub_tahoe",
 "olrpg_firemarshal_tahoe_slk",
 "olrpg_2006_firemarshal_slk",

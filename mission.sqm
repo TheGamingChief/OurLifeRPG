@@ -33255,7 +33255,7 @@ class Mission
 			side="EMPTY";
 			vehicle="SignM_UN_Base_EP1";
 			skill=0.60000002;
-			init="this setObjectTexture [0, ""text\emssign.paa""]; this attachto [firestation1, [7,-9.76,1.7]];this setDir (getdir this) + 0;this allowdamage false;";
+			init="this setObjectTexture [0, ""ol_textures\images\emssign.paa""]; this attachto [firestation1, [7,-9.76,1.7]];this setDir (getdir this) + 0;this allowdamage false;";
 		};
 		class Item2758
 		{
@@ -34186,7 +34186,7 @@ class Mission
 			vehicle="Infostand_2_EP1";
 			skill=0.60000002;
 			text="AFH";
-			init="this allowdamage false;clearMagazineCargo this; clearWeaponCargo this;this setObjectTexture [1, ""text\AFH.paa""];this attachto [AFHB, [0,-.05,4.9]];this setDir (getdir this) - 0;";
+			init="this allowdamage false;clearMagazineCargo this; clearWeaponCargo this;this setObjectTexture [1, ""ol_textures\images\AFH.paa""];this attachto [AFHB, [0,-.05,4.9]];this setDir (getdir this) - 0;";
 		};
 		class Item2850
 		{
@@ -34208,7 +34208,7 @@ class Mission
 			vehicle="Infostand_2_EP1";
 			skill=0.60000002;
 			text="AFP";
-			init="this allowdamage false;clearMagazineCargo this; clearWeaponCargo this;this setObjectTexture [1, ""text\AFP.paa""];this attachto [AFPB, [0,-.05,4.9]];this setDir (getdir this) - 0;";
+			init="this allowdamage false;clearMagazineCargo this; clearWeaponCargo this;this setObjectTexture [1, ""ol_textures\images\AFP.paa""];this attachto [AFPB, [0,-.05,4.9]];this setDir (getdir this) - 0;";
 		};
 		class Item2852
 		{

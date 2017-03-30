@@ -64,9 +64,9 @@ class RscButton_1600: RscButton
 class RscButton_1601: RscButton
 {
 	idc = 1601;
-	action = " _l = createDialog ""DD_NotesPC""; buttonSetAction[1600, ""[(ctrlText 1400)] call DD_MDC_AddWarrant""];";
+	action = "[DD_LastCiv, ""Remove All Warrants"", 0] call OL_player_WarrantRemove; 'if (iscop) then { player sideChat format[""(%1) %2 has removed all of (%3) %4's Warrants!"", player, name player, DD_LastCiv, name DD_LastCiv]' call OL_network_Swag }; closeDialog 0;";
 
-	text = "Create Warrant";
+	text = "Remove All Warrants";
 	x = 0.195797 * safezoneW + safezoneX;
 	y = 0.4175 * safezoneH + safezoneY;
 	w = 0.0931235 * safezoneW;

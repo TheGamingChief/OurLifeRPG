@@ -37,7 +37,26 @@ INV_CreateVehicle = {
 
   hint format['Buying a %1 from %2', getText(configFile >> "cfgVehicles" >> _classname >> "displayName"), _logic];
 
-  if (_classname in _type1 || _classname in _type2 || _classname == "HMMWV_DES_EP1" || _classname == "fire_atv") then {
+  if (_classname in _type1 || _classname in _type2 || _classname == "HMMWV_DES_EP1" || _classname == "fire_atv" || _classname == "DD_FOR13Taurus_P_P") then {
+    if (_classname == "DD_FOR13Taurus_P_P") then {
+      call compile format['
+      newvehicle = _classname createVehicle %4;
+      newvehicle setPos %4;
+      newvehicle setDir %5;
+      newvehicle setVehicleInit "
+      this setObjectTexture [0,""\DD_FOR_13Taurus\livery\taurus.paa""];
+      this setVehicleVarName ""vehicle_%1_%2"";
+      vehicle_%1_%2 = this;
+      clearWeaponCargo this;
+      clearMagazineCargo this;
+      newvehicle lock true;
+      ";
+      processInitCommands;
+      INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2];
+      "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if(""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeof vehicle_%1_%2, %4] execVM ""%3"";};" call OL_network_Swag;
+      ', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getDir _logic];
+      newvehicle setVariable ["vcl_owner", getPlayerUID player, true];
+    };
     if (_classname == "fire_atv") then {
       call compile format['
       newvehicle = "ATV_US_EP1" createVehicle %4;
