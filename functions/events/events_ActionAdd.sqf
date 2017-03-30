@@ -1,7 +1,7 @@
 switch (playerSide) do {
-  	case civilian: {
+		case civilian: {
 			[] call OL_Events_Civ_Actions;
-  	};
+		};
 		case west: {
 			[] call OL_Events_Cop_Actions;
 		};
@@ -9,3 +9,4 @@ switch (playerSide) do {
 			[] call OL_Events_Ems_Actions;
 		};
 };
+INV_shortcuts = true;
