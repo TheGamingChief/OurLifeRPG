@@ -1,18 +1,14 @@
 _art = ((_this select 3) select 0);
 _actionsToRemove = [];
 
-if (isciv) then
+if ((isciv) && (isNil {INV_SavedVehLand select 0})) exitWith
 {
-	if (isNil {INV_SavedVehLand select 0}) exitWith {
-		player sideChat "You do not have any saved vehicles, currently!";
-	};
+	player sideChat "You do not have any saved vehicles, currently!";
 };
 
-if ((iscop) && !(isciv)) then
+if ((iscop) && !(isciv) && (isNil {savedVehiclesWest select 0})) exitWith
 {
-	if (isNil {savedVehiclesWest select 0}) exitWith {
-		player sideChat "You do not have any saved vehicles, currently!";
-	};
+	player sideChat "You do not have any saved vehicles, currently!";
 };
 
 if (_art == "EastCivSpawn") then {
@@ -33,7 +29,8 @@ if (_art == "EastCivSpawn") then {
 		_actionsToRemove = _actionsToRemove + [_retriveTxt];
 	};
 	
-	player removeAction action222;
+	[] call OL_Events_ActionRemove;
+
 	if(gettingcar == 1)exitWith{"You are getting a vehicle out of storage already..."};
 	gettingcar = 1;
 
@@ -64,7 +61,7 @@ if (_art == "EastCivSpawn") then {
 	continue = false;
 	gettingcar = 0;
 	
-	action222 = player addaction ["[Take Land Vehicle From Storage]","retrieveVehicle.sqf",["EastCivSpawn"],1,false,true,"","player distance LandSavePoint <= 3"];
+	[] call OL_Events_ActionToggle;
 };
 
 if (_art == "WestCivSpawn") then {
@@ -85,7 +82,8 @@ if (_art == "WestCivSpawn") then {
 		_actionsToRemove = _actionsToRemove + [_retriveTxt];
 	};
 	
-	player removeAction actionSave8;
+	[] call OL_Events_ActionRemove;
+
 	if(gettingcar == 1)exitWith{"You are getting a vehicle out of storage already..."};
 	gettingcar = 1;
 
@@ -116,7 +114,7 @@ if (_art == "WestCivSpawn") then {
 	continue = false;
 	gettingcar = 0;
 	
-	actionSave8 = player addaction ["[Take Land Vehicle From Storage]","retrieveVehicle.sqf",["WestCivSpawn"],1,false,true,"","player distance savepoint <= 3"];
+	[] call OL_Events_ActionToggle;
 };
 
 if (_art == "DonorSpawn") then {
@@ -137,7 +135,8 @@ if (_art == "DonorSpawn") then {
 		_actionsToRemove = _actionsToRemove + [_retriveTxt];
 	};
 	
-	player removeAction actionSave9;
+	[] call OL_Events_ActionRemove;
+
 	if(gettingcar == 1)exitWith{"You are getting a vehicle out of storage already..."};
 	gettingcar = 1;
 
@@ -168,7 +167,7 @@ if (_art == "DonorSpawn") then {
 	continue = false;
 	gettingcar = 0;
 	
-	actionSave9 = player addaction ["[Take Land Vehicle From Storage]","retrieveVehicle.sqf",["DonorSpawn"],1,false,true,"","player distance savepointx <= 3"];
+	[] call OL_Events_ActionToggle;
 };
 
 if (_art == "PDSpawn") then {
@@ -189,7 +188,8 @@ if (_art == "PDSpawn") then {
 		_actionsToRemove = _actionsToRemove + [_retriveTxt];
 	};
 	
-	player removeAction actionPolice;
+	[] call OL_Events_ActionRemove;
+
 	if(gettingcar == 1)exitWith{"You are getting a vehicle out of storage already..."};
 	gettingcar = 1;
 
@@ -220,7 +220,7 @@ if (_art == "PDSpawn") then {
 	continue = false;
 	gettingcar = 0;
 	
-	actionPolice = player addaction ["[Take Land Vehicle From Storage]","retrieveVehicle.sqf",["PDSpawn"],1,false,true,"","player distance savepoint2 <= 3"];
+	[] call OL_Events_ActionToggle;
 };
 
 if (_art == "SheriffSpawn") then {
@@ -241,7 +241,8 @@ if (_art == "SheriffSpawn") then {
 		_actionsToRemove = _actionsToRemove + [_retriveTxt];
 	};
 	
-	player removeAction actionPolice1;
+	[] call OL_Events_ActionRemove;
+
 	if(gettingcar == 1)exitWith{"You are getting a vehicle out of storage already..."};
 	gettingcar = 1;
 
@@ -272,5 +273,5 @@ if (_art == "SheriffSpawn") then {
 	continue = false;
 	gettingcar = 0;
 	
-	actionPolice1 = player addaction ["[Take Land Vehicle From Storage]","retrieveVehicle.sqf",["SheriffSpawn"],1,false,true,"","player distance savepoint2s <= 3"];
+	[] call OL_Events_ActionToggle;
 };

@@ -4,6 +4,7 @@ loadNotFinsihed         = false;
 saveAvailable           = true;
 backupavailable         = true;
 gettingcar				      = 0;
+gettingairvehicle       = 0;
 INV_smscost		          = 100;
 add_civmoney		        = 1000;
 add_copmoney		        = 5000;
