@@ -310,4 +310,4 @@ civclassarray =
 "Dixon_PMC"
 ];
 civslavearray = ["Worker1","Worker2","Worker3","Worker4"];
-civworkerarray = ["Hooker1","Hooker2","Hooker3","RU_Hooker1","RU_Hooker2","RU_Hooker3","RU_Hooker4"];
+civworkerarray = ["Hooker1","Hooker2","Hooker3","RU_Hooker1","RU_Hooker2","RU_Hooker3","RU_Hooker4"]; 

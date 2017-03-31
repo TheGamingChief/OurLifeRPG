@@ -1,3 +1,5 @@
+//player groupchat format["%1", _text];
+
 _this = _this select 3;
 _art  = _this select 0;
 
@@ -71,26 +73,26 @@ if(!gangmember)exitwith{player groupchat "you are not in a gang!"};
 
 for "_c" from 0 to (count gangsarray - 1) do
 
-	{
+ {
 
-	_gangarray = gangsarray select _c;
-	_gang	   = _gangarray select 0;
-	_members   = _gangarray select 1;
-	_name	   = name player;
+ _gangarray = gangsarray select _c;
+ _gang	   = _gangarray select 0;
+ _members   = _gangarray select 1;
+ _name	   = name player;
 
-	if(_name in _members)then
+ if(_name in _members)then
 
-		{
+	 {
 
-		_members = _members - [_name];
-		_gangarray set[1, _members];
-		format['gangsarray set[%1, %2]', _c, _gangarray] call OL_network_Swag;
-		player groupchat "you left your gang!";
-		gangmember=false;
+	 _members = _members - [_name];
+	 _gangarray set[1, _members];
+	 format['gangsarray set[%1, %2]', _c, _gangarray] call OL_network_Swag;
+	 player groupchat "you left your gang!";
+	 gangmember=false;
 
-		};
+	 };
 
-	};
+ };
 
 };
 
@@ -106,26 +108,26 @@ if(player == _civ)exitwith{player groupchat "you can't kick yourself, silly!"};
 
 for "_c" from 0 to (count gangsarray - 1) do
 
-	{
+ {
 
-	_gangarray = gangsarray select _c;
-	_gang	   = _gangarray select 0;
-	_members   = _gangarray select 1;
-	_name	   = name player;
+ _gangarray = gangsarray select _c;
+ _gang	   = _gangarray select 0;
+ _members   = _gangarray select 1;
+ _name	   = name player;
 
-	if(_name in _members)then
+ if(_name in _members)then
 
-		{
+	 {
 
-		_members = _members - [(name _civ)];
-		_gangarray set[1, _members];
-		format['if(player == %3)then{player groupchat "You have been kicked out of your gang!"; gangmember = false;}; gangsarray set[%1, %2]', _c, _gangarray, _civ] call OL_network_Swag;
+	 _members = _members - [(name _civ)];
+	 _gangarray set[1, _members];
+	 format['if(player == %3)then{player groupchat "You have been kicked out of your gang!"; gangmember = false;}; gangsarray set[%1, %2]', _c, _gangarray, _civ] call OL_network_Swag;
 
-		};
+	 };
 
-	player groupchat format["you kicked %1 from your gang!", name _civ];
+ player groupchat format["you kicked %1 from your gang!", name _civ];
 
-	};
+ };
 
 };
 
@@ -139,24 +141,24 @@ _bool = call compile format["%1", _this select 1];
 
 for "_c" from 0 to (count gangsarray - 1) do
 
-	{
+ {
 
-	_gangarray = gangsarray select _c;
-	_gang	   = _gangarray select 0;
-	_members   = _gangarray select 1;
-	_name	   = name player;
+ _gangarray = gangsarray select _c;
+ _gang	   = _gangarray select 0;
+ _members   = _gangarray select 1;
+ _name	   = name player;
 
-	if(_name in _members)then
+ if(_name in _members)then
 
-		{
+	 {
 
-		_gangarray set[2, _bool];
-		format['gangsarray set[%1, %2]', _c, _gangarray] call OL_network_Swag;
-		if(_bool)then{player groupchat "civilians can now join your gang"}else{player groupchat "civilians can no longer join your gang"};
+	 _gangarray set[2, _bool];
+	 format['gangsarray set[%1, %2]', _c, _gangarray] call OL_network_Swag;
+	 if(_bool)then{player groupchat "civilians can now join your gang"}else{player groupchat "civilians can no longer join your gang"};
 
-		};
+	 };
 
-	};
+ };
 
 };
 
@@ -172,80 +174,80 @@ startgroup = group player;
 
 for "_c" from 0 to (count gangsarray - 1) do
 
-	{
+ {
 
-	_gangarray = gangsarray select _c;
-	_gang	   = _gangarray select 0;
-	_members   = _gangarray select 1;
-	_name	   = name player;
+ _gangarray = gangsarray select _c;
+ _gang	   = _gangarray select 0;
+ _members   = _gangarray select 1;
+ _name	   = name player;
 
-	if(_name in _members and iscop)then
+ if(_name in _members and iscop)then
 
-		{
+	 {
 
-		_members = _members - [_name];
-		_gangarray set[1, _members];
-		format['gangsarray set[%1, %2]', _c, _gangarray] call OL_network_Swag;
+	 _members = _members - [_name];
+	 _gangarray set[1, _members];
+	 format['gangsarray set[%1, %2]', _c, _gangarray] call OL_network_Swag;
 
-		};
+	 };
 
-	};
+ };
 
 while {isciv} do
 
-	{
+ {
 
-	for "_c" from 0 to (count gangsarray - 1) do
+ for "_c" from 0 to (count gangsarray - 1) do
 
-		{
+	 {
 
-		_gangarray = gangsarray select _c;
-		_gang	   = _gangarray select 0;
-		_members   = _gangarray select 1;
+	 _gangarray = gangsarray select _c;
+	 _gang	   = _gangarray select 0;
+	 _members   = _gangarray select 1;
 
-		if(count _members > 0) then
+	 if(count _members > 0) then
 
-			{
+		 {
 
-			_leader    = _members select 0;
-			_lunit	   = [_leader, civarray] call INV_findunit;
-			if(isnull _lunit and !(player in (units startgroup)))then{[player] joinsilent startgroup};
-			if(isnull _lunit)exitwith{};
-			_group	   = group _lunit;
-			_name      = name player;
+		 _leader    = _members select 0;
+		 _lunit	   = [_leader, civarray] call INV_findunit;
+		 if(isnull _lunit and !(player in (units startgroup)))then{[player] joinsilent startgroup};
+		 if(isnull _lunit)exitwith{};
+		 _group	   = group _lunit;
+		 _name      = name player;
 
-			if(leader _group != _lunit)then{_group selectleader _lunit};
-			if(player == _lunit and !gangleader)then{gangleader = true; [player] joinsilent startgroup;};
-			if(gangleader and player != _lunit and _name in _members)then{gangleader = false};
-			if(_name in _members and !gangmember)then{gangmember = true};
-			if(_name in _members and gangmember)then{_mygang = _gang; _mymembers = _members};
-			//if(_name in _members and player != _lunit and !(player in (units _group))) then {[player] joinsilent _group;};
+		 if(leader _group != _lunit)then{_group selectleader _lunit};
+		 if(player == _lunit and !gangleader)then{gangleader = true; [player] joinsilent startgroup;};
+		 if(gangleader and player != _lunit and _name in _members)then{gangleader = false};
+		 if(_name in _members and !gangmember)then{gangmember = true};
+		 if(_name in _members and gangmember)then{_mygang = _gang; _mymembers = _members};
+		 //if(_name in _members and player != _lunit and !(player in (units _group))) then {[player] joinsilent _group;};
 
-			};
+		 };
 
-		};
+	 };
 
-	//if(!gangmember and !(player in (units startgroup)))then{[player] joinsilent startgroup};
-	for "_c" from 0 to (count gangareas - 1) do
-	{
+ //if(!gangmember and !(player in (units startgroup)))then{[player] joinsilent startgroup};
+ for "_c" from 0 to (count gangareas - 1) do
+ {
 
-		_gangarea = gangareas select _c;
-		_control  = _gangarea getvariable "control";
+	 _gangarea = gangareas select _c;
+	 _control  = _gangarea getvariable "control";
 
-		if(IsNil "_control")exitWith
-		{
-			//if(getplayeruid player in Developer_id) then {player sideChat "[Dev] Gang Error"};
-		};
+	 if(IsNil "_control")exitWith
+	 {
+		 //if(getplayeruid player in Developer_id) then {player sideChat "[Dev] Gang Error"};
+	 };
 
-		if(player distance _gangarea < 10 and (getpos _gangarea select 2) < 0 and _control == (call INV_mygang)) then
-		{
-			_gangarea setpos [getpos _gangarea select 0, getpos _gangarea select 1, (getpos _gangarea select 2) + 0.1];
-		};
-	};
+	 if(player distance _gangarea < 10 and (getpos _gangarea select 2) < 0 and _control == (call INV_mygang)) then
+	 {
+		 _gangarea setpos [getpos _gangarea select 0, getpos _gangarea select 1, (getpos _gangarea select 2) + 0.1];
+	 };
+ };
 
-	sleep 1;
+ sleep 1;
 
-	};
+ };
 
 };
 
@@ -257,37 +259,37 @@ _counter = 0;
 
 while {true} do
 
-	{
+ {
 
-	for "_c" from 0 to (count gangsarray - 1) do
+ for "_c" from 0 to (count gangsarray - 1) do
 
-		{
+	 {
 
-		_gangarray = gangsarray select _c;
-		_members   = _gangarray select 1;
+	 _gangarray = gangsarray select _c;
+	 _members   = _gangarray select 1;
 
-		if(_counter >= gangdeltime and count _members == 0)exitwith{format['gangsarray set[%1, 0]; gangsarray = gangsarray - [0];', _c] call OL_network_Swag};
+	 if(_counter >= gangdeltime and count _members == 0)exitwith{format['gangsarray set[%1, 0]; gangsarray = gangsarray - [0];', _c] call OL_network_Swag};
 
-		_lname	   = _members select 0;
+	 _lname	   = _members select 0;
 
-		if(isnull ([_lname, playerarray] call INV_findunit))then
+	 if(isnull ([_lname, playerarray] call INV_findunit))then
 
-			{
+		 {
 
-			_members = _members - [_lname];
-			_gangarray set[1, _members];
-			format['gangsarray set[%1, %2]', _c, _gangarray] call OL_network_Swag;
+		 _members = _members - [_lname];
+		 _gangarray set[1, _members];
+		 format['gangsarray set[%1, %2]', _c, _gangarray] call OL_network_Swag;
 
-			};
+		 };
 
-		};
+	 };
 
-	if(_counter >= gangdeltime)then{_counter = 0};
+ if(_counter >= gangdeltime)then{_counter = 0};
 
-	_counter = _counter + 60;
+ _counter = _counter + 60;
 
-	sleep 60;
+ sleep 60;
 
-	};
+ };
 
 };

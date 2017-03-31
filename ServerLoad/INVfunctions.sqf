@@ -713,9 +713,7 @@ INV_findunit = {
 	_arr    = _this select 1;
 	_unit   = objnull;
 
-	if (isNil "_name") exitWith {
-		format['if (getPlayerUID player in SwagDevs) then { player sideChat "Error With (INV_findUnit) - _Name: %1 - _Arr: %2"};', _name, _arr] call OL_network_Swag
-	};
+	if (isNil "_name") exitWith {_unit};
 
 	for "_i" from 0 to (count _arr - 1) do {
 		_obj = _arr select _i;

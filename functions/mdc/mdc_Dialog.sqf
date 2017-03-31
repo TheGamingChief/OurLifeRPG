@@ -6,7 +6,7 @@ switch(_screen)do{
 	case "view":
 	{
 		_unit = _this select 2;
-		_warrants 	=	 _unit getVariable ["Warrants", []];
+		_warrants 	=	 _unit getVariable ["PlayerWarrants", []];
 		_licenses= _unit getVariable["Licenses",[]];
 		_vehicles = _unit getVariable["Cars", []];
 		_notes	  = _unit getVariable ["Notes", []];
@@ -21,7 +21,7 @@ switch(_screen)do{
 		lbAdd[1500, "------  WARRANTS  ------"];
 		if(count(_warrants) > 0)then{
 			{
-				lbAdd[1500, _x];
+				lbAdd[1500, format["%1 (x%2)", _x select 0, _x select 1]];
 			}foreach _warrants;
 		}else{
 			lbAdd[1500, "No warrants to show."];
@@ -33,9 +33,9 @@ switch(_screen)do{
 			{
 				lbAdd[1500, _x];
 			}foreach _licenses;
-		}else{	
+		}else{
 			lbAdd[1500, "No licenses to show."];
-		};		
+		};
 		lbaDD[1500, ""];
 		lbAdd[1500, "------  NOTES  ------"];
 		if(count(_notes) > 0)then{
@@ -48,7 +48,7 @@ switch(_screen)do{
 
 		lbAdd[1500, ""];
 		lbAdd[1500, ""];
-	};	
+	};
 	default{
 		_dl = createDialog "DD_PolicePC";
 

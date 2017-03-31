@@ -15,6 +15,7 @@ DD_Modules = DD_Modules + [
   ["OL",          "fnc",  "ZipTie",           1],
   ["OL",          "fnc",  "PutInCar",         1],
   ["OL",          "fnc",  "PatDown",          1],
+  ["OL",          "fnc",  "NoScript",         1],
   ["OL",          "fnc",  "HolsterWeapon",    1],
   ["DD",          "fnc",  "Holster",          1],
   ["DD",          "fnc",  "Message",          1],

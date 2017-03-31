@@ -3,6 +3,7 @@ waitUntil {!isNil "OL_InitComplete"};
 waitUntil {OL_InitComplete};
 
 [[5, format["// %1 Has Joined Our Life RPG as %2!", name player, player]], "OL_misc_ChatMessage", true, false] call OL_network_MP;
+[['publicVariable "gangsarray"'], "OL_fnc_NoScript", false, false] call OL_network_MP;
 
 _iterations = 0;
 
