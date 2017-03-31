@@ -269,7 +269,9 @@ INV_UsingCarshop		     = 0;
 
 resetJailCode = {
   armat_JailCode = [5] call CP_misc_GetRandomCode;
+  armat_RandomCode = armat_JailCode call OL_isse_str_StrToArr;
   publicVariable "armat_JailCode";
+  publicVariable "armat_RandomCode";
 
   player sideChat "You reset the Jail Code!";
   [[2, format["The jail code has been reset by %1!", name player]], "OL_misc_ChatMessage", west, false] call OL_Network_MP;
@@ -310,4 +312,4 @@ civclassarray =
 "Dixon_PMC"
 ];
 civslavearray = ["Worker1","Worker2","Worker3","Worker4"];
-civworkerarray = ["Hooker1","Hooker2","Hooker3","RU_Hooker1","RU_Hooker2","RU_Hooker3","RU_Hooker4"]; 
+civworkerarray = ["Hooker1","Hooker2","Hooker3","RU_Hooker1","RU_Hooker2","RU_Hooker3","RU_Hooker4"];
