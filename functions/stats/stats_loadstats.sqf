@@ -60,7 +60,7 @@ if (_key == "lolfuckya") then {
 	_isSWAT =          [_ranks select 13] call AM_Server_StrToArr; 	//Police
 	_isCoastGuard =    [_ranks select 14] call AM_Server_StrToArr; 	//Police
 	_isFTO =           [_ranks select 16] call AM_Server_StrToArr; 	//Police
-	_isCorrections =   [_ranks select 20] call AM_Server_StrToArr; 	//Police
+	//_isCorrections =   [_ranks select 20] call AM_Server_StrToArr; 	//Police
 	_isUndercover =    [_ranks select 15] call AM_Server_StrToArr; 	//Police
 
 	_PMCRank =         [_ranks select 7]  call AM_Server_StrToArr; 	//Civilian
@@ -316,9 +316,9 @@ if (_key == "lolfuckya") then {
 			if (_isFTO != 0) then {
 				FTO_id = [getplayeruid player];
 			};
-			if (_isCorrections != 0) then {
+			/*if (_isCorrections != 0) then {
 				Corrections_id = [getplayeruid player];
-			};
+			};*/
 			if (_isUndercover != 0) then {
 				Undercover_id = [getplayeruid player];
 			};
