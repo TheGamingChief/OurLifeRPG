@@ -1,5 +1,4 @@
-switch (_this select 0) do
-{
+switch (_this select 0) do {
   case "CLEAR_HELIPAD": {
     private["_vcl"];
     _vcl = (nearestobjects [getpos player, ["Air"], 5] select 0);

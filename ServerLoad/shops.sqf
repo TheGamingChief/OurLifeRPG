@@ -613,84 +613,6 @@ _copmedal =
 "supgrade5_pd"
 ];
 
-_corrections =
-[
-"HandCuffs",
-"Donut",
-"Gag",
-"Itembag",
-"medikit",
-"Binocular",
-"NVGoggles",
-"SmokeShell",
-"x26",
-"x26_Mag",
-"rh_p226_pd",
-"RH_15Rnd_9x19_usp_pd",
-"m4a1_cor",
-"m4a1_aim_cor",
-"30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_Corrections",
-"olrpg_policebus",
-"supgrade1",
-"supgrade2",
-"RepairKitsBreaksShops"
-];
-
-_corrections2 =
-[
-"HandCuffs",
-"Gag",
-"Donut",
-"Itembag",
-"medikit",
-"Binocular",
-"NVGoggles",
-"SmokeShell",
-"x26",
-"x26_Mag",
-"rh_p226_pd",
-"RH_15Rnd_9x19_usp_pd",
-"m4a1_cor",
-"m4a1_aim_cor",
-"RH_M4a1acog_cor",
-"30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_Corrections",
-"DD_FOR13Taurus_P_Corrections",
-"olrpg_policebus",
-"supgrade1",
-"supgrade2",
-"RepairKitsBreaksShops"
-];
-
-_corrections3 =
-[
-"HandCuffs",
-"Gag",
-"Itembag",
-"Donut",
-"medikit",
-"Binocular",
-"NVGoggles",
-"SmokeShell",
-"x26",
-"x26_Mag",
-"rh_p226_pd",
-"RH_15Rnd_9x19_usp_pd",
-"m4a1_cor",
-"m4a1_aim_cor",
-"RH_M4a1acog_cor",
-"30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_Corrections",
-"DD_FOR13Taurus_P_Corrections",
-"DD_DOD12Charger_P_P_Corrections",
-"olrpg_policebus",
-"supgrade1",
-"supgrade2",
-"supgrade3_pd",
-"RepairKitsBreaksShops"
-];
-
 //68
 _copk9p =
 [
@@ -1707,9 +1629,6 @@ INV_ItemShops = [
 [copcpt,"Captain Equipment",copcpt,ccarspawncpt,_copcpt,_copcpt,true],
 [copmedalbox,"Medal Recipients Equipment",copmedalbox,ccarspawnchief,_copmedal,_copmedal,true],
 [copchief,"Chief of Police Equipment",copchief,ccarspawnchief,_copchief,_copchief,true],
-[corbox,"Corrections Equipment",corbox,corvehspawn,_corrections,_corrections,true],
-[corsbox,"Corrections Supervisor",corsbox,corvehspawn,_corrections2,_corrections2,true],
-[corcbox,"Corrections Command",corcbox,corvehspawn,_corrections3,_corrections3,true],
 [copk9,"K-9 Officer",copk9,ck9spawn,_copk9,_copk9,true],
 [copk9p,"K-9 Probation",copk9p,ck9spawn,_copk9p,_copk9p,true],
 [copk9c,"K-9 Command",copk9c,ck9spawn,_copk9c,_copk9c,true],
