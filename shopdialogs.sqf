@@ -149,6 +149,7 @@ if(_infos call INV_getitemType == "item")then
 
 		_preis        	= _infos call INV_getitemSteuer;
 		_control = _shop getvariable "control";
+		if (isNil "_control") exitWith {};
 		if(_control == (call INV_mygang) and _infos call INV_getitemKindOf == "drug")then{_preis = 0};
 
 		};
