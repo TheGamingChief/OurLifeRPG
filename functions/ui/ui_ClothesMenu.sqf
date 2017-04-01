@@ -1,4 +1,4 @@
-private["_nearATM","_clothesArray","_index"];
+private ["_nearATM", "_clothesArray", "_index"];
 
 _nearStuff = nearestObjects [getPos player, ["tcg_atm", "olrpg_pdpilot"], 10] - [player];
 
