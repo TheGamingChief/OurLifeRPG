@@ -27,13 +27,6 @@ OL_SpawnPoints =  [
 ];
 
 OL_ATM_Clothes = [
-	[atmjail,
-		[
-			["olrpg_corcmduni",	"Corrections_ID", "Corrections Command Uniform"],
-			["olrpg_corsupuni",	"Corrections_ID", "Corrections Supervisor Uniform"],
-			["olrpg_corcuni",		"Corrections_ID", "Corrections Uniform"]
-		]
-	],
 	[copswatbank,
 		[
 			["olrpg_swatcom",		"SWAT_ID", "S.W.A.T. Command Uniform"],

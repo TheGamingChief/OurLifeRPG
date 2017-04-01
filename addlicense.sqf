@@ -32,7 +32,6 @@ if ((_art == "remove") or (_art == "add")) then {
 		if (_license == "Corporal_license" and !(_uid in Cpl_id)) exitWith { player groupChat "Restricted to the Corporals"};
 		if (_license == "fto_license" and !(_uid in FTO_id)) exitWith { player groupChat "Restricted to the Field Training Officers"};
 		if (_license == "K9_license" and !(_uid in K9_id)) exitWith { player groupChat "Restricted to K-9 Officers"};
-		if (_license == "cor_license" and !(_uid in Corrections_id)) exitWith { player groupChat "Restricted to Corrections Officers"};
 		if (_license == "PDAviation_license" and !(_uid in PDAviation_id)) exitWith { player groupChat "Restricted to Police Pilots"};
 		if (_license == "SWAT_license" and !(_uid in SWAT_id)) exitWith { player groupChat "Restricted to S.W.A.T. Officers"};
 		if (_license == "CoastGuard_license" and !(_uid in CoastGuard_id)) exitWith { player groupChat "Restricted to Coast Guard Authorized Personnel"};

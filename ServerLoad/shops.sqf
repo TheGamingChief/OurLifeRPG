@@ -555,6 +555,9 @@ _copcpt =
 "DD_DOD12Charger_U_P_Black",
 "DD_CHE15Suburban_U_P_DarkRed",
 "DD_CHE15Suburban_U_P_DarkBlue",
+"DD_FOR13Taurus_U_Black",
+"DD_FOR13Taurus_U_DarkBlue",
+"DD_FOR13Taurus_U_Red",
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd",
@@ -586,6 +589,9 @@ _copchief =
 "DD_DOD12Charger_U_P_Black",
 "DD_DOD15Charger_U_P_Black",
 "DD_DOD06charger_P_P",
+"DD_DOD16Challenger_P_P",
+"DD_DOD16Challenger_P_Blue",
+"DD_DOD16Challenger_P_Red",
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd",
@@ -841,15 +847,16 @@ _cid =
 "DD_CHE10Impala_U_P_DarkRed",			// Impala (Dark Red)
 "DD_CHE10Impala_U_P_Red",					// Impala (Red)
 "DD_CHE10Impala_U_P_DarkBlue",		// Impala (Dark Blue)
-"DD_CHE15Suburban_U_P_Black",			// Suburban (Black)
-"DD_CHE15Suburban_U_P_DarkRed",		// Suburban (Dark Red)
-"DD_CHE15Suburban_U_P_DarkBlue",	// Suburban (Dark Blue)
 "DD_DOD12Charger_U_P_DarkRed",		// Dodge Charger 2012 (Dark Red)
 "DD_DOD12Charger_U_P_Red",				// Dodge Charger 2012 (Red)
 "DD_DOD12Charger_U_P_DarkBlue",		// Dodge Charger 2012 (Dark Blue)
 "DD_DOD15Charger_U_P_DarkRed",		// Dodge Charger 2015 (Dark Red)
 "DD_DOD15Charger_U_P_Red",				// Dodge Charger 2015 (Red)
 "DD_DOD15Charger_U_P_DarkBlue",		// Dodge Charger 2015 (Dark Blue)
+"DD_CHE15Suburban_U_P_Black",			// Suburban (Black)
+"DD_CHE15Suburban_U_P_DarkRed",		// Suburban (Dark Red)
+"DD_CHE15Suburban_U_P_DarkBlue",	// Suburban (Dark Blue)
+"DD_BMWM5_P_P",										// 2013 BMW M5 (Black)
 "DD_FOR13Mustang_P_P",						// 2013 Ford Mustang (Black)
 "DD_FOR13Mustang_P_Blue",					// 2013 Ford Mustang (Blue)
 "DD_FOR13Mustang_P_Red",					// 2013 Ford Mustang (Red)

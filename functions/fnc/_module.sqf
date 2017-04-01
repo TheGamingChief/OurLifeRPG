@@ -41,5 +41,5 @@ DD_Modules = DD_Modules + [
   ["Chopshop",    "fnc",  "stripVehicle",     1],
   ["GunRunning",  "fnc",  "takeJob",          1],
   ["GunRunning",  "fnc",  "pickupShipment",   1],
-  ["GunRunning",  "fnc",  "deleverShipment",  1]
+  ["GunRunning",  "fnc",  "deliverShipment",  1]
 ];

@@ -103,7 +103,6 @@ if(_shop in _Medal and !((getPlayerUID player) in Chief_id)) exitwith {player gr
 if(_shop in _K9 and !((getPlayerUID player) in K9_id)) exitwith {player groupchat "You're not a K-9 Officer!"; closedialog 0};
 if(_shop in _PDAviation and !((getPlayerUID player) in PDAviation_id)) exitwith {player groupchat "You're not a Police Pilot!"; closedialog 0};
 if(_shop in _CID and !((getPlayerUID player) in Undercover_id)) exitwith {player groupchat "You're not a C.I.D Officer!"; closedialog 0};
-if(_shop in _COR and !((getPlayerUID player) in corrections_id)) exitwith {player groupchat "You're not a Corrections Officer!"; closedialog 0};
 if(_shop in _SWAT and !((getPlayerUID player) in SWAT_id)) exitwith {player groupchat "You're not a S.W.A.T. Officer!"; closedialog 0};
 if(_shop in _CoastGuard and !((getPlayerUID player) in CoastGuard_id)) exitwith {player groupchat "You're not Coast Guard Personnel!"; closedialog 0};
 if(_shop in _vipCop and !((getPlayerUID player) in Donate_id)) exitwith {player groupchat "You're not a donator!"; closedialog 0};

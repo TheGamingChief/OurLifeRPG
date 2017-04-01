@@ -118,7 +118,7 @@ fnc_KeyPress_5 = {
 	if(keyblock or vehicle player != player)exitwith{};
 	keyblock=true; [] spawn {sleep 3; keyblock=false;};
 	player groupChat "You are throwing the spikes!";
-	sleep 3;
+	uiSleep 1;
 	["use", "spikestrip"] execvm "createobject.sqf";
 };
 
