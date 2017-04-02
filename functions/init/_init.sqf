@@ -6,7 +6,7 @@ if (isServer) then {execVM "ServerFiles\InitOLServer.sqf"};
 [playercount, rolenumber] call OL_network_SwagSetup;
 ["Exec Inv Variables", 20] 	call OL_Misc_LoadingSetText;
 
-waitUntil {!isNil "playerarray"};
+waitUntil {!isNil "playerarray" && !(isNil "iscop")};
 _h = [playerarray, playerstringarray, !iscop] execVM "ServerLoad\INVvars.sqf";
 waituntil{scriptDone  _h};
 ["Exec Bank", 30] 						call OL_Misc_LoadingSetText;
@@ -44,6 +44,7 @@ if (isClient) then {
 			[] call OL_events_Cop_KeyEvents;
 			[] call OL_events_Cop_Actions;
 			[] spawn OL_misc_ratioChecker;
+			/*[] spawn OL_misc_ratioKick;*/
 		};
 		case resistance: {
 			[] call OL_events_Ems_KeyEvents;

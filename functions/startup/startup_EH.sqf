@@ -12,14 +12,15 @@ player addEventHandler ["handleDamage", { _this call compile preprocessfile "set
 
 "OL_ServerCloudPacket" addPublicVariableEventHandler {
   _this = _this select 1;
-  if (_this == "VAR_NOT_FOUND") exitWith {};
 
-  switch (_this select 0) do {
-    case (format["%1_Warrants", getPlayerUID player]): {
-        player setVariable ["PlayerWarrants", _this select 1, true];
-    };
-    default {
-        call compile format["%1 = %2", _this select 0, _this select 1];
+  if (typeName _this == "ARRAY") then {
+    switch (_this select 0) do {
+      case (format["%1_Warrants", getPlayerUID player]): {
+          player setVariable ["PlayerWarrants", _this select 1, true];
+      };
+      default {
+          call compile format["%1 = %2", _this select 0, _this select 1];
+      };
     };
   };
 };
