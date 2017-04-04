@@ -953,6 +953,7 @@ INV_AlleFahrzeugeArray = [
 ["DD_FOR13Mustang_P_P",["Fahrzeug", "car"],["DD_FOR13Mustang_P_P", "2013 Ford Mustang (Black)"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["DD_FOR13Mustang_P_Blue",["Fahrzeug", "car"],["DD_FOR13Mustang_P_Blue", "2013 Ford Mustang (Blue)"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 ["DD_FOR13Mustang_P_Red",["Fahrzeug", "car"],["DD_FOR13Mustang_P_Red", "2013 Ford Mustang (Red)"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
+["DD_BMWM5_P_P",["Fahrzeug", "car"],["DD_BMWM5_P_P", "2013 BMW (Black)"],[25000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
 
 //APO
 ["DD_FOR13Taurus_P_APO",["Fahrzeug", "car"],["DD_FOR13Taurus_P_APO", "APO Interceptor"],[21000, 10000], [2, "PatrolBasic_license", "", 300], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]] ],
