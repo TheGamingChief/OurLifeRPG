@@ -85,11 +85,11 @@ if(_shop in _donor4 and !((getPlayerUID player) in Donate_id4)) exitwith {player
 if(_shop in _donor5 and !((getPlayerUID player) in Donate_id5)) exitwith {player groupchat "You're not a Tier 5 Donator!"; closedialog 0};
 if(_shop in _donor6 and !((getPlayerUID player) in Donate_id6)) exitwith {player groupchat "You're not a Tier 6 Donator!"; closedialog 0};
 
-if(_shop in _weaponx and !((getPlayerUID player) in TierX_id)) exitwith {player groupchat "You're not a Tier X Donator!"; closedialog 0};
-if(_shop in _carx and !((getPlayerUID player) in TierX_id)) exitwith {player groupchat "You're not a Tier X Donator!"; closedialog 0};
-if(_shop in _itemx and !((getPlayerUID player) in TierX_id)) exitwith {player groupchat "You're not a Tier X Donator!"; closedialog 0};
-if(_shop in _helix and !((getPlayerUID player) in TierX_id)) exitwith {player groupchat "You're not a Tier X Donator!"; closedialog 0};
-if(_shop in _boatx and !((getPlayerUID player) in TierX_id)) exitwith {player groupchat "You're not a Tier X Donator!"; closedialog 0};
+if(_shop in _weaponx and !((getPlayerUID player) in OL_TierX_ID)) exitwith {player groupchat "You're not a Tier X Donator!"; closedialog 0};
+if(_shop in _carx and !((getPlayerUID player) in OL_TierX_ID)) exitwith {player groupchat "You're not a Tier X Donator!"; closedialog 0};
+if(_shop in _itemx and !((getPlayerUID player) in OL_TierX_ID)) exitwith {player groupchat "You're not a Tier X Donator!"; closedialog 0};
+if(_shop in _helix and !((getPlayerUID player) in OL_TierX_ID)) exitwith {player groupchat "You're not a Tier X Donator!"; closedialog 0};
+if(_shop in _boatx and !((getPlayerUID player) in OL_TierX_ID)) exitwith {player groupchat "You're not a Tier X Donator!"; closedialog 0};
 
 if(_shop in _PO1 and !((getPlayerUID player) in PO1_id)) exitwith {player groupchat "You're not a Rookie Patrol Officer!"; closedialog 0};
 if(_shop in _PO2 and !((getPlayerUID player) in PO2_id)) exitwith {player groupchat "You're not a Patrol Officer!"; closedialog 0};

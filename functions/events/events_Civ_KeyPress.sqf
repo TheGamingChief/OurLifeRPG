@@ -63,7 +63,7 @@ fnc_KeyPress_7 = {
 
 	if(dialog)exitwith{closeDialog 0;};
 	if(!INV_shortcuts)exitwith{};
-	if ((getPlayerUID player) in SwagDevs) then {
+	if ((getPlayerUID player) in OL_SwagDevs) then {
 	createDialog "balca_debug_main";
 	};
 };
@@ -71,7 +71,7 @@ fnc_KeyPress_7 = {
 fnc_KeyPress_9 = {
 	if (dialog) exitWith {closeDialog 0;};
 	if (!INV_shortcuts) exitWith {};
-	if ((getPlayerUID player) in adminlevel4 || (getplayeruid player) in SwagDevs || (typeOf player == "Flyers_Mechanic") || (typeOf player == "Flyers_Mechanic_Vest") || (typeOf player == "Flyers_Supervisor") || (typeOf player == "Flyers_Supervisor_Vest")) then {
+	if ((getPlayerUID player) in adminlevel4 || (getplayeruid player) in OL_SwagDevs || (typeOf player == "Flyers_Mechanic") || (typeOf player == "Flyers_Mechanic_Vest") || (typeOf player == "Flyers_Supervisor") || (typeOf player == "Flyers_Supervisor_Vest")) then {
 	if (!AM_temp_carrying) then {[] call OL_checkpoint_openMenu;}else{[] call OL_checkpoint_dropItem;};
 	};
 };
@@ -83,14 +83,14 @@ fnc_KeyPress_Q = {
 		uiSleep AM_checkpoint_sleep;
 		keyblock = false;
 	};
-	if ((getPlayerUID player) in adminlevel4 || (getplayeruid player) in SwagDevs || (typeOf player == "Flyers_Mechanic") || (typeOf player == "Flyers_Mechanic_Vest") || (typeOf player == "Flyers_Supervisor") || (typeOf player == "Flyers_Supervisor_Vest")) then {
+	if ((getPlayerUID player) in adminlevel4 || (getplayeruid player) in OL_SwagDevs || (typeOf player == "Flyers_Mechanic") || (typeOf player == "Flyers_Mechanic_Vest") || (typeOf player == "Flyers_Supervisor") || (typeOf player == "Flyers_Supervisor_Vest")) then {
 		if (AM_temp_carrying) then { [] call OL_checkpoint_reBuy };
 	};
 };
 
 fnc_KeyPress_Home = {
 	closeDialog 0;
-	if ((getplayeruid player) in SwagDevs) then {
+	if ((getplayeruid player) in OL_SwagDevs) then {
 		[] call adminMenuOpen;
 	};
 };

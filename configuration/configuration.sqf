@@ -7,7 +7,7 @@ enableSaving [false, false];
 
 [] spawn {
   waitUntil{!isNil "ol_version"};
-  if (ol_version != 20170325) exitWith {
+  if (ol_version != 20170405) exitWith {
     titleText ["Addons out of date, you will be kicked in 10 seconds!", "Black"];
     uiSleep 10;
     player setVariable ["AddonsOutOfDate", true, true];

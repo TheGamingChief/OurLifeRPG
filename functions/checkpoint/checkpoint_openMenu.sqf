@@ -1,5 +1,5 @@
 switch (true) do {
-  case ((getPlayerUID player in SwagDevs) || (getPlayerUID player in adminlevel4)) : {
+  case ((getPlayerUID player in OL_SwagDevs) || (getPlayerUID player in adminlevel4)) : {
     classnames_total = Admin_classnames_total;
   };
   case (isCop) : {

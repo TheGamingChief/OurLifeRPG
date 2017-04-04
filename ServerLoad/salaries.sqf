@@ -55,7 +55,7 @@ if ((getPlayerUID player) in Donate_id) then
 			_income = _income + 1500;
 };
 
-if ((getPlayerUID player) in TierX_id) then
+if ((getPlayerUID player) in OL_TierX_ID) then
 
 {
 
@@ -133,7 +133,7 @@ if ((getPlayerUID player) in TopDonator_id) then
 {
 			_income = _income + 5000;
 };
-if ((getPlayerUID player) in TierX_id) then {
+if ((getPlayerUID player) in OL_TierX_ID) then {
 	_income = _income + 3000;
 };
 

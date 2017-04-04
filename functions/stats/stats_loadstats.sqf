@@ -115,7 +115,7 @@ if (_key == "lolfuckya") then {
 			Donate_id4 = [getplayeruid player];
 			Donate_id5 = [getplayeruid player];
 			Donate_id6 = [getplayeruid player];
-			TierX_id   =  [getplayeruid player];
+			OL_TierX_ID   =  [getplayeruid player];
 		};
 		case 8:{
 			Donate_id     = [getplayeruid player];
@@ -124,7 +124,7 @@ if (_key == "lolfuckya") then {
 			Donate_id4    = [getplayeruid player];
 			Donate_id5    = [getplayeruid player];
 			Donate_id6 	  = [getplayeruid player];
-			TierX_id 	    = [getplayeruid player];
+			OL_TierX_ID 	    = [getplayeruid player];
 			TopDonator_id = [getplayeruid player];
 		};
 	};
@@ -193,7 +193,7 @@ if (_key == "lolfuckya") then {
 			adminlevel4 = [getplayeruid player];
 		};
 		case 5:{
-			SwagDevs 	 	 = [getplayeruid player];
+			OL_SwagDevs 	 	 = [getplayeruid player];
 			Developer_id = [getplayeruid player];
 			isStaff 		 = true;
 			player globalChat "Loaded in as Admin";

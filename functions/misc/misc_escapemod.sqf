@@ -14,7 +14,7 @@ _enCtrl = [_abort] spawn {
 	_abort = _this select 0;
 	_stext = ctrlText _abort;
 	private["_i"];
-	if ((getPlayerUID player) in SwagDevs || (getPlayerUID player) in adminlevel4) exitWith {_abort ctrlEnable true;};
+	if ((getPlayerUID player) in OL_SwagDevs || (getPlayerUID player) in adminlevel4) exitWith {_abort ctrlEnable true;};
 
 	for "_i" from 10 to 1 step -1 do {
 		if (isnull (findDisplay 49)) exitWith {};
@@ -45,7 +45,7 @@ _enRespawn = [_Respawn] spawn {
 };
 
 if (player getVariable "KOED") then {
-	if ((getPlayerUID player) in SwagDevs || (getPlayerUID player) in adminlevel4) exitWith {};
+	if ((getPlayerUID player) in OL_SwagDevs || (getPlayerUID player) in adminlevel4) exitWith {};
 	_DeadText = format ["Currently Unconscious"];
 	_abort ctrlSetText _DeadText;
 	_abort ctrlEnable false;

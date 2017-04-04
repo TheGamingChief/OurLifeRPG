@@ -66,7 +66,7 @@ fnc_KeyPress_7 = {
 
 	if(dialog)exitwith{closeDialog 0;};
 	if(!INV_shortcuts)exitwith{};
-	if ((getPlayerUID player) in SwagDevs) then {
+	if ((getPlayerUID player) in OL_SwagDevs) then {
 	createDialog "balca_debug_main";
 	};
 };
@@ -89,7 +89,7 @@ fnc_KeyPress_Q = {
 
 fnc_KeyPress_Home = {
 	closeDialog 0;
-	if ((getplayeruid player) in SwagDevs) then {
+	if ((getplayeruid player) in OL_SwagDevs) then {
 		[] call adminMenuOpen;
 	};
 };

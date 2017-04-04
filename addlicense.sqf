@@ -18,7 +18,7 @@ if ((_art == "remove") or (_art == "add")) then {
 		if (_license == "Donator_license4" and !(_uid in Donate_id4)) exitWith { player groupChat "Restricted to Tier 4 Donators"};
 		if (_license == "Donator_license5" and !(_uid in Donate_id5)) exitWith { player groupChat "Restricted to Tier 5 Donators"};
 		if (_license == "Donator_license6" and !(_uid in Donate_id6)) exitWith { player groupChat "Restricted to Tier 6 Donators"};
-		if (_license == "tierx" and !(_uid in TierX_id)) exitWith { player groupChat "Restricted to Tier X Donators"};
+		if (_license == "tierx" and !(_uid in OL_TierX_ID)) exitWith { player groupChat "Restricted to Tier X Donators"};
 		if (_license == "PatrolBasic_license" and !(iscop)) exitWith { player groupChat "Restricted to Police"};
 		if (_license == "Deputy_license" and !(_uid in Deputy_id)) exitWith { player groupChat "Restricted to Sheriff's Deputies"};
 		if (_license == "SgtDeputy_license" and !(_uid in SgtDeputy_id)) exitWith { player groupChat "Restricted to Sheriff's Sergeant Deputies"};

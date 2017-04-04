@@ -1,7 +1,7 @@
 //Having to do execVM instead of OL_Admin_Confill_Swag FUNC
 //TODO: Ask DEADdem why
 
-if ((getPlayerUID player) in SwagDevs) exitWith {
+if ((getPlayerUID player) in OL_SwagDevs) exitWith {
 	[] execVM "functions\admin\admin_confill_swag.sqf";
 	_ok = createDialog "AdminPanel_Swag";
 };
