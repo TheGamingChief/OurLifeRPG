@@ -32,7 +32,7 @@ sleep 1;
 		{
 
 		//_gangarea setvariable["control", nil, true];
-		format["hint ""%1 has been neutralised by %2!"";", _gangarea1, _mygang] call broadcast_civ;
+		format["hint ""%1 has been neutralised by %2!"";", _gangarea1, _mygang] call OL_network_Swag_civ;
 
 		}; 
 
@@ -57,7 +57,7 @@ sleep 1;
 		{
 
 		_gangarea setvariable["control", _mygang, true];
-		format["hint ""%1 has been captured by %2!"";", _gangarea1, _mygang] call broadcast_civ;
+		format["hint ""%1 has been captured by %2!"";", _gangarea1, _mygang] call OL_network_Swag_civ;
 
 		}; 
 

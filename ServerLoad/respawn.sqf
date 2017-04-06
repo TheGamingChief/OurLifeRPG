@@ -1,9 +1,9 @@
 //Edit by Sgt Stewart <- Kys Edited By Garry.
 waitUntil {player getVariable "KOED"};
 player removeweapon "ItemGPS";
-execVM "briefing.sqf";
+[] spawn OL_misc_briefing;
 closeDialog 0;
-execVM "Scripts\Misc\DeathCall.sqf";
+[] spawn OL_phone_DeathCall;
 
 if (isciv) then {
 	for [{_i=0}, {_i < (count INV_InventarArray)}, {_i=_i+1}] do {
@@ -17,7 +17,7 @@ if (isciv) then {
 			} else {
 				_class = "Suitcase"
 			};
-			
+
 			_object = _class createvehicle position player;
 			_object setvariable ["droparray", [_amount, _item], true];
 		};
@@ -27,7 +27,7 @@ if (isciv) then {
 	if (player getVariable "Cuffed") then {
 			[nil,_man,rSwitchMove,"Normal"] call RE;
 	};
-	
+
 	shoveldur 				= 20;
 	pickaxedur				= 50;
 	hammerdur 				= 100;
@@ -52,7 +52,7 @@ if (isciv) then {
 		_civnum = player;
 		//player setpos getpos (respawnarray select (floor(random(count respawnarray))));
 	} else {
-		(format ["%1 switchmove ""%2"";", player, "ActsPercMstpSnonWrflDnon_interrogate02_forgoten"]) call broadcast;
+		(format ["%1 switchmove ""%2"";", player, "ActsPercMstpSnonWrflDnon_interrogate02_forgoten"]) call OL_network_Swag;
 		waituntil {animationstate player == "ActsPercMstpSnonWrflDnon_interrogate02_forgoten"};
 		["arrest", CivTimeInPrison, player] execVM "civmenu.sqf";
 	};
@@ -74,7 +74,7 @@ if(iscop) then {
 	_obj = "body" createvehicle [0, 0, 0];
 	_obj setdir getdir role;
 	_obj setpos _pos;
-	_obj setPosASL [ getPosASL role select 0, (getPosASL role select 1), getPosASL role select 2];
+	_obj setPosASL [getPosASL role select 0, (getPosASL role select 1), getPosASL role select 2];
 	hidebody role;
 	uiSleep 15;
 	waitUntil {alive player};

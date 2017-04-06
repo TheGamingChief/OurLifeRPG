@@ -3,88 +3,88 @@ private ["_maxweight"];
 if (isNil "INV_StorageSperre") then {INV_StorageSperre = false;};
 if (INV_StorageSperre) exitWith {player groupChat localize "STRS_inv_storage_spam";};
 INV_StorageSperre = true;
-_art      = _this select 0; 
-_arrname  = _this select 1; 
-_menge    = _this select 2;                
-if (!(_menge call ISSE_str_isInteger)) exitWith {player groupChat localize "STRS_inv_no_valid_number"; INV_StorageSperre = false;};
-_menge    = _menge call ISSE_str_StrToInt;  
-if (_menge <= 0) exitWith {INV_StorageSperre = false;};
+_art      = _this select 0;
+_arrname  = _this select 1;
+_amount    = _this select 2;
+if (!(_amount call OL_ISSE_str_isInteger)) exitWith {player groupChat localize "STRS_inv_no_valid_number"; INV_StorageSperre = false;};
+_amount    = _amount call OL_ISSE_StrToInt;
+if (_amount <= 0) exitWith {INV_StorageSperre = false;};
 _item     = _this select 3;
-_infos    = _item call INV_getitemArray;         
-_public   = _this select 4;         
-_arr      = call compile _arrname;  
-_vclStore = false;                  
-_vclClass = "";                     
-_packed   = false; 
+_infos    = _item call INV_getitemArray;
+_public   = _this select 4;
+_arr      = call compile _arrname;
+_vclStore = false;
+_vclClass = "";
+_packed   = false;
 _storageweight = 0;
 
-if (count (_this select 5) > 0) then 
+if (count (_this select 5) > 0) then
 
 {
 
-_extra = _this select 5; 
+_extra = _this select 5;
 
-if (_extra select 0 == "vcl") then 
+if (_extra select 0 == "vcl") then
 
 	{
 
-	_vclStore = true; 
+	_vclStore = true;
 	_vclClass = _extra select 1;
 	_maxweight = _vclClass call INV_getvehmaxkg;
-	
+
 	};
 
 };
 
 if (_art == "nehmen") then {
 
-if (not([_item, _menge] call INV_CanCarryItems)) then 
+if (not([_item, _amount] call INV_CanCarryItems)) then
 
 	{
 
 	player groupChat localize "STRS_inv_buyitems_get_zuschwer";
 
-	} 
-	else 
+	}
+	else
 	{
 
-	if ([_item, -(_menge), _arrname] call INV_AddItemStorage) then 
+	if ([_item, -(_amount), _arrname] call INV_AddItemStorage) then
 
 		{
 
 		_gridPos = mapGridPosition getpos player;
-		
-		if ((_item == "geld") && (_gridPos == "064060") && (vehicle player == player)) then 
+
+		if ((_item == "geld") && (_gridPos == "064060") && (vehicle player == player)) then
 		{
-		["money_picked_up_factory", format ["%1 (%2) has picked up $%3 at the vehicle factory (GRID: %4)", name player, getPlayerUID player, _menge, _gridPos]] call fn_RMLogToServer;
+		["money_picked_up_factory", format ["%1 (%2) has picked up $%3 at the vehicle factory (GRID: %4)", name player, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 		};
-		
-		if ((_item == "geld") && (_gridPos == "063060") && (vehicle player == player)) then 
+
+		if ((_item == "geld") && (_gridPos == "063060") && (vehicle player == player)) then
 		{
-		["money_picked_up_factory", format ["%1 (%2) has picked up $%3 at the vehicle factory (GRID: %4)", name player, getPlayerUID player, _menge, _gridPos]] call fn_RMLogToServer;
+		["money_picked_up_factory", format ["%1 (%2) has picked up $%3 at the vehicle factory (GRID: %4)", name player, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 		};
-		
-		if ((_item == "geld") && (_gridPos == "080054") && (vehicle player == player)) then 
+
+		if ((_item == "geld") && (_gridPos == "080054") && (vehicle player == player)) then
 		{
-		["money_picked_up_factory", format ["%1 (%2) has picked up $%3 at the weapons factory (GRID: %4)", name player, getPlayerUID player, _menge, _gridPos]] call fn_RMLogToServer;
+		["money_picked_up_factory", format ["%1 (%2) has picked up $%3 at the weapons factory (GRID: %4)", name player, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 		};
-		
-		if ((_item == "geld") && (_gridPos == "079054") && (vehicle player == player)) then 
+
+		if ((_item == "geld") && (_gridPos == "079054") && (vehicle player == player)) then
 		{
-		["money_picked_up_factory", format ["%1 (%2) has picked up $%3 at the Illegal Weapons factory (GRID: %4)", name player, getPlayerUID player, _menge, _gridPos]] call fn_RMLogToServer;
+		["money_picked_up_factory", format ["%1 (%2) has picked up $%3 at the Illegal Weapons factory (GRID: %4)", name player, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 		};
-		
-		if ((_item == "geld") && (vehicle player != player)) then 
+
+		if ((_item == "geld") && (vehicle player != player)) then
 		{
-		["money_picked_up_trunk", format ["%1 (%2) has picked up $%3 in a vehicle at GRID: %4", name player, getPlayerUID player, _menge, _gridPos]] call fn_RMLogToServer;
+		["money_picked_up_trunk", format ["%1 (%2) has picked up $%3 in a vehicle at GRID: %4", name player, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 		};
-	
-		[_item, _menge] call INV_AddInvItem; 
-		player groupChat format[localize "STRS_inv_storage_took", (_menge call ISSE_str_IntToStr)];
+
+		[_item, _amount] call INV_AddInvItem;
+		player groupChat format[localize "STRS_inv_storage_took", (_amount call OL_ISSE_str_IntToStr)];
 		_packed = true;
 
-		} 
-		else 
+		}
+		else
 		{
 
 		player groupChat localize "STRS_inv_storage_toomuch";
@@ -95,7 +95,7 @@ if (not([_item, _menge] call INV_CanCarryItems)) then
 
 };
 
-if (_art == "ablegen") then 
+if (_art == "ablegen") then
 
 {
 
@@ -103,21 +103,21 @@ if(_vclStore)then
 
 	{
 
-	_storageweight = ( (_arrname call INV_GetStorageWeight) + (_menge * (_infos call INV_getitemTypeKg)) );
-	
+	_storageweight = ( (_arrname call INV_GetStorageWeight) + (_amount * (_infos call INV_getitemTypeKg)) );
+
 	};
 
 if(_storageweight > _maxweight)exitwith{player groupchat "The vehicle's storage is full";};
 
-if 	
+if
 (
-(_arrname call INV_StorageIsFactory) and 
+(_arrname call INV_StorageIsFactory) and
 	(
-	(_item call INV_getitemKindOf != "ressource") and 
+	(_item call INV_getitemKindOf != "ressource") and
 	(_item call INV_getitemKindOf != "drug") and
-	(_item call INV_getitemKindOf != "geld") 
+	(_item call INV_getitemKindOf != "geld")
 	)
-) exitWith 
+) exitWith
 
 	{
 
@@ -125,51 +125,51 @@ if
 
 	};
 
-if (not([_item, -(_menge)] call INV_AddInvItem)) then 
+if (not([_item, -(_amount)] call INV_AddInvItem)) then
 
 	{
 
 	player groupChat localize "STRS_inv_storage_dropunablesomuch";
 
-	} 
-	else 
+	}
+	else
 	{
 
-	if ([_item, _menge, _arrname, _vclClass] call INV_AddItemStorage) then 
+	if ([_item, _amount, _arrname, _vclClass] call INV_AddItemStorage) then
 
 		{
 
-		player groupChat format[localize "STRS_inv_storage_dropped", (_menge call ISSE_str_IntToStr)];
+		player groupChat format[localize "STRS_inv_storage_dropped", (_amount call OL_ISSE_str_IntToStr)];
 		_packed = true;
 		_gridPos = mapGridPosition getpos player;
-		
-		if ((_item == "geld") && (_gridPos == "064060") && (vehicle player == player)) then 
+
+		if ((_item == "geld") && (_gridPos == "064060") && (vehicle player == player)) then
 		{
-		["money_dropped_factory", format ["%1 (%2) has dropped $%3 at the vehicle factory (GRID: %4)", name player, getPlayerUID player, _menge, _gridPos]] call fn_RMLogToServer;
-		};
-		
-		if ((_item == "geld") && (_gridPos == "063060") && (vehicle player == player)) then 
-		{
-		["money_dropped_factory", format ["%1 (%2) has dropped $%3 at the vehicle factory (GRID: %4)", name player, getPlayerUID player, _menge, _gridPos]] call fn_RMLogToServer;
-		};
-		
-		if ((_item == "geld") && (_gridPos == "080054") && (vehicle player == player)) then 
-		{
-		["money_dropped_factory", format ["%1 (%2) has dropped $%3 at the weapons factory (GRID: %4)", name player, getPlayerUID player, _menge, _gridPos]] call fn_RMLogToServer;
-		};
-		
-		if ((_item == "geld") && (_gridPos == "079054") && (vehicle player == player)) then 
-		{
-		["money_dropped_factory", format ["%1 (%2) has dropped $%3 at the Illegal Weapons factory (GRID: %4)", name player, getPlayerUID player, _menge, _gridPos]] call fn_RMLogToServer;
-		};
-		
-		if ((_item == "geld") && (vehicle player != player)) then 
-		{
-		["money_dropped_trunk", format ["%1 (%2) has dropped $%3 in a vehicle at GRID: %4", name player, getPlayerUID player, _menge, _gridPos]] call fn_RMLogToServer;
+		["money_dropped_factory", format ["%1 (%2) has dropped $%3 at the vehicle factory (GRID: %4)", name player, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 		};
 
-		} 
-		else 
+		if ((_item == "geld") && (_gridPos == "063060") && (vehicle player == player)) then
+		{
+		["money_dropped_factory", format ["%1 (%2) has dropped $%3 at the vehicle factory (GRID: %4)", name player, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+		};
+
+		if ((_item == "geld") && (_gridPos == "080054") && (vehicle player == player)) then
+		{
+		["money_dropped_factory", format ["%1 (%2) has dropped $%3 at the weapons factory (GRID: %4)", name player, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+		};
+
+		if ((_item == "geld") && (_gridPos == "079054") && (vehicle player == player)) then
+		{
+		["money_dropped_factory", format ["%1 (%2) has dropped $%3 at the Illegal Weapons factory (GRID: %4)", name player, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+		};
+
+		if ((_item == "geld") && (vehicle player != player)) then
+		{
+		["money_dropped_trunk", format ["%1 (%2) has dropped $%3 in a vehicle at GRID: %4", name player, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+		};
+
+		}
+		else
 		{
 
 		player groupChat localize "STRS_inv_storage_cannotdropsomuch";
@@ -180,19 +180,19 @@ if (not([_item, -(_menge)] call INV_AddInvItem)) then
 
 };
 
-if (_art == "delete") then 
+if (_art == "delete") then
 
 {
 
-if ([_item, -(_menge), _arrname] call INV_AddItemStorage) then 
+if ([_item, -(_amount), _arrname] call INV_AddItemStorage) then
 
 	{
 
-	player groupChat format[localize "STRS_inv_storage_deleted", (_menge call ISSE_str_IntToStr)];
+	player groupChat format[localize "STRS_inv_storage_deleted", (_amount call OL_ISSE_str_IntToStr)];
 	_packed = true;
 
-	} 
-	else 
+	}
+	else
 	{
 
 	player groupChat localize "STRS_inv_storage_toomuch";
@@ -201,19 +201,19 @@ if ([_item, -(_menge), _arrname] call INV_AddItemStorage) then
 
 };
 
-if (_art == "add") then 
+if (_art == "add") then
 
 {
 
-if 
+if
 (
-(_arrname call INV_StorageIsFactory) and 
+(_arrname call INV_StorageIsFactory) and
 	(
-	(_item call INV_getitemKindOf != "ressource") and 
+	(_item call INV_getitemKindOf != "ressource") and
 	(_item call INV_getitemKindOf != "drug") and
-	(_item call INV_getitemKindOf != "geld") 
+	(_item call INV_getitemKindOf != "geld")
 	)
-) exitWith 
+) exitWith
 
 	{
 
@@ -221,15 +221,15 @@ if
 
 	};
 
-if ([_item, _menge, _arrname, _vclClass] call INV_AddItemStorage) then 
+if ([_item, _amount, _arrname, _vclClass] call INV_AddItemStorage) then
 
 	{
 
-	player groupChat format[localize "STRS_inv_storage_dropped", (_menge call ISSE_str_IntToStr)];
+	player groupChat format[localize "STRS_inv_storage_dropped", (_amount call OL_ISSE_str_IntToStr)];
 	_packed = true;
 
-	} 
-	else 
+	}
+	else
 	{
 
 	player groupChat localize "STRS_inv_storage_cannotdropsomuch";
@@ -238,21 +238,21 @@ if ([_item, _menge, _arrname, _vclClass] call INV_AddItemStorage) then
 
 };
 
-if (_packed) then 
+if (_packed) then
 
 	{
 
 	if (_public == "public") then {publicVariable _arrname;};
-	
-	if (player == vehicle player) then 
+
+	if (player == vehicle player) then
 
 	{
 
-	format ["%1 playmove ""AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"";", player] call broadcast;
+	format ["%1 playmove ""AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"";", player] call OL_network_Swag;
 
 	};
 
-waituntil {animationstate player != "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}; 
+waituntil {animationstate player != "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"};
 
 };
 

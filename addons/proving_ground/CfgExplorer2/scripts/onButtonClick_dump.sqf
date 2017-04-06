@@ -27,7 +27,7 @@ _parseEnrty = {
 	_return
 };
 
-// 
+//
 // clear output box
 //
 ctrlSetText [_outputIDC,""];
@@ -43,7 +43,7 @@ ctrlSetText [_outputIDC,""];
 	}else{
 		_outText = _outText + format["class %1 {",configName _class] + _crlf;
 	};
-	
+
 
 	{
 		_Entry = _x;
@@ -61,4 +61,3 @@ ctrlSetText [_outputIDC,""];
 	_outText = _outText + "};" + _crlf;
 } forEach ([_curConfig,true] call _parseEnrty);
 ctrlSetText [_outputIDC,_outText];
-

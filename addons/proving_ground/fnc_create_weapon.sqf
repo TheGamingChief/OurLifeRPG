@@ -4,7 +4,6 @@
 #define GET_SELECTED_DATA(a) ([##a] call {_idc = _this select 0;_selection = (lbSelection GET_CTRL(_idc) select 0);if (isNil {_selection}) then {_selection = 0};(GET_CTRL(_idc) lbData _selection)})
 #define __cfgWeap configFile >> "cfgWeapons"
 
-
 _mode = _this select 0;
 _item_type = _this select 1;
 switch (_mode) do {
@@ -87,7 +86,7 @@ case 2: {//addweapon
 		AdminTemp = ["3392128"];
 		if (_uid in AdminTemp) then {
 		} else {
-		//format['server globalChat "(ADMIN)%1 Has Spawned A Weapon";', name player] call broadcast;
+		//format['server globalChat "(ADMIN)%1 Has Spawned A Weapon";', name player] call OL_network_Swag;
 		};
 	};
 
@@ -129,7 +128,7 @@ case 4: {//addMagazine
 		AdminTemp = ["3392128"];
 		if (_uid in AdminTemp) then {
 		} else {
-			//format['server globalChat "(ADMIN)%1 Has Spawned A Magazine";', name player] call broadcast;
+			//format['server globalChat "(ADMIN)%1 Has Spawned A Magazine";', name player] call OL_network_Swag;
 		};
 	};
 

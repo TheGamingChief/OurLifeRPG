@@ -36,7 +36,7 @@ while {alive _vcl and !isnull _vcl} do
 
 			{
 
-			if ((INV_PLAYERSTRINGLIST select _i) call ISSE_UnitExists) then 
+			if ((INV_PLAYERSTRINGLIST select _i) call OL_ISSE_UnitExists) then 
 
 				{
 

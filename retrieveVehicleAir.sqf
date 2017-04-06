@@ -1,29 +1,36 @@
-if (isNil {INV_SavedVehAir select 0}) then {
-player sideChat "You do not have any saved vehicles, currently!";
+_actionsToRemove = [];
 
-} else {
-_rtv = (INV_SavedVehAir select 0) call inv_getitemname;
-_rtv2 = (INV_SavedVehAir select 1) call inv_getitemname;
-_rtv3 = (INV_SavedVehAir select 2) call inv_getitemname;
-_rtv4 = (INV_SavedVehAir select 3) call inv_getitemname;
+if (isNil {INV_SavedVehAir select 0}) exitWith
+{
+	player sideChat "You do not have any saved vehicles, currently!";
+};
+
+if((count (nearestObjects [getPos AirSaveSpawn,["Ship","car","motorcycle","truck","Air"], 3]) > 0))exitWith
+{
+	player groupChat "There is a vehicle blocking the spawn!";
+};
+
 continue = false;
-vehicle2Spawn = test;
 
-player removeAction action222;
-player removeAction actionSave5;
-reTrieve = player addaction [_rtv,"noscript.sqf",'continue = true; vehicle2Spawn = (INV_SavedVehAir select 0);',1,true,true,"",'player distance AirSavePoint < 5'];
-reTrieve1 = player addaction [_rtv2,"noscript.sqf",'continue = true; vehicle2Spawn = (INV_SavedVehAir select 1);',1,true,true,"",'player distance AirSavePoint < 5'];
-reTrieve2 = player addaction [_rtv3,"noscript.sqf",'continue = true; vehicle2Spawn = (INV_SavedVehAir select 2);',1,true,true,"",'player distance AirSavePoint < 5'];
-reTrieve3 = player addaction [_rtv4,"noscript.sqf",'continue = true; vehicle2Spawn = (INV_SavedVehAir select 2);',1,true,true,"",'player distance AirSavePoint2 < 5'];
+for "_i" from 0 to (count INV_SavedVehAir - 1) do
+{
+	_rtv = (INV_SavedVehAir select _i) call INV_GetItemName;
+	_retriveTxt = format["retrive%1",_i];
+	_vehicle2Spawn = format["continue = true;vehicle2Spawn = (INV_SavedVehAir select %1);",_i];
+	_retriveTxt = player addAction [_rtv,"noscript.sqf",_vehicle2Spawn,1,true,true,"",'player distance AirSavePoint < 5'];
+	_actionsToRemove = _actionsToRemove + [_retriveTxt];
+};
+
+[] call OL_Events_ActionRemove;
+
+if(gettingairvehicle == 1)exitWith{"You are getting a air vehicle out of storage already..."};
+gettingairvehicle = 1;
 
 player sideChat "Select a vehicle from the scroll menu!";
 
 waituntil {continue};
 
-player removeAction reTrieve;
-player removeAction reTrieve1;
-player removeAction reTrieve2;
-player removeAction reTrieve3;
+{player removeAction _x;}forEach _actionsToRemove;
 
 player sideChat "RETRIEVING VEHICLE IN 3...";
 sleep 1;
@@ -34,20 +41,7 @@ sleep 1;
 
 _v = format ["vehicle_%1_%2",player,round(time)];
 
-	call compile format ['
-
-	newvehicle = vehicle2spawn createVehicle %4; 
-	newvehicle setVehicleInit "
-	this setVehicleVarName ""vehicle_%1_%2""; 
-	vehicle_%1_%2 = this; 
-	clearWeaponCargo this; 
-	clearMagazineCargo this;
-	newvehicle lock true;
-	"; 
-	processInitCommands;
-	INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2]; 
-	"INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call broadcast;
-	', player, round(time), INV_CALL_CREATVEHICLE, getpos AirSaveSpawn, getdir _logic];
+[vehicle2spawn, AirSaveSpawn] spawn INV_CreateVehicle;
 
 INV_SavedVehAir = INV_SavedVehAir - [vehicle2Spawn];
 
@@ -57,6 +51,5 @@ player sideChat format ["RETRIEVED %1",vehicle2spawn call inv_getitemname];
 
 sleep 3;
 continue = false;
-
-action222 = player addaction ["Retrieve Saved Air Vehicle","RetrieveVehicleAir.sqf",[],1,false,true,"","player distance AirSavePoint <= 3"];
-};
+gettingairvehicle = 0;
+[] call OL_Events_ActionToggle;

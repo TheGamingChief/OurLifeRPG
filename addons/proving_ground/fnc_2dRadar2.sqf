@@ -102,9 +102,9 @@ moptions =
 
 if (isnil "mapm") then 
 {
-	format['if(getplayeruid player in Developer_id) then {player sideChat "[Dev] Dev %1 has Toggled Tags ON"}',name player] call swag;
-	format['if(getplayeruid player in adminlevel4) then {player sideChat "[Admin Log] Dev %1 has Toggled Tags ON"}',name player] call swag;
-	["Admin_Log", format ["Admin %1 (%2) has Toggled Tags ON", name player, getPlayerUID player]] call fn_RMLogToServer;
+	format['if(getplayeruid player in Developer_id) then {player sideChat "[Dev] Dev %1 has Toggled Tags ON"}',name player] call OL_network_Swag;
+	format['if(getplayeruid player in adminlevel4) then {player sideChat "[Admin Log] Dev %1 has Toggled Tags ON"}',name player] call OL_network_Swag;
+	["Admin_Log", format ["Admin %1 (%2) has Toggled Tags ON", name player, getPlayerUID player]] call RM_fnc_LogToServer;
 
 	if (mautoaddmap and !("ItemMap" in items player)) then {player addweapon "ItemMap";};			
 	if (mautoaddgps and !("ItemGPS" in items player)) then {player addweapon "ItemGPS";};
@@ -162,9 +162,9 @@ else
 
 	sleep 0.1;
 	titleText ["Markers removed...","PLAIN DOWN"];titleFadeOut 2;
-	format['if(getplayeruid player in Developer_id) then {player sideChat "[Dev] Dev %1 has Toggled Tags OFF"}',name player] call swag;
-	format['if(getplayeruid player in adminlevel4) then {player sideChat "[Admin Log] Dev %1 has Toggled Tags OFF"}',name player] call swag;
-	["Admin_Log", format ["Admin %1 (%2) has Toggled Tags OFF", name player, getPlayerUID player]] call fn_RMLogToServer;
+	format['if(getplayeruid player in Developer_id) then {player sideChat "[Dev] Dev %1 has Toggled Tags OFF"}',name player] call OL_network_Swag;
+	format['if(getplayeruid player in adminlevel4) then {player sideChat "[Admin Log] Dev %1 has Toggled Tags OFF"}',name player] call OL_network_Swag;
+	["Admin_Log", format ["Admin %1 (%2) has Toggled Tags OFF", name player, getPlayerUID player]] call RM_fnc_LogToServer;
 };
  
 

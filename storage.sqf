@@ -51,7 +51,7 @@ if (_anzahl > 0) then
 
 	{
 
-	_index  = lbAdd [1, (format ["%1 (%2x, %3kg)", (_infos call INV_getitemName), (_anzahl call ISSE_str_IntToStr), (_infos call INV_getitemTypeKg)])];
+	_index  = lbAdd [1, (format ["%1 (%2x, %3kg)", (_infos call INV_getitemName), (_anzahl call OL_ISSE_str_IntToStr), (_infos call INV_getitemTypeKg)])];
 	lbSetData [1, _index, (format ["%1", _item])];
 
 	};
@@ -70,7 +70,7 @@ if ( (_anzahl > 0) and (_infos call INV_getitemDropable) ) then
 	
 	{ 
 
-	_index = lbAdd [101, (format ["%1 (%2kg, %3x)", (_infos call INV_getitemName), (_infos call INV_getitemTypeKg), (_anzahl call ISSE_str_IntToStr)])];
+	_index = lbAdd [101, (format ["%1 (%2kg, %3x)", (_infos call INV_getitemName), (_infos call INV_getitemTypeKg), (_anzahl call OL_ISSE_str_IntToStr)])];
 	lbSetData [101, _index, (format ["%1", _item])];
 
 	};
@@ -94,10 +94,10 @@ if (_cursel >= 0) then
         _anzahl = ((_arr select _cursel) select 1);
 	_infos  = _item call INV_getitemArray;
 	_slider = ctrlText 2;                      
-	if (!(_slider call ISSE_str_isInteger)) then {_slider = 0;};
-	_slider      = _slider call ISSE_str_StrToInt;  
+	if (!(_slider call OL_ISSE_str_isInteger)) then {_slider = 0;};
+	_slider      = _slider call OL_ISSE_StrToInt;  
 	if (_slider < 0) then {_slider = 0;};
-	CtrlSettext [3,  format [localize "STRS_inv_storagedialog_take", (_slider call ISSE_str_IntToStr), ((_slider*(_infos call INV_getitemTypeKg)) call ISSE_str_IntToStr)]];
+	CtrlSettext [3,  format [localize "STRS_inv_storagedialog_take", (_slider call OL_ISSE_str_IntToStr), ((_slider*(_infos call INV_getitemTypeKg)) call OL_ISSE_str_IntToStr)]];
 
 	} 
 	else 
@@ -114,10 +114,10 @@ if (_cursel >= 0) then
 		_anzahl = _item call INV_GetItemAmount;
 		_infos  = _item call INV_getitemArray;
 		_slider = ctrlText 102;
-                if (!(_slider call ISSE_str_isInteger)) then {_slider = "0";};
-		_slider = _slider call ISSE_str_StrToInt;  
+                if (!(_slider call OL_ISSE_str_isInteger)) then {_slider = "0";};
+		_slider = _slider call OL_ISSE_StrToInt;  
 		if (_slider < 0) then {_slider = 0;};
-		CtrlSettext [103,  format [localize "STRS_inv_storagedialog_drop", (_slider call ISSE_str_IntToStr), ((_slider*(_infos call INV_getitemTypeKg)) call ISSE_str_IntToStr)]];
+		CtrlSettext [103,  format [localize "STRS_inv_storagedialog_drop", (_slider call OL_ISSE_str_IntToStr), ((_slider*(_infos call INV_getitemTypeKg)) call OL_ISSE_str_IntToStr)]];
 
 		} 
 		else 

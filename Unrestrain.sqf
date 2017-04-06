@@ -11,7 +11,7 @@ if(animationstate player == "actspercmstpsnonwrfldnon_interrogate02_forgoten")th
 	{
 
 	player groupchat "You managed to free yourself!"; 
-	(format ["%1 switchmove ""%2"";", player, "amovppnemstpsnonwnondnon"]) call broadcast;
+	(format ["%1 switchmove ""%2"";", player, "amovppnemstpsnonwnondnon"]) call OL_network_Swag;
 
 	}else{player groupchat "ROLEPLAY the situation!"};
 

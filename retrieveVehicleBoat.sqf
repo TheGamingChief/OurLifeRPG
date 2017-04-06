@@ -43,7 +43,7 @@ _v = format ["vehicle_%1_%2",player,round(time)];
 	"; 
 	processInitCommands;
 	INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2]; 
-	"INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call broadcast;
+	"INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call OL_network_Swag;
 	', player, round(time), INV_CALL_CREATVEHICLE, getpos BoatSaveSpawn, getdir _logic];
 
 INV_SavedVehBoat = INV_SavedVehBoat - [vehicle2Spawn];

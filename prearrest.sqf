@@ -9,7 +9,7 @@ _vcl = (nearestobjects [getpos _cop, ["Air", "Ship", "LandVehicle"], 3] select 0
         {
             _target = _x;
         };
-		
+
 		if(animationstate _x == "civillying01") then
         {
             _target = _x;
@@ -20,7 +20,7 @@ if(isNull _target)then
 {
     _cop sideChat "No Civilians restrained Close to Vehicle";
 }else{
-    [_target,[_vcl, _target],"ClientArrest.sqf"] execVM "CB.sqf";
-	detach _target;
-	_target setVariable ["Escort",false,true];
+    format['if (player == %1) then {[%2,%1] execVM "ClientArrest.sqf"};',_target,_vcl] call OL_network_Swag;
+  	detach _target;
+  	_target setVariable ["Escorted",false,true];
 };

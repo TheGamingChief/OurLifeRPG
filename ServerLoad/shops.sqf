@@ -1,4 +1,4 @@
-﻿//AIDS
+//AIDS
 INV_itemstocks = [-1];
 INV_itemmaxstocks = [-1];
 //1. Shop items
@@ -28,7 +28,7 @@ _cs2 = ["MMT_USMC","tractor","oldtruc2","oldtruc2a"];
 //14. Sports Car Shop
 _sc1 = ["440cuda","roadrunner","roadrunner2","CHEVROLET_CAMARO_SS_396","chevrolet_chevelle","cuda","hemicuda","cd71hm","barcuda","fury","FORD_MUSTANG_SHELBY_COBRA","FORD_MUSTANG_SHELBY_COBRA1","FORD_MUSTANG_SHELBY_COBRA2","FORD_MUSTANG_SHELBY_COBRA3","FORD_GT","monaco_grey","monaco_blue","monaco_white","monaco_green","monaco_red","challenger_grey","challenger_blue","challenger_yellow","challenger_pink","challenger_white","challenger_green","challenger_red","challenger_orange"];
 //15
-_sc2 = 
+_sc2 =
 [
 	"DD_DOD12Charger_Black",		// 2012 Dodge Charger (Black)
 	"DD_DOD12Charger_Blue",			// 2012 Dodge Charger (Blue)
@@ -63,7 +63,7 @@ _sc2 =
 //16
 _sc3 = ["CHRYSLER_300","RENAULT_CLIO_SPORT_V6","SUBARU_IMPREZA_WRX_STI_AWD","SUBARU_IMPREZA_STI_AWD","FIAT_PUNTO","ALFA_ROMEO_BRERA","NISSAN_240SX_SE","PONTIAC_GTO_6"];
 //17
-_sc4 = ["MustangGTRyellow_MLOD","Convertible_MLOD","FORD_SHELBY_GT","CORVETTE_Z06","INFINITI_G35","MERCEDES_BENZ_CLK_500","MERCEDES_BENZ_SL_65_AMG","JAGUAR_XK","CADILLAC_CTS"];
+_sc4 = ["MustangGTRyellow_MLOD","Convertible_MLOD","FORD_SHELBY_GT","CORVETTE_Z06","INFINITI_G35","MERCEDES_BENZ_CLK_500","MERCEDES_BENZ_SL_65_AMG","JAGUAR_XK","CADILLAC_CTS","VIL_smart_civil","VIL_smart_civil1"];
 //18
 _sc5 = ["CL_PORSCHE_997","CL_LAMBORGHINI_GT3","KOENIGSEGG_CCX","KOENIGSEGG_CCX1","KOENIGSEGG_CCX2","KOENIGSEGG_CCX3","MCLAREN_F1","MERCEDES_BENZ_SLR","PORSCHE_997_GT3_RSR","PORSCHE_911_TURBO","PORSCHE_911_GT3_RS","LAMBORGHINI_MURCIELAGO","LAMBORGHINI_REVENTON","LAMBORGHINI_GALLARDO","MASERATI_MC12","JAGUAR_XK","BUGATTI_VEYRON","AUDI_TT_QUATTRO_S_LINE","AUDI_FSI_LE_MANS","PAGANI_ZONDA_F","ASTON_MARTIN_DB9"];
 //19
@@ -71,7 +71,7 @@ _sc6 = ["NISSAN_GTR_SPECV","NISSAN_GTR_SPECV1","NISSAN_GTR_SPECV2","NISSAN_GTR_S
 //20
 _sc7 = ["350z_red","350z_kiwi","350z_black","350z_silver","350z_green","350z_blue","350z_gold","350z_white","350z_pink","350z_mod","350z_ruben","350z_v","350z_yellow"];
 //21
-_sc8 = 
+_sc8 =
 [
 	"tcg_taurus_civ1",
 	"tcg_taurus_civ2",
@@ -98,7 +98,7 @@ _sc8 =
 	"DD_CHE10Impala_Yellow"			// Impala SS 2010 (Yellow)
 ];
 //22
-_sc9 = 
+_sc9 =
 [
 	"DD_BMWM5_Black",			// BMW M5 (Black)
 	"DD_BMWM5_Blue",			// BMW M5 (Blue)
@@ -130,7 +130,7 @@ _sc9 =
 //23. Tahoe shop
 _tahoe = ["tahoe_grey","tahoe_darkblue","tahoe_blue","tahoe_yellow","tahoe_white","tahoe_green","tahoe_black","tahoe_orange","tahoe_pink","tahoe_darkblue_cb","tahoe_grey_cb","tahoe_blue_cb","tahoe_yellow_cb","tahoe_pink_cb","tahoe_white_cb","tahoe_green_cb","tahoe_black_cb","tahoe_orange_cb"];
 //24. Pickup Shop -
-_ps = 
+_ps =
 [
 	"DD_FOR16F150_Black",			// 2016 Ford F150 (Black)
 	"DD_FOR16F150_Blue",				// 2016 Ford F150 (Blue)
@@ -229,7 +229,7 @@ _sts = [
 "h1_red",
 "transit_pink"
 ];
- 
+
 //31. Air Shop
 _as = ["V3S_Refuel_TK_GUE_EP1","V3S_Repair_TK_GUE_EP1","An2_1_TK_CIV_EP1","An2_2_TK_CIV_EP1","USEC_MAULE_M7_STD","gnt_piperwii","GNT_C185F","GNT_C185E","GNT_C185R","GNT_C185C","GNT_C185"];
 //32
@@ -253,9 +253,9 @@ _rs = ["gold","iron","copper","diamond rock","Sand"];
 //42. Jackos Cheesburgers
 _gds = ["bread","straw"];
 //43
-_gds1 = ["supgrade1","supgrade2","RepairKitsBreaksShops"];
-//44
-_gds3 = [];
+_gds1 = [];
+//44. OL_Shops_Wigsworth
+_wigs = ["supgrade1","supgrade2","RepairKitsBreaksShops"];
 //45. Oil Trader/Seller
 _os = ["OilBarrel","Oil"];
 //46. Whale Sale
@@ -274,17 +274,15 @@ _psc = ["medikit","pharm","GymMem1","GymMem2","cl_wheelchair"];
 _hsc = ["eyes","brain","liver","heart","kidney","bones","teeth"];
 //53
 _msc = ["meth","GymMem3","GymMem4"];
- 
+
 //54
 _copbasic =
 [
-"PDArmor",
 "HandCuffs",
 "Gag",
 "spikestrip",
 "Itembag",
 "medikit",
-"handy",
 "Binocular",
 "NVGoggles",
 "GPS",
@@ -294,7 +292,7 @@ _copbasic =
 "caralarm",
 "TreeFixer"
 ];
- 
+
 //55
 _coptraffic =
 [
@@ -310,11 +308,10 @@ _coptraffic =
 "bigbagfence",
 "bigbagfenceRound"
 ];
- 
+
 //56
 _copuntrained =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "RH_m9",
@@ -323,11 +320,10 @@ _copuntrained =
 "8Rnd_B_Beneli_Pellets",
 "DD_FOR06CV_P_P"
 ];
- 
+
 //57
 _coppo1 =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "rh_p226_pd",
@@ -339,11 +335,10 @@ _coppo1 =
 "DD_FOR06CV_P_P",
 "DD_CHE10Impala_P_P"
 ];
- 
+
 //58
 _coppo2 =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "rh_p226_pd",
@@ -356,11 +351,10 @@ _coppo2 =
 "DD_CHE10Impala_P_P",
 "DD_FOR13Taurus_P_P"
 ];
- 
+
 //59
 _coppo3 =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "rh_p226_pd",
@@ -375,11 +369,10 @@ _coppo3 =
 "DD_DOD12Charger_P_P",
 "supgrade3_pd"
 ];
- 
+
 //60
 _copcpl =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "rh_p226_pd",
@@ -397,11 +390,10 @@ _copcpl =
 "supgrade3_pd",
 "supgrade4_pd"
 ];
- 
+
 //61
 _copsgt =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "rh_p226_pd",
@@ -421,11 +413,10 @@ _copsgt =
 "supgrade3_pd",
 "supgrade4_pd"
 ];
- 
+
 //62
 _copdeputy =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "RH_python_sheriff",
@@ -443,7 +434,7 @@ _copdeputy =
 "supgrade2",
 "supgrade3_pd"
 ];
- 
+
 //62
 _copsheriffdnr =
 [
@@ -459,7 +450,6 @@ _copsheriffmks =
 
 _copsgtdeputy =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "RH_python_sheriff",
@@ -484,7 +474,6 @@ _copsgtdeputy =
 //63
 _copsheriff =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "RH_python_sheriff",
@@ -510,11 +499,10 @@ _copsheriff =
 "supgrade5_pd",
 "Bait_Kit"
 ];
- 
+
 //64
 _coplt =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "rh_p226_pd",
@@ -534,16 +522,17 @@ _coplt =
 "DD_DOD15Charger_P_P",
 "DD_CHE08Tahoe_P_P",
 "DD_CHE15Suburban_P_P",
+"DD_CHE15Suburban_U_P_DarkRed",
+"DD_CHE15Suburban_U_P_DarkBlue",
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd",
 "Bait_Kit"
 ];
- 
+
 //65
 _copcpt =
 [
-"PDArmor",
 "x26",
 "x26_Mag",
 "rh_p226_pd",
@@ -564,16 +553,20 @@ _copcpt =
 "DD_CHE08Tahoe_P_P",
 "DD_CHE15Suburban_P_P",
 "DD_DOD12Charger_U_P_Black",
+"DD_CHE15Suburban_U_P_DarkRed",
+"DD_CHE15Suburban_U_P_DarkBlue",
+"DD_FOR13Taurus_U_Black",
+"DD_FOR13Taurus_U_DarkBlue",
+"DD_FOR13Taurus_U_Red",
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd",
 "Bait_Kit"
 ];
- 
+
 //66
 _copchief =
 [
-"PDArmor",
 "MakarovSD",
 "8Rnd_9x18_MakarovSD",
 "RH_deaglemzb_cmd",
@@ -596,6 +589,9 @@ _copchief =
 "DD_DOD12Charger_U_P_Black",
 "DD_DOD15Charger_U_P_Black",
 "DD_DOD06charger_P_P",
+"DD_DOD16Challenger_P_P",
+"DD_DOD16Challenger_P_Blue",
+"DD_DOD16Challenger_P_Red",
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd",
@@ -622,85 +618,6 @@ _copmedal =
 "supgrade4_pd",
 "supgrade5_pd"
 ];
- 
-_corrections =
-[
-"PDArmor",
-"HandCuffs",
-"Donut",
-"Gag",
-"Itembag",
-"medikit",
-"Binocular",
-"NVGoggles",
-"SmokeShell",
-"x26",
-"x26_Mag",
-"rh_p226_pd",
-"RH_15Rnd_9x19_usp_pd",
-"m4a1_cor",
-"m4a1_aim_cor",
-"30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_Corrections",
-"olrpg_policebus",
-"supgrade1",
-"supgrade2",
-"RepairKitsBreaksShops"
-];
- 
-_corrections2 =
-[
-"HandCuffs",
-"Gag",
-"Donut",
-"Itembag",
-"medikit",
-"Binocular",
-"NVGoggles",
-"SmokeShell",
-"x26",
-"x26_Mag",
-"rh_p226_pd",
-"RH_15Rnd_9x19_usp_pd",
-"m4a1_cor",
-"m4a1_aim_cor",
-"RH_M4a1acog_cor",
-"30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_Corrections",
-"DD_FOR13Taurus_P_Corrections",
-"olrpg_policebus",
-"supgrade1",
-"supgrade2",
-"RepairKitsBreaksShops"
-];
-
-_corrections3 =
-[
-"HandCuffs",
-"Gag",
-"Itembag",
-"Donut",
-"medikit",
-"Binocular",
-"NVGoggles",
-"SmokeShell",
-"x26",
-"x26_Mag",
-"rh_p226_pd",
-"RH_15Rnd_9x19_usp_pd",
-"m4a1_cor",
-"m4a1_aim_cor",
-"RH_M4a1acog_cor",
-"30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_Corrections",
-"DD_FOR13Taurus_P_Corrections",
-"DD_DOD12Charger_P_P_Corrections",
-"olrpg_policebus",
-"supgrade1",
-"supgrade2",
-"supgrade3_pd",
-"RepairKitsBreaksShops"
-]; 
 
 //68
 _copk9p =
@@ -712,8 +629,8 @@ _copk9p =
 "LEXX_SCAR_L_CQC_BLACK_k9",
 "30Rnd_556x45_Stanag",
 "DD_FOR06CV_P_K9"
-]; 
- 
+];
+
 //68
 _copk9 =
 [
@@ -725,9 +642,10 @@ _copk9 =
 "LEXX_SCAR_L_CQC_Holo_BLACK_k9",
 "30Rnd_556x45_Stanag",
 "DD_FOR06CV_P_K9",
-"DD_DOD12Charger_P_P_K9"
+"DD_DOD12Charger_P_P_K9",
+"DD_FOR13Taurus_P_K9"
 ];
- 
+
 //68
 _copk9c =
 [
@@ -747,7 +665,7 @@ _copk9c =
 "DD_DOD12Charger_P_P_K9",
 "DD_CHE08Tahoe_P_K9"
 ];
- 
+
  //68.5
 _copk9sheriff =
 [
@@ -755,13 +673,13 @@ _copk9sheriff =
 "DD_DOD12Charger_P_SK9",
 "DD_CHE08Tahoe_P_SK9"
 ];
- 
+
 _copav3 =
 [
 "DD_CHE10Impala_P_P_APO",
 "DD_FOR13Taurus_P_APO"
 ];
- 
+
 //69
 _copav2 =
 [
@@ -774,7 +692,7 @@ _copav2 =
 "olrpg_swatmh6j",
 "olrpg_swatmh60s"
 ];
- 
+
 //70
 _copav1 =
 [
@@ -796,7 +714,7 @@ _copavsh =
 "30rnd_9x19_MP5",
 "olrpg_sdbell206"
 ];
- 
+
 //71.1
 _copswat1 =
 [
@@ -897,18 +815,19 @@ _copswat5 =
 "Stinger_swat",
 "Stinger_mag"
 ];
- 
+
 _copswat6 =
 [
 "RHIB",
 "Zodiac"
-]; 
- 
+];
+
 //72
 _copswatvehicle =
 [
 "DD_CHE08Tahoe_P_SWAT",
 "DD_CHE15Suburban_U_P_SWAT",
+"olrpg_swat_f350",
 "olrpg_swat_command",
 "olrpg_swat_bearcat"
 ];
@@ -920,27 +839,31 @@ _cid =
 "x26_Mag",
 "RH_p226_cid",
 "RH_15Rnd_9x19_usp",
-"RH_M16a4_cid",						// M16A4 Iron Sights
-"RH_M16A4aim_cid",					// M16A4 Aimpoint
-"RH_M16A4eotech_cid",				// M16A4 EOTech
-"RH_M16A4acog_cid",					// M16A4 Acog
-"30Rnd_556x45_Stanag",				// 30Rnd 5.56x45 Stanag Mag
-"DD_CHE10Impala_U_P_Black",			// Impala (Black)
-"DD_CHE10Impala_U_P_DarkRed",		// Impala (Dark Red)
-"DD_CHE10Impala_U_P_Red",			// Impala (Red)
+"RH_M16a4_cid",										// M16A4 Iron Sights
+"RH_M16A4aim_cid",								// M16A4 Aimpoint
+"RH_M16A4eotech_cid",							// M16A4 EOTech
+"RH_M16A4acog_cid",								// M16A4 Acog
+"30Rnd_556x45_Stanag",						// 30Rnd 5.56x45 Stanag Mag
+"DD_CHE10Impala_U_P_Black",				// Impala (Black)
+"DD_CHE10Impala_U_P_DarkRed",			// Impala (Dark Red)
+"DD_CHE10Impala_U_P_Red",					// Impala (Red)
 "DD_CHE10Impala_U_P_DarkBlue",		// Impala (Dark Blue)
-"DD_CHE15Suburban_U_P_Black",		// Suburban (Black)
-"DD_CHE15Suburban_U_P_DarkRed",		// Suburban (Dark Red)
-"DD_CHE15Suburban_U_P_DarkBlue",	// Suburban (Dark Blue)
 "DD_DOD12Charger_U_P_DarkRed",		// Dodge Charger 2012 (Dark Red)
-"DD_DOD12Charger_U_P_Red",			// Dodge Charger 2012 (Red)
+"DD_DOD12Charger_U_P_Red",				// Dodge Charger 2012 (Red)
 "DD_DOD12Charger_U_P_DarkBlue",		// Dodge Charger 2012 (Dark Blue)
 "DD_DOD15Charger_U_P_DarkRed",		// Dodge Charger 2015 (Dark Red)
-"DD_DOD15Charger_U_P_Red",			// Dodge Charger 2015 (Red)
+"DD_DOD15Charger_U_P_Red",				// Dodge Charger 2015 (Red)
 "DD_DOD15Charger_U_P_DarkBlue",		// Dodge Charger 2015 (Dark Blue)
+"DD_CHE15Suburban_U_P_Black",			// Suburban (Black)
+"DD_CHE15Suburban_U_P_DarkRed",		// Suburban (Dark Red)
+"DD_CHE15Suburban_U_P_DarkBlue",	// Suburban (Dark Blue)
+"DD_BMWM5_P_P",										// 2013 BMW M5 (Black)
+"DD_FOR13Mustang_P_P",						// 2013 Ford Mustang (Black)
+"DD_FOR13Mustang_P_Blue",					// 2013 Ford Mustang (Blue)
+"DD_FOR13Mustang_P_Red",					// 2013 Ford Mustang (Red)
 "Bait_Kit"
 ];
- 
+
 //73
 _copcoastguard =
 [
@@ -957,7 +880,7 @@ _copcoastguardair =
 "olrpg_sdhh60",
 "olrpg_sdmh60"
 ];
- 
+
 //73.5
 _copfto =
 [
@@ -967,8 +890,8 @@ _copfto =
 "DD_CHE10Impala_P_P",
 "DD_DOD12Charger_P_P",
 "DD_CHE08Tahoe_P_P"
-]; 
- 
+];
+
 //74
 _copvip =
 [
@@ -984,7 +907,7 @@ _copvip =
 "8Rnd_9x18_MakarovSD",
 "DD_FOR13Taurus_P_P"
 ];
- 
+
 //75
 _undercover =
 [
@@ -1013,7 +936,6 @@ _undercover =
 "Itembag",
 "bjerk",
 "medikit",
-"handy",
 "Binocular",
 "NVGoggles",
 "GPS",
@@ -1022,7 +944,7 @@ _undercover =
 "supgrade5_pd",
 "Bait_Kit"
 ];
- 
+
 //76
 _terrorshop =
 [
@@ -1042,36 +964,35 @@ _terrorshop =
 "RPG18_mag",
 "V3S_Reammo_TK_GUE_EP1"
 ];
- 
+
 //77
 _shady =
 [
 "lockpick",
 "ziptie",
-"burgl",
 "codeb",
 "Gag",
 "lighter"
 ];
- 
+
 //82
 _Donate = ["RepairKitsBreaksShops","medikit","supgrade1","LeeEnfieldmaf","x_303","donateRH_deagle","donateRH_browninghp","donateRH_mk22","donateRH_usp","donateRH_m1911","donateRH_m9","donateRH_g17","donateRH_g18","donateRH_g19","donateRH_mk2","donateRH_tt33","donateRH_vz61","donateRH_tec9","donateRH_muzi","donateRH_ppk","donateRH_p38","donateRH_p226","donateRH_anac","donateRH_bull","donateRH_python","donateRH_7Rnd_50_AE","donateRH_13Rnd_9x19_bhp","donateRH_8Rnd_9x19_Mk","donateRH_15Rnd_9x19_usp","donateRH_8Rnd_45cal_m1911","donate15Rnd_9x19_M9","donateRH_17Rnd_9x19_g17","donateRH_33Rnd_9x19_g18","donateRH_17Rnd_9x19_g19","donateRH_10Rnd_22LR_mk2","donateRH_8Rnd_762_tt33","donateRH_20Rnd_32cal_vz61","donateRH_30Rnd_9x19_tec","donateRH_32Rnd_9x19_Muzi","donateRH_7Rnd_32cal_ppk","donateRH_8Rnd_9x19_p38","donateRH_15Rnd_9x19_uspp","donateRH_6Rnd_43_Mag","donateRH_6Rnd_44_Mag","donateRH_6Rnd_357_Mag"];
- 
+
 //83
 _Donate2 = ["supgrade2","donateRH_ak47","donateRH_aks74u","donateRH_ak74","donateRH_ak103","donateRH_m4","donateRH_m4m","donateRH_m16a1","donateRH_mp5a4","donateRH_mp5k","donateRH_uzi","donate30Rnd_762x39_AK47","donate30Rnd_545x39_AK","donate30Rnd_9x19_MP5","donateRH_9mm_32RND_Mag","donate30Rnd_556x45_Stanag","DODGE_VIPER_SRT10","CORVETTE_Z06"];
- 
+
 //84
 _Donate3 = ["supgrade3","IRAfal","20Rnd_762x51_FNFAL","donateRH_mk22vsd","donateRH_uspsd","donateRH_m1911sd","donateRH_m9sd","donateRH_m9csd","donateRH_g19t","donateRH_m1911old","donateRH_m93r","donateRH_anacg","donateRH_p226s","donateRH_Deaglemzb","donateRH_8Rnd_9x19_Mksd","donateRH_8Rnd_45cal_m1911sd","donate15Rnd_9x19_M9SD","donateRH_15Rnd_9x19_uspsd","donateRH_17Rnd_9x19_g19","donateRH_15Rnd_9x19_uspp","donateRH_8Rnd_45cal_m1911","donateRH_6Rnd_43_Mag","donateRH_7Rnd_50_AE","m5_c_bgreen","m5_c_dblue","m5_c_lblue","m5_c_orange","m5_c_yellow"];
- 
+
 //85
 _Donate4 = ["supgrade4","donateRH_mp5a4aim","donateRH_mp5a4eot","donateRH_mp5a4rfx","donateRH_mp5sd6","donateRH_mp5sd6aim","donateRH_mp5sd6eot","donateRH_mp5sd6RFX","donateRH_kriss","donateRH_krissaim","donateRH_krisseot","donateRH_krissRFX","donateRH_krisssd","donateRH_krisssdaim","donateRH_krisssdeot","donateRH_krisssdRFX","donateRH_uzisd","donateRH_tmp","donateRH_tmpaim","donateRH_tmpeot","donateRH_tmpsd","donateRH_tmpsdaim","donateRH_tmpsdeot","donateRH_mp7","donateRH_mp7aim","donateRH_mp7eot","donateRH_mp7RFX","donateRH_mp7sd","donateRH_mp7sdaim","donateRH_mp7sdeot","donate30Rnd_9x19_MP54","donate30Rnd_9x19_MP5SD4","donateRH_45ACP_30RND_Mag","donateRH_45ACP_30RND_SD_Mag","donateRH_9mm_32RND_SD_Mag","donate30Rnd_9x19_TMP","donate30Rnd_9x19_TMPSD","donateRH_46x30mm_40RND_Mag","donateRH_46x30mm_40RND_SD_Mag","clbuggy"];
- 
+
 //86
 _Donate5 = ["supgrade5","donateRH_m4aim","donateRH_m4eotech","donateRH_m4acog","donateRH_m4maim","donateRH_m4meotech","donateRH_m4macog","donateRH_hk416aim","donateRH_hk416acog","donateRH_hk416eotech","donateRH_hk417aim","donateRH_hk417acog","donateRH_hk417eotech","donateRH_acracog","donateRH_acraim","donateRH_acreotech","MBG_Compound_Bow","donateRH_20Rnd_762x51_hk417","MBG_Arrow_HE","donate30Rnd_556x45_Stanag"];
- 
+
 //87
 _Donate6 = ["donateRH_m4sd","donateRH_m4sdaim","donateRH_m4sdacog","donateRH_m4sdeotech","donateRH_hk416sd","donateRH_hk416sdaim","donateRH_hk416sdeotech","donateRH_hk417sd","donateRH_hk417sdaim","donateRH_hk417sdacog","donateRH_hk417sdeotech","donateRH_massd","donateRH_massdacog","donateRH_massdaim","donateRH_massdeotech","donate30Rnd_556x45_StanagSD","donateRH_20Rnd_762x51_SD_hk417","donate30Rnd_556x45_Stanag"];
- 
+
 //91
 _VIPterror =
 [
@@ -1092,15 +1013,18 @@ _VIPterror =
 "FN_FAL_ANPVS4",
 "donate20Rnd_762x51_FNFAL"
 ];
- 
+
 //93
 _vipterrorairlist =
 [
 "UH1H_TK_EP1"
 ];
- 
+
 _weaponx =
 [
+"RH_mk18dcsdaim",
+"RH_mk18dcsdeot",
+"RH_mk18dcsdacog",
 "xRH_m93r",
 "15Rnd_9x19_M9SD",
 "donateRH_Deaglemzb",
@@ -1143,7 +1067,7 @@ _weaponx =
 "MBG_Compound_Bow",
 "xMBG_Arrow_HE"
 ];
- 
+
 _itemx =
 [
 "supgrade1",
@@ -1158,7 +1082,7 @@ _itemx =
 "GNT_ScubaW",
 "vclammo"
 ];
- 
+
 _carx =
 [
 "f350_black",
@@ -1213,7 +1137,7 @@ _carx =
 "Pickup_PK_TK_GUE_EP1",
 "SUV_TK_EP1"
 ];
- 
+
 _boatx =
 [
 "RHIB",
@@ -1229,7 +1153,7 @@ _boatx =
 "JMSDF_US2",
 "JMSDF_US1"
 ];
- 
+
 _helix =
 [
 "UH1H_TK_EP1",
@@ -1284,7 +1208,7 @@ _PMCAIR =
 "pmo_mh6dl_urban", //PMC LB
 "olrpg_pmcjayhunarmed" //Unarmed Jayhawk
 ];
- 
+
 _pistol =
 [
 "RH_g19t",
@@ -1318,7 +1242,7 @@ _pistol =
 "C1987_P99_black",
 "15Rnd_9x19_p99"
 ];
- 
+
 _sub =
 [
 "RH_muzi",
@@ -1328,7 +1252,7 @@ _sub =
 "RH_fmg9",
 "RH_9mm_32RND_Mag"
 ];
- 
+
 _rifle =
 [
 "Huntingrifle",
@@ -1356,7 +1280,7 @@ _guss =
 "RH_m14_guss",
 "20Rnd_762x51_DMR"
 ];
- 
+
 _gangshop_buy =
 [
 "RH_g19t",
@@ -1415,7 +1339,7 @@ M_rlrpgclothing_2 =
 "TK_INS_Soldier_TL_EP1",
 "TK_INS_Soldier_AA_EP1"
 ];
- 
+
 _td =
 [
 "olrpg_f350_ambo_untrained",
@@ -1520,6 +1444,8 @@ _td7 =
 
 _td8 =
 [
+"DD_DOD15Charger_U_F",
+"DD_CHE15Suburban_U_F",
 "olrpg_firemarshal_hub_tahoe",
 "olrpg_firemarshal_tahoe_slk",
 "olrpg_2006_firemarshal_slk",
@@ -1589,7 +1515,7 @@ _Tow4 =
 "il_towtruck",
 "cl_fuel_mackr"
 ];
- 
+
 INV_ItemShops = [
 [specbox,"Undercover Police Equipment",specbox,ccarspawnuc,_undercover,_undercover,true],
 [rlrpgclothingshop,"Civilian Clothing Shop",dummyobj,dummyobj,M_rlrpgclothing,M_rlrpgclothing,true],
@@ -1656,7 +1582,7 @@ INV_ItemShops = [
 [airshop3,"Commercial Air Shop",dummyobj,asairspawn,_asc,_asc,true],
 [AFP,"Dem Airoplanes Store",dummyobj,AFPspawn,_as,_as,true],
 [AFH,"Dem Helamacopters Store",dummyobj,AFHspawn,_assa,_assa,true],
-[scubashop, "Boat Shop",dummyobj,bs1spawn,_bs,_bs,true],      
+[scubashop, "Boat Shop",dummyobj,bs1spawn,_bs,_bs,true],
 [boatshop2, "Boat Shop",dummyobj,boatspawn2,_bs,_bs,true],
 [insure,"Insurance",insure,dummyobj,_ins, _emptyshop,false],
 [tdoc,"FireFighter 1",dummyobj,tdocspawn,_td4,_td4,true],
@@ -1676,8 +1602,7 @@ INV_ItemShops = [
 [tdoc8,"Fire Marshal Equipment",dummyobj,tdocspawn,_td8,_td8,true],
 [resourcesell,"Sell Resources",dummyobj,dummyobj,_rs,_rs,true],
 //[cheeseburger,"Jackos Cheeseburgers",dummyobj,dummyobj,_gds,_gds,true],
-[workplace_getjobflag_4,"OL Emporium",dummyobj,dummyobj,_gds1,_gds1,true],
-[workplace_getjobflag_6,"Wigworths",dummyobj,dummyobj,_gds3,_gds3,true],
+[OL_Shop_Wigsworth,"Wigworths",dummyobj,dummyobj,_wigs,_wigs,true],
 [OilSell1,"Oil Dealer", dummyobj,dummyobj, _emptyshop,_os,true],
 [whalesell,"Sell Whale",dummyobj,dummyobj,_emptyshop,_ws,true],
 [terrorbox,"Terror Stuff",terrorbox,vipterroraswpawn,_terrorshop,_terrorshop,true],
@@ -1712,9 +1637,6 @@ INV_ItemShops = [
 [copcpt,"Captain Equipment",copcpt,ccarspawncpt,_copcpt,_copcpt,true],
 [copmedalbox,"Medal Recipients Equipment",copmedalbox,ccarspawnchief,_copmedal,_copmedal,true],
 [copchief,"Chief of Police Equipment",copchief,ccarspawnchief,_copchief,_copchief,true],
-[corbox,"Corrections Equipment",corbox,corvehspawn,_corrections,_corrections,true],
-[corsbox,"Corrections Supervisor",corsbox,corvehspawn,_corrections2,_corrections2,true],
-[corcbox,"Corrections Command",corcbox,corvehspawn,_corrections3,_corrections3,true],
 [copk9,"K-9 Officer",copk9,ck9spawn,_copk9,_copk9,true],
 [copk9p,"K-9 Probation",copk9p,ck9spawn,_copk9p,_copk9p,true],
 [copk9c,"K-9 Command",copk9c,ck9spawn,_copk9c,_copk9c,true],

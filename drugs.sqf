@@ -3,17 +3,17 @@
 
 _art = _this select 0;
 
-if (_art == "init") then 
+if (_art == "init") then
 
 {
-	
+
 INV_drogenusesperre = 0;
 INV_drogen_usesperre = FALSE;
 INV_DrogenCounter = 0;
 
 };
-	
-if (_art == "use") then 
+
+if (_art == "use") then
 
 {
 
@@ -25,7 +25,7 @@ INV_DrogenCounter =  INV_DrogenCounter + _anzahl;
 [_item, -(_anzahl)] call INV_AddInvItem;
 _endeZeit = time + 60 + (_anzahl * 10);
 
-if (_item == "lsd") then 
+if (_item == "lsd") then
 
 	{
 
@@ -33,14 +33,14 @@ if (_item == "lsd") then
 	"wetDistortion" ppEffectAdjust [0.5, 1, 1, 4.1, 3.7, 2.5, 1.85, 0.0051, 0.0051, 0.0051, 0.0051, 0.5, 0.3, 10, 6.0];
 	"wetDistortion" ppEffectCommit 5;
 	"chromAberration" ppEffectEnable true;
-	"chromAberration" ppEffectAdjust [0.2,0.2,true]; 
+	"chromAberration" ppEffectAdjust [0.2,0.2,true];
 	"chromAberration" ppEffectCommit 1;
 
 	//"colorInversion" ppEffectEnable true;
 	//"colorInversion" ppEffectAdjust [1, 1, 1];
 	//"colorInversion" ppEffectCommit 1;
 
-	while {time < _endeZeit} do 
+	while {time < _endeZeit} do
 
 		{
 
@@ -58,38 +58,38 @@ if (_item == "lsd") then
 		_g1 = random 5;
 		_g2 = random 10;
 		_g3 = random 5;
-		
-		if (_w1 + _w2 > 100) then 
+
+		if (_w1 + _w2 > 100) then
 
 			{
 
 			_g1 = _g1 * 2;
 			_g2 = _g2 * 2;
 			_g3 = _g3 * 2;
-				
+
 			};
-				
+
 		_v1 = random 0.05;
 		_v2 = random 0.05;
 		_v3 = 0.1 - random 0.075;
 		Drop ["\ca\data\cl_basic", "", "Billboard", 1, 60, [_x + _w1, _y + _w2, _z + _w3], [_v1, _v2, _v3], 1, 1.275, 1, 0, [_g1, _g2, _g3], [ [_f1, _f2, _f3, 1], [_f2, _f1, _f3, 1], [_f3, _f2, _f1, 1] ], [0, 0, 0], 3, 0.2, "", "", ""];
 		sleep 0.001;
-			
+
 
 		};
-		
+
 
 	};
 
-if (_item == "Cocaine") then 
+if (_item == "Cocaine") then
 
 	{
 
-	while {time < _endeZeit} do 
+	while {time < _endeZeit} do
 
 		{
-        _player = player;
-		[_player,"coke"] call fn_netSay3D;
+    _player = player;
+		[_player,"coke",50] call CBA_fnc_globalSay3d;
 		_force = random 10;
 		"chromAberration" ppEffectEnable true;
 		"chromAberration" ppEffectAdjust [_force / 12, _force / 12, false];
@@ -102,76 +102,76 @@ if (_item == "Cocaine") then
 		sleep 0.2;
 		"chromAberration" ppEffectAdjust [0,0, true];
 		"chromAberration" ppEffectCommit (1.2 + random 0.4);
-		
-		sleep 1;		
-			
+
+		sleep 1;
+
 		};
-		
+
 	};
-		
-if (_item == "marijuana") then 
+
+if (_item == "marijuana") then
 
 	{
     _player = player;
-	[_player,"weed"] call fn_netSay3D;
+	[_player,"weed",50] call CBA_fnc_globalSay3d;
 	Flare = "SmokeShellGreen" createVehicle position player;
 	if (vehicle player != player) then { Flare attachTo [vehicle player,[0,0,0.]];}
 		else {Flare attachTo [player,[0,0,0.]];};
 
-	while {time < _endeZeit} do 
+	while {time < _endeZeit} do
 
 		{
-		
+
 		"colorCorrections" ppEffectEnable true;
-		"colorCorrections" ppEffectAdjust [1, 1, 0, [0,0,0,0.5], [random 5 - random 5,random 5 - random 5,random 5 - random 5,random 1], [random 5 - random 5,random 5 - random 5,random 5 - random 5, random 1]];  
-		"colorCorrections" ppEffectCommit 1;	
+		"colorCorrections" ppEffectAdjust [1, 1, 0, [0,0,0,0.5], [random 5 - random 5,random 5 - random 5,random 5 - random 5,random 1], [random 5 - random 5,random 5 - random 5,random 5 - random 5, random 1]];
+		"colorCorrections" ppEffectCommit 1;
 		"chromAberration" ppEffectEnable true;
-		"chromAberration" ppEffectAdjust [0.01,0.01,true]; 
+		"chromAberration" ppEffectAdjust [0.01,0.01,true];
 		"chromAberration" ppEffectCommit 1;
 
 		sleep 3;
-	
+
 		};
-		
+
 	};
 
-if (_item == "meth") then 
+if (_item == "meth") then
 
 	{
      _player = player;
-	[_player,"coke"] call fn_netSay3D;
+	[_player,"coke",50] call CBA_fnc_globalSay3d;
 	Flare = "SmokeShellred" createVehicle position player;
 	if (vehicle player != player) then { Flare attachTo [vehicle player,[0,0,0.]];}
 		else {Flare attachTo [player,[0,0,0.]];};
 
-	while {time < _endeZeit} do 
+	while {time < _endeZeit} do
 
 		{
-		
+
 		"colorCorrections" ppEffectEnable true;
-		"colorCorrections" ppEffectAdjust [1, 1, 0, [0,0,0,0.5], [random 5 - random 5,random 5 - random 5,random 5 - random 5,random 1], [random 5 - random 5,random 5 - random 5,random 5 - random 5, random 1]];  
-		"colorCorrections" ppEffectCommit 1;	
+		"colorCorrections" ppEffectAdjust [1, 1, 0, [0,0,0,0.5], [random 5 - random 5,random 5 - random 5,random 5 - random 5,random 1], [random 5 - random 5,random 5 - random 5,random 5 - random 5, random 1]];
+		"colorCorrections" ppEffectCommit 1;
 		"chromAberration" ppEffectEnable true;
-		"chromAberration" ppEffectAdjust [0.01,0.01,true]; 
+		"chromAberration" ppEffectAdjust [0.01,0.01,true];
 		"chromAberration" ppEffectCommit 1;
 
 		sleep 3;
-	
+
 		};
-		
+
 	};
-		
-		
+
+
 player groupChat localize "STRS_inv_item_druguse_ende";
 INV_drogenusesperre = 0;
 INV_DrogenCounter =  INV_DrogenCounter - _anzahl;
-	
+
 };
 
 "colorInversion" ppEffectEnable false;
 "wetDistortion" ppEffectEnable false;
-"colorCorrections" ppEffectAdjust [1, 1, 0, [0.5,0.5,0.5,0], [0.5,0.5,0.5,0], [0.5,0.5,0.5,0]]; 
+"colorCorrections" ppEffectAdjust [1, 1, 0, [0.5,0.5,0.5,0], [0.5,0.5,0.5,0], [0.5,0.5,0.5,0]];
 "colorCorrections" ppEffectCommit 10;
-waitUntil {ppEffectCommitted "colorCorrections"}; 
+waitUntil {ppEffectCommitted "colorCorrections"};
 "colorCorrections" ppEffectEnable false;
 "chromAberration" ppEffectEnable false;

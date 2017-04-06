@@ -1,33 +1,21 @@
 // "Function-Call" Script.
 // invActions.sqf
 
-INV_heal = 
-
-{
-
-if(_this == player)then
-
-	{
-
-	format ["%1 switchmove ""AinvPknlMstpSlayWrflDnon_medic"";", player] call broadcast;
-	player groupChat format[localize "STRS_inv_items_medikit_benutzung"];	
-	sleep 5;
-	player setdamage 0; 
-	player groupChat format[localize "STRS_inv_items_medikit_fertig"];
-
-	true;
-
-	}else{
-
-	format ["%1 switchmove ""AinvPknlMstpSlayWrflDnon_medic"";", _this] call broadcast;
-	player groupChat "Healing civ...";
-	sleep 5;
-	_this setdamage 0;
-	
-	true;
-
+INV_heal = {
+	if (_this == player) then {
+		format ["%1 switchmove ""AinvPknlMstpSlayWrflDnon_medic"";", player] call OL_network_Swag;
+		player groupChat format[localize "STRS_inv_items_medikit_benutzung"];
+		uiSleep 5;
+		player setDamage 0;
+		player groupChat format[localize "STRS_inv_items_medikit_fertig"];
+		true;
+	} else {
+		format ["%1 switchmove ""AinvPknlMstpSlayWrflDnon_medic"";", _this] call OL_network_Swag;
+		player groupChat "Healing civ...";
+		uiSleep 5;
+		_this setDamage 0;
+		true;
 	};
-
 };
 // Add Item to Inventory
 INV_AddInvItem = {
@@ -60,7 +48,7 @@ INV_AddItemStorage = {
 	_maxGewicht = -1;
 	_curGewicht = 0;
 	_addGewicht = 0;
-		
+
 	if (count _this > 3) then {
 		if (_Fextra != "") then {
 			_Fextra     = _this select 3;
@@ -69,7 +57,7 @@ INV_AddItemStorage = {
 			_addGewicht = (_Fitem call INV_getitemTypeKg) * _Fmenge;
 		};
 	};
-	
+
 	if ( (_maxGewicht < 0) or (_maxGewicht >= (_curGewicht+_addGewicht)) ) then {
 		for [{_i=0}, {_i < (count _Farr)}, {_i=_i+1}] do {
 			if (((_Farr select _i) select 0) == _Fitem) exitWith {
@@ -113,7 +101,7 @@ INV_GetStorageAmount = {
 	_Result = 0;
 	for [{_c=0}, {_c < (count _Array)}, {_c=_c+1}] do {
 		if (((_Array select _c) select 0) == _Itemname) exitWith {
-			_Result = ((_Array select _c) select 1); 
+			_Result = ((_Array select _c) select 1);
 		};
 	};
 
@@ -127,7 +115,7 @@ INV_ReturnAblage = {
 	if (isNil(_this)) then {_this call INV_StorageLeeren};
 	_Result = call compile _this;
 	_Result};
-	
+
 
 // Find Quantity of Items
 INV_getitemAmount = {([_this, "INV_InventarArray"] call INV_GetStorageAmount);};
@@ -138,36 +126,52 @@ INV_SetStorageAmount = {
 	private ["_c", "_Result", "_Itemname", "_Array", "_Arrayname", "_Anzahl"];
 	_Result    = false;
 	_Itemname  = _this select 0;
-	_Anzahl    = _this select 1;
+	_Amount    = _this select 1;
 	_Arrayname = _this select 2;
 	if (isNil(_Arrayname)) then {_Arrayname call INV_StorageLeeren};
 	_Array = call compile (_Arrayname);
 	for [{_c=0}, {_c < (count _Array)}, {_c=_c+1}] do {
 		if (((_Array select _c) select 0) == (_this select 0)) exitWith {
-			call compile format ["(%1 select %2) SET [1, %3];", _Arrayname, _c, _Anzahl];
+			call compile format ["(%1 select %2) SET [1, %3];", _Arrayname, _c, _Amount];
 			_Result = true;
 		};
 	};
-		
-	if ( (!(_Result)) and (_Anzahl != 0) ) then {
-		_Result = [_Itemname, _Anzahl, _Arrayname] call INV_AddItemStorage;
+
+	if ( (!(_Result)) and (_Amount != 0) ) then {
+		_Result = [_Itemname, _Amount, _Arrayname] call INV_AddItemStorage;
 	};
-		
+
 	_Result;
 };
-		
-	
+
+
 // Change Amount of Items
 INV_SetItemAmount = {
-	([(_this select 0), (_this select 1), "INV_InventarArray"] call INV_SetStorageAmount)};
-	INV_InventarLeeren = {
-		private ["_FremoveItemInfos"];
-		{
-			if ((_x select 0) call INV_getitemLooseable) then {[(_x select 0), 0] call INV_SetItemAmount;};
-		}
-		forEach INV_InventarArray;
-	};
-				
+	([(_this select 0), (_this select 1), "INV_InventarArray"] call INV_SetStorageAmount);
+	[] call INV_RemoveEmptyItems;
+};
+
+INV_InventarLeeren = {
+	{
+		if ((_x select 0) call INV_getitemLooseable) then {[(_x select 0), 0] call INV_SetItemAmount;};
+	}
+	forEach INV_InventarArray;
+};
+
+INV_RemoveEmptyItems = {
+	private ["_tmpArray"];
+	_tmpArray = [];
+	{
+	  if ((_x select 0) call INV_getitemLooseable) then {
+			if (_x select 1 > 0) then {
+				_tmpArray = _tmpArray + [_x];
+			};
+		} else {
+			_tmpArray = _tmpArray + [_x];
+		};
+	} forEach INV_InventarArray;
+	INV_InventarArray = _tmpArray;
+};
 
 // Check for a Type of Item in Storage
 INV_StorageHasKindOf = {
@@ -205,7 +209,7 @@ INV_StorageRemoveKindOf = {
 // Unknown
 INV_StorageLeeren = {
 	call compile format ["%1 = [];", _this];};
-	
+
 
 // Check Stored Item Weight
 INV_GetStorageWeight = {
@@ -225,8 +229,8 @@ INV_GetStorageWeight = {
 	};
 	_Fgewicht;
 };
-	
-	
+
+
 // Get Current Weight
 INV_GetOwnWeight = {("INV_InventarArray" call INV_GetStorageWeight)};
 
@@ -256,27 +260,27 @@ INV_RemoveIllegalStorage = {
 	_Arrayname = _this select 1;
 	_re        = false;
 	drugsvalue = 0;
-	
-	if ([_arrayname, "drug"] call INV_StorageHasKindOf) then 
+
+	if ([_arrayname, "drug"] call INV_StorageHasKindOf) then
 
 	{
-	
+
 	_array = call compile format["%1", _arrayname];
-		
-	for [{_i=0}, {_i < (count _Array)}, {_i=_i+1}] do 
+
+	for [{_i=0}, {_i < (count _Array)}, {_i=_i+1}] do
 
 		{
 
 		_item   = ((_Array select _i) select 0);
 		_infos  = _item call INV_getitemArray;
-		
+
 		if(_item call INV_getitemKindOf == "drug") then
 
 			{
-			
+
 			_amount = ([_item, _arrayname] call INV_GetStorageAmount);
 			_preis  = (_infos call INV_getitemBuyCost);
-		
+
 			drugsvalue = drugsvalue + (_preis*_amount);
 
 			};
@@ -285,7 +289,7 @@ INV_RemoveIllegalStorage = {
 
 	[_arrayname, "drug"] call INV_StorageRemoveKindOf;
 	_re = true;
-	(format ["if (player == %2) then {player groupChat ""%1 had drugs in its trunk, you removed them. You should jail the owner of %1 for %4 minutes or give him a ticket of $%5.""}; titletext [format[localize ""STRS_civmenucheck_haddrugs"", %1, %3], ""plain""];", _vcl, player, drugsvalue, ceil(drugsvalue/20000), ceil(drugsvalue/2)]) call broadcast;
+	(format ["if (player == %2) then {player groupChat ""%1 had drugs in its trunk, you removed them. You should jail the owner of %1 for %4 minutes or give him a ticket of $%5.""}; titletext [format[localize ""STRS_civmenucheck_haddrugs"", %1, %3], ""plain""];", _vcl, player, drugsvalue, ceil(drugsvalue/20000), ceil(drugsvalue/2)]) call OL_network_Swag;
 
 	}
 	else
@@ -313,7 +317,6 @@ INV_EntferneIllegales = {
    player REMOVEMAGAZINES "Mine";
    ["INV_InventarArray", "weapon"] call INV_StorageRemoveKindOf;
    ["INV_InventarArray", "Magazin"] call INV_StorageRemoveKindOf;
-   player removeAction unholsterPistol;
    saveWeaponPistol set [1,false];
    saveWeaponRifle = ["",false,false];
    HolsterArr = [];
@@ -323,7 +326,7 @@ INV_EntferneIllegales = {
    If (_Fhasnvgoogles == 1)  then {player addWeapon "NVGoggles";};
    If (_Fhasbinoculars == 1) then {player addWeapon "Binocular";};
    {
-      if ( ((_x select 0) call INV_getitemAmount) > 0) then 
+      if ( ((_x select 0) call INV_getitemAmount) > 0) then
       {
          if ((_x select 0) call INV_getitemIsIllegal) then {[(_x select 0), 0] call INV_SetItemAmount;};
       };
@@ -338,7 +341,7 @@ INV_StorageIsFactory = {
 	_result = false;
 	for [{_i=0}, {_i < (count INV_ItemFabriken)}, {_i=_i+1}] do {
 		if (((INV_ItemFabriken select _i) select 7) == _this) exitWith {
-			_result = true;	
+			_result = true;
 		};
 	};
 	_result;
@@ -396,7 +399,7 @@ INV_isArmedWith = {
 			if (((_x select 4) select 0) == 1) exitwith {_Fresult SET [0, true];};
 			if (((_x select 4) select 0) == 2) exitwith {_Fresult SET [1, true];};
 			if (((_x select 4) select 0) == 3) exitwith {_Fresult SET [2, true];};
-		
+
 		};
 
 	}
@@ -435,7 +438,7 @@ INV_GetFahrzeugTyp = {
 
 // Check if Player is Armed
 
-INV_isArmed = {if (count (weapons player - nonlethalweapons) > 0) then {true}else{false};};
+INV_isArmed = {nonlethalweapons = nonlethalweapons + call OL_TFAR_getPlayerRadios; if (count (weapons player - nonlethalweapons) > 0) then {true}else{false};};
 
 // Check if unit is Armed
 INV_unitArmed = {if (count (weapons _this - nonlethalweapons) > 0) then {true}else{false};};
@@ -447,7 +450,7 @@ INV_getitemSteuer= {
 	_cost = _this call INV_getitemBuyCost;
 	[_cost, (_type call INV_GetObjectSteuer)] call INV_AddProzent;
 };
-	
+
 
 //Function Price Taxes
 INV_getitemPreisSteuer= {
@@ -456,7 +459,7 @@ INV_getitemPreisSteuer= {
 	_preis = (_this select 1);
 	[_preis, (_type call INV_GetObjectSteuer)] call INV_AddProzent;
 };
-	
+
 
 // Add Items to Storage Window Box
 INV_AddStorageToDialog = {
@@ -480,14 +483,14 @@ INV_AddStorageToDialog = {
 };
 
 // Check if Player Owns license
-INV_HasLicense = 
+INV_HasLicense =
 {
 	/*if(IsNil "INV_LizenzOwner")exitWith
 	{
 		//if(getplayeruid player in Developer_id) then {player sideChat "[Dev] INVfunctions - INV_LizenzOwner Error"};
 	};*/
 
-	if ( (_this == "") or (_this in INV_LizenzOwner) ) then 
+	if ( (_this == "") or (_this in INV_LizenzOwner) ) then
 	{
 		true;
 	} else {
@@ -501,7 +504,7 @@ INV_GetLicenseName = {
 	private ["_c"];
 	for "_c" from 0 to (count INV_Lizenzen - 1) do {
 		if (((INV_Lizenzen select _c) select 0) == _this) exitWith {
-			((INV_Lizenzen select _c) select 2);	
+			((INV_Lizenzen select _c) select 2);
 		};
 	};
 };
@@ -536,24 +539,20 @@ INV_GetScriptFromClass_Weap = {
 INV_getitemArray = {
 	private ["_c", "_Fobjarray"];
 	_Fobjarray = [];
+
 	if ((typeName _this) == "STRING") then {
-//		for "_c" from 0 to (count AlleMissionsObjekte - 1) do {
-//			if (((AlleMissionsObjekte select _c) select 0) == _this) then {
-//				_Fobjarray = AlleMissionsObjekte select _c;
-//			};
-//		};
 			_Nname = format["A_MS_%1", _this];
 			_Fobjarray = missionNamespace getVariable _Nname;
-		};
+	};
+
 	if ((typeName _this) == "ARRAY") then {
 			_Fobjarray = _this;
-		};
+	};
 
 	_Fobjarray
 };
 
 // Get shop array
-
 INV_getshopArray = {
 	private ["_c", "_Fshoparray"];
 	_Fshoparray = [];
@@ -582,13 +581,13 @@ INV_getshopnum = {
 			};
 		};
 	};
-	
+
 	_Fshopnum;
 };
 
 // Get shopitem number
 
-INV_getshopitemnum = 
+INV_getshopitemnum =
 
 {
 
@@ -597,26 +596,26 @@ _Fshopitemnum = [];
 _item = _this select 0;
 _shopinv = _this select 1;
 
-if ((typeName _item) == "STRING") then 
+if ((typeName _item) == "STRING") then
 
 	{
 
-	for [{_c=0}, {_c < (count _shopinv)}, {_c=_c+1}] do 
+	for [{_c=0}, {_c < (count _shopinv)}, {_c=_c+1}] do
 
 		{
 
-		if ((_shopinv select _c) == _item) then 
+		if ((_shopinv select _c) == _item) then
 
 			{
 
 			_Fshopitemnum = _c;
-			
+
 			};
-			
+
 		};
-	
+
 	};
-	
+
 _Fshopitemnum;
 
 };
@@ -637,7 +636,7 @@ INV_iteminshop = {
 	};
 
 if((typeName _Fiteminshop) == "ARRAY")then{_Fiteminshop = false};
-	
+
 	_Fiteminshop;
 };
 INV_AddInventoryItem = {
@@ -658,7 +657,7 @@ INV_AddInventoryItem = {
 			([_Fitem, _Famount, "INV_InventarArray"] call INV_AddItemStorage);
 		};
 	};
-INV_getstock = 
+INV_getstock =
 
 {
 
@@ -676,7 +675,7 @@ INV_itemstocks select 0;
 
 };
 
-INV_getmaxstock = 
+INV_getmaxstock =
 
 {
 
@@ -694,7 +693,7 @@ INV_itemmaxstocks select 0;
 
 };
 
-INV_itemstocksupdate = 
+INV_itemstocksupdate =
 
 {
 
@@ -707,37 +706,29 @@ _itemnum  = [_item, _shopinv] call INV_getshopitemnum;
 
 (INV_itemstocks select _shopnum) SET [_itemnum, _stock];
 
-}; 
-
-INV_findunit = 
-
-{
-
-_name   = _this select 0;
-_arr    = _this select 1;
-_unit   = objnull;
-
-for "_i" from 0 to (count _arr) do 
-
-	{
-
-	_obj = _arr select _i;
-			
-	if(!isnull _obj and name _obj == _name)exitwith{_unit = _obj;};
-
-	};
-
-_unit;
-
 };
 
-INV_mygang = 
+INV_findunit = {
+	_name   = _this select 0;
+	_arr    = _this select 1;
+	_unit   = objnull;
+
+	if (isNil "_name") exitWith {_unit};
+
+	for "_i" from 0 to (count _arr - 1) do {
+		_obj = _arr select _i;
+		if (!isNull _obj && name _obj == _name) exitwith { _unit = _obj };
+	};
+	_unit;
+};
+
+INV_mygang =
 
 {
 
 _mygang  = "";
 
-for "_c" from 0 to (count gangsarray - 1) do 
+for "_c" from 0 to (count gangsarray - 1) do
 
 	{
 
@@ -752,7 +743,7 @@ _mygang;
 
 };
 
-INV_Seen = 
+INV_Seen =
 
 {
 	private ["_c", "_obj", "_arr", "_dis", "_res"];
@@ -760,19 +751,19 @@ INV_Seen =
 	_arr = (_this select 1) - [_obj];
 	_dis = _this select 2;
 	_res = false;
-	if (isNull _obj) then 
-	{	
+	if (isNull _obj) then
+	{
 		_res = false;
 	}
 	else
 	{
 		for "_c" from 0 to (count _arr - 1) do {
-		
+
 			if (not(isNull(_arr select _c))) then
 			{
 				if ((_obj distance (_arr select _c)) < _dis) then
 				{
-	
+
 				_mygang = call INV_mygang;
 				_exitvar = false;
 
@@ -780,22 +771,22 @@ INV_Seen =
 
 					{
 
-					for "_i" from 0 to (count gangsarray - 1) do 
+					for "_i" from 0 to (count gangsarray - 1) do
 
 						{
 
 						_gangarray = gangsarray select _i;
 						_gang = _gangarray select 0;
 						_members = _gangarray select 1;
-						
+
 						if(_mygang == _gang and name (_arr select _c) in _members)then{_exitvar=true;};
 
 						};
-				
+
 					};
 
 				if(!_exitvar)then{_res = true;};
-				
+
 				};
 			};
 		};

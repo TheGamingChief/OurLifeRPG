@@ -23,7 +23,7 @@ sleep 10;
 
 //==================================SHOPACTIONS========================================
 
-for [{_i=0}, {_i < (count INV_ItemShops)}, {_i=_i+1}] do
+for [{_i=0}, {_i < (count INV_ItemShops - 1)}, {_i=_i+1}] do
 
 	{
 
@@ -90,7 +90,7 @@ for [{_i = 0}, {_i < (count INV_FarmItemArray)}, {_i = _i + 1}] do
 		_a2 = 1;
 		_f2 = _i;	};
 		if ( (not(_owner)) and (_a3 == 0) ) then {
-		INV_action_facbuy = player addaction [format[localize "STRS_inv_fac_buy", (_cost call ISSE_str_IntToStr)], "facbuy.sqf", [_i]];
+		INV_action_facbuy = player addaction [format[localize "STRS_inv_fac_buy", (_cost call OL_ISSE_str_IntToStr)], "facbuy.sqf", [_i]];
 		_a3 = 1;
 		_f2 = _i;	};	};
 		if ((player distance _flag >  5) and (_a2 == 1) and (_f2 == _i)) then {
@@ -127,7 +127,7 @@ if ((_closestLicShop <= 5) and !(((INV_Lizenzen select _i) select 0) call INV_Ha
 
 	{
 
-	call compile format ["a_license%1 = player addaction [format[localize ""STRS_inv_actions_buy"", ""%2"", %3], ""addlicense.sqf"", [%1, ""add""]];", _i, _licensename, (_cost call ISSE_str_IntToStr)];
+	call compile format ["a_license%1 = player addaction [format[localize ""STRS_inv_actions_buy"", ""%2"", %3], ""addlicense.sqf"", [%1, ""add""]];", _i, _licensename, (_cost call OL_ISSE_str_IntToStr)];
 	_Arr2 set [_i, 1];
 
 	};

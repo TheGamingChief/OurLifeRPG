@@ -1,6 +1,6 @@
 if (SigningUpForDebitCard) exitWith {player groupChat "You are already signing up for a debit card, please wait until the process is complete."};
 
-fn_DebitCardSignupNotification = 
+fn_DebitCardSignupNotification =
 {
 	player groupChat "You moved too far away from the Bank Teller while signing up for your debit card.";
 	player groupChat "While signing up for a debit card, you must remain in the lobby of the bank.";
@@ -15,17 +15,17 @@ if (_DebitCardCount == 0) then
 
 	player groupChat "While signing up for a debit card, you must remain in the lobby of the bank or you will not receive your debit card.";
 	player groupChat "The Bank Teller asks you to have a seat and start filling out paperwork for your debit card.";
-	sleep 10;
-	
+	uiSleep 10;
+
 	if (player distance mainbank >= 15) exitWith {[] call fn_DebitCardSignupNotification;};
 
 	player groupChat "After you return the papers to the Bank Teller with your information and I.D. the Bank Teller starts processing your paperwork.";
-	sleep 10;
+	uiSleep 10;
 
 	if (player distance mainbank >= 15) exitWith {[] call fn_DebitCardSignupNotification;};
-	
+
 	player groupChat "The Bank Teller has completed processing your paperwork but has some questions about your account.";
-	sleep 10;
+	uiSleep 10;
 
 	if (player distance mainbank >= 15) exitWith {[] call fn_DebitCardSignupNotification;};
 

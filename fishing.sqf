@@ -42,7 +42,7 @@ if(vehicle player iskindof "SHIP") then
 	titletext ["Casting...", "PLAIN DOWN"];
 	totalamount=0;
 	_max = 3;
-	(format ["%1 switchmove ""%2"";", player, "AwopPercMstpSgthWnonDnon_end"]) call broadcast;
+	(format ["%1 switchmove ""%2"";", player, "AwopPercMstpSgthWnonDnon_end"]) call OL_network_Swag;
 	_amount = round (random _max);
 	sleep 5;
 	titletext ["Nibble...", "PLAIN DOWN", 1];
@@ -73,7 +73,7 @@ if(vehicle player iskindof "SHIP") then
 	titletext ["Casting...", "PLAIN DOWN"];
 	totalamount=0;
 	_max = 1;
-	(format ["%1 switchmove ""%2"";", player, "AwopPercMstpSgthWnonDnon_end"]) call broadcast;
+	(format ["%1 switchmove ""%2"";", player, "AwopPercMstpSgthWnonDnon_end"]) call OL_network_Swag;
 	_amount = round (random _max);
 	sleep 5;
 	titletext ["Nibble...", "PLAIN DOWN", 1];
@@ -104,7 +104,7 @@ if(vehicle player iskindof "SHIP") then
 case (_isInArea and _resource != "whale" and !(vehicle player iskindof "AIR")):
 {
 totalamount=0;
-	(format ["%1 switchmove ""%2"";", player, "AwopPercMstpSgthWnonDnon_end"]) call broadcast;
+	(format ["%1 switchmove ""%2"";", player, "AwopPercMstpSgthWnonDnon_end"]) call OL_network_Swag;
 	_amount = round (random _max);
 	sleep 5;
 	titletext ["Nibble...", "PLAIN DOWN", 1];
@@ -138,7 +138,7 @@ totalamount=0;
 
 		{
 		
-		(format ["%1 switchmove ""%2"";", player, "AwopPercMstpSgthWnonDnon_end"]) call broadcast;
+		(format ["%1 switchmove ""%2"";", player, "AwopPercMstpSgthWnonDnon_end"]) call OL_network_Swag;
 		_amount = round (random _max);
 		titletext ["Fishing Whale takes time..", "PLAIN DOWN", 0.1];
 		

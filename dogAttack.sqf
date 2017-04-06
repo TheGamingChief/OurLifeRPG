@@ -23,10 +23,10 @@ while {alive _dog && alive _target && player getVariable "CLAY_DogStatus" == "At
 		_target setHit ["hands", 1];
 		_target setDammage 0.8;
 		player groupchat "The dog has bitten his target";
-		(format ["%1 switchmove ""%2"";", _target, "adthpercmstpslowwrfldnon_4"]) call broadcast;
+		(format ["%1 switchmove ""%2"";", _target, "adthpercmstpslowwrfldnon_4"]) call OL_network_Swag;
 		player setVariable ["CLAY_DogStatus", ""];
 		sleep 12;
-		(format ["%1 switchmove ""%2"";", _target, "amovppnemstpsnonwnondnon"]) call broadcast;
+		(format ["%1 switchmove ""%2"";", _target, "amovppnemstpsnonwnondnon"]) call OL_network_Swag;
 		
 	};
 	sleep 1;

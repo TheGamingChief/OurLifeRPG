@@ -1,23 +1,11 @@
-/**
- * Boîte de dialogue affichant le bouton de réapparition au camp
- * 
- * Copyright (C) 2011 madbull ~R3F~
- * 
- * This program is free software under the terms of the GNU General Public License version 3.
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 class R3F_REV_dlg_attente_reanimation
 {
 	idd = 89453;
-	
-	// Masquer le bouton reapparaitre_camp si l'option n'est pas activée
+
 	onLoad = "if !(R3F_REV_CFG_autoriser_reapparaitre_camp) then {_this select 0 displayCtrl 89454 ctrlShow false;} else {_this select 0 displayCtrl 89454 ctrlSetText STR_R3F_REV_btn_reapparition};";
-	
-	// Si on ferme la fenêtre avec échap, on la rouvre un peu plus tard (on laisse le temps de quitter la partie si voulu, sinon on remet le menu)
+
 	onKeyDown = "if (_this select 1 == 1) then {call R3F_REV_FNCT_detruire_marqueur_inconscient; [] spawn {sleep 1;if (player getVariable ""R3F_REV_est_inconscient"" && isNull (findDisplay 89453)) then {call R3F_REV_FNCT_detruire_marqueur_inconscient; call R3F_REV_FNCT_creer_marqueur_inconscient; createDialog ""R3F_REV_dlg_attente_reanimation"";};};}; false";
-	
+
 	controlsBackground[] = {};
 	objects[] = {};
 	controls[] =
@@ -25,12 +13,11 @@ class R3F_REV_dlg_attente_reanimation
 		R3F_REV_dlg_AR_btn_focus,
 		R3F_REV_dlg_AR_btn_reapparaitre_camp
 	};
-	
-	// Bouton invisible capturant le focus, afin d'éviter que les touches entrée et espace active par accident le respawn au camp
+
 	class R3F_REV_dlg_AR_btn_focus
 	{
 		idc = -1;
-		
+
 		type = 1;
 		style = 0x02;
 		w = 0.0; x = 0.0;
@@ -57,11 +44,11 @@ class R3F_REV_dlg_attente_reanimation
 		soundClick[] = {"", 0.0, 1.0};
 		soundEscape[] = {"", 0.0, 1.0};
 	};
-	
+
 	class R3F_REV_dlg_AR_btn_reapparaitre_camp
 	{
 		idc = 89454;
-		
+
 		type = 1;
 		style = 0x02;
 		w = 0.27; x = 0.73;

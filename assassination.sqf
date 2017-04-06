@@ -31,7 +31,7 @@ while {true} do
 
 			workplacejob_assassin_serverarray set [_i,""];
 			workplacejob_assassin_serverarray = workplacejob_assassin_serverarray - [""];
-			"if(iscop)then{player sidechat ""The threat to the VIP has been removed""}" call broadcast;
+			"if(iscop)then{player sidechat ""The threat to the VIP has been removed""}" call OL_network_Swag;
 			sleep 600;
 			workplacejob_assassin_active = false;
 			publicvariable "workplacejob_assassin_active";
@@ -116,21 +116,9 @@ if ((!(VIPtarget in assveh)) and (alive VIPtarget))
 		//VIPbodyguard1 assignAsCargo assveh;
 		VIPbodyguard2 moveInCargo assveh;
 		//VIPbodyguard2 assignAsCargo assveh;
-
-
 	};
 
-
-
-
-
-
-
-
-
-
-
-format["workplacejob_assassin_serverarray = workplacejob_assassin_serverarray + [[%1, VIPtarget]];", player] call broadcast;
+format["workplacejob_assassin_serverarray = workplacejob_assassin_serverarray + [[%1, VIPtarget]];", player] call OL_network_Swag;
 
 _markerobj = createMarker ["targetmarker",[0,0]];
 _markername= "targetmarker";
@@ -144,17 +132,18 @@ workplacejob_assassin_active = true; publicvariable "workplacejob_assassin_activ
 
 player groupChat "The VIP target has been marked on the map. Kill him before the police can take him to safety.";
 
-"if (iscop) then {player sideChat ""Someone is trying to kill a government VIP. The target has been marked on the map. Rescue the target before its too late!""};" call broadcast;
+"if (iscop) then {player sideChat ""Someone is trying to kill a government VIP. The target has been marked on the map. Rescue the target before its too late!""};" call OL_network_Swag;
 
 player groupchat "The police are on to you and the VIP knows your coming, hurry up!";
-(format['if(!("Assassin" in %1_reason))then{%1_reason = %1_reason + ["Assassin"]}; %1_wanted = 1; kopfgeld_%1 = kopfgeld_%1 + 50000;', player]) call broadcast;
+[player, "Assassin"] call OL_player_WarrantAdd;
+
 VIPtarget domove getmarkerpos "policebase";
 while {true} do
 
 	{
 
 
-	"if(alive player and isciv and player distance assveh <= 150)then{titleText [""The Government is operating in this area! Turn back or you will be shot!"", ""plain down""]};" call broadcast;
+	"if(alive player and isciv and player distance assveh <= 150)then{titleText [""The Government is operating in this area! Turn back or you will be shot!"", ""plain down""]};" call OL_network_Swag;
 	"targetmarker" setmarkerpos getpos VIPtarget;
 	if (_secondcounter >= 15) then
 		{
@@ -167,7 +156,7 @@ while {true} do
 	if (_minutecounter >= 1200) exitWith
 
 		{
-		"server globalchat ""Assassination mission not completed within 20mins the mission has ended."";" call broadcast;
+		"server globalchat ""Assassination mission not completed within 20mins the mission has ended."";" call OL_network_Swag;
 		sleep 3;
 		deletevehicle VIPtarget;
 		deletemarker "targetmarker";
@@ -184,8 +173,9 @@ while {true} do
 		kontostand = kontostand + 100000;
 		player groupchat "Well done. Target elimated. $100000 has been transfered to your account.";
 		sleep 10;
-		"server globalchat ""The VIP target has been killed!"";" call broadcast;
-		(format['if(!("Assassinated VIP" in %1_reason))then{%1_reason = %1_reason + ["Assassinated VIP"]}; %1_wanted = 1; kopfgeld_%1 = kopfgeld_%1 + 25000;', player]) call broadcast;
+		"server globalchat ""The VIP target has been killed!"";" call OL_network_Swag;
+		[player, "Assassinated VIP"] call OL_player_WarrantAdd;
+
 		deletevehicle VIPtarget;
 		deletemarker "targetmarker";
 		deletevehicle assveh;
@@ -203,7 +193,7 @@ while {true} do
 		_copplayernumber = playersNumber west;
 		_copbonus = 40000;
 		if (iscop) then {Kontostand = (Kontostand + _copbonus); player sidechat format[""you received $%1 for the successful rescue of the VIP"", _copbonus];};
-		" call broadcast;
+		" call OL_network_Swag;
 		sleep 2;
 		player groupchat "The vip was rescued, mission failed!";
 		workplacejob_assassion_failed = true;

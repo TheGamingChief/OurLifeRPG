@@ -4,17 +4,15 @@ switch (_this select 0) do
 {
 	case 1:
 	{
-		
+
 		player setVariable ["CLAY_DogStatus", "Boarding"];
 		_vehicle = _this select 1;
-		_index = [CLAY_DogVehicles];
-		
+
 		if (_vehicle iskindof "all") then
 		{
-			//_i = _index select 0;
-			_pos = [0,-2.5,-.6];
+			_pos = [0,-2.5, 0];
 			_dir = 270;
-			
+
 			if (_vehicle isKindOf "DD_FOR06CV_P_K9" || _vehicle isKindOf "DD_FOR06CV_P_SK9") then {
 				_pos = [0.07,-0.6,0.5];
 			};
@@ -23,6 +21,9 @@ switch (_this select 0) do
 			};
 			if (_vehicle isKindOf "DD_CHE08Tahoe_P_K9" || _vehicle isKindOf "DD_CHE08Tahoe_P_SK9") then {
 				_pos = [0.07,-0.7,0.9];
+			};
+			if (_vehicle isKindOf "DD_FOR13Taurus_P_K9") then {
+				_pos = [0,-0.7,-0.2];
 			};
 
 			while {alive _dog && _dog distance _vehicle > 10 && player getVariable "CLAY_DogStatus" == "Boarding"} do
@@ -39,11 +40,11 @@ switch (_this select 0) do
 				sleep 1;
 				player setVariable ["CLAY_DogStatus", "InVehicle"];
 				_dog setVariable ["CLAY_DogVehicle", _vehicle];
-				(DOGCTRL_MENU select 1) set [6, "0"];
-				(DOGCTRL_MENU select 2) set [6, "0"];
-				(DOGCTRL_MENU select 3) set [6, "0"];
-				(DOGCTRL_MENU select 6) set [6, "0"];
-				(DOGCTRL_MENU select 7) set [6, "0"];
+				(DOGCTRL_MENU select 1)  set [6, "0"];
+				(DOGCTRL_MENU select 2)  set [6, "0"];
+				(DOGCTRL_MENU select 3)  set [6, "0"];
+				(DOGCTRL_MENU select 6)  set [6, "0"];
+				(DOGCTRL_MENU select 7)  set [6, "0"];
 				(DOGCTRL_MENU select 10) set [6, "1"];
 			};
 		}

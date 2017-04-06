@@ -3,7 +3,7 @@ _geld = 'geld' call INV_GetItemAmount;
 
 if (_geld <= dog_cost)    exitWith {role groupChat "You dont have enough money";};
 ['geld', -(dog_cost)] call INV_AddInvItem;
-player groupChat format["%1 bought a dog for %2", rolestring, (dog_cost call ISSE_str_IntToStr)];																						
+player groupChat format["%1 bought a dog for %2", rolestring, (dog_cost call OL_ISSE_str_IntToStr)];
 
 
 
@@ -25,10 +25,9 @@ player groupChat format["%1 bought a dog for %2", rolestring, (dog_cost call ISS
 		call compile format ["_type createUnit [[(getPos player select 0) + (1 * sin (getDir player)), (getPos player select 1) + (0.3 * cos (getDir player)), 0], _grp, '%1 = this']", _name];
 		_dog = call compile format ["%1", _name];
 		_dog setDir getDir player;
-		
+
 		player setVariable ["CLAY_DogUnit", _dog];
 		player setVariable ["CLAY_DogStatus", "Waiting"];
-		(format ["if (local server) then {publicarbeiterarctionarray = publicarbeiterarctionarray + [%1];};", _dog]) call broadcast;
 		If (isNil "BIS_MENU_GroupCommunication") Then
 		{
 			BIS_MENU_GroupCommunication = [[localize "STR_SOM_COMMUNICATIONS", false]];

@@ -1,6 +1,6 @@
 ////////////////////////////////////
 ////			         //
-//      Copyright © TCG         //
+//      Copyright ï¿½ TCG         //
 //www.tcgaming.enjin.com       //
 ////////////////////////////////
 
@@ -17,7 +17,7 @@ _max      = 1;
 _infos    = _resource call INV_getitemArray;
 _name     = (_infos call INV_getitemName);
 totalamount=0;
-(format ["%1 switchmove ""%2"";", player, "AinvPknlMstpSlayWrflDnon_medic"]) call broadcast;
+(format ["%1 switchmove ""%2"";", player, "AinvPknlMstpSlayWrflDnon_medic"]) call OL_network_Swag;
 _amount = 1;
 sleep 5;
 titletext ["Gathering Body Part", "PLAIN DOWN", 1];

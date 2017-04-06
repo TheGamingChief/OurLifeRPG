@@ -13,11 +13,11 @@ if(_selection == "unflip") then
 
 	
 	player groupchat "turning your vehicle over, wait 15s within 10meters.";
-	(format ["%1 switchmove ""%2"";", player, "AinvPknlMstpSlayWrflDnon_medic"]) call broadcast;
+	(format ["%1 switchmove ""%2"";", player, "AinvPknlMstpSlayWrflDnon_medic"]) call OL_network_Swag;
 	sleep 5;
-	(format ["%1 switchmove ""%2"";", player, "AinvPknlMstpSlayWrflDnon_medic"]) call broadcast;
+	(format ["%1 switchmove ""%2"";", player, "AinvPknlMstpSlayWrflDnon_medic"]) call OL_network_Swag;
 	sleep 5;
-	(format ["%1 switchmove ""%2"";", player, "AinvPknlMstpSlayWrflDnon_medic"]) call broadcast;
+	(format ["%1 switchmove ""%2"";", player, "AinvPknlMstpSlayWrflDnon_medic"]) call OL_network_Swag;
 	sleep 5;
 
 	if (player distance _vcl < 10) then

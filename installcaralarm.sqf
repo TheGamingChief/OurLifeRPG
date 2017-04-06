@@ -31,6 +31,6 @@ _vcl setfuel _fuel;
 _vcl setvariable ["caralarm", 1, true];
 _vcl setvariable ["nextalarmtime", time, true];
 _vcl setvariable ["rolenum",rolenumber,true];
-_vcl addeventhandler ["Dammaged",{[_this] call onHit;}];
+_vcl addeventhandler ["Dammaged",{[_this] call OL_events_HandleCarAlarm;}];
 player groupchat "You have installed the Car Alarm!";
 _vcl setvariable ["installing",nil, false];

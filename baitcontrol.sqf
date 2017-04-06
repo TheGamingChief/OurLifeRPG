@@ -1,10 +1,10 @@
-
 private["_i","_car","_carsKilled","_xCar"];
 
-for "_i" from 0 to (count bc_baitcars - 1) do
-{
+for "_i" from 0 to (count bc_baitcars - 1) do {
 	_car = bc_baitcars select _i;
-	if (isNull _car) then {bc_baitcars = bc_baitcars - _car;};
+	if (isNull _car) then {
+		bc_baitcars = bc_baitcars - _car
+	};
 };
 
 _carsKilled = 0;
@@ -12,9 +12,7 @@ _carsKilled = 0;
 {
 	_xCar = _x;
 	if (player distance _xCar < 1000) then
-	{
-                       (format ["%1 setFuel (0);", _xCar]) call broadcast;
-                       (format ["%1 lock true;", _xCar]) call broadcast;
+		format ["%1 setFuel (0); %1 lock true;", _xCar] call OL_network_Swag;
 
 		[nil,driver _xCar,"loc",rHINT,"Bait Car Activated!"] call RE;
 		{

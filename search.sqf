@@ -124,7 +124,7 @@ while {true} do
 
 		deletevehicle _searchobject;
 
-		player groupChat format[localize "STRS_workplacemission_search_finish", (_money call ISSE_str_IntToStr)];
+		player groupChat format[localize "STRS_workplacemission_search_finish", (_money call OL_ISSE_str_IntToStr)];
 
 		['geld', _money] call INV_AddInvItem;
 
@@ -152,7 +152,7 @@ if (_art == "canceljob_search") then
 veh removeaction searchinfoaction;
 player removeaction searchinfoaction;
 deletevehicle ((_this select 3) select 1);
-player groupChat format[localize "STRS_workplacemission_search_cancel", (workplacejob_search_cancelsperre call ISSE_str_IntToStr)];
+player groupChat format[localize "STRS_workplacemission_search_cancel", (workplacejob_search_cancelsperre call OL_ISSE_str_IntToStr)];
 alreadygotaworkplacejob = 0;
 player REMOVEACTION workplace_searchaction_cancel;
 workplacejob_search_cancel = 1;	

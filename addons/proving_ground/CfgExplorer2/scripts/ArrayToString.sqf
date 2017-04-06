@@ -25,7 +25,7 @@ _maxI = (count _inArray) - 1;
 for "_i" from 0 to (_maxI) do
 {
   _TypeName = TypeName (_inArray select _i);
-  
+
   switch (_TypeName) do
   {
     case "STRING":
@@ -35,7 +35,7 @@ for "_i" from 0 to (_maxI) do
 
     case "SCALAR":
     {
-      _OutString = format["%1%2",_OutString,_inArray select _i];    
+      _OutString = format["%1%2",_OutString,_inArray select _i];
     };
 
     case "ARRAY":

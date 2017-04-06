@@ -67,5 +67,3 @@
 #define balca_env_rain_IDC __idCounter(92)
 #define balca_env_wind_IDC __idCounter(93)
 #define balca_env_wind_dir_IDC __idCounter(94)
-
-

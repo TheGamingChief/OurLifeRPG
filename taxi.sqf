@@ -89,7 +89,7 @@ while {true} do
 
 	call compile format ["'%1' createUnit [[(_start select 0),(_start select 1),0], group civ_logicunit, ""%2taxikunde = this; this setVehicleVarName """"%2taxikunde""""; this disableAI """"MOVE""""; this disableAI """"TARGET"""";""]; [%2taxikunde] join grpNull; removeAllWeapons %2taxikunde; processInitCommands;", _civ, player];
 
-	format["workplacejob_taxi_serverarray + [%1, %1taxikunde];", player] call broadcast;
+	format["workplacejob_taxi_serverarray + [%1, %1taxikunde];", player] call OL_network_Swag;
 																																																																		
 	_markerobj = createMarkerLocal ["taxikundenmarker",[0,0]];																				
 	_markername= "taxikundenmarker";																														
@@ -119,7 +119,7 @@ while {true} do
 
 				{
 
-				format["%1 assignAsCargo %2; [%1] orderGetIn true;", INV_LocalTaxiKunde, (vehicle player) ] call broadcast;																																																																	
+				format["%1 assignAsCargo %2; [%1] orderGetIn true;", INV_LocalTaxiKunde, (vehicle player) ] call OL_network_Swag;																																																																	
 			
 				workplacejob_taxi_kundeactive = true;	
 				_warte = time;	
@@ -129,7 +129,7 @@ while {true} do
 
 					{		
 
-					format["%1 moveInCargo %2",INV_LocalTaxiKunde, (vehicle player)] call broadcast;
+					format["%1 moveInCargo %2",INV_LocalTaxiKunde, (vehicle player)] call OL_network_Swag;
 
 					};
 																																																																						
@@ -152,7 +152,7 @@ while {true} do
 
 			{		
 
-			format["%1 action [""getOut"", (%2)]; unassignVehicle %1;",INV_LocalTaxiKunde,(vehicle player)] call broadcast;
+			format["%1 action [""getOut"", (%2)]; unassignVehicle %1;",INV_LocalTaxiKunde,(vehicle player)] call OL_network_Swag;
 			workplacejob_taxi_kundeactive = false;
 
 			};
@@ -165,9 +165,9 @@ while {true} do
 			if (_geld < 0) then {_geld = 0};
 			['geld', _geld] call INV_AddInvItem;
 			player groupChat format [localize "STRS_workplacemission_taxi_success",_geld];
-			format["%1 action [""getOut"", (%2)]; unassignVehicle %1;",INV_LocalTaxiKunde,(vehicle player)] call broadcast;
+			format["%1 action [""getOut"", (%2)]; unassignVehicle %1;",INV_LocalTaxiKunde,(vehicle player)] call OL_network_Swag;
 			sleep 5;
-			format["%1 doMove [(%2 select 0),(%2 select 1),0];", INV_LocalTaxiKunde, _ziel] call broadcast;
+			format["%1 doMove [(%2 select 0),(%2 select 1),0];", INV_LocalTaxiKunde, _ziel] call OL_network_Swag;
 			sleep ((random 10)+5);
 
 			};

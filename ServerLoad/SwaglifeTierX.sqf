@@ -1,1 +1,0 @@
-player setpos getMarkerPos "Tier X";player globalChat "Thank You for being our Tier X Donator!";

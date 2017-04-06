@@ -6,7 +6,7 @@ if ((!INV_CanUseInventory) or (!INV_CanDropItem)) exitWith {player groupChat loc
 
 if(!isnull (nearestobjects[getpos player,["EvMoney","Suitcase"], 1] select 0))exitwith{player groupchat "You cannot drop items on top of each other. move and try again."};
 
-if (_amount <= 0) exitwith {format["hint ""%1 has dropped %2!"";", (name player), _amount] call broadcast;};
+if (_amount <= 0) exitwith {format["hint ""%1 has dropped %2!"";", (name player), _amount] call OL_network_Swag;};
 
 if (_item call INV_getitemDropable) then 
 
@@ -35,7 +35,7 @@ if ([_item, -(_amount)] call INV_AddInvItem) then
 
 	if (_item == "geld") then 
 	{
-	["money_dropped", format ["%1 (%2) has dropped $%3 at GRID: %4", name player, getPlayerUID player, _amount, _gridPos]] call fn_RMLogToServer;
+	["money_dropped", format ["%1 (%2) has dropped $%3 at GRID: %4", name player, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 	};
 	
 	_object = _class createvehicle _pos;

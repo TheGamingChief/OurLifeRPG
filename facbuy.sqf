@@ -9,4 +9,4 @@ if (_geld < _cost) 		 exitWith {player groupChat localize "STRS_inv_kein_geld";}
 INV_Fabrikowner = INV_Fabrikowner + [ _fabname ];
 ['geld', -(_cost)] call INV_AddInventoryItem;
 
-player groupChat format[localize "STRS_inv_gotshop", player, (_cost call ISSE_str_IntToStr)];
+player groupChat format[localize "STRS_inv_gotshop", player, (_cost call OL_ISSE_str_IntToStr)];

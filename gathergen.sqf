@@ -155,7 +155,7 @@ if ([_item, _anzahl] call INV_AddInvItem) then
 
 	if(_anzahl == 0)exitwith{player groupchat "The stores are full with this item";};
 
-	player groupChat format[localize "STRS_inv_buyitems_get_erhalten", (_anzahl call ISSE_str_IntToStr), (_item call INV_getitemName)];
+	player groupChat format[localize "STRS_inv_buyitems_get_erhalten", (_anzahl call OL_ISSE_str_IntToStr), (_item call INV_getitemName)];
 
 	} 
 	else 

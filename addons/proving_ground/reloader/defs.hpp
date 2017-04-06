@@ -31,5 +31,3 @@
 #define CHANGABLE_WEAPONS [["AirBombLauncher","Ch29Launcher","Ch29Launcher_Su34","R73Launcher_2","R73Launcher","HeliBombLauncher"],["Mk82BombLauncher","Mk82BombLauncher_6","MaverickLauncher","BombLauncherA10"],["BombLauncherF35", "SidewinderLaucher_F35"],["ACE_R73Launcher","ACE_R27Launcher","ACE_Kh25Launcher","ACE_KAB500KRLauncher","ACE_KAB500LLauncher"]]
 
 #define BALCA_RELOADER_DEBUG (true)
-
-

@@ -44,7 +44,7 @@ if(iscop)exitwith{player groupchat "only civilians can do this!"; processscriptr
 	{
 	_bomb = "Bo_GBU12_LGB" createVehicle (position player);
 	processscriptrunning = 0;
-	(format ['server globalChat "A Meth lab has exploded and killed numerous citizens";']) call broadcast;
+	(format ['server globalChat "A Meth lab has exploded and killed numerous citizens";']) call OL_network_Swag;
 	};
 
 

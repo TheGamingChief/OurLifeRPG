@@ -1,0 +1,11 @@
+local_useBankPossible    = true;
+local_robBankPossible    = true;
+bank_steuer              = 5;
+robenable              	 = true;
+Kontostand               = 25000;
+bankflagarray            = allMissionObjects "tcg_atm";
+speedcamarray            = [speed1,speed2,speed3,speed4,speed5,speed6,speed7,speed8];
+drugsellarray		         = [mdrugsell,cdrugsell,ldrugsell,hdrugsell,whalesell,methsell];
+TankstellenArray         = [fuel2,fuel4,fuel5,fuel7,fuel8];
+isCrackingSafe           = 0;
+safeCrackFailed          = 0;
