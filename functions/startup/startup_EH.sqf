@@ -2,7 +2,7 @@ player addEventHandler ["fired", {
   ["fired", (_this select 4), (_this select 1)] spawn OL_fnc_Stun;
   _this spawn OL_events_HandleSmokes;
 }];
-player addEventHandler ["handleDamage", { _this call compile preprocessfile "sethit.sqf"; }];
+player addEventHandler ["handleDamage", { _this call OL_fnc_setHit }];
 
 "serverStationUpdate" addPublicVariableEventHandler {
   {
