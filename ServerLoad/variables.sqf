@@ -6,8 +6,6 @@ backupavailable         = true;
 gettingcar				      = 0;
 gettingairvehicle       = 0;
 INV_smscost		          = 100;
-add_civmoney		        = 1000;
-add_copmoney		        = 5000;
 add_workplace		        = 1000;
 copchoprespawntime      = 120;
 CopWaffenAvailable      = 0;
@@ -27,7 +25,6 @@ MayorSteuern            = 0;
 MayorBekommtSteuern     = 75;
 chiefSteuern            = 0;
 chiefBekommtSteuern     = 75;
-eigene_zeit             = time;
 money_limit             = 10000000;
 bank_limit				      = 15000000;
 INV_hunger              = 25;
@@ -240,7 +237,6 @@ if(debug)then{suicidepenalty = 0;respawntimeinc = 0;killedplayerinc = 0};
 isMayor                  = false;
 WahlArray                = [];
 MayorNumber              = -1;
-MayorExtraPay            = 3000;
 
 for [{_i=0}, {_i < playercount}, {_i=_i+1}] do {WahlArray = WahlArray + [ [] ];};
 
@@ -266,16 +262,6 @@ slavearray               = [];
 hurenarray               = [[brothel1, 15], [brothel2, 15], [brothel3, 15]];
 timeinworkplace          = 0;
 INV_UsingCarshop		     = 0;
-
-resetJailCode = {
-  armat_JailCode = [5] call CP_misc_GetRandomCode;
-  armat_RandomCode = armat_JailCode call OL_isse_str_StrToArr;
-  publicVariable "armat_JailCode";
-  publicVariable "armat_RandomCode";
-
-  player sideChat "You reset the Jail Code!";
-  [[2, format["The jail code has been reset by %1!", name player]], "OL_misc_ChatMessage", west, false] call OL_Network_MP;
-};
 
 // array used in taxi missions
 civclassarray =

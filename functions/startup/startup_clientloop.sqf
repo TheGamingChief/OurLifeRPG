@@ -35,8 +35,9 @@ while {true} do	{
 	//300 Seconds (5 Minutes)
 	if (_iterations % 300 == 0) then {
 		if (!isNil "fnc_SaveStats") then {
-			[] spawn fnc_SaveStats;
+			[] spawn fnc_SaveStats
 		};
+		[] spawn OL_player_Paycheck;
 	};
 
 	uiSleep 5;

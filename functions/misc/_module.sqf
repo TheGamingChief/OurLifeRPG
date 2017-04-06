@@ -22,6 +22,7 @@ DD_Modules = DD_Modules + [
   ["OL",    "misc", "Markers",             1],
   ["OL",    "misc", "isProne",             1],
   ["OL",    "misc", "SayDirectSpeach",     1],
+  ["OL",    "misc", "resetJailCode",       1],
   ["OL",    "misc", "Radar",               0],
   ["CP",    "misc", "ArrayOffsetSelector", 1],
   ["CP",    "misc", "ArrayOffsetDelete",   1],
