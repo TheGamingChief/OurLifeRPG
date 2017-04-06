@@ -29,7 +29,11 @@ _type   = typeof _car;
 
 		uiSleep 2;
 
+<<<<<<< HEAD
 		//(format['if(!%3) then {server globalchat "Someone was photographed at %4 driving without a license!";', player, _license, (_license call INV_HasLicense), _x]) call OL_network_Swag;
+=======
+		//(format['if(!%3) then {server globalchat "Someone was photographed at %4 driving without a license!";', player, _license, (_license call INV_HasLicense), _x]) call OL_network_Swag; 
+>>>>>>> master
 		if(demerits == 0)exitwith{};
 
 		demerits = demerits - _penalty;
@@ -37,12 +41,16 @@ _type   = typeof _car;
 
 		player groupchat format["Demerit points lost: %1. Demerit points remaining: %2", _penalty, demerits];
 
+<<<<<<< HEAD
 		['if (%2 == 0) then {
 			serveer globalChat "%1 has lost his drivers license!";
 			if (player == %1) then {
 				INV_LizenzOwner = INV_LizenzOwner - ["car"];
 			};
 		};', player, demerits] call OL_network_Swag;
+=======
+		(format['if(%3 == 0) then {server globalchat "%1 has lost his %2 license!";if(player == %1)then{INV_LizenzOwner = INV_LizenzOwner - ["%2"];};}', player, _license, demerits]) call OL_network_Swag; 
+>>>>>>> master
 
 		};
 
