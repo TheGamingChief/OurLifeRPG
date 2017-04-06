@@ -16,7 +16,6 @@ waitUntil{scriptDone  _h};
 _h = [] execVM "ServerLoad\workplacesettings.sqf";
 waitUntil {scriptDone _h};
 ["Exec Misc Functions", 50] 	call OL_Misc_LoadingSetText;
-_h = []	execVM "ServerLoad\miscfunctions.sqf";
 _h = [] execVM "lottoexec.sqf";
 waitUntil{scriptDone  _h};
 ["Exec Main Variables", 60] 	call OL_Misc_LoadingSetText;
@@ -43,12 +42,14 @@ if (isClient) then {
 		case west: {
 			[] call OL_events_Cop_KeyEvents;
 			[] call OL_events_Cop_Actions;
-			[] spawn OL_misc_ratioChecker;
+			[] call OL_misc_ratioChecker;
+			["SETUP"] call OL_misc_Markers;
 			/*[] spawn OL_misc_ratioKick;*/
 		};
 		case resistance: {
 			[] call OL_events_Ems_KeyEvents;
 			[] call OL_events_Ems_Actions;
+			["SETUP"] call OL_misc_Markers;
 		};
 	};
 
@@ -57,7 +58,6 @@ if (isClient) then {
 	[] execVM "ServerLoad\petrolactions.sqf";
 	[] execVM "ServerLoad\SpeedCams.sqf";
 	[] execVM "ServerLoad\nametags.sqf";
-	[] execVM "ServerLoad\markers.sqf";
 	[] execVM "ServerLoad\salaries.sqf";
 	[] execVM "R3F_revive\revive_init.sqf";
 	["ol_textures\images\Gps.paa",-0.06,-0.36] call bis_fnc_customGPS;

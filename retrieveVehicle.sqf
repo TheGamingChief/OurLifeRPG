@@ -17,7 +17,7 @@ if (_art == "EastCivSpawn") then {
 	{
 		player groupChat "There is a vehicle blocking the spawn!";
 	};
-	
+
 	continue = false;
 
 	for "_i" from 0 to (count INV_SavedVehLand - 1) do
@@ -28,7 +28,7 @@ if (_art == "EastCivSpawn") then {
 		_retriveTxt = player addAction [_rtv,"noscript.sqf",_vehicle2Spawn,1,true,true,"",'player distance LandSavePoint < 5'];
 		_actionsToRemove = _actionsToRemove + [_retriveTxt];
 	};
-	
+
 	[] call OL_Events_ActionRemove;
 
 	if(gettingcar == 1)exitWith{"You are getting a vehicle out of storage already..."};
@@ -60,7 +60,7 @@ if (_art == "EastCivSpawn") then {
 	sleep 3;
 	continue = false;
 	gettingcar = 0;
-	
+
 	[] call OL_Events_ActionToggle;
 };
 
@@ -70,7 +70,7 @@ if (_art == "WestCivSpawn") then {
 	{
 		player groupChat "There is a vehicle blocking the spawn!";
 	};
-	
+
 	continue = false;
 
 	for "_i" from 0 to (count INV_SavedVehLand - 1) do
@@ -81,7 +81,7 @@ if (_art == "WestCivSpawn") then {
 		_retriveTxt = player addAction [_rtv,"noscript.sqf",_vehicle2Spawn,1,true,true,"",'player distance savepoint < 5'];
 		_actionsToRemove = _actionsToRemove + [_retriveTxt];
 	};
-	
+
 	[] call OL_Events_ActionRemove;
 
 	if(gettingcar == 1)exitWith{"You are getting a vehicle out of storage already..."};
@@ -113,7 +113,7 @@ if (_art == "WestCivSpawn") then {
 	sleep 3;
 	continue = false;
 	gettingcar = 0;
-	
+
 	[] call OL_Events_ActionToggle;
 };
 
@@ -123,7 +123,7 @@ if (_art == "DonorSpawn") then {
 	{
 		player groupChat "There is a vehicle blocking the spawn!";
 	};
-	
+
 	continue = false;
 
 	for "_i" from 0 to (count INV_SavedVehLand - 1) do
@@ -134,7 +134,7 @@ if (_art == "DonorSpawn") then {
 		_retriveTxt = player addAction [_rtv,"noscript.sqf",_vehicle2Spawn,1,true,true,"",'player distance savepointx < 5'];
 		_actionsToRemove = _actionsToRemove + [_retriveTxt];
 	};
-	
+
 	[] call OL_Events_ActionRemove;
 
 	if(gettingcar == 1)exitWith{"You are getting a vehicle out of storage already..."};
@@ -166,7 +166,7 @@ if (_art == "DonorSpawn") then {
 	sleep 3;
 	continue = false;
 	gettingcar = 0;
-	
+
 	[] call OL_Events_ActionToggle;
 };
 
@@ -176,7 +176,7 @@ if (_art == "PDSpawn") then {
 	{
 		player groupChat "There is a vehicle blocking the spawn!";
 	};
-	
+
 	continue = false;
 
 	for "_i" from 0 to (count savedVehiclesWest - 1) do
@@ -187,7 +187,7 @@ if (_art == "PDSpawn") then {
 		_retriveTxt = player addAction [_rtv,"noscript.sqf",_vehicle2Spawn,1,true,true,"",'player distance savepoint2 < 5'];
 		_actionsToRemove = _actionsToRemove + [_retriveTxt];
 	};
-	
+
 	[] call OL_Events_ActionRemove;
 
 	if(gettingcar == 1)exitWith{"You are getting a vehicle out of storage already..."};
@@ -219,7 +219,7 @@ if (_art == "PDSpawn") then {
 	sleep 3;
 	continue = false;
 	gettingcar = 0;
-	
+
 	[] call OL_Events_ActionToggle;
 };
 
@@ -229,7 +229,7 @@ if (_art == "SheriffSpawn") then {
 	{
 		player groupChat "There is a vehicle blocking the spawn!";
 	};
-	
+
 	continue = false;
 
 	for "_i" from 0 to (count savedVehiclesWest - 1) do
@@ -240,7 +240,7 @@ if (_art == "SheriffSpawn") then {
 		_retriveTxt = player addAction [_rtv,"noscript.sqf",_vehicle2Spawn,1,true,true,"",'player distance savepoint2s < 5'];
 		_actionsToRemove = _actionsToRemove + [_retriveTxt];
 	};
-	
+
 	[] call OL_Events_ActionRemove;
 
 	if(gettingcar == 1)exitWith{"You are getting a vehicle out of storage already..."};
@@ -272,6 +272,6 @@ if (_art == "SheriffSpawn") then {
 	sleep 3;
 	continue = false;
 	gettingcar = 0;
-	
+
 	[] call OL_Events_ActionToggle;
 };

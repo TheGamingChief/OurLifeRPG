@@ -16,6 +16,7 @@ OL_VarQueue             = []; //[<str>var, <anything>value, <array>[<int>timeSta
 Rifle_Holster           = nil;
 Pistol_Holster          = nil;
 Radar_Holstered         = false;
+OL_HasDisplayOpen				= false;
 
 CP_RobScript_pub1 = [
 	["SETTINGS",  "Fionas Pub", "barmoney", "fionasavailable", "Robbed Bar"],

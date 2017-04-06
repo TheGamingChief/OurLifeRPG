@@ -239,13 +239,13 @@ if (_art == "coplog") exitWith {
 
 if (_art == "wahlen") exitWith {
 	if (!(createDialog "wahldialog")) exitWith {hint "Dialog Error!";};
-	_array = [0, 1, true, false] call DialogSpielerListe;
+	_array = [0, 1, true, false] call OL_misc_dialogPlayerlist;
 	lbSetCurSel [1, _array select 1];
 };
 
 if (_art == "chief") exitWith {
 	if (!(createDialog "chiefdialog")) exitWith {hint "Dialog Error!";};
-	_arrayc = [0, 1, true, false] call DialogSpielerListe;
+	_arrayc = [0, 1, true, false] call OL_misc_dialogPlayerlist;
 	lbSetCurSel [1, _arrayc select 1];
 };
 

@@ -6,6 +6,8 @@ class UI_ClothesMenu {
     UI_ClothesMenu_btnExit,
     UI_ClothesMenu_List
   };
+	onLoad = "OL_HasDisplayOpen = true;";
+	onUnload = "OL_HasDisplayOpen = false;";
 
   class UI_ClothesMenu_Background: RscBackground
   {

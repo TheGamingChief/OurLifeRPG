@@ -27,7 +27,6 @@ adminMenuTeleport =
 	_sel = lbCurSel 1500;
 	_selected = adminMenu_Players select _sel;
 	(vehicle player) setPosATL (getPosATL _selected);
-	//format['server globalChat "(ADMIN)%1 Has Teleported";', name player] call OL_network_Swag;
 	format['diag_log text "ADMIN LOG: %1 Has Teleported";', name player];
 	server globalChat format["You have teleported to %1",name _selected];
 };

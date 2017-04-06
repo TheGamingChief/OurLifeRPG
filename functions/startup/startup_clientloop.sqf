@@ -16,6 +16,7 @@ while {true} do	{
 		[] spawn OL_TFAR_channelCheck;
 		[] spawn CP_fnc_VarQueueUpdate;
 		[] spawn OL_misc_FosterFireCheck;
+		["CL"] spawn OL_misc_Markers;
 	};
 
 	//10 Seconds

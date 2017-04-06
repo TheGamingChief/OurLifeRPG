@@ -212,8 +212,8 @@ class adminMenuTCG
 	class button14: RscButton
 	{
 		idc = 1604;
-		text = "";
-		action = "";
+		text = "Move In Cargo";
+		action = "player moveInCargo (vehicle (adminMenu_Players select (lbCurSel 1500)));";
 		x = 0.71;
 		y = 0.873971 ;
 		w = 0.278526;

@@ -6,22 +6,22 @@ RadioTrigger_1 setTriggerStatements ["this", "[""Einstellungen""] execVM ""setti
 RadioTrigger_6 = createTrigger      ["EmptyDetector", [0,0,0]];
 RadioTrigger_6 setTriggerArea       [0, 0, 0, false];
 RadioTrigger_6 setTriggerActivation ["FOXTROT", "NOT PRESENT", true];
-RadioTrigger_6 setTriggerStatements ["this", "[RadioTextMsg_1, RadioTextArt_1] call SayDirectSpeach;", ""];
+RadioTrigger_6 setTriggerStatements ["this", "[RadioTextMsg_1, RadioTextArt_1] call OL_misc_SayDirectSpeach;", ""];
 6 setRadioMsg "Say Text 1";
 RadioTrigger_7 = createTrigger      ["EmptyDetector", [0,0,0]];
 RadioTrigger_7 setTriggerArea       [0, 0, 0, false];
 RadioTrigger_7 setTriggerActivation ["GOLF", "NOT PRESENT", true];
-RadioTrigger_7 setTriggerStatements ["this", "[RadioTextMsg_2, RadioTextArt_2] call SayDirectSpeach;", ""];
+RadioTrigger_7 setTriggerStatements ["this", "[RadioTextMsg_2, RadioTextArt_2] call OL_misc_SayDirectSpeach;", ""];
 7 setRadioMsg "Say Text 2";
 RadioTrigger_8 = createTrigger      ["EmptyDetector", [0,0,0]];
 RadioTrigger_8 setTriggerArea       [0, 0, 0, false];
 RadioTrigger_8 setTriggerActivation ["HOTEL", "NOT PRESENT", true];
-RadioTrigger_8 setTriggerStatements ["this", "[RadioTextMsg_3, RadioTextArt_3] call SayDirectSpeach;", ""];
+RadioTrigger_8 setTriggerStatements ["this", "[RadioTextMsg_3, RadioTextArt_3] call OL_misc_SayDirectSpeach;", ""];
 8 setRadioMsg "Say Text 3";
 RadioTrigger_9 = createTrigger      ["EmptyDetector", [0,0,0]];
 RadioTrigger_9 setTriggerArea       [0, 0, 0, false];
 RadioTrigger_9 setTriggerActivation ["INDIA", "NOT PRESENT", true];
-RadioTrigger_9 setTriggerStatements ["this", "[RadioTextMsg_4, RadioTextArt_4] call SayDirectSpeach;", ""];
+RadioTrigger_9 setTriggerStatements ["this", "[RadioTextMsg_4, RadioTextArt_4] call OL_misc_SayDirectSpeach;", ""];
 9 setRadioMsg "Say Text 4";
 
 

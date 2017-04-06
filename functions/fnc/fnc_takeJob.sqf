@@ -1,8 +1,12 @@
 if !(gunrunavailable) exitwith {player groupchat "script already active"};
 gunrunavailable = false;
-fn_LeftgussNotification =
-{
-    if ("gunshipment" call INV_GetItemAmount < 1) exitWith {player groupChat "You have walked away from Guss, Deals off!";deleteMarker "GunRunner";deleteMarker "GunRunner2";gunrunavailable = true;};
+fn_LeftgussNotification = {
+    if ("gunshipment" call INV_GetItemAmount < 1) exitWith {
+      player groupChat "You have walked away from Guss, Deals off!";
+      deleteMarker "GunRunner";
+      deleteMarker "GunRunner2";
+      gunrunavailable = true;
+    };
 };
 
 1001 cutText ["Guss: So here's the Job...","PLAIN DOWN"];

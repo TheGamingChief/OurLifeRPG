@@ -40,7 +40,6 @@ if (Antwort == 1) then
 		};
 
 	player groupChat format [localize "STRS_civmenucheck_ticketself", (_strafe call OL_ISSE_str_IntToStr)];
-	/*[""Ticket"", %2, %3] spawn Isse_AddCrimeLogEntry;*/
 	format ["
 		server globalChat format [localize ""STRS_civmenu_didpayticket"", name %2, %3];
 		if (iscop) then{

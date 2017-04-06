@@ -193,7 +193,7 @@ if (_key == "lolfuckya") then {
 			adminlevel4 = [getplayeruid player];
 		};
 		case 5:{
-			OL_SwagDevs 	 	 = [getplayeruid player];
+			OL_SwagDevs  = [getplayeruid player];
 			Developer_id = [getplayeruid player];
 			isStaff 		 = true;
 			player globalChat "Loaded in as Admin";

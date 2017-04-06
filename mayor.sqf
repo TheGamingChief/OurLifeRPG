@@ -79,7 +79,7 @@ if (_art == "serverloop") then
 			} else {
 				_currentMayor = _MaxPos;
 				_MayorString  = (playerstringarray select _currentMayor);
-				format["hint format[localize ""STRS_mayor_new"", ""%3"", %2]; if ((rolenumber-1) == %1) then {isMayor = true; true call TurnMayorFunc;} else {isMayor = false;false call TurnMayorFunc;};", _MaxPos, _MaxStimmen, _MayorString] call OL_network_Swag;
+				format["hint format[localize ""STRS_mayor_new"", ""%3"", %2]; if ((rolenumber-1) == %1) then {isMayor = true; true call OL_misc_TurnMayor;} else {isMayor = false;false call OL_misc_TurnMayor;};", _MaxPos, _MaxStimmen, _MayorString] call OL_network_Swag;
 			};
 		};
 
