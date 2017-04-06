@@ -793,7 +793,20 @@ INV_Seen =
 	};
 	_res
 };
+/*
 
+[
+	itemKey,
+	[itemType, itemKind],
+	[itemClass, itemName],
+	[itemCostBuy, itemCostSell],
+	[itemWeight, itemLic, itemLicCop, vehMaxWeight],
+	[],
+	name,
+	get desc,
+	material array
+]
+*/
 
 // Get Object Details
 INV_getitemScriptName = { ((_this call INV_getitemArray) select 0);};
@@ -804,9 +817,9 @@ INV_getitemName = {((_this call INV_getitemArray) select 2) select 1;};
 INV_getitemBuyCost = {((_this call INV_getitemArray) select 3) select 0;};
 INV_getitemSellCost = { ((_this call INV_getitemArray) select 3) select 1;};
 INV_getitemTypeKg = { ((_this call INV_getitemArray) select 4) select 0;};
-INV_getvehmaxkg = { ((_this call INV_getitemArray) select 4) select 3;};
 INV_getitemLicense = { ((_this call INV_getitemArray) select 4) select 1;};
 INV_getitemLicense2 = { ((_this call INV_getitemArray) select 4) select 2;};
+INV_getvehmaxkg = { ((_this call INV_getitemArray) select 4) select 3;};
 INV_getitemOtherStuff = { ((_this call INV_getitemArray) select 5);};
 INV_getitemDescription1 = { ((_this call INV_getitemArray) select 6);};
 INV_getitemDescription2 = { ((_this call INV_getitemArray) select 7);};
