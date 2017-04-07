@@ -155,6 +155,12 @@ OL_ATM_Clothes = [
 			["FR_Marksman",				 "PMC_id",				"Marksman Uniform"],
 			["USMC_Soldier_Light", "PMC_id",				"Pilot Uniform"]
 		]
+	],
+
+	[assassinshop,
+		[
+			["TK_INS_Soldier_EP1", "[getPlayerUID player]", "Assassin Clothes"]
+		]
 	]
 ];
 
