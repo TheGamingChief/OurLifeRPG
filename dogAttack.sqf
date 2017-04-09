@@ -1,6 +1,8 @@
 
 //If (player getVariable "CLAY_DogStatus" == "Attacking") exitWith {};
 _target = _this select 0;
+if (!(_target isKindOf "Man")) exitWith {};
+
 _dog = player getVariable "CLAY_DogUnit";
 player setVariable ["CLAY_DogStatus", "Attacking"];
 
@@ -16,9 +18,9 @@ while {alive _dog && alive _target && player getVariable "CLAY_DogStatus" == "At
 		_dog lookAt _target;
 
 		_dog switchMove "CLAY_DogAttack";
-		//sleep 0.35; 
+		//sleep 0.35;
 		_dog setVelocity [0, 0, 5];//5 was 2.5 previously.
-		
+
 		_target setHit ["legs", 1];
 		_target setHit ["hands", 1];
 		_target setDammage 0.8;
@@ -27,9 +29,8 @@ while {alive _dog && alive _target && player getVariable "CLAY_DogStatus" == "At
 		player setVariable ["CLAY_DogStatus", ""];
 		sleep 12;
 		(format ["%1 switchmove ""%2"";", _target, "amovppnemstpsnonwnondnon"]) call OL_network_Swag;
-		
+
 	};
 	sleep 1;
 };
 deleteVehicle _sound;
-

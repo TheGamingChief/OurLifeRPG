@@ -30,28 +30,28 @@ _sc1 = ["440cuda","roadrunner","roadrunner2","CHEVROLET_CAMARO_SS_396","chevrole
 //15
 _sc2 =
 [
-	"DD_DOD12Charger_Black",		// 2012 Dodge Charger (Black)
-	"DD_DOD12Charger_Blue",			// 2012 Dodge Charger (Blue)
-	"DD_DOD12Charger_Camo",			// 2012 Dodge Charger (Camo)
+	"DD_DOD12Charger_Black",			// 2012 Dodge Charger (Black)
+	"DD_DOD12Charger_Blue",				// 2012 Dodge Charger (Blue)
+	"DD_DOD12Charger_Camo",				// 2012 Dodge Charger (Camo)
 	"DD_DOD12Charger_DarkGreen",	// 2012 Dodge Charger (Dark Green)
 	"DD_DOD12Charger_DarkRed",		// 2012 Dodge Charger (Dark Red)
-	"DD_DOD12Charger_Green",		// 2012 Dodge Charger (Green)
-	"DD_DOD12Charger_Orange",		// 2012 Dodge Charger (Orange)
-	"DD_DOD12Charger_Red",			// 2012 Dodge Charger (Red)
+	"DD_DOD12Charger_Green",			// 2012 Dodge Charger (Green)
+	"DD_DOD12Charger_Orange",			// 2012 Dodge Charger (Orange)
+	"DD_DOD12Charger_Red",				// 2012 Dodge Charger (Red)
 	"DD_DOD12Charger_UrbanCamo",	// 2012 Dodge Charger (Urban Camo)
-	"DD_DOD12Charger_White",		// 2012 Dodge Charger (White)
-	"DD_DOD12Charger_Yellow",		// 2012 Dodge Charger (Yellow)
-	"DD_DOD15Charger_Black",		// 2015 Dodge Charger (Black)
-	"DD_DOD15Charger_Blue",			// 2015 Dodge Charger (Blue)
-	"DD_DOD15Charger_Camo",			// 2015 Dodge Charger (Camo)
+	"DD_DOD12Charger_White",			// 2012 Dodge Charger (White)
+	"DD_DOD12Charger_Yellow",			// 2012 Dodge Charger (Yellow)
+	"DD_DOD15Charger_Black",			// 2015 Dodge Charger (Black)
+	"DD_DOD15Charger_Blue",				// 2015 Dodge Charger (Blue)
+	"DD_DOD15Charger_Camo",				// 2015 Dodge Charger (Camo)
 	"DD_DOD15Charger_DarkGreen",	// 2015 Dodge Charger (Dark Green)
 	"DD_DOD15Charger_DarkRed",		// 2015 Dodge Charger (Dark Red)
-	"DD_DOD15Charger_Green",		// 2015 Dodge Charger (Green)
-	"DD_DOD15Charger_Orange",		// 2015 Dodge Charger (Orange)
-	"DD_DOD15Charger_Red",			// 2015 Dodge Charger (Red)
+	"DD_DOD15Charger_Green",			// 2015 Dodge Charger (Green)
+	"DD_DOD15Charger_Orange",			// 2015 Dodge Charger (Orange)
+	"DD_DOD15Charger_Red",				// 2015 Dodge Charger (Red)
 	"DD_DOD15Charger_UrbanCamo",	// 2015 Dodge Charger (Urban Camo)
-	"DD_DOD15Charger_White",		// 2015 Dodge Charger (White)
-	"DD_DOD15Charger_Yellow",		// 2015 Dodge Charger (Yellow)
+	"DD_DOD15Charger_White",			// 2015 Dodge Charger (White)
+	"DD_DOD15Charger_Yellow",			// 2015 Dodge Charger (Yellow)
 	"MAZDA_RX_7",
 	"MAZDA_RX_71",
 	"MAZDA_RX_72",
@@ -1518,11 +1518,11 @@ _Tow4 =
 
 INV_ItemShops = [
 [specbox,"Undercover Police Equipment",specbox,ccarspawnuc,_undercover,_undercover,true],
-[rlrpgclothingshop,"Civilian Clothing Shop",dummyobj,dummyobj,M_rlrpgclothing,M_rlrpgclothing,true],
-[rlrpgclothingshop_1,"Military Surplus",dummyobj,dummyobj,M_rlrpgclothing_1,M_rlrpgclothing_1,true],
-[rlrpgclothingshop_2,"Tactical Military Clothing",dummyobj,dummyobj,M_rlrpgclothing_2,M_rlrpgclothing_2,true],
-[rlrpgclothingshop_3,"Civilian Clothing Shop",dummyobj,dummyobj,M_rlrpgclothing,M_rlrpgclothing,true],
-[rlrpgclothingshop_4,"Military Surplus",dummyobj,dummyobj,M_rlrpgclothing_1,M_rlrpgclothing_1,true],
+[OL_Shop_ClothingStore,"Civilian Clothing Shop",dummyobj,dummyobj,M_rlrpgclothing,M_rlrpgclothing,true],
+[OL_Shop_ClothingStore_1,"Military Surplus",dummyobj,dummyobj,M_rlrpgclothing_1,M_rlrpgclothing_1,true],
+[OL_Shop_ClothingStore_2,"Tactical Military Clothing",dummyobj,dummyobj,M_rlrpgclothing_2,M_rlrpgclothing_2,true],
+[OL_Shop_ClothingStore_3,"Civilian Clothing Shop",dummyobj,dummyobj,M_rlrpgclothing,M_rlrpgclothing,true],
+[OL_Shop_ClothingStore_4,"Military Surplus",dummyobj,dummyobj,M_rlrpgclothing_1,M_rlrpgclothing_1,true],
 [pistol,"Licensed Pistol",pistol,pistol,_pistol,_pistol,true],
 [sub,"Submachine Gun",sub,sub,_sub,_sub,true],
 [rifle,"Licensed Rifle",rifle,rifle,_rifle,_rifle,true],
@@ -1539,10 +1539,6 @@ INV_ItemShops = [
 [fuel8,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
 [shop1,"Food Shop",dummyobj,dummyobj,_is,_is,true],
 [shop4,"Food Shop",dummyobj,dummyobj,_is,_is,true],
-//Need to make a box under the shop for the to work, Will do latter.
-//[shop1export,"Market Export",dummyobj,dummyobj,_export,_export,true],
-//[shop2export,"Market Export",dummyobj,dummyobj,_export,_export,true],
-//[shop4export,"Market Export",dummyobj,dummyobj,_export,_export,true],
 [bailflag,"Food and Gun Locker",dummyobj,dummyobj,_cf,_cf,true],
 [pub1,"Pub",dummyobj,dummyobj,_pub,_pub,true],
 [pub2,"Pub",dummyobj,dummyobj,_pub,_pub,true],

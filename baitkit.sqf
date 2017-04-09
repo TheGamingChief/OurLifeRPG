@@ -1,21 +1,15 @@
-private["_cars","_baitcar","_baitctrls"];
+private ["_vehicle"];
+_vehicle = vehicle player;
 
-_cars = nearestObjects [getPos player, ["LandVehicle"], 10];
+if (_vehicle == player) exitWith { player groupChat "You must be inside the vehicle to bait kit it!" };
+if (!(_vehicle in INV_VehicleArray)) exitWith { player groupChat "You do not own this car! You cannot bait it!" };
+if ("Bait_Kit" call INV_GetItemAmount < 1) exitWith { player groupChat "You do not have a bait kit!" };
 
-if (count _cars < 1) exitWith {
-	player groupChat "No cars to bait!"
+["Bait_Kit", -1] call INV_AddInvItem;
+
+if ("Bait_Ctrl" call INV_GetItemAmount < 1) then {
+	["Bait_Ctrl", 1] call INV_AddInvItem
 };
 
-_baitcar = _cars select 0;
-
-if (_baitcar in INV_VehicleArray) then {
-	["Bait_Kit", -1] call INV_AddInvItem;
-	_baitctrls = "Bait_Ctrl" call INV_GetItemAmount;
-	if (_baitctrls < 1) then {
-		["Bait_Ctrl", 1] call INV_AddInvItem;
-	};
-	bc_baitcars = bc_baitcars + [_baitcar];
-	player groupChat "Bait Kit Set up!";
-} else {
-	player groupChat "You do not own this car! You cannot bait it!"
-};
+OL_BaitCars set [count OL_BaitCars, _vehicle];
+player groupChat "Bait kit setup!";

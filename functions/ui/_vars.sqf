@@ -165,5 +165,5 @@ OL_ATM_Clothes = [
 ];
 
 {
-	missionNamespace setVariable [format["OL_%1_ClothesArray", _x select 0], _x]
+	missionNamespace setVariable [format ["OL_%1_ClothesArray", _x select 0], _x]
 } forEach OL_ATM_Clothes;

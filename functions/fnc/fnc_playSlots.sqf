@@ -1,4 +1,4 @@
-art = _this select 0;
+_art = _this select 0;
 _winner = random 100;
 _wallet = "geld" call INV_GetItemAmount;
 _player = player;

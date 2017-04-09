@@ -1,25 +1,22 @@
-private["_i","_car","_carsKilled","_xCar"];
+private ["_i", "_carsKilled"];
 
-for "_i" from 0 to (count bc_baitcars - 1) do {
-	_car = bc_baitcars select _i;
-	if (isNull _car) then {
-		bc_baitcars = bc_baitcars - _car
+for "_i" from 0 to (count OL_BaitCars - 1) do {
+	if (isNull (OL_BaitCars select _i)) then {
+		OL_BaitCars = OL_BaitCars - (OL_BaitCars select _i)
 	};
 };
 
 _carsKilled = 0;
 
 {
-	_xCar = _x;
-	if (player distance _xCar < 1000) then
-		format ["%1 setFuel (0); %1 lock true;", _xCar] call OL_network_Swag;
-
-		[nil,driver _xCar,"loc",rHINT,"Bait Car Activated!"] call RE;
-		{
-			[nil,_x,"loc",rPlaySound,"trolled"] call RE;
-		} forEach (crew _xCar);
+	if (player distance _x < 1000) then {
+		_x setVehicleInit "
+			this setFuel 0;
+			this lock true;
+		";
+		processInitCommands;
 		_carsKilled = _carsKilled + 1;
 	};
-} forEach bc_baitcars;
+} forEach OL_BaitCars;
 
 player groupChat format ["%1 car(s) killed", _carsKilled];

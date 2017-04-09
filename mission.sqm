@@ -2235,7 +2235,7 @@ class Mission
 					vehicle="Soldier_TL_PMC";
 					leader=1;
 					skill=0.60000002;
-					text="rlrpgclothingshop_1";
+					text="OL_Shop_ClothingStore_1";
 					init="this disableAI ""anim"";this disableAI ""move""; removeallweapons this;this allowdamage false; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+.7];";
 				};
 			};
@@ -2255,7 +2255,7 @@ class Mission
 					vehicle="Ins_Soldier_CO";
 					leader=1;
 					skill=0.60000002;
-					text="rlrpgclothingshop_2";
+					text="OL_Shop_ClothingStore_2";
 					init="this disableAI ""anim"";this disableAI ""move""; removeallweapons this;this allowdamage false; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+.7];";
 				};
 			};
@@ -2275,7 +2275,7 @@ class Mission
 					vehicle="TK_CIV_Takistani04_EP1";
 					leader=1;
 					skill=0.60000002;
-					text="rlrpgclothingshop";
+					text="OL_Shop_ClothingStore";
 					init="this disableAI ""anim"";this disableAI ""move""; removeallweapons this;this allowdamage false; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+.7];";
 				};
 			};
@@ -5638,7 +5638,7 @@ class Mission
 					vehicle="Functionary2_EP1";
 					leader=1;
 					skill=0.60000002;
-					text="rlrpgclothingshop_3";
+					text="OL_Shop_ClothingStore_3";
 					init="this disableAI ""anim"";this disableAI ""move""; removeallweapons this;this allowdamage false; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+.3];";
 				};
 			};
@@ -5658,7 +5658,7 @@ class Mission
 					vehicle="Functionary1_EP1";
 					leader=1;
 					skill=0.60000002;
-					text="rlrpgclothingshop_4";
+					text="OL_Shop_ClothingStore_4";
 					init="this disableAI ""anim"";this disableAI ""move""; removeallweapons this;this allowdamage false; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+.7];";
 				};
 			};
@@ -12553,7 +12553,7 @@ class Mission
 			vehicle="UNBasicAmmunitionBox_EP1";
 			leader=1;
 			skill=0.60000002;
-			text="specbox";
+			text="OL_Shop_Undercover";
 			init="clearMagazineCargo this; clearWeaponCargo this;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+.2];this allowdamage false;";
 		};
 		class Item669
@@ -13388,7 +13388,7 @@ class Mission
 			vehicle="UNBasicAmmunitionBox_EP1";
 			leader=1;
 			skill=0.60000002;
-			text="pistol";
+			text="OL_Shop_Pistol";
 			init="clearMagazineCargo this; clearWeaponCargo this;this allowdamage false;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+.1];";
 		};
 		class Item750
