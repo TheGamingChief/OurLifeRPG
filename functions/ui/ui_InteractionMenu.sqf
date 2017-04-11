@@ -6,21 +6,21 @@ if (isNil "_civ") exitWith {player groupChat "Could not find civilian."};
 if (_civ getVariable "KOED") exitWith { closeDialog 0 };
 
 if (iscop) exitWith {
-  _Name = (findDisplay 6960) displayCtrl 6584;
-  _TicketName = (findDisplay 65248) displayCtrl 1001;
-  _JailName = (findDisplay 65458) displayCtrl 1001;
-  _HandCuff = (findDisplay 6960) displayCtrl 54848;
-  _Escorted = (findDisplay 6960) displayCtrl 54847;
-  _DrugSearch = (findDisplay 6960) displayCtrl 844526;
-  _PatDown = (findDisplay 6960) displayCtrl 56478;
+  _Name           = (findDisplay 6960) displayCtrl 6584;
+  _TicketName     = (findDisplay 65248) displayCtrl 1001;
+  _JailName       = (findDisplay 65458) displayCtrl 1001;
+  _HandCuff       = (findDisplay 6960) displayCtrl 54848;
+  _Escorted       = (findDisplay 6960) displayCtrl 54847;
+  _DrugSearch     = (findDisplay 6960) displayCtrl 844526;
+  _PatDown        = (findDisplay 6960) displayCtrl 56478;
   _CheckInventory = (findDisplay 6960) displayCtrl 35489;
-  _Gag = (findDisplay 6960) displayCtrl 23548;
-  _ForceFeed = (findDisplay 6960) displayCtrl 624258;
-  _JailSubject = (findDisplay 6960) displayCtrl 1609;
+  _Gag            = (findDisplay 6960) displayCtrl 23548;
+  _ForceFeed      = (findDisplay 6960) displayCtrl 624258;
+  _JailSubject    = (findDisplay 6960) displayCtrl 1609;
 
-  _Name ctrlSetText format["Interact - %1", name _civ];
-  _TicketName ctrlSetText format["Ticket - %1", name _civ];
-  _JailName ctrlSetText format["Arrest - %1", name _civ];
+  _Name ctrlSetText format ["Interact - %1", name _civ];
+  _TicketName ctrlSetText format ["Ticket - %1", name _civ];
+  _JailName ctrlSetText format ["Arrest - %1", name _civ];
 
   if (_civ getVariable "Cuffed") then {
     _HandCuff ctrlSetText "Remove HandCuffs";
@@ -45,7 +45,6 @@ if (iscop) exitWith {
   if (_civ getVariable "ZipTied") then {_HandCuff ctrlSetText "Remove Zip Ties";_HandCuff ctrlEnable true};
   if (_civ getVariable "Gagged") then {_Gag ctrlSetText "Remove Gag";_Gag ctrlEnable true};
   if (_civ getVariable "Escorted") then {_Escorted ctrlSetText "Stop Escorting";_Escorted ctrlEnable true};
-
 };
 
 if (isciv) exitWith {
@@ -57,7 +56,7 @@ if (isciv) exitWith {
   _Escorted = (findDisplay 6959) displayCtrl 1605;
   _Gag = (findDisplay 6959) displayCtrl 1607;
   _ThrowInCar = (findDisplay 6959) displayCtrl 1619;
-  _Name ctrlSetText format["Interact - %1", name _civ];
+  _Name ctrlSetText format ["Interact - %1", name _civ];
 
   if (!(_civ call OL_ISSE_IsVictim)) then {
   	_Rob ctrlEnable false;

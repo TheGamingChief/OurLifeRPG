@@ -6,7 +6,7 @@ if ((isciv) && (isNil {INV_SavedVehLand select 0})) exitWith
 	player sideChat "You do not have any saved vehicles, currently!";
 };
 
-if ((iscop) && !(isciv) && (isNil {savedVehiclesWest select 0})) exitWith
+if ((iscop) && !(isciv) && (isNil {INV_SavedVehLand select 0})) exitWith
 {
 	player sideChat "You do not have any saved vehicles, currently!";
 };
@@ -179,11 +179,11 @@ if (_art == "PDSpawn") then {
 
 	continue = false;
 
-	for "_i" from 0 to (count savedVehiclesWest - 1) do
+	for "_i" from 0 to (count INV_SavedVehLand - 1) do
 	{
-		_rtv = (savedVehiclesWest select _i) call INV_GetItemName;
+		_rtv = (INV_SavedVehLand select _i) call INV_GetItemName;
 		_retriveTxt = format["retrive%1",_i];
-		_vehicle2Spawn = format["continue = true;vehicle2Spawn = (savedVehiclesWest select %1);",_i];
+		_vehicle2Spawn = format["continue = true;vehicle2Spawn = (INV_SavedVehLand select %1);",_i];
 		_retriveTxt = player addAction [_rtv,"noscript.sqf",_vehicle2Spawn,1,true,true,"",'player distance savepoint2 < 5'];
 		_actionsToRemove = _actionsToRemove + [_retriveTxt];
 	};
@@ -210,7 +210,7 @@ if (_art == "PDSpawn") then {
 
 	[vehicle2spawn, ctrafficspawn] spawn INV_CreateVehicle;
 
-	savedVehiclesWest = savedVehiclesWest - [vehicle2Spawn];
+	INV_SavedVehLand = INV_SavedVehLand - [vehicle2Spawn];
 
 	server globalchat format ["%1",_v];
 
@@ -232,11 +232,11 @@ if (_art == "SheriffSpawn") then {
 
 	continue = false;
 
-	for "_i" from 0 to (count savedVehiclesWest - 1) do
+	for "_i" from 0 to (count INV_SavedVehLand - 1) do
 	{
-		_rtv = (savedVehiclesWest select _i) call INV_GetItemName;
+		_rtv = (INV_SavedVehLand select _i) call INV_GetItemName;
 		_retriveTxt = format["retrive%1",_i];
-		_vehicle2Spawn = format["continue = true;vehicle2Spawn = (savedVehiclesWest select %1);",_i];
+		_vehicle2Spawn = format["continue = true;vehicle2Spawn = (INV_SavedVehLand select %1);",_i];
 		_retriveTxt = player addAction [_rtv,"noscript.sqf",_vehicle2Spawn,1,true,true,"",'player distance savepoint2s < 5'];
 		_actionsToRemove = _actionsToRemove + [_retriveTxt];
 	};
@@ -263,7 +263,7 @@ if (_art == "SheriffSpawn") then {
 
 	[vehicle2spawn, saveSpawn2s] spawn INV_CreateVehicle;
 
-	savedVehiclesWest = savedVehiclesWest - [vehicle2Spawn];
+	INV_SavedVehLand = INV_SavedVehLand - [vehicle2Spawn];
 
 	server globalchat format ["%1",_v];
 

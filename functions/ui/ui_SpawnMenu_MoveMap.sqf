@@ -20,7 +20,7 @@ if (_array select 0 == "") exitWith {};
       };
     };
   };
-} forEach OL_SpawnPoints;//not done
+} forEach OL_SpawnPoints;
 
 _ctrl = (findDisplay 65525) displayCtrl 8890;
 _ctrl ctrlMapAnimAdd [1, _zoom, _grid];

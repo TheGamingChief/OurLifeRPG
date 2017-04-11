@@ -52,7 +52,7 @@ fishingmarkers = [
 
 //Gang Markers
 gangmarkers = [
-"factorymarker1","gangarea1","factorymarker2","factorymarker3","gangarea3","gangarea1_2","factorymarker3_1","gangarea1_2_1"
+"factorymarker1","OL_Shop_Gangarea1","factorymarker2","factorymarker3","OL_Shop_Gangarea3","OL_Shop_Gangarea1_2","factorymarker3_1","OL_Shop_Gangarea1_2_1"
 ];
 
 //Shops

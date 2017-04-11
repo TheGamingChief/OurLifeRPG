@@ -5677,7 +5677,7 @@ class Mission
 			vehicle="FlagCarrierTakistan_EP1";
 			leader=1;
 			skill=0.60000002;
-			text="gangarea1";
+			text="OL_Shop_Gangarea1";
 			init="this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)-1];this allowdamage false;this setVectorUp [0,0,1];";
 		};
 		class Item1
@@ -5690,7 +5690,7 @@ class Mission
 			vehicle="FlagCarrierTakistan_EP1";
 			leader=1;
 			skill=0.60000002;
-			text="gangarea2";
+			text="OL_Shop_Gangarea2";
 			init="this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)-1];this allowdamage false;this setVectorUp [0,0,1];";
 		};
 		class Item2
@@ -5703,7 +5703,7 @@ class Mission
 			vehicle="FlagCarrierTakistan_EP1";
 			leader=1;
 			skill=0.60000002;
-			text="gangarea3";
+			text="OL_Shop_Gangarea3";
 			init="this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)-1];this allowdamage false;this setVectorUp [0,0,1];";
 		};
 		class Item3
@@ -6283,7 +6283,7 @@ class Mission
 			vehicle="FlagCarrierTakistan_EP1";
 			leader=1;
 			skill=0.60000002;
-			text="gangarea4";
+			text="OL_Shop_Gangarea4";
 			init="this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)-1];this allowdamage false;this setVectorUp [0,0,1];";
 		};
 		class Item60
@@ -34396,7 +34396,7 @@ class Mission
 		class Item19
 		{
 			position[]={2677.7075,230.09993,2731.8406};
-			name="gangarea1";
+			name="OL_Shop_Gangarea1";
 			text="Gang area";
 			markerType="ELLIPSE";
 			type="Empty";
@@ -34424,7 +34424,7 @@ class Mission
 		class Item22
 		{
 			position[]={8034.9453,19,1886.821};
-			name="gangarea3";
+			name="OL_Shop_Gangarea3";
 			text="Gang area";
 			markerType="ELLIPSE";
 			type="Empty";
@@ -35413,7 +35413,7 @@ class Mission
 		class Item132
 		{
 			position[]={2527.9412,36.682327,6164.2329};
-			name="gangarea1_2";
+			name="OL_Shop_Gangarea1_2";
 			text="Gang area";
 			markerType="ELLIPSE";
 			type="Empty";
@@ -35611,7 +35611,7 @@ class Mission
 		class Item155
 		{
 			position[]={5231.2769,62.602188,3758.8628};
-			name="gangarea1_2_1";
+			name="OL_Shop_Gangarea1_2_1";
 			text="Gang area";
 			markerType="ELLIPSE";
 			type="Empty";

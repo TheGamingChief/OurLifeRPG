@@ -1,4 +1,4 @@
-_ArryLength = count savedVehiclesWest;
+_ArryLength = count INV_SavedVehLand;
 
 if (_ArryLength >= OL_CarSaveLimit) then {
 	player groupChat format["YOU CANNOT SAVE MORE THAN %1 VEHCILES!"];
@@ -11,9 +11,9 @@ if (_ArryLength >= OL_CarSaveLimit) then {
 
 	player globalchat format ["VEHICLE TO SAVE : %1",_vcl]; // debug
 
-	savedVehiclesWest set [count savedVehiclesWest, _vclClass];
+	INV_SavedVehLand set [count INV_SavedVehLand, _vclClass];
 
-	player globalchat format ["SAVED ARRAY : %1", savedVehiclesWest]; // debug
+	player globalchat format ["SAVED ARRAY : %1", INV_SavedVehLand]; // debug
 
 	deleteVehicle _vcl;
 

@@ -104,10 +104,10 @@ if (!(createDialog "liste_1_button")) exitWith {hint "Dialog Error!";};
 	_members   = _gangarray select 1;
 	_territory = "None";
 
-	_control1 = gangarea1 getvariable "control";
-	_control2 = gangarea2 getvariable "control";
-	_control3 = gangarea3 getvariable "control";
-	_control4 = gangarea4 getvariable "control";
+	_control1 = OL_Shop_Gangarea1 getvariable "control";
+	_control2 = OL_Shop_Gangarea2 getvariable "control";
+	_control3 = OL_Shop_Gangarea3 getvariable "control";
+	_control4 = OL_Shop_Gangarea4 getvariable "control";
 
 	if(_control1 == _gangname)then{if(_territory == "None")then{_territory = "West Side"}else{_territory = _territory + ", West Side"};};
 	if(_control2 == _gangname)then{if(_territory == "None")then{_territory = "Little Havana"}else{_territory = _territory + ", Little Havana"};};

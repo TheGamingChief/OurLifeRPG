@@ -156,7 +156,7 @@ gangdeltime		 = 900;
 gangsarray		 = [];
 gangmember		 = false;
 gangleader		 = false;
-gangareas		 = [gangarea1,gangarea2,gangarea3,gangarea4];
+gangareas		 = [OL_Shop_Gangarea1,OL_Shop_Gangarea2,OL_Shop_Gangarea3,OL_Shop_Gangarea4];
 //=================================================================================
 CityLocationArray        = [[CityLogic1, 500], [CityLogic2, 400], [CityLogic3, 300], [CityLogic4, 500]];
 //=========== cop patrol array ==========

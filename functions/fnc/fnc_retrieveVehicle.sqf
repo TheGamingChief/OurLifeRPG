@@ -5,6 +5,8 @@ if (_index == -1) exitWith { player groupChat "Please select a vehicle from the 
 
 _vehicle = INV_SavedVehLand select _index;
 
+systemChat format ["%1", _spawn];
+
 if (isNil "_vehicle") exitWith { player groupChat "rip" };
 
 player groupChat format ["Retriving Vehicle: %1", getText(configFile >> "cfgVehicles" >> _vehicle >> "displayName")];

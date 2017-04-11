@@ -41,3 +41,4 @@ adminlevel4  		      = [];
 adminlevel3 		      = [];
 adminlevel2 		      = [];
 adminlevel1 		      = [];
+INV_SavedVehLand      = [];

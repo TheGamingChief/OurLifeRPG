@@ -8,7 +8,7 @@ if ((getPlayerUID player) in (call compile (_array select 4))) then {
   player enableSimulation true;
   player allowDamage true;
 
-  format['%1 switchMove ""', player] call OL_network_Swag;
+  format ['%1 switchMove ""', player] call OL_network_Swag;
   closeDialog 0;
 } else {
   systemChat "Sorry, You're not whitelisted for this spawn!";

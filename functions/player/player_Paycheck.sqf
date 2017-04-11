@@ -138,10 +138,10 @@ if (playerSide == civilian) exitWith {
       };
     };
 
-    if (gangarea1 getVariable "control" == (call INV_mygang)) then { _income = _income + (gangincome / _activeGangMembers) };
-    if (gangarea2 getVariable "control" == (call INV_mygang)) then { _income = _income + (gangincome / _activeGangMembers) };
-    if (gangarea3 getVariable "control" == (call INV_mygang)) then { _income = _income + (gangincome / _activeGangMembers) };
-    if (gangarea4 getVariable "control" == (call INV_mygang)) then { _income = _income + (gangincome / _activeGangMembers) };
+    if (OL_Shop_Gangarea1 getVariable "control" == (call INV_mygang)) then { _income = _income + (gangincome / _activeGangMembers) };
+    if (OL_Shop_Gangarea2 getVariable "control" == (call INV_mygang)) then { _income = _income + (gangincome / _activeGangMembers) };
+    if (OL_Shop_Gangarea3 getVariable "control" == (call INV_mygang)) then { _income = _income + (gangincome / _activeGangMembers) };
+    if (OL_Shop_Gangarea4 getVariable "control" == (call INV_mygang)) then { _income = _income + (gangincome / _activeGangMembers) };
   };
 
 

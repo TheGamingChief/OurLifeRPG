@@ -14,7 +14,6 @@ if (_key == "lolfuckya") then {
 	player groupChat "Welcome to the Community!";
 	INV_SavedVehAir = [];
 	INV_SavedVehLand = [];
-	savedVehiclesWest =[];
 } else {
 
 	//Get Data
@@ -217,7 +216,7 @@ if (_key == "lolfuckya") then {
 			INV_InventarArray = _inventory;
 			INV_LizenzOwner   = _licenses;
 			kontostand 		  	= _bank;
-			savedVehiclesWest = _groundVeh;
+			INV_SavedVehLand = _groundVeh;
 
 			{ player addWeapon _x; } forEach _weapons;
 

@@ -5,12 +5,12 @@ pickingup=true;
 _this 		= _this select 3;
 _gangarea 	= _this select 0;
 _type		= _this select 1;
-_gangarea1 	= [];
+_OL_Shop_Gangarea1 	= [];
 
-if (_gangarea==gangarea1) then {_gangarea1 = "West Side";};
-if (_gangarea==gangarea2) then {_gangarea1 = "Little Havana";};
-if (_gangarea==gangarea3) then {_gangarea1 = "East side";};
-if (_gangarea==gangarea4) then {_gangarea1 = "The Safe House";};
+if (_gangarea==OL_Shop_Gangarea1) then {_OL_Shop_Gangarea1 = "West Side";};
+if (_gangarea==OL_Shop_Gangarea2) then {_OL_Shop_Gangarea1 = "Little Havana";};
+if (_gangarea==OL_Shop_Gangarea3) then {_OL_Shop_Gangarea1 = "East side";};
+if (_gangarea==OL_Shop_Gangarea4) then {_OL_Shop_Gangarea1 = "The Safe House";};
 
 player playmove "AinvPknlMstpSlayWrflDnon_medic";
 waituntil {animationstate player != "AinvPknlMstpSlayWrflDnon_medic"};
@@ -32,7 +32,7 @@ sleep 1;
 		{
 
 		//_gangarea setvariable["control", nil, true];
-		format["hint ""%1 has been neutralised by %2!"";", _gangarea1, _mygang] call OL_network_Swag_civ;
+		format["hint ""%1 has been neutralised by %2!"";", _OL_Shop_Gangarea1, _mygang] call OL_network_Swag_civ;
 
 		}; 
 
@@ -57,7 +57,7 @@ sleep 1;
 		{
 
 		_gangarea setvariable["control", _mygang, true];
-		format["hint ""%1 has been captured by %2!"";", _gangarea1, _mygang] call OL_network_Swag_civ;
+		format["hint ""%1 has been captured by %2!"";", _OL_Shop_Gangarea1, _mygang] call OL_network_Swag_civ;
 
 		}; 
 
