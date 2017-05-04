@@ -30323,14 +30323,14 @@ class Mission
 		class Item2466
 		{
 			position[]={4883.6104,113.46044,5340.4688};
-			azimut=270.28287;
+			azimut=270.28299;
 			special="NONE";
 			id=2615;
 			side="EMPTY";
 			vehicle="Land_Hlidac_Budka_EP1";
 			leader=1;
 			skill=0.60000002;
-			text="impoundbuy_1";
+			text="impoundbuy_pd";
 			init="this allowdamage false;";
 		};
 		class Item2467

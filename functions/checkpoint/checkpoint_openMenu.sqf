@@ -5,7 +5,7 @@ switch (true) do {
   case (isCop) : {
     classnames_total = PD_classnames_total;
   };
-  case (isaMedic) : {
+  case (ismedic) : {
     classnames_total = ESU_classnames_total;
   };
   case (getPlayerUID player in Tow_ID) : {

@@ -17,9 +17,10 @@ INV_ActiveBuyShopArray  = [];
 _shop		= ((INV_ItemShops select INV_ActiveShopNumber) select 0);
 _itembuyarray   = ((INV_ItemShops select INV_ActiveShopNumber) select 4);
 _itemsellarray  = ((INV_ItemShops select INV_ActiveShopNumber) select 5);
+_whitelist = ((INV_ItemShops select INV_ActiveShopNumber) select 7);
 
 //--------------------------------------BUY-----------------------------------------
-_CopOnlyShops = [copuntrained,copbasic1,copbasic2,copbasic4,copbasic6,coppo1,coppo2,coppo3,copcpl,copsgt,ftobox,cidbox,copdeputy,copsheriff,copsheriffdnr,copsheriffmks,coplt,copcpt,copchief,copmedalbox,copair2,copswat1,copswat2,copswat3,copswat4,copswat5,copswate,copswatd,copswatvehicle,copcoastguard,copcoastguardair,copairweapon2,copVIPBox,copVIPBox2,copk92,corsbox,corcbox,copsgtdeputy];
+_CopOnlyShops = [copuntrained,copbasic1,copbasic2,copbasic4,copbasic6,coppo1,coppo2,coppo3,copcpl,copsgt,ftobox,cidbox,copdeputy,copsheriff,copsheriffdnr,copsheriffmks,coplt,copcpt,copchief,copmedalbox,copair2,copswat1,copswat2,copswat3,copswat4,copswat5,copswate,copswatd,copswatvehicle,copcoastguard,copcoastguardair,copairweapon2,copVIPBox,copVIPBox2,copk92,copsgtdeputy];
 _ESUOnlyShops = [tdoc,tdoc2,tdoc3,tdoc4,tdoc5,tdoc6,tdocsub,tdoc2sub,tdoc3sub,tdoc4sub,tdoc5sub,tdoc6sub,tdoc7,tdoc7sub,tdoc8];
 _EMT1 = [tdoc3,tdoc3sub];
 _EMT2 = [tdoc7,tdoc7sub];
@@ -52,7 +53,7 @@ _PDAviation = [copav1,copav2,copav3,copair2];
 _SWAT = [copswat1,copswat2,copswat3,copswat4,copswat5,copswatvehicle];
 _CID = [cidbox];
 _CoastGuard = [copcoastguard,copcoastguardair];
-_undercoverbox = [specbox];
+_undercoverbox = [OL_Shop_Undercover];
 _terrorVIP = [terrorvip,vipterrorair];
 _weaponx = [txwshop];
 _itemx = [txeshop];
@@ -74,52 +75,10 @@ if (_shop in _ESUOnlyShops) then
 	if (_PlayerTeam != "GUER") exitWith {player groupchat "Only EMS may use this shop!"; closedialog 0};
 };
 
-if(_shop in _Tow and !((getPlayerUID player) in Tow_id)) exitwith {player groupchat "You are not a Flyer's Auto Repair & Towing employee!"; closedialog 0};
-
-if(_shop in _undercoverbox and !((getPlayerUID player) in Undercover_id)) exitwith {player groupchat "You are not an Undercover Officer!"; closedialog 0};
-
-if(_shop in _donor1 and !((getPlayerUID player) in Donate_id)) exitwith {player groupchat "You're not a Tier 1 Donator!"; closedialog 0};
-if(_shop in _donor2 and !((getPlayerUID player) in Donate_id2)) exitwith {player groupchat "You're not a Tier 2 Donator!"; closedialog 0};
-if(_shop in _donor3 and !((getPlayerUID player) in Donate_id3)) exitwith {player groupchat "You're not a Tier 3 Donator!"; closedialog 0};
-if(_shop in _donor4 and !((getPlayerUID player) in Donate_id4)) exitwith {player groupchat "You're not a Tier 4 Donator!"; closedialog 0};
-if(_shop in _donor5 and !((getPlayerUID player) in Donate_id5)) exitwith {player groupchat "You're not a Tier 5 Donator!"; closedialog 0};
-if(_shop in _donor6 and !((getPlayerUID player) in Donate_id6)) exitwith {player groupchat "You're not a Tier 6 Donator!"; closedialog 0};
-
-if(_shop in _weaponx and !((getPlayerUID player) in OL_TierX_ID)) exitwith {player groupchat "You're not a Tier X Donator!"; closedialog 0};
-if(_shop in _carx and !((getPlayerUID player) in OL_TierX_ID)) exitwith {player groupchat "You're not a Tier X Donator!"; closedialog 0};
-if(_shop in _itemx and !((getPlayerUID player) in OL_TierX_ID)) exitwith {player groupchat "You're not a Tier X Donator!"; closedialog 0};
-if(_shop in _helix and !((getPlayerUID player) in OL_TierX_ID)) exitwith {player groupchat "You're not a Tier X Donator!"; closedialog 0};
-if(_shop in _boatx and !((getPlayerUID player) in OL_TierX_ID)) exitwith {player groupchat "You're not a Tier X Donator!"; closedialog 0};
-
-if(_shop in _PO1 and !((getPlayerUID player) in PO1_id)) exitwith {player groupchat "You're not a Rookie Patrol Officer!"; closedialog 0};
-if(_shop in _PO2 and !((getPlayerUID player) in PO2_id)) exitwith {player groupchat "You're not a Patrol Officer!"; closedialog 0};
-if(_shop in _PO3 and !((getPlayerUID player) in PO3_id)) exitwith {player groupchat "You're not a Senior Patrol Officer!"; closedialog 0};
-if(_shop in _Cpl and !((getPlayerUID player) in Cpl_id)) exitwith {player groupchat "You're not a Patrol Corporal!"; closedialog 0};
-if(_shop in _Sgt and !((getPlayerUID player) in Sgt_id)) exitwith {player groupchat "You're not a Patrol Sergeant!"; closedialog 0};
-if(_shop in _copfto and !((getPlayerUID player) in FTO_id)) exitwith {player groupchat "You're not a F.T.O!"; closedialog 0};
-if(_shop in _Deputy and !((getPlayerUID player) in Deputy_id)) exitwith {player groupchat "You're not a Sheriff's Deputy!"; closedialog 0};
-if(_shop in _SgtDeputy and !((getPlayerUID player) in SgtDeputy_id)) exitwith {player groupchat "You're not a Sheriff's Sgt Deputy!"; closedialog 0};
-if(_shop in _Sheriff and !((getPlayerUID player) in Sheriff_id)) exitwith {player groupchat "You're not the Sheriff Command!"; closedialog 0};
-if(_shop in _Lt and !((getPlayerUID player) in Lt_id)) exitwith {player groupchat "You're not a Patrol Lieutenant!"; closedialog 0};
-if(_shop in _Cpt and !((getPlayerUID player) in Cpt_id)) exitwith {player groupchat "You're not a Patrol Captain!"; closedialog 0};
-if(_shop in _Chief and !((getPlayerUID player) in Chief_id)) exitwith {player groupchat "You're not the Chief of Police!"; closedialog 0};
-if(_shop in _Medal and !((getPlayerUID player) in Chief_id)) exitwith {player groupchat "You're not the Medal winner!"; closedialog 0};
-if(_shop in _K9 and !((getPlayerUID player) in K9_id)) exitwith {player groupchat "You're not a K-9 Officer!"; closedialog 0};
-if(_shop in _PDAviation and !((getPlayerUID player) in PDAviation_id)) exitwith {player groupchat "You're not a Police Pilot!"; closedialog 0};
-if(_shop in _CID and !((getPlayerUID player) in Undercover_id)) exitwith {player groupchat "You're not a C.I.D Officer!"; closedialog 0};
-if(_shop in _SWAT and !((getPlayerUID player) in SWAT_id)) exitwith {player groupchat "You're not a S.W.A.T. Officer!"; closedialog 0};
-if(_shop in _CoastGuard and !((getPlayerUID player) in CoastGuard_id)) exitwith {player groupchat "You're not Coast Guard Personnel!"; closedialog 0};
-if(_shop in _vipCop and !((getPlayerUID player) in Donate_id)) exitwith {player groupchat "You're not a donator!"; closedialog 0};
-
-if(_shop in _EMT1 and !((getPlayerUID player) in EMT1_id)) exitwith {player groupchat "You're not an EMT 1"; closedialog 0};
-if(_shop in _EMT2 and !((getPlayerUID player) in EMT2_id)) exitwith {player groupchat "You're not an EMT 2"; closedialog 0};
-if(_shop in _EMT3 and !((getPlayerUID player) in EMT3_id)) exitwith {player groupchat "You're not a FireFighter 1"; closedialog 0};
-if(_shop in _EMT_FD and !((getPlayerUID player) in FD_id)) exitwith {player groupchat "You're not a FireFighter 2"; closedialog 0};
-if(_shop in _EMT_Air and !((getPlayerUID player) in AirESU_id)) exitwith {player groupchat "You're not an EMT Air"; closedialog 0};
-if(_shop in _EMT_Command and !((getPlayerUID player) in ESUCommand_id)) exitwith {player groupchat "You're not in EMS Command"; closedialog 0};
-
-if(_shop in _PMC and !((getPlayerUID player) in PMC_id)) exitwith {player groupchat "You are not PMC!"; closedialog 0};
-if(_shop in _CommandPMC and !((getPlayerUID player) in CommandPMC_id)) exitwith {player groupchat "You are not PMC Command!"; closedialog 0};
+if (!(getPlayerUID player in (call compile _whitelist))) exitWith {
+	player groupChat "You are not whitelisted for this shop!";
+	closeDialog 0;
+};
 
 for [{_i=0}, {_i < (count _itembuyarray)}, {_i=_i+1}] do
 

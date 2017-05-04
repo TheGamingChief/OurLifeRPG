@@ -1,12 +1,3 @@
-/*
-Script made by : TheGamingChief for OurLifeRPG
-Version 1.0 (Stable)
-File: fnc_GUER_KeyPress.sqf
-Description: Creates all the functions for fnc_GUER_KeyEvents.sqf
-TeamSpeak: TS.OurLifeRPG.Net
-Website: OurLifeRPG.Net
-*/
-
 fnc_KeyPress_ESC = {
 	if (dialog) exitwith { closeDialog 0 };
 	if (isnull (findDisplay 49)) then {
@@ -160,7 +151,7 @@ fnc_KeyPress_L = {
 
 	if(!INV_shortcuts)exitwith{};
 	if(isstunned) exitwith {player groupchat "You are stunned!"};
-	_vcls = nearestobjects [getposatl player, ["LandVehicle", "Air", "ship"], 7];
+	_vcls = nearestobjects [getpos player, ["LandVehicle", "Air", "ship"], 7];
 	if (count _vcls > 0) then {
 		_vcl = _vcls select 0;
 		if(!(_vcl in INV_VehicleArray))exitwith{player groupchat "You do not have the keys to this vehicle.";};
@@ -289,7 +280,7 @@ fnc_KeyPress_Shift_F = {
 
 fnc_KeyPress_U = {
 
-	if (isamedic) then
+	if (ismedic) then
 	{
 		private["_tgt"];
 		_tgt = cursorTarget;
@@ -305,7 +296,7 @@ fnc_KeyPress_U = {
 
 fnc_KeyPress_Shift_U = {
 
-	if (isamedic) then
+	if (ismedic) then
 	{
 		if (isNull ATT_PLY) exitWith {};
 		detach ATT_PLY;

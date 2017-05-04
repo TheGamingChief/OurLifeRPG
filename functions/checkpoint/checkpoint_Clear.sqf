@@ -28,8 +28,8 @@ switch (true) do {
         format['if(isCop) then{player sideChat "%1 has attempted to clear a checkpoint (200m). This can only be done by a Corporal or higher."}', name player] call OL_network_Swag;
       };
   };
-  case (isaMedic) : {
-    format['if(isaMedic) then{player sideChat "%1 has cleared a checkpoint (200m)."}', name player] call OL_network_Swag;
+  case (ismedic) : {
+    format['if(ismedic) then{player sideChat "%1 has cleared a checkpoint (200m)."}', name player] call OL_network_Swag;
     {
           if((_x getVariable "AM_CP") == 1) then
           {

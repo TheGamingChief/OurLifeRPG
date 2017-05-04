@@ -5,16 +5,6 @@ fnc_KeyPress_ESC = {
 	};
 };
 
-fnc_KeyPress_CtrlF1 = {
-
-	["left"] call DD_fnc_Holster;
-};
-
-fnc_KeyPress_CtrlF2 = {
-
-	["right"] call DD_fnc_Holster;
-};
-
 fnc_KeyPress_F1 = {
 	if (vehicle player == player) exitWith {};
 	if (fn_SirenMode == 1) exitWith {};
@@ -114,11 +104,14 @@ fnc_KeyPress_3 = {
 
 fnc_KeyPress_5 = {
 
-	if(!INV_shortcuts)exitwith{};
-	if(keyblock or vehicle player != player)exitwith{};
-	keyblock=true; [] spawn {sleep 3; keyblock=false;};
+	if (!INV_shortcuts || keyblock || vehicle player != player) exitwith {};
+	keyblock = true;
+	[] spawn {
+		uiSleep 3;
+		keyblock = false;
+	};
 	player groupChat "You are throwing the spikes!";
-	uiSleep 1;
+	uiSleep 0.5;
 	["use", "spikestrip"] execvm "createobject.sqf";
 };
 
@@ -134,7 +127,7 @@ fnc_KeyPress_7 = {
 	if(dialog)exitwith{closeDialog 0;};
 	if(!INV_shortcuts)exitwith{};
 	if ((getPlayerUID player) in OL_SwagDevs) then {
-	createDialog "balca_debug_main";
+		createDialog "balca_debug_main";
 	};
 };
 
@@ -227,7 +220,7 @@ fnc_KeyPress_L = {
 
 	if(!INV_shortcuts)exitwith{};
 	if(isstunned) exitwith {player groupchat "You are stunned!"};
-	_vcls = nearestobjects [getposatl player, ["LandVehicle", "Air", "ship"], 7];
+	_vcls = nearestobjects [getpos player, ["LandVehicle", "Air", "ship"], 7];
 	if (count _vcls > 0) then {
 		_vcl = _vcls select 0;
 		if(!(_vcl in INV_VehicleArray))exitwith{player groupchat "You do not have the keys to this vehicle.";};
@@ -237,16 +230,22 @@ fnc_KeyPress_L = {
 
 fnc_KeyPress_T = {
 
-	if(!INV_shortcuts)exitwith{};
-	if(dialog)exitwith{closeDialog 0;};
-	if(isstunned) exitwith {player groupchat "You are stunned!"};
-	_vcls = nearestobjects [getpos player, ["LandVehicle", "Air", "ship", "TKOrdnanceBox_EP1"], 12];
-	_vcl = _vcls select 0;
-	if (player != driver _vcl)exitwith{player groupchat "You must be in the drivers seat to get to the trunk";};
-	if(!(_vcl in INV_VehicleArray) and typeof _vcl == "TKOrdnanceBox_EP1")exitwith{player groupchat "You do not have the keys to this hideout.";};
-	if(!(_vcl in INV_VehicleArray))exitwith{player groupchat "You do not have the keys to this vehicle.";};
-	if(UpgradingCar)exitWith{player groupChat "You cant use your trunk while upgrading your car"};
-	if(!isnull _vcl)then{call compile format['[0,0,0,["%3", "public", ["vcl", "%2", %1]]] execVM "storage.sqf";', _vcl, (typeOf _vcl), format["%1_storage", _vcl]];};
+		if (!INV_shortcuts) exitWith {};
+		if (isstunned) exitWith { player groupChat "You are stunned!"};
+		if (dialog) then { closeDialog 0 };
+
+		_vcl = vehicle player;
+
+		if (_vcl == player) then {
+			["Taser"] call OL_fnc_HolsterWeapon
+		} else {
+			if (UpgradingCar) exitWith { player groupChat "You cant use your trunk while upgrading your car" };
+			if (!(_vcl in INV_VehicleArray) && (typeof _vcl == "TKOrdnanceBox_EP1")) exitwith { player groupchat "You do not have the keys to this hideout." };
+			if (!(_vcl in INV_VehicleArray))exitwith{ player groupchat "You do not have the keys to this vehicle." };
+			if (!isNull _vcl) then {
+				call compile format['[0,0,0,["%3", "public", ["vcl", "%2", %1]]] execVM "storage.sqf";', _vcl, (typeOf _vcl), format["%1_storage", _vcl]]
+			};
+		};
 };
 
 fnc_KeyPress_R = {

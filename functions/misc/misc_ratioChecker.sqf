@@ -4,11 +4,11 @@ _ems  = 0;
 _str  = "<t color='#FFFFFF' size='1.75'>Ratio Checker!</t><br/><br/>";
 
 {
-	if (!isNull _x && (_x call OL_ISSE_UnitExists)) then {
+	if (_x call OL_ISSE_UnitExists) then {
 		switch (true) do {
 			case (_x in coparray): 	 { _cops = _cops + 1 };
 			case (_x in civarray): 	 { _civs = _civs + 1 };
-			case (_x in medicarray): { _ems = _ems + 1 };
+			case (_x in medicarray): { _ems  = _ems  + 1 };
 		};
 	};
 } forEach playerarray;
@@ -29,10 +29,10 @@ if (iscop) exitWith {
 	hint parseText _str;
 };
 
-if (isciv || isamedic) exitWith {
-	_str = _str + format["<t color='#0000FF' size='1.50'>Cops: %1<br/>",_Cops];
-	_str = _str + format["<t color='#999999' size='1.50'>Civs: %1<br/>",_Civs];
-	_str = _str + format["<t color='#33CC33' size='1.50'>EMS: %1<br/>",_EMS];
+if (isciv || ismedic) exitWith {
+	_str = _str + format ["<t color='#0000FF' size='1.50'>Cops: %1<br/>", _Cops];
+	_str = _str + format ["<t color='#999999' size='1.50'>Civs: %1<br/>", _Civs];
+	_str = _str + format ["<t color='#33CC33' size='1.50'>EMS: %1<br/>", _EMS];
 
 	hint parseText _str;
 };

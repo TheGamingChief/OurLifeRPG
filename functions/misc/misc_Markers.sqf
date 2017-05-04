@@ -2,7 +2,7 @@ if (iscop && !(isciv)) exitWith {
   if ((_this select 0) == "SETUP") exitWith {
     {
       _mrk = createMarkerLocal [format["OL_CopMrk_%1", _forEachIndex], [0,0,0]];
-      _mrk setMarkerTextLocal format ["COP%1 - %2", (_forEachIndex + 1), _x getVariable "OL_Name"];
+      _mrk setMarkerTextLocal format ["COP%1", (_forEachIndex + 1)];
       _mrk setMarkerAlphaLocal 0;
       _mrk setMarkerShapeLocal "ICON";
       _mrk setMarkerTypeLocal "Dot";
@@ -13,7 +13,7 @@ if (iscop && !(isciv)) exitWith {
   };
 
   {
-    if (!isNull _x) then {
+    if (_x call OL_ISSE_UnitExists) then {
       _mrk = OL_CopMarkerArray select _forEachIndex;
       _mrk setMarkerAlphaLocal 1;
       _mrk setMarkerPosLocal (getPos _x);
@@ -21,11 +21,11 @@ if (iscop && !(isciv)) exitWith {
   } forEach coparray;
 };
 
-if (isamedic) exitWith {
+if (ismedic) exitWith {
   if ((_this select 0) == "SETUP") exitWith {
     {
       _mrk = createMarkerLocal [format["OL_EMSMrk_%1", _forEachIndex], [0,0,0]];
-      _mrk setMarkerTextLocal format ["EMT%1 = %2", (_forEachIndex + 1), _x getVariable "OL_Name"];
+      _mrk setMarkerTextLocal format ["EMT%1", (_forEachIndex + 1)];
       _mrk setMarkerAlphaLocal 0;
       _mrk setMarkerShapeLocal "ICON";
       _mrk setMarkerTypeLocal "Dot";
@@ -36,7 +36,7 @@ if (isamedic) exitWith {
   };
 
   {
-    if (!isNull _x) then {
+    if (_x call OL_ISSE_UnitExists) then {
       _mrk = OL_EMSMarkerArray select _forEachIndex;
       _mrk setMarkerAlphaLocal 1;
       _mrk setMarkerPosLocal (getPos _x);

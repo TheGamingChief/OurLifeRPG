@@ -150,7 +150,7 @@ fnc_KeyPress_L = {
 
 	if(!INV_shortcuts)exitwith{};
 	if(isstunned) exitwith {player groupchat "You are stunned!"};
-	_vcls = nearestobjects [getposatl player, ["LandVehicle", "Air", "ship"], 7];
+	_vcls = nearestobjects [getpos player, ["LandVehicle", "Air", "ship"], 7];
 	if (count _vcls > 0) then {
 		_vcl = _vcls select 0;
 		if(!(_vcl in INV_VehicleArray))exitwith{player groupchat "You do not have the keys to this vehicle.";};

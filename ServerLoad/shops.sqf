@@ -318,7 +318,7 @@ _copuntrained =
 "Rnd_9x19_M9",
 "M1014_pd",
 "8Rnd_B_Beneli_Pellets",
-"DD_FOR06CV_P_P"
+"olrpg_pdcv_pb" //"DD_FOR06CV_P_P"
 ];
 
 //57
@@ -332,8 +332,8 @@ _coppo1 =
 "8Rnd_B_Beneli_Pellets",
 "RH_hk416_pd",
 "30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_P",
-"DD_CHE10Impala_P_P"
+"olrpg_pdcv_pb", //"DD_FOR06CV_P_P",
+"olrpg_pdtaurus" //"DD_CHE10Impala_P_P"
 ];
 
 //58
@@ -347,9 +347,9 @@ _coppo2 =
 "8Rnd_B_Beneli_Pellets",
 "RH_hk416eotech_pd",
 "30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_P",
-"DD_CHE10Impala_P_P",
-"DD_FOR13Taurus_P_P"
+//"DD_FOR06CV_P_P",
+"olrpg_pdcv_fpb", //"DD_CHE10Impala_P_P",
+"olrpg_pdtauruspb" //"DD_FOR13Taurus_P_P"
 ];
 
 //59
@@ -363,10 +363,10 @@ _coppo3 =
 "8Rnd_B_Beneli_Pellets",
 "RH_hk416aim_pd",
 "30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_P",
-"DD_CHE10Impala_P_P",
-"DD_FOR13Taurus_P_P",
-"DD_DOD12Charger_P_P",
+//"DD_FOR06CV_P_P",
+"olrpg_pdcv_slick_npb", //"DD_CHE10Impala_P_P",
+"olrpg_pdtaurusfpb", //"DD_FOR13Taurus_P_P",
+"olrpg_pdcharger", //"DD_DOD12Charger_P_P",
 "supgrade3_pd"
 ];
 
@@ -382,11 +382,11 @@ _copcpl =
 "RH_m4sbraim_cmd",
 "RH_M4sbreotech_cmd",
 "30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_P",
-"DD_CHE10Impala_P_P",
-"DD_FOR13Taurus_P_P",
-"DD_DOD12Charger_P_P",
-"DD_CHE08Tahoe_P_P",
+//"DD_FOR06CV_P_P",
+//"DD_CHE10Impala_P_P",
+"olrpg_pdcv_slick_pb", //"DD_FOR13Taurus_P_P",
+"olrpg_pdtaurus_slick", //"DD_DOD12Charger_P_P",
+"olrpg_pdcharger_slick", //"DD_CHE08Tahoe_P_P",
 "supgrade3_pd",
 "supgrade4_pd"
 ];
@@ -404,12 +404,12 @@ _copsgt =
 "RH_M4sbreotech_cmd",
 "RH_M4sbracog_cmd",
 "30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_P",
-"DD_CHE10Impala_P_P",
-"DD_FOR13Taurus_P_P",
-"DD_DOD12Charger_P_P",
-"DD_CHE08Tahoe_P_P",
-"DD_CHE15Suburban_P_P",
+//"DD_FOR06CV_P_P",
+//"DD_CHE10Impala_P_P",
+"olrpg_pdcv_slick_pb", //"DD_FOR13Taurus_P_P",
+"olrpg_pdtaurus_slick", //"DD_DOD12Charger_P_P",
+"olrpg_pdcharger_slick", //"DD_CHE08Tahoe_P_P",
+"olrpg_pdsuptahoe", //"DD_CHE15Suburban_P_P",
 "supgrade3_pd",
 "supgrade4_pd"
 ];
@@ -426,10 +426,15 @@ _copdeputy =
 "RH_acrbaim_sheriff",
 "RH_acrbeotech_sheriff",
 "30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_S",
-"DD_CHE10Impala_P_P_S",
-"DD_FOR13Taurus_P_S",
-"DD_DOD12Charger_P_S",
+"olrpg_sdcv_pb",
+"olrpg_sdcv_fpb",
+"olrpg_sdcv_slick_npb",
+"olrpg_sdcv_slick_pb",
+"olrpg_sdcv_slick_fpb",
+"olrpg_sdcharger", //"DD_FOR06CV_P_S",
+"olrpg_sdcharger_slick", //"DD_CHE10Impala_P_P_S",
+"tcg_taurus_shpb", //"DD_FOR13Taurus_P_S",
+"olrpg_sdtaurus_slick", //"DD_DOD12Charger_P_S",
 "supgrade1",
 "supgrade2",
 "supgrade3_pd"
@@ -438,7 +443,8 @@ _copdeputy =
 //62
 _copsheriffdnr =
 [
-"DD_CHE15Suburban_P_P_K9"
+"olrpg_sdtahoe_dnr", //"DD_CHE15Suburban_P_P_K9"
+"olrpg_sdf350_dnr"
 ];
 
 _copsheriffmks =
@@ -462,11 +468,11 @@ _copsgtdeputy =
 "30Rnd_556x45_Stanag",
 "M24_sheriff",
 "5Rnd_762x51_M24",
-"DD_FOR06CV_P_S",
-"DD_CHE10Impala_P_P_S",
-"DD_FOR13Taurus_P_S",
-"DD_DOD12Charger_P_S",
-"DD_CHE15Suburban_P_P_K9",
+//"DD_FOR06CV_P_S",
+//"DD_CHE10Impala_P_P_S",
+"olrpg_sdtahoe", //"DD_FOR13Taurus_P_S",
+"olrpg_sdsub6", //"DD_DOD12Charger_P_S",
+"olrpg_sdf350", //"DD_CHE15Suburban_P_P_K9",
 "supgrade3_pd",
 "supgrade4_pd"
 ];
@@ -488,12 +494,16 @@ _copsheriff =
 "5Rnd_762x51_M24",
 "Stinger_swat",
 "Stinger_mag",
-"DD_FOR06CV_P_S",
-"DD_CHE10Impala_P_P_S",
-"DD_FOR13Taurus_P_S",
-"DD_DOD12Charger_P_S",
-"DD_DOD15Charger_P_S",
-"DD_CHE15Suburban_P_P_K9",
+"olrpg_sdtahoe", //"DD_FOR06CV_P_S",
+"olrpg_sdf350", //"DD_CHE10Impala_P_P_S",
+"olrpg_sdsub6", //"DD_FOR13Taurus_P_S",
+"olrpg_sdcv_pool_pb", //"DD_DOD12Charger_P_S",
+"olrpg_umcv_dblue", //"DD_DOD15Charger_P_S",
+"olrpg_umcv_maroon", //"DD_DOD15Charger_P_P",
+"olrpg_umcv_grey", //"DD_CHE15Suburban_P_P_K9",
+"olrpg_uctahoe_maroon", //"DD_CHE15Suburban_P_P",
+"olrpg_uctahoe_grey", //"DD_CHE15Suburban_U_P_DarkRed",
+"olrpg_uctahoe_dblue", //"DD_CHE15Suburban_U_P_DarkBlue",
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd",
@@ -515,15 +525,15 @@ _coplt =
 "30Rnd_556x45_Stanag",
 "Stinger_swat",
 "Stinger_mag",
-"DD_FOR06CV_P_P",
-"DD_CHE10Impala_P_P",
-"DD_FOR13Taurus_P_P",
-"DD_DOD12Charger_P_P",
-"DD_DOD15Charger_P_P",
-"DD_CHE08Tahoe_P_P",
-"DD_CHE15Suburban_P_P",
-"DD_CHE15Suburban_U_P_DarkRed",
-"DD_CHE15Suburban_U_P_DarkBlue",
+//"DD_FOR06CV_P_P",
+//"DD_CHE10Impala_P_P",
+"olrpg_pdlttahoe", //"DD_FOR13Taurus_P_P",
+"olrpg_umcv_dblue", //"DD_DOD12Charger_P_P",
+"olrpg_umcv_maroon", //"DD_DOD15Charger_P_P",
+"olrpg_umcv_grey", //"DD_CHE08Tahoe_P_P",
+"olrpg_uctahoe_maroon", //"DD_CHE15Suburban_P_P",
+"olrpg_uctahoe_grey", //"DD_CHE15Suburban_U_P_DarkRed",
+"olrpg_uctahoe_dblue", //"DD_CHE15Suburban_U_P_DarkBlue",
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd",
@@ -545,19 +555,19 @@ _copcpt =
 "30Rnd_556x45_Stanag",
 "Stinger_swat",
 "Stinger_mag",
-"DD_FOR06CV_P_P",
-"DD_CHE10Impala_P_P",
-"DD_FOR13Taurus_P_P",
-"DD_DOD12Charger_P_P",
-"DD_DOD15Charger_P_P",
-"DD_CHE08Tahoe_P_P",
-"DD_CHE15Suburban_P_P",
-"DD_DOD12Charger_U_P_Black",
-"DD_CHE15Suburban_U_P_DarkRed",
-"DD_CHE15Suburban_U_P_DarkBlue",
-"DD_FOR13Taurus_U_Black",
-"DD_FOR13Taurus_U_DarkBlue",
-"DD_FOR13Taurus_U_Red",
+//"DD_FOR06CV_P_P",
+//"DD_CHE10Impala_P_P",
+//"DD_FOR13Taurus_P_P",
+//"DD_DOD12Charger_P_P",
+//"DD_DOD15Charger_P_P",
+"olrpg_pdcpttahoe", //"DD_CHE08Tahoe_P_P",
+"olrpg_umcv_dblue", //"DD_CHE15Suburban_P_P",
+"olrpg_umcv_maroon", //"DD_DOD12Charger_U_P_Black",
+"olrpg_umcv_grey", //"DD_CHE15Suburban_U_P_DarkRed",
+"olrpg_uctahoe_maroon", //"DD_CHE15Suburban_U_P_DarkBlue",
+"olrpg_uctahoe_grey", //"DD_FOR13Taurus_U_Black",
+"olrpg_uctahoe_dblue", //"DD_FOR13Taurus_U_DarkBlue",
+"olrpg_pdtaurus_um", //"DD_FOR13Taurus_U_Red",
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd",
@@ -579,19 +589,19 @@ _copchief =
 "20Rnd_762x51_B_SCAR_pd",
 "Stinger_swat",
 "Stinger_mag",
-"DD_FOR06CV_P_P",
-"DD_CHE10Impala_P_P",
-"DD_FOR13Taurus_P_P",
-"DD_DOD12Charger_P_P",
-"DD_DOD15Charger_P_P",
-"DD_CHE08Tahoe_P_P",
-"DD_CHE15Suburban_P_P",
-"DD_DOD12Charger_U_P_Black",
-"DD_DOD15Charger_U_P_Black",
-"DD_DOD06charger_P_P",
-"DD_DOD16Challenger_P_P",
-"DD_DOD16Challenger_P_Blue",
-"DD_DOD16Challenger_P_Red",
+//"DD_FOR06CV_P_P",
+//"DD_CHE10Impala_P_P",
+"olrpg_pdcv_chief", //"DD_FOR13Taurus_P_P",
+"olrpg_pdcoftahoe", //"DD_DOD12Charger_P_P",
+"olrpg_pdastcoftahoe", //"DD_DOD15Charger_P_P",
+"olrpg_umcv_dblue", //"DD_CHE08Tahoe_P_P",
+"olrpg_umcv_maroon", //"DD_CHE15Suburban_P_P",
+"olrpg_umcv_grey", //"DD_DOD12Charger_U_P_Black",
+"olrpg_uctahoe_maroon", //"DD_DOD15Charger_U_P_Black",
+"olrpg_uctahoe_grey", //"DD_DOD06charger_P_P",
+"olrpg_uctahoe_dblue", //"DD_DOD16Challenger_P_P",
+"olrpg_pdtaurus_um", //"DD_DOD16Challenger_P_Blue",
+"olrpg_pdcharger_um", //"DD_DOD16Challenger_P_Red",
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd",
@@ -607,13 +617,13 @@ _copmedal =
 "RH_m4meotech_cmd",
 "RH_m4macog_cmd",
 "30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_P",
+/*"DD_FOR06CV_P_P",
 "DD_CHE10Impala_P_P",
 "DD_FOR13Taurus_P_P",
 "DD_DOD12Charger_P_P",
 "DD_DOD15Charger_P_P",
 "DD_CHE08Tahoe_P_P",
-"DD_CHE15Suburban_P_P",
+"DD_CHE15Suburban_P_P",*/
 "supgrade3_pd",
 "supgrade4_pd",
 "supgrade5_pd"
@@ -628,7 +638,7 @@ _copk9p =
 "RH_8Rnd_45cal_m1911",
 "LEXX_SCAR_L_CQC_BLACK_k9",
 "30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_K9"
+"olrpg_pdk9cv_fpb" //"DD_FOR06CV_P_K9"
 ];
 
 //68
@@ -641,9 +651,9 @@ _copk9 =
 "LEXX_SCAR_L_CQC_BLACK_k9",
 "LEXX_SCAR_L_CQC_Holo_BLACK_k9",
 "30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_K9",
-"DD_DOD12Charger_P_P_K9",
-"DD_FOR13Taurus_P_K9"
+"olrpg_pdk9cv_fpb", //"DD_FOR06CV_P_K9",
+"olrpg_pdk9taurusfpb", //"DD_FOR13Taurus_P_K9",
+"olrpg_pdk9suburban" //"DD_DOD12Charger_P_P_K9"
 ];
 
 //68
@@ -661,23 +671,25 @@ _copk9c =
 "20Rnd_762x51_DMR",
 "M24_k9",
 "5Rnd_762x51_M24",
-"DD_FOR06CV_P_K9",
-"DD_DOD12Charger_P_P_K9",
-"DD_CHE08Tahoe_P_K9"
+"olrpg_pdk9cv_slick_fpb", //"DD_FOR06CV_P_K9",
+"olrpg_pdk9taurusfpb", //"DD_DOD12Charger_P_P_K9",
+"olrpg_pdk9charger", //"DD_FOR13Taurus_P_K9",
+"olrpg_pdk9suburban_slick" //"DD_CHE08Tahoe_P_K9"
 ];
 
  //68.5
 _copk9sheriff =
 [
-"DD_FOR06CV_P_SK9",
-"DD_DOD12Charger_P_SK9",
-"DD_CHE08Tahoe_P_SK9"
+"olrpg_sdk9suburban",
+"olrpg_sd_k9charger", //"DD_FOR06CV_P_SK9",
+"olrpg_sd_k9taurusfpb", //"DD_DOD12Charger_P_SK9",
+"olrpg_sd_k9cv_slick_fpb" //"DD_CHE08Tahoe_P_SK9"
 ];
 
 _copav3 =
 [
-"DD_CHE10Impala_P_P_APO",
-"DD_FOR13Taurus_P_APO"
+//"DD_CHE10Impala_P_P_APO",
+"olrpg_pdcv_pool_pb" //"DD_FOR13Taurus_P_APO"
 ];
 
 //69
@@ -825,8 +837,8 @@ _copswat6 =
 //72
 _copswatvehicle =
 [
-"DD_CHE08Tahoe_P_SWAT",
-"DD_CHE15Suburban_U_P_SWAT",
+"olrpg_tahoe_swat_um", //"DD_CHE08Tahoe_P_SWAT",
+"olrpg_swat_suburban_um", //"DD_CHE15Suburban_U_P_SWAT",
 "olrpg_swat_f350",
 "olrpg_swat_command",
 "olrpg_swat_bearcat"
@@ -839,28 +851,35 @@ _cid =
 "x26_Mag",
 "RH_p226_cid",
 "RH_15Rnd_9x19_usp",
-"RH_M16a4_cid",										// M16A4 Iron Sights
-"RH_M16A4aim_cid",								// M16A4 Aimpoint
-"RH_M16A4eotech_cid",							// M16A4 EOTech
-"RH_M16A4acog_cid",								// M16A4 Acog
-"30Rnd_556x45_Stanag",						// 30Rnd 5.56x45 Stanag Mag
-"DD_CHE10Impala_U_P_Black",				// Impala (Black)
-"DD_CHE10Impala_U_P_DarkRed",			// Impala (Dark Red)
-"DD_CHE10Impala_U_P_Red",					// Impala (Red)
-"DD_CHE10Impala_U_P_DarkBlue",		// Impala (Dark Blue)
-"DD_DOD12Charger_U_P_DarkRed",		// Dodge Charger 2012 (Dark Red)
-"DD_DOD12Charger_U_P_Red",				// Dodge Charger 2012 (Red)
-"DD_DOD12Charger_U_P_DarkBlue",		// Dodge Charger 2012 (Dark Blue)
-"DD_DOD15Charger_U_P_DarkRed",		// Dodge Charger 2015 (Dark Red)
-"DD_DOD15Charger_U_P_Red",				// Dodge Charger 2015 (Red)
-"DD_DOD15Charger_U_P_DarkBlue",		// Dodge Charger 2015 (Dark Blue)
-"DD_CHE15Suburban_U_P_Black",			// Suburban (Black)
-"DD_CHE15Suburban_U_P_DarkRed",		// Suburban (Dark Red)
-"DD_CHE15Suburban_U_P_DarkBlue",	// Suburban (Dark Blue)
-"DD_BMWM5_P_P",										// 2013 BMW M5 (Black)
-"DD_FOR13Mustang_P_P",						// 2013 Ford Mustang (Black)
-"DD_FOR13Mustang_P_Blue",					// 2013 Ford Mustang (Blue)
-"DD_FOR13Mustang_P_Red",					// 2013 Ford Mustang (Red)
+"RH_M16a4_cid",																								// M16A4 Iron Sights
+"RH_M16A4aim_cid",																						// M16A4 Aimpoint
+"RH_M16A4eotech_cid",																					// M16A4 EOTech
+"RH_M16A4acog_cid",																						// M16A4 Acog
+"30Rnd_556x45_Stanag",																				// 30Rnd 5.56x45 Stanag Mag
+//"DD_CHE10Impala_U_P_Black",																	// Impala (Black)
+//"DD_CHE10Impala_U_P_DarkRed",																// Impala (Dark Red)
+//"DD_CHE10Impala_U_P_Red",																		// Impala (Red)
+"olrpg_detcv_black", //"DD_CHE10Impala_U_P_DarkBlue",					// Impala (Dark Blue)
+"olrpg_detcv_sands", //"DD_DOD12Charger_U_P_DarkRed",					// Dodge Charger 2012 (Dark Red)
+"olrpg_detcv_maroon", //"DD_DOD12Charger_U_P_Red",						// Dodge Charger 2012 (Red)
+"olrpg_detcv_dblue", //"DD_DOD12Charger_U_P_DarkBlue",				// Dodge Charger 2012 (Dark Blue)
+"olrpg_detcv_grey", //"DD_DOD15Charger_U_P_DarkRed",					// Dodge Charger 2015 (Dark Red)
+"olrpg_detcv_white", //"DD_DOD15Charger_U_P_Red",							// Dodge Charger 2015 (Red)
+"olrpg_dettahoe_maroon", //"DD_DOD15Charger_U_P_DarkBlue",		// Dodge Charger 2015 (Dark Blue)
+"olrpg_dettahoe_grey", //"DD_CHE15Suburban_U_P_Black",				// Suburban (Black)
+"olrpg_dettahoe_blue", //"DD_CHE15Suburban_U_P_DarkRed",			// Suburban (Dark Red)
+"olrpg_dettahoe_black", //"DD_CHE15Suburban_U_P_DarkBlue",		// Suburban (Dark Blue)
+"olrpg_dettahoe_white", //"DD_BMWM5_P_P",											// 2013 BMW M5 (Black)
+"olrpg_dettahoe_pink", //"DD_FOR13Mustang_P_P",								// 2013 Ford Mustang (Black)
+"olrpg_dettahoe_green", //"DD_FOR13Mustang_P_Blue",						// 2013 Ford Mustang (Blue)
+"olrpg_dettahoe_orange", //"DD_FOR13Mustang_P_Red",						// 2013 Ford Mustang (Red)
+"olrpg_cv_taxi_npb",
+"ilpd_Traffic_black",
+"ilpd_Traffic_white",
+"ilpd_Traffic_sandstone",
+"ilpd_Traffic_maroon",
+"ilpd_Traffic_grey",
+"ilpd_Traffic_darkblue",
 "Bait_Kit"
 ];
 
@@ -885,11 +904,14 @@ _copcoastguardair =
 _copfto =
 [
 "rh_m16a1_fto",
+"RH_hk417saim",
+"rh_hk417seotech",
 "30Rnd_556x45_Stanag",
-"DD_FOR06CV_P_P",
-"DD_CHE10Impala_P_P",
-"DD_DOD12Charger_P_P",
-"DD_CHE08Tahoe_P_P"
+"RH_20Rnd_762x51_hk417",
+//"DD_FOR06CV_P_P",
+"olrpg_snrftotahoe", //"DD_CHE10Impala_P_P",
+"olrpg_pdftocharger", //"DD_DOD12Charger_P_P",
+"olrpg_pdcv_slick_fpb_fto" //"DD_CHE08Tahoe_P_P"
 ];
 
 //74
@@ -905,7 +927,7 @@ _copvip =
 "RH_57x28mm_50RND_Mag",
 "MakarovSD",
 "8Rnd_9x18_MakarovSD",
-"DD_FOR13Taurus_P_P"
+"m5_pd_traffic" //"DD_FOR13Taurus_P_P"
 ];
 
 //75
@@ -1444,8 +1466,8 @@ _td7 =
 
 _td8 =
 [
-"DD_DOD15Charger_U_F",
-"DD_CHE15Suburban_U_F",
+//"DD_DOD15Charger_U_F",
+//"DD_CHE15Suburban_U_F",
 "olrpg_firemarshal_hub_tahoe",
 "olrpg_firemarshal_tahoe_slk",
 "olrpg_2006_firemarshal_slk",
@@ -1517,162 +1539,169 @@ _Tow4 =
 ];
 
 INV_ItemShops = [
-[specbox,"Undercover Police Equipment",specbox,ccarspawnuc,_undercover,_undercover,true],
-[OL_Shop_ClothingStore,"Civilian Clothing Shop",dummyobj,dummyobj,M_rlrpgclothing,M_rlrpgclothing,true],
-[OL_Shop_ClothingStore_1,"Military Surplus",dummyobj,dummyobj,M_rlrpgclothing_1,M_rlrpgclothing_1,true],
-[OL_Shop_ClothingStore_2,"Tactical Military Clothing",dummyobj,dummyobj,M_rlrpgclothing_2,M_rlrpgclothing_2,true],
-[OL_Shop_ClothingStore_3,"Civilian Clothing Shop",dummyobj,dummyobj,M_rlrpgclothing,M_rlrpgclothing,true],
-[OL_Shop_ClothingStore_4,"Military Surplus",dummyobj,dummyobj,M_rlrpgclothing_1,M_rlrpgclothing_1,true],
-[pistol,"Licensed Pistol",pistol,pistol,_pistol,_pistol,true],
-[sub,"Submachine Gun",sub,sub,_sub,_sub,true],
-[rifle,"Licensed Rifle",rifle,rifle,_rifle,_rifle,true],
-[guss,"Illegal Fire Arms",gussbox,dummyobj,_guss,_guss,true],
-[txwshop,"Tier X Weapons",weaponx,weaponx,_weaponx,_weaponx,true],
-[txeshop,"Tier X Equipment",itemx,itemx,_itemx,_itemx,true],
-[carx,"Tier X Vehicles",carx,carxspawn,_carx,_carx,true],
-[boatx,"Tier X Boats",boatx,boatxspawn,_boatx,_boatx,true],
-[helix,"Tier X Helicopters",helix,helixspawn,_helix,_helix,true],
-[fuel2,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
-[fuel4,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
-[fuel5,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
-[fuel7,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
-[fuel8,"Fuel-station Shop",dummyobj,dummyobj,_fs,_fs,true],
-[shop1,"Food Shop",dummyobj,dummyobj,_is,_is,true],
-[shop4,"Food Shop",dummyobj,dummyobj,_is,_is,true],
-[bailflag,"Food and Gun Locker",dummyobj,dummyobj,_cf,_cf,true],
-[pub1,"Pub",dummyobj,dummyobj,_pub,_pub,true],
-[pub2,"Pub",dummyobj,dummyobj,_pub,_pub,true],
-[pub3,"Pub",dummyobj,dummyobj,_pub,_pub,true],
-[pub4,"Pub",dummyobj,dummyobj,_pub,_pub,true],
-[pub5,"Saloon",dummyobj,dummyobj,_pub,_pub,true],
-[martpub,"Alcohol",dummyobj,dummyobj,_pub,_pub,true],
-[assassinshop,"Assassin Shop",assassinshop,dummyobj,_ass,_ass,true],
-[mayorguns,"Government Equip Shop",mayorguns,mayorcarspawn,_mgs,_mgs,true],
-[equipbox,"Equipment Shop",equipbox,dummyobj,_es,_es,true],
-[equipbox2,"Equipment Shop",equipbox2,dummyobj,_es,_es,true],
-[tuning1,"Car Upgrades",dummyobj,dummyobj,_cu,_cu,true],
-[rMart,"Car Items",dummyobj,dummyobj,_rm,_rm,true],
-[carshop1,"Used Cars",dummyobj,carspawn1,_cs1,_cs1,true],
-[carshop4,"Used Cars",dummyobj,carspawn4,_cs1,_cs1,true],
-[carshop2,"Farm Equipment",dummyobj,carspawn2,_cs2,_cs2,false],
-[scarshop,"Muscle Car Shop",dummyobj,scarspawn1,_sc1,_sc1,true],
-[scarshop2,"Charger and Mazda",dummyobj,scarspawn2,_sc2,_sc2,true],
-[scarshop3,"Low End Sports",dummyobj,scarspawn3,_sc3,_sc3,true],
-[scarshop4,"Mid Level Sports",dummyobj,scarspawn4,_sc4,_sc4,true],
-[scarshop5,"High End Sports",dummyobj,scarspawn5,_sc5,_sc5,true],
-[scarshop6,"Nissan Car Shop",dummyobj,scarspawn6,_sc6,_sc6,true],
-[scarshop7,"350z Car Shop",dummyobj,scarspawn7,_sc7,_sc7,true],
-[scarshop8,"Ford Car Shop",dummyobj,scarspawn8,_sc8,_sc8,true],
-[scarshop9,"BMW Car Shop",dummyobj,scarspawn9,_sc9,_sc9,true],
-[tahoeshop1,"Tahoe Shop",dummyobj,tahoespawn1,_tahoe,_tahoe,true],
-[pickupshop1,"Pickup Shop",dummyobj,pickupspawn1,_ps,_ps,true],
-[taxishop,"Taxi Shop",dummyobj,taxispawn1,_tx,_tx,true],
-[bicycleshop,"Bicycle Shop",dummyobj,bicyclespawn,_bsj,_bsj,true],
-[bikeshop,"Mikes Bike Shop",dummyobj,bikespawn,_mbs,_mbs,true],
-[bikeshop1,"Quad Bike Shop",dummyobj,bikespawn1,_qbs,_qbs,true],
-[bikeshop2,"Sports Bike Shop",dummyobj,bikespawn1,_qbss,_qbss,true],
-[truckshop,"Truck and Bus Shop",dummyobj,truckspawn,_ts,_ts,true],
-[struckshop,"Sport Truck Shop",dummyobj,struckspawn,_sts,_sts,true],
-[airshop,"Airplane Shop",dummyobj,asairspawn,_as,_as,true],
-[airshop2,"Chopper and Jet Shop",dummyobj,asairspawn,_assa,_assa,true],
-[airshop3,"Commercial Air Shop",dummyobj,asairspawn,_asc,_asc,true],
-[AFP,"Dem Airoplanes Store",dummyobj,AFPspawn,_as,_as,true],
-[AFH,"Dem Helamacopters Store",dummyobj,AFHspawn,_assa,_assa,true],
-[scubashop, "Boat Shop",dummyobj,bs1spawn,_bs,_bs,true],
-[boatshop2, "Boat Shop",dummyobj,boatspawn2,_bs,_bs,true],
-[insure,"Insurance",insure,dummyobj,_ins, _emptyshop,false],
-[tdoc,"FireFighter 1",dummyobj,tdocspawn,_td4,_td4,true],
-[tdoc6sub,"FireFighter 1",dummyobj,tdocspawnsub,_td4,_td4,true],
-[tdoc2,"Untrained Equipment",dummyobj,tdocspawn,_td,_td,true],
-[tdoc2sub,"Untrained Equipment",dummyobj,tdocspawnsub,_td,_td,true],
-[tdoc3,"EMT 1 Equipment",dummyobj,tdocspawn,_td2,_td2,true],
-[tdoc3sub,"EMT 1 Equipment",dummyobj,tdocspawnsub,_td2,_td2,true],
-[tdoc4,"FireFighter 2",dummyobj,tdocspawn,_td5,_td5,true],
-[tdoc4sub,"FireFighter 2",dummyobj,tdocspawnsub,_td5,_td5,true],
-[tdoc5,"Air Rescue Equipment",tdoc5,jailpad2_1,_td6,_td6,true],
-[tdoc5sub,"Air Rescue Equipment",tdoc5sub,tdocspawnsubair,_td6,_td6,true],
-[tdoc6,"Command Equipment",dummyobj,tdocspawn,_td7,_td7,true],
-[tdocsub,"Command Equipment",dummyobj,tdocspawnsub,_td7,_td7,true],
-[tdoc7,"EMT 2 Equipment",dummyobj,tdocspawn,_td3,_td3,true],
-[tdoc7sub,"EMT 2 Equipment",dummyobj,tdocspawnsub,_td3,_td3,true],
-[tdoc8,"Fire Marshal Equipment",dummyobj,tdocspawn,_td8,_td8,true],
-[resourcesell,"Sell Resources",dummyobj,dummyobj,_rs,_rs,true],
-//[cheeseburger,"Jackos Cheeseburgers",dummyobj,dummyobj,_gds,_gds,true],
-[OL_Shop_Wigsworth,"Wigworths",dummyobj,dummyobj,_wigs,_wigs,true],
-[OilSell1,"Oil Dealer", dummyobj,dummyobj, _emptyshop,_os,true],
-[whalesell,"Sell Whale",dummyobj,dummyobj,_emptyshop,_ws,true],
-[terrorbox,"Terror Stuff",terrorbox,vipterroraswpawn,_terrorshop,_terrorshop,true],
-[shadyd,"Barely Legal",shadyd,dummyobj, _shady,_shady,true],
-[OL_Shop_Gangarea1,"Gang Shop",gangbox1,dummyobj,_gangshop_buy,_gangshop_buy,true],
-[OL_Shop_Gangarea2,"Gang Shop",gangbox2,dummyobj,_gangshop_buy,_gangshop_buy,true],
-[OL_Shop_Gangarea3,"Gang Shop",gangbox3,dummyobj,_gangshop_buy,_gangshop_buy,true],
-[OL_Shop_Gangarea4,"Gang Shop",gangbox4,dummyobj,_gangshop_buy,_gangshop_buy,true],
-[cdrugsell,"Sell Cocaine",dummyobj,dummyobj,_dsc,_dsc,true],
-[mdrugsell,"Sell Marijuana",dummyobj,dummyobj,_dsm,_dsm,true],
-[ldrugsell,"Sell LSD",dummyobj,dummyobj,_emptyshop,_dsl,true],
-[hdrugsell,"Sell Heroin",dummyobj,dummyobj,_dsh,_dsh,true],
-[methsell,"Sell Meth",dummyobj,dummyobj,_msc,_msc,true],
-[pharmacy,"Pharmacy",dummyobj,pharmspawn,_psc,_emptyshop,false],
-[copbasic1,"Basic Police Gear",copbasic1,ccarspawn, _copbasic,_copbasic,true],
-[copbasic2,"Basic Police Gear",copbasic2,ccarspawn, _copbasic,_copbasic,true],
-[copbasic4,"Basic Police Gear",copbasic4,ccarspawn, _copbasic,_copbasic,true],
-[copbasic6,"Basic Police Gear",copbasic6,ccarspawn1, _copbasic,_copbasic,true],
-[copswate,"Basic Police Gear",copswate,dummyobj, _copbasic,_copbasic,true],
-[copuntrained,"Untrained Patrol Officer Equipment",copuntrained,ccarspawn,_copuntrained,_copuntrained,true],
-[coppo1,"Rookie Patrol Officer Equipment",coppo1,ccarspawn,_coppo1,_coppo1,true],
-[coppo2,"Patrol Officer Equipment",coppo2,ccarspawn,_coppo2,_coppo2,true],
-[coppo3,"Senior Patrol Officer Equipment",coppo3,ccarspawn,_coppo3,_coppo3,true],
-[copcpl,"Corporal Equipment",copcpl,ccarspawn2,_copcpl,_copcpl,true],
-[copsgt,"Sergeant Equipment",copsgt,ccarspawn2,_copsgt,_copsgt,true],
-[copdeputy,"Sheriff Deputy Equipment",copdeputy,ccarspawn1,_copdeputy,_copdeputy,true],
-[copsgtdeputy,"Sheriff Sgt Deputy Equipment",copsgtdeputy,ccarspawn1,_copsgtdeputy,_copsgtdeputy,true],
-[copsheriffdnr,"Sheriff D.N.R",copsheriffdnr,ccarspawn1,_copsheriffdnr,_copsheriffdnr,true],
-[copsheriffmks,"Sheriff Marksman",copsheriffmks,dummyobj,_copsheriffmks,_copsheriffmks,true],
-[copsheriff,"Sheriff Equipment",copsheriff,ccarspawn1,_copsheriff,_copsgt,true],
-[coplt,"Lieutenant Equipment",coplt,ccarspawnlt,_coplt,_coplt,true],
-[copcpt,"Captain Equipment",copcpt,ccarspawncpt,_copcpt,_copcpt,true],
-[copmedalbox,"Medal Recipients Equipment",copmedalbox,ccarspawnchief,_copmedal,_copmedal,true],
-[copchief,"Chief of Police Equipment",copchief,ccarspawnchief,_copchief,_copchief,true],
-[copk9,"K-9 Officer",copk9,ck9spawn,_copk9,_copk9,true],
-[copk9p,"K-9 Probation",copk9p,ck9spawn,_copk9p,_copk9p,true],
-[copk9c,"K-9 Command",copk9c,ck9spawn,_copk9c,_copk9c,true],
-[copk92,"Sheriff K-9 Equipment",copk92,ccarspawn1,_copk9sheriff,_copk9sheriff,true],
-[copav1,"Aviation",copav1, cairspawn,_copav1,_copav1,true],
-[copav2,"Operation Pilot",copav2, cairspawn,_copav2,_copav2,true],
-[copav3,"Air Patrol Operations",dummyobj, copavapo,_copav3,_copav3,true],
-[copair2,"Sheriff Aviation",copairweapon2, airsheriff,_copavsh,_copavsh,true],
-[copswat1,"S.W.A.T. Probation",copswat1,dummyobj,_copswat1,_copswat1,true],
-[copswat2,"S.W.A.T. Operator",copswat2,dummyobj,_copswat2,_copswat2,true],
-[copswat3,"S.W.A.T. Specialist",copswat3,dummyobj,_copswat3,_copswat3,true],
-[copswat4,"S.W.A.T. Marksman",copswat4,dummyobj,_copswat4,_copswat4,true],
-[copswat5,"S.W.A.T. Command",copswat5,dummyobj,_copswat5,_copswat5,true],
-[swatcg,"S.W.A.T. Water Craft",dummyobj,cgboatspawn,_copswat6,_copswat6,true],
-[copswatvehicle,"S.W.A.T. Vehicles",dummyobj,ccarspawnswat,_copswatvehicle,_copswatvehicle,true],
-[cidbox,"CID Equipment",cidbox,cidcarspawn,_cid,_cid,true],
-[copcoastguard,"Sheriff Marine Water Craft",dummyobj,cgboatspawn,_copcoastguard,_copcoastguard,true],
-[copcoastguardair,"Sheriff Marine Aviation",dummyobj,jailpadcg,_copcoastguardair,_copcoastguardair,true],
-[ftobox,"F.T.O Equipment",ftobox,ftocarspawn,_copfto,_copfto,true],
-[copVIPBox,"Cop Donator Equipment",copVIPBox,ccarspawn,_copvip,_copvip,true],
-[copVIPBox2,"Cop Donator Equipment",copVIPBox2,ccarspawn1,_copvip,_copvip,true],
-[copVIPBox3,"Cop Donator Equipment",copVIPBox3,ccarspawn2,_copvip,_copvip,true],
-[copswatd,"Cop Donator Equipment",copswatd,ccarspawn2,_copvip,_copvip,true],
-[copcidd,"Cop Donator Equipment",copcidd,cidcarspawn,_copvip,_copvip,true],
-[dshop1,"Donator Shop (Tier 1)",maindonateshop,dummyobj,_Donate,_Donate,true],
-[dshop2,"Donator Shop (Tier 2)",donateshop2,donatespawn2,_Donate2,_Donate2,true],
-[dshop3,"Donator Shop (Tier 3)",donateshop3,donatespawn3,_Donate3,_Donate3,true],
-[dshop4,"Donator Shop (Tier 4)",donateshop4,donatespawn4,_Donate4,_Donate4,true],
-[dshop5,"Donator Shop (Tier 5)",donateshop5,dummyobj,_Donate5,_Donate5,true],
-[dshop6,"Donator Shop (Tier 6)",donateshop6,dummyobj,_Donate6,_Donate6,true],
-[terrorvip,"Terror VIP Shop",terrorvip,vipterroraswpawn,_VIPterror,_VIPterror,true],
-[Diamond_1,"Pawn Shop",dummyobj,dummyobj,_js,_js,true],
-[vipterrorair,"VIP Terror Air Shop",vipterrorair,vipterroraswpawn,_vipterrorairlist,_vipterrorairlist,true],
-[hospsell,"Sell Organs",dummyobj,dummyobj,_hsc,_hsc,true],
-[pmcbox,"PMC Operator",pmcbox,pmcspawn,_PMC,_PMC,true],
-[pmcbox1,"PMC Command",pmcbox1,pmcspawn,_CommandPMC,_CommandPMC,true],
-[pmcbox2,"PMC Air",dummyobj,pmchelipad,_PMCAIR,_PMCAIR,true],
-[towfoodshop,"Flyer's Vending Machine",dummyobj,dummyobj,_Tow,_Tow,true],
-[tow_box,"Parts Box",dummyobj,dummyobj,_Tow1,_Tow1,true],
-[towcarshop,"Junior Mechanic",dummyobj,tow_spawn,_Tow2,_Tow2,true],
-[towcarshop_1,"Senior Supervisor",dummyobj,tow_spawn,_Tow3,_Tow3,true],
-[towcarshop_2,"Mechanic Supervisor",dummyobj,tow_spawn,_Tow4,_Tow4,true]
+	[OL_Shop_Undercover,				"Undercover Police Equipment",				OL_Shop_Undercover,	ccarspawnuc,			_undercover,				_undercover,				true,  "Undercover_id"],
+	[OL_Shop_ClothingStore,			"Civilian Clothing Shop",							dummyobj,						dummyobj,					M_rlrpgclothing,		M_rlrpgclothing,		true,  "[getPlayerUID player]"],
+	[OL_Shop_ClothingStore_1,		"Military Surplus",										dummyobj,						dummyobj,					M_rlrpgclothing_1,	M_rlrpgclothing_1,	true,  "[getPlayerUID player]"],
+	[OL_Shop_ClothingStore_2,		"Tactical Military Clothing",					dummyobj,						dummyobj,					M_rlrpgclothing_2,	M_rlrpgclothing_2,	true,  "[getPlayerUID player]"],
+	[OL_Shop_ClothingStore_3,		"Civilian Clothing Shop",							dummyobj,						dummyobj,					M_rlrpgclothing,		M_rlrpgclothing,		true,  "[getPlayerUID player]"],
+	[OL_Shop_ClothingStore_4,		"Military Surplus",										dummyobj,						dummyobj,					M_rlrpgclothing_1,	M_rlrpgclothing_1,	true,  "[getPlayerUID player]"],
+	[OL_Shop_pistol,						"Licensed Pistol",										OL_Shop_pistol,			OL_Shop_pistol,		_pistol,						_pistol,						true,  "[getPlayerUID player]"],
+	[sub,												"Submachine Gun",											sub,								sub,							_sub,								_sub,								true,  "[getPlayerUID player]"],
+	[rifle,											"Licensed Rifle",											rifle,							rifle,						_rifle,							_rifle,							true,  "[getPlayerUID player]"],
+	[guss,											"Illegal Fire Arms",									gussbox,						dummyobj,					_guss,							_guss,							true,  "[getPlayerUID player]"],
+	[txwshop,										"Tier X Weapons",											weaponx,						weaponx,					_weaponx,						_weaponx,						true,  "OL_TierX_id"],
+	[txeshop,										"Tier X Equipment",										itemx,							itemx,						_itemx,							_itemx,							true,  "OL_TierX_id"],
+	[carx,											"Tier X Vehicles",										carx,								carxspawn,				_carx,							_carx,							true,  "OL_TierX_id"],
+	[boatx,											"Tier X Boats",												boatx,							boatxspawn,				_boatx,							_boatx,							true,  "OL_TierX_id"],
+	[helix,											"Tier X Helicopters",									helix,							helixspawn,				_helix,							_helix,							true,  "OL_TierX_id"],
+	[fuel2,											"Fuel-station Shop",									dummyobj,						dummyobj,					_fs,								_fs,								true,  "[getPlayerUID player]"],
+	[fuel4,											"Fuel-station Shop",									dummyobj,						dummyobj,					_fs,								_fs,								true,  "[getPlayerUID player]"],
+	[fuel5,											"Fuel-station Shop",									dummyobj,						dummyobj,					_fs,								_fs,								true,  "[getPlayerUID player]"],
+	[fuel7,											"Fuel-station Shop",									dummyobj,						dummyobj,					_fs,								_fs,								true,  "[getPlayerUID player]"],
+	[fuel8,											"Fuel-station Shop",									dummyobj,						dummyobj,					_fs,								_fs,								true,  "[getPlayerUID player]"],
+	[shop1,											"Food Shop",													dummyobj,						dummyobj,					_is,								_is,								true,  "[getPlayerUID player]"],
+	[shop4,											"Food Shop",													dummyobj,						dummyobj,					_is,								_is,								true,  "[getPlayerUID player]"],
+	[bailflag,									"Food and Gun Locker",								dummyobj,						dummyobj,					_cf,								_cf,								true,  "[getPlayerUID player]"],
+	[pub1,											"Pub",																dummyobj,						dummyobj,					_pub,								_pub,								true,  "[getPlayerUID player]"],
+	[pub2,											"Pub",																dummyobj,						dummyobj,					_pub,								_pub,								true,  "[getPlayerUID player]"],
+	[pub3,											"Pub",																dummyobj,						dummyobj,					_pub,								_pub,								true,  "[getPlayerUID player]"],
+	[pub4,											"Pub",																dummyobj,						dummyobj,					_pub,								_pub,								true,  "[getPlayerUID player]"],
+	[pub5,											"Saloon",															dummyobj,						dummyobj,					_pub,								_pub,								true,  "[getPlayerUID player]"],
+	[martpub,										"Alcohol",														dummyobj,						dummyobj,					_pub,								_pub,								true,  "[getPlayerUID player]"],
+	[assassinshop,							"Assassin Shop",											assassinshop,				dummyobj,					_ass,								_ass,								true,  "[getPlayerUID player]"],
+	[mayorguns,									"Government Equip Shop",							mayorguns,					mayorcarspawn,		_mgs,								_mgs,								true,  "[getPlayerUID player]"],
+	[equipbox,									"Equipment Shop",											equipbox,						dummyobj,					_es,								_es,								true,  "[getPlayerUID player]"],
+	[equipbox2,									"Equipment Shop",											equipbox2,					dummyobj,					_es,								_es,								true,  "[getPlayerUID player]"],
+	[tuning1,										"Car Upgrades",												dummyobj,						dummyobj,					_cu,								_cu,								true,  "[getPlayerUID player]"],
+	[rMart,											"Car Items",													dummyobj,						dummyobj,					_rm,								_rm,								true,  "[getPlayerUID player]"],
+	[carshop1,									"Used Cars",													dummyobj,						carspawn1,				_cs1,								_cs1,								true,  "[getPlayerUID player]"],
+	[carshop4,									"Used Cars",													dummyobj,						carspawn4,				_cs1,								_cs1,								true,  "[getPlayerUID player]"],
+	[carshop2,									"Farm Equipment",											dummyobj,						carspawn2,				_cs2,								_cs2,								false, "[getPlayerUID player]"],
+	[scarshop,									"Muscle Car Shop",										dummyobj,						scarspawn1,				_sc1,								_sc1,								true,  "[getPlayerUID player]"],
+	[scarshop2,									"Charger and Mazda",									dummyobj,						scarspawn2,				_sc2,								_sc2,								true,  "[getPlayerUID player]"],
+	[scarshop3,									"Low End Sports",											dummyobj,						scarspawn3,				_sc3,								_sc3,								true,  "[getPlayerUID player]"],
+	[scarshop4,									"Mid Level Sports",										dummyobj,						scarspawn4,				_sc4,								_sc4,								true,  "[getPlayerUID player]"],
+	[scarshop5,									"High End Sports",										dummyobj,						scarspawn5,				_sc5,								_sc5,								true,  "[getPlayerUID player]"],
+	[scarshop6,									"Nissan Car Shop",										dummyobj,						scarspawn6,				_sc6,								_sc6,								true,  "[getPlayerUID player]"],
+	[scarshop7,									"350z Car Shop",											dummyobj,						scarspawn7,				_sc7,								_sc7,								true,  "[getPlayerUID player]"],
+	[scarshop8,									"Ford Car Shop",											dummyobj,						scarspawn8,				_sc8,								_sc8,								true,  "[getPlayerUID player]"],
+	[scarshop9,									"BMW Car Shop",												dummyobj,						scarspawn9,				_sc9,								_sc9,								true,  "[getPlayerUID player]"],
+	[tahoeshop1,								"Tahoe Shop",													dummyobj,						tahoespawn1,			_tahoe,							_tahoe,							true,  "[getPlayerUID player]"],
+	[pickupshop1,								"Pickup Shop",												dummyobj,						pickupspawn1,			_ps,								_ps,								true,  "[getPlayerUID player]"],
+	[taxishop,									"Taxi Shop",													dummyobj,						taxispawn1,				_tx,								_tx,								true,  "[getPlayerUID player]"],
+	[bicycleshop,								"Bicycle Shop",												dummyobj,						bicyclespawn,			_bsj,								_bsj,								true,  "[getPlayerUID player]"],
+	[bikeshop,									"Mikes Bike Shop",										dummyobj,						bikespawn,				_mbs,								_mbs,								true,  "[getPlayerUID player]"],
+	[bikeshop1,									"Quad Bike Shop",											dummyobj,						bikespawn1,				_qbs,								_qbs,								true,  "[getPlayerUID player]"],
+	[bikeshop2,									"Sports Bike Shop",										dummyobj,						bikespawn1,				_qbss,							_qbss,							true,  "[getPlayerUID player]"],
+	[truckshop,									"Truck and Bus Shop",									dummyobj,						truckspawn,				_ts,								_ts,								true,  "[getPlayerUID player]"],
+	[struckshop,								"Sport Truck Shop",										dummyobj,						struckspawn,			_sts,								_sts,								true,  "[getPlayerUID player]"],
+	[airshop,										"Airplane Shop",											dummyobj,						asairspawn,				_as,								_as,								true,  "[getPlayerUID player]"],
+	[airshop2,									"Chopper and Jet Shop",								dummyobj,						asairspawn,				_assa,							_assa,							true,  "[getPlayerUID player]"],
+	[airshop3,									"Commercial Air Shop",								dummyobj,						asairspawn,				_asc,								_asc,								true,  "[getPlayerUID player]"],
+	[AFP,												"Dem Airoplanes Store",								dummyobj,						AFPspawn,					_as,								_as,								true,  "[getPlayerUID player]"],
+	[AFH,												"Dem Helamacopters Store",						dummyobj,						AFHspawn,					_assa,							_assa,							true,  "[getPlayerUID player]"],
+	[scubashop, 								"Boat Shop",													dummyobj,						bs1spawn,					_bs,								_bs, 								true,  "[getPlayerUID player]"],
+	[boatshop2, 								"Boat Shop",													dummyobj,						boatspawn2,				_bs,								_bs, 								true,  "[getPlayerUID player]"],
+	[insure,										"Insurance",													insure,							dummyobj,					_ins, 							_emptyshop,					false, "[getPlayerUID player]"],
+	[tdoc,											"FireFighter 1",											dummyobj,						tdocspawn,				_td4,								_td4,								true,  "EMT3_id"],
+	[tdoc6sub,									"FireFighter 1",											dummyobj,						tdocspawnsub,			_td4,								_td4,								true,  "EMT3_id"],
+	[tdoc2,											"Untrained Equipment",								dummyobj,						tdocspawn,				_td,								_td,								true,  "[getPlayerUID player]"],
+	[tdoc2sub,									"Untrained Equipment",								dummyobj,						tdocspawnsub,			_td,								_td,								true,  "[getPlayerUID player]"],
+	[tdoc3,											"EMT 1 Equipment",										dummyobj,						tdocspawn,				_td2,								_td2,								true,  "EMT1_id"],
+	[tdoc3sub,									"EMT 1 Equipment",										dummyobj,						tdocspawnsub,			_td2,								_td2,								true,  "EMT1_id"],
+	[tdoc4,											"FireFighter 2",											dummyobj,						tdocspawn,				_td5,								_td5,								true,  "FD_id"],
+	[tdoc4sub,									"FireFighter 2",											dummyobj,						tdocspawnsub,			_td5,								_td5,								true,  "FD_id"],
+	[tdoc5,											"Air Rescue Equipment",								tdoc5,							jailpad2_1,				_td6,								_td6,								true,  "ESUAviation_id"],
+	[tdoc5sub,									"Air Rescue Equipment",								tdoc5sub,						tdocspawnsubair,	_td6,								_td6,								true,  "ESUAviation_id"],
+	[tdoc6,											"Command Equipment",									dummyobj,						tdocspawn,				_td7,								_td7,								true,  "ESUCommand_id"],
+	[tdocsub,										"Command Equipment",									dummyobj,						tdocspawnsub,			_td7,								_td7,								true,  "ESUCommand_id"],
+	[tdoc7,											"EMT 2 Equipment",										dummyobj,						tdocspawn,				_td3,								_td3,								true,  "EMT2_id"],
+	[tdoc7sub,									"EMT 2 Equipment",										dummyobj,						tdocspawnsub,			_td3,								_td3,								true,  "EMT2_id"],
+	[tdoc8,											"Fire Marshal Equipment",							dummyobj,						tdocspawn,				_td8,								_td8,								true,  "FD_id"],
+	[resourcesell,							"Sell Resources",											dummyobj,						dummyobj,					_rs,								_rs,								true,  "[getPlayerUID player]"],
+	[OL_Shop_Wigsworth,					"Wigworths",													dummyobj,						dummyobj,					_wigs,							_wigs,							true,  "[getPlayerUID player]"],
+	[OilSell1,									"Oil Dealer", 												dummyobj,						dummyobj, 				_emptyshop,					_os,								true,  "[getPlayerUID player]"],
+	[whalesell,									"Sell Whale",													dummyobj,						dummyobj,					_emptyshop,					_ws,								true,  "[getPlayerUID player]"],
+	[terrorbox,									"Terror Stuff",												terrorbox,					vipterroraswpawn,	_terrorshop,				_terrorshop,				true,  "[getPlayerUID player]"],
+	[shadyd,										"Barely Legal",												shadyd,							dummyobj, 				_shady,							_shady,							true,  "[getPlayerUID player]"],
+	[OL_Shop_Gangarea1,					"Gang Shop",													gangbox1,						dummyobj,					_gangshop_buy,			_gangshop_buy,			true,  "[getPlayerUID player]"],
+	[OL_Shop_Gangarea2,					"Gang Shop",													gangbox2,						dummyobj,					_gangshop_buy,			_gangshop_buy,			true,  "[getPlayerUID player]"],
+	[OL_Shop_Gangarea3,					"Gang Shop",													gangbox3,						dummyobj,					_gangshop_buy,			_gangshop_buy,			true,  "[getPlayerUID player]"],
+	[OL_Shop_Gangarea4,					"Gang Shop",													gangbox4,						dummyobj,					_gangshop_buy,			_gangshop_buy,			true,  "[getPlayerUID player]"],
+	[cdrugsell,									"Sell Cocaine",												dummyobj,						dummyobj,					_dsc,								_dsc,								true,  "[getPlayerUID player]"],
+	[mdrugsell,									"Sell Marijuana",											dummyobj,						dummyobj,					_dsm,								_dsm,								true,  "[getPlayerUID player]"],
+	[ldrugsell,									"Sell LSD",														dummyobj,						dummyobj,					_emptyshop,					_dsl,								true,  "[getPlayerUID player]"],
+	[hdrugsell,									"Sell Heroin",												dummyobj,						dummyobj,					_dsh,								_dsh,								true,  "[getPlayerUID player]"],
+	[methsell,									"Sell Meth",													dummyobj,						dummyobj,					_msc,								_msc,								true,  "[getPlayerUID player]"],
+	[pharmacy,									"Pharmacy",														dummyobj,						pharmspawn,				_psc,								_emptyshop,					false, "[getPlayerUID player]"],
+	[copbasic1,									"Basic Police Gear",									copbasic1,					ccarspawn, 				_copbasic,					_copbasic,					true,  "[getPlayerUID player]"],
+	[copbasic2,									"Basic Police Gear",									copbasic2,					ccarspawn, 				_copbasic,					_copbasic,					true,  "[getPlayerUID player]"],
+	[copbasic4,									"Basic Police Gear",									copbasic4,					ccarspawn, 				_copbasic,					_copbasic,					true,  "[getPlayerUID player]"],
+	[copbasic6,									"Basic Police Gear",									copbasic6,					ccarspawn1, 			_copbasic,					_copbasic,					true,  "[getPlayerUID player]"],
+	[copswate,									"Basic Police Gear",									copswate,						dummyobj, 				_copbasic,					_copbasic,					true,  "[getPlayerUID player]"],
+	[copuntrained,							"Untrained Patrol Officer Equipment",	copuntrained,				ccarspawn,				_copuntrained,			_copuntrained,			true,  "[getPlayerUID player]"],
+	[coppo1,										"Rookie Patrol Officer Equipment",		coppo1,							ccarspawn,				_coppo1,						_coppo1,						true,  "PO1_id"],
+	[coppo2,										"Patrol Officer Equipment",						coppo2,							ccarspawn,				_coppo2,						_coppo2,						true,  "PO2_id"],
+	[coppo3,										"Senior Patrol Officer Equipment",		coppo3,							ccarspawn,				_coppo3,						_coppo3,						true,  "PO3_id"],
+	[copcpl,										"Corporal Equipment",									copcpl,							ccarspawn2,				_copcpl,						_copcpl,						true,  "Cpl_id"],
+	[copsgt,										"Sergeant Equipment",									copsgt,							ccarspawn2,				_copsgt,						_copsgt,						true,  "Sgt_id"],
+	[copdeputy,									"Sheriff Deputy Equipment",						copdeputy,					ccarspawn1,				_copdeputy,					_copdeputy,					true,  "Deputy_id"],
+	[copsgtdeputy,							"Sheriff Sgt Deputy Equipment",				copsgtdeputy,				ccarspawn1,				_copsgtdeputy,			_copsgtdeputy,			true,  "SgtDeputy_id"],
+	[copsheriffdnr,							"Sheriff D.N.R",											copsheriffdnr,			ccarspawn1,				_copsheriffdnr,			_copsheriffdnr,			true,  "Deputy_id"],
+	[copsheriffmks,							"Sheriff Marksman",										copsheriffmks,			dummyobj,					_copsheriffmks,			_copsheriffmks,			true,  "Deputy_id"],
+	[copsheriff,								"Sheriff Equipment",									copsheriff,					ccarspawn1,				_copsheriff,				_copsgt,						true,  "Deputy_id"],
+	[coplt,											"Lieutenant Equipment",								coplt,							ccarspawnlt,			_coplt,							_coplt,							true,  "Lt_id"],
+	[copcpt,										"Captain Equipment",									copcpt,							ccarspawncpt,			_copcpt,						_copcpt,						true,  "Cpt_id"],
+	[copmedalbox,								"Medal Recipients Equipment",					copmedalbox,				ccarspawnchief,		_copmedal,					_copmedal,					true,  "Medal_id"],
+	[copchief,									"Chief of Police Equipment",					copchief,						ccarspawnchief,		_copchief,					_copchief,					true,  "Chief_id"],
+	[copk9,											"K-9 Officer",												copk9,							ck9spawn,					_copk9,							_copk9,							true,  "K9_id"],
+	[copk9p,										"K-9 Probation",											copk9p,							ck9spawn,					_copk9p,						_copk9p,						true,  "K9_id"],
+	[copk9c,										"K-9 Command",												copk9c,							ck9spawn,					_copk9c,						_copk9c,						true,  "K9_id"],
+	[copk92,										"Sheriff K-9 Equipment",							copk92,							ccarspawn1,				_copk9sheriff,			_copk9sheriff,			true,  "K9_id"],
+	[copav1,										"Aviation",														copav1, 						cairspawn,				_copav1,						_copav1,						true,  "PDAviation_id"],
+	[copav2,										"Operation Pilot",										copav2, 						cairspawn,				_copav2,						_copav2,						true,  "PDAviation_id"],
+	[copav3,										"Air Patrol Operations",							dummyobj, 					copavapo,					_copav3,						_copav3,						true,  "PDAviation_id"],
+	[copair2,										"Sheriff Aviation",										copairweapon2, 			airsheriff,				_copavsh,						_copavsh,						true,  "PDAviation_id"],
+	[copswat1,									"S.W.A.T. Probation",									copswat1,						dummyobj,					_copswat1,					_copswat1,					true,  "SWAT_id"],
+	[copswat2,									"S.W.A.T. Operator",									copswat2,						dummyobj,					_copswat2,					_copswat2,					true,  "SWAT_id"],
+	[copswat3,									"S.W.A.T. Specialist",								copswat3,						dummyobj,					_copswat3,					_copswat3,					true,  "SWAT_id"],
+	[copswat4,									"S.W.A.T. Marksman",									copswat4,						dummyobj,					_copswat4,					_copswat4,					true,  "SWAT_id"],
+	[copswat5,									"S.W.A.T. Command",										copswat5,						dummyobj,					_copswat5,					_copswat5,					true,  "SWAT_id"],
+	[swatcg,										"S.W.A.T. Water Craft",								dummyobj,						cgboatspawn,			_copswat6,					_copswat6,					true,  "SWAT_id"],
+	[copswatvehicle,						"S.W.A.T. Vehicles",									dummyobj,						ccarspawnswat,		_copswatvehicle,		_copswatvehicle,		true,  "SWAT_id"],
+	[cidbox,										"CID Equipment",											cidbox,							cidcarspawn,			_cid,								_cid,								true,  "Undercover_id"],
+	[copcoastguard,							"Sheriff Marine Water Craft",					dummyobj,						cgboatspawn,			_copcoastguard,			_copcoastguard,			true,  "Coastguard_id"],
+	[copcoastguardair,					"Sheriff Marine Aviation",						dummyobj,						jailpadcg,				_copcoastguardair,	_copcoastguardair,	true,  "Coastguard_id"],
+	[ftobox,										"F.T.O Equipment",										ftobox,							ftocarspawn,			_copfto,						_copfto,						true,  "FTO_id"],
+	[copVIPBox,									"Cop Donator Equipment",							copVIPBox,					ccarspawn,				_copvip,						_copvip,						true,  "Donate_id"],
+	[copVIPBox2,								"Cop Donator Equipment",							copVIPBox2,					ccarspawn1,				_copvip,						_copvip,						true,  "Donate_id"],
+	[copVIPBox3,								"Cop Donator Equipment",							copVIPBox3,					ccarspawn2,				_copvip,						_copvip,						true,  "Donate_id"],
+	[copswatd,									"Cop Donator Equipment",							copswatd,						ccarspawn2,				_copvip,						_copvip,						true,  "Donate_id"],
+	[copcidd,										"Cop Donator Equipment",							copcidd,						cidcarspawn,			_copvip,						_copvip,						true,  "Donate_id"],
+	[dshop1,										"Donator Shop (Tier 1)",							maindonateshop,			dummyobj,					_Donate,						_Donate,						true,  "Donate_id"],
+	[dshop2,										"Donator Shop (Tier 2)",							donateshop2,				donatespawn2,			_Donate2,						_Donate2,						true,  "Donate2_id"],
+	[dshop3,										"Donator Shop (Tier 3)",							donateshop3,				donatespawn3,			_Donate3,						_Donate3,						true,  "Donate3_id"],
+	[dshop4,										"Donator Shop (Tier 4)",							donateshop4,				donatespawn4,			_Donate4,						_Donate4,						true,  "Donate4_id"],
+	[dshop5,										"Donator Shop (Tier 5)",							donateshop5,				dummyobj,					_Donate5,						_Donate5,						true,  "Donate5_id"],
+	[dshop6,										"Donator Shop (Tier 6)",							donateshop6,				dummyobj,					_Donate6,						_Donate6,						true,  "Donate6_id"],
+	[terrorvip,									"Terror VIP Shop",										terrorvip,					vipterroraswpawn,	_VIPterror,					_VIPterror,					true,  "Donate_id"],
+	[Diamond_1,									"Pawn Shop",													dummyobj,						dummyobj,					_js,								_js,								true,  "[getPlayerUID player]"],
+	[vipterrorair,							"VIP Terror Air Shop",								vipterrorair,				vipterroraswpawn,	_vipterrorairlist,	_vipterrorairlist,	true,  "Donate_id"],
+	[hospsell,									"Sell Organs",												dummyobj,						dummyobj,					_hsc,								_hsc,								true,  "[getPlayerUID player]"],
+	[pmcbox,										"PMC Operator",												pmcbox,							pmcspawn,					_PMC,								_PMC,								true,  "PMC_id"],
+	[pmcbox1,										"PMC Command",												pmcbox1,						pmcspawn,					_CommandPMC,				_CommandPMC,				true,  "PMCCommand_id"],
+	[pmcbox2,										"PMC Air",														dummyobj,						pmchelipad,				_PMCAIR,						_PMCAIR,						true,  "PMC_id"],
+	[towfoodshop,								"Flyer's Vending Machine",						dummyobj,						dummyobj,					_Tow,								_Tow,								true,  "Tow_id"],
+	[tow_box,										"Parts Box",													dummyobj,						dummyobj,					_Tow1,							_Tow1,							true,  "Tow_id"],
+	[towcarshop,								"Junior Mechanic",										dummyobj,						tow_spawn,				_Tow2,							_Tow2,							true,  "Tow_id"],
+	[towcarshop_1,							"Senior Supervisor",									dummyobj,						tow_spawn,				_Tow3,							_Tow3,							true,  "Tow_id"],
+	[towcarshop_2,							"Mechanic Supervisor",								dummyobj,						tow_spawn,				_Tow4,							_Tow4,							true,  "Tow_id"]
 ];
+
+{
+	missionNamespace setVariable [format ["OL_SA_%1", _x select 0], _x]
+} forEach INV_ItemShops;
+
+OL_shops_getArray = {
+	missionNamespace getVariable ["OL_SA_%1", _this]
+};

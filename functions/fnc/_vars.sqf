@@ -15,6 +15,7 @@ gunrun3available        = true;
 OL_VarQueue             = []; //[<str>var, <anything>value, <array>[<int>timeStart, <int>timeEnd], <array>[<bool>isSetVar, <bool>isSetVarGlobal]]
 Rifle_Holster           = nil;
 Pistol_Holster          = nil;
+Taser_Holster						= nil;
 Radar_Holstered         = false;
 OL_HasDisplayOpen				= false;
 

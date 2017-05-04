@@ -1,8 +1,8 @@
 _art = _this select 0;
 
 if (_art == "use") then {
-	if (vehicle player != player) exitWith { systemChat "You must be on foot!" };
-	if (player getVariable "KOED") exitWith { systemChat "You cannot fix trees while dead!"	};
+	if (vehicle player != player) exitWith { player groupChat "You must be on foot!" };
+	if (player getVariable "KOED") exitWith { player groupChat "You cannot fix trees while dead!"	};
 
 	_foundTree = false;
 	{
@@ -15,7 +15,7 @@ if (_art == "use") then {
 			player groupChat "Fixed The Tree!";
 			_foundTree = true;
 		};
-	}forEach (nearestObjects[player, [], 10]);
+	}forEach (nearestObjects [player, [], 10]);
 
-	if (!_foundTree) then { systemChat "You are not near a damaged tree! You must be within 10(m) of the damaged tree!" };
+	if (!_foundTree) then { player groupChat "You are not near a damaged tree! You must be within 10(m) of the damaged tree!" };
 };

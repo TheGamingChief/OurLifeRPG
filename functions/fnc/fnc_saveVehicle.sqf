@@ -7,6 +7,7 @@ if (!(_vcl in INV_VehicleArray)) exitWith {};
 player sideChat "Saving vehicle, please wait..";
 
 INV_SavedVehLand set [(count INV_SavedVehLand), typeOf _vcl];
+deleteVehicle _vcl;
 
 player sideChat "Vehicle saved!";
 

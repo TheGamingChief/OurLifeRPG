@@ -37,7 +37,7 @@ _type   = typeof _car;
 		player groupchat format["Demerit points lost: %1. Demerit points remaining: %2", _penalty, demerits];
 
 		['if (%2 == 0) then {
-			serveer globalChat "%1 has lost his drivers license!";
+			server globalChat "%1 has lost his drivers license!";
 			if (player == %1) then {
 				INV_LizenzOwner = INV_LizenzOwner - ["car"];
 			};

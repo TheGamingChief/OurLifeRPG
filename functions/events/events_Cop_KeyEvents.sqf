@@ -18,10 +18,8 @@
 [35,    [false,false,false],  {[] spawn fnc_KeyPress_H; false;},        "keydown", "KeyPress_H"] call CBA_fnc_addKeyHandler;
 [38,    [false,false,false],  {[] spawn fnc_KeyPress_L; true;},         "keydown", "KeyPress_L"] call CBA_fnc_addKeyHandler;
 [41,    [false,false,false],  {[] spawn fnc_KeyPress_Tilde; false;},    "keydown", "KeyPress_Tilde"] call CBA_fnc_addKeyHandler;
-[59,    [false,true,false],   {[] spawn fnc_KeyPress_CtrlF1; true;},    "keydown", "KeyPress_CtrlF1"] call CBA_fnc_addKeyHandler;
 [59,    [false,false,false],  {[] spawn fnc_KeyPress_F1; true;},        "keydown", "KeyPress_F1"] call CBA_fnc_addKeyHandler;
 [59,    [false,false,false],  {[] spawn fnc_KeyPress_F1_Up; true;},     "keyup",   "KeyPressUp_F1"] call CBA_fnc_addKeyHandler;
-[60,    [false,true,false],   {[] spawn fnc_KeyPress_CtrlF2; true;},    "keydown", "KeyPress_CtrlF2"] call CBA_fnc_addKeyHandler;
 [60,    [false,false,false],  {[] spawn fnc_KeyPress_F2; true;},        "keydown", "KeyPress_F2"] call CBA_fnc_addKeyHandler;
 [60,    [false,false,false],  {[] spawn fnc_KeyPress_F2_Up; true;},     "keyup",   "KeyPressUp_F2"] call CBA_fnc_addKeyHandler;
 [61,    [false,true,false],   {[] spawn fnc_KeyPress_CtrlF3; true;},    "keydown", "KeyPress_CtrlF3"] call CBA_fnc_addKeyHandler;

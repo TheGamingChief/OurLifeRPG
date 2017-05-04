@@ -1,6 +1,6 @@
 _art  = ((_this select 3) select 0);
 _vcl = (nearestobjects [getpos player, ["cl_del_mackr","cl_trucktest_mackr","cl_flatbed_mackr"], 10] select 0);
-if (_art == 1) then 
+if (_art == 1) then
 {
 
 if (isNil "_vcl") exitwith {player groupchat "This is the wrong type of truck";};
@@ -26,11 +26,11 @@ if (_newmarker == 3) then {_shopo = "Mid Car Shop";};
 if (_newmarker == 4) then {_shopo = "Tuning Shop";};
 player groupchat "Your pick up site is marked on the map";
 player groupchat format["Once there talk to the %1", _shopo];
-
+shoio
 	while {cmissionactive} do
 	{
 
-	if (player distance _markerlocation <= 10) then 
+	if (player distance _markerlocation <= 10) then
 		{
 		player groupchat "Arrived at your Destination talk to shop owner to get loaded";
 		deleteMarkerLocal "cargomarker";
@@ -39,7 +39,7 @@ player groupchat format["Once there talk to the %1", _shopo];
 	};
 };
 
-if (_art == 2) then 
+if (_art == 2) then
 {
 
 if (isNil "_vcl") exitwith {player groupchat "This is the wrong type of truck";};
@@ -69,7 +69,7 @@ player groupchat format["Once there talk to the %1", _shopo];
 while {cmissionactive2} do
 	{
 
-	if (player distance _markerlocation <= 10) then 
+	if (player distance _markerlocation <= 10) then
 		{
 		player groupchat "Arrived at your Destination, talk to shop owner to get illegal loaded";
 		deleteMarkerLocal "cargomarker";
@@ -78,7 +78,7 @@ while {cmissionactive2} do
 	};
 };
 
-if (_art == 3) then 
+if (_art == 3) then
 {
 _paid = 25000;
 _cargo = (nearestobjects [getpos player, ["Land_bags_stack_EP1","Land_bags_EP1","Land_Bag_EP1"], 10] select 0);
@@ -89,12 +89,12 @@ Kontostand = Kontostand + _paid;
 cmissionactive1 = false;
 };
 
-if (_art == 4) then 
+if (_art == 4) then
 {
 player setPos [(getPos _vcl select 0),(getPos _vcl select 1),(getPos _vcl select 2)+2];
 };
 
-if (_art == 5) then 
+if (_art == 5) then
 {
 _cargo = (nearestobjects [getpos player, ["Land_Bag_EP1"], 5] select 0);
 if (isNil "_cargo") exitwith {player groupchat "There is nothing illegal on this truck";};
@@ -103,7 +103,7 @@ player groupchat "Illegal Items Removed, ticket the driver";
 };
 
 
-if (_art == 6) then 
+if (_art == 6) then
 {
 if (isNil "_vcl") exitwith {player groupchat "The truck is not close enough";};
 cmissionactive = false;
@@ -112,7 +112,7 @@ sleep 5;
 cmissionactive1 = true;
 _cargo = (nearestobjects [getpos player, ["Land_bags_stack_EP1","Land_bags_EP1"], 20] select 0);
 if (!isNil "_cargo") exitwith {player groupchat "You already have cargo in your truck";};
-		
+
 _cargo1 = "Land_bags_stack_EP1" createvehicle (getpos _vcl);
 _cargo1 attachto [_vcl, [.5,-1,1.5]];
 _cargo2 = "Land_bags_stack_EP1" createvehicle (getpos _vcl);
@@ -123,7 +123,7 @@ _cargo4 = "Land_bags_stack_EP1" createvehicle (getpos _vcl);
 _cargo4 attachto [_vcl, [.5,-4,1.5]];
 _cargo5 = "Land_bags_stack_EP1" createvehicle (getpos _vcl);
 _cargo5 attachto [_vcl, [.5,-5,1.5]];
-		
+
 player groupchat "Cargo is now loaded, check map for your destination";
 deleteMarkerLocal "cargomarker1";
 _newmarker1 = (floor(random(count cargoarray1)));
@@ -139,7 +139,7 @@ _markername1 Setmarkerposlocal _markerlocation1;
 	while {cmissionactive1} do
 	{
 
-	if (player distance _markerlocation1 <= 10) then 
+	if (player distance _markerlocation1 <= 10) then
 		{
 		player groupchat "Arrived at your Destination, talk to shop owner to get paid";
 		deleteMarkerLocal "cargomarker1";
@@ -150,7 +150,7 @@ _markername1 Setmarkerposlocal _markerlocation1;
 
 };
 
-if (_art == 7) then 
+if (_art == 7) then
 {
 if (isNil "_vcl") exitwith {player groupchat "The truck is not close enough";};
 cmissionactive2 = false;
@@ -159,7 +159,7 @@ sleep 5;
 cmissionactive1 = true;
 _cargo = (nearestobjects [getpos player, ["Land_bags_stack_EP1","Land_bags_EP1"], 20] select 0);
 if (!isNil "_cargo") exitwith {player groupchat "You already have cargo in your truck";};
-		
+
 _cargo1 = "Land_bags_stack_EP1" createvehicle (getpos _vcl);
 _cargo1 attachto [_vcl, [.5,-1,1.5]];
 _cargo2 = "Land_Bag_EP1" createvehicle (getpos _vcl);
@@ -170,7 +170,7 @@ _cargo4 = "Land_Bag_EP1" createvehicle (getpos _vcl);
 _cargo4 attachto [_vcl, [.5,-4,1.5]];
 _cargo5 = "Land_bags_stack_EP1" createvehicle (getpos _vcl);
 _cargo5 attachto [_vcl, [.5,-5,1.5]];
-		
+
 player groupchat "Cargo is now loaded, check map for your destination";
 deleteMarkerLocal "cargomarker1";
 _newmarker1 = (floor(random(count cargoarray2)));
@@ -186,7 +186,7 @@ _markername1 Setmarkerposlocal _markerlocation1;
 	while {cmissionactive1} do
 	{
 
-	if (player distance _markerlocation1 <= 10) then 
+	if (player distance _markerlocation1 <= 10) then
 		{
 		player groupchat "Arrived at your Destination, talk to drug dealer to get paid";
 		deleteMarkerLocal "cargomarker1";
@@ -197,7 +197,7 @@ _markername1 Setmarkerposlocal _markerlocation1;
 
 };
 
-if (_art == 8) then 
+if (_art == 8) then
 {
 _paid = 40000;
 _cargo = (nearestobjects [getpos player, ["Land_bags_stack_EP1","Land_Bag_EP1"], 20] select 0);
@@ -208,7 +208,7 @@ Kontostand = Kontostand + _paid;
 cmissionactive1 = false;
 };
 
-if (_art == 9) then 
+if (_art == 9) then
 {
 player groupchat "Cancelled Trucking Mission";
 cmissionactive 		 = false;

@@ -44,7 +44,6 @@ if (isClient) then {
 			[] call OL_events_Cop_Actions;
 			[] call OL_misc_ratioChecker;
 			["SETUP"] call OL_misc_Markers;
-			/*[] spawn OL_misc_ratioKick;*/
 		};
 		case resistance: {
 			[] call OL_events_Ems_KeyEvents;
@@ -58,7 +57,6 @@ if (isClient) then {
 	[] execVM "ServerLoad\petrolactions.sqf";
 	[] execVM "ServerLoad\SpeedCams.sqf";
 	[] execVM "ServerLoad\nametags.sqf";
-	[] execVM "ServerLoad\salaries.sqf";
 	[] execVM "R3F_revive\revive_init.sqf";
 	["ol_textures\images\Gps.paa",-0.06,-0.36] call bis_fnc_customGPS;
 	[0,0,0,["clientloop"]] execVM "gangs.sqf";

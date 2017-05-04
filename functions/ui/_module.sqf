@@ -5,8 +5,9 @@ DD_Modules = DD_Modules + [
   ["OL",  "ui",  "ShowTablet",         1],
   ["OL",  "ui",  "ArrestMenu",         1],
   ["OL",  "ui",  "ClothesMenu",        1],
-  ["OL",  "ui",  "InteractionMenu",    1],
   ["OL",  "ui",  "AnimationMenu",      1],
+  ["OL",  "ui",  "InteractionMenu",    1],
+  ["OL",  "ui",  "VehicleRetriever",   1],
   ["OL",  "ui",  "SpawnMenu_Open",     1],
   ["OL",  "ui",  "SpawnMenu_Pick",     1],
   ["OL",  "ui",  "SpawnMenu_MoveMap",  1]
