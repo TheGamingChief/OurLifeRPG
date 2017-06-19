@@ -10,7 +10,7 @@ if (!isNil "civmenuciv") then {
 	detach civmenuciv;
 };
 
-player setVariable ["KOED",true,true];
+player setVariable ["KOED", true, true];
 player setVariable ["tf_unable_to_use_radio", true, true];
 player setVariable ["tf_voiceVolume", 0, true];
 player setVariable ["ZipTied",false,true];
@@ -71,7 +71,7 @@ if (player getVariable "KOED2") then
 	format['%1 allowDamage true', player]call OL_network_Swag;
 	[nil,player,rSwitchMove,"amovppnemstpsnonwnondnon"] call RE;
 	hintSilent parseText format["<t color='#ff0000'>%1 You have respawned</t>", name player];
-	player setVariable ["KOED",false,false];
+	player setVariable ["KOED", false, true];
 	player setVariable ["tf_unable_to_use_radio", false, true];
 	player setVariable ["tf_voiceVolume", 1.0, true];
 	{	if (!(_x in weapons player)) then { player addWeapon _x }	} forEach OL_DefaultItems;
@@ -79,5 +79,6 @@ if (player getVariable "KOED2") then
 	format['deleteMarker ("OL_DeadTracker_" + name %1)', player]call OL_network_Swag;
 	sleep 2;
 	[RadioArr] call OL_tfar_addRadiosBack;
+	[player, "Remove All Warrants", 0] call OL_player_WarrantRemove;
 	OL_isDead = false;
 };

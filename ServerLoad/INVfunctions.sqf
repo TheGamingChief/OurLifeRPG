@@ -306,25 +306,18 @@ _re;
 
 // Remove Illegal Items
 INV_EntferneIllegales = {
-   private["_illegalinfos", "_illwArray", "_illmags"];
-   _Fhasnvgoogles  = 0;
-   if (player hasWeapon "NVGoggles") then {_Fhasnvgoogles = 1; };
-   _Fhasbinoculars = 0;
-   if (player hasWeapon "Binocular") then {_Fhasbinoculars = 1;};
-   REMOVEALLWEAPONS player;
-   player REMOVEMAGAZINES "Handgrenade";
-   player REMOVEMAGAZINES "Pipebomb";
-   player REMOVEMAGAZINES "Mine";
-   ["INV_InventarArray", "weapon"] call INV_StorageRemoveKindOf;
-   ["INV_InventarArray", "Magazin"] call INV_StorageRemoveKindOf;
-   saveWeaponPistol set [1,false];
-   saveWeaponRifle = ["",false,false];
-   HolsterArr = [];
-   RL_PrimHWep = "empty";
-   RL_PrimHolstered = false;
-   RL_PH = false;
-   If (_Fhasnvgoogles == 1)  then {player addWeapon "NVGoggles";};
-   If (_Fhasbinoculars == 1) then {player addWeapon "Binocular";};
+   private["_hasNVG", "_hasBino"];
+   _hasNVG  = false; if (player hasWeapon "NVGoggles") then { _hasNVG  = true; };
+   _hasBino = false; if (player hasWeapon "Binocular") then { _hasBino = true; };
+
+	 removeAllWeapons player;
+	 { player removeMagazine _x } forEach (magazines player);
+
+   ['pistole', 0] call INV_SetItemAmount; Pistol_Holster = nil;
+	 ['gewehr', 0]  call INV_SetItemAmount; Rifle_Holster  = nil;
+
+   If (_hasNVG)  then {player addWeapon "NVGoggles";};
+   If (_hasBino) then {player addWeapon "Binocular";};
    {
       if ( ((_x select 0) call INV_getitemAmount) > 0) then
       {
@@ -487,7 +480,7 @@ INV_HasLicense =
 {
 	/*if(IsNil "INV_LizenzOwner")exitWith
 	{
-		//if(getplayeruid player in Developer_id) then {player sideChat "[Dev] INVfunctions - INV_LizenzOwner Error"};
+		//if(getplayeruid player in OL_Developer) then {player sideChat "[Dev] INVfunctions - INV_LizenzOwner Error"};
 	};*/
 
 	if ( (_this == "") or (_this in INV_LizenzOwner) ) then

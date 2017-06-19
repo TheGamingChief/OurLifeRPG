@@ -5,7 +5,6 @@ DD_Modules = DD_Modules + [
   ["OL",    "misc", "LoadingSetText",      1],
   ["OL",    "misc", "AntiDupe",            2],
   ["OL",    "misc", "10MCleanUp",          1],
-  ["OL",    "misc", "AdvancedNav",         1],
   ["OL",    "misc", "CheckWater",          1],
   ["OL",    "misc", "ratioChecker",        1],
   ["OL",    "misc", "TreeFixer",           1],
@@ -27,5 +26,6 @@ DD_Modules = DD_Modules + [
   ["CP",    "misc", "ArrayOffsetSelector", 1],
   ["CP",    "misc", "ArrayOffsetDelete",   1],
   ["CP",    "misc", "GetRandomCode",       1],
+  ["CP",    "misc", "NearestCar",          1],
   ["Item",  "misc", "Bunnyhop",            1]
 ];

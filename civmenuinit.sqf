@@ -74,16 +74,13 @@ player groupChat format [localize "STRS_civmenu_disarm", _civmenuciv];
 
 };
 
-if ((_art == 3) and (player distance prisonflag <= 70)) exitWith
+if ((_art == 3) and (player distance prisonflag <= 70)) exitWith {
+	detach _civmenuciv;
+	_dauer = round(_this select 1);
+	format ["if (player == %1) then {[""arrest"", %2, %3] execVM ""civmenu.sqf"";};", _civmenuciv, _dauer, player] call OL_network_Swag;
+	["HandCuffs", 1] call INV_AddInvItem;
 
-{
-
-_dauer = round(_this select 1);
-format ["if (player == %1) then {[""arrest"", %2, %3] execVM ""civmenu.sqf"";};", _civmenuciv, _dauer, player] call OL_network_Swag;
-["HandCuffs", 1] call INV_AddInvItem;
-
-player groupChat format[localize "STRS_civmenu_arrested", _civmenuciv];
-
+	player groupChat format[localize "STRS_civmenu_arrested", _civmenuciv];
 };
 
 if (_art == 4) exitWith

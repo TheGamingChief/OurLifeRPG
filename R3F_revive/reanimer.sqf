@@ -4,7 +4,7 @@ _blesse = _this select 0;
 _joueur = player;
 
 _blesse setVariable ["R3F_REV_est_pris_en_charge_par", _joueur, true];
-_blesse setVariable ["KOED",false,true];
+_blesse setVariable ["KOED", false, true];
 
 _joueur attachTo [_blesse, [-0.666, 0.222, 0]];
 _joueur setDir 90;

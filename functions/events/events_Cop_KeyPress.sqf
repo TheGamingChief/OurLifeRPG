@@ -220,7 +220,7 @@ fnc_KeyPress_L = {
 
 	if(!INV_shortcuts)exitwith{};
 	if(isstunned) exitwith {player groupchat "You are stunned!"};
-	_vcls = nearestobjects [getpos player, ["LandVehicle", "Air", "ship"], 7];
+	_vcls = call CP_misc_NearestCar;
 	if (count _vcls > 0) then {
 		_vcl = _vcls select 0;
 		if(!(_vcl in INV_VehicleArray))exitwith{player groupchat "You do not have the keys to this vehicle.";};
@@ -249,11 +249,8 @@ fnc_KeyPress_T = {
 };
 
 fnc_KeyPress_R = {
-
-	if (vehicle player == player) exitWith {};
-	if (iscop) then {
-		[] execVM "PIT.sqf";
-	};
+	if ((vehicle player == player) || ((vehicle player) iskindof "Air")) exitWith {};
+	[] execVM "PIT.sqf";
 };
 
 
@@ -288,7 +285,7 @@ fnc_KeyPress_E = {
 
 		if (!(isNull _civ) && _civ in shopusearray) exitwith {
 			_i = 4;
-			if (iscop && _civ in drugsellarray) exitwith {_civ execVM "drugsearch.sqf"};
+			if (iscop && _civ in drugsellarray) exitwith { [_civ] call OL_fnc_DrugSearch };
 			_id = _civ call INV_getshopnum;
 			[0,0,0,[_id]] execVM "shopdialogs.sqf";
 		};

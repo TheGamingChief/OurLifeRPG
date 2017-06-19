@@ -220,17 +220,10 @@ if (_art == "coplog") exitWith {
 			if (count _currentWarrants > 0) then {
 				_str = "";
 
-				{
-					if (_str == "") then {
-						_str = _str  + (_x select 0) + format[" (x%1)", _x select 1];
-					} else {
-						_str = _str + ", ";
-						_str = _str + format["%1 (x%2)", _x select 0, _x select 1];
-					};
-				} forEach _currentWarrants;
-
 				lbAdd [1, format ["%1 (Bounty: %2): %3 is wanted for:",_civilian, [_civilian] call OL_player_WarrantTotal, name _civilian]];
-				lbAdd [1, format ["%1.", _str]];
+				{
+					lbAdd[1, format["%1 (x%2)", _x select 0, _x select 1]];
+				} foreach _currentWarrants;
 				lbAdd [1, _trennlinie];
 			};
 		};

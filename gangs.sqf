@@ -236,7 +236,7 @@ while {isciv} do
 
 	 if(IsNil "_control")exitWith
 	 {
-		 //if(getplayeruid player in Developer_id) then {player sideChat "[Dev] Gang Error"};
+		 //if(getplayeruid player in OL_Developer) then {player sideChat "[Dev] Gang Error"};
 	 };
 
 	 if(player distance _gangarea < 10 and (getpos _gangarea select 2) < 0 and _control == (call INV_mygang)) then

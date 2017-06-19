@@ -157,7 +157,7 @@ OL_ATM_Clothes = [
 		]
 	],
 
-	[assassinshop,
+	[assassin,
 		[
 			["TK_INS_Soldier_EP1", "[getPlayerUID player]", "Assassin Clothes"]
 		]

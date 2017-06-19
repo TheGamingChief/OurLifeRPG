@@ -146,7 +146,7 @@ if ((_loopart == "arrest") and (player distance prisonflag <= 70))  then {
 	call INV_EntferneIllegales;
 	local_arrest    = 1;
 	INV_hunger      = 0;
-	player setVariable ["tf_unable_to_use_radio", true, true];
+	["tf_unable_to_use_radio", true, 5, [true, true]] call CP_fnc_VarQueueAdd;
 	CivTimeInPrison = (_this select 1);
 	player groupChat format [localize "STRS_civmenucheck_arrested_self", (CivTimeInPrison call OL_ISSE_str_IntToStr)];
 	player setdamage 0;
@@ -172,7 +172,7 @@ if ((_loopart == "arrest") and (player distance prisonflag <= 70))  then {
 			format ["server globalChat format [localize ""STRS_civmenucheck_breakout"", name %1];", player] call OL_network_Swag;
 			player setVariable ["tf_unable_to_use_radio", false, true];
 
-			player groupChat localize "You managed to escape jail!";
+			player groupChat "You managed to escape jail!";
 		};
 		case ("JailExit_TimeServed"): {
 			player setPos getMarkerPos "jail_freemarker";	player setdamage 0;

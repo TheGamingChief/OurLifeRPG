@@ -3,6 +3,8 @@ _item 	= _this select 1;
 _vcl	= vehicle player;
 _type	= typeof _vcl;
 
+_blackList = ["il_bearcat", "schoolbus", "jailbus", "Ikarus_TK_CIV_EP1", "Ikarus", "MMT_USMC", "MMT_Civ", "cl_wheelchair"];
+
 if(_art == "use")then
 
 {
@@ -10,7 +12,7 @@ if(_art == "use")then
 	if (_vcl iskindof _type call INV_getitemTypeKg > 2) exitwith{player groupchat "You can't tune this vehicle"};
 	if (_vcl iskindof "Motorcycle") exitwith{player groupchat "You can't upgrade this!"};
 	if (_vcl iskindof "ship") exitwith{player groupchat "You can't upgrade boats"};
-	if (typeOf _vcl == "il_bearcat") exitWith {player groupChat "You can't upgrade this retard!"; [_item, -1] call INV_AddInvItem;};
+	if (typeOf _vcl in _blackList) exitWith {player groupChat "You can't upgrade this retard!"; [_item, -1] call INV_AddInvItem;};
 	if (!(player == driver vehicle player)) exitWith {player groupChat "You must be the driver to tune this";};
 
 	if(_item == "supgrade1" || _item == "tow_supgrade1")then{player groupchat "tuning vehicle...";UpgradingCar = true; _vcl setfuel 0; sleep 8; _vcl setfuel 1; _vcl setvariable ["tuning", 1, true]; player groupchat "vehicle tuned!";UpgradingCar = false;};

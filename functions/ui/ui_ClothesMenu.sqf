@@ -1,6 +1,6 @@
 private ["_nearATM", "_clothesArray", "_index"];
 
-_nearStuff = nearestObjects [getPos player, ["tcg_atm", "olrpg_pdpilot"], 10] - [player];
+_nearStuff = nearestObjects [getPos player, ["tcg_atm", "olrpg_pdpilot", "TK_GUE_Soldier_Sniper_EP1"], 10] - [player];
 
 if (isNil "_nearStuff") exitWith { player groupChat "wut...... - Garry" };
 if (!createDialog "UI_ClothesMenu") exitWith { hint "Dialog Error!" };
@@ -8,7 +8,8 @@ if (!createDialog "UI_ClothesMenu") exitWith { hint "Dialog Error!" };
 _clothesArray = missionNamespace getVariable format ["OL_%1_ClothesArray", _nearStuff select 0];
 
 if (isNil "_clothesArray") exitWith {
-  player groupChat format ["Error trying to load %1 atm clothes array, screenshot this and show it to a developer.", _nearStuff select 0]
+  player groupChat format ["Error trying to load %1 atm clothes array, screenshot this and show it to a developer.", _nearStuff select 0];
+  closeDialog 0;
 };
 
 {

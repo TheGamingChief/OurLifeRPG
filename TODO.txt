@@ -1,0 +1,52 @@
+---------------------------------------------------
+[DONE] Warrants delete on NLR
+[DONE] Fix computer
+[DONE] server cleaner remove body bags
+[DONE] multi line warrants
+[DONE] no speed Upgrade for bus
+[DONE] add the yacht
+[DONE] fixed clothes glitch
+---------------------------------------------------
+[DONE] vehicle lock over building (getPosATL / getPosASL)
+[DONE] Fixed talking while arrested
+[DONE] Detach while jailing fixed
+[DONE] Dog positions for k9
+[DONE] Cleaned up old holster system
+[DONE] disable pit in air vehicles
+[DONE] Stopped bank tellers from moving
+[DONE] Fixed main bank teller
+[DONE] Made Advanced Navigator free
+---------------------------------------------------
+[DONE] Fixed assassin Clothing
+[DONE] Fixed Warrant loss on change clothes
+[DONE] Made drug search give warrant / Notes
+[DONE] Fixed issue with SwagDevs
+[DONE] Fixed SpeedCams
+
+impound vehicles with storage
+impound array to cloud (add PVcloud event)
+prevent access gear of locked vehicle
+
+
+escape mod menu
+player arrays (E)
+
+
+external trunk
+
+ESU stats
+MySQLAdapter
+
+
+---
+Add Fosters Mission (convoy)
+CPR kit?
+---
+
+Replace Wheat with Cotton
+	- Add ability for hookers to speed process
+	- Using "whip" inventory item speeds hookers up 25%
+
+ingame settings
+Make a Twitter app
+Stock market lol?

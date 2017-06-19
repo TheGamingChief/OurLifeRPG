@@ -1,123 +1,120 @@
-class DD_PolicePC{
+class DD_PolicePC {
 	idd=-1;
 	onLoad = "";
 	onUnload = "DD_CurrentCiv = nil;";
 
-
-	class controls{
+	class controls {
 		class RscFrame_1800: RscBackground
-{
-	idc = 1800;
+		{
+			idc = 1800;
 
-	x = 0.304984 * safezoneW + safezoneX;
-	y = 0.232692 * safezoneH + safezoneY;
-	w = 0.383825 * safezoneW;
-	h = 0.500384 * safezoneH;
-};
-class RscFrame_1801: RscBackground
-{
-	idc = 1801;
+			x = 0.304984 * safezoneW + safezoneX;
+			y = 0.232692 * safezoneH + safezoneY;
+			w = 0.383825 * safezoneW;
+			h = 0.500384 * safezoneH;
+		};
+		class RscFrame_1801: RscBackground
+		{
+			idc = 1801;
 
-	x = 0.189588 * safezoneW + safezoneX;
-	y = 0.225 * safezoneH + safezoneY;
-	w = 0.10554 * safezoneW;
-	h = 0.09625 * safezoneH;
-};
-class RscListbox_1500: RscListBox
-{
-	idc = 1500;
+			x = 0.189588 * safezoneW + safezoneX;
+			y = 0.225 * safezoneH + safezoneY;
+			w = 0.10554 * safezoneW;
+			h = 0.09625 * safezoneH;
+		};
+		class RscListbox_1500: RscListBox
+		{
+			idc = 1500;
 
-	x = 0.304636 * safezoneW + safezoneX;
-	y = 0.231731 * safezoneH + safezoneY;
-	w = 0.38491 * safezoneW;
-	h = 0.500096 * safezoneH;
-};
-class RscCombo_2100: RscCombo
-{
-	idc = 2100;
+			x = 0.304636 * safezoneW + safezoneX;
+			y = 0.231731 * safezoneH + safezoneY;
+			w = 0.38491 * safezoneW;
+			h = 0.500096 * safezoneH;
+		};
+		class RscCombo_2100: RscCombo
+		{
+			idc = 2100;
 
-	x = 0.195797 * safezoneW + safezoneX;
-	y = 0.23875 * safezoneH + safezoneY;
-	w = 0.0931235 * safezoneW;
-	h = 0.0275 * safezoneH;
-};
-class RscFrame_1802: RscBackground
-{
-	idc = 1802;
+			x = 0.195797 * safezoneW + safezoneX;
+			y = 0.23875 * safezoneH + safezoneY;
+			w = 0.0931235 * safezoneW;
+			h = 0.0275 * safezoneH;
+		};
+		class RscFrame_1802: RscBackground
+		{
+			idc = 1802;
 
-	x = 0.189588 * safezoneW + safezoneX;
-	y = 0.34875 * safezoneH + safezoneY;
-	w = 0.10554 * safezoneW;
-	h = 0.383365 * safezoneH;
-};
-class RscButton_1600: RscButton
-{
-	idc = 1600;
-	action = "[lbCursel 1500] call DD_MDC_DeleteEntry;";
+			x = 0.189588 * safezoneW + safezoneX;
+			y = 0.34875 * safezoneH + safezoneY;
+			w = 0.10554 * safezoneW;
+			h = 0.383365 * safezoneH;
+		};
+		class RscButton_1600: RscButton
+		{
+			idc = 1600;
+			action = "[] call DD_MDC_WarrantMenu;";
 
-	text = "Delete Warrant";
-	x = 0.195797 * safezoneW + safezoneX;
-	y = 0.3625 * safezoneH + safezoneY;
-	w = 0.0931235 * safezoneW;
-	h = 0.04125 * safezoneH;
-};
-class RscButton_1601: RscButton
-{
-	idc = 1601;
-	action = "[DD_LastCiv, ""Remove All Warrants"", 0] call OL_player_WarrantRemove; 'if (iscop) then { player sideChat format[""(%1) %2 has removed all of (%3) %4's Warrants!"", player, name player, DD_LastCiv, name DD_LastCiv]' call OL_network_Swag }; closeDialog 0;";
+			text = "Remove Warrant";
+			x = 0.195797 * safezoneW + safezoneX;
+			y = 0.3625 * safezoneH + safezoneY;
+			w = 0.0931235 * safezoneW;
+			h = 0.04125 * safezoneH;
+		};
+		class RscButton_1601: RscButton
+		{
+			idc = 1601;
+			action = "[] call DD_mdc_RemoveAllWarrants;";
 
-	text = "Remove All Warrants";
-	x = 0.195797 * safezoneW + safezoneX;
-	y = 0.4175 * safezoneH + safezoneY;
-	w = 0.0931235 * safezoneW;
-	h = 0.04125 * safezoneH;
-};
-class RscButton_1602: RscButton
-{
-	idc = 1602;
-	action = "_l = createDialog ""DD_NotesPC""; buttonSetAction[1600, ""[(ctrlText 1400)] call DD_MDC_AddNote""];";
+			text = "Remove All Warrants";
+			x = 0.195797 * safezoneW + safezoneX;
+			y = 0.4175 * safezoneH + safezoneY;
+			w = 0.0931235 * safezoneW;
+			h = 0.04125 * safezoneH;
+		};
+		class RscButton_1602: RscButton
+		{
+			idc = 1602;
+			action = "_l = createDialog ""DD_NotesPC""; buttonSetAction[1600, ""[(ctrlText 1400)] call DD_MDC_AddNote""];";
 
-	text = "Create Note";
-	x = 0.195797 * safezoneW + safezoneX;
-	y = 0.4725 * safezoneH + safezoneY;
-	w = 0.0931235 * safezoneW;
-	h = 0.04125 * safezoneH;
-};
-class RscButton_1603: RscButton
-{
-	idc = 1603;
-	action = "[lbCursel 1500] call DD_MDC_LicenseMenu;";
+			text = "Create Note";
+			x = 0.195797 * safezoneW + safezoneX;
+			y = 0.4725 * safezoneH + safezoneY;
+			w = 0.0931235 * safezoneW;
+			h = 0.04125 * safezoneH;
+		};
+		class RscButton_1603: RscButton
+		{
+			idc = 1603;
+			action = "[] call DD_MDC_NoteMenu;";
 
-	text = "Revoke License";
-	x = 0.195797 * safezoneW + safezoneX;
-	y = 0.5275 * safezoneH + safezoneY;
-	w = 0.0931235 * safezoneW;
-	h = 0.04125 * safezoneH;
-};
-class RscButton_1604: RscButton
-{
-	idc = 1606;
-	action = "[lbCursel 2100] call DD_MDC_RunSearch";
+			text = "Remove Note";
+			x = 0.195797 * safezoneW + safezoneX;
+			y = 0.5275 * safezoneH + safezoneY;
+			w = 0.0931235 * safezoneW;
+			h = 0.04125 * safezoneH;
+		};
+		class RscButton_1604: RscButton
+		{
+			idc = 1606;
+			action = "[lbCursel 2100] call DD_MDC_RunSearch";
 
-	text = "Run Search";
-	x = 0.193149 * safezoneW + safezoneX;
-	y = 0.2875 * safezoneH + safezoneY;
-	w = 0.0983332 * safezoneW;
-	h = 0.0258654 * safezoneH;
-};
-class RscButton_164: RscButton
-{
-	idc = 164;
-	action = "[] call DD_MDC_NoteMenu;";
+			text = "Run Search";
+			x = 0.193149 * safezoneW + safezoneX;
+			y = 0.2875 * safezoneH + safezoneY;
+			w = 0.0983332 * safezoneW;
+			h = 0.0258654 * safezoneH;
+		};
+		class RscButton_164: RscButton
+		{
+			idc = 164;
+			action = "[lbCursel 1500] call DD_MDC_LicenseMenu;";
 
-	text = "Delete Note";
-	x = 0.195797 * safezoneW + safezoneX;
-	y = 0.5825 * safezoneH + safezoneY;
-	w = 0.0931235 * safezoneW;
-	h = 0.04125 * safezoneH;
-};
-
-
+			text = "Revoke License";
+			x = 0.195797 * safezoneW + safezoneX;
+			y = 0.5825 * safezoneH + safezoneY;
+			w = 0.0931235 * safezoneW;
+			h = 0.04125 * safezoneH;
+		};
 		/*class RscButton_1605: RscButton
 		{
 			idc = 1605;
@@ -136,7 +133,6 @@ class RscButton_164: RscButton
 			w = 0.0931235 * safezoneW;
 			h = 0.04125 * safezoneH;
 		};*/
-
 	};
 };
 
@@ -144,8 +140,6 @@ class RscButton_164: RscButton
 
 class DD_NotesPC{
 	idc	 = -1;
-
-
 	class controls{
 		class RscFrame_1800: RscBackground
 		{
@@ -185,7 +179,7 @@ class DD_NotesPC{
 	};
 };
 
-class DD_LicensePC{
+class DD_ListPC {
 	idd=-1;
 	class controls{
 	class RscFrame_1800: RscBackground
@@ -199,7 +193,7 @@ class DD_LicensePC{
 	class RscButton_1600: RscButton
 	{
 		idc = 1600;
-		text = "Revoke License";
+		text = "Remove Selected";
 		x = 0.437483 * safezoneW + safezoneX;
 		y = 0.639423 * safezoneH + safezoneY;
 		w = 0.117956 * safezoneW;

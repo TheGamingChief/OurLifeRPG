@@ -6,11 +6,11 @@ if (isnil "pm") then {
 if (pm == 0) then {
 	pm = 1;
 	hint "Player Markers ON";
-	       format['if(getplayeruid player in Developer_id) then {player sideChat "[Dev] Admin %1 has Toggled Tags ON"}',name player] call OL_network_Swag;
+	       format['if(getplayeruid player in OL_Developer) then {player sideChat "[Dev] Admin %1 has Toggled Tags ON"}',name player] call OL_network_Swag;
 } else {
 	pm = 0;
 	hint "Player Markers OFF";
-	format['if(getplayeruid player in Developer_id) then {player sideChat "[Dev] Admin %1 has Toggled Tags OFF"}',name player] call OL_network_Swag;
+	format['if(getplayeruid player in OL_Developer) then {player sideChat "[Dev] Admin %1 has Toggled Tags OFF"}',name player] call OL_network_Swag;
 };
 
 setGroupIconsVisible [true, true];

@@ -18,7 +18,7 @@ _ass = ["RH_m9sd","15Rnd_9x19_M9SD","RH_g17sd","RH_17Rnd_9x19_g17SD","RH_m1911sd
 //9
 _mgs = ["RH_mk22","RH_8Rnd_9x19_Mk","KPFS_MP2","KPFS_32Rnd_MP2","RH_muzi","RH_32rnd_9x19_Muzi","RH_uzi","RH_9mm_32RND_Mag","RH_tmpeot","30Rnd_9x19_MP5","RH_fmg9","RH_9mm_32RND_Mag","GPS","NVGoggles","CHRYSLER_B_limmo","tcg_taurus_security", "ilpd_ags_cvpi"];
 //10. Equiptment shop
-_es = ["Binocular","GPS","NVGoggles","hideout","fishingpole","A_nav","bunnyhop","caralarm","drill","TreeFixer"];
+_es = ["Binocular","GPS","NVGoggles","hideout","fishingpole","bunnyhop","caralarm","drill","TreeFixer"];
 //11. Car Upgrades
 _cu = ["supgrade1","supgrade2","caralarm"];
 //12. Car Shop
@@ -239,7 +239,7 @@ _asc = ["can_c130","airnz_C130","luf_c130","qantas_C130","A320MPA"];
 //34. Scuba Shop
 _sb = ["fishingpole","tcg_wrun","tcg_wave_red","tcg_wave_black","tcg_wave_red2","tcg_wave_sky","tcg_wave_red3"];
 //35. Boat Shop
-_bs = ["fishingpole","tcg_wrun","tcg_wave_red","tcg_wave_black","tcg_wave_red2","tcg_wave_sky","tcg_wave_red3","cl_trawler_fishing_boat","cl_sport_fishing_boat","Fishing_boat","cl_container_boat","cl_inflatable","PBX","Zodiac","Smallboat_1","Smallboat_2","lcu"];
+_bs = ["fishingpole","tcg_wrun","tcg_wave_red","tcg_wave_black","tcg_wave_red2","tcg_wave_sky","tcg_wave_red3","cl_trawler_fishing_boat","cl_sport_fishing_boat","Fishing_boat","cl_container_boat","cl_inflatable","PBX","Zodiac","Smallboat_1","Smallboat_2","lcu", "big_boat"];
 //36
 _bsp = ["fishingpole","GNT_C185F","GNT_C185E","PBX","Zodiac","tcg_wrun","tcg_wave_red","tcg_wave_black","tcg_wave_red2","tcg_wave_sky","tcg_wave_red3"];
 //37. Terror Boat Shop

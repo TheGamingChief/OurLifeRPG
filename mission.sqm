@@ -1179,7 +1179,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="mainbank";
-					init="this disableAI ""anim"";this disableAI ""move""; removeallweapons this;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+1];this allowdamage false;";
+					init="this disableAI ""anim"";this disableAI ""move""; removeallweapons this; this attachto [TheFuckingBank, [10.94,-6.9,1.29]]; this allowdamage false;";
 				};
 			};
 		};
@@ -1598,7 +1598,7 @@ class Mission
 					leader=1;
 					skill=0.61000001;
 					text="insure";
-					init="this disableAI ""anim"";this disableAI ""move""; removeallweapons this;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)+1];this allowdamage false;";
+					init="this disableAI ""anim"";this disableAI ""move""; removeallweapons this; this attachto [TheFuckingBank, [13.79,-6.9,1.29]]; this allowdamage false;";
 				};
 			};
 		};
@@ -2924,7 +2924,7 @@ class Mission
 					vehicle="Doctor";
 					leader=1;
 					skill=0.60000002;
-					init="this disableAI ""anim"";this disableAI ""move""; removeallweapons this;this allowdamage false; This attachto [pharmacy,[0,-1,-.67]];";
+					init="this disableAI ""anim""; this disableAI ""move""; removeallweapons this;this allowdamage false; This attachto [pharmacy,[0,-1,-0.67]];";
 				};
 			};
 		};
@@ -10326,6 +10326,7 @@ class Mission
 			side="EMPTY";
 			vehicle="il_bank";
 			skill=0.60000002;
+			text="TheFuckingBank";
 			init="this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];this allowdamage false;this setVectorUp [0,0,1];";
 		};
 		class Item448
@@ -38109,7 +38110,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="local player";
-			expActiv="diag_log 'lol';";
+			expActiv="";
 			class Effects
 			{
 			};

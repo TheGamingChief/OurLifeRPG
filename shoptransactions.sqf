@@ -173,7 +173,7 @@ if (_itemart == "item") then
 		{
 
 		_list = _fahne getvariable "druglist";
-		if(isnil "_list")then{_list = [[player, _menge, _cost/_menge]]}else{_list = _list + [[player, _menge, _cost/_menge]]};
+		if(isnil "_list")then{_list = [[player, _menge, _cost/_menge, _item call INV_getitemName]]}else{_list = _list + [[player, _menge, _cost/_menge, _item call INV_getitemName]]};
 		_fahne setvariable["druglist", _list, true];
 
 		};

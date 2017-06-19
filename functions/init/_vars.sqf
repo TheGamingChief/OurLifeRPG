@@ -9,3 +9,4 @@ playercount          = 100;
 loadNotFinsihed      = true;
 OL_InitComplete      = false;
 OL_StatsLoadedFromDB = false;
+pg_godmode           = false;

@@ -1,10 +1,8 @@
-
 _dog = player getVariable "CLAY_DogUnit";
 switch (_this select 0) do
 {
 	case 1:
 	{
-
 		player setVariable ["CLAY_DogStatus", "Boarding"];
 		_vehicle = _this select 1;
 
@@ -13,17 +11,20 @@ switch (_this select 0) do
 			_pos = [0,-2.5, 0];
 			_dir = 270;
 
-			if (_vehicle isKindOf "DD_FOR06CV_P_K9" || _vehicle isKindOf "DD_FOR06CV_P_SK9") then {
-				_pos = [0.07,-0.6,0.5];
+			if (_vehicle isKindOf "olrpg_pdk9cv_fpb") then {
+				_pos = [0.07,-0.7, 0.4];
 			};
-			if (_vehicle isKindOf "DD_DOD12Charger_P_P_K9" || _vehicle isKindOf "DD_DOD12Charger_P_SK9") then {
-				_pos = [0.07,-0.6,-0.9];
+			if (_vehicle isKindOf "olrpg_pdk9taurusfpb") then {
+				_pos = [0.1,-0.6, 0.35];
 			};
-			if (_vehicle isKindOf "DD_CHE08Tahoe_P_K9" || _vehicle isKindOf "DD_CHE08Tahoe_P_SK9") then {
-				_pos = [0.07,-0.7,0.9];
+			if (_vehicle isKindOf "olrpg_pdk9charger") then {
+				_pos = [0.1,-1, -0.2];
 			};
-			if (_vehicle isKindOf "DD_FOR13Taurus_P_K9") then {
-				_pos = [0,-0.7,-0.2];
+			if (_vehicle isKindOf "olrpg_pdk9suburban") then {
+				_pos = [0.1,-2.55, -0.65];
+			};
+			if (_vehicle isKindOf "olrpg_pdk9suburban_slick") then {
+				_pos = [0.1,-2.6, -0.55];
 			};
 
 			while {alive _dog && _dog distance _vehicle > 10 && player getVariable "CLAY_DogStatus" == "Boarding"} do
@@ -48,7 +49,7 @@ switch (_this select 0) do
 				(DOGCTRL_MENU select 10) set [6, "1"];
 			};
 		}
-		Else
+		else
 		{
 			Hint "Invalid Vehicle Type!";
 			_dog doMove getPos _dog;
@@ -74,3 +75,18 @@ switch (_this select 0) do
 		(DOGCTRL_MENU select 10) set [6, "0"];
 	};
 };
+
+/*
+	if (_vehicle isKindOf "DD_FOR06CV_P_K9" || _vehicle isKindOf "DD_FOR06CV_P_SK9") then {
+		_pos = [0.07,-0.6,0.5];
+	};
+	if (_vehicle isKindOf "DD_DOD12Charger_P_P_K9" || _vehicle isKindOf "DD_DOD12Charger_P_SK9") then {
+		_pos = [0.07,-0.6,-0.9];
+	};
+	if (_vehicle isKindOf "DD_CHE08Tahoe_P_K9" || _vehicle isKindOf "DD_CHE08Tahoe_P_SK9") then {
+		_pos = [0.07,-0.7,0.9];
+	};
+	if (_vehicle isKindOf "DD_FOR13Taurus_P_K9") then {
+		_pos = [0,-0.7,-0.2];
+	};
+*/

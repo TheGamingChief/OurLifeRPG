@@ -1,3 +1,15 @@
+
+/*Server_Impound = {
+	_vcl = _this select 0;
+
+	_var =  (getPlayerUID (_this select 0)) + "_Warrants";
+	_data = _this select 1;
+
+	[[_var, _data, "Impound"], "DD_cloud_Add", false, true] call OL_network_MP;
+
+}*/
+
+
 _vcl = _this select 0;
 _art = _this select 1;
 
