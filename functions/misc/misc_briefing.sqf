@@ -1,35 +1,62 @@
-/*
-Script made by : DaThrillerKiller for OurLifeRPG
-Version 1.0 (Stable)
-File: mapnav.sqf
-Description: Made to help new player find them selfs around the map.
-*/
+if (player diarySubjectExists "info") exitwith {};
 
-player groupChat "To use the ""Advanced Navigator"" look in the left hand corner of your map";
+player createDiarySubject ["info",						"Our Life RPG Info"];
+player createDiarySubject ["credits",					"Island Life Credits"];
+player createDiarySubject ["Map Navigation",	"Map Navigation"];
 
-_item   = _this select 1;
-[_item, -1] call INV_AddInvItem;
-player createDiarySubject ["Map Navigation","Map Navigation"];
+player createDiaryRecord ["credits", [
+	"Island Life Mission Credits",
+	"
+	<br/>
+	All ArmA life missions are derived from RP Mods Sahrani life<br/>
+	<br/>
+	Server configurations, technical work, and some mission updates by Dos Equis<br/>
+	Additional work and support contributed by The Our Life RPG Development<br/>
+	All addons on island life have been made by various artists and are on ArmAholic or other public download sites and FULL CREDIT GOES TO THEIR CREATORS<br/>
+	<br/>
+	Original Arma Life Missions created by EddieV223, Pogoman, Issetea, and Fewo from RP mods<br/>
+	"]
+];
 
-player createDiaryRecord ["Map Navigation",
-[
-"Locations",
-"
-<execute expression='call funcshowmarkers'>Show All</execute><br />
-<execute expression='call funchidemarkers'>Hide All</execute><br /><br />
-<execute expression='call funcatms'>ATMs</execute><br />
-<execute expression='call funccarshop'>Vechile Dealers</execute><br />
-<execute expression='call funcfishing'>Fishing Areas</execute><br />
-<execute expression='call funcgang'>Gang Areas</execute><br />
-<execute expression='call funcshops'>Shops</execute><br />
-<execute expression='call funcfields'>Fields and Resourse</execute><br />
-<execute expression='call funcgas'>Gas Stations and Pubs</execute><br />
-<execute expression='call funcgreenzone'>Green and Blue zones</execute><br />
-<execute expression='call funccoparea'>Cop Areas</execute><br />
-<execute expression='call funcspdcams'>Speed Cams</execute><br />
-<execute expression='call funcothers'>Others</execute><br />
-"
-]
+player createDiaryRecord ["info", [
+	"Our Life RPG",
+	"
+	<br/>
+	The Our Life RPG Community Website may be found at<br/>
+	WWW.OURLIFERPG.NET/<br/>
+	<br/>
+	<br/>
+	Registering gives you access to our discussion forums<br/>
+	WWW.OURLIFERPG.NET
+	<br/>
+	<br/>
+	Please report any bugs with the mission at<br/>
+	WWW.OURLIFERPG.NET
+	<br/>
+	<br/>
+	Join your fellow players on Teamspeak 3 at<br/>
+	Address ts.ourliferpg.net<br/>
+	"]
+];
+
+
+player createDiaryRecord ["Map Navigation", [
+	"Locations",
+	"
+	<execute expression='call funcshowmarkers'>Show All</execute><br />
+	<execute expression='call funchidemarkers'>Hide All</execute><br /><br />
+	<execute expression='call funcatms'>ATMs</execute><br />
+	<execute expression='call funccarshop'>Vechile Dealers</execute><br />
+	<execute expression='call funcfishing'>Fishing Areas</execute><br />
+	<execute expression='call funcgang'>Gang Areas</execute><br />
+	<execute expression='call funcshops'>Shops</execute><br />
+	<execute expression='call funcfields'>Fields and Resourse</execute><br />
+	<execute expression='call funcgas'>Gas Stations and Pubs</execute><br />
+	<execute expression='call funcgreenzone'>Green and Blue zones</execute><br />
+	<execute expression='call funccoparea'>Cop Areas</execute><br />
+	<execute expression='call funcspdcams'>Speed Cams</execute><br />
+	<execute expression='call funcothers'>Others</execute><br />
+	"]
 ];
 
 //-----------------------------------------------------------------------------Config Section---------------------------------------------------------------------------------------
@@ -57,7 +84,7 @@ gangmarkers = [
 
 //Shops
 shopmarkers = [
-"Farmer's Market","diamondshop","cheesbrugershop1_1","cheesbrugershop1_1_1","cheesbrugershop1_1_2","HOE","shoprob_1_1","Equipshop_1_1_1","Sell Weed","Sell Organs","station1_1_1_2_1","swag","station1_1_1_2_2_2_1","shoprob_1_2_2","mall-sign1","aMart-Icon1","Alcohol","MartCarPart","Bicycle Sho","drugmarker1"
+"Farmer's Market","diamondshop","cheesbrugershop1_1","cheesbrugershop1_1_1","cheesbrugershop1_1_2","HOE","shoprob_1_1","Equipshop_1_1_1","Sell Weed","Sell Organs","station1_1_1_2_1","swag","station1_1_1_2_2_2_1","shoprob_1_2_2","mall-sign1","aMart-Icon1","Alcohol","MartCarPart","Bicycle Sho","drugmarker1","sellwhalemarker","workplace1_1_2","EDonut","WDonut","towbase"
 ];
 
 //fields and resources
@@ -67,7 +94,7 @@ fieldmarkers = [
 
 //gas Stations and pubs
 gasmarkers = [
-"swag","pub","pub_1","pub_1_1","pub_2"
+"swag","pub","pub_1","pub_1_1","pub_2","station1_1"
 ];
 
 //Green & Blue zones
@@ -77,17 +104,17 @@ greenzonesmarkers = [
 
 //Cop Areas
 copareasmarkers = [
-"vicesq","rot_punkt_1","policebase_1","swat_2_1","swat_2_2","swat_1","srg_1","cgbase","savepointMarker2","policebase_1_1_1","swat_1_1","Shooting Range"
+"vicesq","policebase_1","swat_2_1","swat_2_2","swat_1","srg_1","cgbase","savepointMarker2","policebase_1_1_1","swat_1_1","Shooting Range"
 ];
 
 //Speed Cams
 spdcammarkers = [
-"scm2","scm5","scm4","scm3","scm1","scm1_1"
+"scm2","scm5","scm4","scm3","scm1","scm1_1","scm5_1","scm5_1_1"
 ];
 
 //Others
 othermarkers = [
-"Delivery1","resourcesellmarker","shoprob_1_2_1","sky_1","terror area","impoundlot","4wyr6buey76ycf4tc34tscfwr43r3634","savepointMarker","savepointMarker3","savepointMarker3_1","CICADA PRISON","prisonspawn","swagspawn_1","savepointMarker_1_1","savepointMarker_1_1_1","savepointMarker_1_1_1_1","swafafas","civ spawn1_3_1"
+"Delivery1","resourcesellmarker","shoprob_1_2_1","sky_1","terror area","impoundlot","4wyr6buey76ycf4tc34tscfwr43r3634","savepointMarker","savepointMarker3","savepointMarker3_1","CICADA PRISON","prisonspawn","swagspawn_1","savepointMarker_1_1","savepointMarker_1_1_1","savepointMarker_1_1_1_1","swafafas","civ spawn1_3_1","swagagfaed"
 ];
 
 //All marker on the map
