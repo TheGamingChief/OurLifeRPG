@@ -1893,7 +1893,7 @@ INV_AlleItemsArray = [
 //["checkpointbuild",["Item", "misc"],["checkpointbuild", "RoadBlock Builder"], [0, 0], [10, "", ""],[true,true,true, false, "Scripts\RBuilder\RLRPG_RB_Actions.sqf"], "RoadBlock Builder","RoadBlock Builder", [["steel", 1],["ebauteile", 1],["plastic", 1],["plastic", 10]]],
 
 //Created by Ninja and Abe
-//RLRPG Clothing Shop
+//OLRPG Clothing Shop
 ["Functionary1",["Item", "misc"],["Functionary1", "Black Suit"], [21000, 4200], [5, "RLRPG_Clothing_license", "RLRPG_Clothing_license"],[true,true,true, false, "rlrpgclothing.sqf"], "RLRPG Clothing Shop",localize "STRS_inv_item_Brownsuit_info", [["steel", 1],["ebauteile", 1],["plastic", 1],["plastic", 10]]],
 ["Functionary2",["Item", "misc"],["Functionary2", "Brown Suit"], [21000, 4200], [5, "RLRPG_Clothing_license", "RLRPG_Clothing_license"],[true,true,true, false, "rlrpgclothing.sqf"], "RLRPG Clothing Shop",localize "STRS_inv_item_Blacksuit_info", [["steel", 1],["ebauteile", 1],["plastic", 1],["plastic", 10]]],
 ["Worker2",["Item", "misc"],["Worker2", "Worker Green Vest"], [21000, 4200], [5, "RLRPG_Clothing_license", "RLRPG_Clothing_license"],[true,true,true, false, "rlrpgclothing.sqf"], "RLRPG Clothing Shop",localize "STRS_inv_item_GreenVest_info", [["steel", 1],["ebauteile", 1],["plastic", 1],["plastic", 10]]],
@@ -2009,6 +2009,7 @@ INV_AlleItemsArray = [
 ["DODGE_VIPER_SRT10",["Fahrzeug", "car"],["DODGE_VIPER_SRT10", "Dodge Viper SRT10"],[50000, 50000], [1, "Donator_license2", "Donator_license2", 250], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]]],
 ["CORVETTE_Z06",["Fahrzeug", "car"],["CORVETTE_Z06", "Racing Corvette"],[50000, 50000], [1, "Donator_license2", "Donator_license2", 250], [150, [1,0,0,3]], "Skoda" call OL_ISSE_Cfg_Vehicle_GetName, "Skoda" call OL_ISSE_Cfg_Vehicle_GetDesc, [["steel", 4],["glass", 1],["plastic", 1],["plastic", 4]]],
 
+["donateFAL",["Waffe", "rifle"],["FN_FAL", "FAL"],[120000, 120000], [2, "Donator_license3", "Donator_license3"],[], "Makarov" call ISSE_Cfg_Weapons_GetName,"Makarov" call ISSE_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]]],
 ["donateRH_mk22vsd",["Waffe", "pistol"],["RH_mk22vsd", "MK22 SD"],[5000, 1500], [1, "Donator_license3", "Donator_license3"],[], "Makarov" call OL_isse_Cfg_Weapons_GetName,"Makarov" call OL_isse_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]]],
 ["donateRH_uspsd",["Waffe", "pistol"],["RH_uspsd", "USP SD"],[5000, 1500], [1, "Donator_license3", "Donator_license3"],[], "Makarov" call OL_isse_Cfg_Weapons_GetName,"Makarov" call OL_isse_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]]],
 ["donateRH_m1911sd",["Waffe", "pistol"],["RH_m1911sd", "Kimber M1911 SD"],[5000, 1500], [1, "Donator_license3", "Donator_license3"],[], "Makarov" call OL_isse_Cfg_Weapons_GetName,"Makarov" call OL_isse_Cfg_Weapons_GetDesc,[["steel", 5], ["copper", 1],["plastic", 1]]],
