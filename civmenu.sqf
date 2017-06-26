@@ -147,6 +147,7 @@ if ((_loopart == "arrest") and (player distance prisonflag <= 70))  then {
 	local_arrest    = 1;
 	INV_hunger      = 0;
 	["tf_unable_to_use_radio", true, 5, [true, true]] call CP_fnc_VarQueueAdd;
+	[player, "Remove All Warrants", 0] call OL_player_WarrantRemove;
 	CivTimeInPrison = (_this select 1);
 	player groupChat format [localize "STRS_civmenucheck_arrested_self", (CivTimeInPrison call OL_ISSE_str_IntToStr)];
 	player setdamage 0;

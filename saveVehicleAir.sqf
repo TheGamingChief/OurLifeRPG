@@ -7,7 +7,7 @@ player groupChat "YOU CANNOT SAVE MORE THEN 3 AIR VEHICLES";
 
 } else {
 
-_vcl = (nearestobjects [getpos player, ["Air"], 3] select 0);
+_vcl = (nearestobjects [getpos player, ["Air"], 7] select 0);
 
 _vclClass = typeOf _vcl;
 
