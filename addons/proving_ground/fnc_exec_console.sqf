@@ -95,7 +95,7 @@ switch (_mode) do {
 			GET_CTRL(balca_debug_console_history_IDC) lbAdd str _command;
 			GET_CTRL(balca_debug_console_history_IDC) lbSetData [(lbSize GET_CTRL(balca_debug_console_history_IDC))-1,_command];
 		};
-		format['server globalChat "(ADMIN/DEV)%1 Has Just Executed On Server: %2";', name player, _command] call OL_network_Swag;
+		//format['server globalChat "(ADMIN/DEV)%1 Has Just Executed On Server: %2";', name player, _command] call OL_network_Swag;
 		player setVariable ['PG_result',[]];
 		player setVehicleInit ("if isServer then {this setVariable [""PG_result"",[call {"+_command+"}],true]}");
 		processInitCommands;
