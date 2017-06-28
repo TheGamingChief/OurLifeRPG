@@ -3,7 +3,7 @@ _geld = 'geld' call INV_GetItemAmount;
 
 if (_art == "holen") exitWith  {
 	if (localhuren >= maxhuren) exitWith {role groupChat localize "STRS_huren_zuviele"};
-	if (_geld <= huren_cost) exitWith {role groupChat localize "STRS_huren_nomoney"};
+	if (_geld < huren_cost) exitWith {role groupChat localize "STRS_huren_nomoney"};
 	if (slavescriptrunning == 1) exitwith {player groupchat "script already running"};
 	slavescriptrunning = 1;
 	['geld', -(huren_cost)] call INV_AddInvItem;
@@ -54,7 +54,7 @@ if (_art == "holen") exitWith  {
 				if (_arbeitergeld > 0) then {
 					['geld', _arbeitergeld] call INV_AddInvItem;
 					call compile format ["arbeitergeld%1 = 0;", _arbeiternummer];
-					player groupchat format [localize "STRS_huren_geldabnahme_ja", (_arbeitergeld call ISSE_str_IntToStr)];
+					player groupchat format [localize "STRS_huren_geldabnahme_ja", (_arbeitergeld call OL_ISSE_str_IntToStr)];
 				};
 			};
 

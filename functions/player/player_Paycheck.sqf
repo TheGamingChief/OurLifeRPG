@@ -63,6 +63,7 @@ if (playerSide == west) exitWith {
   	};
   };
 
+  if (getPlayerUID player in Corrections_id) then { _income = _income + 10000  };
   if (getPlayerUID player in Donate_id)     then { _income = _income + 1500  };
   if (getPlayerUID player in OL_TierX_ID)   then { _income = _income + 3000  };
   if (getPlayerUID player in TopDonator_id) then { _income = _income + 5000  };

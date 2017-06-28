@@ -22,6 +22,18 @@
 [DONE] Made drug search give warrant / Notes
 [DONE] Fixed issue with SwagDevs
 [DONE] Fixed SpeedCams
+---------------------------------------------------
+[Done] Fix warrants not being removed when arrested.
+[Done] Increase Air Vehicle saving action so you don't need to crawl
+[Done] Remove exec on server displaying code in global chat to all players
+----------------------------------------
+[Done] Fix This hooker has earned you $ANY
+[Done] Fix Error Undefined variable in expression: isse_str_inttostr File mpmissions\__CUR_MP.cmr_cicada\worker.sqf
+[Done] Fix hookers requiring $40001 to buy a hooker instead of $40000
+[Done] Send person getting comp a message telling them they been comped
+[Done] Define INV_SavedVehAir, Can't save air vehicle if this is not defined
+[Done] Set Rob_Log to only log when 100k+ has been robbed.
+[Done] Add all of Foster's changes (more info can be found in the commit message.
 
 impound vehicles with storage
 impound array to cloud (add PVcloud event)

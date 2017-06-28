@@ -367,7 +367,7 @@ _coppo3 =
 "olrpg_pdcv_slick_npb", //"DD_CHE10Impala_P_P",
 "olrpg_pdtaurusfpb", //"DD_FOR13Taurus_P_P",
 "olrpg_pdcharger", //"DD_DOD12Charger_P_P",
-"supgrade3_pd"
+"supgrade3_noLic"
 ];
 
 //60
@@ -387,8 +387,8 @@ _copcpl =
 "olrpg_pdcv_slick_pb", //"DD_FOR13Taurus_P_P",
 "olrpg_pdtaurus_slick", //"DD_DOD12Charger_P_P",
 "olrpg_pdcharger_slick", //"DD_CHE08Tahoe_P_P",
-"supgrade3_pd",
-"supgrade4_pd"
+"supgrade3_noLic",
+"supgrade4_noLic"
 ];
 
 //61
@@ -410,8 +410,8 @@ _copsgt =
 "olrpg_pdtaurus_slick", //"DD_DOD12Charger_P_P",
 "olrpg_pdcharger_slick", //"DD_CHE08Tahoe_P_P",
 "olrpg_pdsuptahoe", //"DD_CHE15Suburban_P_P",
-"supgrade3_pd",
-"supgrade4_pd"
+"supgrade3_noLic",
+"supgrade4_noLic"
 ];
 
 //62
@@ -427,17 +427,11 @@ _copdeputy =
 "RH_acrbeotech_sheriff",
 "30Rnd_556x45_Stanag",
 "olrpg_sdcv_pb",
-"olrpg_sdcv_fpb",
-"olrpg_sdcv_slick_npb",
-"olrpg_sdcv_slick_pb",
-"olrpg_sdcv_slick_fpb",
 "olrpg_sdcharger", //"DD_FOR06CV_P_S",
-"olrpg_sdcharger_slick", //"DD_CHE10Impala_P_P_S",
 "tcg_taurus_shpb", //"DD_FOR13Taurus_P_S",
-"olrpg_sdtaurus_slick", //"DD_DOD12Charger_P_S",
 "supgrade1",
 "supgrade2",
-"supgrade3_pd"
+"supgrade3_noLic"
 ];
 
 //62
@@ -473,8 +467,8 @@ _copsgtdeputy =
 "olrpg_sdtahoe", //"DD_FOR13Taurus_P_S",
 "olrpg_sdsub6", //"DD_DOD12Charger_P_S",
 "olrpg_sdf350", //"DD_CHE15Suburban_P_P_K9",
-"supgrade3_pd",
-"supgrade4_pd"
+"supgrade3_noLic",
+"supgrade4_noLic"
 ];
 
 //63
@@ -504,9 +498,10 @@ _copsheriff =
 "olrpg_uctahoe_maroon", //"DD_CHE15Suburban_P_P",
 "olrpg_uctahoe_grey", //"DD_CHE15Suburban_U_P_DarkRed",
 "olrpg_uctahoe_dblue", //"DD_CHE15Suburban_U_P_DarkBlue",
-"supgrade3_pd",
-"supgrade4_pd",
-"supgrade5_pd",
+"olrpg_pdtaurus_um", //"DD_FOR13Taurus_U_Red",
+"supgrade3_noLic",
+"supgrade4_noLic",
+"supgrade5_noLic",
 "Bait_Kit"
 ];
 
@@ -534,9 +529,9 @@ _coplt =
 "olrpg_uctahoe_maroon", //"DD_CHE15Suburban_P_P",
 "olrpg_uctahoe_grey", //"DD_CHE15Suburban_U_P_DarkRed",
 "olrpg_uctahoe_dblue", //"DD_CHE15Suburban_U_P_DarkBlue",
-"supgrade3_pd",
-"supgrade4_pd",
-"supgrade5_pd",
+"supgrade3_noLic",
+"supgrade4_noLic",
+"supgrade5_noLic",
 "Bait_Kit"
 ];
 
@@ -568,9 +563,9 @@ _copcpt =
 "olrpg_uctahoe_grey", //"DD_FOR13Taurus_U_Black",
 "olrpg_uctahoe_dblue", //"DD_FOR13Taurus_U_DarkBlue",
 "olrpg_pdtaurus_um", //"DD_FOR13Taurus_U_Red",
-"supgrade3_pd",
-"supgrade4_pd",
-"supgrade5_pd",
+"supgrade3_noLic",
+"supgrade4_noLic",
+"supgrade5_noLic",
 "Bait_Kit"
 ];
 
@@ -602,9 +597,9 @@ _copchief =
 "olrpg_uctahoe_dblue", //"DD_DOD16Challenger_P_P",
 "olrpg_pdtaurus_um", //"DD_DOD16Challenger_P_Blue",
 "olrpg_pdcharger_um", //"DD_DOD16Challenger_P_Red",
-"supgrade3_pd",
-"supgrade4_pd",
-"supgrade5_pd",
+"supgrade3_noLic",
+"supgrade4_noLic",
+"supgrade5_noLic",
 "Bait_Kit"
 ];
 
@@ -617,16 +612,17 @@ _copmedal =
 "RH_m4meotech_cmd",
 "RH_m4macog_cmd",
 "30Rnd_556x45_Stanag",
-/*"DD_FOR06CV_P_P",
-"DD_CHE10Impala_P_P",
-"DD_FOR13Taurus_P_P",
-"DD_DOD12Charger_P_P",
-"DD_DOD15Charger_P_P",
-"DD_CHE08Tahoe_P_P",
-"DD_CHE15Suburban_P_P",*/
-"supgrade3_pd",
-"supgrade4_pd",
-"supgrade5_pd"
+"olrpg_pdlttahoe", //"DD_FOR13Taurus_P_P",
+"olrpg_umcv_dblue", //"DD_DOD12Charger_P_P",
+"olrpg_umcv_maroon", //"DD_DOD15Charger_P_P",
+"olrpg_umcv_grey", //"DD_CHE08Tahoe_P_P",
+"olrpg_uctahoe_maroon", //"DD_CHE15Suburban_P_P",
+"olrpg_uctahoe_grey", //"DD_CHE15Suburban_U_P_DarkRed",
+"olrpg_uctahoe_dblue", //"DD_CHE15Suburban_U_P_DarkBlue",
+"m5_pd_traffic",
+"supgrade3_noLic",
+"supgrade4_noLic",
+"supgrade5_noLic"
 ];
 
 //68
@@ -636,7 +632,7 @@ _copk9p =
 "x26_Mag",
 "RH_m1911old_k9",
 "RH_8Rnd_45cal_m1911",
-"LEXX_SCAR_L_CQC_BLACK_k9",
+"RH_Mk18_k9",
 "30Rnd_556x45_Stanag",
 "olrpg_pdk9cv_fpb" //"DD_FOR06CV_P_K9"
 ];
@@ -648,8 +644,9 @@ _copk9 =
 "x26_Mag",
 "RH_m1911old_k9",
 "RH_8Rnd_45cal_m1911",
-"LEXX_SCAR_L_CQC_BLACK_k9",
-"LEXX_SCAR_L_CQC_Holo_BLACK_k9",
+"RH_Mk18_k9",
+"RH_Mk18eot_k9",
+"RH_Mk18aim_k9",
 "30Rnd_556x45_Stanag",
 "olrpg_pdk9cv_fpb", //"DD_FOR06CV_P_K9",
 "olrpg_pdk9taurusfpb", //"DD_FOR13Taurus_P_K9",
@@ -663,9 +660,9 @@ _copk9c =
 "x26_Mag",
 "RH_m1911old_k9",
 "RH_8Rnd_45cal_m1911",
-"LEXX_SCAR_L_CQC_BLACK_k9",
-"LEXX_SCAR_L_CQC_Holo_BLACK_k9",
-"LEXX_SCAR_L_STD_Mk4CQT_BLACK_k9",
+"RH_Mk18eot_k9",
+"RH_Mk18aim_k9",
+"RH_Mk18acog_k9",
 "30Rnd_556x45_Stanag",
 "RH_m21_k9",
 "20Rnd_762x51_DMR",
@@ -738,7 +735,9 @@ _copswat1 =
 "x26_Mag",
 "M1014_pd",
 "8Rnd_B_Beneli_Pellets",
-"RH_Mk18gl_swat",
+"RH_M4a1_swat",
+"RH_M4a1gl_swat",
+"6Rnd_Smoke_M203",
 "1Rnd_Smoke_M203_swat",
 "30Rnd_556x45_Stanag_swat"
 ];
@@ -754,9 +753,10 @@ _copswat2 =
 "x26_Mag",
 "RH_usp_swat",
 "RH_15Rnd_9x19_usp_swat",
-"RH_Mk18gl_swat",
-"RH_Mk18gleot_swat",
-"RH_Mk18glaim_swat",
+"RH_M4a1eotech_swat",
+"RH_M4a1gleotech_swat",
+"RH_M4a1aim_swat",
+"RH_M4a1glaim_swat",
 "30Rnd_556x45_Stanag_swat",
 "1Rnd_Smoke_M203_swat",
 "LEXX_M32_EP1_BLACK_swat",
@@ -776,9 +776,12 @@ _copswat3 =
 "x26_Mag",
 "RH_usp_swat",
 "RH_15Rnd_9x19_usp_swat",
-"RH_Mk18glacog_swat",
-"RH_mk18sdeot_swat",
-"RH_mk18sdaim_swat",
+"RH_M4sdeotech_swat",
+"RH_M4sdgleotech_swat",
+"RH_M4sdaim_swat",
+"RH_M4sdglaim_swat",
+"RH_M4a1acog_swat",
+"RH_M4a1glacog_swat",
 "30Rnd_556x45_Stanag_swat",
 "30Rnd_556x45_StanagSD_swat",
 "1Rnd_Smoke_M203_swat",
@@ -795,7 +798,7 @@ _copswat4 =
 "x26_Mag",
 "RH_uspsd_swat",
 "RH_15Rnd_9x19_uspsd_swat",
-"RH_mk18dcsdaim_swat",
+"RH_M4sdaim_wdl_swat",
 "30Rnd_556x45_StanagSD_swat",
 "DMR_swat",
 "RH_mk14ebrsp_sd_swat",
@@ -816,9 +819,8 @@ _copswat5 =
 "x26_Mag",
 "RH_usp_swat",
 "RH_15Rnd_9x19_usp_swat",
-"RH_mk18sdeot_swat",
-"RH_mk18sdaim_swat",
-"RH_mk18sdacog_swat",
+"RH_M4sdacog_swat",
+"RH_M4sdglacog_swat",
 "30Rnd_556x45_StanagSD_swat",
 "LEXX_M32_EP1_BLACK_swat",
 "6Rnd_Smoke_M203",
@@ -903,15 +905,33 @@ _copcoastguardair =
 //73.5
 _copfto =
 [
-"rh_m16a1_fto",
-"RH_hk417saim",
-"rh_hk417seotech",
+"RH_M4eotech_FTO",
+"RH_M4aim_FTO",
 "30Rnd_556x45_Stanag",
-"RH_20Rnd_762x51_hk417",
-//"DD_FOR06CV_P_P",
-"olrpg_snrftotahoe", //"DD_CHE10Impala_P_P",
-"olrpg_pdftocharger", //"DD_DOD12Charger_P_P",
-"olrpg_pdcv_slick_fpb_fto" //"DD_CHE08Tahoe_P_P"
+"olrpg_pdcv_slick_npb",
+"olrpg_pdtaurus_slick"
+];
+
+_copftos =
+[
+"RH_M4eotech_FTO",
+"RH_M4aim_FTO",
+"RH_M4acog_FTO",
+"30Rnd_556x45_Stanag",
+"olrpg_pdcv_slick_npb",
+"olrpg_pdtaurus_slick",
+"olrpg_pdtahoe_slick"
+];
+
+_copftoc =
+[
+"RH_M4eotech_FTO",
+"RH_M4aim_FTO",
+"RH_M4acog_FTO",
+"30Rnd_556x45_Stanag",
+"olrpg_pdcv_slick_npb",
+"olrpg_pdtaurus_slick",
+"olrpg_pdtahoe_slick"
 ];
 
 //74
@@ -961,9 +981,9 @@ _undercover =
 "Binocular",
 "NVGoggles",
 "GPS",
-"supgrade3_pd",
-"supgrade4_pd",
-"supgrade5_pd",
+"supgrade3_noLic",
+"supgrade4_noLic",
+"supgrade5_noLic",
 "Bait_Kit"
 ];
 
@@ -1191,6 +1211,9 @@ _PMC =
 "RepairKitsBreaksShops",
 "medikit",
 "bjerk",
+"supgrade1",
+"supgrade2",
+"supgrade3",
 "M24_PMC",
 "5Rnd_762x51_M24",
 "RH_m4aim_PMC",
@@ -1200,7 +1223,10 @@ _PMC =
 "15Rnd_9x19_p99",
 "RH_usp_pmc",
 "RH_15Rnd_9x19_usp",
-"HMMWV_DES_EP1"
+"olrpg_pmccharger",
+"olrpg_pmctahoe",
+"olrpg_pmcsub6",
+"olrpg_pmcsub12"
 ];
 
 _CommandPMC =
@@ -1209,6 +1235,9 @@ _CommandPMC =
 "RepairKitsBreaksShops",
 "medikit",
 "bjerk",
+"supgrade1",
+"supgrade2",
+"supgrade3",
 "M24_PMC",
 "5Rnd_762x51_M24",
 "M16A4pmc",
@@ -1221,7 +1250,10 @@ _CommandPMC =
 "15Rnd_9x19_p99",
 "RH_usp_pmc",
 "RH_15Rnd_9x19_usp",
-"HMMWV_DES_EP1"
+"olrpg_pmccharger",
+"olrpg_pmctahoe",
+"olrpg_pmcsub6",
+"olrpg_pmcsub12"
 ];
 
 _PMCAIR =
@@ -1639,6 +1671,7 @@ INV_ItemShops = [
 	[copbasic4,									"Basic Police Gear",									copbasic4,					ccarspawn, 				_copbasic,					_copbasic,					true,  "[getPlayerUID player]"],
 	[copbasic6,									"Basic Police Gear",									copbasic6,					ccarspawn1, 			_copbasic,					_copbasic,					true,  "[getPlayerUID player]"],
 	[copswate,									"Basic Police Gear",									copswate,						dummyobj, 				_copbasic,					_copbasic,					true,  "[getPlayerUID player]"],
+	[copbasicfto,								"Basic Police Gear",									copbasicfto,				dummyobj, 				_copbasic,					_copbasic,					true,  "[getPlayerUID player]"],
 	[copuntrained,							"Untrained Patrol Officer Equipment",	copuntrained,				ccarspawn,				_copuntrained,			_copuntrained,			true,  "[getPlayerUID player]"],
 	[coppo1,										"Rookie Patrol Officer Equipment",		coppo1,							ccarspawn,				_coppo1,						_coppo1,						true,  "PO1_id"],
 	[coppo2,										"Patrol Officer Equipment",						coppo2,							ccarspawn,				_coppo2,						_coppo2,						true,  "PO2_id"],
@@ -1649,10 +1682,10 @@ INV_ItemShops = [
 	[copsgtdeputy,							"Sheriff Sgt Deputy Equipment",				copsgtdeputy,				ccarspawn1,				_copsgtdeputy,			_copsgtdeputy,			true,  "SgtDeputy_id"],
 	[copsheriffdnr,							"Sheriff D.N.R",											copsheriffdnr,			ccarspawn1,				_copsheriffdnr,			_copsheriffdnr,			true,  "Deputy_id"],
 	[copsheriffmks,							"Sheriff Marksman",										copsheriffmks,			dummyobj,					_copsheriffmks,			_copsheriffmks,			true,  "Deputy_id"],
-	[copsheriff,								"Sheriff Equipment",									copsheriff,					ccarspawn1,				_copsheriff,				_copsgt,						true,  "Deputy_id"],
+	[copsheriff,								"Sheriff Command Equipment",					copsheriff,					ccarspawn1,				_copsheriff,				_copsgt,						true,  "Sheriff_id"],
 	[coplt,											"Lieutenant Equipment",								coplt,							ccarspawnlt,			_coplt,							_coplt,							true,  "Lt_id"],
 	[copcpt,										"Captain Equipment",									copcpt,							ccarspawncpt,			_copcpt,						_copcpt,						true,  "Cpt_id"],
-	[copmedalbox,								"Medal Recipients Equipment",					copmedalbox,				ccarspawnchief,		_copmedal,					_copmedal,					true,  "Medal_id"],
+	[copmedalbox,								"Medal Recipients Equipment",					copmedalbox,				ccarspawnchief,		_copmedal,					_copmedal,					true,  "Corrections_id"],
 	[copchief,									"Chief of Police Equipment",					copchief,						ccarspawnchief,		_copchief,					_copchief,					true,  "Chief_id"],
 	[copk9,											"K-9 Officer",												copk9,							ck9spawn,					_copk9,							_copk9,							true,  "K9_id"],
 	[copk9p,										"K-9 Probation",											copk9p,							ck9spawn,					_copk9p,						_copk9p,						true,  "K9_id"],
@@ -1672,7 +1705,9 @@ INV_ItemShops = [
 	[cidbox,										"CID Equipment",											cidbox,							cidcarspawn,			_cid,								_cid,								true,  "Undercover_id"],
 	[copcoastguard,							"Sheriff Marine Water Craft",					dummyobj,						cgboatspawn,			_copcoastguard,			_copcoastguard,			true,  "Coastguard_id"],
 	[copcoastguardair,					"Sheriff Marine Aviation",						dummyobj,						jailpadcg,				_copcoastguardair,	_copcoastguardair,	true,  "Coastguard_id"],
-	[ftobox,										"F.T.O Equipment",										ftobox,							ftocarspawn,			_copfto,						_copfto,						true,  "FTO_id"],
+	[ftobox,										"F.T.O.",															ftobox,							ftocarspawn,			_copfto,						_copfto,						true,  "FTO_id"],
+	[ftoboxs,										"F.T.O. Supervisor",									ftoboxs,							ftocarspawn,		_copftos,						_copftos,						true,  "FTO_id"],
+	[ftoboxc,										"F.T.O. Command",											ftoboxc,							ftocarspawn,		_copftoc,						_copftoc,						true,  "FTO_id"],
 	[copVIPBox,									"Cop Donator Equipment",							copVIPBox,					ccarspawn,				_copvip,						_copvip,						true,  "Donate_id"],
 	[copVIPBox2,								"Cop Donator Equipment",							copVIPBox2,					ccarspawn1,				_copvip,						_copvip,						true,  "Donate_id"],
 	[copVIPBox3,								"Cop Donator Equipment",							copVIPBox3,					ccarspawn2,				_copvip,						_copvip,						true,  "Donate_id"],
