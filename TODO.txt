@@ -22,6 +22,7 @@
 [DONE] Made drug search give warrant / Notes
 [DONE] Fixed issue with SwagDevs
 [DONE] Fixed SpeedCams
+[DONE] player arrays (E)
 ---------------------------------------------------
 [Done] Fix warrants not being removed when arrested.
 [Done] Increase Air Vehicle saving action so you don't need to crawl
@@ -38,28 +39,18 @@
 impound vehicles with storage
 impound array to cloud (add PVcloud event)
 prevent access gear of locked vehicle
-Remove Aids
-
+external trunk
 
 escape mod menu
-player arrays (E)
-
-
-external trunk
 
 ESU stats
 MySQLAdapter
-
-
----
-Add Fosters Mission (convoy)
 CPR kit?
----
 
 Replace Wheat with Cotton
 	- Add ability for hookers to speed process
 	- Using "whip" inventory item speeds hookers up 25%
 
-ingame settings
+add some ingame settings
 Make a Twitter app
 Stock market lol?
