@@ -65,18 +65,18 @@ pickingup   			      = false;
 lockpickchance			    = 20;
 lockpicking				      = false;
 planting				        = false;
-drugstockinc			      = 900;
-druguserate				      = 120;
 cmissionactive			    = false;
 cmissionactive1			    = false;
 cmissionactive2			    = false;
 TimerActive 			      = false;
 //========Yup======
 chopavailable 			 = true;
+FTOavailable         = true;
 IsSpinningSlots			 = false;
 slots1available 		 = true;
 slots2available 		 = true;
 slots3available 		 = true;
+treeavailable 		   = true;
 robcasinoavailable	 = true;
 Brycesavailable 		 = true;
 casinoavailable 		 = true;
@@ -120,21 +120,6 @@ pmissionactive1 = false;
 patrolwaittime1 = false;
 patrolmoneyperkm1 = 5.0;  // 1 would be equal to $3,000 for 1KM
 pitavailable = true;
-//=========government convoy=============
-govconvoybonus 		 = 45000;
-govconvoythiefbonus	 = 45000;
-convoyrespawntime        = 60;  //reset to 30 after testing
-marketrespawntime	 = 60;
-moneyintruck 		 = true; //dont change
-//===== Gas station robbing
-maxstationmoney = 25000;
-wantedamountforrobbing = 20000;
-if(debug)then{drugstockinc = 6;druguserate = 20};
-
-
-//===== Chop Shop
-wantedamountforstriping = 20000;
-
 //==============================PETROL/OIL=========================================
 petroluse                = 3;
 maxpetroluse             = 400;

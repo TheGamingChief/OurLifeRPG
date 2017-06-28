@@ -170,8 +170,8 @@ while {true} do
 
 		{
 
-		kontostand = kontostand + 100000;
-		player groupchat "Well done. Target elimated. $100000 has been transfered to your account.";
+		kontostand = kontostand + 150000;
+		player groupchat "Well done. Target elimated. $150000 has been transfered to your account.";
 		sleep 10;
 		"server globalchat ""The VIP target has been killed!"";" call OL_network_Swag;
 		[player, "Assassinated VIP"] call OL_player_WarrantAdd;
@@ -191,7 +191,7 @@ while {true} do
 		"
 		server globalchat ""The VIP target has been rescued!"";
 		_copplayernumber = playersNumber west;
-		_copbonus = 40000;
+		_copbonus = 100000;
 		if (iscop) then {Kontostand = (Kontostand + _copbonus); player sidechat format[""you received $%1 for the successful rescue of the VIP"", _copbonus];};
 		" call OL_network_Swag;
 		sleep 2;

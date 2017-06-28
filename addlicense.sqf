@@ -24,7 +24,7 @@ if ((_art == "remove") or (_art == "add")) then {
 		if (_license == "SgtDeputy_license" and !(_uid in SgtDeputy_id)) exitWith { player groupChat "Restricted to Sheriff's Sergeant Deputies"};
 		if (_license == "SgtDeputy_license" and !(_uid in Sheriff_id)) exitWith { player groupChat "Restricted to Sheriff's Sergeant Deputies"};
 		if (_license == "Sheriff_license" and !(_uid in Sheriff_id)) exitWith { player groupChat "Restricted to the Sheriff"};
-		if (_license == "Medal_Winner" and !(_uid in Chief_id)) exitWith { player groupChat "Restricted to Medal Recipients"};
+		if (_license == "Medal_Winner" and !(_uid in Corrections_id)) exitWith { player groupChat "Restricted to Medal Recipients"};
 		if (_license == "Chief_license" and !(_uid in Chief_id)) exitWith { player groupChat "Restricted to the Chief of Police"};
 		if (_license == "Captain_license" and !(_uid in Cpt_id)) exitWith { player groupChat "Restricted to Captains"};
 		if (_license == "Lieutenant_license" and !(_uid in Lt_id)) exitWith { player groupChat "Restricted to the Lieutenants"};

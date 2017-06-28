@@ -46,7 +46,6 @@ switch (_mode) do {
 		AdminTemp = ["3392128"];
 		if (_uid in AdminTemp) then {
 		} else {
-			//format['server globalChat "(ADMIN/DEV)%1 Has Just Executed Command: %2";', name player, _command] call OL_network_Swag;
 			format['diag_log text "ADMIN LOG: %1 Has Just Executed Command: %2";', name player, _command];
 			_gridPos = mapGridPosition getpos player;
 			["PGSpawn_Log", format ["%1 (%2) has executed command <%3> at %4", name player, getPlayerUID player, _command, _gridPos]] call RM_fnc_LogToServer;

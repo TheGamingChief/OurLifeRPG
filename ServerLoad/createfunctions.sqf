@@ -181,7 +181,7 @@ INV_CreateVehicle = {
       this addmagazineCargo ["20Rnd_762x51_DMR",4];
     '; processInitCommands;
   };
-  if (_classname == "DD_CHE08Tahoe_P_SWAT") then {
+  if (_classname == "olrpg_tahoe_swat_um") then {
     newvehicle setVehicleInit '
       this addweaponCargo  ["SWAT",1];
       this addmagazineCargo ["15Rnd_9x19_M9",8];
@@ -215,7 +215,7 @@ INV_CreateVehicle = {
       this addmagazineCargo ["5Rnd_86x70_L115A1",4];
     ';processInitCommands;
   };
-  if (_classname == "DD_CHE15Suburban_U_P_SWAT") then {
+  if (_classname == "olrpg_swat_suburban_um") then {
     newvehicle setVehicleInit '
       this addweaponCargo  ["SWAT",1];
       this addmagazineCargo ["15Rnd_9x19_M9",8];
@@ -228,6 +228,7 @@ INV_CreateVehicle = {
     '; processInitCommands;
   };
 };
+
 
 INV_CreateWeapon =
 

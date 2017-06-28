@@ -101,7 +101,7 @@ OL_ATM_Clothes = [
 	],
 	[copcoastguardbank,
 		[
-			["olrpg_sdpilot", "Deputy_id", "Deputy Pilot Uniform"]
+			["olrpg_sdpilot", "PDAviation_id", "Deputy Pilot Uniform"]
 		]
 	],
 
