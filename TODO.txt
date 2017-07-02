@@ -27,7 +27,7 @@
 [Done] Fix warrants not being removed when arrested.
 [Done] Increase Air Vehicle saving action so you don't need to crawl
 [Done] Remove exec on server displaying code in global chat to all players
-----------------------------------------
+---------------------------------------------------
 [Done] Fix This hooker has earned you $ANY
 [Done] Fix Error Undefined variable in expression: isse_str_inttostr File mpmissions\__CUR_MP.cmr_cicada\worker.sqf
 [Done] Fix hookers requiring $40001 to buy a hooker instead of $40000
@@ -35,15 +35,63 @@
 [Done] Define INV_SavedVehAir, Can't save air vehicle if this is not defined
 [Done] Set Rob_Log to only log when 100k+ has been robbed.
 [Done] Add all of Foster's changes (more info can be found in the commit message.
+---------------------------------------------------
+[Done] Remove hooker death when going though drug area.
+[Done] West Spawn, cars spawn facing 180 degrees from where they should spawn.
+[Done] Buying cars at West Spawn, spawns them 50m in the air.
+[Done] When you run away from car retrieve after trying to get your car and you try again you can get several options for the same car.
+[Done] Says you are throwing spikes when you don't even have spikes.
+[Done] Fix laptop at voting booth
+[Done] Make Foster's FTOFunctions Great Again
+---------------------------------------------------
 
+
+
+
+
+
+TO DO (TheGamingChief Level):
+---------------------------------------------------
+Cops can PIT as passengers
+Look at why spikes disapear
+scripts\foster\UseDrill.sqf
+scripts\foster\bunnyhop.sqf
+Wrong sqf location
+
+if (_license == "millis" and !(_uid in NGArray)) exitWith { player groupChat "R>
+Error position: <NGArray)) exitWith { player groupChat "R>
+Error Undefined variable in expression: ngarray
+---------------------------------------------------
+
+
+TO DO (CP + TheGamingChief Level):
+---------------------------------------------------
+ESU stats [Important]
+Redo gang system to use cloud (add PVcloud event) [Really fucking important]
 impound vehicles with storage
 impound array to cloud (add PVcloud event)
 prevent access gear of locked vehicle
 external trunk
+Current gov doesn't show when people join, they need to wait til next election.
+Priotiry saving for certain events, paying bail, transfering money, dropping large ammounts of money ETC.
+day / night cycle.
+WARNING: Function 'name' - Bryan Telato is dead
+Fix Private Storage
 
+Add resign button at voting booth for gov.
+If gov goes corrupt SGT+ can reset laws at voting booth
+If gov is arrested taxes with be reset.
+Remove gov from gov if arrested
+Needs rule updated
+
+LoJack System?
+---------------------------------------------------
+
+
+
+MISC Shit:
+---------------------------------------------------
 escape mod menu
-
-ESU stats
 MySQLAdapter
 CPR kit?
 
