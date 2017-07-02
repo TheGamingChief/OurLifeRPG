@@ -105,6 +105,7 @@ fnc_KeyPress_3 = {
 fnc_KeyPress_5 = {
 
 	if (!INV_shortcuts || keyblock || vehicle player != player) exitwith {};
+	if("spikestrip" call INV_GetItemAmount == 0) exitwith {player groupChat "You don't have any spikes to throw!"};
 	keyblock = true;
 	[] spawn {
 		uiSleep 3;

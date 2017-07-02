@@ -1,4 +1,4 @@
-_actionsToRemove = [];
+actionsToRemove = [];
 
 if (isNil {INV_SavedVehAir select 0}) exitWith
 {
@@ -18,7 +18,7 @@ for "_i" from 0 to (count INV_SavedVehAir - 1) do
 	_retriveTxt = format["retrive%1",_i];
 	_vehicle2Spawn = format["continue = true;vehicle2Spawn = (INV_SavedVehAir select %1);",_i];
 	_retriveTxt = player addAction [_rtv,"noscript.sqf",_vehicle2Spawn,1,true,true,"",'player distance AirSavePoint < 5'];
-	_actionsToRemove = _actionsToRemove + [_retriveTxt];
+	actionsToRemove = actionsToRemove + [_retriveTxt];
 };
 
 [] call OL_Events_ActionRemove;
@@ -30,7 +30,7 @@ player sideChat "Select a vehicle from the scroll menu!";
 
 waituntil {continue};
 
-{player removeAction _x;}forEach _actionsToRemove;
+{player removeAction _x;}forEach actionsToRemove;
 
 player sideChat "RETRIEVING VEHICLE IN 3...";
 sleep 1;

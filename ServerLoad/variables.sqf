@@ -57,6 +57,7 @@ SQUADcost				        = 20000;
 maxinfai				        = 16;
 firestrikes				      = 3;
 OL_BaitCars             = [];
+FTOcars                 = [];
 totalstrikes			      = 3;
 facworkercost			      = 10000;
 maxfacworkers			      = 20;

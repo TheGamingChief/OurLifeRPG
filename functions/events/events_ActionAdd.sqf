@@ -9,4 +9,9 @@ switch (playerSide) do {
 			[] call OL_Events_Ems_Actions;
 		};
 };
+
+if (count actionsToRemove > 0) then {
+  { player removeAction _x }forEach actionsToRemove;
+};
+
 INV_shortcuts = true;
