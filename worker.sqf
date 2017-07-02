@@ -66,36 +66,6 @@ if (_art == "holen") exitWith  {
 				_exitvar = 1;
 			};
 
-			//If hooker is within 50m of a drug field kill her
-
-            _drugfields = ["lsd_field","lsd_field_1","herionfield_2","potfield_2_2","potfield_2_3_1"];
-            {
-                if(_x == "lsd_field" || _x == "lsd_field_1") then {
-                    if ((alive _hurenname) && ((vehicle _hurenname) distance getmarkerpos _x < 30)) then {
-                        player groupchat "Hookers are not permitted in LSD fields, she has been killed as a result of your ignorance.";
-                        localhuren = localhuren - 1;
-                        _hurenname setdamage 1;
-                        _exitvar = 1;
-                    };
-                };
-                if(_x == "herionfield_2") then {
-                    if ((alive _hurenname) && ((vehicle _hurenname) distance getmarkerpos _x < 120)) then {
-                        player groupchat "Hookers are not permitted in Herion fields, she has been killed as a result of your ignorance.";
-                        localhuren = localhuren - 1;
-                        _hurenname setdamage 1;
-                        _exitvar = 1;
-                    };
-                };
-                if(_x == "potfield_2_2" || _x == "potfield_2_3_1") then {
-                    if ((alive _hurenname) && ((vehicle _hurenname) distance getmarkerpos _x < 120)) then {
-                        player groupchat "Hookers are not permitted in Marijuana fields, she has been killed as a result of your ignorance.";
-                        localhuren = localhuren - 1;
-                        _hurenname setdamage 1;
-                        _exitvar = 1;
-                    };
-                };
-            } foreach _drugfields;
-
 			//If hooker is armed kill her
 			_isarmed = _hurenname call INV_unitArmed;
 			if (_isarmed) then {

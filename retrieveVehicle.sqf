@@ -1,5 +1,5 @@
 _art = ((_this select 3) select 0);
-_actionsToRemove = [];
+actionsToRemove = [];
 
 if ((isciv) && (isNil {INV_SavedVehLand select 0})) exitWith
 {
@@ -26,7 +26,7 @@ if (_art == "EastCivSpawn") then {
 		_retriveTxt = format["retrive%1",_i];
 		_vehicle2Spawn = format["continue = true;vehicle2Spawn = (INV_SavedVehLand select %1);",_i];
 		_retriveTxt = player addAction [_rtv,"noscript.sqf",_vehicle2Spawn,1,true,true,"",'player distance LandSavePoint < 5'];
-		_actionsToRemove = _actionsToRemove + [_retriveTxt];
+		actionsToRemove = actionsToRemove + [_retriveTxt];
 	};
 
 	[] call OL_Events_ActionRemove;
@@ -37,7 +37,7 @@ if (_art == "EastCivSpawn") then {
 	player sideChat "Select a vehicle from the scroll menu!";
 
 	waituntil {continue};
-	{player removeAction _x;}forEach _actionsToRemove;
+	{player removeAction _x;}forEach actionsToRemove;
 
 
 	player sideChat "RETRIEVING VEHICLE IN 3...";
@@ -79,7 +79,7 @@ if (_art == "WestCivSpawn") then {
 		_retriveTxt = format["retrive%1",_i];
 		_vehicle2Spawn = format["continue = true;vehicle2Spawn = (INV_SavedVehLand select %1);",_i];
 		_retriveTxt = player addAction [_rtv,"noscript.sqf",_vehicle2Spawn,1,true,true,"",'player distance savepoint < 5'];
-		_actionsToRemove = _actionsToRemove + [_retriveTxt];
+		actionsToRemove = actionsToRemove + [_retriveTxt];
 	};
 
 	[] call OL_Events_ActionRemove;
@@ -90,7 +90,7 @@ if (_art == "WestCivSpawn") then {
 	player sideChat "Select a vehicle from the scroll menu!";
 
 	waituntil {continue};
-	{player removeAction _x;}forEach _actionsToRemove;
+	{player removeAction _x;}forEach actionsToRemove;
 
 
 	player sideChat "RETRIEVING VEHICLE IN 3...";
@@ -132,7 +132,7 @@ if (_art == "DonorSpawn") then {
 		_retriveTxt = format["retrive%1",_i];
 		_vehicle2Spawn = format["continue = true;vehicle2Spawn = (INV_SavedVehLand select %1);",_i];
 		_retriveTxt = player addAction [_rtv,"noscript.sqf",_vehicle2Spawn,1,true,true,"",'player distance savepointx < 5'];
-		_actionsToRemove = _actionsToRemove + [_retriveTxt];
+		actionsToRemove = actionsToRemove + [_retriveTxt];
 	};
 
 	[] call OL_Events_ActionRemove;
@@ -143,7 +143,7 @@ if (_art == "DonorSpawn") then {
 	player sideChat "Select a vehicle from the scroll menu!";
 
 	waituntil {continue};
-	{player removeAction _x;}forEach _actionsToRemove;
+	{player removeAction _x;}forEach actionsToRemove;
 
 
 	player sideChat "RETRIEVING VEHICLE IN 3...";
@@ -185,7 +185,7 @@ if (_art == "PDSpawn") then {
 		_retriveTxt = format["retrive%1",_i];
 		_vehicle2Spawn = format["continue = true;vehicle2Spawn = (INV_SavedVehLand select %1);",_i];
 		_retriveTxt = player addAction [_rtv,"noscript.sqf",_vehicle2Spawn,1,true,true,"",'player distance savepoint2 < 5'];
-		_actionsToRemove = _actionsToRemove + [_retriveTxt];
+		actionsToRemove = actionsToRemove + [_retriveTxt];
 	};
 
 	[] call OL_Events_ActionRemove;
@@ -196,7 +196,7 @@ if (_art == "PDSpawn") then {
 	player sideChat "Select a vehicle from the scroll menu!";
 
 	waituntil {continue};
-	{player removeAction _x;}forEach _actionsToRemove;
+	{player removeAction _x;}forEach actionsToRemove;
 
 
 	player sideChat "RETRIEVING VEHICLE IN 3...";
@@ -238,7 +238,7 @@ if (_art == "SheriffSpawn") then {
 		_retriveTxt = format["retrive%1",_i];
 		_vehicle2Spawn = format["continue = true;vehicle2Spawn = (INV_SavedVehLand select %1);",_i];
 		_retriveTxt = player addAction [_rtv,"noscript.sqf",_vehicle2Spawn,1,true,true,"",'player distance savepoint2s < 5'];
-		_actionsToRemove = _actionsToRemove + [_retriveTxt];
+		actionsToRemove = actionsToRemove + [_retriveTxt];
 	};
 
 	[] call OL_Events_ActionRemove;
@@ -249,7 +249,7 @@ if (_art == "SheriffSpawn") then {
 	player sideChat "Select a vehicle from the scroll menu!";
 
 	waituntil {continue};
-	{player removeAction _x;}forEach _actionsToRemove;
+	{player removeAction _x;}forEach actionsToRemove;
 
 
 	player sideChat "RETRIEVING VEHICLE IN 3...";

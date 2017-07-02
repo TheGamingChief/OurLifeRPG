@@ -2170,7 +2170,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3524.7888,46,3066.592};
+					position[]={3526.4133,46,3065.8875};
 					azimut=-269.80746;
 					id=856;
 					side="LOGIC";
@@ -10178,7 +10178,7 @@ class Mission
 			vehicle="Notebook";
 			skill=0.60000002;
 			text="rathaus";
-			init="this allowdamage false;this attachto [mayor, [.5,2.4,1.15]];";
+			init="this allowdamage false;this attachto [mayor, [1.2,3.6,1.2]];";
 		};
 		class Item434
 		{
@@ -13533,7 +13533,7 @@ class Mission
 		class Item762
 		{
 			position[]={3526.4133,46,3065.8875};
-			azimut=-90.331055;
+			azimut=90;
 			id=863;
 			side="EMPTY";
 			vehicle="HeliH";
