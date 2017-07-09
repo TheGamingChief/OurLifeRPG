@@ -1,6 +1,7 @@
 _cops = 0;
 _civs = 0;
-_Players = playableUnits;
+
+if ((getPlayerUID player) in OL_SwagDevs || (getPlayerUID player) in adminlevel4 || serverTime < 600) exitWith {};
 
 {
 	if (_x call OL_ISSE_UnitExists) then {
@@ -10,8 +11,9 @@ _Players = playableUnits;
 		};
 	};
 } forEach playerarray;
-if (count _Players < 10) exitwith {};
-if (_cops > _civs && serverTime >= 600) exitWith {
+
+if ((_cops + _civs) <= 10) exitWith {};
+if (_cops > _civs) exitWith {
   playSound "alarm1";
   titleText ["You have joined while the ratio is off! Kicking back to lobby in 10 seconds!","BLACK"];
   uiSleep 10;
