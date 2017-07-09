@@ -37,8 +37,6 @@ if ((_art == "remove") or (_art == "add")) then {
 		if (_license == "CoastGuard_license" and !(_uid in CoastGuard_id)) exitWith { player groupChat "Restricted to Coast Guard Authorized Personnel"};
 		if (_license == "vipcl" and !(_uid in Donate_id)) exitWith {player groupChat "Restricted To Donators"};
 		if (_license == "mayorlic" and !(ismayor)) exitWith { player groupChat "Restricted to Mayor"};
-	  if (_license == "millis" and !(_uid in NGArray)) exitWith { player groupChat "Restricted to NG's"};
-		if (_license == "bounh" and !(_uid in BHArray)) exitWith { player groupChat "Restricted to Bounty Hunters!"};
 		if (_license == "viptl" and !(_uid in Donate_id)) exitWith {player groupChat "Restricted To Donators"};
 		if (_license == "devlic" and !(_uid in SwagDev)) exitWith { player groupChat "Restricted to Developers"};
 		if (_license == "CID_license" and !(_uid in Undercover_id)) exitWith { player groupChat "Restricted to CID!"};

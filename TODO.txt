@@ -44,23 +44,17 @@
 [Done] Fix laptop at voting booth
 [Done] Make Foster's FTOFunctions Great Again
 ---------------------------------------------------
-
-
-
-
+[Done] Fix cops being able to pit as passenger
+[Done] Fix UseDrill.sqf and bunnyhop.sqf having the wrong SQF location.
+[Done] Fix Error Undefined variable in expression: inv_activeshopnumber
+[Done] Fix Error Undefined variable in expression: ngarray
+[Done] Fix Error Undefined variable in expression: _pitcar
+---------------------------------------------------
 
 
 TO DO (TheGamingChief Level):
 ---------------------------------------------------
-Cops can PIT as passengers
-Look at why spikes disapear
-scripts\foster\UseDrill.sqf
-scripts\foster\bunnyhop.sqf
-Wrong sqf location
-
-if (_license == "millis" and !(_uid in NGArray)) exitWith { player groupChat "R>
-Error position: <NGArray)) exitWith { player groupChat "R>
-Error Undefined variable in expression: ngarray
+Find time to work with CP on CP + TheGamingChief List
 ---------------------------------------------------
 
 

@@ -1765,8 +1765,8 @@ INV_AlleItemsArray = [
 ["woodchair",["Item", "misc"],["woodchair", "Wood Chair"],[1000, 1000], [10, "", ""], [true, true, true,false,"useresource.sqf"],"Wood Chair","Sit in this",[["tbfour", 4]]],
 ["iron",["Item", "ressource"],["iron", "Iron"], [1000, 550],[1, ""],[true,true,true, false, "useresource.sqf"], localize "STRS_item_eisenerz",localize "STRS_item_farmitem_info", []],
 
-["drill",["Item", "ressource"],["drill", "StrongArm MiniRig Drill"], [40000, 15000],[1, ""],[true,true,true, false, "scripts\foster\UseDrill.sqf"], localize "STRS_item_eisenerz",localize "STRS_item_farmitem_info", []],
-["bunnyhop", ["Item", "misc"], ["bunnyhop", "Bunny-Hop (Bike Only)"], [2000, 500], [1, ""], [true, true, true, false, "scripts\foster\bunnyhop.sqf"], "Bunny-Hop Shocks (Bike Only)", "Use on bicycles to allow bunny-hopping with spacebar", []],
+["drill",["Item", "ressource"],["drill", "StrongArm MiniRig Drill"], [40000, 15000],[1, ""],[true,true,true, false, "nouse.sqf"], localize "STRS_item_eisenerz",localize "STRS_item_farmitem_info", []],
+["bunnyhop", ["Item", "misc"], ["bunnyhop", "Bunny-Hop (Bike Only)"], [2000, 500], [1, ""], [true, true, true, false, Item_misc_Bunnyhop], "Bunny-Hop Shocks (Bike Only)", "Use on bicycles to allow bunny-hopping with spacebar", []],
 ["TreeFixer",["Item", "ressource"],["TreeFixer", "Tree Fixer"], [5000, 1000],[1, ""],[true,true,true, false, OL_misc_TreeFixer], localize "STRS_item_eisenerz",localize "STRS_item_farmitem_info", []],
 ["gunshipment",["Item", "ressource"],["gunshipment", "Illegal Gun Shipment"], [0, 0],[1, ""],[false,false,false, false, "nouse.sqf"], "Illegal Gun Shipment", "Illegal Gun Shipment", []],
 
