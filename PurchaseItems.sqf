@@ -7,6 +7,10 @@ _individualCost = _this select 4;
 _otherValue1 = _this select 5;
 _name = _this select 6;
 
+if (isNil "INV_ActiveShopNumber") then {
+	INV_ActiveShopNumber = 0
+};
+
 _logic = ((INV_ItemShops select INV_ActiveShopNumber) select 3);
 _wallet = "geld" call INV_GetItemAmount;
 _bankBalance = Kontostand;

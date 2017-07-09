@@ -56,7 +56,7 @@ INV_Lizenzen =
   ["Lieutenant_license",     [copcmdbank],                                             "Lieutenant License",10000],
   ["Sergeant_license",       [copsgtbank],                                             "Sergeant License",10000],
   ["Corporal_license",       [copsgtbank],                                             "Corporal License",10000],
-  ["Fto_license",            [ftobox],                                                 "FTO License",10000],
+  ["FTO_license",            [ftobox],                                                 "FTO License",10000],
   ["cor_license",            [atmjail],                                                "Corrections License",10000],
   ["vipcl",                  [copbank, OL_Shop_Undercover, copsheriffbank, copcmdbank],  "Cop Donator License",100000],
   ["Deputy_license",         [copsheriffbank],                                         "Deputy License",10000],

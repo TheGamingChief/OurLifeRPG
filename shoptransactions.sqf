@@ -12,6 +12,10 @@ _art        = _this select 0;
 _itemauswahl= _this select 1;
 _menge      = _this select 2;
 
+if (isNil "INV_ActiveShopNumber") then {
+	INV_ActiveShopNumber = 0
+};
+
  if (!(_menge call OL_ISSE_str_isInteger)) exitWith {player groupChat localize "STRS_inv_no_valid_number";};
  _menge      = _menge call OL_ISSE_StrToInt;
  if (_menge <= 0) exitWith {};
