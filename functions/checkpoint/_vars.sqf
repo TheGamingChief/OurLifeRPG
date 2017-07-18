@@ -94,3 +94,7 @@ AM_temp_carrying = false;
 AM_checkpoint_tmpArray = [];
 temp_item = objNull;
 AM_checkpoint_sleep = 0.5;
+
+OL_CheckpointWL = [ //Not gonna say how much he paid...
+	"76561198055543664"
+];
