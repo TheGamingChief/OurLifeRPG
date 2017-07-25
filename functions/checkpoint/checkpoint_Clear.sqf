@@ -2,7 +2,7 @@ _uid = getplayeruid player;
 _gridPos = mapGridPosition getPos player;
 
 switch (true) do {
-  case ((_uid in adminlevel4) || (_uid in OL_SwagDevs)) : {
+  case ((getPlayerUID player in OL_SwagDevs) || (getPlayerUID player in adminlevel4) || (getPlayerUID player in OL_CheckpointWL)) : {
     format['if((getPlayerUID player in adminlevel4) || (getPlayerUID player in OL_SwagDevs)) then {player groupChat "%1 has cleared a checkpoint (200m)."}', name player] call OL_network_Swag;
     {
       if ((_x getVariable "AM_CP") == 1) then {
