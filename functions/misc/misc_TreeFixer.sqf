@@ -3,7 +3,7 @@ _art = _this select 0;
 if (_art == "use") then {
 	if (vehicle player != player) exitWith { player groupChat "You must be on foot!" };
 	if (player getVariable "KOED") exitWith { player groupChat "You cannot fix trees while dead!"	};
-	if !(treeavailable) exitwith {player groupChat "You cannot fix another tree yet!"};
+	if !(treeavailable) exitwith {player groupChat "You must rest 5 seconds before fixing another tree!"};
 	
 	_foundTree = false;
 	{
@@ -20,11 +20,11 @@ if (_art == "use") then {
 			['geld',_payout] call INV_AddInvItem;
 			_foundTree = true;
 			uiSleep 2;
-			player groupChat "You must wait 30 Seconds to Fix another tree!";
-			uiSleep 30;
+			player groupChat "You must wait 5 Seconds to Fix another tree!";
+			uiSleep 5;
 			treeavailable = true;
 		};
 	}forEach (nearestObjects [player, [], 10]);
 
-	if (!_foundTree) then { player groupChat "You are not near a damaged tree! You must be within 10(m) of the damaged tree!" };
+	if (!_foundTree) then { player groupChat "You are not near a damaged tree! You must be within (10m) of the damaged tree!" };
 };
