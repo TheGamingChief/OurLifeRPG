@@ -27,7 +27,7 @@ CPB_Admin_classnames = [
 	["Land_A_CraneCon", 					150000, [0, 2, 17],    "Construction Crane"]
 ];
 
-CPB_BASE_classnames = {
+CPB_BASE_classnames = [
   ["roadblock",            1000,  [0, 2, 0.4], "Roadblock"],
   ["glt_roadsign_octagon", 1000,  [0, 2, 1.0], "Stop Sign"],
 	["bargate",              1000,  [0, 2, 3.8], "Bar Gate"],
@@ -39,7 +39,7 @@ CPB_BASE_classnames = {
 	["bunkersmall",          10000, [0, 2, 1.0], "Bunker"],
 	["10mTape",              10000, [0, 2, 0.5], "Caution Tape (10M)"],
 	["land_ladder_half",     1000,  [0, 2, 1.0], "Small Ladder"]
-};
+];
 
 CPB_EMS_classnames = [
 	["land_ladder",          2000,  [0, 2, 3.9], "Large Ladder"]
