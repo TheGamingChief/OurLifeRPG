@@ -58,8 +58,13 @@ AM_checkpoint_tmpArray = [];
 temp_item = objNull;
 AM_checkpoint_sleep = 0.5;
 
+<<<<<<< HEAD
 OL_CheckpointWL = [ //Not gonna say how much he paid...
 	"76561198055543664", // Mark Stavaros
 	"76561198065459565", // Isaac
 	"76561198045257930"  // Lansing
+=======
+OL_CheckpointWL = [ //Not gonna say how much he paid... Prob not even that much...
+	"76561198055543664"
+>>>>>>> ff66b74be350af57e57a8a6c0469570e77e979ca
 ];
