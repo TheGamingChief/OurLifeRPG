@@ -66,21 +66,24 @@ impound vehicles with storage
 impound array to cloud (add PVcloud event)
 prevent access gear of locked vehicle
 external trunk
-Current gov doesn't show when people join, they need to wait til next election.
 Priotiry saving for certain events, paying bail, transfering money, dropping large ammounts of money ETC.
 day / night cycle.
-WARNING: Function 'name' - Bryan Telato is dead
 Fix Private Storage
 
-Add resign button at voting booth for gov.
-If gov goes corrupt SGT+ can reset laws at voting booth
-If gov is arrested taxes with be reset.
-Remove gov from gov if arrested
 Needs rule updated
 
 TO DO (Garry)
 ---------------------------------------------------
-Clean the bathroom
+Add resign button at voting booth for gov.
+If gov goes corrupt SGT+ can reset laws at voting booth
+If gov is arrested taxes with be reset.
+Remove gov from gov if arrested
+Current gov doesn't show when people join, they need to wait til next election.
+
+ez pz ^
+
+WARNING: Function 'name' - Bryan Telato is dead
+Change all name player name _civ etc etc to _civ getVariable "OL_Name"
 
 MISC Shit:
 ---------------------------------------------------
