@@ -65,6 +65,7 @@ fnc_KeyPress_7 = {
 fnc_KeyPress_9 = {
 	if (dialog) exitwith { closeDialog 0 };
 	if (!INV_shortcuts) exitwith {};
+	if(isstunned) exitwith {player groupchat "You are stunned!"};
 	if (!AM_temp_carrying) then { [] call OL_checkpoint_openMenu } else { [] call OL_checkpoint_dropItem };
 };
 
