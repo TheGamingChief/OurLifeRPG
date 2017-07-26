@@ -832,7 +832,7 @@ INV_getitemCostWithTax = 	{((_this call INV_getitemArray) call INV_getitemSteuer
 		_tmp = _tmp + [_x select 5];
 
 		diag_log _tmp;
-	} forEach INV_AlleWaffenObjekte;
+	} forEach INV_AlleItemsArray;
 
 	AlleMissionsObjekte = INV_AlleWaffenObjekte + INV_AlleMagazinObjekte + INV_AlleFahrzeugeArray + INV_AlleItemsArray;
 */
