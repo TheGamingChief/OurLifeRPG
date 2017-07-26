@@ -21,5 +21,6 @@ if (_cond) then {
     case 3: { player groupChat _text };
     case 4: { player commandChat _text };
     case 5: { server globalChat _text };
+    case 6: { hint _text };
   };
 };

@@ -52,7 +52,7 @@ INV_AddItemStorage = {
 	if (count _this > 3) then {
 		if (_Fextra != "") then {
 			_Fextra     = _this select 3;
-			_maxGewicht = ((_Fextra call INV_getitemOtherStuff) select 0);
+			_maxGewicht = _Fextra call INV_getVehicleCanCarry;
 			_curGewicht = _Farrname call INV_GetStorageWeight;
 			_addGewicht = (_Fitem call INV_getitemTypeKg) * _Fmenge;
 		};
@@ -802,26 +802,37 @@ INV_Seen =
 */
 
 // Get Object Details
-INV_getitemScriptName = { ((_this call INV_getitemArray) select 0);};
-INV_getitemType = {((_this call INV_getitemArray) select 1) select 0;};
-INV_getitemKindOf = { ((_this call INV_getitemArray) select 1) select 1;};
-INV_getitemClassName = { ((_this call INV_getitemArray) select 2) select 0;};
-INV_getitemName = {((_this call INV_getitemArray) select 2) select 1;};
-INV_getitemBuyCost = {((_this call INV_getitemArray) select 3) select 0;};
-INV_getitemSellCost = { ((_this call INV_getitemArray) select 3) select 1;};
-INV_getitemTypeKg = { ((_this call INV_getitemArray) select 4) select 0;};
-INV_getitemLicense = { ((_this call INV_getitemArray) select 4) select 1;};
-INV_getitemLicense2 = { ((_this call INV_getitemArray) select 4) select 2;};
-INV_getvehmaxkg = { ((_this call INV_getitemArray) select 4) select 3;};
-INV_getitemOtherStuff = { ((_this call INV_getitemArray) select 5);};
-INV_getitemDescription1 = { ((_this call INV_getitemArray) select 6);};
-INV_getitemDescription2 = { ((_this call INV_getitemArray) select 7);};
-INV_getitemMaterials = { ((_this call INV_getitemArray) select 8);};
-INV_getitemCostWithTax  = { ((_this call INV_getitemArray) call INV_getitemSteuer);};
-INV_getitemGiveable = { ((_this call INV_getitemArray) select 5) select 0;};
-INV_getitemDropable = { ((_this call INV_getitemArray) select 5) select 1;};
-INV_getitemLooseable = { ((_this call INV_getitemArray) select 5) select 2;};
-INV_getitemIsIllegal = { ((_this call INV_getitemArray) select 5) select 3;};
-INV_getitemFilename = { ((_this call INV_getitemArray) select 5) select 4;};
-INV_getVehicleCanCarry = { ((_this call INV_getitemArray) select 5) select 0;};
-INV_getVehicleSeats = { ((_this call INV_getitemArray) select 5) select 1;};
+INV_getitemScriptName = 	{ ((_this call INV_getitemArray) select 0);};
+INV_getitemType = 				{ ((_this call INV_getitemArray) select 1) select 0;};
+INV_getitemKindOf = 			{ ((_this call INV_getitemArray) select 1) select 1;};
+INV_getitemClassName = 		{ ((_this call INV_getitemArray) select 2) select 0;};
+INV_getitemName = 				{ ((_this call INV_getitemArray) select 2) select 1;};
+INV_getitemBuyCost = 			{ ((_this call INV_getitemArray) select 3) select 0;};
+INV_getitemSellCost = 		{ ((_this call INV_getitemArray) select 3) select 1;};
+INV_getitemTypeKg = 			{ ((_this call INV_getitemArray) select 4) select 0;};
+INV_getitemLicense = 			{ ((_this call INV_getitemArray) select 4) select 1;};
+INV_getitemLicense2 = 		{ ((_this call INV_getitemArray) select 4) select 2;};
+INV_getvehmaxkg = 				{ ((_this call INV_getitemArray) select 4) select 3;};
+INV_getitemGiveable = 		{ ((_this call INV_getitemArray) select 5) select 0;};
+INV_getitemDropable = 		{ ((_this call INV_getitemArray) select 5) select 1;};
+INV_getitemLooseable = 		{ ((_this call INV_getitemArray) select 5) select 2;};
+INV_getitemIsIllegal = 		{ ((_this call INV_getitemArray) select 5) select 3;};
+INV_getitemFilename = 		{ ((_this call INV_getitemArray) select 5) select 4;};
+INV_getVehicleCanCarry = 	{ ((_this call INV_getitemArray) select 5) select 0;};
+INV_getVehicleSeats = 		{ ((_this call INV_getitemArray) select 5) select 1;};
+INV_getitemCostWithTax = 	{ ((_this call INV_getitemArray) call INV_getitemSteuer);};
+/*
+	{
+		_tmp = [];
+		_tmp = _tmp + [_x select 0];
+		_tmp = _tmp + [_x select 1];
+		_tmp = _tmp + [_x select 2];
+		_tmp = _tmp + [_x select 3];
+		_tmp = _tmp + [_x select 4];
+		_tmp = _tmp + [_x select 5];
+
+		diag_log _tmp;
+	} forEach INV_AlleItemsArray;
+
+	AlleMissionsObjekte = INV_AlleWaffenObjekte + INV_AlleMagazinObjekte + INV_AlleFahrzeugeArray + INV_AlleItemsArray;
+*/
