@@ -794,33 +794,33 @@ INV_Seen =
 	[itemClass, itemName],
 	[itemCostBuy, itemCostSell],
 	[itemWeight, itemLic, itemLicCop, vehMaxWeight],
-	[],
-	name,
-	get desc,
-	material array
+	[itemGivable, itemDroppable, itemLooseable, itemIllegal, itemFilename],
 ]
 */
 
 // Get Object Details
-INV_getitemScriptName = 	{ ((_this call INV_getitemArray) select 0);};
-INV_getitemType = 				{ ((_this call INV_getitemArray) select 1) select 0;};
-INV_getitemKindOf = 			{ ((_this call INV_getitemArray) select 1) select 1;};
-INV_getitemClassName = 		{ ((_this call INV_getitemArray) select 2) select 0;};
-INV_getitemName = 				{ ((_this call INV_getitemArray) select 2) select 1;};
-INV_getitemBuyCost = 			{ ((_this call INV_getitemArray) select 3) select 0;};
-INV_getitemSellCost = 		{ ((_this call INV_getitemArray) select 3) select 1;};
-INV_getitemTypeKg = 			{ ((_this call INV_getitemArray) select 4) select 0;};
-INV_getitemLicense = 			{ ((_this call INV_getitemArray) select 4) select 1;};
-INV_getitemLicense2 = 		{ ((_this call INV_getitemArray) select 4) select 2;};
-INV_getvehmaxkg = 				{ ((_this call INV_getitemArray) select 4) select 3;};
-INV_getitemGiveable = 		{ ((_this call INV_getitemArray) select 5) select 0;};
-INV_getitemDropable = 		{ ((_this call INV_getitemArray) select 5) select 1;};
-INV_getitemLooseable = 		{ ((_this call INV_getitemArray) select 5) select 2;};
-INV_getitemIsIllegal = 		{ ((_this call INV_getitemArray) select 5) select 3;};
-INV_getitemFilename = 		{ ((_this call INV_getitemArray) select 5) select 4;};
-INV_getVehicleCanCarry = 	{ ((_this call INV_getitemArray) select 5) select 0;};
-INV_getVehicleSeats = 		{ ((_this call INV_getitemArray) select 5) select 1;};
-INV_getitemCostWithTax = 	{ ((_this call INV_getitemArray) call INV_getitemSteuer);};
+INV_getitemScriptName = 	{((_this call INV_getitemArray) select 0);};
+INV_getitemType = 				{((_this call INV_getitemArray) select 1) select 0;};
+INV_getitemKindOf = 			{((_this call INV_getitemArray) select 1) select 1;};
+
+INV_getitemClassName = 		{((_this call INV_getitemArray) select 2) select 0;};
+INV_getitemName = 				{((_this call INV_getitemArray) select 2) select 1;};
+
+INV_getitemBuyCost = 			{((_this call INV_getitemArray) select 3) select 0;};
+INV_getitemSellCost = 		{((_this call INV_getitemArray) select 3) select 1;};
+
+//TypeKG = Vehicle Class (1=Light 2=Normal, >3=Large+NotRepairable)
+INV_getitemTypeKg = 			{((_this call INV_getitemArray) select 4) select 0;};
+INV_getitemLicense = 			{((_this call INV_getitemArray) select 4) select 1;};
+INV_getitemLicense2 = 		{((_this call INV_getitemArray) select 4) select 2;};
+INV_getvehmaxkg = 				{((_this call INV_getitemArray) select 4) select 3;};
+
+INV_getitemGiveable = 		{((_this call INV_getitemArray) select 5) select 0;};
+INV_getitemDropable = 		{((_this call INV_getitemArray) select 5) select 1;};
+INV_getitemLooseable = 		{((_this call INV_getitemArray) select 5) select 2;};
+INV_getitemIsIllegal = 		{((_this call INV_getitemArray) select 5) select 3;};
+INV_getitemFilename = 		{((_this call INV_getitemArray) select 5) select 4;};
+INV_getitemCostWithTax = 	{((_this call INV_getitemArray) call INV_getitemSteuer);};
 /*
 	{
 		_tmp = [];
@@ -832,7 +832,7 @@ INV_getitemCostWithTax = 	{ ((_this call INV_getitemArray) call INV_getitemSteue
 		_tmp = _tmp + [_x select 5];
 
 		diag_log _tmp;
-	} forEach INV_AlleItemsArray;
+	} forEach INV_AlleWaffenObjekte;
 
 	AlleMissionsObjekte = INV_AlleWaffenObjekte + INV_AlleMagazinObjekte + INV_AlleFahrzeugeArray + INV_AlleItemsArray;
 */

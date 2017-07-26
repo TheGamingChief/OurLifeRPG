@@ -251,7 +251,7 @@ fnc_KeyPress_T = {
 
 fnc_KeyPress_R = {
 	if ((vehicle player == player) || ((vehicle player) iskindof "Air") || (player != driver (vehicle player))) exitWith {};
-	[] execVM "PIT.sqf";
+	[] spawn OL_fnc_Pit;
 };
 
 
