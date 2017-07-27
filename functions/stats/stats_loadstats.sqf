@@ -424,7 +424,7 @@ if (_key == "no_data") then {
 			};
 
 			switch (_ReporterRank) do
-			{//fuckin yolo m8
+			{
 				case 0:{};
 				case 1:{
 					Reporter_id = [getplayeruid player];
