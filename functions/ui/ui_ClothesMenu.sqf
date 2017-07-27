@@ -5,6 +5,10 @@ _nearStuff = nearestObjects [getPos player, ["tcg_atm", "olrpg_pdpilot", "TK_GUE
 if (isNil "_nearStuff") exitWith { player groupChat "wut...... - Garry" };
 if (!createDialog "UI_ClothesMenu") exitWith { hint "Dialog Error!" };
 
+if ((getPlayerUID player in EMT3_id)) then {
+	_nearStuff = ["atm5"];
+};
+
 _clothesArray = missionNamespace getVariable format ["OL_%1_ClothesArray", _nearStuff select 0];
 
 if (isNil "_clothesArray") exitWith {
