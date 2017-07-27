@@ -113,7 +113,7 @@ OL_ATM_Clothes = [
 			["a2l_firefighter",		"EMT3_id", "Turn Out SCBA Uniform"],
 			["hazmatRed",					"EMT3_id", "Hazmat Red Unifrom"],
 			["hazmatYellow", 			"EMT3_id", "Hazmat Yellow Unifrom"],
-			["olrpg_firemarshal", "EMT1_id", "Fire Marshal Uniform"]
+			["olrpg_firemarshal", "EMT3_id", "Fire Marshal Uniform"]
 		]
 	],
 	[atmsubfire,
@@ -124,7 +124,7 @@ OL_ATM_Clothes = [
 			["a2l_firefighter",		"EMT3_id", "Turn Out SCBA Uniform"],
 			["hazmatRed",					"EMT3_id", "Hazmat Red Unifrom"],
 			["hazmatYellow", 			"EMT3_id", "Hazmat Yellow Unifrom"],
-			["olrpg_firemarshal", "EMT1_id", "Fire Marshal Uniform"]
+			["olrpg_firemarshal", "EMT3_id", "Fire Marshal Uniform"]
 		]
 	],
 

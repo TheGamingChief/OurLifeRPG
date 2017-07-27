@@ -71,6 +71,7 @@ fnc_KeyPress_7 = {
 fnc_KeyPress_9 = {
 	if (dialog) exitWith {closeDialog 0;};
 	if (!INV_shortcuts) exitWith {};
+	if(isstunned) exitwith {player groupchat "You are stunned!"};
 	if ((getPlayerUID player) in adminlevel4 || (getplayeruid player) in OL_SwagDevs || (getplayeruid player) in OL_CheckpointWL || (typeOf player == "Flyers_Mechanic") || (typeOf player == "Flyers_Mechanic_Vest") || (typeOf player == "Flyers_Supervisor") || (typeOf player == "Flyers_Supervisor_Vest")) then {
 	if (!AM_temp_carrying) then {[] call OL_checkpoint_openMenu;}else{[] call OL_checkpoint_dropItem;};
 	};
