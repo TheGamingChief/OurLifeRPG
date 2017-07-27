@@ -22,23 +22,23 @@ CPB_Admin_classnames = [
 	["Land_HBarrier1", 										10000,  [0, 2, 1.0],   "Single H barrier"],
 	["Concrete_Wall_EP1", 								10000,  [0, 2, 1.7],   "Tall Concreate Wall"],
 	["FlagCarrierUSA_EP1", 								1,      [0, 2, 4.0],   "Merican Flag"],
-	["Danger", 														1000,   [0, 2, 0.5],   "Danger Sign"],
+	["Sign_Danger", 											1000,   [0, 2, 0.5],   "Danger Sign"],
 	["Land_A_FuelStation_Shed", 					25000,  [0, 2, 2.845], "Fuel Shed"],
 	["Land_A_CraneCon", 									150000, [0, 2, 17],    "Construction Crane"]
 ];
 
 CPB_BASE_classnames = [
-  ["roadblock",            1000,  [0, 2, 0.4], "Roadblock"],
-  ["glt_roadsign_octagon", 1000,  [0, 2, 1.0], "Stop Sign"],
-	["bargate",              1000,  [0, 2, 3.8], "Bar Gate"],
-	["SearchLight_UN_EP1",   1000,  [0, 2, 0.0], "Search Light"],
-	["roadcone",             1000,  [0, 2, 0.4], "Road Cone"],
-	["roadbarrierlong",      1000,  [0, 2, 0.5], "Caution Barrier Large"],
-	["roadbarriersmall",     1000,  [0, 2, 0.7], "Caution Barrier Small"],
-	["bigbagfence",          5000,  [0, 2, 0.5], "Big Bag Fence"],
-	["bunkersmall",          10000, [0, 2, 1.0], "Bunker"],
-	["10mTape",              10000, [0, 2, 0.5], "Caution Tape (10M)"],
-	["land_ladder_half",     1000,  [0, 2, 1.0], "Small Ladder"]
+  ["Land_CncBlock_Stripes",     1000,  [0, 2, 0.4], "Roadblock"],
+  ["glt_roadsign_octagon",      1000,  [0, 2, 1.0], "Stop Sign"],
+	["ZavoraAnim",                1000,  [0, 2, 3.8], "Bar Gate"],
+	["SearchLight_UN_EP1",        1000,  [0, 2, 0.0], "Search Light"],
+	["Land_coneLight",            1000,  [0, 2, 0.4], "Road Cone"],
+	["RoadBarrier_long",          1000,  [0, 2, 0.5], "Caution Barrier Large"],
+	["RoadBarrier_light",         1000,  [0, 2, 0.7], "Caution Barrier Small"],
+	["Land_fort_bagfence_long",   5000,  [0, 2, 0.5], "Big Bag Fence"],
+	["Land_fortified_nest_small", 10000, [0, 2, 1.0], "Bunker"],
+	["10mTape",                   10000, [0, 2, 0.5], "Caution Tape (10M)"],
+	["land_ladder_half",          1000,  [0, 2, 1.0], "Small Ladder"]
 ];
 
 CPB_EMS_classnames = [

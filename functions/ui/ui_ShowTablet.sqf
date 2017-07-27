@@ -1,4 +1,4 @@
-if (!(createDialog (_this select 0))) exitWith {hint "Dialog Error!";};
+if (!(createDialog (_this select 0))) exitWith { hint "Dialog Error!" };
 _items = 0;
 
 for [{_i=0}, {_i < (count INV_InventarArray)}, {_i=_i+1}] do {
@@ -24,7 +24,7 @@ for [{_c=0}, {_c < (count INV_playerStringList)}, {_c=_c+1}] do {
 };
 
 lbAdd [1501,format ["Name: %1 | Bank: $%2", name player, Kontostand call OL_ISSE_str_IntToStr]];
-lbAdd [1501,format ["Player ID: %1",getplayerUID player]];
+lbAdd [1501,format ["Player ID: %1", getplayerUID player]];
 
 lbSetCurSel [21009, 0];
 lbSetCurSel [15009, 0];
