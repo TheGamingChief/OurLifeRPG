@@ -18,7 +18,9 @@ if (iscop) exitWith {
 		_str = _str + format ["<t color='#0000FF' size='1.50'>Cops: %1<br/>", _cops];
 		_str = _str + format ["<t color='#999999' size='1.50'>Civs: %1<br/><br/>", _civs];
 		_str = _str + "<t color='#FF0000' size='2'>RATIO IS BAD (FIX IT)!";
-		playSound "alarm1";
+		if ((_cops + _civs) > 10) then {
+			playSound "alarm1";
+		};
 	} else {
 		_str = _str + format ["<t color='#0000FF' size='1.50'>Cops: %1<br/>", _cops];
 		_str = _str + format ["<t color='#999999' size='1.50'>Civs: %1<br/><br/>", _civs];

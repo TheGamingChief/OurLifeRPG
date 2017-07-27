@@ -1,10 +1,10 @@
-switch (_this select 0) do
-{
+switch (_this select 0) do {
   case "TrafficStop": {
     titleText ["LOADING...","BLACK"];
     playSound "motorolaradiobeep";
     uiSleep 3;
-    {deleteVehicle _x} forEach FTOcars; FTOcars = [];
+    {deleteVehicle _x} forEach FTOcars;
+    FTOcars = [];
     titleText ["Traffic Stop Situation Enabled...","BLACK"];
     uiSleep 5;
     FTOcar1 = "olrpg_pdcv_pb" createVehicle getMarkerPos "tsspawn1"; FTOcar1 setVehicleInit "this setDir 345; this animate ['ani_lights', 0.5]"; processInitCommands;

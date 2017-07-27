@@ -1,6 +1,6 @@
 /*
 MySQL Statistic Loader
-by DEADdem
+by DEADdem and CP and TGC and Garry and NOT FOSTER
 
 Usage without permission is prohibited.
 */
@@ -10,32 +10,32 @@ if (isNil "_key") exitWith {
 	player groupChat format["Stat Loading Failed: No key given in %1", _this];
 };
 
-if (_key == "lolfuckya") then {
+if (_key == "no_data") then {
 	player groupChat "Welcome to the Community!";
 	INV_SavedVehAir = [];
 	INV_SavedVehLand = [];
 } else {
 
 	//Get Data
-	_side = playerSide;
-	_Stats = _this select 1;
-	_Ranks = _this select 2;
+	_side 	= playerSide;
+	_Stats 	= _this select 1;
+	_Ranks 	= _this select 2;
+	_userN 	=	(_this select 3) select 0;
+	_userId =	(_this select 3) select 1;
 
 	//Check Stats
 	_civnum = player;
 	_uid = getPlayerUID player;
-	_nameUser = _stats select 16;
-	_userId = _stats select 1;
 
-	if (!(_userId == getPlayerUID player)) exitWith {
-		if (_nameUser == "0") then {
-			systemChat format["Stat Loading Error: Too many concurrent requests!",_nameUser];
+	if (_userId != getPlayerUID player) exitWith {
+		if (_userN == "0") then {
+			systemChat format["Stat Loading Error: Too many concurrent requests!", _userN];
 		} else {
-			systemChat format["Stat Loading Error: You nearly loaded with %1's Stats!",_nameUser];
+			systemChat format["Stat Loading Error: You nearly loaded with %1's Stats!", _userN];
 		};
 
 		[] spawn {
-			_time = ceil(random 5);
+			_time = ceil(random 5) + 5;
 
 			systemChat format["Retrying in %1 seconds...", _time];
 			uiSleep _time;
@@ -114,7 +114,7 @@ if (_key == "lolfuckya") then {
 			Donate_id4 = [getplayeruid player];
 			Donate_id5 = [getplayeruid player];
 			Donate_id6 = [getplayeruid player];
-			OL_TierX_ID   =  [getplayeruid player];
+			OL_TierX_ID = [getplayeruid player];
 		};
 		case 8:{
 			Donate_id     = [getplayeruid player];
@@ -123,7 +123,7 @@ if (_key == "lolfuckya") then {
 			Donate_id4    = [getplayeruid player];
 			Donate_id5    = [getplayeruid player];
 			Donate_id6 	  = [getplayeruid player];
-			OL_TierX_ID 	    = [getplayeruid player];
+			OL_TierX_ID 	= [getplayeruid player];
 			TopDonator_id = [getplayeruid player];
 		};
 	};
@@ -205,26 +205,28 @@ if (_key == "lolfuckya") then {
 	{
 		case west:
 		{
-			_inventory 			= [(_stats select 2)] call AM_Server_StrToArr;
-			_weapons 				= [(_stats select 3)] call AM_Server_StrToArr;
-			_magazines 			= [(_stats select 4)] call AM_Server_StrToArr;
-			_licenses 			= [(_stats select 5)] call AM_Server_StrToArr;
-			_groundVeh 			= [_stats select 6] call AM_Server_StrToArr;
-			_airVeh 				= [_stats select 7] call AM_Server_StrToArr;
-			_bank 					= [_stats select 8] call AM_Server_StrToArr;
+			if (_key == "full_stats") then {
+				_bank 					= ([_stats select 3] call AM_Server_StrToArr);
+				_inventory 			= ([_stats select 7] call AM_Server_StrToArr);
+				_weapons 				= ([_stats select 8] call AM_Server_StrToArr) select 0;
+				_magazines 			= ([_stats select 8] call AM_Server_StrToArr) select 1;
+				_licenses 			= ([_stats select 9] call AM_Server_StrToArr);
+				//_groundVeh 			= ([_stats select 6] call AM_Server_StrToArr);
+				//_airVeh 				= ([_stats select 7] call AM_Server_StrToArr);
 
-			INV_InventarArray = _inventory;
-			INV_LizenzOwner   = _licenses;
-			kontostand 		  	= _bank;
-			INV_SavedVehLand = _groundVeh;
+				INV_InventarArray = _inventory;
+				INV_LizenzOwner   = _licenses;
+				kontostand 		  	= _bank;
+				//INV_SavedVehLand = _groundVeh;
 
-			{ player addWeapon _x; } forEach _weapons;
+				{ player addWeapon _x; } forEach _weapons;
 
-			{
-				for "_mC" from 1 to (_x select 1) do {
-					player addMagazine (_x select 0);
-				};
-			}forEach _magazines;
+				{
+					for "_mC" from 1 to (_x select 1) do {
+						player addMagazine (_x select 0);
+					};
+				}forEach _magazines;
+			};
 
 			switch (_CopRank) do
 			{
@@ -381,31 +383,33 @@ if (_key == "lolfuckya") then {
 
 		case civilian:
 		{
-			_inventory 	= [_stats select 9]  call AM_Server_StrToArr;
-			_weapons 		= [_stats select 10] call AM_Server_StrToArr;
-			_magazines 	= [_stats select 11] call AM_Server_StrToArr;
-			_lic 				= [_stats select 12] call AM_Server_StrToArr;
-			_GVS 				= [_stats select 13] call AM_Server_StrToArr;
-			_AVS 				= [_stats select 14] call AM_Server_StrToArr;
-			_bank 			= [_stats select 8]  call AM_Server_StrToArr;
+			if (_key == "full_stats") then {
+				_bank 			= ([_stats select 3]  call AM_Server_StrToArr);
+				_inventory 	= ([_stats select 4]  call AM_Server_StrToArr);
+				_weapons 		= ([_stats select 5] call AM_Server_StrToArr) select 0;
+				_magazines 	= ([_stats select 5] call AM_Server_StrToArr) select 1;
+				_lic 				= ([_stats select 6] call AM_Server_StrToArr);
+				//_GVS 				= [_stats select 13] call AM_Server_StrToArr;
+				//_AVS 				= [_stats select 14] call AM_Server_StrToArr;
 
-			INV_InventarArray = _inventory;
-			INV_LizenzOwner   = _lic;
-			INV_SavedVehLand  = _GVS;
-			INV_SavedVehAir   = _AVS;
-			kontostand 		  = _bank;
+				INV_InventarArray = _inventory;
+				INV_LizenzOwner   = _lic;
+				//INV_SavedVehLand  = _GVS;
+				//INV_SavedVehAir   = _AVS;
+				kontostand 		  = _bank;
 
-			if ("car" call INV_haslicense) then {
-				demerits = 10
-			};
-
-			{player addWeapon _x;}forEach _weapons;
-
-			{
-				for "_mC" from 1 to (_x select 1) do {
-					player addMagazine (_x select 0);
+				if ("car" call INV_haslicense) then {
+					demerits = 10
 				};
-			}forEach _magazines;
+
+				{player addWeapon _x;}forEach _weapons;
+
+				{
+					for "_mC" from 1 to (_x select 1) do {
+						player addMagazine (_x select 0);
+					};
+				}forEach _magazines;
+			};
 
 			switch (_PMCRank) do
 			{
@@ -420,7 +424,7 @@ if (_key == "lolfuckya") then {
 			};
 
 			switch (_ReporterRank) do
-			{
+			{//fuckin yolo m8
 				case 0:{};
 				case 1:{
 					Reporter_id = [getplayeruid player];
@@ -441,11 +445,29 @@ if (_key == "lolfuckya") then {
 
 		case resistance:
 		{
-			_bank 					= [_stats select 8] call AM_Server_StrToArr;
-			_lic  					= [_stats select 15] call AM_Server_StrToArr;
+			if (_key == "full_stats") then {
+				_bank 			= ([_stats select 3]  call AM_Server_StrToArr);
+				_inventory 	= ([_stats select 10]  call AM_Server_StrToArr);
+				_weapons 		= ([_stats select 11] call AM_Server_StrToArr) select 0;
+				_magazines 	= ([_stats select 11] call AM_Server_StrToArr) select 1;
+				_lic 				= ([_stats select 12] call AM_Server_StrToArr);
+				//_GVS 				= [_stats select 13] call AM_Server_StrToArr;
+				//_AVS 				= [_stats select 14] call AM_Server_StrToArr;
 
-			INV_LizenzOwner = _lic;
-			kontostand 		= _bank;
+				INV_InventarArray = _inventory;
+				INV_LizenzOwner   = _lic;
+				//INV_SavedVehLand  = _GVS;
+				//INV_SavedVehAir   = _AVS;
+				kontostand 		  = _bank;
+
+				{ player addWeapon _x; } forEach _weapons;
+
+				{
+					for "_mC" from 1 to (_x select 1) do {
+						player addMagazine (_x select 0);
+					};
+				}forEach _magazines;
+			};
 
 			switch (_EMTRank) do
 			{
@@ -499,17 +521,12 @@ if (_key == "lolfuckya") then {
 		};
 	};
 
-	_stapwipe 			= [_stats select 17] call AM_Server_StrToArr;
-	_stapwipeReason = [_stats select 18] call AM_Server_StrToArr;
+	_statWipeMessage = _stats select 14;
+	if (isNil "_statWipeMessage") then { _statWipeMessage = ""; };
 
-	if (_stapwipe != 0) then {
-		if (typeName _stapwipeReason != "STRING") then {
-			call compile format ["%1 = '%1'", _stapwipeReason];
-		};
-
-		player groupChat format["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _stapwipeReason];
-		player groupChat format["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _stapwipeReason];
-		player groupChat format["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _stapwipeReason];
+	if (_statWipeMessage != "") then {
+		player groupChat format["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _statWipeMessage];
+		player groupChat format["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _statWipeMessage];
 
 		INV_InventarArray = [["handy", 1],["schluesselbund", 1]];
 		INV_LizenzOwner   = [];
@@ -519,6 +536,8 @@ if (_key == "lolfuckya") then {
 		_weapons          = [];
 		_magazines 		 		= [];
 
+		OL_NeedsStatwipe = true;
+		OL_StatsLoadedFromDB = true;
 		[] call fnc_SaveStats;
 	};
 };

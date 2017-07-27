@@ -1,5 +1,6 @@
 saveAvailable         = false;
 OL_StatsLoadedFromDB  = false;
+OL_NeedsStatwipe      = false;
 Donate_id 	          = [];
 Donate_id2  	        = [];
 Donate_id3	          = [];
