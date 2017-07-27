@@ -114,7 +114,7 @@ if (_key == "no_data") then {
 			Donate_id4 = [getplayeruid player];
 			Donate_id5 = [getplayeruid player];
 			Donate_id6 = [getplayeruid player];
-			OL_TierX_ID   =  [getplayeruid player];
+			OL_TierX_ID = [getplayeruid player];
 		};
 		case 8:{
 			Donate_id     = [getplayeruid player];
@@ -123,7 +123,7 @@ if (_key == "no_data") then {
 			Donate_id4    = [getplayeruid player];
 			Donate_id5    = [getplayeruid player];
 			Donate_id6 	  = [getplayeruid player];
-			OL_TierX_ID 	    = [getplayeruid player];
+			OL_TierX_ID 	= [getplayeruid player];
 			TopDonator_id = [getplayeruid player];
 		};
 	};
