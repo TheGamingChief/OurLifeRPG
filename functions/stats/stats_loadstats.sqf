@@ -46,85 +46,86 @@ if (_key == "no_data") then {
 	};
 
 	//Load Player Ranks
-	_donorRank =       [_ranks select 3]  call AM_Server_StrToArr; 	//Global
-	_BankIncrease =    [_ranks select 4]  call AM_Server_StrToArr; 	//Global
-	_WeightIncrease =  [_ranks select 5]  call AM_Server_StrToArr; 	//Global
-	_CarSaveIncrease = [_ranks select 6]  call AM_Server_StrToArr; 	//Global
-	_adminRank =       [_ranks select 19] call AM_Server_StrToArr; 	//Global
+	_adminRank 				= [_ranks select 3]  call AM_Server_StrToArr; 	//Global
+	_donorRank 				= [_ranks select 4]  call AM_Server_StrToArr; 	//Global
+	_BankIncrease 		= [_ranks select 5]  call AM_Server_StrToArr; 	//Global
+	_WeightIncrease 	= [_ranks select 6]  call AM_Server_StrToArr; 	//Global
+	_CarSaveIncrease 	= [_ranks select 7]  call AM_Server_StrToArr; 	//Global
 
-	_CopRank =         [_ranks select 9]  call AM_Server_StrToArr;  //Police
-	_isSheriff =       [_ranks select 10] call AM_Server_StrToArr;  //Police
-	_isK9 =            [_ranks select 11] call AM_Server_StrToArr;  //Police
-	_isAviation =      [_ranks select 12] call AM_Server_StrToArr; 	//Police
-	_isSWAT =          [_ranks select 13] call AM_Server_StrToArr; 	//Police
-	_isCoastGuard =    [_ranks select 14] call AM_Server_StrToArr; 	//Police
-	_isFTO =           [_ranks select 16] call AM_Server_StrToArr; 	//Police
-	_isCorrections =   [_ranks select 20] call AM_Server_StrToArr; 	//Police
-	_isUndercover =    [_ranks select 15] call AM_Server_StrToArr; 	//Police
+	_PD_Rank 					= [_ranks select 8]  call AM_Server_StrToArr;  	//Police
+	_PD_Sheriff 			= [_ranks select 9]  call AM_Server_StrToArr;  	//Police
+	_PD_K9 						= [_ranks select 10] call AM_Server_StrToArr;  	//Police
+	_PD_Aviation 			= [_ranks select 11] call AM_Server_StrToArr; 	//Police
+	_PD_SWAT 					= [_ranks select 12] call AM_Server_StrToArr; 	//Police
+	_PD_CoastGuard		= [_ranks select 13] call AM_Server_StrToArr; 	//Police
+	_PD_UnderCover 		= [_ranks select 14] call AM_Server_StrToArr; 	//Police
+	_PD_FTO 					= [_ranks select 15] call AM_Server_StrToArr; 	//Police
+	_PD_MedalRecipt 	= [_ranks select 16] call AM_Server_StrToArr; 	//Police
 
-	_PMCRank =         [_ranks select 7]  call AM_Server_StrToArr; 	//Civilian
-	_ReporterRank =    [_ranks select 8]  call AM_Server_StrToArr; 	//Civilian
-	_isTow =   		     [_ranks select 21] call AM_Server_StrToArr;	//Civilian
-	_isUndercover =    [_ranks select 15] call AM_Server_StrToArr; 	//Civilian
+	_EMS_Rank 				= [_ranks select 17] call AM_Server_StrToArr; 	//ESU
+	_EMS_Air 					= [_ranks select 18] call AM_Server_StrToArr; 	//ESU
+	_EMS_FD 					= [_ranks select 19] call AM_Server_StrToArr; 	//ESU
 
-	_EMTRank =         [_ranks select 17] call AM_Server_StrToArr; 	//ESU
-	_isEMTAir =        [_ranks select 18] call AM_Server_StrToArr; 	//ESU
+	_PMC_Rank 				= [_ranks select 20] call AM_Server_StrToArr; 	//Civilian
+	_Flyers_Rank 			= [_ranks select 21] call AM_Server_StrToArr;		//Civilian
+	_Misc 						= [_ranks select 22] call AM_Server_StrToArr; 	//Civilian
+
 
 	//Load Global Ranks
 	switch (_donorRank) do
 	{
 		case 0:{};
 		case 1:{
-			Donate_id =  [getplayeruid player];
+			Donate_id =  [getPlayerUID player];
 		};
 		case 2:{
-			Donate_id  = [getplayeruid player];
-			Donate_id2 = [getplayeruid player];
+			Donate_id  = [getPlayerUID player];
+			Donate_id2 = [getPlayerUID player];
 		};
 		case 3:{
-			Donate_id  = [getplayeruid player];
-			Donate_id2 = [getplayeruid player];
-			Donate_id3 = [getplayeruid player];
+			Donate_id  = [getPlayerUID player];
+			Donate_id2 = [getPlayerUID player];
+			Donate_id3 = [getPlayerUID player];
 		};
 		case 4:{
-			Donate_id  = [getplayeruid player];
-			Donate_id2 = [getplayeruid player];
-			Donate_id3 = [getplayeruid player];
-			Donate_id4 = [getplayeruid player];
+			Donate_id  = [getPlayerUID player];
+			Donate_id2 = [getPlayerUID player];
+			Donate_id3 = [getPlayerUID player];
+			Donate_id4 = [getPlayerUID player];
 		};
 		case 5:{
-			Donate_id  = [getplayeruid player];
-			Donate_id2 = [getplayeruid player];
-			Donate_id3 = [getplayeruid player];
-			Donate_id4 = [getplayeruid player];
-			Donate_id5 = [getplayeruid player];
+			Donate_id  = [getPlayerUID player];
+			Donate_id2 = [getPlayerUID player];
+			Donate_id3 = [getPlayerUID player];
+			Donate_id4 = [getPlayerUID player];
+			Donate_id5 = [getPlayerUID player];
 		};
 		case 6:{
-			Donate_id  = [getplayeruid player];
-			Donate_id2 = [getplayeruid player];
-			Donate_id3 = [getplayeruid player];
-			Donate_id4 = [getplayeruid player];
-			Donate_id5 = [getplayeruid player];
-			Donate_id6 = [getplayeruid player];
+			Donate_id  = [getPlayerUID player];
+			Donate_id2 = [getPlayerUID player];
+			Donate_id3 = [getPlayerUID player];
+			Donate_id4 = [getPlayerUID player];
+			Donate_id5 = [getPlayerUID player];
+			Donate_id6 = [getPlayerUID player];
 		};
 		case 7:{
-			Donate_id  = [getplayeruid player];
-			Donate_id2 = [getplayeruid player];
-			Donate_id3 = [getplayeruid player];
-			Donate_id4 = [getplayeruid player];
-			Donate_id5 = [getplayeruid player];
-			Donate_id6 = [getplayeruid player];
-			OL_TierX_ID = [getplayeruid player];
+			Donate_id  = [getPlayerUID player];
+			Donate_id2 = [getPlayerUID player];
+			Donate_id3 = [getPlayerUID player];
+			Donate_id4 = [getPlayerUID player];
+			Donate_id5 = [getPlayerUID player];
+			Donate_id6 = [getPlayerUID player];
+			OL_TierX_ID = [getPlayerUID player];
 		};
 		case 8:{
-			Donate_id     = [getplayeruid player];
-			Donate_id2    = [getplayeruid player];
-			Donate_id3    = [getplayeruid player];
-			Donate_id4    = [getplayeruid player];
-			Donate_id5    = [getplayeruid player];
-			Donate_id6 	  = [getplayeruid player];
-			OL_TierX_ID 	= [getplayeruid player];
-			TopDonator_id = [getplayeruid player];
+			Donate_id     = [getPlayerUID player];
+			Donate_id2    = [getPlayerUID player];
+			Donate_id3    = [getPlayerUID player];
+			Donate_id4    = [getPlayerUID player];
+			Donate_id5    = [getPlayerUID player];
+			Donate_id6 	  = [getPlayerUID player];
+			OL_TierX_ID 	= [getPlayerUID player];
+			TopDonator_id = [getPlayerUID player];
 		};
 	};
 
@@ -176,35 +177,31 @@ if (_key == "no_data") then {
 		};
 	};
 
-	switch (_adminRank) do
-	{
-		case 0:{};
-		case 1:{
-			adminlevel1 = [getplayeruid player];
+	switch (_adminRank) do {
+		case 0: {};
+		case 1: {
+			adminlevel1 = [getPlayerUID player];
 		};
-		case 2:{
-			adminlevel2 = [getplayeruid player];
+		case 2: {
+			adminlevel2 = [getPlayerUID player];
 		};
-		case 3:{
-			adminlevel3 = [getplayeruid player];
+		case 3: {
+			adminlevel3 = [getPlayerUID player];
 		};
-		case 4:{
-			adminlevel4 = [getplayeruid player];
+		case 4: {
+			adminlevel4 = [getPlayerUID player];
 		};
-		case 5:{
-			OL_SwagDevs  = [getplayeruid player];
-			OL_Developer = [getplayeruid player];
+		case 5: {
+			OL_SwagDevs  = [getPlayerUID player];
+			OL_Developer = [getPlayerUID player];
 			isStaff 		 = true;
 			player globalChat "Loaded in as Admin";
 		};
 	};
 
-//Load Side Ranks
-
-	switch (_side) do
-	{
-		case west:
-		{
+	//Load Side Ranks
+	switch (_side) do {
+		case west: {
 			if (_key == "full_stats") then {
 				_bank 					= ([_stats select 3] call AM_Server_StrToArr);
 				_inventory 			= ([_stats select 7] call AM_Server_StrToArr);
@@ -219,109 +216,128 @@ if (_key == "no_data") then {
 				kontostand 		  	= _bank;
 				//INV_SavedVehLand = _groundVeh;
 
-				{ player addWeapon _x; } forEach _weapons;
+				{ player addWeapon _x } forEach _weapons;
 
 				{
 					for "_mC" from 1 to (_x select 1) do {
-						player addMagazine (_x select 0);
+						player addMagazine (_x select 0)
 					};
-				}forEach _magazines;
+				} forEach _magazines;
 			};
 
-			switch (_CopRank) do
-			{
-				case 0:{};
-				case 1:{
-					PO1_id = [getplayeruid player];
+			switch (_PD_Rank) do {
+				case 0: {};
+				case 1: {
+					PO1_id = [getPlayerUID player];
 				};
-				case 2:{
-					PO1_id = [getplayeruid player];
-					PO2_id = [getplayeruid player];
+				case 2: {
+					PO1_id = [getPlayerUID player];
+					PO2_id = [getPlayerUID player];
 				};
-				case 3:{
-					PO1_id = [getplayeruid player];
-					PO2_id = [getplayeruid player];
-					PO3_id = [getplayeruid player];
+				case 3: {
+					PO1_id = [getPlayerUID player];
+					PO2_id = [getPlayerUID player];
+					PO3_id = [getPlayerUID player];
 				};
-				case 4:{
-					PO1_id = [getplayeruid player];
-					PO2_id = [getplayeruid player];
-					PO3_id = [getplayeruid player];
-					Cpl_id = [getplayeruid player];
+				case 4: {
+					PO1_id = [getPlayerUID player];
+					PO2_id = [getPlayerUID player];
+					PO3_id = [getPlayerUID player];
+					Cpl_id = [getPlayerUID player];
 				};
-				case 5:{
-					PO1_id = [getplayeruid player];
-					PO2_id = [getplayeruid player];
-					PO3_id = [getplayeruid player];
-					Cpl_id = [getplayeruid player];
-					Sgt_id = [getplayeruid player];
+				case 5: {
+					PO1_id = [getPlayerUID player];
+					PO2_id = [getPlayerUID player];
+					PO3_id = [getPlayerUID player];
+					Cpl_id = [getPlayerUID player];
+					Sgt_id = [getPlayerUID player];
 				};
-				case 6:{
-					PO1_id = [getplayeruid player];
-					PO2_id = [getplayeruid player];
-					PO3_id = [getplayeruid player];
-					Cpl_id = [getplayeruid player];
-					Sgt_id = [getplayeruid player];
-					Lt_id  = [getplayeruid player];
+				case 6: {
+					PO1_id = [getPlayerUID player];
+					PO2_id = [getPlayerUID player];
+					PO3_id = [getPlayerUID player];
+					Cpl_id = [getPlayerUID player];
+					Sgt_id = [getPlayerUID player];
+					Lt_id  = [getPlayerUID player];
 				};
-				case 7:{
-					PO1_id = [getplayeruid player];
-					PO2_id = [getplayeruid player];
-					PO3_id = [getplayeruid player];
-					Cpl_id = [getplayeruid player];
-					Sgt_id = [getplayeruid player];
-					Lt_id  = [getplayeruid player];
-					Cpt_Id = [getplayeruid player];
+				case 7: {
+					PO1_id = [getPlayerUID player];
+					PO2_id = [getPlayerUID player];
+					PO3_id = [getPlayerUID player];
+					Cpl_id = [getPlayerUID player];
+					Sgt_id = [getPlayerUID player];
+					Lt_id  = [getPlayerUID player];
+					Cpt_Id = [getPlayerUID player];
 				};
-				case 8:{
-					PO1_id 	 = [getplayeruid player];
-					PO2_id 	 = [getplayeruid player];
-					PO3_id   = [getplayeruid player];
-					Cpl_id   = [getplayeruid player];
-					Sgt_id   = [getplayeruid player];
-					Lt_id    = [getplayeruid player];
-					Cpt_Id   = [getplayeruid player];
-					Chief_id = [getplayeruid player];
-				};
-			};
-
-			switch (_isSheriff) do
-			{
-				case 0:{};
-				case 1:{
-					Deputy_id = [getplayeruid player];
-				};
-				case 2:{
-					Deputy_id 	 = [getplayeruid player];
-					SgtDeputy_id = [getplayeruid player];
-				};
-				case 3:{
-					Deputy_id 	 = [getplayeruid player];
-					SgtDeputy_id = [getplayeruid player];
-					Sheriff_id 	 = [getplayeruid player];
+				case 8: {
+					PO1_id 	 = [getPlayerUID player];
+					PO2_id 	 = [getPlayerUID player];
+					PO3_id   = [getPlayerUID player];
+					Cpl_id   = [getPlayerUID player];
+					Sgt_id   = [getPlayerUID player];
+					Lt_id    = [getPlayerUID player];
+					Cpt_Id   = [getPlayerUID player];
+					Chief_id = [getPlayerUID player];
 				};
 			};
 
-			if (_isK9 != 0) then {
-				K9_id = [getplayeruid player];
+			switch (_PD_Sheriff) do {
+				case 0: {};
+				case 1: {
+					JrDeputy_id  = [getPlayerUID player];
+				};
+				case 2: {
+					JrDeputy_id  = [getPlayerUID player];
+					Deputy_id 	 = [getPlayerUID player];
+				};
+				case 3: {
+					JrDeputy_id  = [getPlayerUID player];
+					Deputy_id 	 = [getPlayerUID player];
+					SrDeputy_id  = [getPlayerUID player];
+				};
+				case 4: {
+					JrDeputy_id  = [getPlayerUID player];
+					Deputy_id 	 = [getPlayerUID player];
+					SrDeputy_id  = [getPlayerUID player];
+					CplDeputy_id = [getPlayerUID player];
+				};
+				case 5: {
+					JrDeputy_id  = [getPlayerUID player];
+					Deputy_id 	 = [getPlayerUID player];
+					SrDeputy_id  = [getPlayerUID player];
+					CplDeputy_id = [getPlayerUID player];
+					SgtDeputy_id = [getPlayerUID player];
+				};
+				case 6: {
+					JrDeputy_id  = [getPlayerUID player];
+					Deputy_id 	 = [getPlayerUID player];
+					SrDeputy_id  = [getPlayerUID player];
+					CplDeputy_id = [getPlayerUID player];
+					SgtDeputy_id = [getPlayerUID player];
+					Sheriff_id   = [getPlayerUId player];
+				};
 			};
-			if (_isAviation != 0) then {
-				PDAviation_id = [getplayeruid player];
+
+			if (_PD_K9 != 0) then {
+				K9_id = [getPlayerUID player];
 			};
-			if (_isSwat != 0) then {
-				SWAT_id = [getplayeruid player];
+			if (_PD_Aviation != 0) then {
+				PDAviation_id = [getPlayerUID player];
 			};
-			if (_isCoastGuard != 0) then {
-				CoastGuard_id = [getplayeruid player];
+			if (_PD_SWAT != 0) then {
+				SWAT_id = [getPlayerUID player];
 			};
-			if (_isFTO != 0) then {
-				FTO_id = [getplayeruid player];
+			if (_PD_UnderCover != 0) then {
+				Undercover_id = [getPlayerUID player];
 			};
-			if (_isCorrections != 0) then {
-				Corrections_id = [getplayeruid player];
+			if (_PD_CoastGuard != 0) then {
+				CoastGuard_id = [getPlayerUID player];
 			};
-			if (_isUndercover != 0) then {
-				Undercover_id = [getplayeruid player];
+			if (_PD_FTO != 0) then {
+				FTO_id = [getPlayerUID player];
+			};
+			if (_PD_MedalRecipt != 0) then {
+				MedalRecipt_id = [getPlayerUID player];
 			};
 
 			{
@@ -411,7 +427,7 @@ if (_key == "no_data") then {
 				}forEach _magazines;
 			};
 
-			switch (_PMCRank) do
+			switch (_PMC_Rank) do
 			{
 				case 0:{};
 				case 1:{
@@ -423,22 +439,24 @@ if (_key == "no_data") then {
 				};
 			};
 
-			switch (_ReporterRank) do
-			{
-				case 0:{};
-				case 1:{
-					Reporter_id = [getplayeruid player];
-				};
-				case 2:{
-					Reporter_id 	= [getplayeruid player];
-					ReporterLead_id = [getplayeruid player];
-				};
+			switch (_Misc) do {
+				case 0:  {};
+				case 1:  {};
+				case 2:  {};
+				case 3:  {};
+				case 4:  {};
+				case 5:  {};
+				case 6:  {};
+				case 7:  {};
+				case 8:  {};
+				case 9:  {};
+				case 10: {};
 			};
 
-			if (_isTow != 0) then {
+			if (_Flyers_Rank != 0) then {
 				Tow_id = [getplayeruid player];
 			};
-			if (_isUndercover != 0) then {
+			if (_PD_UnderCover != 0) then {
 				Undercover_id = [getplayeruid player];
 			};
 		};
@@ -447,7 +465,7 @@ if (_key == "no_data") then {
 		{
 			if (_key == "full_stats") then {
 				_bank 			= ([_stats select 3]  call AM_Server_StrToArr);
-				_inventory 	= ([_stats select 10]  call AM_Server_StrToArr);
+				_inventory 	= ([_stats select 10] call AM_Server_StrToArr);
 				_weapons 		= ([_stats select 11] call AM_Server_StrToArr) select 0;
 				_magazines 	= ([_stats select 11] call AM_Server_StrToArr) select 1;
 				_lic 				= ([_stats select 12] call AM_Server_StrToArr);
@@ -469,7 +487,7 @@ if (_key == "no_data") then {
 				}forEach _magazines;
 			};
 
-			switch (_EMTRank) do
+			switch (_EMS_Rank) do
 			{
 				case 0:{};
 				case 1:{
@@ -491,15 +509,31 @@ if (_key == "no_data") then {
 					FD_id   = [getplayeruid player];
 				};
 				case 5:{
-					EMT1_id       = [getplayeruid player];
-					EMT2_id 	  	= [getplayeruid player];
-					EMT3_id 	  	= [getplayeruid player];
-					FD_id   	  	= [getplayeruid player];
-					ESUCommand_id = [getplayeruid player];
+					EMT1_id       	 = [getplayeruid player];
+					EMT2_id 	  		 = [getplayeruid player];
+					EMT3_id 	  		 = [getplayeruid player];
+					FD_id   	  		 = [getplayeruid player];
+					EMTSupervisor_id = [getplayeruid player];
+				};
+				case 6: {
+					EMT1_id       	 = [getplayeruid player];
+					EMT2_id 	  		 = [getplayeruid player];
+					EMT3_id 	  		 = [getplayeruid player];
+					FD_id   	  		 = [getplayeruid player];
+					EMTSupervisor_id = [getplayeruid player];
+					EMTLieutenant_id = [getplayeruid player];
+				};
+				case 7: {
+					EMT1_id       	 = [getplayeruid player];
+					EMT2_id 	  		 = [getplayeruid player];
+					EMT3_id 	  		 = [getplayeruid player];
+					FD_id   	  		 = [getplayeruid player];
+					EMTSupervisor_id = [getplayeruid player];
+					EMTLieutenant_id = [getplayeruid player];
 				};
 			};
 
-			if (_isEMTAir != 0) then {
+			if (_EMS_Air != 0) then {
 				AirESU_id = [getplayeruid player];
 			};
 
@@ -517,28 +551,30 @@ if (_key == "no_data") then {
   						player groupChat format["Welcome Chief %1! Go save some lifes!",name player];
 					};
 				};
-			}forEach EMSChiefArray;
+			} forEach EMSChiefArray;
 		};
 	};
 
-	_statWipeMessage = _stats select 14;
-	if (isNil "_statWipeMessage") then { _statWipeMessage = ""; };
+	if (count _stats != 0) then {
+		_statWipeMessage = _stats select 14;
+		if (isNil "_statWipeMessage") then { _statWipeMessage = ""; };
 
-	if (_statWipeMessage != "") then {
-		player groupChat format["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _statWipeMessage];
-		player groupChat format["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _statWipeMessage];
+		if (_statWipeMessage != "") then {
+			player groupChat format["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _statWipeMessage];
+			player groupChat format["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _statWipeMessage];
 
-		INV_InventarArray = [["handy", 1],["schluesselbund", 1]];
-		INV_LizenzOwner   = [];
-		INV_SavedVehLand  = [];
-		INV_SavedVehAir   = [];
-		kontostand 		  	= 25000;
-		_weapons          = [];
-		_magazines 		 		= [];
+			INV_InventarArray = [["handy", 1],["schluesselbund", 1]];
+			INV_LizenzOwner   = [];
+			INV_SavedVehLand  = [];
+			INV_SavedVehAir   = [];
+			kontostand 		  	= 25000;
+			_weapons          = [];
+			_magazines 		 		= [];
 
-		OL_NeedsStatwipe = true;
-		OL_StatsLoadedFromDB = true;
-		[] call fnc_SaveStats;
+			OL_NeedsStatwipe = true;
+			OL_StatsLoadedFromDB = true;
+			[] call fnc_SaveStats;
+		};
 	};
 };
 

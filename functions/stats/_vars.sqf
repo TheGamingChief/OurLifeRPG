@@ -21,9 +21,14 @@ Sgt_id 				        = [];
 Lt_id 				        = [];
 Cpt_id 				        = [];
 Chief_id 			        = [];
-Deputy_id 			      = [];
-SgtDeputy_id 		      = [];
-Sheriff_id 			      = [];
+// Sheriff
+JrDeputy_id           = [];
+Deputy_id 	          = [];
+SrDeputy_id           = [];
+CplDeputy_id          = [];
+SgtDeputy_id          = [];
+Sheriff_id            = [];
+// Sheriff end
 K9_id 				        = [];
 PDAviation_id 		    = [];
 SWAT_id 			        = [];
