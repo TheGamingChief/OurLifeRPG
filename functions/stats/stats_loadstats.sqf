@@ -555,11 +555,12 @@ if (_key == "no_data") then {
 		};
 	};
 
-	if (count _stats != 0) then {
+	if (_key == "full_stats") then {
 		_statWipeMessage = _stats select 14;
 		if (isNil "_statWipeMessage") then { _statWipeMessage = ""; };
 
 		if (_statWipeMessage != "") then {
+			systemChat "Statistics Loaded...";
 			player groupChat format["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _statWipeMessage];
 			player groupChat format["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _statWipeMessage];
 
@@ -571,15 +572,17 @@ if (_key == "no_data") then {
 			_weapons          = [];
 			_magazines 		 		= [];
 
+			saveAvailable = true;
 			OL_NeedsStatwipe = true;
 			OL_StatsLoadedFromDB = true;
 			[] call fnc_SaveStats;
+			
+		} else {
+			OL_StatsLoadedFromDB = true;
+			saveAvailable = true;
+
+			[] call INV_RemoveEmptyItems;
+			systemChat "Statistics Loaded...";
 		};
 	};
 };
-
-OL_StatsLoadedFromDB = true;
-saveAvailable = true;
-
-[] call INV_RemoveEmptyItems;
-systemChat "Statistics Loaded...";

@@ -49,3 +49,5 @@ adminlevel2 		      = [];
 adminlevel1 		      = [];
 INV_SavedVehLand      = [];
 INV_SavedVehAir       = [];
+
+OL_VehicleArray       = [];
