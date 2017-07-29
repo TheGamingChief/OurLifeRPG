@@ -27,8 +27,10 @@ DD_Modules = DD_Modules + [
   ["OL",    "misc", "Radar",               0],
   ["CP",    "misc", "ArrayOffsetSelector", 1],
   ["CP",    "misc", "ArrayOffsetTrimmer",  1],
+  ["CP",    "misc", "ArrayCargoCombiner",  1],
   ["CP",    "misc", "ArrayOffsetDelete",   1],
   ["CP",    "misc", "GetRandomCode",       1],
+  ["CP",    "misc", "whereYouAtTho",       1],
   ["CP",    "misc", "NearestCar",          1],
   ["CP",    "misc", "countArray",          1],
   ["Item",  "misc", "Bunnyhop",            1]

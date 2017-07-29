@@ -20,6 +20,7 @@ _activeModules = [
 	"player",
 	"tfar",
 	"stats",
+	"vehicle",
 	"ui",
 	"init"
 ];

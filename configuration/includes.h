@@ -32,4 +32,4 @@
 #include "dialog\swagswagcop.hpp"
 #include "dialog\swagswagesu.hpp"
 #include "dialog\ui_checkpoint.hpp"
-#include "dialog\ui_clothesmenu.hpp"
+#include "dialog\ui_listmenu.hpp"

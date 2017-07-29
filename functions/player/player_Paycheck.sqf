@@ -63,14 +63,14 @@ if (playerSide == west) exitWith {
   	};
   };
 
-  if (getPlayerUID player in Corrections_id) then { _income = _income + 10000  };
-  if (getPlayerUID player in Donate_id)     then { _income = _income + 1500  };
-  if (getPlayerUID player in OL_TierX_ID)   then { _income = _income + 3000  };
-  if (getPlayerUID player in TopDonator_id) then { _income = _income + 5000  };
-  if (getPlayerUID player in adminlevel1) 	then { _income = _income + 2500  };
-  if (getPlayerUID player in adminlevel2)   then { _income = _income + 5000  };
-  if (getPlayerUID player in adminlevel3) 	then { _income = _income + 7500  };
-  if (getPlayerUID player in adminlevel4) 	then { _income = _income + 10000 };
+  if (getPlayerUID player in MedalRecipt_id) then { _income = _income + 10000 };
+  if (getPlayerUID player in Donate_id)      then { _income = _income + 1500  };
+  if (getPlayerUID player in OL_TierX_ID)    then { _income = _income + 3000  };
+  if (getPlayerUID player in TopDonator_id)  then { _income = _income + 5000  };
+  if (getPlayerUID player in adminlevel1) 	 then { _income = _income + 2500  };
+  if (getPlayerUID player in adminlevel2)    then { _income = _income + 5000  };
+  if (getPlayerUID player in adminlevel3) 	 then { _income = _income + 7500  };
+  if (getPlayerUID player in adminlevel4) 	 then { _income = _income + 10000 };
 
   Kontostand = Kontostand + (round _income);
   player groupChat format [localize "STRS_geld_copmoneyadd", rolestring, ((round _income) call OL_ISSE_str_IntToStr)];

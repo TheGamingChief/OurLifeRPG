@@ -1,4 +1,4 @@
-class UI_ClothesMenu {
+class UI_ListMenu {
 	idd = -1;
   controlsBackground[] = {UI_ClothesMenu_Background};
 	controls[] = {

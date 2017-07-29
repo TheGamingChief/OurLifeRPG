@@ -227,51 +227,40 @@ INV_CreateVehicle = {
       this addmagazineCargo ["20Rnd_762x51_DMR",4];
     '; processInitCommands;
   };
+
+  newvehicle;
 };
 
+INV_CreateWeapon = {
+  private["_class", "_menge", "_crate"];
+  _class = _this select 0;
+  _menge = _this select 1;
+  _crate = _this select 2;
+  _crate setDamage 0;
 
-INV_CreateWeapon =
-
-{
-
-private["_class", "_menge", "_crate"];
-_class = _this select 0;
-_menge = _this select 1;
-_crate = _this select 2;
-_crate setDamage 0;
-
-_crate setvehicleinit format["
-this addweaponCargo [""%1"",%2];
-", _class, _menge];
-processInitCommands;
-
+  _crate setvehicleinit format["
+  this addweaponCargo [""%1"",%2];
+  ", _class, _menge];
+  processInitCommands;
 };
 
-INV_CreateMag =
+INV_CreateMag = {
+  private["_class", "_menge", "_crate"];
+  _class = _this select 0;
+  _menge = _this select 1;
+  _crate = _this select 2;
+  _crate setDamage 0;
 
-{
-
-private["_class", "_menge", "_crate"];
-_class = _this select 0;
-_menge = _this select 1;
-_crate = _this select 2;
-_crate setDamage 0;
-
-_crate setvehicleinit format["
-this addmagazineCargo [""%1"",%2];
-", _class, _menge];
-processInitCommands;
-
+  _crate setvehicleinit format["
+  this addmagazineCargo [""%1"",%2];
+  ", _class, _menge];
+  processInitCommands;
 };
 
-INV_CreateItem =
-
-{
-
-private["_class", "_menge", "_stor"];
-_class = _this select 0;
-_menge = _this select 1;
-_stor  = _this select 2;
-[_class, _menge, _stor] call INV_AddItemStorage;
-
+INV_CreateItem = {
+  private["_class", "_menge", "_stor"];
+  _class = _this select 0;
+  _menge = _this select 1;
+  _stor  = _this select 2;
+  [_class, _menge, _stor] call INV_AddItemStorage;
 };

@@ -155,7 +155,7 @@ fnc_KeyPress_L = {
 	if (count _vcls > 0) then {
 		_vcl = _vcls select 0;
 		if(!(_vcl in INV_VehicleArray))exitwith{player groupchat "You do not have the keys to this vehicle.";};
-		["schluessel", _vcl, 0] execVM "keys.sqf";
+		["LOCK", _vcl] call OL_fnc_Keys;
 	};
 };
 

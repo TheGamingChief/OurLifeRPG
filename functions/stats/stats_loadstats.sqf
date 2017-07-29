@@ -15,7 +15,6 @@ if (_key == "no_data") then {
 	INV_SavedVehAir = [];
 	INV_SavedVehLand = [];
 } else {
-
 	//Get Data
 	_side 	= playerSide;
 	_Stats 	= _this select 1;
@@ -340,68 +339,38 @@ if (_key == "no_data") then {
 				MedalRecipt_id = [getPlayerUID player];
 			};
 
-			{
-				if (_civnum == _x) then {
-					if !(_uid in Chief_id) then {
-  						player groupChat "This slot is reserved to the Chief of Police! You will be kicked back to lobby in 10 seconds!";
-							uiSleep 10;
-		   				endMission "LOSER";
-					} else {
-  						player groupChat "Welcome Chief, Go Kick Some Ass!!!";
-					};
+			switch (true) do {
+				// Chief
+				case ((_civnum == cop1 || _civnum == cop2) && !(_uid in Chief_id)): {
+					player groupChat "This slot is reserved to the Chief Of Police! You will be kicked back to lobby in 10 seconds!";
+					uiSleep 10;
+					endMission "LOSER";
 				};
-			} forEach CopChiefArray;
-
-			{
-				if (_civnum == _x) then {
-					if !(_uid in Cpt_ID)then {
-  						player groupChat "This slot is reserved for Captains only! You will be kicked back to the lobby in 10 seconds!";
-  						uiSleep 10;
-  						endMission "LOSER";
-					} else {
-  						player groupChat format["Welcome Captain %1!",name player];
-					};
+				// Captain
+				case ((_civnum == cop3 || _civnum == cop4) && !(_uid in Cpt_id)): {
+					player groupChat "This slot is reserved for Police Captains! You will be kicked back to lobby in 10 seconds!";
+					uiSleep 10;
+					endMission "LOSER";
 				};
-			} forEach CopCptArray;
-
-			{
-				if (_civnum == _x) then
-				{
-					if !(_uid in Sheriff_id) then
-					{
-  						player groupChat "This slot is reserved for the Sheriff! You will be kicked back to lobby in 10 seconds!";
-  						uiSleep 10;
-  						endMission "LOSER";
-					}
-					else
-					{
-  						player groupChat "Welcome Sheriff, remember to set an example for the Patrol Division.";
-					};
+				// Sheriff
+				case (_civnum == cop35 && !(_uid in Sheriff_id)): {
+					player groupChat "This slot is reserved for the Sheriff! You will be kicked back to lobby in 10 seconds!";
+					uiSleep 10;
+					endMission "LOSER";
 				};
-			} forEach CopSheriffArray;
-
-			{
-				if (_civnum == _x) then
-				{
-					if !(_uid in Deputy_id) then
-					{
-  						player groupChat "This slot is reserved for a Sheriff's Deputy! You will be kicked back to lobby in 10 seconds!";
-  						uiSleep 10;
-  						endMission "LOSER";
-					}
-					else
-					{
-  						player groupChat "Welcome Deputy, remember to set an example for the Patrol Division.";
-					};
+				// Deputy
+				case ((_civnum == cop36 || _civnum == cop37 || _civnum == cop38 || _civnum == cop39 || _civnum == cop40) && !(_uid in JrDeputy_id)): {
+					player groupChat "This slot is reserved for Deputies only! You will be kicked back to lobby in 10 seconds!";
+					uiSleep 10;
+					endMission "LOSER";
 				};
-			} forEach CopDeputyArray;
+			};
 		};
 
-		case civilian:
-		{
+		case civilian: {
 			if (_key == "full_stats") then {
-				_bank 			= ([_stats select 3]  call AM_Server_StrToArr);
-				_inventory 	= ([_stats select 4]  call AM_Server_StrToArr);
+				_bank 			= ([_stats select 3] call AM_Server_StrToArr);
+				_inventory 	= ([_stats select 4] call AM_Server_StrToArr);
 				_weapons 		= ([_stats select 5] call AM_Server_StrToArr) select 0;
 				_magazines 	= ([_stats select 5] call AM_Server_StrToArr) select 1;
 				_lic 				= ([_stats select 6] call AM_Server_StrToArr);
@@ -429,13 +398,13 @@ if (_key == "no_data") then {
 
 			switch (_PMC_Rank) do
 			{
-				case 0:{};
-				case 1:{
-					PMC_id = [getplayeruid player];
+				case 0: {};
+				case 1: {
+					PMC_id = [getPlayerUID player];
 				};
-				case 2:{
-					PMC_id 		  = [getplayeruid player];
-					CommandPMC_id = [getplayeruid player];
+				case 2: {
+					PMC_id 		  	= [getPlayerUID player];
+					CommandPMC_id = [getPlayerUID player];
 				};
 			};
 
@@ -489,47 +458,48 @@ if (_key == "no_data") then {
 
 			switch (_EMS_Rank) do
 			{
-				case 0:{};
-				case 1:{
-					EMT1_id = [getplayeruid player];
+				case 0: {};
+				case 1: {
+					EMT1_id = [getPlayerUID player];
 				};
-				case 2:{
-					EMT1_id = [getplayeruid player];
-					EMT2_id = [getplayeruid player];
+				case 2: {
+					EMT1_id = [getPlayerUID player];
+					EMT2_id = [getPlayerUID player];
 				};
-				case 3:{
-					EMT1_id = [getplayeruid player];
-					EMT2_id = [getplayeruid player];
-					EMT3_id = [getplayeruid player];
+				case 3: {
+					EMT1_id = [getPlayerUID player];
+					EMT2_id = [getPlayerUID player];
+					EMT3_id = [getPlayerUID player];
 				};
 				case 4:{
-					EMT1_id = [getplayeruid player];
-					EMT2_id = [getplayeruid player];
-					EMT3_id = [getplayeruid player];
-					FD_id   = [getplayeruid player];
+					EMT1_id       	 = [getPlayerUID player];
+					EMT2_id 	  		 = [getPlayerUID player];
+					EMT3_id 	  		 = [getPlayerUID player];
+					EMTSupervisor_id = [getPlayerUID player];
 				};
-				case 5:{
-					EMT1_id       	 = [getplayeruid player];
-					EMT2_id 	  		 = [getplayeruid player];
-					EMT3_id 	  		 = [getplayeruid player];
-					FD_id   	  		 = [getplayeruid player];
-					EMTSupervisor_id = [getplayeruid player];
+				case 5: {
+					EMT1_id       	 = [getPlayerUID player];
+					EMT2_id 	  		 = [getPlayerUID player];
+					EMT3_id 	  		 = [getPlayerUID player];
+					EMTSupervisor_id = [getPlayerUID player];
+					EMTLieutenant_id = [getPlayerUID player];
 				};
 				case 6: {
-					EMT1_id       	 = [getplayeruid player];
-					EMT2_id 	  		 = [getplayeruid player];
-					EMT3_id 	  		 = [getplayeruid player];
-					FD_id   	  		 = [getplayeruid player];
-					EMTSupervisor_id = [getplayeruid player];
-					EMTLieutenant_id = [getplayeruid player];
+					EMT1_id       	 = [getPlayerUID player];
+					EMT2_id 	  		 = [getPlayerUID player];
+					EMT3_id 	  		 = [getPlayerUID player];
+					EMTSupervisor_id = [getPlayerUID player];
+					EMTLieutenant_id = [getPlayerUID player];
+					EMTCaptain_id		 = [getPlayerUID player];
 				};
 				case 7: {
-					EMT1_id       	 = [getplayeruid player];
-					EMT2_id 	  		 = [getplayeruid player];
-					EMT3_id 	  		 = [getplayeruid player];
-					FD_id   	  		 = [getplayeruid player];
-					EMTSupervisor_id = [getplayeruid player];
-					EMTLieutenant_id = [getplayeruid player];
+					EMT1_id       	 = [getPlayerUID player];
+					EMT2_id 	  		 = [getPlayerUID player];
+					EMT3_id 	  		 = [getPlayerUID player];
+					EMTSupervisor_id = [getPlayerUID player];
+					EMTLieutenant_id = [getPlayerUID player];
+					EMTCaptain_id		 = [getPlayerUID player];
+					EMTChief_id 		 = [getPlayerUID player];
 				};
 			};
 
@@ -537,30 +507,25 @@ if (_key == "no_data") then {
 				AirESU_id = [getplayeruid player];
 			};
 
-			{
-				if (_civnum == _x) then
-				{
-					if !(_uid in ESUCommand_id) then
-					{
-  						player groupChat "This slot is reserved for the Chief Of EMS! You will be kicked back to lobby in 10 seconds!";
-  						uiSleep 10;
-  						endMission "LOSER";
-					}
-					else
-					{
-  						player groupChat format["Welcome Chief %1! Go save some lifes!",name player];
-					};
+			if (_EMS_FD != 0) then {
+				FD_id = [getplayeruid player];
+			};
+
+			switch (true) do {
+				case (_civnum == emt1 && !(_uid in EMTChief_id)): {
+					player groupChat "This slot is reserved for the EMS Chief only! You will be kicked back to the lobby in 10 seconds.";
+					uiSleep 10;
+					endMission "LOSER";
 				};
-			} forEach EMSChiefArray;
+			};
 		};
 	};
 
-	if (_key == "full_stats") then {
+	if (count _stats != 0) then {
 		_statWipeMessage = _stats select 14;
 		if (isNil "_statWipeMessage") then { _statWipeMessage = ""; };
 
 		if (_statWipeMessage != "") then {
-			systemChat "Statistics Loaded...";
 			player groupChat format["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _statWipeMessage];
 			player groupChat format["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _statWipeMessage];
 
@@ -572,17 +537,15 @@ if (_key == "no_data") then {
 			_weapons          = [];
 			_magazines 		 		= [];
 
-			saveAvailable = true;
 			OL_NeedsStatwipe = true;
 			OL_StatsLoadedFromDB = true;
 			[] call fnc_SaveStats;
-			
-		} else {
-			OL_StatsLoadedFromDB = true;
-			saveAvailable = true;
-
-			[] call INV_RemoveEmptyItems;
-			systemChat "Statistics Loaded...";
 		};
 	};
 };
+
+OL_StatsLoadedFromDB = true;
+saveAvailable = true;
+
+[] call INV_RemoveEmptyItems;
+systemChat "Statistics Loaded...";
