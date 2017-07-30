@@ -271,25 +271,24 @@ if (_art == "steuern") exitWith {
 if (_art == "impound") exitWith {
 
     if (!(createDialog "distribute")) exitWith {hint "Dialog Error!"};
-    private "_j"; /// BUG FIX
+
     ctrlSetText [3, format["Retrieve impounded vehicle ($%1)", impoundpay]];
 
-    _impoundArr = [getPlayerUID player, SpeedyServerImpound] call CP_fnc_ImpoundSearchArr;
+    _impoundArr = [] call OL_vehicle_getImpounded;
 
-	{
-        lbAdd [1, _x];
+		{
+        _index = lbAdd [1, (_x select 1) call INV_getitemName];
+				lbSetData [1, _index, str(_x select 0)];
     } foreach _impoundArr;
 
     buttonSetAction [2, "
-		if(iscop and count (nearestobjects [getpos ctrafficspawn,[""Ship"",""car"",""motorcycle"",""truck""], 3]) > 0)exitwith{player groupchat ""There is a vehicle blocking the spawn!""};
-		if(isciv and count (nearestobjects [getpos impoundarea2, [""Ship"",""car"",""motorcycle"",""truck""], 3]) > 0)exitwith{player groupchat ""There is a vehicle blocking the spawn!""};
-		if((""geld"" call INV_getitemamount) < impoundpay)exitwith{player groupchat ""you do not have enough money""};
-		[""geld"", -impoundpay] call INV_AddInvItem;
+			if(iscop and count (nearestobjects [getpos ctrafficspawn,[""Ship"",""car"",""motorcycle"",""truck""], 3]) > 0)exitwith{player groupchat ""There is a vehicle blocking the spawn!""};
+			if(isciv and count (nearestobjects [getpos impoundarea2, [""Ship"",""car"",""motorcycle"",""truck""], 3]) > 0)exitwith{player groupchat ""There is a vehicle blocking the spawn!""};
+			if((""geld"" call INV_getitemamount) < impoundpay)exitwith{player groupchat ""you do not have enough money""};
+			[""geld"", -impoundpay] call INV_AddInvItem;
 
-		SpeedyServerImpound = [getPlayerUID player, lbText [1, (lbCurSel 1)], SpeedyServerImpound] call CP_fnc_ImpoundRemoveArr;
-		publicVariable ""SpeedyServerImpound"";
-		[lbText [1, (lbCurSel 1)],""buy""] execVM ""impound.sqf"";
-	"];
+			[lbData [1, (lbCurSel 1)]] call OL_vehicle_ImpoundBuy;
+		"];
 };
 
 if (_art == "gangmenu") then

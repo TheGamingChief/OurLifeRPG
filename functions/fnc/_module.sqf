@@ -22,6 +22,7 @@ DD_Modules = DD_Modules + [
   ["OL",          "fnc",  "retrieveVehicle",  1],
   ["OL",          "fnc",  "HolsterWeapon",    1],
   ["OL",          "fnc",  "Keys",             1],
+  ["OL",          "fnc",  "Lockpick",         1],
   ["OL",          "fnc",  "Pit",              1],
   ["DD",          "fnc",  "Message",          1],
   ["DD",          "fnc",  "dispatchHint",     1],

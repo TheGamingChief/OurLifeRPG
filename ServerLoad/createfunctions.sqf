@@ -54,7 +54,8 @@ INV_CreateVehicle = {
       INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2];
       "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if(""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeof vehicle_%1_%2, %4] execVM ""%3"";};" call OL_network_Swag;
       ', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getDir _logic];
-      newvehicle setVariable ["vcl_owner", getPlayerUID player, true];
+      newvehicle setVariable ["OL_Owner",   player,               true];
+      newvehicle setVariable ["OL_OwnerID", getPlayerUID player,  true];
     };
     if (_classname == "fire_atv") then {
       call compile format['
@@ -77,7 +78,8 @@ INV_CreateVehicle = {
       newvehicle addWeapon "SportCarHorn";
       newvehicle addWeapon "NewAirHorn";
       newvehicle addWeapon "Intersection";
-      newvehicle setVariable ["vcl_owner", getPlayerUID player, true];
+      newvehicle setVariable ["OL_Owner",   player,               true];
+      newvehicle setVariable ["OL_OwnerID", getPlayerUID player,  true];
     };
     if (_classname == "HMMWV_DES_EP1") then {
         call compile format['
@@ -99,7 +101,8 @@ INV_CreateVehicle = {
          ', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getDir _logic];
          {newvehicle removeWeapon _x}forEach weapons newvehicle;
          newvehicle addWeapon "TruckHorn";
-         newvehicle setVariable ["vcl_owner", getPlayerUID player, true];
+         newvehicle setVariable ["OL_Owner",   player,               true];
+         newvehicle setVariable ["OL_OwnerID", getPlayerUID player,  true];
     };
     if (_classname in _type1) then {
       call compile format ['
@@ -118,7 +121,8 @@ INV_CreateVehicle = {
       INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2];
       "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call OL_network_Swag;
       ', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
-      newvehicle setVariable ["vcl_owner", getPlayerUID player, true];
+      newvehicle setVariable ["OL_Owner",   player,               true];
+      newvehicle setVariable ["OL_OwnerID", getPlayerUID player,  true];
     };
     if (_classname in _type2) then {
       call compile format ['
@@ -137,7 +141,8 @@ INV_CreateVehicle = {
       INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2];
       "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call OL_network_Swag;
       ', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
-      newvehicle setVariable ["vcl_owner", getPlayerUID player, true];
+      newvehicle setVariable ["OL_Owner",   player,               true];
+      newvehicle setVariable ["OL_OwnerID", getPlayerUID player,  true];
     };
   } else {
     call compile format ['
@@ -155,7 +160,8 @@ INV_CreateVehicle = {
       INV_VehicleArray = INV_VehicleArray + [vehicle_%1_%2];
       "INV_ServerVclArray = INV_ServerVclArray + [vehicle_%1_%2];if (""%3"" != """") then {[""CreatedVehicle"", vehicle_%1_%2, typeOf vehicle_%1_%2, %4] execVM ""%3"";};" call OL_network_Swag;
     ', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
-    newvehicle setVariable ["vcl_owner", getPlayerUID player, true];
+    newvehicle setVariable ["OL_Owner",   player,               true];
+    newvehicle setVariable ["OL_OwnerID", getPlayerUID player,  true];
   };
   if (_classname == "tcg_wave_red") then {
     newvehicle addweapon "DSHKM";

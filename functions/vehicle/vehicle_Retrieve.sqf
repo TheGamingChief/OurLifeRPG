@@ -1,9 +1,12 @@
-_data = call compile (_this select 0);
+_data = [];
+if (typeName (_this select 0) == "STRING") then { _data = call compile (_this select 0); } else { _data = _this; };
+
+systemChat str _data;
 _shop = _data select 0;
 _key  = _data select 1;
 
 _garageIndex = [_key, OL_VehicleGarage] call CP_misc_WhereYouAtTho;
-if (_garageIndex == -1) exitWith { player globalChat "Error loading vehicle, Ask Foster for help"; };
+if (_garageIndex == -1) exitWith { player globalChat "Error loading vehicle, ask Foster for help"; };
 
 _settings = OL_VehicleGarage select _garageIndex;
 _dbId  = _settings select 0;
