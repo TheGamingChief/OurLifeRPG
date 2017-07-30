@@ -207,13 +207,10 @@ if (_key == "no_data") then {
 				_weapons 				= ([_stats select 8] call AM_Server_StrToArr) select 0;
 				_magazines 			= ([_stats select 8] call AM_Server_StrToArr) select 1;
 				_licenses 			= ([_stats select 9] call AM_Server_StrToArr);
-				//_groundVeh 			= ([_stats select 6] call AM_Server_StrToArr);
-				//_airVeh 				= ([_stats select 7] call AM_Server_StrToArr);
 
 				INV_InventarArray = _inventory;
 				INV_LizenzOwner   = _licenses;
 				kontostand 		  	= _bank;
-				//INV_SavedVehLand = _groundVeh;
 
 				{ player addWeapon _x } forEach _weapons;
 
@@ -374,13 +371,9 @@ if (_key == "no_data") then {
 				_weapons 		= ([_stats select 5] call AM_Server_StrToArr) select 0;
 				_magazines 	= ([_stats select 5] call AM_Server_StrToArr) select 1;
 				_lic 				= ([_stats select 6] call AM_Server_StrToArr);
-				//_GVS 				= [_stats select 13] call AM_Server_StrToArr;
-				//_AVS 				= [_stats select 14] call AM_Server_StrToArr;
 
 				INV_InventarArray = _inventory;
 				INV_LizenzOwner   = _lic;
-				//INV_SavedVehLand  = _GVS;
-				//INV_SavedVehAir   = _AVS;
 				kontostand 		  = _bank;
 
 				if ("car" call INV_haslicense) then {
@@ -438,13 +431,9 @@ if (_key == "no_data") then {
 				_weapons 		= ([_stats select 11] call AM_Server_StrToArr) select 0;
 				_magazines 	= ([_stats select 11] call AM_Server_StrToArr) select 1;
 				_lic 				= ([_stats select 12] call AM_Server_StrToArr);
-				//_GVS 				= [_stats select 13] call AM_Server_StrToArr;
-				//_AVS 				= [_stats select 14] call AM_Server_StrToArr;
 
 				INV_InventarArray = _inventory;
 				INV_LizenzOwner   = _lic;
-				//INV_SavedVehLand  = _GVS;
-				//INV_SavedVehAir   = _AVS;
 				kontostand 		  = _bank;
 
 				{ player addWeapon _x; } forEach _weapons;

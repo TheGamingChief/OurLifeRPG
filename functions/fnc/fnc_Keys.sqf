@@ -4,7 +4,13 @@ switch (_this select 0) do {
 
     if (isNil "_vcl" || isNull _vcl) exitWith { player groupChat "Could not find the vehicle you are trying to lock." };
     if (player distance _vcl > 20) exitWith { player groupChat "You must be within 20m of the vehicle." };
-    if (locked _vcl) then { format ["%1 lock false", _vcl] call OL_network_Swag } else { format ["%1 lock true", _vcl] call OL_network_Swag };
+    if (locked _vcl) then {
+      format ["%1 lock false", _vcl] call OL_network_Swag;
+      player groupChat "Vehicled Unlocked";
+    } else {
+      format ["%1 lock true", _vcl] call OL_network_Swag;
+      player groupChat "Vehicled Locked";
+    };
   };
   case "USE": {
     if (!(createDialog "schluessel")) exitWith { hint "Dialog Error!" };
@@ -16,9 +22,9 @@ switch (_this select 0) do {
       };
     } forEach INV_VehicleArray;
 
-    buttonSetAction [2, "if ((lbCurSel 1) > -1) then { [""LOCK"", (INV_VehicleArray select lbCurSel 1), lbCurSel 1] call OL_fnc_Keys }; closeDialog 0;"]; // Lock/Unlock
-    buttonSetAction [4, "if ((lbCurSel 1) > -1) then { [""DROP"", (INV_VehicleArray select lbCurSel 1), lbCurSel 1] call OL_fnc_Keys }; closedialog 0;"]; // Drop Keys
-    buttonSetAction [5, "if ((lbCurSel 1) > -1) then { [""GIVE"", (INV_VehicleArray select lbCurSel 1), lbCurSel 1] call OL_fnc_Keys }; closedialog 0;"]; // Give Keys
+    buttonSetAction [2, "if ((lbCurSel 1) > -1) then { [""LOCK"", (INV_VehicleArray select lbCurSel 1), lbCurSel 1] call OL_fnc_Keys }; closeDialog 0;"];
+    buttonSetAction [4, "if ((lbCurSel 1) > -1) then { [""DROP"", (INV_VehicleArray select lbCurSel 1), lbCurSel 1] call OL_fnc_Keys }; closedialog 0;"];
+    buttonSetAction [5, "if ((lbCurSel 1) > -1) then { [""GIVE"", (INV_VehicleArray select lbCurSel 1), lbCurSel 1] call OL_fnc_Keys }; closedialog 0;"];
   };
   case "GIVE": {
     _civ = INV_PLAYERLIST select (call compile (INV_InventarGiveReceiver));

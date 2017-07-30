@@ -7,8 +7,7 @@
 _mode = _this select 0;
 _veh_type = _this select 1;
 switch (_mode) do {
-case 0: {
-
+	case 0: {
 		_kindOf = ["tank"];
 		_filter = [];
 		switch (_veh_type) do {
@@ -37,7 +36,7 @@ case 0: {
 		};
 		lbSort GET_CTRL(balca_VC_vehlist_IDC);
 	};
-case 1: {
+	case 1: {
 		_veh_type = GET_SELECTED_DATA(balca_VC_vehlist_IDC);
 		GET_CTRL(balca_VC_vehicle_shortcut_IDC) ctrlSetText (getText(configFile >> "CfgVehicles" >> _veh_type >> "picture"));
 		_vehicle = (configFile >> "CfgVehicles" >> _veh_type);
@@ -67,19 +66,20 @@ case 1: {
 			"Magazines: ", str _magazines,_lb];
 		GET_CTRL(balca_VC_veh_info_IDC) ctrlSetStructuredText _text;
 	};
-case 2: {
-		_old_veh = PG_get(VEH);
-		_core = PG_get(CORE);
-		_dir = getDir _core;
-		_pos = getPos _core;
-		_veh_type = GET_SELECTED_DATA(balca_VC_vehlist_IDC);
-		deleteVehicle _old_veh;
-		_veh = createVehicle [_veh_type, _pos, [], 0, "CAN_COLLIDE"];
+	case 2: {
+		_dir = getdir player;
+		_pos = getPos player;
+		_pos = [(_pos select 0)+20*sin(_dir),(_pos select 1)+20*cos(_dir),0];
+
+		_dummy = "HeliHEmpty" createVehicle _pos;
+		_type = GET_SELECTED_DATA(balca_VC_vehlist_IDC);
+
+		_veh = [_type, _dummy] call INV_CreateVehicle;
+		deleteVehicle _dummy;
 		_veh setDir _dir;
-		PG_set(VEH,_veh);
 	};
 
-case 3: {
+	case 3: {
 		_dir = getdir player;
 		_pos = getPos player;
 		_pos = [(_pos select 0)+20*sin(_dir),(_pos select 1)+20*cos(_dir),0];
@@ -90,11 +90,11 @@ case 3: {
 		_veh setDir _dir;
 	};
 
-case 4: {//class to clipboard
-	copyToClipboard (""""+GET_SELECTED_DATA(balca_VC_vehlist_IDC)+"""");
+	case 4: {//class to clipboard
+		copyToClipboard (""""+GET_SELECTED_DATA(balca_VC_vehlist_IDC)+"""");
 	};
 
-case 5: {//detailed info to clipboard
-	copyToClipboard ctrlText GET_CTRL(balca_VC_veh_info_IDC);
+	case 5: {//detailed info to clipboard
+		copyToClipboard ctrlText GET_CTRL(balca_VC_veh_info_IDC);
 	};
 }

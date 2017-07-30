@@ -1,7 +1,6 @@
 _data = [];
 if (typeName (_this select 0) == "STRING") then { _data = call compile (_this select 0); } else { _data = _this; };
 
-systemChat str _data;
 _shop = _data select 0;
 _key  = _data select 1;
 

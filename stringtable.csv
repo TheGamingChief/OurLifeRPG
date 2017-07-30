@@ -58,8 +58,6 @@ STRS_geld_copmoneyadd,"%1, You earned $%2, the money has been transfered to your
 STRS_geld_paycheckdead,You missed a paycheck because you are dead.,,
 STRD_description_onloadintro,ZLR,,
 STRD_description_onloadmission,ZLR,,
-STRD_description_param1,Marker out of city,,
-STRD_description_time,TimeSkipInterval[Day|Night],,
 STRD_description_on,on,,
 STRD_description_cancel,Cancel,,
 STRD_description_buyitem_close,Close,,

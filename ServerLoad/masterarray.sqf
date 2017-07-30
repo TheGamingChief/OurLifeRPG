@@ -1564,7 +1564,7 @@ INV_AlleItemsArray = [
   ["kanister",["Item","service"],["kanister","Gas Can"],[5000,2500],[2,"","PatrolBasic_license"],[true,true,true,false,"refuelveh.sqf"]],
   ["Fuelline",["Item","service"],["Syphon Fuelkit","Syphon Fuel-kit"],[1000,900],[1,"",""],[true,true,true,false,"syphon.sqf"]],
   ["OilBarrel",["Item","service"],["Oil Barrel","Petroleum"],[6000,5450],[10,"",""],[true,true,true,false,"refuelveh.sqf"]],
-  ["schluesselbund",["Item","carobjects"],["schluesselbund","Key chain"],[0,0],[0,""],[false,false,false,false,"keys.sqf"]],
+  ["schluesselbund",["Item","carobjects"],["schluesselbund","Key chain"],[0,0],[0,""],[false,false,false,false,OL_fnc_Keys]],
   ["pistole",["Item","weapon"],["pistole","Concealed Sidearm"],[0,0],[0,""],[false,false,false,false,"nouse.sqf"]],
   ["gewehr",["Item","weapon"],["gewehr","Concealed Rifle"],[0,0],[0,""],[false,false,true,true,"nouse.sqf"]],
   ["weaponBag",["Item","misc"],["weaponBag","Weapon Bag"],[1000,750],[0.5,"",""],[true,true,true,false,"nouse.sqf"]],

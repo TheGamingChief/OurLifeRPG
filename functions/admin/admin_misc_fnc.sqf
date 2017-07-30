@@ -77,6 +77,10 @@ adminMenuSkipTime =
 
 adminMenuRepair =
 {
+	_sel = lbCurSel 1500;
+	_selected = adminMenu_Players select _sel;
+	vehicle _selected setDamage 0;
+
 	vehicle player setfuel 1;
 	vehicle player setvehicleammo 1;
 	vehicle player setdammage 0;

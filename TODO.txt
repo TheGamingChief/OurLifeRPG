@@ -50,19 +50,19 @@
 [DONE] Fix Error Undefined variable in expression: ngarray
 [DONE] Fix Error Undefined variable in expression: _pitcar
 ---------------------------------------------------
+[DONE] MySQLAdapter
 [DONE] ESU stats
+[DONE] Vehicle Table
+[DONE] Impound Vehicles in Table
+[DONE] Priotiry Save
 
 
 TO DO (CP + TheGamingChief):
 ---------------------------------------------------
 Redo gang system to use cloud (add PVcloud event) [Really fucking important]
-impound vehicles with storage
-impound array to cloud (add PVcloud event)
-prevent access gear of locked vehicle
-Priotiry saving for certain events, paying bail, transfering money, dropping large ammounts of money ETC.
-day / night cycle.
+[Will never be done] prevent access gear of locked vehicle
+day / night cycle. <- lol
 
-Needs rule updated
 
 TO DO (Garry)
 ---------------------------------------------------
@@ -82,7 +82,6 @@ Change all name player name _civ etc etc to _civ getVariable "OL_Name"
 MISC Shit:
 ---------------------------------------------------
 escape mod menu
-MySQLAdapter
 CPR kit?
 
 Replace Wheat with Cotton

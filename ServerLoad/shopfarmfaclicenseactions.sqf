@@ -106,49 +106,34 @@ for [{_i = 0}, {_i < (count INV_FarmItemArray)}, {_i = _i + 1}] do
 
 //======================================LICENSES=========================================
 
-for [{_i = 0}, {_i <= ((count INV_Lizenzen)) - 1}, {_i = _i + 1}] do
+for [{_i = 0}, {_i <= ((count INV_Lizenzen)) - 1}, {_i = _i + 1}] do {
 
-{
+	_license     = ((INV_Lizenzen select _i) select 0);
+	_flag        = ((INV_Lizenzen select _i) select 1);
+	_licensename = ((INV_Lizenzen select _i) select 2);
+	_cost        = ((INV_Lizenzen select _i) select 3);
+	_added       = _Arr2 select _i;
 
-_license     = ((INV_Lizenzen select _i) select 0);
-_flag        = ((INV_Lizenzen select _i) select 1);
-_licensename = ((INV_Lizenzen select _i) select 2);
-_cost        = ((INV_Lizenzen select _i) select 3);
-_added       = _Arr2 select _i;
-
-_closestLicShop = 999;
-{
-  if (player distance _x < _closestLicShop) then {
-	_closestLicShop = player distance _x;
-  };
-} forEach ((INV_Lizenzen select _i) select 1);
-
-if ((_closestLicShop <= 5) and !(((INV_Lizenzen select _i) select 0) call INV_HasLicense) and (_Arr2 select _i == 0)) then
-
+	_closestLicShop = 999;
 	{
+	  if (player distance _x < _closestLicShop) then {
+		_closestLicShop = player distance _x;
+	  };
+	} forEach ((INV_Lizenzen select _i) select 1);
 
-	call compile format ["a_license%1 = player addaction [format[localize ""STRS_inv_actions_buy"", ""%2"", %3], ""addlicense.sqf"", [%1, ""add""]];", _i, _licensename, (_cost call OL_ISSE_str_IntToStr)];
-	_Arr2 set [_i, 1];
-
+	if ((_closestLicShop <= 5) and !(((INV_Lizenzen select _i) select 0) call INV_HasLicense) and (_Arr2 select _i == 0)) then {
+		call compile format ["a_license%1 = player addaction [format[localize ""STRS_inv_actions_buy"", ""%2"", %3], ""addlicense.sqf"", [%1, ""add""]];", _i, _licensename, (_cost call OL_ISSE_str_IntToStr)];
+		_Arr2 set [_i, 1];
 	};
 
-if ((_closestLicShop > 5) and (_Arr2 select _i == 1) || (_license call INV_HasLicense)) then
-
-	{
-
+	if ((_closestLicShop > 5) and (_Arr2 select _i == 1) || (_license call INV_HasLicense)) then {
 		_autismLicName = format["a_license%1", _i];
 
 		if (!(isNil(_autismLicName))) then {
-
 			call compile format ["player removeaction %1;", _autismLicName];
 			_Arr2 set [_i,0];
-
 		};
-
 	};
-
 };
-
 sleep 1;
-
 };
