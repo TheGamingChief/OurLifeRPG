@@ -55,7 +55,7 @@
 [DONE] Vehicle Table
 [DONE] Impound Vehicles in Table
 [DONE] Priotiry Save
-
+[DONE] Redo gang system to use cloud (add PVcloud event) [Really fucking important]
 
 TO DO (CP + TheGamingChief):
 ---------------------------------------------------
@@ -77,7 +77,7 @@ Current gov doesn't show when people join, they need to wait til next election.
 ez pz ^
 
 WARNING: Function 'name' - Bryan Telato is dead
-Change all name player name _civ etc etc to _civ getVariable "OL_Name"
+Change, name <object> to <object> getVariable "OL_Name"
 
 MISC Shit:
 ---------------------------------------------------
