@@ -11,4 +11,4 @@ OL_InitComplete      = false;
 OL_StatsLoadedFromDB = false;
 pg_godmode           = false;
 
-if (Param1 == 1) then { debug = true; };
+if (Param1 == 1) then { debug = true };

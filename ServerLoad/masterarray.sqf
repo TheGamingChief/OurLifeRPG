@@ -1608,7 +1608,7 @@ INV_AlleItemsArray = [
   ["iron",["Item","ressource"],["iron","Iron"],[1000,550],[1,""],[true,true,true,false,"useresource.sqf"]],
   ["drill",["Item","ressource"],["drill","StrongArm MiniRig Drill"],[40000,15000],[1,""],[true,true,true,false,"scripts\foster\UseDrill.sqf"]],
   ["bunnyhop",["Item","misc"],["bunnyhop","Bunny-Hop (Bike Only)"],[2000,500],[1,""],[true,true,true,false,"scripts\foster\bunnyhop.sqf"]],
-  ["TreeFixer",["Item","ressource"],["TreeFixer","Tree Fixer"],[5000,1000],[1,""],[true,true,true, false, OL_misc_TreeFixer]],
+  ["TreeFixer",["Item","ressource"],["TreeFixer","Tree Fixer"],[5000,1000],[1,""],[true,true,true,false,OL_misc_TreeFixer]],
   ["gunshipment",["Item","ressource"],["gunshipment","Illegal Gun Shipment"],[0,0],[1,""],[false,false,false,false,"nouse.sqf"]],
   ["armat_tarmac",["Item","misc"],["armat_tarmac","Tarmac"],[100,100],[1,"esul","PatrolBasic_license"],[true,true,true,false,"createobject.sqf"]],
   ["2mTape",["Item","misc"],["2mTape","Caution Tape Small"],[100,100],[1,"esul","PatrolBasic_license"],[true,true,true,false,"createobject.sqf"]],
@@ -1835,10 +1835,10 @@ INV_AlleItemsArray = [
   ["donateRH_uzi",["Waffe","rifle"],["RH_uzi","Uzi"],[15000,15000],[2,"Donator_license2","Donator_license2"],[]],
   ["donate30Rnd_762x39_AK47",["Magazin","rifle"],["30Rnd_762x39_AK47","AK47,AKS74u,AK103 Mag"],[500,500],[1,"Donator_license2","Donator_license2"],[]],
   ["donate30Rnd_545x39_AK",["Magazin","rifle"],["30Rnd_545x39_AK","AK74 Mag"],[500,500],[1,"Donator_license2","Donator_license2"],[]],
-  ["donate30Rnd_9x19_MP5",["Magazin","rifle"],["30Rnd_9x19_MP5","MP5, MP5K Mag"],[500,500],[1,"Donator_license2","Donator_license2"],[]],
+  ["donate30Rnd_9x19_MP5",["Magazin","rifle"],["30Rnd_9x19_MP5","MP5,MP5K Mag"],[500,500],[1,"Donator_license2","Donator_license2"],[]],
   ["donateRH_9mm_32RND_Mag",["Magazin","rifle"],["RH_9mm_32RND_Mag","Uzi Mag"],[500,500],[1,"Donator_license2","Donator_license2"],[]],
-  ["donate30Rnd_556x45_StanagSD",["Magazin","rifle"],["30Rnd_556x45_StanagSD","M4, HK416, Massada SD Mag"],[500,500],[1,"Donator_license2","Donator_license2"],[]],
-  ["donate30Rnd_556x45_Stanag",["Magazin","rifle"],["30Rnd_556x45_Stanag","30Rnd M4, HK416, ACR Mag"],[500,500],[1,"Donator_license2","Donator_license2"],[]],
+  ["donate30Rnd_556x45_StanagSD",["Magazin","rifle"],["30Rnd_556x45_StanagSD","M4,HK416,Massada SD Mag"],[500,500],[1,"Donator_license2","Donator_license2"],[]],
+  ["donate30Rnd_556x45_Stanag",["Magazin","rifle"],["30Rnd_556x45_Stanag","30Rnd M4,HK416,ACR Mag"],[500,500],[1,"Donator_license2","Donator_license2"],[]],
   ["DODGE_VIPER_SRT10",["Fahrzeug","car"],["DODGE_VIPER_SRT10","Dodge Viper SRT10"],[50000,50000],[1,"Donator_license2","Donator_license2",250],[150,[1,0,0,3]]],
   ["CORVETTE_Z06",["Fahrzeug","car"],["CORVETTE_Z06","Racing Corvette"],[50000,50000],[1,"Donator_license2","Donator_license2",250],[150,[1,0,0,3]]],
   ["donateFAL",["Waffe","rifle"],["FN_FAL","FAL"],[120000,120000],[2,"Donator_license3","Donator_license3"],[]],
@@ -2190,5 +2190,5 @@ INV_AlleItemsArray = [
 ];
 
 AlleMissionsObjekte = INV_AlleWaffenObjekte + INV_AlleMagazinObjekte + INV_AlleFahrzeugeArray + INV_AlleItemsArray;
-INV_ItemTypenArray = [ ["Item", "Item", 5], ["Fahrzeug", "Vehicle",5], ["Magazin","Magazine",5], ["Waffe","Weapon",5]];
-{	missionNamespace setVariable [format["A_MS_%1", _x select 0], _x] } forEach AlleMissionsObjekte;
+INV_ItemTypenArray = [ ["Item","Item",5],["Fahrzeug","Vehicle",5],["Magazin","Magazine",5],["Waffe","Weapon",5]];
+{	missionNamespace setVariable [format["A_MS_%1",_x select 0],_x] } forEach AlleMissionsObjekte;

@@ -27,7 +27,7 @@ class AM_CheckpointBuilder {
 		y = 0.65 * safezoneH + safezoneY;
 		w = 0.0954165 * safezoneW;
 		h = 0.0605555 * safezoneH;
-		action="if (vehicle player == player) then { AM_checkpoint_tmpArray = [lbCursel 1500]; AM_checkpoint_tmpArray call OL_checkpoint_PurchaseItem; };";
+		action="if (vehicle player == player) then { AM_checkpoint_tmpArray = [lbCursel 1500]; AM_checkpoint_tmpArray call OL_checkpoint_PurchaseItem };";
 	};
 	class RscShortcutButton_1701: RscShortcutButton
 	{

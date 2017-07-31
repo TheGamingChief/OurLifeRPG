@@ -3,7 +3,6 @@
 
 DD_Modules = DD_Modules + [
   ["OL",    "misc", "LoadingSetText",      1],
-  ["OL",    "misc", "AntiDupe",            2],
   ["OL",    "misc", "FTOFunctions",        1],
   ["OL",    "misc", "ratioKick",           1],
   ["OL",    "misc", "10MCleanUp",          1],
@@ -24,14 +23,17 @@ DD_Modules = DD_Modules + [
   ["OL",    "misc", "isProne",             1],
   ["OL",    "misc", "SayDirectSpeach",     1],
   ["OL",    "misc", "resetJailCode",       1],
+  ["OL",    "misc", "Hunger",              1],
   ["OL",    "misc", "Radar",               0],
   ["CP",    "misc", "ArrayOffsetSelector", 1],
   ["CP",    "misc", "ArrayOffsetTrimmer",  1],
   ["CP",    "misc", "ArrayCargoCombiner",  1],
   ["CP",    "misc", "ArrayOffsetDelete",   1],
+  ["CP",    "misc", "ArrayTrimStart",      1],
   ["CP",    "misc", "GetRandomCode",       1],
   ["CP",    "misc", "whereYouAtTho",       1],
   ["CP",    "misc", "NearestCar",          1],
   ["CP",    "misc", "countArray",          1],
+  ["CP",    "misc", "AntiDupe",            1],
   ["Item",  "misc", "Bunnyhop",            1]
 ];

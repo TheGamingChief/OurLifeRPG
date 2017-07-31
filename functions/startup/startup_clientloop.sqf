@@ -32,6 +32,10 @@ while {true} do	{
 		if ("geld" call INV_GetItemAmount > money_limit) then {['geld', money_limit] call INV_SetItemAmount; player groupChat localize "STRS_maxmoney";};
 	};
 
+	if (_iterations % 60 == 0) then {
+		[] spawn OL_misc_Hunger;
+	};
+
 	//300 Seconds (5 Minutes)
 	if (_iterations % 300 == 0) then {
 		if (!isNil "fnc_SaveStats") then {

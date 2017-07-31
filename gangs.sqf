@@ -22,9 +22,9 @@ if(_exitvar)exitwith{player groupchat "a gang with the same name already exists!
 
 if ((_text call OL_ISSE_str_Length) > 30 or (_text call OL_ISSE_str_Length) < 3) exitWith {player groupChat "the entered text is either too long or too short";};
 
-if(_geld < gangcreatecost)exitwith{player groupchat "You don't have enough money to create this gang!"};
+if(_geld < gangCost)exitwith{player groupchat "You don't have enough money to create this gang!"};
 
-['geld', -gangcreatecost] call INV_addinventoryitem;
+['geld', -gangCost] call INV_addinventoryitem;
 
 format['gangsarray = gangsarray + [["%1", ["%2"], true]]', _text, _name] call OL_network_Swag;
 

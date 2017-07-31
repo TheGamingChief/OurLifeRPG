@@ -1,11 +1,11 @@
 _data = [];
-if (typeName (_this select 0) == "STRING") then { _data = call compile (_this select 0); } else { _data = _this; };
+if (typeName (_this select 0) == "STRING") then { _data = call compile (_this select 0); } else { _data = _this };
 
 _shop = _data select 0;
 _key  = _data select 1;
 
 _garageIndex = [_key, OL_VehicleGarage] call CP_misc_WhereYouAtTho;
-if (_garageIndex == -1) exitWith { player globalChat "Error loading vehicle, ask Foster for help"; };
+if (_garageIndex == -1) exitWith { player globalChat "Error loading vehicle, ask Foster for help" };
 
 _settings = OL_VehicleGarage select _garageIndex;
 _dbId  = _settings select 0;
@@ -17,8 +17,8 @@ _trunk = _settings select 5;
 _weaps = (_settings select 6) select 0;
 _mags  = (_settings select 6) select 1;
 
-if (_dmg > 0.9)  then { _dmg = 0.9; };
-if (_fuel < 0.1) then { _fuel = 0.1; };
+if (_dmg > 0.9)  then { _dmg = 0.9 };
+if (_fuel < 0.1) then { _fuel = 0.1 };
 
 _veh = [_class, _shop] call INV_CreateVehicle;
 if (!(isNil "_veh")) then {

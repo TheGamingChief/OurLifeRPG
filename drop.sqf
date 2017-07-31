@@ -1,4 +1,4 @@
-_item   = _this select 0; 
+_item   = _this select 0;
 _amount = _this select 1;
 _gridPos = mapGridPosition getpos player;
 
@@ -8,59 +8,34 @@ if(!isnull (nearestobjects[getpos player,["EvMoney","Suitcase"], 1] select 0))ex
 
 if (_amount <= 0) exitwith {format["hint ""%1 has dropped %2!"";", (name player), _amount] call OL_network_Swag;};
 
-if (_item call INV_getitemDropable) then 
+if (_item call INV_getitemDropable) then {
+	if ([_item, -(_amount)] call INV_AddInvItem) then	{
+		player groupChat localize "STRS_inv_inventar_weggeworfen";
+		if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};
 
-{
+		uiSleep 1.5;
 
-if ([_item, -(_amount)] call INV_AddInvItem) then 
+		private "_class";
+		switch (_item) do {
+			case "geld": 			{ _class = "EvMoney"  };
+			case "oil":				{ _class = "Barrel4"  };
+			case "oilbarrel":	{ _class = "Barrel4"  };
+			default 					{ _class = "Suitcase" };
+		};
 
-	{
-	
-	player groupChat localize "STRS_inv_inventar_weggeworfen";	
+		if (_item == "geld") then {
+			["money_dropped", format ["%1 (%2) has dropped $%3 at GRID: %4", name player, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+			_object setVariable ["owner", getPlayerUID player,true];
+		};
 
-	if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};
+		_pos = getposASL player;
+		_object = _class createvehicle _pos;
+		_object setposASL getposASL player;
+		_object setvariable ["droparray", [_amount, _item], true];
 
-	sleep 1.5;
-
-	private "_class";
-	switch true do
-	{
-	case (_item == "geld"):{_class = "EvMoney"};
-	case (_item == "oil"):{_class = "Barrel4"};
-	case (_item == "oilbarrel"):{_class = "Barrel4"};
-	default {_class = "Suitcase"};
+	}	else {
+		player groupChat "You don't have that many objects to drop";
 	};
-
-	_pos = getposASL player;
-
-	if (_item == "geld") then 
-	{
-	["money_dropped", format ["%1 (%2) has dropped $%3 at GRID: %4", name player, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
-	};
-	
-	_object = _class createvehicle _pos;
-	
-	if (_item == "geld") then 
-	{
-	_object setVariable ["owner", getPlayerUID player,true];
-	};
-
-	_object setposASL getposASL player;
-	_object setvariable ["droparray", [_amount, _item], true];
-
-	} 
-	else 
-	{
-	
-	player groupChat localize "STRS_inv_inventar_drop_zuwenig";
-	
-	};
-
-} 
-else 
-{
-
-player groupChat localize "STRS_inv_inventar_ablege_verbot";
-
+} else {
+	player groupChat "You are not allowed to drop this object";
 };
-

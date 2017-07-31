@@ -7,27 +7,25 @@ switch (_mode) do {
 	case 1:
 	{
 		{
-			if(_x select 0 == _cloudFinder)then{
+			if (_x select 0 == _cloudFinder) then {
 				DD_Cloud set[_forEachIndex, -1];
 			};
-		}forEach DD_Cloud;
+		} forEach DD_Cloud;
 		DD_Cloud = DD_Cloud - [-1];
-		publicVariable "DD_Cloud";
 		true;
 	};
 
 	case 2:
 	{
 		{
-		 	if(_x select 1 == _cloudFinder)then{
+		 	if (_x select 1 == _cloudFinder) then {
 		 		DD_Cloud set[_forEachIndex, -1];
 		 	};
-		}forEach DD_Cloud;
+		} forEach DD_Cloud;
 		DD_Cloud = DD_Cloud - [-1];
-		publicVariable "DD_Cloud";
 		true;
 	};
-	default{
+	default {
 		false;
 	};
 };

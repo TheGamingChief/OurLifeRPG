@@ -512,7 +512,7 @@ if (_key == "no_data") then {
 
 	if (count _stats != 0) then {
 		_statWipeMessage = _stats select 14;
-		if (isNil "_statWipeMessage") then { _statWipeMessage = ""; };
+		if (isNil "_statWipeMessage") then { _statWipeMessage = "" };
 
 		if (_statWipeMessage != "") then {
 			player groupChat format["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _statWipeMessage];

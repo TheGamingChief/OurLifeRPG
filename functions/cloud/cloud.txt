@@ -18,5 +18,3 @@ Publishes the cloud to the given unit, provided they are part of the network.
 
 cloud_SendToClient -
 Sends requested variable to given unit, provided they are part of the network.
-
-esy <- wut?

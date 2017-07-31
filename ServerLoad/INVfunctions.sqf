@@ -307,8 +307,8 @@ _re;
 // Remove Illegal Items
 INV_EntferneIllegales = {
    private["_hasNVG", "_hasBino"];
-   _hasNVG  = false; if (player hasWeapon "NVGoggles") then { _hasNVG  = true; };
-   _hasBino = false; if (player hasWeapon "Binocular") then { _hasBino = true; };
+   _hasNVG  = false; if (player hasWeapon "NVGoggles") then { _hasNVG  = true };
+   _hasBino = false; if (player hasWeapon "Binocular") then { _hasBino = true };
 
 	 removeAllWeapons player;
 	 { player removeMagazine _x } forEach (magazines player);

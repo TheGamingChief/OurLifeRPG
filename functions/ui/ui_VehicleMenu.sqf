@@ -18,5 +18,6 @@ if (count _vehicles > 0) then {
 
   buttonSetAction [1600, "[lbData [1500, (lbCurSel 1500)]] call OL_vehicle_Retrieve; closeDialog 0;"];
 } else {
+  closeDialog 0;
   player groupChat "You have no vehicles saved.";
 };

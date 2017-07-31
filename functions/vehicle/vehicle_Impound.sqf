@@ -36,7 +36,7 @@ player groupChat "You have been paid $2500 for cleaning up the streets";
 _veh    = _this select 0;
 _owner  = _veh getVariable ["OL_Owner", nil];
 _id     = _veh getVariable ["DatabaseID", call compile ([6] call CP_misc_GetRandomCode)];
-if (isNil "_owner") exitWith { deleteVehicle _veh; };
+if (isNil "_owner") exitWith { deleteVehicle _veh };
 
 _class = typeOf _veh;
 _dmg = damage _veh;

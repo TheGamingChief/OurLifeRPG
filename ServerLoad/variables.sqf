@@ -28,7 +28,6 @@ chiefBekommtSteuern     = 75;
 money_limit             = 10000000;
 bank_limit				      = 15000000;
 INV_hunger              = 25;
-INV_HungerProSek        = 0.015;
 INV_HungerSchaden       = 0.1;
 INV_HungerStartVal      = 1;
 INV_Tragfaehigkeit      = 60;
@@ -135,14 +134,6 @@ pickaxemax=3;
 hammerdur=100;
 hammermax=4;
 working=false;
-//===============================GANGS=============================================
-gangincome		 = 3200;
-gangcreatecost	 = 125000;
-gangdeltime		 = 900;
-gangsarray		 = [];
-gangmember		 = false;
-gangleader		 = false;
-gangareas		 = [OL_Shop_Gangarea1,OL_Shop_Gangarea2,OL_Shop_Gangarea3,OL_Shop_Gangarea4];
 //=================================================================================
 CityLocationArray        = [[CityLogic1, 500], [CityLogic2, 400], [CityLogic3, 300], [CityLogic4, 500]];
 //=========== cop patrol array ==========
