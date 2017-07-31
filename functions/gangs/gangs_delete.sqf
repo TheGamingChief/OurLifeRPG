@@ -10,4 +10,4 @@ format ['
     player groupChat "%2 has disbanded the %3 gang!";
     OL_PlayerGangID = -1;
   };
-' _gang select 3, _gang select 2, _gang select 1] call OL_network_Swag;
+', _gang select 3, _gang select 2, _gang select 1] call OL_network_Swag;

@@ -1,5 +1,5 @@
 //player groupchat format["%1", _text];
-
+/*
 _this = _this select 3;
 _art  = _this select 0;
 

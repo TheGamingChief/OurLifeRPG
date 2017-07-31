@@ -21,6 +21,7 @@ _activeModules = [
 	"tfar",
 	"stats",
 	"vehicle",
+	"gangs",
 	"ui",
 	"init"
 ];

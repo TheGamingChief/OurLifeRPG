@@ -25,5 +25,5 @@ for "_i" from 0 to (count OL_GangsArray - 1) do {
     _needsUpdate = true;
   };
 
-  [["UPDATE", _gang, "Server_gangs_Update", false, true] call OL_network_MP;
+  [["UPDATE", _gang], "Server_gangs_Update", false, true] call OL_network_MP;
 };

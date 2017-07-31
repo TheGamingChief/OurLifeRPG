@@ -12,6 +12,6 @@ if (player == _gang select 2) then {
   _gang set [3, _members];
 };
 
-[["UPDATE", _gang, "Server_gangs_Update", false, true] call OL_network_MP;
+[["UPDATE", _gang], "Server_gangs_Update", false, true] call OL_network_MP;
 player groupChat format['You have left the "%1" gang', _gang select 1];
 OL_PlayerGangID = -1;

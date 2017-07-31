@@ -6,7 +6,7 @@ _members = _gang select 3;
 _members = _members - [_player];
 _gang set [3, _members];
 
-[["UPDATE", _gang, "Server_gangs_Update", false, true] call OL_network_MP;
+[["UPDATE", _gang], "Server_gangs_Update", false, true] call OL_network_MP;
 
 player groupChat format ["You have kicked %1 from the gang!", name _player];
 format ['
