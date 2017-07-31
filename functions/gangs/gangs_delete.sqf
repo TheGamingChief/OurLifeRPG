@@ -1,7 +1,7 @@
-_gang = [str OL_PlayerGangID] call OL_gangs_getByKey; if (count _gang == 0) exitWith { player groupChat "This gang no longer exists!" };
+_gang = [OL_PlayerGangID] call OL_gangs_getByKey; if (count _gang == 0) exitWith { player groupChat "This gang no longer exists!" };
 if (player != _gang select 2) exitWith { player groupChat "You do not own this gang!" };
 
-[["REMOVE", []], "Server_gangs_Update", false, true] call OL_network_MP;
+[["REMOVE", [OL_PlayerGangID]], "Server_gangs_Update", false, true] call OL_network_MP;
 OL_PlayerGangID = -1;
 
 player groupChat format ["You have disbanded the %1 gang!", _gang select 1];

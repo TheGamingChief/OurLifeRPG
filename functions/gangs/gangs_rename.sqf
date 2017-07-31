@@ -1,7 +1,11 @@
-_gang = [str OL_PlayerGangID] call OL_gangs_getByKey; if (count _gang == 0) exitWith { player groupChat "You are not the owner of this gang!" };
+_gang = [OL_PlayerGangID] call OL_gangs_getByKey; if (count _gang == 0) exitWith { player groupChat "You are not the owner of this gang!" };
 if (player != _gang select 2) exitWith { player groupChat "You do not own this gang!" };
 
 _newName = _this select 0;
+
+_dupeCheck = [_newName] call OL_gangs_getByName;
+if (count _dupeCheck > 0) exitWith { player groupChat "A gang with that name already exists!" };
+
 _gang set [1, _newName];
 
 [["UPDATE", _gang], "Server_gangs_Update", false, true] call OL_network_MP;

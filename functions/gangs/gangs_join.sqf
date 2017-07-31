@@ -1,5 +1,4 @@
 if (OL_PlayerGangID != -1) exitWith { player globalChat "You already are in a gang!" };
-_index = [call compile (_this select 0), OL_GangsArray] call CP_misc_WhereYouAtTho;
 _gang = [_this select 0] call OL_gangs_getByKey; if (count _gang == 0) exitWith { player groupChat "Gang no longer exists!" };
 
 _locked = _gang select 4;
