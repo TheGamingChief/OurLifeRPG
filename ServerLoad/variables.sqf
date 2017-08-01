@@ -136,27 +136,6 @@ hammermax=4;
 working=false;
 //=================================================================================
 CityLocationArray        = [[CityLogic1, 500], [CityLogic2, 400], [CityLogic3, 300], [CityLogic4, 500]];
-//=========== cop patrol array ==========
-coppatrolarray  =
-[
-getmarkerpos "patrolpoint1",
-getmarkerpos "patrolpoint2",
-getmarkerpos "patrolpoint3",
-getmarkerpos "patrolpoint4",
-getmarkerpos "patrolpoint5",
-getmarkerpos "patrolpoint6",
-getmarkerpos "patrolpoint7",
-getmarkerpos "patrolpoint9",
-getmarkerpos "patrolpoint10",
-getmarkerpos "patrolpoint11",
-getmarkerpos "patrolpoint12",
-getmarkerpos "patrolpoint13",
-getmarkerpos "patrolpoint15",
-getmarkerpos "patrolpoint17",
-getmarkerpos "patrolpoint18"
-];
-
-coppatrolarray1  = [getmarkerpos "guardpoint1",getmarkerpos "guardpoint2",getmarkerpos "guardpoint3",getmarkerpos "guardpoint4",getmarkerpos "guardpoint5",getmarkerpos "guardpoint6",getmarkerpos "guardpoint7"];
 
 ['schluesselbund', 1] call INV_SetItemAmount;
 

@@ -20,9 +20,8 @@ if (isNil "_scheduled") then {
 	_scheduled = false;
 };
 
-_functionCode = call compile format["%1", _function];
-
-if (isNil "_functionCode") exitWith {
+_functionCode = call compile format['if (!isNil "%1") then { %1 } else { -1 }', _function];
+if (typeName _functionCode == "SCALAR") exitWith {
 	if (OL_EventLogging) then {
 		systemChat format["CODE EXECUTION FAILED: FUNCTION [%1] NOT FOUND", _function];
 	};

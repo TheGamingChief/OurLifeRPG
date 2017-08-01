@@ -10,7 +10,7 @@ if (_geld > gangCost) then {
 
 _id       = call compile ([4] call CP_misc_GetRandomCode);
 _name     = _this select 0;
-_owner    = player;
+_owner    = str player;
 _members  = [];
 _locked   = false;
 
@@ -18,4 +18,4 @@ _data = [_id, _name, _owner, _members, _locked];
 [["ADD", _data], "Server_gangs_Update", false, true] call OL_network_MP;
 
 OL_PlayerGangID = _id;
-player groupChat format['You have created a gang called: "%1"', _name];
+player groupChat format['You have created a gang called: %1', _name];

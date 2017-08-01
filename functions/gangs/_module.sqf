@@ -12,5 +12,6 @@ DD_Modules = DD_Modules + [
   ["OL",      "gangs",  "lock",       1],
   ["OL",      "gangs",  "quit",       1],
   ["OL",      "gangs",  "rename",     1],
+  ["OL",      "gangs",  "manage",     1],
   ["OL",      "gangs",  "request",    1]
 ];

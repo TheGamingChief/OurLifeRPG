@@ -12,7 +12,7 @@ switch (_this select 0) do {
       player groupChat "Vehicled Locked";
     };
   };
-  case "USE": {
+  case "use": {
     if (!(createDialog "schluessel")) exitWith { hint "Dialog Error!" };
 
     {

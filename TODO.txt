@@ -55,14 +55,11 @@
 [DONE] Vehicle Table
 [DONE] Impound Vehicles in Table
 [DONE] Priotiry Save
-[DONE] Redo gang system to use cloud (add PVcloud event) [Really fucking important]
+[DONE] Redo gang system to use cloud
 
 TO DO (CP + TheGamingChief):
 ---------------------------------------------------
-Redo gang system to use cloud (add PVcloud event) [Really fucking important]
 [Will never be done] prevent access gear of locked vehicle
-day / night cycle. <- lol
-
 
 TO DO (Garry)
 ---------------------------------------------------

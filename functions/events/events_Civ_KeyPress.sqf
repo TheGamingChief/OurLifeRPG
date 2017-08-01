@@ -52,6 +52,10 @@ fnc_KeyPress_3 = {
 	};
 };
 
+fnc_KeyPress_5 = {
+	closeDialog 0; [] call OL_gangs_List;
+};
+
 fnc_KeyPress_6 = {
 	if(dialog)exitwith{closeDialog 0;};
 	if(!INV_shortcuts)exitwith{};

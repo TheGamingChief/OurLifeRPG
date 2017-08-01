@@ -8,6 +8,7 @@ strn 						 				= objnull;
 fn_SirenMode 				 		= 0;
 strn_array 					 		= [];
 shopactivescript        = 0;
+OL_DemeritPoints				= 0;
 platesavailable         = true;
 gunrunavailable         = true;
 gunrun2available        = true;

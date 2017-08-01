@@ -268,29 +268,6 @@ if (_art == "steuern") exitWith {
 	};
 };
 
-if (_art == "impound") exitWith {
-
-    if (!(createDialog "distribute")) exitWith {hint "Dialog Error!"};
-
-    ctrlSetText [3, format["Retrieve impounded vehicle ($%1)", impoundpay]];
-
-    _impoundArr = [] call OL_vehicle_getImpounded;
-
-		{
-        _index = lbAdd [1, (_x select 1) call INV_getitemName];
-				lbSetData [1, _index, str(_x select 0)];
-    } foreach _impoundArr;
-
-    buttonSetAction [2, "
-			if(iscop and count (nearestobjects [getpos ctrafficspawn,[""Ship"",""car"",""motorcycle"",""truck""], 3]) > 0)exitwith{player groupchat ""There is a vehicle blocking the spawn!""};
-			if(isciv and count (nearestobjects [getpos impoundarea2, [""Ship"",""car"",""motorcycle"",""truck""], 3]) > 0)exitwith{player groupchat ""There is a vehicle blocking the spawn!""};
-			if((""geld"" call INV_getitemamount) < impoundpay)exitwith{player groupchat ""you do not have enough money""};
-			[""geld"", -impoundpay] call INV_AddInvItem;
-
-			[lbData [1, (lbCurSel 1)]] call OL_vehicle_ImpoundBuy;
-		"];
-};
-
 if (_art == "gangmenu") then
 
 {
@@ -321,9 +298,9 @@ _members = [];
 private "_i";
 for [{_i=0}, {_i < (count gangsarray)}, {_i=_i+1}] do {if ((name player) in ((gangsarray select _i) select 1)) exitWith {_members = ((gangsarray select _i) select 1)};};
 
-_index = lbAdd [201, localize "STRS_hints_ja"];
+_index = lbAdd [201, "Yes"];
 lbSetData [201, _index, "true"];
-_index = lbAdd [201, localize "STRS_hints_nein"];
+_index = lbAdd [201, "No"];
 lbSetData [201, _index, "false"];
 
 for [{_i=0}, {_i < (count _members)}, {_i=_i+1}] do

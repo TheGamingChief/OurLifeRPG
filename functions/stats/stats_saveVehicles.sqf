@@ -10,7 +10,7 @@ if (_arrayLength < OL_CarSaveLimit) then {
 		{ server globalChat (str _x); } forEach OL_VehicleGarage;
 	} else {
 		player globalchat "SAVED ARRAY :";
-		{ if ((_x select 7) == "NOMINAL") then { server globalChat (str _x); }; } forEach OL_VehicleGarage;
+		{ if (((_x select 7) select 0) == "NOMINAL") then { server globalChat (str _x); }; } forEach OL_VehicleGarage;
 	};
 
 	deleteVehicle _vcl;

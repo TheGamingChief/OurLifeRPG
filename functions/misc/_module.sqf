@@ -3,7 +3,6 @@
 
 DD_Modules = DD_Modules + [
   ["OL",    "misc", "LoadingSetText",      1],
-  ["OL",    "misc", "FTOFunctions",        1],
   ["OL",    "misc", "ratioKick",           1],
   ["OL",    "misc", "10MCleanUp",          1],
   ["OL",    "misc", "CheckWater",          1],
@@ -32,6 +31,8 @@ DD_Modules = DD_Modules + [
   ["CP",    "misc", "ArrayTrimStart",      1],
   ["CP",    "misc", "GetRandomCode",       1],
   ["CP",    "misc", "whereYouAtTho",       1],
+  ["CP",    "misc", "ArrayObj2Str",        1],
+  ["CP",    "misc", "ArrayStr2Obj",        1],
   ["CP",    "misc", "NearestCar",          1],
   ["CP",    "misc", "countArray",          1],
   ["CP",    "misc", "AntiDupe",            1],

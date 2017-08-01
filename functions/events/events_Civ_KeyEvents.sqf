@@ -11,6 +11,7 @@ Website: OurLifeRPG.Net
 [2,   [false,false,false], {[] spawn fnc_KeyPress_1; true;}, "keydown", "KeyPress_1"] call CBA_fnc_addKeyHandler;
 [3,   [false,false,false], {[] spawn fnc_KeyPress_2; true;}, "keydown", "KeyPress_2"] call CBA_fnc_addKeyHandler;
 [4,   [false,false,false], {[] spawn fnc_KeyPress_3; true;}, "keydown", "KeyPress_3"] call CBA_fnc_addKeyHandler;
+[6,   [false,false,false], {[] spawn fnc_KeyPress_5; true;}, "keydown", "KeyPress_5"] call CBA_fnc_addKeyHandler;
 [7,   [false,false,false], {[] spawn fnc_KeyPress_6; true;}, "keydown", "KeyPress_6"] call CBA_fnc_addKeyHandler;
 [8,   [false,false,false], {[] spawn fnc_KeyPress_7; true;}, "keydown", "KeyPress_7"] call CBA_fnc_addKeyHandler;
 [10,  [false,false,false], {[] spawn fnc_KeyPress_9; true;}, "keydown", "KeyPress_9"] call CBA_fnc_addKeyHandler;

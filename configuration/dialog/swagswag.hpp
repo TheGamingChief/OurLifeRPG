@@ -228,7 +228,7 @@ class RscButton_1607: Swag_RscButton
 };
 class RscButton_1608: Swag_RscButton
 {
-  action = "closeDialog 0;[0,0,0,['gangmenu']] execVM ""maindialogs.sqf"";";
+  action = "closeDialog 0; [] call OL_gangs_List;";
 
 	colorText[] = {0,0,0,0};
 	colorBackground[] = {0,0,0,0};

@@ -12,11 +12,12 @@ _fuel = fuel _veh;
 _trunk = call compile format ["%1_storage", _veh]; if (isNil "_trunk") then { _trunk = [] };
 _weaps = [getWeaponCargo _veh] call CP_misc_ArrayCargoCombiner; if (isNil "_weaps") then { _weaps = [] };
 _mags  = [getMagazineCargo _veh] call CP_misc_ArrayCargoCombiner; if (isNil "_mags") then { _mags = [] };
-
 _gear = [_weaps, _mags];
+
+_status   = ["NOMINAL", getPlayerUID player, name player];
 
 _index = [_id, OL_VehicleGarage] call CP_misc_WhereYouAtTho;
 if (_index == -1) then { _index = count OL_VehicleGarage };
 
-OL_VehicleGarage set [_index, [_id, _class, _dmg, _fuel, _upg, _trunk, [_weaps, _mags], "NOMINAL"]];
+OL_VehicleGarage set [_index, [_id, _class, _dmg, _fuel, _upg, _trunk, [_weaps, _mags], _status]];
 [] call fnc_SaveStats;
