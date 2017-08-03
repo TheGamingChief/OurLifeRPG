@@ -33,6 +33,7 @@ DD_Modules = DD_Modules + [
   ["CP",    "misc", "whereYouAtTho",       1],
   ["CP",    "misc", "ArrayObj2Str",        1],
   ["CP",    "misc", "ArrayStr2Obj",        1],
+  ["CP",    "misc", "StringSearch",        1],
   ["CP",    "misc", "NearestCar",          1],
   ["CP",    "misc", "countArray",          1],
   ["CP",    "misc", "AntiDupe",            1],

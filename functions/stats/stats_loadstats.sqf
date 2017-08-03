@@ -46,135 +46,24 @@ if (_key == "no_data") then {
 
 	//Load Player Ranks
 	_adminRank 				= [_ranks select 3]  call AM_Server_StrToArr; 	//Global
-	_donorRank 				= [_ranks select 4]  call AM_Server_StrToArr; 	//Global
-	_BankIncrease 		= [_ranks select 5]  call AM_Server_StrToArr; 	//Global
-	_WeightIncrease 	= [_ranks select 6]  call AM_Server_StrToArr; 	//Global
-	_CarSaveIncrease 	= [_ranks select 7]  call AM_Server_StrToArr; 	//Global
 
-	_PD_Rank 					= [_ranks select 8]  call AM_Server_StrToArr;  	//Police
-	_PD_Sheriff 			= [_ranks select 9]  call AM_Server_StrToArr;  	//Police
-	_PD_K9 						= [_ranks select 10] call AM_Server_StrToArr;  	//Police
-	_PD_Aviation 			= [_ranks select 11] call AM_Server_StrToArr; 	//Police
-	_PD_SWAT 					= [_ranks select 12] call AM_Server_StrToArr; 	//Police
-	_PD_CoastGuard		= [_ranks select 13] call AM_Server_StrToArr; 	//Police
-	_PD_UnderCover 		= [_ranks select 14] call AM_Server_StrToArr; 	//Police
-	_PD_FTO 					= [_ranks select 15] call AM_Server_StrToArr; 	//Police
-	_PD_MedalRecipt 	= [_ranks select 16] call AM_Server_StrToArr; 	//Police
+	_PD_Rank 					= [_ranks select 4]  call AM_Server_StrToArr;  	//Police
+	_PD_Sheriff 			= [_ranks select 5]  call AM_Server_StrToArr;  	//Police
+	_PD_K9 						= [_ranks select 6] call AM_Server_StrToArr;  	//Police
+	_PD_Aviation 			= [_ranks select 7] call AM_Server_StrToArr; 	//Police
+	_PD_SWAT 					= [_ranks select 8] call AM_Server_StrToArr; 	//Police
+	_PD_CoastGuard		= [_ranks select 9] call AM_Server_StrToArr; 	//Police
+	_PD_UnderCover 		= [_ranks select 10] call AM_Server_StrToArr; 	//Police
+	_PD_FTO 					= [_ranks select 11] call AM_Server_StrToArr; 	//Police
+	_PD_MedalRecipt 	= [_ranks select 12] call AM_Server_StrToArr; 	//Police
 
-	_EMS_Rank 				= [_ranks select 17] call AM_Server_StrToArr; 	//ESU
-	_EMS_Air 					= [_ranks select 18] call AM_Server_StrToArr; 	//ESU
-	_EMS_FD 					= [_ranks select 19] call AM_Server_StrToArr; 	//ESU
+	_EMS_Rank 				= [_ranks select 13] call AM_Server_StrToArr; 	//ESU
+	_EMS_Air 					= [_ranks select 14] call AM_Server_StrToArr; 	//ESU
+	_EMS_FD 					= [_ranks select 15] call AM_Server_StrToArr; 	//ESU
 
-	_PMC_Rank 				= [_ranks select 20] call AM_Server_StrToArr; 	//Civilian
-	_Flyers_Rank 			= [_ranks select 21] call AM_Server_StrToArr;		//Civilian
-	_Misc 						= [_ranks select 22] call AM_Server_StrToArr; 	//Civilian
-
-
-	//Load Global Ranks
-	switch (_donorRank) do
-	{
-		case 0:{};
-		case 1:{
-			Donate_id =  [getPlayerUID player];
-		};
-		case 2:{
-			Donate_id  = [getPlayerUID player];
-			Donate_id2 = [getPlayerUID player];
-		};
-		case 3:{
-			Donate_id  = [getPlayerUID player];
-			Donate_id2 = [getPlayerUID player];
-			Donate_id3 = [getPlayerUID player];
-		};
-		case 4:{
-			Donate_id  = [getPlayerUID player];
-			Donate_id2 = [getPlayerUID player];
-			Donate_id3 = [getPlayerUID player];
-			Donate_id4 = [getPlayerUID player];
-		};
-		case 5:{
-			Donate_id  = [getPlayerUID player];
-			Donate_id2 = [getPlayerUID player];
-			Donate_id3 = [getPlayerUID player];
-			Donate_id4 = [getPlayerUID player];
-			Donate_id5 = [getPlayerUID player];
-		};
-		case 6:{
-			Donate_id  = [getPlayerUID player];
-			Donate_id2 = [getPlayerUID player];
-			Donate_id3 = [getPlayerUID player];
-			Donate_id4 = [getPlayerUID player];
-			Donate_id5 = [getPlayerUID player];
-			Donate_id6 = [getPlayerUID player];
-		};
-		case 7:{
-			Donate_id  = [getPlayerUID player];
-			Donate_id2 = [getPlayerUID player];
-			Donate_id3 = [getPlayerUID player];
-			Donate_id4 = [getPlayerUID player];
-			Donate_id5 = [getPlayerUID player];
-			Donate_id6 = [getPlayerUID player];
-			OL_TierX_ID = [getPlayerUID player];
-		};
-		case 8:{
-			Donate_id     = [getPlayerUID player];
-			Donate_id2    = [getPlayerUID player];
-			Donate_id3    = [getPlayerUID player];
-			Donate_id4    = [getPlayerUID player];
-			Donate_id5    = [getPlayerUID player];
-			Donate_id6 	  = [getPlayerUID player];
-			OL_TierX_ID 	= [getPlayerUID player];
-			TopDonator_id = [getPlayerUID player];
-		};
-	};
-
-	switch (_BankIncrease) do
-	{
-		case 0:{
-			bank_limit = 15000000; //15m
-			};
-		case 1:{
-			bank_limit = 25000000; //25m
-		};
-		case 2:{
-			bank_limit = 50000000; //50m
-		};
-		case 3:{
-			bank_limit = 100000000; //100m
-		};
-	};
-
-	switch (_WeightIncrease) do
-	{
-		case 0:{
-			INV_Tragfaehigkeit = 60;
-		};
-		case 1:{
-			INV_Tragfaehigkeit = 100;
-		};
-		case 2:{
-			INV_Tragfaehigkeit = 150;
-		};
-		case 3:{
-			INV_Tragfaehigkeit = 300;
-		};
-	};
-
-	switch (_CarSaveIncrease) do
-	{
-		case 0:{
-			OL_CarSaveLimit = 10;
-		};
-		case 1:{
-			OL_CarSaveLimit = 15;
-		};
-		case 2:{
-			OL_CarSaveLimit = 20;
-		};
-		case 3:{
-			OL_CarSaveLimit = 25;
-		};
-	};
+	_PMC_Rank 				= [_ranks select 16] call AM_Server_StrToArr; 	//Civilian
+	_Flyers_Rank 			= [_ranks select 17] call AM_Server_StrToArr;		//Civilian
+	_Misc 						= [_ranks select 18] call AM_Server_StrToArr; 	//Civilian :(
 
 	switch (_adminRank) do {
 		case 0: {};

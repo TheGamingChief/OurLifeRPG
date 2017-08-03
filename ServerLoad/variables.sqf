@@ -102,7 +102,6 @@ robdonut1available   = true;
 //========robbing variables===========
 stolenfromtime 		 = 900;
 stolenfromtimeractive	 = false;  // dont change
-TheSafecode = [ceil ((random 12)+0.1),ceil ((random 12)+0.1),ceil ((random 12)+0.1),ceil ((random 12)+0.1),ceil ((random 12)+0.1),ceil ((random 12)+0.1)];
 SafecodesCracked = 0;
 DreherState = 0;
 Processing1 = false;

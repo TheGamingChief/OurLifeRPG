@@ -1,17 +1,13 @@
-private["_chat","_text","_cond"];
+private ["_chat", "_text", "_cond"];
 _chat = _this select 0;
 _text = _this select 1;
-_cond = call compile format["%1", _this select 2];
+_cond = false;
+
+if (isNil (_this select 2)) then { _cond = true } else { _cond = call compile format["%1", _this select 2] };
 
 if (typeName _chat != "SCALAR") exitWith { player globalChat "Tell Foster to fix his chat message." };
 
-if (typeName _text != "STRING") then {
-  _text = str _text
-};
-
-if (isNil "_cond") then {
-  _cond = true
-};
+if (typeName _text != "STRING") then { _text = str _text };
 
 if (_cond) then {
   switch (_chat) do {

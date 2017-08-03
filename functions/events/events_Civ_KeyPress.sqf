@@ -164,10 +164,9 @@ fnc_KeyPress_L = {
 };
 
 fnc_KeyPress_T = {
+	if (!INV_shortcuts || vehicle player == player || isstunned) exitwith {};
+	if (dialog) then { closeDialog 0 };
 
-	if(!INV_shortcuts)exitwith{};
-	if(dialog)exitwith{closeDialog 0;};
-	if(isstunned) exitwith {player groupchat "You are stunned!"};
 	_vcls = nearestobjects [getpos player, ["LandVehicle", "Air", "ship", "TKOrdnanceBox_EP1"], 12];
 	_vcl = _vcls select 0;
 	if (player != driver _vcl)exitwith{player groupchat "You must be in the drivers seat to get to the trunk";};

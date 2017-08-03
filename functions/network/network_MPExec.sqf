@@ -1,5 +1,4 @@
 private["_sender", "_params", "_function", "_target", "_scheduled", "_functionCode"];
-
 _sender 		= _this select 0;
 _params 		= _this select 1;
 _function 	= _this select 2;

@@ -4,6 +4,7 @@
 DD_Modules = DD_Modules + [
   ["OL",      "gangs",  "create",     1],
   ["OL",      "gangs",  "delete",     1],
+  ["OL",      "gangs",  "getName",    1],
   ["OL",      "gangs",  "getByKey",   1],
   ["OL",      "gangs",  "getByName",  1],
   ["OL",      "gangs",  "join",       1],
