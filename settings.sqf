@@ -2,10 +2,12 @@ _art = _this select 0;
 _zusatzString = "";
 if ((count _this)>1) then {_zusatzString = _this select 1;};
 
+if (_art == "Einstellungen") then {if (!(createDialog "MainMenu")) exitWith {hint "Dialog Error!";};};
+
 if (_art == "GrafikEinstellungen") then { [] execVM "3442919.sqf" };
 
 if (_art == "TextEinstellungen") then {
-	
+
 	if (_zusatzString == "oeffnen") then {
 		if (!(createDialog "TextEinstellungenDialog")) exitWith {hint "Dialog Error!";};
 		for [{_i=1}, {_i <= 4}, {_i=_i+1}] do	{
