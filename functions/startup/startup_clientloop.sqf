@@ -2,7 +2,7 @@ if (isServer) exitWith {};
 waitUntil {!isNil "OL_InitComplete"};
 waitUntil {OL_InitComplete};
 
-[[5, format["// %1 Has Joined Our Life RPG as %2!", name player, player]], "OL_misc_ChatMessage", true, false] call OL_network_MP;
+[[5, format["// %1 Has Joined Our Life RPG as %2!", name player, player], "true"], "OL_misc_ChatMessage", true, false] call OL_network_MP;
 
 _iterations = 0;
 
@@ -12,7 +12,7 @@ while {true} do	{
 	//5 Seconds
 	if (_iterations % 1 == 0) then {
 		[] spawn fnc_UpdatePlayerArray;
-		/*[] spawn OL_TFAR_channelCheck;*/
+		[] spawn OL_TFAR_channelCheck;
 		[] spawn CP_fnc_VarQueueUpdate;
 		[] spawn OL_misc_FosterFireCheck;
 		["CL"] spawn OL_misc_Markers;

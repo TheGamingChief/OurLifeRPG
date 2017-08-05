@@ -82,7 +82,7 @@ if !(isServer && isDedicated) then
 				{
 					player reveal _unite;
 
-					_id_action = _unite addAction [STR_R3F_REV_action_reanimer, "R3F_revive\reanimer.sqf", [], 10, false, true, "",
+					_id_action = _unite addAction ["Revive", "R3F_revive\reanimer.sqf", [], 10, false, true, "",
 					"player distance _target < 2 && !(player getVariable ""R3F_REV_est_inconscient"") && call R3F_REV_FNCT_peut_reanimer && alive _target && isPlayer _target && (_target getVariable ""R3F_REV_est_inconscient"") && isNil {_target getVariable ""R3F_REV_est_pris_en_charge_par""}"];
 					_unite setVariable ["R3F_REV_id_action_reanimer", _id_action, false];
 

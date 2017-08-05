@@ -57,7 +57,8 @@ INV_Lizenzen =
   ["Undercover_license",     [OL_Shop_Undercover],                                        "Undercover License",10000],
   ["towl",                   [truckshop,towatm],                                          "Towing License",30000],
   ["PMC_license",            [pmcbank],                                                   "PMC License",100000],
-  ["CommandPMC_license",     [pmcbank],                                                   "PMC Command License",50000]
+  ["CommandPMC_license",     [pmcbank],                                                   "PMC Command License",50000],
+  ["Field_Medic",            [pharmacy],                                                  "Field Medic Training",75000]
 ];
 
 INV_LizenzOwner = [];

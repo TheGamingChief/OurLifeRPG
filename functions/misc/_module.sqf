@@ -37,5 +37,6 @@ DD_Modules = DD_Modules + [
   ["CP",    "misc", "NearestCar",          1],
   ["CP",    "misc", "countArray",          1],
   ["CP",    "misc", "AntiDupe",            1],
-  ["Item",  "misc", "Bunnyhop",            1]
+  ["Item",  "misc", "Bunnyhop",            1],
+  ["Item",  "misc", "CPR",                 1]
 ];

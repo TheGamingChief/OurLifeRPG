@@ -7,7 +7,6 @@ R3F_REV_CFG_list_of_classnames_who_can_revive = ["KPFS_THW_Worker_helmet","KPFS_
 R3F_REV_CFG_list_of_slots_who_can_revive = [];
 R3F_REV_CFG_all_medics_can_revive = false;
 
-STR_R3F_REV_action_reanimer = "Revive";
 STR_R3F_REV_action_deplacer_corps = "Drag body";
 STR_R3F_REV_action_relacher_corps = "Release body";
 STR_R3F_REV_btn_reapparition = "Respawn";

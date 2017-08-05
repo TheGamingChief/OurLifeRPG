@@ -269,7 +269,7 @@ _dsl = ["lsd"];
 //50. Heroin Sell
 _dsh = ["heroin","heroinseed"];
 //51
-_psc = ["medikit","pharm","GymMem1","GymMem2","cl_wheelchair"];
+_psc = ["medikit","pharm","GymMem1","GymMem2","cl_wheelchair","cpr_kit"];
 //52
 _hsc = ["eyes","brain","liver","heart","kidney","bones","teeth"];
 //53
@@ -988,7 +988,8 @@ _terrorshop =
 "20Rnd_762x51_DMR",
 "RPG18",
 "RPG18_mag",
-"V3S_Reammo_TK_GUE_EP1"
+"V3S_Reammo_TK_GUE_EP1",
+"vclammo"
 ];
 
 //77
@@ -1445,7 +1446,7 @@ INV_ItemShops = [
 	[OL_Shop_Wigsworth,					"Wigworths",													dummyobj,						dummyobj,					_wigs,							_wigs,							true,  "[getPlayerUID player]"],
 	[OilSell1,									"Oil Dealer", 												dummyobj,						dummyobj, 				_emptyshop,					_os,								true,  "[getPlayerUID player]"],
 	[whalesell,									"Sell Whale",													dummyobj,						dummyobj,					_emptyshop,					_ws,								true,  "[getPlayerUID player]"],
-	[terrorbox,									"Terror Stuff",												terrorbox,					terroraswpawn,	_terrorshop,				_terrorshop,				true,  "[getPlayerUID player]"],
+	[terrorbox,									"Terror Stuff",												terrorbox,					terroraswpawn,		_terrorshop,				_terrorshop,				true,  "[getPlayerUID player]"],
 	[shadyd,										"Barely Legal",												shadyd,							dummyobj, 				_shady,							_shady,							true,  "[getPlayerUID player]"],
 	[OL_Shop_Gangarea1,					"Gang Shop",													gangbox1,						dummyobj,					_gangshop_buy,			_gangshop_buy,			true,  "[getPlayerUID player]"],
 	[OL_Shop_Gangarea2,					"Gang Shop",													gangbox2,						dummyobj,					_gangshop_buy,			_gangshop_buy,			true,  "[getPlayerUID player]"],

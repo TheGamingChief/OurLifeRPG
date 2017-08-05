@@ -87,6 +87,8 @@ if (_key == "no_data") then {
 		};
 	};
 
+	if (_Misc == 6) then { OL_isMale = false };
+
 	//Load Side Ranks
 	switch (_side) do {
 		case west: {

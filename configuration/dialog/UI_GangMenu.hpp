@@ -142,7 +142,7 @@ class UI_GangMenu
 		h = 0.04;
 
 		text = $STRD_description_gildehauptmenu_button_manage;
-		action = "[] call OL_gangs_Manage; closedialog 0;";
+		action = "closeDialog 0; [] call OL_gangs_Manage;";
 	};
 
 	class UI_GangMenu_btnCreate : RscButton
@@ -170,89 +170,92 @@ class UI_GangMenu
 		idc = 1018;
 	};
 };
-// will do 4 now
+
 class UI_GangManager {
 	idd = -1;
-  controlsBackground[] = {UI_GangManager_BG};
+  controlsBackground[] = {TRG_ui_GM_BG};
 	controls[] = {
-    UI_GangManager_PList,
-    UI_GangManager_SList,
-    UI_GangManager_btnKP,
-		UI_GangManager_btnUS,
-		UI_GangManager_NameInput,
-		UI_GangManager_btnCN,
-		UI_GangManager_btnClose
+    TRG_ui_GM_lb,
+    TRG_ui_GM_btn_KP,
+    TRG_ui_GM_btn_TL,
+		TRG_ui_GM_btn_DG,
+		TRG_ui_GM_btn_C,
+		TRG_ui_GM_GNIT,
+		TRG_ui_GM_btn_RG
   };
-  class UI_GangManager_BG: RscBackground
-  {
-  	idc = 1800;
-  	text = "Manage Gang";
-  	x = 0.403294 * safezoneW + safezoneX;
-  	y = 0.3763 * safezoneH + safezoneY;
-  	w = 0.193412 * safezoneW;
-  	h = 0.2474 * safezoneH;
-  };
-  class UI_GangManager_PList: RscListbox
-  {
-  	idc = 1500;
-  	x = 0.409741 * safezoneW + safezoneX;
-  	y = 0.403789 * safezoneH + safezoneY;
-  	w = 0.0838117 * safezoneW;
-  	h = 0.1237 * safezoneH;
-  };
-  class UI_GangManager_SList: RscListbox
-  {
-  	idc = 1501;
-  	x = 0.506447 * safezoneW + safezoneX;
-  	y = 0.403789 * safezoneH + safezoneY;
-  	w = 0.0838117 * safezoneW;
-  	h = 0.0412333 * safezoneH;
-  };
-  class UI_GangManager_btnKP: RscButton
-  {
-  	idc = 1600;
-  	text = "Kick Player";// fuck u
-  	x = 0.409741 * safezoneW + safezoneX;
-  	y = 0.541233 * safezoneH + safezoneY;
-  	w = 0.0838117 * safezoneW;
-  	h = 0.0274889 * safezoneH;
-  };
-  class UI_GangManager_btnUS: RscButton
-  {
-  	idc = 1601;
-  	text = "Update Status";
+
+	class TRG_ui_GM_BG: RscBackground
+	{
+		idc = 1800;
+		x = 0.416188 * safezoneW + safezoneX;
+		y = 0.390045 * safezoneH + safezoneY;
+		w = 0.167623 * safezoneW;
+		h = 0.219911 * safezoneH;
+	};
+	class TRG_ui_GM_lb: RscListbox
+	{
+		idc = 1500;
+		x = 0.422635 * safezoneW + safezoneX;
+		y = 0.403789 * safezoneH + safezoneY;
+		w = 0.0709176 * safezoneW;
+		h = 0.151189 * safezoneH;
+	};
+	class TRG_ui_GM_btn_KP: RscButton
+	{
+		idc = 1600;
+		text = "Kick Player";
+		action = "[lbData [15009, (lbCurSel 15009)]] call OL_gangs_kick;";
+		x = 0.422635 * safezoneW + safezoneX;
+		y = 0.568722 * safezoneH + safezoneY;
+		w = 0.0709176 * safezoneW;
+		h = 0.0274889 * safezoneH;
+	};
+	class TRG_ui_GM_btn_TL: RscButton
+	{
+		idc = 1602;
+		text = "Toggle Lock";
 		action = "[] call OL_gangs_lock; closeDialog 0;";
-  	x = 0.506447 * safezoneW + safezoneX;
-  	y = 0.458767 * safezoneH + safezoneY;
-  	w = 0.0838117 * safezoneW;
-  	h = 0.0274889 * safezoneH;
-  };
-  class UI_GangManager_NameInput: RscEdit
-  {
-  	idc = 1400;
-  	x = 0.506447 * safezoneW + safezoneX;
-  	y = 0.5 * safezoneH + safezoneY;
-  	w = 0.0838117 * safezoneW;
-  	h = 0.0274889 * safezoneH;
-  };
-  class UI_GangManager_btnCN: RscButton
-  {
-  	idc = 1602;
-  	text = "Change Name";
-		action = "[ctrlText 1400] call OL_gangs_rename; closeDialog 0;";
-  	x = 0.506447 * safezoneW + safezoneX;
-  	y = 0.541233 * safezoneH + safezoneY;
-  	w = 0.0838117 * safezoneW;
-  	h = 0.0274889 * safezoneH;
-  };
-  class UI_GangManager_btnClose: RscButton
-  {
-  	idc = 1603;
-  	text = "Close";
+		x = 0.506447 * safezoneW + safezoneX;
+		y = 0.403789 * safezoneH + safezoneY;
+		w = 0.0709176 * safezoneW;
+		h = 0.0274889 * safezoneH;
+	};
+	class TRG_ui_GM_btn_DG: RscButton
+	{
+		idc = 1601;
+		text = "Delete Gang";
+		action = "[] call OL_gangs_delete; closeDialog 0;";
+		x = 0.506447 * safezoneW + safezoneX;
+		y = 0.445022 * safezoneH + safezoneY;
+		w = 0.0709176 * safezoneW;
+		h = 0.0274889 * safezoneH;
+	};
+	class TRG_ui_GM_btn_C: RscButton
+	{
+		idc = 1603;
+		text = "Close";
 		action = "closeDialog 0;";
-  	x = 0.461318 * safezoneW + safezoneX;
-  	y = 0.582467 * safezoneH + safezoneY;
-  	w = 0.0773647 * safezoneW;
-  	h = 0.0274889 * safezoneH;
-  };
+		x = 0.506447 * safezoneW + safezoneX;
+		y = 0.568722 * safezoneH + safezoneY;
+		w = 0.0709176 * safezoneW;
+		h = 0.0274889 * safezoneH;
+	};
+	class TRG_ui_GM_GNIT: RscEdit
+	{
+		idc = 1400;
+		x = 0.506447 * safezoneW + safezoneX;
+		y = 0.486256 * safezoneH + safezoneY;
+		w = 0.0709176 * safezoneW;
+		h = 0.0274889 * safezoneH;
+	};
+	class TRG_ui_GM_btn_RG: RscButton
+	{
+		idc = 1604;
+		text = "Rename Gang";
+		action = "[ctrlText 1400] call OL_gangs_rename; closeDialog 0;";
+		x = 0.506447 * safezoneW + safezoneX;
+		y = 0.527489 * safezoneH + safezoneY;
+		w = 0.0709176 * safezoneW;
+		h = 0.0274889 * safezoneH;
+	};
 };

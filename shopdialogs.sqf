@@ -20,7 +20,7 @@ _itemsellarray  = ((INV_ItemShops select INV_ActiveShopNumber) select 5);
 _whitelist = ((INV_ItemShops select INV_ActiveShopNumber) select 7);
 
 //--------------------------------------BUY-----------------------------------------
-_CopOnlyShops = [copuntrained,copbasic1,copbasic2,copbasic4,copbasic6,copbasicfto,coppo1,coppo2,coppo3,copcpl,copsgt,ftobox,ftoboxs,ftoboxc,cidbox,copdeputy,copsheriff,copsheriffdnr,copsheriffmks,coplt,copcpt,copchief,copmedalbox,copair2,copswat1,copswat2,copswat3,copswat4,copswat5,copswate,copswatd,copswatvehicle,copcoastguard,copcoastguardair,copairweapon2,copk92,copsgtdeputy];
+_CopOnlyShops = [copuntrained,copbasic1,copbasic2,copbasic4,copbasic6,copbasicfto,coppo1,coppo2,coppo3,copcpl,copsgt,ftobox,ftoboxs,ftoboxc,cidbox,copdeputy,copsheriff,copsheriffdnr,copsheriffmks,coplt,copcpt,copchief,copmedalbox,copair2,copswat1,copswat2,copswat3,copswat4,copswat5,copswate,copswatvehicle,copcoastguard,copcoastguardair,copairweapon2,copk92,copsgtdeputy];
 _ESUOnlyShops = [tdoc,tdoc2,tdoc3,tdoc4,tdoc5,tdoc6,tdocsub,tdoc2sub,tdoc3sub,tdoc4sub,tdoc5sub,tdoc6sub,tdoc7,tdoc7sub,tdoc8];
 _EMT1 = [tdoc3,tdoc3sub];
 _EMT2 = [tdoc7,tdoc7sub];
