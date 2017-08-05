@@ -5596,7 +5596,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=2643;
+		items=2644;
 		class Item0
 		{
 			position[]={2658.4797,230,2716.8459};
@@ -32185,6 +32185,19 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="OL_Shop_TerrorBoat";
+			init="this allowdamage false;clearMagazineCargo this; clearWeaponCargo this;";
+		};
+		class Item2643
+		{
+			position[]={4615.7231,2.3318627,6824.0317};
+			azimut=-416.51501;
+			special="NONE";
+			id=2905;
+			side="EMPTY";
+			vehicle="UNBasicAmmunitionBox_EP1";
+			leader=1;
+			skill=0.60000002;
+			text="OL_Shop_TerrorAir";
 			init="this allowdamage false;clearMagazineCargo this; clearWeaponCargo this;";
 		};
 	};

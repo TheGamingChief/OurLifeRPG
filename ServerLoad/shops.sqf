@@ -267,7 +267,8 @@ _as = ["V3S_Refuel_TK_GUE_EP1","V3S_Repair_TK_GUE_EP1","An2_1_TK_CIV_EP1","An2_2
 //32
 _assa = ["kyo_ultralight","AH6X_EP1","KA137_PMC","CSJ_Gyroc","Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gazelle","Gazelle1","Gazelle3","tcg_bell206_3","tcg_bell206_4","tcg_bell206_1","tcg_bell206_2","tcg_bell206_5","tcg_bell206", "MH6J_EP1"];
 //33
-_asc = ["can_c130","airnz_C130","luf_c130","qantas_C130","A320MPA"];
+_asc = ["can_c130","airnz_C130","luf_c130","qantas_C130","A320MPA", "OL_USEC_ch53_e"];
+
 //34. Scuba Shop
 _sb = ["fishingpole","tcg_wrun","tcg_wave_red","tcg_wave_black","tcg_wave_red2","tcg_wave_sky","tcg_wave_red3"];
 //35. Boat Shop
@@ -1024,6 +1025,27 @@ _terrorshop =
 	"vclammo"
 ];
 
+_terrorboatshop =
+[
+"OL_RHIB",
+"fishingpole",
+"OL_PBX",
+"OL_Zodiac",
+"cl_trawler_fishing_boat",
+"cl_container_boat",
+"cl_sport_fishing_boat",
+"Fishing_boat",
+"cl_inflatable",
+"lcu"
+];
+
+_terrorhelishop =
+[
+"OL_UH1H_TK_EP1",
+"Gazelle",
+"Gazelle3",
+"GazelleUN"
+];
 //77
 _shady =
 [
@@ -1503,6 +1525,8 @@ INV_ItemShops = [
 	[OilSell1,									"Oil Dealer", 												dummyobj,						dummyobj, 				_emptyshop,					_os,								true,  "[getPlayerUID player]"],
 	[whalesell,									"Sell Whale",													dummyobj,						dummyobj,					_emptyshop,					_ws,								true,  "[getPlayerUID player]"],
 	[terrorbox,									"Terror Stuff",												terrorbox,					terroraswpawn,		_terrorshop,				_terrorshop,				true,  "[getPlayerUID player]"],
+	[OL_Shop_TerrorBoat,        "Terror Boats",                       dummyobj,           OL_Spawn_TerrorBoat,        _terrorboatshop,        _terrorboatshop,        true,  "[getPlayerUID player]"],
+	[OL_Shop_TerrorAir,         "Terror Air Shop",                    dummyobj,           terroraswpawn,                  _terrorhelishop,        _terrorhelishop,        true,  "[getPlayerUID player]"],
 	[shadyd,										"Barely Legal",												shadyd,							dummyobj, 				_shady,							_shady,							true,  "[getPlayerUID player]"],
 	[OL_Shop_Gangarea1,					"Gang Shop",													gangbox1,						dummyobj,					_gangshop_buy,			_gangshop_buy,			true,  "[getPlayerUID player]"],
 	[OL_Shop_Gangarea2,					"Gang Shop",													gangbox2,						dummyobj,					_gangshop_buy,			_gangshop_buy,			true,  "[getPlayerUID player]"],
