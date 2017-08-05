@@ -38,7 +38,7 @@ switch (_mode) do {
 			GET_CTRL(balca_debug_console_history_IDC) lbSetData [(lbSize GET_CTRL(balca_debug_console_history_IDC))-1,_command];
 		};
 		_result = call compile _command;
-		if (!(isNil {_result})) then {
+		if (!(isNil "_result")) then {
 			GET_CTRL(balca_debug_console_result_IDC) ctrlSetText str _result;
 			__uiSet(balca_console_result,_result);
 		};
@@ -60,7 +60,7 @@ switch (_mode) do {
 		GET_CTRL(balca_debug_console_edit_IDC) ctrlSetText _command;
 		_result = call compile _command;
 		_gridPos = mapGridPosition getpos player;
-		if (!(isNil {_result})) then {
+		if (!(isNil "_result")) then {
 			GET_CTRL(balca_debug_console_result_IDC) ctrlSetText str _result;
 			__uiSet(balca_console_result,_result);
 		};

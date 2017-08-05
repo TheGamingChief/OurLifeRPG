@@ -9,6 +9,8 @@ _activeModules = [
 	"admin",
 	"bank",
 	"fnc",
+	"gangs",
+	"governor",
 	"hud",
 	"mdc",
 	"checkpoint",
@@ -21,7 +23,6 @@ _activeModules = [
 	"tfar",
 	"stats",
 	"vehicle",
-	"gangs",
 	"ui",
 	"init"
 ];
