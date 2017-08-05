@@ -20,7 +20,7 @@ _itemsellarray  = ((INV_ItemShops select INV_ActiveShopNumber) select 5);
 _whitelist = ((INV_ItemShops select INV_ActiveShopNumber) select 7);
 
 //--------------------------------------BUY-----------------------------------------
-_CopOnlyShops = [copuntrained,copbasic1,copbasic2,copbasic4,copbasic6,copbasicfto,coppo1,coppo2,coppo3,copcpl,copsgt,ftobox,ftoboxs,ftoboxc,cidbox,copdeputy,copsheriff,copsheriffdnr,copsheriffmks,coplt,copcpt,copchief,copmedalbox,copair2,copswat1,copswat2,copswat3,copswat4,copswat5,copswate,copswatd,copswatvehicle,copcoastguard,copcoastguardair,copairweapon2,copVIPBox,copVIPBox2,copk92,copsgtdeputy];
+_CopOnlyShops = [copuntrained,copbasic1,copbasic2,copbasic4,copbasic6,copbasicfto,coppo1,coppo2,coppo3,copcpl,copsgt,ftobox,ftoboxs,ftoboxc,cidbox,copdeputy,copsheriff,copsheriffdnr,copsheriffmks,coplt,copcpt,copchief,copmedalbox,copair2,copswat1,copswat2,copswat3,copswat4,copswat5,copswate,copswatvehicle,copcoastguard,copcoastguardair,copairweapon2,copk92,copsgtdeputy];
 _ESUOnlyShops = [tdoc,tdoc2,tdoc3,tdoc4,tdoc5,tdoc6,tdocsub,tdoc2sub,tdoc3sub,tdoc4sub,tdoc5sub,tdoc6sub,tdoc7,tdoc7sub,tdoc8];
 _EMT1 = [tdoc3,tdoc3sub];
 _EMT2 = [tdoc7,tdoc7sub];
@@ -28,13 +28,6 @@ _EMT3 = [tdoc,tdoc6sub];
 _EMT_FD = [tdoc4,tdoc4sub,tdoc8];
 _EMT_Air = [tdoc5,tdoc5sub];
 _EMT_Command = [tdoc6,tdocsub];
-_vipCop = [copVIPBox,copVIPBox2,copVIPBox3,copswatd];
-_donor1 = [dshop1];
-_donor2 = [dshop2];
-_donor3 = [dshop3];
-_donor4 = [dshop4];
-_donor5 = [dshop5];
-_donor6 = [dshop6];
 _PO1 = [coppo1];
 _PO2 = [coppo2];
 _PO3 = [coppo3];
@@ -54,26 +47,12 @@ _SWAT = [copswat1,copswat2,copswat3,copswat4,copswat5,copswatvehicle];
 _CID = [cidbox];
 _CoastGuard = [copcoastguard,copcoastguardair];
 _undercoverbox = [OL_Shop_Undercover];
-_terrorVIP = [terrorvip,vipterrorair];
-_weaponx = [txwshop];
-_itemx = [txeshop];
-_carx = [carx];
-_helix = [helix];
-_boatx = [boatx];
 _CommandPMC = [pmcbox1];
 _PMC = [pmcbox,pmcbox2];
 _Tow = [tow_box,towcarshop,towcarshop_1,towcarshop_2];
 
-if (_shop in _CopOnlyShops) then
-{
-	_PlayerTeam = str(playerSide);
-	if (!isCop) exitWith {player groupchat "Only Cops may use this shop!"; closedialog 0};
-};
-if (_shop in _ESUOnlyShops) then
-{
-	_PlayerTeam = str(playerSide);
-	if (_PlayerTeam != "GUER") exitWith {player groupchat "Only EMS may use this shop!"; closedialog 0};
-};
+if (_shop in _CopOnlyShops && !iscop) exitWith { player groupChat "Only Cops may use this shop!"; closeDialog 0; };
+if (_shop in _ESUOnlyShops && !ismedic) exitWith { player groupChat "Only EMS may use this shop!"; closeDialog 0; };
 
 if (!(getPlayerUID player in (call compile _whitelist))) exitWith {
 	player groupChat "You are not whitelisted for this shop!";
@@ -112,7 +91,7 @@ if(_infos call INV_getitemType == "item")then
 		_preis        	= _infos call INV_getitemSteuer;
 		_control = _shop getvariable "control";
 		if (isNil "_control") exitWith {};
-		if(_control == (call INV_mygang) and _infos call INV_getitemKindOf == "drug")then{_preis = 0};
+		if(_control == (call OL_gangs_getName) and _infos call INV_getitemKindOf == "drug")then{_preis = 0};
 
 		};
 

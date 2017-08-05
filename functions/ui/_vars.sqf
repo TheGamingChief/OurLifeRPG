@@ -22,7 +22,6 @@ OL_AllAnimationsArray = [
 OL_SpawnPoints =  [
 	["San Milovitz (East Civilian Spawn)",	[6136.3,  4344.29,0], 0, civilian, "[getPlayerUID player]"],
 	["Nanchuk (West Civilian Spawn)",		    [3580.48, 3062.24,0], 0, civilian, "[getPlayerUID player]"],
-	["Pueblo (Tier X Spawn)",				        [4328.94, 2359.72,0], 0, civilian, "OL_TierX_ID"],
 	["Hidden (Undercover Spawn)",			      [4235.82, 5162.21,0], 1, west, 		 "Undercover_id"]
 ];
 

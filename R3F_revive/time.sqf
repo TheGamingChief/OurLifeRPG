@@ -37,6 +37,7 @@ if (_timer <= 0) then {
 	player setVariable ["KOED2",false,true];
 	player setVariable ["tf_unable_to_use_radio", false, true];
 	player setVariable ["tf_voiceVolume", 1.0, true];
+	player setVariable ["TriedCPR", false, true];
 	player enableSimulation true;
 	format['deleteMarker ("OL_DeadTracker_" + name %1)', player] call OL_network_Swag;
 	uiSleep 2;
@@ -74,6 +75,7 @@ if (player getVariable "KOED2") then
 	player setVariable ["KOED", false, true];
 	player setVariable ["tf_unable_to_use_radio", false, true];
 	player setVariable ["tf_voiceVolume", 1.0, true];
+	player setVariable ["TriedCPR", false, true];
 	{	if (!(_x in weapons player)) then { player addWeapon _x }	} forEach OL_DefaultItems;
 	player enableSimulation true;
 	format['deleteMarker ("OL_DeadTracker_" + name %1)', player]call OL_network_Swag;

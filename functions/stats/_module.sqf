@@ -4,5 +4,7 @@
 DD_Modules = DD_Modules + [
   ["OL", "stats", "SaveStats",          1],
   ["OL", "stats", "LoadStats",          1],
+  ["OL", "stats", "LoadVehicles",       1],
+  ["OL", "stats", "SaveVehicles",       1],
   ["OL", "stats", "createWeaponArray",  1]
 ];

@@ -105,8 +105,7 @@ this setAmmoCargo 0;
   publicvariable "assveh";
 processInitCommands;
 // put vip inside the car
-if ((!(VIPtarget in assveh)) and (alive VIPtarget))
-	then{
+if ((!(VIPtarget in assveh)) and (alive VIPtarget)) then {
 		VIPbodyguard1 moveInDriver assveh;
 		VIPtarget doFollow VIPbodyguard1;
 		VIPbodyguard2 doFollow VIPbodyguard1;

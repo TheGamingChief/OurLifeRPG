@@ -8,6 +8,7 @@ strn 						 				= objnull;
 fn_SirenMode 				 		= 0;
 strn_array 					 		= [];
 shopactivescript        = 0;
+OL_DemeritPoints				= 0;
 platesavailable         = true;
 gunrunavailable         = true;
 gunrun2available        = true;
@@ -18,6 +19,7 @@ Pistol_Holster          = nil;
 Taser_Holster						= nil;
 Radar_Holstered         = false;
 OL_HasDisplayOpen				= false;
+OL_Lockpicking					= false;
 
 CP_RobScript_pub1 = [
 	["SETTINGS",  "Fionas Pub", "barmoney", "fionasavailable", "Robbed Bar"],

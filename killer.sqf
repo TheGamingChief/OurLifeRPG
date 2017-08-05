@@ -4,12 +4,8 @@ _killedbyvehicle = _this select 1;
 if (player == _victim) exitWith {};
 
 if (_victim in civarray) exitWith {
-  if (iscop) then	{
-   if (count (_victim getVariable ["PlayerWarrants", []]) > 0) then {
-     player groupChat format ["You killed %1! He wasn't wanted so you should pay $%2 to him in compensation.", _victim, killstrafe call ISSE_str_IntToStr];
-   };
-  } else {
-    if(_killedbyvehicle) then	{
+  if (!iscop) then {
+    if (_killedbyvehicle) then {
       [player, "Hit and Run"] call OL_player_WarrantAdd;
 
     	INV_LizenzOwner = INV_LizenzOwner - ["car","truck","bus_license","boat"];

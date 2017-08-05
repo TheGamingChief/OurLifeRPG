@@ -2,8 +2,7 @@ if (isServer) exitWith {};
 waitUntil {!isNil "OL_InitComplete"};
 waitUntil {OL_InitComplete};
 
-[[5, format["// %1 Has Joined Our Life RPG as %2!", name player, player]], "OL_misc_ChatMessage", true, false] call OL_network_MP;
-[['publicVariable "gangsarray"'], "OL_fnc_NoScript", false, false] call OL_network_MP;
+[[5, format["// %1 Has Joined Our Life RPG as %2!", name player, player], "true"], "OL_misc_ChatMessage", true, false] call OL_network_MP;
 
 _iterations = 0;
 
@@ -28,9 +27,14 @@ while {true} do	{
 
 	//15 Seconds
 	if (_iterations % 15 == 0) then {
-		if (Kontostand > bank_limit) then { Kontostand = bank_limit; player groupChat localize "STRS_maxbank"; };
-		if ("geld" call INV_GetItemAmount > money_limit) then {['geld', money_limit] call INV_SetItemAmount; player groupChat localize "STRS_maxmoney";};
+		if (Kontostand > OL_BankLimit) then { Kontostand = OL_BankLimit; player groupChat localize "STRS_maxbank"; };
+		if ("geld" call INV_GetItemAmount > OL_MoneyLimit) then { ["geld", OL_MoneyLimit] call INV_SetItemAmount; player groupChat localize "STRS_maxmoney"; };
 	};
+
+	//60 Seconds
+  if (_iterations % 60 == 0) then {
+      [] spawn OL_misc_Hunger;
+  };
 
 	//300 Seconds (5 Minutes)
 	if (_iterations % 300 == 0) then {

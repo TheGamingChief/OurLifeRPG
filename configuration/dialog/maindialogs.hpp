@@ -141,7 +141,7 @@ class gang_menu
 		w = 0.87;
 		h = 0.27;
 
-		text = $STRD_description_gildehauptmenu_header;
+		text = "Gangs";
 	};
 
 	class button_join : RscButton

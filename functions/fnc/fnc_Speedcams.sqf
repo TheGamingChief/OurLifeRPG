@@ -1,4 +1,4 @@
-if ((player != (driver vehicle player)) || (!(vehicle player isKindOf "LandVehicle")) || (speed (vehicle player) <= 90)) exitWith {};
+if ((vehicle player != player) || (player != (driver vehicle player)) || (!(vehicle player isKindOf "LandVehicle")) || (speed (vehicle player) <= 90)) exitWith {};
 
 [vehicle player, "speedcam", 50] call CBA_fnc_globalSay3D;
 titleCut ["", "white in", 1];

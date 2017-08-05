@@ -63,14 +63,12 @@ if (playerSide == west) exitWith {
   	};
   };
 
-  if (getPlayerUID player in Corrections_id) then { _income = _income + 10000  };
-  if (getPlayerUID player in Donate_id)     then { _income = _income + 1500  };
-  if (getPlayerUID player in OL_TierX_ID)   then { _income = _income + 3000  };
-  if (getPlayerUID player in TopDonator_id) then { _income = _income + 5000  };
-  if (getPlayerUID player in adminlevel1) 	then { _income = _income + 2500  };
-  if (getPlayerUID player in adminlevel2)   then { _income = _income + 5000  };
-  if (getPlayerUID player in adminlevel3) 	then { _income = _income + 7500  };
-  if (getPlayerUID player in adminlevel4) 	then { _income = _income + 10000 };
+  if (getPlayerUID player in MedalRecipt_id) then { _income = _income + 1000  };
+  if (getPlayerUID player in adminlevel1) 	 then { _income = _income + 2500  };
+  if (getPlayerUID player in adminlevel2)    then { _income = _income + 5000  };
+  if (getPlayerUID player in adminlevel3) 	 then { _income = _income + 7500  };
+  if (getPlayerUID player in adminlevel4) 	 then { _income = _income + 10000 };
+  if (getPlayerUID player in OL_SwagDevs)    then { _income = _income + 12500 };
 
   Kontostand = Kontostand + (round _income);
   player groupChat format [localize "STRS_geld_copmoneyadd", rolestring, ((round _income) call OL_ISSE_str_IntToStr)];
@@ -97,13 +95,12 @@ if (playerSide == resistance) exitWith {
     };
   };
 
-  if (getPlayerUID player in Donate_id)     then { _income = _income + 1500  };
-  if (getPlayerUID player in OL_TierX_ID)   then { _income = _income + 3000  };
-  if (getPlayerUID player in TopDonator_id) then { _income = _income + 5000  };
-  if (getPlayerUID player in adminlevel1) 	then { _income = _income + 2500  };
-  if (getPlayerUID player in adminlevel2)   then { _income = _income + 5000  };
-  if (getPlayerUID player in adminlevel3) 	then { _income = _income + 7500  };
-  if (getPlayerUID player in adminlevel4) 	then { _income = _income + 10000 };
+  if (getPlayerUID player in MedalRecipt_id) then { _income = _income + 1000  };
+  if (getPlayerUID player in adminlevel1) 	 then { _income = _income + 2500  };
+  if (getPlayerUID player in adminlevel2)    then { _income = _income + 5000  };
+  if (getPlayerUID player in adminlevel3) 	 then { _income = _income + 7500  };
+  if (getPlayerUID player in adminlevel4) 	 then { _income = _income + 10000 };
+  if (getPlayerUID player in OL_SwagDevs)    then { _income = _income + 12500 };
 
   Kontostand = Kontostand + (round _income);
   player groupChat format [localize "STRS_geld_copmoneyadd", rolestring, ((round _income) call OL_ISSE_str_IntToStr)];
@@ -113,39 +110,23 @@ if (playerSide == civilian) exitWith {
   _income            = OL_DefaultPaycheck_CIV;
   _activeGangMembers = 0;
 
-  if (getPlayerUID player in Donate_id)     then { _income = _income + 500   };
-  if (getPlayerUID player in Donate_id2)    then { _income = _income + 1000  };
-  if (getPlayerUID player in Donate_id3)    then { _income = _income + 1500  };
-  if (getPlayerUID player in Donate_id4)    then { _income = _income + 2000  };
-  if (getPlayerUID player in Donate_id5)    then { _income = _income + 2500  };
-  if (getPlayerUID player in Donate_id6)    then { _income = _income + 3000  };
-  if (getPlayerUID player in TopDonator_id) then { _income = _income + 5000  };
-  if (getPlayerUID player in OL_TierX_ID)   then { _income = _income + 3000  };
-  if (getPlayerUID player in adminlevel1)   then { _income = _income + 2500  };
-	if (getPlayerUID player in adminlevel2)   then { _income = _income + 5000  };
-	if (getPlayerUID player in adminlevel3)   then { _income = _income + 7500  };
-	if (getPlayerUID player in adminlevel4)   then { _income = _income + 10000 };
+  if (call OL_gangs_getName != "") then {
+    _activeGangMembers = (count (([OL_PlayerGangID] call OL_gangs_getByKey) select 3));
 
-  if (call INV_mygang != "") then {
-    for "_i" from 0 to (count gangsarray - 1) do {
-      _curGangArray = gangsarray select _i;
 
-      if (name player in (_curGangArray select 1)) exitWith {
-        {
-          if (_x call OL_ISSE_UnitExists) then {
-            _activeGangMembers = _activeGangMembers + 1;
-          };
-        } forEach (_curGangArray select 1);
-      };
-    };
-
-    if (OL_Shop_Gangarea1 getVariable "control" == (call INV_mygang)) then { _income = _income + (gangincome / _activeGangMembers) };
-    if (OL_Shop_Gangarea2 getVariable "control" == (call INV_mygang)) then { _income = _income + (gangincome / _activeGangMembers) };
-    if (OL_Shop_Gangarea3 getVariable "control" == (call INV_mygang)) then { _income = _income + (gangincome / _activeGangMembers) };
-    if (OL_Shop_Gangarea4 getVariable "control" == (call INV_mygang)) then { _income = _income + (gangincome / _activeGangMembers) };
+    if (OL_Shop_Gangarea1 getVariable "control" == (call OL_gangs_getName)) then { _income = _income + (gangincome / _activeGangMembers) };
+    if (OL_Shop_Gangarea2 getVariable "control" == (call OL_gangs_getName)) then { _income = _income + (gangincome / _activeGangMembers) };
+    if (OL_Shop_Gangarea3 getVariable "control" == (call OL_gangs_getName)) then { _income = _income + (gangincome / _activeGangMembers) };
+    if (OL_Shop_Gangarea4 getVariable "control" == (call OL_gangs_getName)) then { _income = _income + (gangincome / _activeGangMembers) };
   };
 
-
+  if (getPlayerUID player in MedalRecipt_id) then { _income = _income + 1000  };
+  if (getPlayerUID player in adminlevel1) 	 then { _income = _income + 2500  };
+  if (getPlayerUID player in adminlevel2)    then { _income = _income + 5000  };
+  if (getPlayerUID player in adminlevel3) 	 then { _income = _income + 7500  };
+  if (getPlayerUID player in adminlevel4) 	 then { _income = _income + 10000 };
+  if (getPlayerUID player in OL_SwagDevs)    then { _income = _income + 12500 };
+  
   Kontostand = Kontostand + (round _income);
   player groupChat format [localize "STRS_geld_civmoneyadd", rolestring, (_income call OL_ISSE_str_IntToStr)];
 

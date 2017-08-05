@@ -24,56 +24,46 @@
 [DONE] Fixed SpeedCams
 [DONE] player arrays (E)
 ---------------------------------------------------
-[Done] Fix warrants not being removed when arrested.
-[Done] Increase Air Vehicle saving action so you don't need to crawl
-[Done] Remove exec on server displaying code in global chat to all players
+[DONE] Fix warrants not being removed when arrested.
+[DONE] Increase Air Vehicle saving action so you don't need to crawl
+[DONE] Remove exec on server displaying code in global chat to all players
 ---------------------------------------------------
-[Done] Fix This hooker has earned you $ANY
-[Done] Fix Error Undefined variable in expression: isse_str_inttostr File mpmissions\__CUR_MP.cmr_cicada\worker.sqf
-[Done] Fix hookers requiring $40001 to buy a hooker instead of $40000
-[Done] Send person getting comp a message telling them they been comped
-[Done] Define INV_SavedVehAir, Can't save air vehicle if this is not defined
-[Done] Set Rob_Log to only log when 100k+ has been robbed.
-[Done] Add all of Foster's changes (more info can be found in the commit message.
+[DONE] Fix This hooker has earned you $ANY
+[DONE] Fix Error Undefined variable in expression: isse_str_inttostr File mpmissions\__CUR_MP.cmr_cicada\worker.sqf
+[DONE] Fix hookers requiring $40001 to buy a hooker instead of $40000
+[DONE] Send person getting comp a message telling them they been comped
+[DONE] Define INV_SavedVehAir, Can't save air vehicle if this is not defined
+[DONE] Set Rob_Log to only log when 100k+ has been robbed.
+[DONE] Add all of Foster's changes (more info can be found in the commit message.
 ---------------------------------------------------
-[Done] Remove hooker death when going though drug area.
-[Done] West Spawn, cars spawn facing 180 degrees from where they should spawn.
-[Done] Buying cars at West Spawn, spawns them 50m in the air.
-[Done] When you run away from car retrieve after trying to get your car and you try again you can get several options for the same car.
-[Done] Says you are throwing spikes when you don't even have spikes.
-[Done] Fix laptop at voting booth
-[Done] Make Foster's FTOFunctions Great Again
+[DONE] Remove hooker death when going though drug area.
+[DONE] West Spawn, cars spawn facing 180 degrees from where they should spawn.
+[DONE] Buying cars at West Spawn, spawns them 50m in the air.
+[DONE] When you run away from car retrieve after trying to get your car and you try again you can get several options for the same car.
+[DONE] Says you are throwing spikes when you don't even have spikes.
+[DONE] Fix laptop at voting booth
+[DONE] Make Foster's FTOFunctions Great Again
 ---------------------------------------------------
-[Done] Fix cops being able to pit as passenger
-[Done] Fix UseDrill.sqf and bunnyhop.sqf having the wrong SQF location.
-[Done] Fix Error Undefined variable in expression: inv_activeshopnumber
-[Done] Fix Error Undefined variable in expression: ngarray
-[Done] Fix Error Undefined variable in expression: _pitcar
+[DONE] Fix cops being able to pit as passenger
+[DONE] Fix UseDrill.sqf and bunnyhop.sqf having the wrong SQF location.
+[DONE] Fix Error Undefined variable in expression: inv_activeshopnumber
+[DONE] Fix Error Undefined variable in expression: ngarray
+[DONE] Fix Error Undefined variable in expression: _pitcar
 ---------------------------------------------------
+[DONE] MySQLAdapter
+[DONE] ESU stats
+[DONE] Vehicle Table
+[DONE] Impound Vehicles in Table
+[DONE] Priotiry Save
+[DONE] Redo gang system to use cloud
 
-
-TO DO (TheGamingChief Level):
+TO DO (CP + TheGamingChief):
 ---------------------------------------------------
-Find time to work with CP on CP + TheGamingChief List
----------------------------------------------------
-
-
-TO DO (CP + TheGamingChief Level):
----------------------------------------------------
-ESU stats [Important]
-Redo gang system to use cloud (add PVcloud event) [Really fucking important]
-impound vehicles with storage
-impound array to cloud (add PVcloud event)
-prevent access gear of locked vehicle
-external trunk
-Priotiry saving for certain events, paying bail, transfering money, dropping large ammounts of money ETC.
-day / night cycle.
-Fix Private Storage
-
-Needs rule updated
+[Will never be done] prevent access gear of locked vehicle
 
 TO DO (Garry)
 ---------------------------------------------------
+external trunk
 Add resign button at voting booth for gov.
 If gov goes corrupt SGT+ can reset laws at voting booth
 If gov is arrested taxes with be reset.
@@ -83,12 +73,15 @@ Current gov doesn't show when people join, they need to wait til next election.
 ez pz ^
 
 WARNING: Function 'name' - Bryan Telato is dead
-Change all name player name _civ etc etc to _civ getVariable "OL_Name"
+Change, name <object> to <object> getVariable "OL_Name"
+
+TO DO (daniellllllllllllllllllll)
+---------------------------------------------------
+Fix Private Storage
 
 MISC Shit:
 ---------------------------------------------------
 escape mod menu
-MySQLAdapter
 CPR kit?
 
 Replace Wheat with Cotton

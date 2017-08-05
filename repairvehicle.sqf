@@ -22,7 +22,7 @@ d_cancelrep = false;
 _breaked_out = false;
 _breaked_out2 = false;
 
-_rep_action = player addAction["Cancel Service","repairvehicle_cancel.sqf"];
+_rep_action = player addAction["Cancel Service", "d_cancelrep = true"];
 hintSilent format ["Repairing..."];
 for "_wc" from 1 to _coef do {
 	if (!alive player || d_cancelrep) exitWith {player removeAction _rep_action};

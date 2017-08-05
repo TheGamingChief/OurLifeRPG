@@ -155,7 +155,7 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeS)) exitWith {
 	<img color='#ffffff' image='ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
 	", _ObjectName,_TransporterName];
 
-	//// add unload/drop Action
+	//// add unload/drop Action this addon is stupid
 	_UnloadAction = _Transporter addAction [("<t color=""#FF0000"">" + ("Release Vehicle") + "</t>"),"addons\btk\Cargo Drop\Engine.sqf",["UnloadCargo"], 5];
 
 	//// Wait until unload

@@ -25,10 +25,9 @@ MayorSteuern            = 0;
 MayorBekommtSteuern     = 75;
 chiefSteuern            = 0;
 chiefBekommtSteuern     = 75;
-money_limit             = 10000000;
-bank_limit				      = 15000000;
+OL_MoneyLimit           = 10000000;
+OL_BankLimit				    = 15000000;
 INV_hunger              = 25;
-INV_HungerProSek        = 0.015;
 INV_HungerSchaden       = 0.1;
 INV_HungerStartVal      = 1;
 INV_Tragfaehigkeit      = 60;
@@ -103,7 +102,6 @@ robdonut1available   = true;
 //========robbing variables===========
 stolenfromtime 		 = 900;
 stolenfromtimeractive	 = false;  // dont change
-TheSafecode = [ceil ((random 12)+0.1),ceil ((random 12)+0.1),ceil ((random 12)+0.1),ceil ((random 12)+0.1),ceil ((random 12)+0.1),ceil ((random 12)+0.1)];
 SafecodesCracked = 0;
 DreherState = 0;
 Processing1 = false;
@@ -135,37 +133,8 @@ pickaxemax=3;
 hammerdur=100;
 hammermax=4;
 working=false;
-//===============================GANGS=============================================
-gangincome		 = 3200;
-gangcreatecost	 = 125000;
-gangdeltime		 = 900;
-gangsarray		 = [];
-gangmember		 = false;
-gangleader		 = false;
-gangareas		 = [OL_Shop_Gangarea1,OL_Shop_Gangarea2,OL_Shop_Gangarea3,OL_Shop_Gangarea4];
 //=================================================================================
 CityLocationArray        = [[CityLogic1, 500], [CityLogic2, 400], [CityLogic3, 300], [CityLogic4, 500]];
-//=========== cop patrol array ==========
-coppatrolarray  =
-[
-getmarkerpos "patrolpoint1",
-getmarkerpos "patrolpoint2",
-getmarkerpos "patrolpoint3",
-getmarkerpos "patrolpoint4",
-getmarkerpos "patrolpoint5",
-getmarkerpos "patrolpoint6",
-getmarkerpos "patrolpoint7",
-getmarkerpos "patrolpoint9",
-getmarkerpos "patrolpoint10",
-getmarkerpos "patrolpoint11",
-getmarkerpos "patrolpoint12",
-getmarkerpos "patrolpoint13",
-getmarkerpos "patrolpoint15",
-getmarkerpos "patrolpoint17",
-getmarkerpos "patrolpoint18"
-];
-
-coppatrolarray1  = [getmarkerpos "guardpoint1",getmarkerpos "guardpoint2",getmarkerpos "guardpoint3",getmarkerpos "guardpoint4",getmarkerpos "guardpoint5",getmarkerpos "guardpoint6",getmarkerpos "guardpoint7"];
 
 ['schluesselbund', 1] call INV_SetItemAmount;
 

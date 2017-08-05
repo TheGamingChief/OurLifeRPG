@@ -307,8 +307,8 @@ _re;
 // Remove Illegal Items
 INV_EntferneIllegales = {
    private["_hasNVG", "_hasBino"];
-   _hasNVG  = false; if (player hasWeapon "NVGoggles") then { _hasNVG  = true; };
-   _hasBino = false; if (player hasWeapon "Binocular") then { _hasBino = true; };
+   _hasNVG  = false; if (player hasWeapon "NVGoggles") then { _hasNVG  = true };
+   _hasBino = false; if (player hasWeapon "Binocular") then { _hasBino = true };
 
 	 removeAllWeapons player;
 	 { player removeMagazine _x } forEach (magazines player);
@@ -715,27 +715,7 @@ INV_findunit = {
 	_unit;
 };
 
-INV_mygang =
-
-{
-
-_mygang  = "";
-
-for "_c" from 0 to (count gangsarray - 1) do
-
-	{
-
-	_gangarray = gangsarray select _c;
-	_gang = _gangarray select 0;
-	_members = _gangarray select 1;
-	if(name player in _members)then{_mygang = _gang;};
-
-	};
-
-_mygang;
-
-};
-
+/*
 INV_Seen =
 
 {
@@ -757,7 +737,7 @@ INV_Seen =
 				if ((_obj distance (_arr select _c)) < _dis) then
 				{
 
-				_mygang = call INV_mygang;
+				_mygang = call OL_gangs_getName;
 				_exitvar = false;
 
 				if(_mygang != "")then
@@ -786,6 +766,7 @@ INV_Seen =
 	};
 	_res
 };
+esy solve */
 /*
 
 [

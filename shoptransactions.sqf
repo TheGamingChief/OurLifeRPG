@@ -86,18 +86,18 @@ if (_art == "itemkauf") then
 		{
 			_control = _fahne getvariable "control";
 
-			for "_c" from 0 to (count gangsarray - 1) do
+			/*for "_c" from 0 to (count gangsarray - 1) do
 			{
 				_gangarray = gangsarray select _c;
 				_gang	   = _gangarray select 0;
 				_members   = _gangarray select 1;
 
-				if(_control == _gang and count _members > 0)then
+				if(_control == _gang and count _members > 0)then // this doesn't even work....
 				{
 					_income = _cost/(count _members);
 					format['if(name player in %1)then{player groupchat "You received $%2 from a drug sale"; kontostand = kontostand + %2};', _members, _income] call OL_network_Swag;
 				};
-			};
+			};*/
 		};
 
 		[_CostMitTax, (_infos call INV_getitemClassName), "Item", _menge, _einzelCost, _item, (_item call INV_getitemName)] execVM "PurchaseItems.sqf";

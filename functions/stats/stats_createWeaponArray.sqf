@@ -11,8 +11,8 @@ _doneMags = [];
 	};
 } forEach _mags;
 
-if (isNil "_weaps")     then { _weaps     = []; };
-if (isNil "_magReturn") then { _magReturn = []; };
+if (isNil "_weaps")     then { _weaps     = [] };
+if (isNil "_magReturn") then { _magReturn = [] };
 
 _return = [_weaps, _magReturn];
 _return;

@@ -1,7 +1,7 @@
 if (_this select 0 != player) exitWith {};
 
 RadioArr = call OL_tfar_getPlayerRadios;
-execVM "ServerLoad\respawn.sqf";
+execVM "R3F_revive\respawn.sqf";
 
 terminate R3F_REV_fil_exec_attente_reanimation;
 terminate R3F_REV_fil_exec_reapparaitre_camp;

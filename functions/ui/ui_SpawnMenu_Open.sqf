@@ -1,5 +1,7 @@
 disableSerialization;
 waitUntil {OL_StatsLoadedFromDB};
+
+22254 cutRsc["Default", "plain"];
 createDialog "TGC_SpawnMenu";
 
 {

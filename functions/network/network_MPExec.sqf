@@ -1,5 +1,4 @@
 private["_sender", "_params", "_function", "_target", "_scheduled", "_functionCode"];
-
 _sender 		= _this select 0;
 _params 		= _this select 1;
 _function 	= _this select 2;
@@ -20,9 +19,8 @@ if (isNil "_scheduled") then {
 	_scheduled = false;
 };
 
-_functionCode = call compile format["%1", _function];
-
-if (isNil "_functionCode") exitWith {
+_functionCode = call compile format['if (!isNil "%1") then { %1 } else { -1 }', _function];
+if (typeName _functionCode == "SCALAR") exitWith {
 	if (OL_EventLogging) then {
 		systemChat format["CODE EXECUTION FAILED: FUNCTION [%1] NOT FOUND", _function];
 	};

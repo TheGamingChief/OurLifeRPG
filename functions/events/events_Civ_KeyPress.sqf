@@ -52,6 +52,10 @@ fnc_KeyPress_3 = {
 	};
 };
 
+fnc_KeyPress_5 = {
+	closeDialog 0; [] call OL_gangs_List;
+};
+
 fnc_KeyPress_6 = {
 	if(dialog)exitwith{closeDialog 0;};
 	if(!INV_shortcuts)exitwith{};
@@ -155,21 +159,23 @@ fnc_KeyPress_L = {
 	if (count _vcls > 0) then {
 		_vcl = _vcls select 0;
 		if(!(_vcl in INV_VehicleArray))exitwith{player groupchat "You do not have the keys to this vehicle.";};
-		["schluessel", _vcl, 0] execVM "keys.sqf";
+		["LOCK", _vcl] call OL_fnc_Keys;
 	};
 };
 
 fnc_KeyPress_T = {
+	if (!INV_shortcuts || vehicle player == player || isstunned) exitwith {};
+	if (dialog) then { closeDialog 0 };
+	if (UpgradingCar) exitWith { player groupChat "You can't access the trunk while upgrading a vehicle." };
 
-	if(!INV_shortcuts)exitwith{};
-	if(dialog)exitwith{closeDialog 0;};
-	if(isstunned) exitwith {player groupchat "You are stunned!"};
-	_vcls = nearestobjects [getpos player, ["LandVehicle", "Air", "ship", "TKOrdnanceBox_EP1"], 12];
-	_vcl = _vcls select 0;
-	if (player != driver _vcl)exitwith{player groupchat "You must be in the drivers seat to get to the trunk";};
-	if(!(_vcl in INV_VehicleArray) and typeof _vcl == "TKOrdnanceBox_EP1")exitwith{player groupchat "You do not have the keys to this hideout.";};
-	if(!(_vcl in INV_VehicleArray))exitwith{player groupchat "You do not have the keys to this vehicle.";};
-	if(UpgradingCar)exitWith{player groupChat "You cant use your trunk while upgrading your car"};
+	_vcl = ([] call CP_misc_NearestCar) select 0;
+	if (isNil "_vcl") exitWith {};
+
+	if (!(_vcl in INV_VehicleArray)) exitWith { player groupChat "You must have the keys to access the trunk." };
+	if (_vcl getVariable ["OL_TrunkInUse", false]) exitWith { player groupChat "Only one person may use the trunk at a time." };
+
+	[_vcl] call OL_vehicle_Trunk;
+
 	if(!isnull _vcl)then{call compile format['[0,0,0,["%3", "public", ["vcl", "%2", %1]]] execVM "storage.sqf";', _vcl, (typeOf _vcl), format["%1_storage", _vcl]];};
 };
 

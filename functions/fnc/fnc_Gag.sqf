@@ -15,7 +15,7 @@ if (!(["Gag",-1] call INV_AddInvItem)) exitWith {player groupChat "You do not ha
 civmenuciv setVariable ["Gagged", true, true];
 civmenuciv setVariable ["tf_voiceVolume", 0, true];
 
-[[player,"AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon",1], "OL_fnc_Animate", true, true] call OL_Network_MP;
+[player, "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon", 1, true] call OL_fnc_Animate;
 format['
   if (rolestring == "%1") then {
     [] spawn OL_events_isGagged;

@@ -14,7 +14,39 @@ _cf = ["wulf","bjerk","tcgmp","doshd"];
 //6. Alcohol shop
 _pub = ["beer","beer2","vodka","smirnoff","wiskey","wine","wine2"];
 //8
-_ass = ["RH_m9sd","15Rnd_9x19_M9SD","RH_g17sd","RH_17Rnd_9x19_g17SD","RH_m1911sd","RH_8Rnd_45cal_m1911","RH_mk22sd","RH_8Rnd_9x19_Mksd","RH_uzisd","RH_9mm_32RND_SD_Mag","RH_mp5sd6eot_ass","30rnd_9x19_MP5SD","RH_mk12mod1sd_ass","20Rnd_556x45_Stanag","C1987_P99_black_sd","15Rnd_9x19_p99_sd","VSS_vintorez_ASS","20Rnd_9x39_SP5_VSS"];
+_ass =
+[
+	"RH_m9sd",
+	"15Rnd_9x19_M9SD",
+	"RH_g17sd",
+	"RH_17Rnd_9x19_g17SD",
+	"RH_m1911sd",
+	"RH_8Rnd_45cal_m1911",
+	"RH_mk22sd",
+	"RH_8Rnd_9x19_Mksd",
+	"RH_uzisd",
+	"RH_9mm_32RND_SD_Mag",
+	"RH_mp5sd6eot_ass",
+	"30rnd_9x19_MP5SD",
+	"RH_krisssd_ass",
+	"RH_krisssdaim_ass",
+	"RH_krisssdeot_ass",
+	"RH_krisssdRFX_ass",
+	"RH_45ACP_30RND_SD_Mag",
+	"RH_umpsd_ass",
+	"RH_umpsdaim_ass",
+	"RH_umpsdeot_ass",
+	"RH_umpsdRFX_ass",
+	"RH_45ACP_25RND_SD_Mag",
+	"RH_mp7sd_ass",
+	"RH_mp7sdaim_ass",
+	"RH_mp7sdeot_ass",
+	"RH_46x30mm_40RND_SD_Mag",
+	"RH_mk12mod1sd_ass",
+	"20Rnd_556x45_Stanag",
+	"C1987_P99_black_sd",
+	"15Rnd_9x19_p99_sd"
+];
 //9
 _mgs = ["RH_mk22","RH_8Rnd_9x19_Mk","KPFS_MP2","KPFS_32Rnd_MP2","RH_muzi","RH_32rnd_9x19_Muzi","RH_uzi","RH_9mm_32RND_Mag","RH_tmpeot","30Rnd_9x19_MP5","RH_fmg9","RH_9mm_32RND_Mag","GPS","NVGoggles","CHRYSLER_B_limmo","tcg_taurus_security", "ilpd_ags_cvpi"];
 //10. Equiptment shop
@@ -235,7 +267,8 @@ _as = ["V3S_Refuel_TK_GUE_EP1","V3S_Repair_TK_GUE_EP1","An2_1_TK_CIV_EP1","An2_2
 //32
 _assa = ["kyo_ultralight","AH6X_EP1","KA137_PMC","CSJ_Gyroc","Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gazelle","Gazelle1","Gazelle3","tcg_bell206_3","tcg_bell206_4","tcg_bell206_1","tcg_bell206_2","tcg_bell206_5","tcg_bell206", "MH6J_EP1"];
 //33
-_asc = ["can_c130","airnz_C130","luf_c130","qantas_C130","A320MPA"];
+_asc = ["can_c130","airnz_C130","luf_c130","qantas_C130","A320MPA", "OL_USEC_ch53_e"];
+
 //34. Scuba Shop
 _sb = ["fishingpole","tcg_wrun","tcg_wave_red","tcg_wave_black","tcg_wave_red2","tcg_wave_sky","tcg_wave_red3"];
 //35. Boat Shop
@@ -269,7 +302,7 @@ _dsl = ["lsd"];
 //50. Heroin Sell
 _dsh = ["heroin","heroinseed"];
 //51
-_psc = ["medikit","pharm","GymMem1","GymMem2","cl_wheelchair"];
+_psc = ["medikit","pharm","GymMem1","GymMem2","cl_wheelchair","cpr_kit"];
 //52
 _hsc = ["eyes","brain","liver","heart","kidney","bones","teeth"];
 //53
@@ -934,22 +967,6 @@ _copftoc =
 "olrpg_pdtahoe_slick"
 ];
 
-//74
-_copvip =
-[
-"supgrade3",
-"supgrade4",
-"supgrade5",
-"RH_masbaim",
-"30Rnd_556x45_Stanag",
-"RH_p90sdeot",
-"RH_p90sdaim",
-"RH_57x28mm_50RND_Mag",
-"MakarovSD",
-"8Rnd_9x18_MakarovSD",
-"m5_pd_traffic" //"DD_FOR13Taurus_P_P"
-];
-
 //75
 _undercover =
 [
@@ -990,23 +1007,45 @@ _undercover =
 //76
 _terrorshop =
 [
-"NVGoggles",
-"safehack",
-"RH_oc14",
-"RH_20Rnd_9x39_SP6_mag",
-"RH_rk95",
-"RH_aks47",
-"RH_aks47b",
-"AK_47_S",
-"RH_akm",
-"30Rnd_762x39_AK47",
-"RH_m14maf",
-"20Rnd_762x51_DMR",
-"RPG18",
-"RPG18_mag",
-"V3S_Reammo_TK_GUE_EP1"
+	"NVGoggles",
+	"safehack",
+	"RH_oc14",
+	"RH_20Rnd_9x39_SP6_mag",
+	"RH_rk95",
+	"RH_aks47",
+	"RH_aks47b",
+	"AK_47_S",
+	"RH_akm",
+	"30Rnd_762x39_AK47",
+	"RH_m14maf",
+	"20Rnd_762x51_DMR",
+	"RPG18",
+	"RPG18_mag",
+	"V3S_Reammo_TK_GUE_EP1",
+	"vclammo"
 ];
 
+_terrorboatshop =
+[
+"OL_RHIB",
+"fishingpole",
+"OL_PBX",
+"OL_Zodiac",
+"cl_trawler_fishing_boat",
+"cl_container_boat",
+"cl_sport_fishing_boat",
+"Fishing_boat",
+"cl_inflatable",
+"lcu"
+];
+
+_terrorhelishop =
+[
+"OL_UH1H_TK_EP1",
+"Gazelle",
+"Gazelle3",
+"GazelleUN"
+];
 //77
 _shady =
 [
@@ -1015,194 +1054,6 @@ _shady =
 "codeb",
 "Gag",
 "lighter"
-];
-
-//82
-_Donate = ["RepairKitsBreaksShops","medikit","supgrade1","LeeEnfieldmaf","x_303","donateRH_deagle","donateRH_browninghp","donateRH_mk22","donateRH_usp","donateRH_m1911","donateRH_m9","donateRH_g17","donateRH_g18","donateRH_g19","donateRH_mk2","donateRH_tt33","donateRH_vz61","donateRH_tec9","donateRH_muzi","donateRH_ppk","donateRH_p38","donateRH_p226","donateRH_anac","donateRH_bull","donateRH_python","donateRH_7Rnd_50_AE","donateRH_13Rnd_9x19_bhp","donateRH_8Rnd_9x19_Mk","donateRH_15Rnd_9x19_usp","donateRH_8Rnd_45cal_m1911","donate15Rnd_9x19_M9","donateRH_17Rnd_9x19_g17","donateRH_33Rnd_9x19_g18","donateRH_17Rnd_9x19_g19","donateRH_10Rnd_22LR_mk2","donateRH_8Rnd_762_tt33","donateRH_20Rnd_32cal_vz61","donateRH_30Rnd_9x19_tec","donateRH_32Rnd_9x19_Muzi","donateRH_7Rnd_32cal_ppk","donateRH_8Rnd_9x19_p38","donateRH_15Rnd_9x19_uspp","donateRH_6Rnd_43_Mag","donateRH_6Rnd_44_Mag","donateRH_6Rnd_357_Mag"];
-
-//83
-_Donate2 = ["supgrade2","donateRH_ak47","donateRH_aks74u","donateRH_ak74","donateRH_ak103","donateRH_m4","donateRH_m4m","donateRH_m16a1","donateRH_mp5a4","donateRH_mp5k","donateRH_uzi","donate30Rnd_762x39_AK47","donate30Rnd_545x39_AK","donate30Rnd_9x19_MP5","donateRH_9mm_32RND_Mag","donate30Rnd_556x45_Stanag","DODGE_VIPER_SRT10","CORVETTE_Z06"];
-
-//84
-_Donate3 = ["supgrade3","donateFAL","20Rnd_762x51_FNFAL","donateRH_mk22vsd","donateRH_uspsd","donateRH_m1911sd","donateRH_m9sd","donateRH_m9csd","donateRH_g19t","donateRH_m1911old","donateRH_m93r","donateRH_anacg","donateRH_p226s","donateRH_Deaglemzb","donateRH_8Rnd_9x19_Mksd","donateRH_8Rnd_45cal_m1911sd","donate15Rnd_9x19_M9SD","donateRH_15Rnd_9x19_uspsd","donateRH_17Rnd_9x19_g19","donateRH_15Rnd_9x19_uspp","donateRH_8Rnd_45cal_m1911","donateRH_6Rnd_43_Mag","donateRH_7Rnd_50_AE","m5_c_bgreen","m5_c_dblue","m5_c_lblue","m5_c_orange","m5_c_yellow"];
-
-//85
-_Donate4 = ["supgrade4","donateRH_mp5a4aim","donateRH_mp5a4eot","donateRH_mp5a4rfx","donateRH_mp5sd6","donateRH_mp5sd6aim","donateRH_mp5sd6eot","donateRH_mp5sd6RFX","donateRH_kriss","donateRH_krissaim","donateRH_krisseot","donateRH_krissRFX","donateRH_krisssd","donateRH_krisssdaim","donateRH_krisssdeot","donateRH_krisssdRFX","donateRH_uzisd","donateRH_tmp","donateRH_tmpaim","donateRH_tmpeot","donateRH_tmpsd","donateRH_tmpsdaim","donateRH_tmpsdeot","donateRH_mp7","donateRH_mp7aim","donateRH_mp7eot","donateRH_mp7RFX","donateRH_mp7sd","donateRH_mp7sdaim","donateRH_mp7sdeot","donate30Rnd_9x19_MP54","donate30Rnd_9x19_MP5SD4","donateRH_45ACP_30RND_Mag","donateRH_45ACP_30RND_SD_Mag","donateRH_9mm_32RND_SD_Mag","donate30Rnd_9x19_TMP","donate30Rnd_9x19_TMPSD","donateRH_46x30mm_40RND_Mag","donateRH_46x30mm_40RND_SD_Mag","clbuggy"];
-
-//86
-_Donate5 = ["supgrade5","donateRH_m4aim","donateRH_m4eotech","donateRH_m4acog","donateRH_m4maim","donateRH_m4meotech","donateRH_m4macog","donateRH_hk416aim","donateRH_hk416acog","donateRH_hk416eotech","donateRH_hk417aim","donateRH_hk417acog","donateRH_hk417eotech","donateRH_acracog","donateRH_acraim","donateRH_acreotech","MBG_Compound_Bow","donateRH_20Rnd_762x51_hk417","MBG_Arrow_HE","donate30Rnd_556x45_Stanag"];
-
-//87
-_Donate6 = ["donateRH_m4sd","donateRH_m4sdaim","donateRH_m4sdacog","donateRH_m4sdeotech","donateRH_hk416sd","donateRH_hk416sdaim","donateRH_hk416sdeotech","donateRH_hk417sd","donateRH_hk417sdaim","donateRH_hk417sdacog","donateRH_hk417sdeotech","donateRH_massd","donateRH_massdacog","donateRH_massdaim","donateRH_massdeotech","donate30Rnd_556x45_StanagSD","donateRH_20Rnd_762x51_SD_hk417","donate30Rnd_556x45_Stanag"];
-
-//91
-_VIPterror =
-[
-"RH_ar10s",
-"safehack",
-"RH_20Rnd_762x51_AR10",
-"RH_aks47g",
-"AK_107_GL_kobra",
-"30Rnd_762x39_AK47",
-"RH_bizonk",
-"64Rnd_9x19_Bizon",
-"RH_m14aim",
-"20Rnd_762x51_DMR",
-"RH_svdg",
-"10Rnd_762x54_SVD",
-"AKS_74_GOSHAWK",
-"30Rnd_545x39_AK",
-"FN_FAL_ANPVS4",
-"donate20Rnd_762x51_FNFAL"
-];
-
-//93
-_vipterrorairlist =
-[
-"UH1H_TK_EP1"
-];
-
-_weaponx =
-[
-"RH_mk18dcsdaim",
-"RH_mk18dcsdeot",
-"RH_mk18dcsdacog",
-"xRH_m93r",
-"15Rnd_9x19_M9SD",
-"donateRH_Deaglemzb",
-"xRH_Deagleg",
-"donateRH_7Rnd_50_AE",
-"xRH_acraim",
-"xRH_acreotech",
-"xRH_acr",
-"xRH_ctar21",
-"xRH_ctar21m",
-"xRH_star21",
-"xRH_m4macog",
-"xRH_M4maim",
-"xRH_m4meotech",
-"Rnd_556x45_Stanag",
-"xRH_MK12sd",
-"20Rnd_556x45_Stanag_k9",
-"xG36_C_SD_eotech",
-"30Rnd_556x45_G36SD",
-"RH_ak103",
-"RH_aks47g",
-"RH_ak47",
-"x30Rnd_762x39_AK47",
-"xRH_umpsdaim",
-"xRH_umpsdeot",
-"RH_45ACP_25RND_SD_Mag",
-"xRH_p90sdaim",
-"xRH_p90sdeot",
-"RH_57x28mm_50RND_SD_Mag",
-"xRH_mp5sd6g",
-"30Rnd_9x19_MP5SD",
-"xRH_Rk95sdaim",
-"RH_30Rnd_762x39_SDmag",
-"xRH_hk417sdsp",
-"xRH_20Rnd_762x51_SD_hk417",
-"xBAF_LRR_scoped",
-"5Rnd_86x70_L115A1",
-"RPG18",
-"RPG18_mag",
-"MBG_Compound_Bow",
-"xMBG_Arrow_HE"
-];
-
-_itemx =
-[
-"supgrade1",
-"supgrade2",
-"supgrade3",
-"supgrade4",
-"supgrade5",
-"speedx",
-"RepairKitsBreaksShops",
-"medikit",
-"ziptie",
-"GNT_ScubaW",
-"vclammo"
-];
-
-_carx =
-[
-"f350_black",
-"f350_blue",
-"f350_pink",
-"f350_white",
-"f350_red",
-"transit_black",
-"transit_grey",
-"transit_blue",
-"transit_yellow",
-"transit_pink",
-"transit_white",
-"transit_green",
-"transit_red",
-"transit_orange",
-"suburban_black",
-"h1c_black",
-"h1c_white",
-"h1c_red",
-"h1c_grey",
-"rangeroverc_black",
-"rangeroverc_white",
-"rangeroverc_red",
-"rangeroverc_grey",
-"s331c_black",
-"s331_white",
-"s331_red",
-"s331_grey",
-"il_silverado_selvo",
-"PAGANI_ZONDA_F",
-"Enzo",
-"bentley",
-"m5_c_black",
-"cl_del_mackr",
-"ASTON_MARTIN_DBR9",
-"CORVETTE_Z06",
-"MustangGTRyellow_MLOD",
-"FORD_SHELBY_GT",
-"FORD_MUSTANG_SHELBY_COBRA",
-"FORD_MUSTANG_SHELBY_COBRA1",
-"FORD_MUSTANG_SHELBY_COBRA2",
-"FORD_MUSTANG_SHELBY_COBRA3",
-"DODGE_VIPER_SRT10",
-"CORVETTE_C6R",
-"ibr_van_BNK",
-"240GD",
-"Da_kart",
-"CHRYSLER_W_limmo",
-"UAZ_MG_TK_EP1",
-"Offroad_DSHKM_TK_GUE_EP1",
-"Pickup_PK_TK_GUE_EP1",
-"SUV_TK_EP1"
-];
-
-_boatx =
-[
-"RHIB",
-"fishingpole",
-"PBX",
-"Zodiac",
-"cl_trawler_fishing_boat",
-"cl_container_boat",
-"cl_sport_fishing_boat",
-"Fishing_boat",
-"cl_inflatable",
-"lcu",
-"JMSDF_US2",
-"JMSDF_US1"
-];
-
-_helix =
-[
-"UH1H_TK_EP1",
-"Gazelle",
-"Gazelle3",
-"GazelleUN",
-"USEC_ch53_e"
 ];
 
 _PMC =
@@ -1309,30 +1160,54 @@ _sub =
 
 _rifle =
 [
-"Huntingrifle",
-"5x_22_LR_17_HMR",
-"MBG_Compound_Bow",
-"MBG_Arrow_N",
-"tcg_mossberg",
-"LeeEnfieldmaf",
-"x_303",
-"tcg_combat",
-"Saiga12K",
-"8Rnd_B_Saiga12_Pellets",
-"8Rnd_B_Beneli_Pellets",
-"KPFS_KarS",
-"KPFS_10Rnd_762x39_SKS"
+	"BAF_LRR_scoped_gs",
+	"5Rnd_86x70_L115A1",
+	"Huntingrifle",
+	"5x_22_LR_17_HMR",
+	"MBG_Compound_Bow",
+	"MBG_Arrow_N",
+	"tcg_mossberg",
+	"LeeEnfieldmaf",
+	"x_303",
+	"tcg_combat",
+	"Saiga12K",
+	"8Rnd_B_Saiga12_Pellets",
+	"8Rnd_B_Beneli_Pellets",
+	"KPFS_KarS",
+	"KPFS_10Rnd_762x39_SKS"
 ];
 
 _guss =
 [
-"RH_mac10_guss",
-"RH_9mm_32RND_Mag",
-"RH_TMP_guss",
-"30Rnd_9x19_MP5",
-"RH_m1s_guss",
-"RH_m14_guss",
-"20Rnd_762x51_DMR"
+	"RH_mac10_guss",
+	"RH_9mm_32RND_Mag",
+	"RH_TMP_guss",
+	"30Rnd_9x19_MP5",
+	"RH_m1s_guss",
+	"RH_m14_guss",
+	"20Rnd_762x51_DMR",
+	"RH_mp5a4aim_guss",
+	"RH_mp5a4eot_guss",
+	"RH_mp5a4rfx_guss",
+	"30Rnd_9x19_MP5",
+	"RH_m4aim_guss",
+	"RH_m4eotech_guss",
+	"RH_m4acog_guss",
+	"30Rnd_556x45_Stanag",
+	"RH_UMP_guss",
+	"RH_umpaim_guss",
+	"RH_umpeot_guss",
+	"RH_umpRFX_guss",
+	"RH_45ACP_25RND_Mag",
+	"RH_mp7_guss",
+	"RH_mp7aim_guss",
+	"RH_mp7eot_guss",
+	"RH_46x30mm_40RND_Mag",
+	"RH_hk416aim_guss",
+	"RH_hk416eotech_guss",
+	"RH_hk416acog_guss",
+	"RH_star21_guss",
+	"30Rnd_556x45_Stanag"
 ];
 
 _gangshop_buy =
@@ -1581,11 +1456,6 @@ INV_ItemShops = [
 	[sub,												"Submachine Gun",											sub,								sub,							_sub,								_sub,								true,  "[getPlayerUID player]"],
 	[rifle,											"Licensed Rifle",											rifle,							rifle,						_rifle,							_rifle,							true,  "[getPlayerUID player]"],
 	[guss,											"Illegal Fire Arms",									gussbox,						dummyobj,					_guss,							_guss,							true,  "[getPlayerUID player]"],
-	[txwshop,										"Tier X Weapons",											weaponx,						weaponx,					_weaponx,						_weaponx,						true,  "OL_TierX_id"],
-	[txeshop,										"Tier X Equipment",										itemx,							itemx,						_itemx,							_itemx,							true,  "OL_TierX_id"],
-	[carx,											"Tier X Vehicles",										carx,								carxspawn,				_carx,							_carx,							true,  "OL_TierX_id"],
-	[boatx,											"Tier X Boats",												boatx,							boatxspawn,				_boatx,							_boatx,							true,  "OL_TierX_id"],
-	[helix,											"Tier X Helicopters",									helix,							helixspawn,				_helix,							_helix,							true,  "OL_TierX_id"],
 	[fuel2,											"Fuel-station Shop",									dummyobj,						dummyobj,					_fs,								_fs,								true,  "[getPlayerUID player]"],
 	[fuel4,											"Fuel-station Shop",									dummyobj,						dummyobj,					_fs,								_fs,								true,  "[getPlayerUID player]"],
 	[fuel5,											"Fuel-station Shop",									dummyobj,						dummyobj,					_fs,								_fs,								true,  "[getPlayerUID player]"],
@@ -1654,7 +1524,9 @@ INV_ItemShops = [
 	[OL_Shop_Wigsworth,					"Wigworths",													dummyobj,						dummyobj,					_wigs,							_wigs,							true,  "[getPlayerUID player]"],
 	[OilSell1,									"Oil Dealer", 												dummyobj,						dummyobj, 				_emptyshop,					_os,								true,  "[getPlayerUID player]"],
 	[whalesell,									"Sell Whale",													dummyobj,						dummyobj,					_emptyshop,					_ws,								true,  "[getPlayerUID player]"],
-	[terrorbox,									"Terror Stuff",												terrorbox,					vipterroraswpawn,	_terrorshop,				_terrorshop,				true,  "[getPlayerUID player]"],
+	[terrorbox,									"Terror Stuff",												terrorbox,					terroraswpawn,		_terrorshop,				_terrorshop,				true,  "[getPlayerUID player]"],
+	[OL_Shop_TerrorBoat,        "Terror Boats",                       dummyobj,           OL_Spawn_TerrorBoat,        _terrorboatshop,        _terrorboatshop,        true,  "[getPlayerUID player]"],
+	[OL_Shop_TerrorAir,         "Terror Air Shop",                    dummyobj,           terroraswpawn,                  _terrorhelishop,        _terrorhelishop,        true,  "[getPlayerUID player]"],
 	[shadyd,										"Barely Legal",												shadyd,							dummyobj, 				_shady,							_shady,							true,  "[getPlayerUID player]"],
 	[OL_Shop_Gangarea1,					"Gang Shop",													gangbox1,						dummyobj,					_gangshop_buy,			_gangshop_buy,			true,  "[getPlayerUID player]"],
 	[OL_Shop_Gangarea2,					"Gang Shop",													gangbox2,						dummyobj,					_gangshop_buy,			_gangshop_buy,			true,  "[getPlayerUID player]"],
@@ -1685,7 +1557,7 @@ INV_ItemShops = [
 	[copsheriff,								"Sheriff Command Equipment",					copsheriff,					ccarspawn1,				_copsheriff,				_copsgt,						true,  "Sheriff_id"],
 	[coplt,											"Lieutenant Equipment",								coplt,							ccarspawnlt,			_coplt,							_coplt,							true,  "Lt_id"],
 	[copcpt,										"Captain Equipment",									copcpt,							ccarspawncpt,			_copcpt,						_copcpt,						true,  "Cpt_id"],
-	[copmedalbox,								"Medal Recipients Equipment",					copmedalbox,				ccarspawnchief,		_copmedal,					_copmedal,					true,  "Corrections_id"],
+	[copmedalbox,								"Medal Recipients Equipment",					copmedalbox,				ccarspawnchief,		_copmedal,					_copmedal,					true,  "MedalRecipt_id"],
 	[copchief,									"Chief of Police Equipment",					copchief,						ccarspawnchief,		_copchief,					_copchief,					true,  "Chief_id"],
 	[copk9,											"K-9 Officer",												copk9,							ck9spawn,					_copk9,							_copk9,							true,  "K9_id"],
 	[copk9p,										"K-9 Probation",											copk9p,							ck9spawn,					_copk9p,						_copk9p,						true,  "K9_id"],
@@ -1708,20 +1580,7 @@ INV_ItemShops = [
 	[ftobox,										"F.T.O.",															ftobox,							ftocarspawn,			_copfto,						_copfto,						true,  "FTO_id"],
 	[ftoboxs,										"F.T.O. Supervisor",									ftoboxs,							ftocarspawn,		_copftos,						_copftos,						true,  "FTO_id"],
 	[ftoboxc,										"F.T.O. Command",											ftoboxc,							ftocarspawn,		_copftoc,						_copftoc,						true,  "FTO_id"],
-	[copVIPBox,									"Cop Donator Equipment",							copVIPBox,					ccarspawn,				_copvip,						_copvip,						true,  "Donate_id"],
-	[copVIPBox2,								"Cop Donator Equipment",							copVIPBox2,					ccarspawn1,				_copvip,						_copvip,						true,  "Donate_id"],
-	[copVIPBox3,								"Cop Donator Equipment",							copVIPBox3,					ccarspawn2,				_copvip,						_copvip,						true,  "Donate_id"],
-	[copswatd,									"Cop Donator Equipment",							copswatd,						ccarspawn2,				_copvip,						_copvip,						true,  "Donate_id"],
-	[copcidd,										"Cop Donator Equipment",							copcidd,						cidcarspawn,			_copvip,						_copvip,						true,  "Donate_id"],
-	[dshop1,										"Donator Shop (Tier 1)",							maindonateshop,			dummyobj,					_Donate,						_Donate,						true,  "Donate_id"],
-	[dshop2,										"Donator Shop (Tier 2)",							donateshop2,				donatespawn2,			_Donate2,						_Donate2,						true,  "Donate2_id"],
-	[dshop3,										"Donator Shop (Tier 3)",							donateshop3,				donatespawn3,			_Donate3,						_Donate3,						true,  "Donate3_id"],
-	[dshop4,										"Donator Shop (Tier 4)",							donateshop4,				donatespawn4,			_Donate4,						_Donate4,						true,  "Donate4_id"],
-	[dshop5,										"Donator Shop (Tier 5)",							donateshop5,				dummyobj,					_Donate5,						_Donate5,						true,  "Donate5_id"],
-	[dshop6,										"Donator Shop (Tier 6)",							donateshop6,				dummyobj,					_Donate6,						_Donate6,						true,  "Donate6_id"],
-	[terrorvip,									"Terror VIP Shop",										terrorvip,					vipterroraswpawn,	_VIPterror,					_VIPterror,					true,  "Donate_id"],
 	[Diamond_1,									"Pawn Shop",													dummyobj,						dummyobj,					_js,								_js,								true,  "[getPlayerUID player]"],
-	[vipterrorair,							"VIP Terror Air Shop",								vipterrorair,				vipterroraswpawn,	_vipterrorairlist,	_vipterrorairlist,	true,  "Donate_id"],
 	[hospsell,									"Sell Organs",												dummyobj,						dummyobj,					_hsc,								_hsc,								true,  "[getPlayerUID player]"],
 	[pmcbox,										"PMC Operator",												pmcbox,							pmcspawn,					_PMC,								_PMC,								true,  "PMC_id"],
 	[pmcbox1,										"PMC Command",												pmcbox1,						pmcspawn,					_CommandPMC,				_CommandPMC,				true,  "PMCCommand_id"],

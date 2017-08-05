@@ -24,7 +24,7 @@ _gangarea setpos [getpos _gangarea select 0, getpos _gangarea select 1, -3];
 sleep 1;
 
 
-	_mygang  = call INV_mygang;
+	_mygang  = call OL_gangs_getName;
 	//_control = _gangarea getvariable "control";
 	
 	if(_mygang != "")then
@@ -49,7 +49,7 @@ sleep 1;
 
 
 
-	_mygang  = call INV_mygang;
+	_mygang  = call OL_gangs_getName;
 	//_control = _gangarea getvariable "control";
 	
 	if(_mygang != "")then

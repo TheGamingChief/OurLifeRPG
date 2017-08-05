@@ -82,7 +82,7 @@ switch (adminCMD) do
 	};
 	case 13: //Server Cleaner
 	{
-		"if (isServer) then { [] call fnc_Server_Optimizer };" call OL_network_Swag; closeDialog 0;
+		"if (isServer) then { [] spawn fnc_Server_Optimizer };" call OL_network_Swag; closeDialog 0;
 		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has executed server cleaner"}',name player] call OL_network_Swag;
 		[format["[ADMIN_PANNEL_LOG] Dev %1 has executed server cleaner",name player]] call fn_LogToServer;
 	};
@@ -97,7 +97,7 @@ switch (adminCMD) do
 	{
 		_vcls = nearestobjects [getpos player, ["LandVehicle", "Air", "ship"], 25];
 		_vcl = _vcls select 0;
-		["schluessel", _vcl, 0] execVM "keys.sqf";
+		["LOCK", _vcl] call OL_fnc_Keys;
 		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has used Masterkey on %2"}',name player,_vcl] call OL_network_Swag;
 		[format["[ADMIN_PANNEL_LOG] Dev %1 has used Masterkey on %2",name player,_vcl]] call fn_LogToServer;
 	};

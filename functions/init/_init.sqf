@@ -1,4 +1,5 @@
-if (isServer) then {execVM "ServerFiles\InitOLServer.sqf"};
+if (isServer) then { execVM "ServerFiles\InitOLServer.sqf" };
+OL_LoadedMission = true;
 
 22254 cutRsc["RL_Dialog_loading", "plain"];
 
@@ -26,6 +27,7 @@ waitUntil{scriptDone  _h};
 
 if (isClient) then {
 	[] spawn OL_player_WarrantGrab;
+	[] spawn OL_gangs_Request;
 
   [] spawn {
     waitUntil {!isNil "OL_Hud_HudShow"};
@@ -57,12 +59,10 @@ if (isClient) then {
 	["Init Client", 80] call OL_Misc_LoadingSetText;
 	[] execVM "ServerLoad\itemactions.sqf";
 	[] execVM "ServerLoad\petrolactions.sqf";
-	[] execVM "ServerLoad\SpeedCams.sqf";
+	/*[] execVM "ServerLoad\SpeedCams.sqf";*/
 	[] execVM "ServerLoad\nametags.sqf";
 	[] execVM "R3F_revive\revive_init.sqf";
 	["ol_textures\images\Gps.paa",-0.06,-0.36] call bis_fnc_customGPS;
-	[0,0,0,["clientloop"]] execVM "gangs.sqf";
-	["init"] execVM "food.sqf";
 
 	if(isMultiplayer)then{
 		["Loading Statistics", 90] 	call OL_Misc_LoadingSetText;

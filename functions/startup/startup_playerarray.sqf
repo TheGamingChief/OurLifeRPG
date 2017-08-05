@@ -22,11 +22,6 @@ fnc_UpdatePlayerArray = {
 	civarray 		 		 = [civ1,civ2,civ3,civ4,civ5,civ6,civ7,civ8,civ9,civ10,civ11,civ12,civ13,civ14,civ15,civ16,civ17,civ18,civ19,civ20,civ21,civ22,civ23,civ24,civ25,civ26,civ27,civ28,civ29,civ30,civ31,civ32,civ33,civ34,civ35,civ36,civ37,civ38,civ39,civ40,civ41,civ42,civ43,civ44,civ45];
 	coparray 		 		 = [cop1,cop2,cop3,cop4,cop5,cop6,cop7,cop8,cop9,cop10,cop11,cop12,cop13,cop14,cop15,cop16,cop17,cop18,cop19,cop20,cop21,cop22,cop23,cop24,cop25,cop26,cop27,cop28,cop29,cop30,cop31,cop32,cop33,cop34,cop35,cop36,cop37,cop38,cop39,cop40];
 	medicarray 		 	 = [emt1,emt2,emt3,emt4,emt5,emt6,emt7,emt8,emt9,emt10,emt11,emt12,emt13,emt14,emt15];
-	CopChiefArray    = [cop1,cop2];
-	CopCptArray      = [cop3,cop4];
-	CopSheriffArray  = [cop35];
-	copdeputyarray   = [cop36,cop37,cop38,cop39,cop40];
-	EMSChiefArray    = [emt1];
 };
 
 [] call fnc_UpdatePlayerArray;

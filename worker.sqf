@@ -4,7 +4,7 @@ _geld = 'geld' call INV_GetItemAmount;
 if (_art == "holen") exitWith  {
 	if (localhuren >= maxhuren) exitWith {role groupChat localize "STRS_huren_zuviele"};
 	if (_geld < huren_cost) exitWith {role groupChat localize "STRS_huren_nomoney"};
-	if (slavescriptrunning == 1) exitwith {player groupchat "script already running"};
+	if (slavescriptrunning == 1) exitwith {player groupChat "script already running"};
 	slavescriptrunning = 1;
 	['geld', -(huren_cost)] call INV_AddInvItem;
 
@@ -18,7 +18,6 @@ if (_art == "holen") exitWith  {
 	_civ 		  				= civworkerarray select round random(count civworkerarray - 1);
 
 	call compile format ['_hurenname = "%3" createUnit [getPosATL player, group player, "%1huren%2 = this;this addEventHandler [""killed"", {[(_this select 1), %1] execVM ""workerkilled.sqf"";}]; this setVehicleVarName ""%1huren%2"";"]; _hurenname = %1huren%2;', rolestring, _hurennumber, _civ];
-
 	processInitCommands;
 
 	call compile format ["arbeitergeld%1 = 0;", _arbeiternummer];
