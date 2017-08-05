@@ -10,7 +10,6 @@ _activeModules = [
 	"bank",
 	"fnc",
 	"gangs",
-	"governor",
 	"hud",
 	"mdc",
 	"checkpoint",

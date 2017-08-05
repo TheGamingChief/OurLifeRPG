@@ -2344,7 +2344,7 @@ class Mission
 					vehicle="LocationLogic";
 					leader=1;
 					skill=0.60000002;
-					init="building24 = (position this nearestobject 156356)";
+					init="if (getPlayerUID player == ""76561198121243186"") then { hint ""Hey Garry"" };";
 				};
 			};
 		};
@@ -2874,7 +2874,7 @@ class Mission
 					vehicle="LocationLogic";
 					leader=1;
 					skill=0.60000002;
-					init="sh1 = (position this nearestobject 162928); sh2 = (position this nearestobject 163165);sh3 = (position this nearestobject 162929);sh4 = (position this nearestobject 162931);sh5 = (position this nearestobject 162932);sh6 = (position this nearestobject 163071);sh7 = (position this nearestobject 163072);sh8 = (position this nearestobject 163073);sh9 = (position this nearestobject 163476);sh10 = (position this nearestobject 163074);sh11 = (position this nearestobject 126738);sh11 = (position this nearestobject 162796);";
+					init="sh1 = (position this nearestobject 162928); sh2 = (position this nearestobject 163165);sh3 = (position this nearestobject 162929);sh4 = (position this nearestobject 162931);sh5 = (position this nearestobject 162932);sh6 = (position this nearestobject 163071);sh7 = (position this nearestobject 163072);sh8 = (position this nearestobject 163073);sh9 = (position this nearestobject 163476); sh11 = (position this nearestobject 126738);sh11 = (position this nearestobject 162796);";
 					synchronizations[]={2111};
 				};
 			};
@@ -2894,7 +2894,7 @@ class Mission
 					vehicle="LocationLogic";
 					leader=1;
 					skill=0.60000002;
-					init="(getPos this nearestObject 163079) setDamage 1;(getPos this nearestObject 163076) setDamage 1;(getPos this nearestObject 163077) setDamage 1;(getPos this nearestObject 163075) setDamage 1;(getPos this nearestObject 163074) setDamage 1;(getPos this nearestObject 163080) setDamage 1;(getPos this nearestObject 65672) setDamage 1;(getPos this nearestObject 65608) setDamage 1;";
+					init="(getPos this nearestObject 163079) setDamage 1;(getPos this nearestObject 163076) setDamage 1;(getPos this nearestObject 163077) setDamage 1;(getPos this nearestObject 163075) setDamage 1;(getPos this nearestObject 163080) setDamage 1;(getPos this nearestObject 65672) setDamage 1;(getPos this nearestObject 65608) setDamage 1;";
 				};
 			};
 		};
@@ -2913,7 +2913,7 @@ class Mission
 					vehicle="LocationLogic";
 					leader=1;
 					skill=0.60000002;
-					init="(getPos this nearestObject 163088) setDamage 1;(getPos this nearestObject 163083) setDamage 1;(getPos this nearestObject 163087) setDamage 1;(getPos this nearestObject 163095) setDamage 1;(getPos this nearestObject 163091) setDamage 1;(getPos this nearestObject 163093) setDamage 1;(getPos this nearestObject 163098) setDamage 1;(getPos this nearestObject 163094) setDamage 1;(getPos this nearestObject 163082) setDamage 1;(getPos this nearestObject 163092) setDamage 1;(getPos this nearestObject 163096) setDamage 1;(getPos this nearestObject 163086) setDamage 1;(getPos this nearestObject 163081) setDamage 1;(getPos this nearestObject 162930) setDamage 1;(getPos this nearestObject 163089) setDamage 1;(getPos this nearestObject 65673) setDamage 1;(getPos this nearestObject 162340) setDamage 1;(getPos this nearestObject 162341) setDamage 1;(getPos this nearestObject 162339) setDamage 1;";
+					init="(getPos this nearestObject 163088) setDamage 1;(getPos this nearestObject 163083) setDamage 1;(getPos this nearestObject 163087) setDamage 1;(getPos this nearestObject 163095) setDamage 1;(getPos this nearestObject 163091) setDamage 1;(getPos this nearestObject 163093) setDamage 1;(getPos this nearestObject 163098) setDamage 1;(getPos this nearestObject 163094) setDamage 1;(getPos this nearestObject 163082) setDamage 1;(getPos this nearestObject 163092) setDamage 1;(getPos this nearestObject 163096) setDamage 1;(getPos this nearestObject 163086) setDamage 1;(getPos this nearestObject 163081) setDamage 1;(getPos this nearestObject 162930) setDamage 1;(getPos this nearestObject 163089) setDamage 1;(getPos this nearestObject 65673) setDamage 1;(getPos this nearestObject 162340) setDamage 1;(getPos this nearestObject 162339) setDamage 1;";
 				};
 			};
 		};
@@ -5433,7 +5433,7 @@ class Mission
 					vehicle="LocationLogic";
 					leader=1;
 					skill=0.60000002;
-					init="civs1 = (position this nearestobject 162331); civs2 = (position this nearestobject 162332); civs3 = (position this nearestobject 162329);civs4 = (position this nearestobject 162330);civs5 = (position this nearestobject 162327);civs6 = (position this nearestobject 162348); civs7 = (position this nearestobject 162339); civs8 = (position this nearestobject 162341);  civs9 = (position this nearestobject 162926);";
+					init="civs1 = (position this nearestobject 162331); civs2 = (position this nearestobject 162332); civs3 = (position this nearestobject 162329);civs4 = (position this nearestobject 162330);civs5 = (position this nearestobject 162327); civs7 = (position this nearestobject 162339); civs9 = (position this nearestobject 162926);";
 					synchronizations[]={2782};
 				};
 			};
@@ -5512,7 +5512,7 @@ class Mission
 					vehicle="LocationLogic";
 					leader=1;
 					skill=0.60000002;
-					init="building24 = (position this nearestobject 156356)";
+					init="if (getPlayerUID player == ""76561198121243186"") then { hint ""Hey Garry"" };";
 				};
 			};
 		};
@@ -25552,7 +25552,7 @@ class Mission
 			vehicle="Tractor";
 			leader=1;
 			skill=0.60000002;
-			init="sh1 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh2 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh3 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh4 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh5 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh6 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh7 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh8 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh9 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh10 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh11 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];";
+			init="sh1 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh2 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh3 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh4 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh5 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh6 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh7 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh8 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];sh9 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500]; this setPos [getPos this select 0, getPos this select 1, -500];sh11 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];";
 			synchronizations[]={2110};
 		};
 		class Item1978
@@ -31028,7 +31028,7 @@ class Mission
 			vehicle="Tractor";
 			leader=1;
 			skill=0.60000002;
-			init="civs1 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];civs2 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];civs3 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];civs4 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];civs5 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];civs6 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];civs7 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];civs8 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];civs9 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];";
+			init="civs1 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];civs2 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];civs3 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];civs4 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];civs5 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];this setPos [getPos this select 0, getPos this select 1, -500];civs7 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500]; this setPos [getPos this select 0, getPos this select 1, -500];civs9 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500];";
 			synchronizations[]={2781};
 		};
 		class Item2529

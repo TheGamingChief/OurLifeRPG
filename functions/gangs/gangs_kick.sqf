@@ -1,3 +1,4 @@
+if (lbCurSel 1500 == -1) exitWith { player groupChat "No player selected." };
 _gang = [OL_PlayerGangID] call OL_gangs_getByKey; if (count _gang == 0) exitWith { player groupChat "This gang no longer exists!" };
 if (str player != _gang select 2) exitWith { player groupChat "You do not own this gang!" };
 _player = call compile (_this select 0);

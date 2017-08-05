@@ -204,7 +204,7 @@ class UI_GangManager {
 	{
 		idc = 1600;
 		text = "Kick Player";
-		action = "[lbData [15009, (lbCurSel 15009)]] call OL_gangs_kick;";
+		action = "[lbData [1500, (lbCurSel 1500)]] call OL_gangs_kick;";
 		x = 0.422635 * safezoneW + safezoneX;
 		y = 0.568722 * safezoneH + safezoneY;
 		w = 0.0709176 * safezoneW;

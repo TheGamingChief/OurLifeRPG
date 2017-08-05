@@ -14,7 +14,39 @@ _cf = ["wulf","bjerk","tcgmp","doshd"];
 //6. Alcohol shop
 _pub = ["beer","beer2","vodka","smirnoff","wiskey","wine","wine2"];
 //8
-_ass = ["RH_m9sd","15Rnd_9x19_M9SD","RH_g17sd","RH_17Rnd_9x19_g17SD","RH_m1911sd","RH_8Rnd_45cal_m1911","RH_mk22sd","RH_8Rnd_9x19_Mksd","RH_uzisd","RH_9mm_32RND_SD_Mag","RH_mp5sd6eot_ass","30rnd_9x19_MP5SD","RH_mk12mod1sd_ass","20Rnd_556x45_Stanag","C1987_P99_black_sd","15Rnd_9x19_p99_sd","VSS_vintorez_ASS","20Rnd_9x39_SP5_VSS"];
+_ass =
+[
+	"RH_m9sd",
+	"15Rnd_9x19_M9SD",
+	"RH_g17sd",
+	"RH_17Rnd_9x19_g17SD",
+	"RH_m1911sd",
+	"RH_8Rnd_45cal_m1911",
+	"RH_mk22sd",
+	"RH_8Rnd_9x19_Mksd",
+	"RH_uzisd",
+	"RH_9mm_32RND_SD_Mag",
+	"RH_mp5sd6eot_ass",
+	"30rnd_9x19_MP5SD",
+	"RH_krisssd_ass",
+	"RH_krisssdaim_ass",
+	"RH_krisssdeot_ass",
+	"RH_krisssdRFX_ass",
+	"RH_45ACP_30RND_SD_Mag",
+	"RH_umpsd_ass",
+	"RH_umpsdaim_ass",
+	"RH_umpsdeot_ass",
+	"RH_umpsdRFX_ass",
+	"RH_45ACP_25RND_SD_Mag",
+	"RH_mp7sd_ass",
+	"RH_mp7sdaim_ass",
+	"RH_mp7sdeot_ass",
+	"RH_46x30mm_40RND_SD_Mag",
+	"RH_mk12mod1sd_ass",
+	"20Rnd_556x45_Stanag",
+	"C1987_P99_black_sd",
+	"15Rnd_9x19_p99_sd"
+];
 //9
 _mgs = ["RH_mk22","RH_8Rnd_9x19_Mk","KPFS_MP2","KPFS_32Rnd_MP2","RH_muzi","RH_32rnd_9x19_Muzi","RH_uzi","RH_9mm_32RND_Mag","RH_tmpeot","30Rnd_9x19_MP5","RH_fmg9","RH_9mm_32RND_Mag","GPS","NVGoggles","CHRYSLER_B_limmo","tcg_taurus_security", "ilpd_ags_cvpi"];
 //10. Equiptment shop
@@ -974,22 +1006,22 @@ _undercover =
 //76
 _terrorshop =
 [
-"NVGoggles",
-"safehack",
-"RH_oc14",
-"RH_20Rnd_9x39_SP6_mag",
-"RH_rk95",
-"RH_aks47",
-"RH_aks47b",
-"AK_47_S",
-"RH_akm",
-"30Rnd_762x39_AK47",
-"RH_m14maf",
-"20Rnd_762x51_DMR",
-"RPG18",
-"RPG18_mag",
-"V3S_Reammo_TK_GUE_EP1",
-"vclammo"
+	"NVGoggles",
+	"safehack",
+	"RH_oc14",
+	"RH_20Rnd_9x39_SP6_mag",
+	"RH_rk95",
+	"RH_aks47",
+	"RH_aks47b",
+	"AK_47_S",
+	"RH_akm",
+	"30Rnd_762x39_AK47",
+	"RH_m14maf",
+	"20Rnd_762x51_DMR",
+	"RPG18",
+	"RPG18_mag",
+	"V3S_Reammo_TK_GUE_EP1",
+	"vclammo"
 ];
 
 //77
@@ -1106,30 +1138,54 @@ _sub =
 
 _rifle =
 [
-"Huntingrifle",
-"5x_22_LR_17_HMR",
-"MBG_Compound_Bow",
-"MBG_Arrow_N",
-"tcg_mossberg",
-"LeeEnfieldmaf",
-"x_303",
-"tcg_combat",
-"Saiga12K",
-"8Rnd_B_Saiga12_Pellets",
-"8Rnd_B_Beneli_Pellets",
-"KPFS_KarS",
-"KPFS_10Rnd_762x39_SKS"
+	"BAF_LRR_scoped_gs",
+	"5Rnd_86x70_L115A1",
+	"Huntingrifle",
+	"5x_22_LR_17_HMR",
+	"MBG_Compound_Bow",
+	"MBG_Arrow_N",
+	"tcg_mossberg",
+	"LeeEnfieldmaf",
+	"x_303",
+	"tcg_combat",
+	"Saiga12K",
+	"8Rnd_B_Saiga12_Pellets",
+	"8Rnd_B_Beneli_Pellets",
+	"KPFS_KarS",
+	"KPFS_10Rnd_762x39_SKS"
 ];
 
 _guss =
 [
-"RH_mac10_guss",
-"RH_9mm_32RND_Mag",
-"RH_TMP_guss",
-"30Rnd_9x19_MP5",
-"RH_m1s_guss",
-"RH_m14_guss",
-"20Rnd_762x51_DMR"
+	"RH_mac10_guss",
+	"RH_9mm_32RND_Mag",
+	"RH_TMP_guss",
+	"30Rnd_9x19_MP5",
+	"RH_m1s_guss",
+	"RH_m14_guss",
+	"20Rnd_762x51_DMR",
+	"RH_mp5a4aim_guss",
+	"RH_mp5a4eot_guss",
+	"RH_mp5a4rfx_guss",
+	"30Rnd_9x19_MP5",
+	"RH_m4aim_guss",
+	"RH_m4eotech_guss",
+	"RH_m4acog_guss",
+	"30Rnd_556x45_Stanag",
+	"RH_UMP_guss",
+	"RH_umpaim_guss",
+	"RH_umpeot_guss",
+	"RH_umpRFX_guss",
+	"RH_45ACP_25RND_Mag",
+	"RH_mp7_guss",
+	"RH_mp7aim_guss",
+	"RH_mp7eot_guss",
+	"RH_46x30mm_40RND_Mag",
+	"RH_hk416aim_guss",
+	"RH_hk416eotech_guss",
+	"RH_hk416acog_guss",
+	"RH_star21_guss",
+	"30Rnd_556x45_Stanag"
 ];
 
 _gangshop_buy =

@@ -6,11 +6,6 @@ _mode = _this select 0;
 switch (_mode) do {
 	case 0: {//init
 		_console_history = __uiGet(balca_console_history);
-		AdminTemp = ["3392128"];
-		if (_uid in AdminTemp) then {
-		} else {
-			format['server globalChat "(ADMIN)%1 Has Just Open His Debug Console";', name player] call OL_network_Swag;
-		};
 		if (isNil{_console_history}) then {
 			_console_history = ["[] execVM 'Scripts\Misc\Shutdown.sqf'"];
 			__uiSet(balca_console_history,_console_history);
@@ -41,14 +36,6 @@ switch (_mode) do {
 		if (!(isNil "_result")) then {
 			GET_CTRL(balca_debug_console_result_IDC) ctrlSetText str _result;
 			__uiSet(balca_console_result,_result);
-		};
-		_uid = getPlayerUID player;
-		AdminTemp = ["3392128"];
-		if (_uid in AdminTemp) then {
-		} else {
-			format['diag_log text "ADMIN LOG: %1 Has Just Executed Command: %2";', name player, _command];
-			_gridPos = mapGridPosition getpos player;
-			["PGSpawn_Log", format ["%1 (%2) has executed command <%3> at %4", name player, getPlayerUID player, _command, _gridPos]] call RM_fnc_LogToServer;
 		};
 	};
 	case 2: {//fill console from history
