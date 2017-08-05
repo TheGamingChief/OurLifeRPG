@@ -1,4 +1,4 @@
-if (INV_hunger < 100) then {
+if (INV_hunger < 99) then {
     INV_hunger = INV_hunger + 1;
 
     if (INV_hunger >= 95) then {    titleText ["You are starving", "plain", 1]; };
@@ -9,7 +9,7 @@ if (INV_hunger < 100) then {
     INV_hunger = 0;
 };
 
-if ((_this select 0) == "use") then {
+if ((_this select 0) == "use") exitWith {
     _item             = _this select 1;
     _amount           = _this select 2;
     _maxAmount    = _item call INV_getitemamount;

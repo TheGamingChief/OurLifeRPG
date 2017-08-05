@@ -1,4 +1,5 @@
-if (isServer) then {execVM "ServerFiles\InitOLServer.sqf"};
+if (isServer) then { execVM "ServerFiles\InitOLServer.sqf" };
+OL_LoadedMission = true;
 
 22254 cutRsc["RL_Dialog_loading", "plain"];
 

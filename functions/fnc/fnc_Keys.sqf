@@ -18,7 +18,7 @@ switch (_this select 0) do {
     {
       if (!isNull _x) then {
         _index = lbAdd [1, format ["%1 (%2)", typeOf _x, _x]];
-        lbSetData [1, [_index, _x]];
+        lbSetData [1, _index, _x];
       };
     } forEach INV_VehicleArray;
 
@@ -28,16 +28,20 @@ switch (_this select 0) do {
   };
   case "GIVE": {
     _civ = INV_PLAYERLIST select (call compile (INV_InventarGiveReceiver));
+    _key = _this select 1;
 
     if (!(_civ call OL_ISSE_UnitExists)) exitWith { player groupChat "The person you are trying to give keys to doesn't actually exist." };
     if (player distance _civ > 20) exitWith { player groupChat "You must be within 20m of the player you are trying to give keys too." };
 
-    format['if (player == &1) then {
+    format['if (player == %1) then {
         INV_VehicleArray = INV_VehicleArray + [%2];
-    };'] call OL_network_Swag;
+        player groupChat "You have recived keys to a vehicle.";
+    };', _civ, _key] call OL_network_Swag;
+
+    player groupChat "You gave the keys to the selected player.";
   };
   case "DROP": {
-    INV_VehicleArray = INV_VehicleArray - [_this select 0];
-    player groupChat format ["You have dropped keys for %1", _this select 0];
+    INV_VehicleArray = INV_VehicleArray - [_this select 1];
+    player groupChat format ["You have dropped keys for %1", _this select 1];
   };
 };

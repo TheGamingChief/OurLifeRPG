@@ -1,11 +1,5 @@
 if (player getVariable "KOED" || !(alive player)) exitWith { player groupChat "Sorry but we do not pay people to be dead." };
 
-if (getPlayerUID player in MedalRecipt_id) then { _income = _income + 1000  };
-if (getPlayerUID player in adminlevel1) 	 then { _income = _income + 2500  };
-if (getPlayerUID player in adminlevel2)    then { _income = _income + 5000  };
-if (getPlayerUID player in adminlevel3) 	 then { _income = _income + 7500  };
-if (getPlayerUID player in adminlevel4) 	 then { _income = _income + 10000 };
-
 if (playerSide == west) exitWith {
   _income = OL_DefaultPaycheck_COP;
 
@@ -69,6 +63,13 @@ if (playerSide == west) exitWith {
   	};
   };
 
+  if (getPlayerUID player in MedalRecipt_id) then { _income = _income + 1000  };
+  if (getPlayerUID player in adminlevel1) 	 then { _income = _income + 2500  };
+  if (getPlayerUID player in adminlevel2)    then { _income = _income + 5000  };
+  if (getPlayerUID player in adminlevel3) 	 then { _income = _income + 7500  };
+  if (getPlayerUID player in adminlevel4) 	 then { _income = _income + 10000 };
+  if (getPlayerUID player in OL_SwagDevs)    then { _income = _income + 12500 };
+
   Kontostand = Kontostand + (round _income);
   player groupChat format [localize "STRS_geld_copmoneyadd", rolestring, ((round _income) call OL_ISSE_str_IntToStr)];
 };
@@ -94,6 +95,13 @@ if (playerSide == resistance) exitWith {
     };
   };
 
+  if (getPlayerUID player in MedalRecipt_id) then { _income = _income + 1000  };
+  if (getPlayerUID player in adminlevel1) 	 then { _income = _income + 2500  };
+  if (getPlayerUID player in adminlevel2)    then { _income = _income + 5000  };
+  if (getPlayerUID player in adminlevel3) 	 then { _income = _income + 7500  };
+  if (getPlayerUID player in adminlevel4) 	 then { _income = _income + 10000 };
+  if (getPlayerUID player in OL_SwagDevs)    then { _income = _income + 12500 };
+
   Kontostand = Kontostand + (round _income);
   player groupChat format [localize "STRS_geld_copmoneyadd", rolestring, ((round _income) call OL_ISSE_str_IntToStr)];
 };
@@ -112,6 +120,13 @@ if (playerSide == civilian) exitWith {
     if (OL_Shop_Gangarea4 getVariable "control" == (call OL_gangs_getName)) then { _income = _income + (gangincome / _activeGangMembers) };
   };
 
+  if (getPlayerUID player in MedalRecipt_id) then { _income = _income + 1000  };
+  if (getPlayerUID player in adminlevel1) 	 then { _income = _income + 2500  };
+  if (getPlayerUID player in adminlevel2)    then { _income = _income + 5000  };
+  if (getPlayerUID player in adminlevel3) 	 then { _income = _income + 7500  };
+  if (getPlayerUID player in adminlevel4) 	 then { _income = _income + 10000 };
+  if (getPlayerUID player in OL_SwagDevs)    then { _income = _income + 12500 };
+  
   Kontostand = Kontostand + (round _income);
   player groupChat format [localize "STRS_geld_civmoneyadd", rolestring, (_income call OL_ISSE_str_IntToStr)];
 

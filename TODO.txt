@@ -64,7 +64,6 @@ TO DO (CP + TheGamingChief):
 TO DO (Garry)
 ---------------------------------------------------
 external trunk
-Fix Private Storage
 Add resign button at voting booth for gov.
 If gov goes corrupt SGT+ can reset laws at voting booth
 If gov is arrested taxes with be reset.
@@ -75,6 +74,10 @@ ez pz ^
 
 WARNING: Function 'name' - Bryan Telato is dead
 Change, name <object> to <object> getVariable "OL_Name"
+
+TO DO (daniellllllllllllllllllll)
+---------------------------------------------------
+Fix Private Storage
 
 MISC Shit:
 ---------------------------------------------------

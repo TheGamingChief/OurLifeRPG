@@ -27,8 +27,8 @@ while {true} do	{
 
 	//15 Seconds
 	if (_iterations % 15 == 0) then {
-		if (Kontostand > bank_limit) then { Kontostand = bank_limit; player groupChat localize "STRS_maxbank"; };
-		if ("geld" call INV_GetItemAmount > money_limit) then {['geld', money_limit] call INV_SetItemAmount; player groupChat localize "STRS_maxmoney";};
+		if (Kontostand > OL_BankLimit) then { Kontostand = OL_BankLimit; player groupChat localize "STRS_maxbank"; };
+		if ("geld" call INV_GetItemAmount > OL_MoneyLimit) then { ["geld", OL_MoneyLimit] call INV_SetItemAmount; player groupChat localize "STRS_maxmoney"; };
 	};
 
 	//60 Seconds

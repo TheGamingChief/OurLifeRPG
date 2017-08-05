@@ -1,4 +1,4 @@
-if (!createDialog "UI_ListMenu") exitWith { hint "Dialog Error!" };
+if (!createDialog "UI_ListMenuBig") exitWith { hint "Dialog Error!" };
 
 _type       = _this select 0;
 _spawnPoint = _this select 1;

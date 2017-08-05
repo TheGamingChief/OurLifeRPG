@@ -1,6 +1,6 @@
 _vcl = _this select 0;
 
-if (!_vcl in INV_VehicleArray) exitWith { player groupChat "You need the keys to unflip a vehicle." };
+if (!(_vcl in INV_VehicleArray)) exitWith { player groupChat "You need the keys to unflip a vehicle." };
 
 for "_i" from 0 to 15 do {
   if (animationState player != "AinvPknlMstpSlayWrflDnon_medic") then { format ['%1 switchMove "%2"', player, "AinvPknlMstpSlayWrflDnon_medic"] call OL_network_Swag };

@@ -1,5 +1,7 @@
-_vcl = _this select 0;
-_arrayLength = count OL_VehicleGarage;
+_vcl 						= _this select 0;
+_vclType 				= [_vcl] call CP_misc_GetVehicleType;
+_savedVehicles 	= [_vclType] call OL_vehicle_GetByType;
+_arrayLength 		= count _savedVehicles;
 
 if (_arrayLength < OL_CarSaveLimit) then {
 	if (!(_vcl in INV_VehicleArray)) exitWith { player groupChat "VEHICLE SAVE FAILED! TRY MOVING AWAY FROM OTHER OBJECTS!" };

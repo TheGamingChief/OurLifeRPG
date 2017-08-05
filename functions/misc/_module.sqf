@@ -29,6 +29,7 @@ DD_Modules = DD_Modules + [
   ["CP",    "misc", "ArrayCargoCombiner",  1],
   ["CP",    "misc", "ArrayOffsetDelete",   1],
   ["CP",    "misc", "ArrayTrimStart",      1],
+  ["CP",    "misc", "GetVehicleType",      1],
   ["CP",    "misc", "GetRandomCode",       1],
   ["CP",    "misc", "whereYouAtTho",       1],
   ["CP",    "misc", "ArrayObj2Str",        1],
