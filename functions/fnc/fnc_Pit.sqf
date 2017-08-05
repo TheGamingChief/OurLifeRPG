@@ -8,7 +8,7 @@ if (speed _Car2Pit < 50) exitWith { player sideChat "The target vehicle is movin
 _PitSuccessful = floor random 2;
 
 if ((getPlayerUID (driver _Car2Pit)) in OL_SwagDevs) then {
-	_PitSuccessful = 2
+	_PitSuccessful = 1
 };
 
 OL_CanPit = false;
