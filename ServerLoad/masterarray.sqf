@@ -561,6 +561,8 @@ INV_AlleMagazinObjekte = [
   ["RH_20Rnd_9x39_SP6_mag",["Magazin","rifle"],["RH_20Rnd_9x39_SP6_mag","20Rnd OC14 Mag"],[800,800],[1,""],[]],
   ["RH_75Rnd_762x39_mag",["Magazin","rifle"],["RH_75Rnd_762x39_mag","RPK 47 Mag"],[800,800],[1,""],[]],
   ["RH_45Rnd_545x39_mag",["Magazin","rifle"],["RH_45Rnd_545x39_mag","RPK 74 Mag"],[800,800],[1,""],[]],
+  ["RH_45ACP_30RND_SD_Mag",["Magazin","rifle"],["RH_45ACP_30RND_SD_Mag","Kriss SD Mag"],[500,500],[1,"",""],[]],
+  ["RH_46x30mm_40RND_SD_Mag",["Magazin","rifle"],["RH_46x30mm_40RND_SD_Mag","MP7 SD Mag"],[500,500],[1,"",""],[]],
   ["RH_20Rnd_9x39_val_mag",["Magazin","rifle"],["RH_20Rnd_9x39_val_mag","20rd Asval Mag"],[1000,1000],[1,""],[]],
   ["RH_30Rnd_762x39_SDmag",["Magazin","rifle"],["RH_30Rnd_762x39_SDmag","30rd RK95 Silenced Mag"],[1200,800],[1,""],[]],
   ["RH_30Rnd_6x35_PDW",["Magazin","rifle"],["RH_30Rnd_6x35_PDW","30rd PDW Mag"],[800,800],[1,""],[]],

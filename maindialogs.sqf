@@ -97,29 +97,22 @@ if (!(createDialog "liste_1_button")) exitWith {hint "Dialog Error!";};
 	lbAdd [1, _trennlinie];
 	lbAdd [1, "GANGS:"];
 	lbAdd [1, _trennlinie];
-	for [{_i=0}, {_i < (count gangsarray)}, {_i=_i+1}] do
+	for [{_i=0}, {_i < (count OL_GangsArray)}, {_i=_i+1}] do
 	{
-	_gangarray = gangsarray select _i;
-	_gangname  = _gangarray select 0;
-	_members   = _gangarray select 1;
-	_territory = "None";
+		_OL_GangsArray = OL_GangsArray select _i;
+		_gangname  = _OL_GangsArray select 0;
+		_leader 	 = call compile (_OL_GangsArray select 2);
+		_members   = _OL_GangsArray select 3;
 
-	_control1 = OL_Shop_Gangarea1 getvariable "control";
-	_control2 = OL_Shop_Gangarea2 getvariable "control";
-	_control3 = OL_Shop_Gangarea3 getvariable "control";
-	_control4 = OL_Shop_Gangarea4 getvariable "control";
-
-	if(_control1 == _gangname)then{if(_territory == "None")then{_territory = "West Side"}else{_territory = _territory + ", West Side"};};
-	if(_control2 == _gangname)then{if(_territory == "None")then{_territory = "Little Havana"}else{_territory = _territory + ", Little Havana"};};
-	if(_control3 == _gangname)then{if(_territory == "None")then{_territory = "East side"}else{_territory = _territory + ", East Side"};};
-	if(_control4 == _gangname)then{if(_territory == "None")then{_territory = "The Safe House"}else{_territory = _territory + ", The Safe House"};};
-
-	lbAdd [1, format["%1", _gangarray select 0]];
-	lbAdd [1, format["Territory: %1",_territory]];
-	lbAdd [1, format["Members:"]];
-	private "_j"; /// BUG FIX
-	for [{_j=0}, {_j < (count _members)}, {_j=_j+1}] do {if(_j == 0)then{lbAdd [1, format["%1 (leader)", _members select _j]]}else{lbAdd [1, format["%1", _members select _j]]};};
-	lbAdd [1, _trennlinie];
+		lbAdd [1, format["Gang Name: %1", _OL_GangsArray select 1]];
+		lbAdd [1, format["Members:"]];
+		if !(isNull _leader) then {lbAdd [1, format["%1 (Leader)", _leader getVariable "RealName"]]};
+		private "_j"; /// BUG FIX
+			for [{_j=0}, {_j < (count _members)}, {_j=_j+1}] do
+			{
+				lbAdd [1, format["%1", (call compile (_members select _j)) getVariable "RealName"]];
+			};
+		lbAdd [1, _trennlinie];
 	};
 
 };
