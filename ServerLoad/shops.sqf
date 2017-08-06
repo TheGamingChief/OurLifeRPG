@@ -390,6 +390,8 @@ _coppo3 =
 [
 "x26",
 "x26_Mag",
+"MakarovSD",
+"8Rnd_9x18_MakarovSD",
 "rh_p226_pd",
 "RH_15Rnd_9x19_usp_pd",
 "M1014_pd",
@@ -408,6 +410,8 @@ _copcpl =
 [
 "x26",
 "x26_Mag",
+"MakarovSD",
+"8Rnd_9x18_MakarovSD",
 "rh_p226_pd",
 "RH_15Rnd_9x19_usp_pd",
 "M1014_pd",
@@ -429,6 +433,8 @@ _copsgt =
 [
 "x26",
 "x26_Mag",
+"MakarovSD",
+"8Rnd_9x18_MakarovSD",
 "rh_p226_pd",
 "RH_15Rnd_9x19_usp_pd",
 "M1014_pd",
@@ -485,6 +491,8 @@ _copsgtdeputy =
 [
 "x26",
 "x26_Mag",
+"MakarovSD",
+"8Rnd_9x18_MakarovSD",
 "RH_python_sheriff",
 "RH_6Rnd_357_Mag",
 "M1014_sheriff",
@@ -509,6 +517,8 @@ _copsheriff =
 [
 "x26",
 "x26_Mag",
+"MakarovSD",
+"8Rnd_9x18_MakarovSD",
 "RH_python_sheriff",
 "RH_6Rnd_357_Mag",
 "M1014_sheriff",
@@ -543,6 +553,8 @@ _coplt =
 [
 "x26",
 "x26_Mag",
+"MakarovSD",
+"8Rnd_9x18_MakarovSD",
 "rh_p226_pd",
 "RH_15Rnd_9x19_usp_pd",
 "M1014_pd",
@@ -573,6 +585,8 @@ _copcpt =
 [
 "x26",
 "x26_Mag",
+"MakarovSD",
+"8Rnd_9x18_MakarovSD",
 "rh_p226_pd",
 "RH_15Rnd_9x19_usp_pd",
 "M1014_pd",

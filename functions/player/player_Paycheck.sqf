@@ -78,7 +78,16 @@ if (playerSide == resistance) exitWith {
   _income = OL_DefaultPaycheck_EMS;
 
   switch (true) do {
-    case (getPlayerUID player in ESUCommand_id): {
+    case (getPlayerUID player in EMTChief_id): {
+      _income = _income + 12000;
+    };
+    case (getPlayerUID player in EMTCaptain_id): {
+      _income = _income + 11000;
+    };
+    case (getPlayerUID player in EMTLieutenant_id): {
+      _income = _income + 10000;
+    };
+    case (getPlayerUID player in EMTSupervisor_id): {
       _income = _income + 9000;
     };
     case (getPlayerUID player in FD_id): {
@@ -95,7 +104,6 @@ if (playerSide == resistance) exitWith {
     };
   };
 
-  if (getPlayerUID player in MedalRecipt_id) then { _income = _income + 1000  };
   if (getPlayerUID player in adminlevel1) 	 then { _income = _income + 2500  };
   if (getPlayerUID player in adminlevel2)    then { _income = _income + 5000  };
   if (getPlayerUID player in adminlevel3) 	 then { _income = _income + 7500  };
@@ -126,7 +134,7 @@ if (playerSide == civilian) exitWith {
   if (getPlayerUID player in adminlevel3) 	 then { _income = _income + 7500  };
   if (getPlayerUID player in adminlevel4) 	 then { _income = _income + 10000 };
   if (getPlayerUID player in OL_SwagDevs)    then { _income = _income + 12500 };
-  
+
   Kontostand = Kontostand + (round _income);
   player groupChat format [localize "STRS_geld_civmoneyadd", rolestring, (_income call OL_ISSE_str_IntToStr)];
 
