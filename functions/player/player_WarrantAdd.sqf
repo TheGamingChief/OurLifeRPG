@@ -2,6 +2,8 @@ _player   = _this select 0;
 _warrant  = _this select 1;
 _current  = _player getVariable ["PlayerWarrants", []];
 
+if (!(_player call OL_ISSE_UnitExists)) exitWith { player groupChat "Warrant Set Failed: Player Not Online" };
+
 if (typeName _warrant != "STRING") exitWith {
   diag_log format ["Error setting %1 with warrant number %2", _player, _warrant];
 };

@@ -20,7 +20,7 @@ if ((_action == "use") and (INV_CanUseItem)) then {
 				};
 	    };
 			case ("CODE"): {
-				["use", _item, _amount, []] call _filename;
+				["use", _item, _amount, []] spawn _filename;
 			};
 			default {
 				player globalChat format["Master Array ERROR: %1", _filename];

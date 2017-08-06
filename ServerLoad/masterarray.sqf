@@ -1600,7 +1600,7 @@ INV_AlleItemsArray = [
   ["tow_RepairKitsBreaksShops",["Item","service"],["tow_RepairKitsBreaksShops","Repair Kit"],[2000,2000],[10,"",""],[true,true,true,false,"largerepair.sqf"]],
   ["lighter",["Item","Shop"],["lighter","lighter"],[15000,250],[0.5,"",""],[true,true,true,false,"ignitefuel.sqf"]],
   ["kanister",["Item","service"],["kanister","Gas Can"],[5000,2500],[2,"","PatrolBasic_license"],[true,true,true,false,"refuelveh.sqf"]],
-  ["Fuelline",["Item","service"],["Syphon Fuelkit","Syphon Fuel-kit"],[1000,900],[1,"",""],[true,true,true,false,"syphon.sqf"]],
+  ["Fuelline",["Item","service"],["Syphon Fuelkit","Syphon Fuel-kit"],[1000,900],[1,"",""],[true,true,true,false,OL_vehicle_Syphon]],
   ["OilBarrel",["Item","service"],["Oil Barrel","Petroleum"],[6000,5450],[10,"",""],[true,true,true,false,"refuelveh.sqf"]],
   ["schluesselbund",["Item","carobjects"],["schluesselbund","Key chain"],[0,0],[0,""],[false,false,false,false,OL_fnc_Keys]],
   ["pistole",["Item","weapon"],["pistole","Concealed Sidearm"],[0,0],[0,""],[false,false,false,false,"nouse.sqf"]],
