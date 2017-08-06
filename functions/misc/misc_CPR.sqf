@@ -1,5 +1,5 @@
 if (playerSide == west || playerSide == resistance) exitWith { player groupChat "This item is for civilian use only!" };
-if (player getVariable ["KOED", false]) exitWith { player groupChat "You are dead!" };
+if (player getVariable "KOED") exitWith { player groupChat "You are dead!" };
 if (vehicle player != player) exitWith { player groupChat "This can only be used on foot!" };
 
 _animation = "AinvPknlMstpSnonWrflDnon_medic";
@@ -9,13 +9,13 @@ _civs      = nearestobjects [position player, ["Man"], 3];
 _civ       = nil;
 
 {
-  if ((_x getVariable ["KOED", false]) && (_x != player)) exitWith { _civ = _x };
+  if ((_x getVariable "KOED") && (_x != player)) exitWith { _civ = _x };
 } forEach _civs;
 
 if (isNil "_civ") exitWith { player groupChat "There are no dead players nearby!" };
-if (_civ getVariable ["TriedCPR", false]) exitWith { player groupChat "This person needs a real medic" };
+if (_civ getVariable "TriedCPR") exitWith { player groupChat "This person needs a real medic" };
 
-_civ setVariable ["TriedCPR", true, false];
+_civ setVariable ["TriedCPR", true, true];
 player groupChat "You examine the body...";
 
 uiSleep 5;

@@ -228,7 +228,7 @@ class RscButton_1607: Swag_RscButton
 };
 class RscButton_1608: Swag_RscButton
 {
-    action = "[0,0,0,['gangmenu']] execVM ""maindialogs.sqf"";";
+  action = "[0,0,0,[""gangsswag""]] execVM 'maindialogs.sqf';";
 
 	colorText[] = {0,0,0,0};
 	colorBackground[] = {0,0,0,0};

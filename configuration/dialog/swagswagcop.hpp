@@ -254,7 +254,7 @@ class RscButton_1608: Swag_RscButton
 };*/
 class RscButton_1610: Swag_RscButton
 {
-    action = "closeDialog 0; [] call OL_gangs_list;";
+  action = "[0,0,0,[""gangsswag""]] execVM 'maindialogs.sqf';";
 
 	colorText[] = {0,0,0,0};
 	colorBackground[] = {0,0,0,0};
