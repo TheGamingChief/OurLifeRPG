@@ -52,7 +52,7 @@ _mgs = ["RH_mk22","RH_8Rnd_9x19_Mk","KPFS_MP2","KPFS_32Rnd_MP2","RH_muzi","RH_32
 //10. Equiptment shop
 _es = ["Binocular","GPS","NVGoggles","hideout","fishingpole","bunnyhop","caralarm","drill","TreeFixer"];
 //11. Car Upgrades
-_cu = ["supgrade1","supgrade2","caralarm"];
+_cu = ["supgrade1","supgrade2","supgrade3","supgrade4","supgrade5","caralarm"];
 //12. Car Shop
 _cs1 = ["MMT_USMC","Volha_1_TK_CIV_EP1","S1203_TK_CIV_EP1","civic","Car_hatchback","VWGolf","Car_Sedan","SkodaBlue","Skodared","lada1","lada2","LandRover_TK_CIV_EP1","datsun1_civil_3_open","UAZ_Unarmed_TK_CIV_EP1","oldtruck","oltruc3","Tractor"];
 //13
@@ -288,7 +288,7 @@ _gds = ["bread","straw"];
 //43
 _gds1 = [];
 //44. OL_Shops_Wigsworth
-_wigs = ["supgrade1","supgrade2","RepairKitsBreaksShops"];
+_wigs = ["supgrade1","supgrade2","supgrade3","supgrade4","supgrade5","RepairKitsBreaksShops"];
 //45. Oil Trader/Seller
 _os = ["OilBarrel","Oil"];
 //46. Whale Sale
@@ -402,7 +402,7 @@ _coppo3 =
 "olrpg_pdcv_slick_npb", //"DD_CHE10Impala_P_P",
 "olrpg_pdtaurusfpb", //"DD_FOR13Taurus_P_P",
 "olrpg_pdcharger", //"DD_DOD12Charger_P_P",
-"supgrade3_noLic"
+"supgrade3_pd"
 ];
 
 //60
@@ -424,8 +424,8 @@ _copcpl =
 "olrpg_pdcv_slick_pb", //"DD_FOR13Taurus_P_P",
 "olrpg_pdtaurus_slick", //"DD_DOD12Charger_P_P",
 "olrpg_pdcharger_slick", //"DD_CHE08Tahoe_P_P",
-"supgrade3_noLic",
-"supgrade4_noLic"
+"supgrade3_pd",
+"supgrade4_pd"
 ];
 
 //61
@@ -449,8 +449,8 @@ _copsgt =
 "olrpg_pdtaurus_slick", //"DD_DOD12Charger_P_P",
 "olrpg_pdcharger_slick", //"DD_CHE08Tahoe_P_P",
 "olrpg_pdsuptahoe", //"DD_CHE15Suburban_P_P",
-"supgrade3_noLic",
-"supgrade4_noLic"
+"supgrade3_pd",
+"supgrade4_pd"
 ];
 
 //62
@@ -468,9 +468,9 @@ _copdeputy =
 "olrpg_sdcv_pb",
 "olrpg_sdcharger", //"DD_FOR06CV_P_S",
 "tcg_taurus_shpb", //"DD_FOR13Taurus_P_S",
-"supgrade1",
-"supgrade2",
-"supgrade3_noLic"
+"supgrade1_pd",
+"supgrade2_pd",
+"supgrade3_pd"
 ];
 
 //62
@@ -508,8 +508,8 @@ _copsgtdeputy =
 "olrpg_sdtahoe", //"DD_FOR13Taurus_P_S",
 "olrpg_sdsub6", //"DD_DOD12Charger_P_S",
 "olrpg_sdf350", //"DD_CHE15Suburban_P_P_K9",
-"supgrade3_noLic",
-"supgrade4_noLic"
+"supgrade3_pd",
+"supgrade4_pd"
 ];
 
 //63
@@ -542,9 +542,9 @@ _copsheriff =
 "olrpg_uctahoe_grey", //"DD_CHE15Suburban_U_P_DarkRed",
 "olrpg_uctahoe_dblue", //"DD_CHE15Suburban_U_P_DarkBlue",
 "olrpg_pdtaurus_um", //"DD_FOR13Taurus_U_Red",
-"supgrade3_noLic",
-"supgrade4_noLic",
-"supgrade5_noLic",
+"supgrade3_pd",
+"supgrade4_pd",
+"supgrade5_pd",
 "Bait_Kit"
 ];
 
@@ -574,9 +574,9 @@ _coplt =
 "olrpg_uctahoe_maroon", //"DD_CHE15Suburban_P_P",
 "olrpg_uctahoe_grey", //"DD_CHE15Suburban_U_P_DarkRed",
 "olrpg_uctahoe_dblue", //"DD_CHE15Suburban_U_P_DarkBlue",
-"supgrade3_noLic",
-"supgrade4_noLic",
-"supgrade5_noLic",
+"supgrade3_pd",
+"supgrade4_pd",
+"supgrade5_pd",
 "Bait_Kit"
 ];
 
@@ -610,9 +610,9 @@ _copcpt =
 "olrpg_uctahoe_grey", //"DD_FOR13Taurus_U_Black",
 "olrpg_uctahoe_dblue", //"DD_FOR13Taurus_U_DarkBlue",
 "olrpg_pdtaurus_um", //"DD_FOR13Taurus_U_Red",
-"supgrade3_noLic",
-"supgrade4_noLic",
-"supgrade5_noLic",
+"supgrade3_pd",
+"supgrade4_pd",
+"supgrade5_pd",
 "Bait_Kit"
 ];
 
@@ -644,9 +644,9 @@ _copchief =
 "olrpg_uctahoe_dblue", //"DD_DOD16Challenger_P_P",
 "olrpg_pdtaurus_um", //"DD_DOD16Challenger_P_Blue",
 "olrpg_pdcharger_um", //"DD_DOD16Challenger_P_Red",
-"supgrade3_noLic",
-"supgrade4_noLic",
-"supgrade5_noLic",
+"supgrade3_pd",
+"supgrade4_pd",
+"supgrade5_pd",
 "Bait_Kit"
 ];
 
@@ -667,9 +667,9 @@ _copmedal =
 "olrpg_uctahoe_grey", //"DD_CHE15Suburban_U_P_DarkRed",
 "olrpg_uctahoe_dblue", //"DD_CHE15Suburban_U_P_DarkBlue",
 "m5_pd_traffic",
-"supgrade3_noLic",
-"supgrade4_noLic",
-"supgrade5_noLic"
+"supgrade3_pd",
+"supgrade4_pd",
+"supgrade5_pd"
 ];
 
 //68
@@ -1012,9 +1012,9 @@ _undercover =
 "Binocular",
 "NVGoggles",
 "GPS",
-"supgrade3_noLic",
-"supgrade4_noLic",
-"supgrade5_noLic",
+"supgrade3_pd",
+"supgrade4_pd",
+"supgrade5_pd",
 "Bait_Kit"
 ];
 
@@ -1078,7 +1078,7 @@ _PMC =
 "bjerk",
 "supgrade1",
 "supgrade2",
-"supgrade3_noLic",
+"supgrade3",
 "M24_PMC",
 "5Rnd_762x51_M24",
 "RH_m4aim_PMC",
@@ -1102,7 +1102,7 @@ _CommandPMC =
 "bjerk",
 "supgrade1",
 "supgrade2",
-"supgrade3_noLic",
+"supgrade3",
 "M24_PMC",
 "5Rnd_762x51_M24",
 "M16A4pmc",
