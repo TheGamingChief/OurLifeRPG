@@ -49,7 +49,7 @@ switch (adminCMD) do
 	};
 	case 7: //Donuts
 	{
-		['Donut',20] call INV_AddInventoryItem;
+		['Donut',20] call INV_AddInvItem;
 		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Admin %1 has Spawned Donuts"}',name player] call OL_network_Swag;
 		format['if(getplayeruid player in adminlevel4) then {player sideChat "[Admin Log] Admin %1 has Spawned Donuts"}',name player] call OL_network_Swag;
 		["Admin_Log", format ["Admin %1 (%2) has spawned 20 Donuts at %3", name player, getPlayerUID player, _gridPos]] call RM_fnc_LogToServer;

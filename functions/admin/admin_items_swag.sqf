@@ -40,7 +40,7 @@ switch (adminCMD) do
 	};
 	case 6: //Donuts
 	{
-		['Donut',20] call INV_AddInventoryItem;
+		['Donut',20] call INV_AddInvItem;
 		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has Spawned Donuts"}',name player] call OL_network_Swag;
 		[format["[ADMIN_PANNEL_LOG] Dev %1 has Spawned Donuts",name player]] call fn_LogToServer;
 	};
@@ -136,7 +136,7 @@ switch (adminCMD) do
 	};
   case 20: //100K
 	{
-		['geld',100000] call INV_AddInventoryItem;
+		['geld',100000] call INV_AddInvItem;
 		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has Spawned 100K"}',name player] call OL_network_Swag;
 		[format["[ADMIN_PANNEL_LOG] Dev %1 has Spawned 100K",name player]] call fn_LogToServer;
 	};

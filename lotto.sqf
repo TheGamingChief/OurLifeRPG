@@ -8,7 +8,7 @@ _player = player;
 if (playing_lotto == 1 ) exitWith {role groupChat "You have already won recently, must wait 10 minutes to play again!";};
 if (_geld < _lottocost) exitWith {role groupChat "You need more money to play!";};
 playing_lotto = 1;
-['geld', -(_lottocost)] call INV_AddInventoryItem;
+['geld', -(_lottocost)] call INV_AddInvItem;
 
 player groupChat "Scratching your card...";
 playsound "scratch";
@@ -18,7 +18,7 @@ if (_winner > 1) exitWith {player groupChat format ["You lost on the ticket - (%
 
 
 [_player,"slotwin",25] call CBA_fnc_globalSay3d;
-['geld', _lottowin] call INV_AddInventoryItem;
+['geld', _lottowin] call INV_AddInvItem;
 //player groupChat format[localize "STRS_lotto_winner", (_lottowin call OL_ISSE_str_IntToStr)];
 player groupchat format ["You won: $%1 on the (%2)!", _lottowin, _lotto select 1];
 sleep 600;

@@ -17,7 +17,7 @@ if(!(_vcl iskindof "LandVehicle") or _type call INV_getitemTypeKg > 2) exitWith 
 _installing = _vcl getvariable "installing";
 if(!isnil "_installing")exitwith{player groupchat "Already upgrading, try again in a moment."};
 
-['caralarm',(-1)] call INV_AddInventoryItem;
+['caralarm',(-1)] call INV_AddInvItem;
 
 player groupchat "Installing car alarm...";
 _vcl setvariable ["installing", 1, false];

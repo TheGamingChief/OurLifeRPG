@@ -5,7 +5,7 @@ _joueur = player;
 
 _blesse setVariable ["R3F_REV_est_pris_en_charge_par", _joueur, true];
 R3F_REV_demande_relacher_corps = false;
-_id_action = _joueur addAction [STR_R3F_REV_action_relacher_corps, {detach player}, _blesse, 10, false, true, "", ""];
+_id_action = _joueur addAction ["Release body", { detach player }, _blesse, 10, false, true, "", ""];
 
 _blesse attachTo [_joueur, [0, 1.1, 0.092]];
 R3F_REV_code_distant = [_blesse, "setDir", 180];

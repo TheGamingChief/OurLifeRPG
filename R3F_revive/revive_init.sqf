@@ -86,7 +86,7 @@ if !(isServer && isDedicated) then
 					"player distance _target < 2 && !(player getVariable ""R3F_REV_est_inconscient"") && call R3F_REV_FNCT_peut_reanimer && alive _target && isPlayer _target && (_target getVariable ""R3F_REV_est_inconscient"") && isNil {_target getVariable ""R3F_REV_est_pris_en_charge_par""}"];
 					_unite setVariable ["R3F_REV_id_action_reanimer", _id_action, false];
 
-					_id_action = _unite addAction [STR_R3F_REV_action_deplacer_corps, "R3F_revive\DragPlayer.sqf", [], 10, false, true, "",
+					_id_action = _unite addAction ["Drag body", "R3F_revive\DragPlayer.sqf", [], 10, false, true, "",
 					"player distance _target < 2 && !(player getVariable ""R3F_REV_est_inconscient"") && R3F_REV_CFG_player_can_drag_body && alive _target && isPlayer _target && (_target getVariable ""R3F_REV_est_inconscient"") && isNil {_target getVariable ""R3F_REV_est_pris_en_charge_par""}"];
 					_unite setVariable ["R3F_REV_id_action_trainer_corps", _id_action, false];
 				};

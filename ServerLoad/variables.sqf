@@ -168,7 +168,6 @@ local_arrest             = 0;
 jail_time                = 0;
 jail_bounty              = 0;
 jail_multiplier          = 167;
-inv_items		             = 0;
 extradeadtime		         = 10;  //respawnzeit + extradeadtime = total base respawn for civs
 respawntimeinc		       = 10;  //respawn time added every time a civ dies
 killedplayerinc          = 20; //Amount of time added per cop kill for civs

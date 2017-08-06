@@ -14,7 +14,7 @@ if(typename _this == "ARRAY") exitwith
     if(_workers >= _maxfacworkers)exitwith{player groupchat "max factory workers reached!"};
     if(_geld < facworkercost)exitwith{player groupchat "you do not have enough money"};
    
-    ["geld", -facworkercost] call INV_addinventoryitem;
+    ["geld", -facworkercost] call INV_AddInvItem;
  
     call compile format['%1workers = %1workers + 1;', _queue];
  

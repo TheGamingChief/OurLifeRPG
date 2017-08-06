@@ -10,7 +10,7 @@ if (isCrackingSafe == 1) exitWith	{ player groupChat "You are already cracking a
 if (isCrackingSafe == 0) then
 {
 	isCrackingSafe = 1;
-	[_item, -1] call INV_AddInventoryItem;
+	[_item, -1] call INV_AddInvItem;
 
 	player playmove "AinvPknlMstpSlayWrflDnon_medic";
 	sleep 5;

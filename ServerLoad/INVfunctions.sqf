@@ -632,24 +632,7 @@ if((typeName _Fiteminshop) == "ARRAY")then{_Fiteminshop = false};
 
 	_Fiteminshop;
 };
-INV_AddInventoryItem = {
-	inv_items 	= inv_items + 1;
-	private ["_c", "_Fitem", "_Famount", "_Finfos", "_Fgesamtgewicht"];
-	_Fitem          = _this select 0;
-	_Famount        = _this select 1;
-	_Finfos         = _Fitem call INV_getitemArray;
-	_Fgesamtgewicht = 0;
-	_Fgesamtgewicht = ( (call INV_GetOwnWeight) + (_Famount * (_Finfos call INV_getitemTypeKg)) );
-		if (_Famount > 0) then {
-			if (_Fgesamtgewicht <= INV_Tragfaehigkeit) then {
-				([_Fitem, _Famount, "INV_InventarArray"] call INV_AddItemStorage);
-			} else {
-				false;
-			};
-		} else {
-			([_Fitem, _Famount, "INV_InventarArray"] call INV_AddItemStorage);
-		};
-	};
+
 INV_getstock =
 
 {

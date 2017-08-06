@@ -13,7 +13,7 @@ sleep 5;
 
 if (playerSide == resistance) then {
 	player groupchat format["You have been payed $2000 for reviving %1, They still need more medical attention!", _blesse];
-	['geld',2000] call INV_AddInventoryItem;
+	['geld',2000] call INV_AddInvItem;
 	sleep 7;
 	player groupchat "If there are any Officers on scene, consult them before providing medical attention!";
 };
