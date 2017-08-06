@@ -53,6 +53,7 @@ if (player getVariable "KOED") then
 	hintSilent parseText format["<t color='#ff0000'>%1 You have been revived</t>", name player];
 	player setVariable ["tf_unable_to_use_radio", false, true];
 	player setVariable ["tf_voiceVolume", 1.0, true];
+	player setVariable ["TriedCPR", false, true];
 	{	if (!(_x in weapons player)) then { player addWeapon _x }	} forEach OL_DefaultItems;
 	if (getPlayerUID player != "76561198073512197") then {
 		player groupchat "Your legs are broken and need to be healed by EMS!";
