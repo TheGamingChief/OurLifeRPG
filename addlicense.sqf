@@ -38,7 +38,7 @@ if ((_art == "remove") or (_art == "add")) then {
 		if (_license == "esul7" and !(_uid in EMT3_id)) exitWith { player groupChat "You are not EMT 3"};
 		if (_license == "esul4" and !(_uid in FD_id)) exitWith { player groupChat "You are not FD"};
 		if (_license == "esul5" and !(_uid in AirESU_id)) exitWith { player groupChat "You are not EMT Air"};
-		if (_license == "esul6" and !(_uid in ESUCommand_id)) exitWith { player groupChat "You are not ESU Command"};
+		if (_license == "esul6" and !(_uid in EMTSupervisor_id)) exitWith { player groupChat "You are not ESU Command"};
 		[_cost, _name, "License", 1, _cost, _number] execVM "PurchaseItems.sqf";
 	} else {
 		_license = ((INV_Lizenzen select _number) select 0);

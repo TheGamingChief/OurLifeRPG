@@ -8,8 +8,14 @@ _arr1 = _arr select 0;
 _arr2 = _arr select 1;
 
 if (count _arr1 > 0) then {
-  for [{_i = 0}, {_i < (count _arr - 1)}, {_i = _i + 1}] do {
-    _return set [_i, [_arr1 select _i, _arr2 select _i]];
+  for [{_i = 0}, {_i < count _arr1}, {_i = _i + 1}] do {
+    _return set [_i, [_arr1 select _i]];
+  };
+};
+
+if (count _arr2 > 0) then {
+  for [{_k = 0}, {_k < count _arr2}, {_k = _k + 1}] do {
+    _return set [_k, [(_return select _k) select 0, _arr2 select _k]];
   };
 };
 
