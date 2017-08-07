@@ -11,5 +11,6 @@ DD_Modules = DD_Modules + [
   ["OL", "vehicle", "StoreImpound", 1],
   ["OL", "vehicle", "Retrieve",     1],
   ["OL", "vehicle", "Unflip",       1],
-  ["OL", "vehicle", "Syphon",       1]
+  ["OL", "vehicle", "Syphon",       1],
+  ["OL", "vehicle", "Refuel",       1]
 ];

@@ -24,6 +24,7 @@ DD_Modules = DD_Modules + [
   ["OL",    "misc", "resetJailCode",       1],
   ["OL",    "misc", "Hunger",              1],
   ["OL",    "misc", "Radar",               0],
+  ["OL",    "misc", "addLicense",          1],
   ["CP",    "misc", "ArrayOffsetSelector", 1],
   ["CP",    "misc", "ArrayOffsetTrimmer",  1],
   ["CP",    "misc", "ArrayCargoCombiner",  1],
