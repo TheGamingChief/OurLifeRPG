@@ -30,6 +30,7 @@ switch (_this select 0) do {
     _civ = INV_PLAYERLIST select (call compile (INV_InventarGiveReceiver));
     _key = _this select 1;
 
+    if (_civ == player) exitWith { player groupChat "You cannot gives keys to yourself." };
     if (!(_civ call OL_ISSE_UnitExists)) exitWith { player groupChat "The person you are trying to give keys to doesn't actually exist." };
     if (player distance _civ > 20) exitWith { player groupChat "You must be within 20m of the player you are trying to give keys too." };
 

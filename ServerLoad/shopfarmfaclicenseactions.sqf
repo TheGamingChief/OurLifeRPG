@@ -122,7 +122,7 @@ for [{_i = 0}, {_i <= ((count INV_Lizenzen)) - 1}, {_i = _i + 1}] do {
 	} forEach ((INV_Lizenzen select _i) select 1);
 
 	if ((_closestLicShop <= 5) and !(((INV_Lizenzen select _i) select 0) call INV_HasLicense) and (_Arr2 select _i == 0)) then {
-		call compile format ["a_license%1 = player addaction [format[localize ""STRS_inv_actions_buy"", ""%2"", %3], ""noscript.sqf"", [%1, ""add""] call OL_misc_addLicense];", _i, _licensename, (_cost call OL_ISSE_str_IntToStr)];
+		call compile format ["a_license%1 = player addaction [format[localize ""STRS_inv_actions_buy"", ""%2"", %3], ""addlicense.sqf"", [%1, ""add""]];", _i, _licensename, (_cost call OL_ISSE_str_IntToStr)];
 		_Arr2 set [_i, 1];
 	};
 
