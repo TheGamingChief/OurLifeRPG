@@ -10,7 +10,7 @@ if (count _this == 2) then {
     _trunk    = call compile (_x select 5);
     _gear     = call compile (_x select 6);
 
-    _status   = ["NOMINAL", getPlayerUID player, name player];
+    _status   = ["NOMINAL", getPlayerUID player, player getVariable "RealName"];
 
     OL_VehicleGarage = OL_VehicleGarage + [[_id, _class, _damage, _fuel, _upgrades, _trunk, _gear, _status]];
   } forEach _vehicles;

@@ -22,7 +22,7 @@ format['
 	if(isCop)then{
 		systemChat "POLICEDATABSE: Officer %3 has revoked %4s %2 License.";
 	};
-', DD_LastCiv, _license, name player, name DD_LastCiv, _index] call OL_network_Swag;
+', DD_LastCiv, _license, player getVariable "RealName", name DD_LastCiv, _index] call OL_network_Swag;
 
 closeDialog 0;
 

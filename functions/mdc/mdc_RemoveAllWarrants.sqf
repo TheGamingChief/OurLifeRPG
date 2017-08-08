@@ -9,7 +9,7 @@ if (DD_LastCiv in playableUnits) exitWith {
   if (player == %3) then {
     player sideChat ""Your Warrants have been removed by an Officer!"";
   };
-  ", player, name player, DD_LastCiv, name DD_LastCiv] call OL_network_Swag;
+  ", player, player getVariable "RealName", DD_LastCiv, name DD_LastCiv] call OL_network_Swag;
 
     closeDialog 0;
 };

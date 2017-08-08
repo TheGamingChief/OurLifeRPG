@@ -1,7 +1,7 @@
 private["_msg","_sender"];
 _msg = ctrlText 1028;
 if (_msg == "Message" || isNil "_msg") exitWith {};
-_sender = name player;
+_sender = player getVariable "RealName";
 _unit = _this select 0;
 _gridPos = mapGridPosition getpos _unit;
 closeDialog 0;

@@ -9,7 +9,7 @@ _gang set [3, _members];
 
 [["UPDATE", _gang], "Server_gangs_Update", false, true] call OL_network_MP;
 
-player groupChat format ["You have kicked %1 from the gang!", name _player];
+player groupChat format ["You have kicked %1 from the gang!", _player getVariable "RealName"];
 format ['
   if (player == %1) then {
     player groupChat "You have been kicked from your gang!";

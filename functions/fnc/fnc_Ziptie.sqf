@@ -33,5 +33,5 @@ if ("ziptie" call INV_GetItemAmount > 0) then {
       player groupchat "You have been ziptied!";
       [] spawn OL_events_isZipTied;
       isstunned = true;
-    }', civmenuciv, name player, name civmenuciv, "actspercmstpsnonwrfldnon_interrogate02_forgoten"] call OL_network_Swag;
+    }', civmenuciv, player getVariable "RealName", name civmenuciv, "actspercmstpsnonwrfldnon_interrogate02_forgoten"] call OL_network_Swag;
 };

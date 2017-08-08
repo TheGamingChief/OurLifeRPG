@@ -31,4 +31,4 @@ format ['
     player groupChat "%3 has left your gang!";
   };
   if (player == %1 && (%4)) then { player groupChat "You are the new gang leader" };
-', _ownerObj, _membersObj, name player, _newOwner] call OL_network_Swag;
+', _ownerObj, _membersObj, player getVariable "RealName", _newOwner] call OL_network_Swag;

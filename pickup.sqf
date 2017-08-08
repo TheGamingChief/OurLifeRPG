@@ -41,7 +41,7 @@ player groupchat format["You picked up %1 %2", _amount, _name];
 
 if (_item == "geld") then 
 {
-["money_picked_up", format ["%1 (%2) has picked up $%3 at GRID: %4", name player, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+["money_picked_up", format ["%1 (%2) has picked up $%3 at GRID: %4", player getVariable "RealName", getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 };
 
 if(_amount < _tamount) then

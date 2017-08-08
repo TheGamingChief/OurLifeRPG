@@ -289,7 +289,7 @@ if (!(createDialog "gilde_verwaltung")) exitWith {hint "Dialog Error!";};
 
 _members = [];
 private "_i";
-for [{_i=0}, {_i < (count gangsarray)}, {_i=_i+1}] do {if ((name player) in ((gangsarray select _i) select 1)) exitWith {_members = ((gangsarray select _i) select 1)};};
+for [{_i=0}, {_i < (count gangsarray)}, {_i=_i+1}] do {if ((player getVariable "RealName") in ((gangsarray select _i) select 1)) exitWith {_members = ((gangsarray select _i) select 1)};};
 
 _index = lbAdd [201, "Yes"];
 lbSetData [201, _index, "true"];

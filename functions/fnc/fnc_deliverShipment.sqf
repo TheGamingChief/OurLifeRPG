@@ -10,7 +10,7 @@ uiSleep 3;
 1001 cutText ["Guss: Here's your money...","PLAIN DOWN"];
 player groupchat format["You've received $%1 from Guss!", _payout];
 ['geld',_payout] call INV_AddInvItem;
-["GunRunning_Log", format ["%1 just got 75k for doing a gun running mission!", name player]] call RM_fnc_LogToServer;
+["GunRunning_Log", format ["%1 just got 75k for doing a gun running mission!", player getVariable "RealName"]] call RM_fnc_LogToServer;
 uiSleep 3;
 player groupChat "You Must Wait 10 Minutes To Do Another Run...";
 uiSleep 600;

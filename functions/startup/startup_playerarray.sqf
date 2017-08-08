@@ -65,7 +65,7 @@ if (player in civarray) then {
 	rolestring     = format["Civ%1", sidenumber];
 };
 
-if (typeName player == "OBJECT") then {
+if (typeplayer getVariable "RealName" == "OBJECT") then {
 	if (!isNull player) then {
 		call compile format["old%1 = objnull", player];
 	};

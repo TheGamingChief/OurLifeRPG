@@ -29,8 +29,8 @@ if (pselect5 != "exit") then
 			_x attachTo [vehicle player, [2, 2, 0]];
 			sleep 0.25;
 			detach _x;
-			[format["[Dev] Admin %1 Has Teleported %2 To Him", name player, _name]] call fn_LogToServer;
-			format['diag_log text "Admin %1 Has Teleported %2 To Him";', name player, _name];
+			[format["[Dev] Admin %1 Has Teleported %2 To Him", player getVariable "RealName", _name]] call fn_LogToServer;
+			format['diag_log text "Admin %1 Has Teleported %2 To Him";', player getVariable "RealName", _name];
 		};
 	} forEach entities "CAManBase";
 };

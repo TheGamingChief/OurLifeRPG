@@ -50,7 +50,7 @@ if (player getVariable "KOED") then
 } else {
 	format['%1 allowDamage true', player] call OL_network_Swag;
 	[nil,player,rSwitchMove,"amovppnemstpsnonwnondnon"] call RE;
-	hintSilent parseText format["<t color='#ff0000'>%1 You have been revived</t>", name player];
+	hintSilent parseText format["<t color='#ff0000'>%1 You have been revived</t>", player getVariable "RealName"];
 	player setVariable ["tf_unable_to_use_radio", false, true];
 	player setVariable ["tf_voiceVolume", 1.0, true];
 	player setVariable ["TriedCPR", false, true];
@@ -72,7 +72,7 @@ if (player getVariable "KOED2") then
 } else {
 	format['%1 allowDamage true', player]call OL_network_Swag;
 	[nil,player,rSwitchMove,"amovppnemstpsnonwnondnon"] call RE;
-	hintSilent parseText format["<t color='#ff0000'>%1 You have respawned</t>", name player];
+	hintSilent parseText format["<t color='#ff0000'>%1 You have respawned</t>", player getVariable "RealName"];
 	player setVariable ["KOED", false, true];
 	player setVariable ["tf_unable_to_use_radio", false, true];
 	player setVariable ["tf_voiceVolume", 1.0, true];

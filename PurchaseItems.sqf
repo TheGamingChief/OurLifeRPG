@@ -141,7 +141,7 @@ if(_totalCost > _wallet) then
 			[] call _fn_CreateorAddSomething;
 			Kontostand = Kontostand - _totalCost;
 			player groupChat format["You have purchased %3 %1 for $%2 with a debit card.",_name, _totalCost, _quantity];
-			["Buy_Log", format ["%1 (%2) has purchased %3 %4 at %5 for $%6 with a debit card.", name player, getPlayerUID player, _quantity, _name, _gridPos, _totalCost]] call RM_fnc_LogToServer;
+			["Buy_Log", format ["%1 (%2) has purchased %3 %4 at %5 for $%6 with a debit card.", player getVariable "RealName", getPlayerUID player, _quantity, _name, _gridPos, _totalCost]] call RM_fnc_LogToServer;
 		};
 	}
 	else
@@ -155,5 +155,5 @@ else
 	[] call _fn_CreateorAddSomething;
 	["geld", -(_totalCost)] call INV_AddInvItem;
 	player groupChat format["You have purchased %3 %1 for %2 with money in your wallet.",_name, _totalCost, _quantity];
-	["Buy_Log", format ["%1 (%2) has purchased %3 %4 at %5 for $%6", name player, getPlayerUID player, _quantity, _name, _gridPos, _totalCost]] call RM_fnc_LogToServer;
+	["Buy_Log", format ["%1 (%2) has purchased %3 %4 at %5 for $%6", player getVariable "RealName", getPlayerUID player, _quantity, _name, _gridPos, _totalCost]] call RM_fnc_LogToServer;
 };

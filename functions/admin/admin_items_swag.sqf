@@ -17,8 +17,8 @@ switch (adminCMD) do
 		deleteVehicle cursorTarget;
 		closeDialog 0;
 		hint "OBJECT DELETED";
-		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has Deleted %2"}',name player, cursorTarget] call OL_network_Swag;
-		[format["[ADMIN_PANNEL_LOG] Dev %1 has Deleted %2",name player, cursorTarget]] call fn_LogToServer;
+		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has Deleted %2"}', player getVariable "RealName", cursorTarget] call OL_network_Swag;
+		[format["[ADMIN_PANNEL_LOG] Dev %1 has Deleted %2", player getVariable "RealName", cursorTarget]] call fn_LogToServer;
 	};
 	case 3: //Spectate
 	{
@@ -35,20 +35,20 @@ switch (adminCMD) do
 		closeDialog 0;
 		openMap true;
 		onMapSingleClick "onMapSingleClick """";liafu = true; (vehicle player) setpos [_pos select 0, _pos select 1, 0]; openMap false;";
-		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has Ran Teleport!"}',name player] call OL_network_Swag;
-		[format["[ADMIN_PANNEL_LOG] Dev %1 has Ran Teleport!",name player]] call fn_LogToServer;
+		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has Ran Teleport!"}', player getVariable "RealName"] call OL_network_Swag;
+		[format["[ADMIN_PANNEL_LOG] Dev %1 has Ran Teleport!", player getVariable "RealName"]] call fn_LogToServer;
 	};
 	case 6: //Donuts
 	{
 		['Donut',20] call INV_AddInvItem;
-		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has Spawned Donuts"}',name player] call OL_network_Swag;
-		[format["[ADMIN_PANNEL_LOG] Dev %1 has Spawned Donuts",name player]] call fn_LogToServer;
+		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has Spawned Donuts"}', player getVariable "RealName"] call OL_network_Swag;
+		[format["[ADMIN_PANNEL_LOG] Dev %1 has Spawned Donuts", player getVariable "RealName"]] call fn_LogToServer;
 	};
 	case 7: //Heal
 	{
 		_objs = (position (vehicle player) nearObjects 3); {_x setDamage 0} forEach _objs; closeDialog 0;
-		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has 3M Healed!"}',name player] call OL_network_Swag;
-		[format["[ADMIN_PANNEL_LOG] Dev %1 has 3M Healed!",name player]] call fn_LogToServer;
+		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has 3M Healed!"}', player getVariable "RealName"] call OL_network_Swag;
+		[format["[ADMIN_PANNEL_LOG] Dev %1 has 3M Healed!", player getVariable "RealName"]] call fn_LogToServer;
 	};
 	case 8: //Teleport2Me
 	{
@@ -61,45 +61,45 @@ switch (adminCMD) do
 	case 10: //10M Clean
 	{
 		call OL_misc_10MCleanUp;
-		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has started a 10M Cleanup"}',name player] call OL_network_Swag;
-		[format["[ADMIN_PANNEL_LOG] Dev %1 has started a 10M Cleanup",name player]] call fn_LogToServer;
+		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has started a 10M Cleanup"}', player getVariable "RealName"] call OL_network_Swag;
+		[format["[ADMIN_PANNEL_LOG] Dev %1 has started a 10M Cleanup", player getVariable "RealName"]] call fn_LogToServer;
 	};
 	case 11: //GPS,NV,Binoc
 	{
 		player addweapon "ItemGPS";
 		player addweapon "NVGoggles";
 		player addweapon "Binocular";
-		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has Spawned GPS,NV,Binoc"}',name player] call OL_network_Swag;
-		[format["[ADMIN_PANNEL_LOG] Dev %1 has Spawned GPS,NV,Binoc",name player]] call fn_LogToServer;
+		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has Spawned GPS,NV,Binoc"}', player getVariable "RealName"] call OL_network_Swag;
+		[format["[ADMIN_PANNEL_LOG] Dev %1 has Spawned GPS,NV,Binoc", player getVariable "RealName"]] call fn_LogToServer;
 	};
 	case 12: //World Heal
 	{
-		//format['server globalChat "(ADMIN)%1 Has Just Executed A World Heal";', name player] call OL_network_Swag;
-		//format['diag_log text "ADMIN LOG: %1 Has Executed A World Heal";', name player];
+		//format['server globalChat "(ADMIN)%1 Has Just Executed A World Heal";', player getVariable "RealName"] call OL_network_Swag;
+		//format['diag_log text "ADMIN LOG: %1 Has Executed A World Heal";', player getVariable "RealName"];
 		_objs = (position (vehicle player) nearObjects 100000); {_x setDamage 0} forEach _objs;
-		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has done a World Heal"}',name player] call OL_network_Swag;
-		[format["[ADMIN_PANNEL_LOG] Dev %1 has done a World Heal",name player]] call fn_LogToServer;
+		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has done a World Heal"}', player getVariable "RealName"] call OL_network_Swag;
+		[format["[ADMIN_PANNEL_LOG] Dev %1 has done a World Heal", player getVariable "RealName"]] call fn_LogToServer;
 	};
 	case 13: //Server Cleaner
 	{
 		"if (isServer) then { [] spawn fnc_Server_Optimizer };" call OL_network_Swag; closeDialog 0;
-		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has executed server cleaner"}',name player] call OL_network_Swag;
-		[format["[ADMIN_PANNEL_LOG] Dev %1 has executed server cleaner",name player]] call fn_LogToServer;
+		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has executed server cleaner"}', player getVariable "RealName"] call OL_network_Swag;
+		[format["[ADMIN_PANNEL_LOG] Dev %1 has executed server cleaner", player getVariable "RealName"]] call fn_LogToServer;
 	};
 	case 14: //Global Comp 100k
 	{
 		'Kontostand = Kontostand + 100000' call OL_network_Swag;
-		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has Global Comped for 100k"}',name player] call OL_network_Swag;
-		[format["[ADMIN_PANNEL_LOG] Dev %1 has Global Comped for 100k",name player]] call fn_LogToServer;
-		format['player sidechat "Head Admin/Dev %1 has given Global Comp for 100k"', name player] call OL_network_Swag;
+		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has Global Comped for 100k"}', player getVariable "RealName"] call OL_network_Swag;
+		[format["[ADMIN_PANNEL_LOG] Dev %1 has Global Comped for 100k", player getVariable "RealName"]] call fn_LogToServer;
+		format['player sidechat "Head Admin/Dev %1 has given Global Comp for 100k"', player getVariable "RealName"] call OL_network_Swag;
 	};
 	case 15: //Masterkey
 	{
 		_vcls = nearestobjects [getpos player, ["LandVehicle", "Air", "ship"], 25];
 		_vcl = _vcls select 0;
 		["LOCK", _vcl] call OL_fnc_Keys;
-		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has used Masterkey on %2"}',name player,_vcl] call OL_network_Swag;
-		[format["[ADMIN_PANNEL_LOG] Dev %1 has used Masterkey on %2",name player,_vcl]] call fn_LogToServer;
+		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has used Masterkey on %2"}', player getVariable "RealName",_vcl] call OL_network_Swag;
+		[format["[ADMIN_PANNEL_LOG] Dev %1 has used Masterkey on %2", player getVariable "RealName",_vcl]] call fn_LogToServer;
 	};
 	case 16: //Add All Licenses
 	{
@@ -113,32 +113,32 @@ switch (adminCMD) do
 			};
 		} forEach INV_Lizenzen;
 		player sideChat "All Licenses Added!";
-		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has Given Themselves All Licenses"}',name player] call OL_network_Swag;
-		[format["[ADMIN_PANNEL_LOG] Dev %1 has Given Themselves All Licenses",name player]] call fn_LogToServer;
+		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has Given Themselves All Licenses"}', player getVariable "RealName"] call OL_network_Swag;
+		[format["[ADMIN_PANNEL_LOG] Dev %1 has Given Themselves All Licenses", player getVariable "RealName"]] call fn_LogToServer;
 	};
 	case 17: //Revive
 	{
     player setVariable ["KOED", false, true];  player setVariable ["R3F_REV_est_inconscient", false, true];
-    format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has revived themselves"}',name player] call OL_network_Swag;
-		[format["[ADMIN_PANNEL_LOG] Dev %1 has revived themselves",name player, cursorTarget]] call fn_LogToServer;
+    format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has revived themselves"}', player getVariable "RealName"] call OL_network_Swag;
+		[format["[ADMIN_PANNEL_LOG] Dev %1 has revived themselves", player getVariable "RealName", cursorTarget]] call fn_LogToServer;
 	};
 	case 18: //12 PM
 	{
 		setDate [2013, 2, 25, 12, 0] call OL_network_Swag;
-		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has set their local time to 12 PM"}',name player] call OL_network_Swag;
-		[format["[ADMIN_PANNEL_LOG] Dev %1 has set their local time to 12 PM",name player]] call fn_LogToServer;
+		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has set their local time to 12 PM"}', player getVariable "RealName"] call OL_network_Swag;
+		[format["[ADMIN_PANNEL_LOG] Dev %1 has set their local time to 12 PM", player getVariable "RealName"]] call fn_LogToServer;
 	};
   case 19: //11 PM
 	{
 		setDate [2013, 2, 25, 23, 0] call OL_network_Swag;
-		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has set their local time to 11 PM"}',name player] call OL_network_Swag;
-		[format["[ADMIN_PANNEL_LOG] Dev %1 has set their local time to 11 PM",name player]] call fn_LogToServer;
+		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has set their local time to 11 PM"}', player getVariable "RealName"] call OL_network_Swag;
+		[format["[ADMIN_PANNEL_LOG] Dev %1 has set their local time to 11 PM", player getVariable "RealName"]] call fn_LogToServer;
 	};
   case 20: //100K
 	{
 		['geld',100000] call INV_AddInvItem;
-		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has Spawned 100K"}',name player] call OL_network_Swag;
-		[format["[ADMIN_PANNEL_LOG] Dev %1 has Spawned 100K",name player]] call fn_LogToServer;
+		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Dev %1 has Spawned 100K"}', player getVariable "RealName"] call OL_network_Swag;
+		[format["[ADMIN_PANNEL_LOG] Dev %1 has Spawned 100K", player getVariable "RealName"]] call fn_LogToServer;
 	};
 };
 

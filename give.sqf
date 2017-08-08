@@ -27,7 +27,7 @@ player groupChat format [localize "STRS_inv_inventar_uebergabe_success_self", na
 
 if (_item == "geld") then
 {
-["money_handed_to_player", format ["%1 (%2) has handed $%3 to %4 (%5) at GRID: %6", name player, getPlayerUID player, _menge, _playerobject, getPlayerUID _playerobject, _gridPos]] call RM_fnc_LogToServer;
+["money_handed_to_player", format ["%1 (%2) has handed $%3 to %4 (%5) at GRID: %6", player getVariable "RealName", getPlayerUID player, _menge, _playerobject, getPlayerUID _playerobject, _gridPos]] call RM_fnc_LogToServer;
 };
 
 

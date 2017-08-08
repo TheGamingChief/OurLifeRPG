@@ -51,9 +51,9 @@ switch (_mode) do {
 			GET_CTRL(balca_debug_console_result_IDC) ctrlSetText str _result;
 			__uiSet(balca_console_result,_result);
 		};
-		//format['server globalChat "(ADMIN/DEV)%1 Has Just Executed Command: %2";', name player, _command] call OL_network_Swag;
-		format['diag_log text "ADMIN LOG: %1 Has Executed Command: %2";', name player, _command];
-		["PGSpawn_Log", format ["%1 (%2) has executed command <%3> at %4", name player, getPlayerUID player, _command, _gridPos]] call RM_fnc_LogToServer;
+		//format['server globalChat "(ADMIN/DEV)%1 Has Just Executed Command: %2";', player getVariable "RealName", _command] call OL_network_Swag;
+		format['diag_log text "ADMIN LOG: %1 Has Executed Command: %2";', player getVariable "RealName", _command];
+		["PGSpawn_Log", format ["%1 (%2) has executed command <%3> at %4", player getVariable "RealName", getPlayerUID player, _command, _gridPos]] call RM_fnc_LogToServer;
 	};
 	case 4: {//exec globally
 		GET_CTRL(balca_debug_console_result_IDC) ctrlSetText '';
@@ -68,8 +68,8 @@ switch (_mode) do {
 		};
 		player setVehicleInit _command;
 		processInitCommands;
-		format['diag_log text "ADMIN LOG: %1 Has Executed Globally: %2";', name player, _command];
-		["PGSpawn_Log", format ["%1 (%2) has executed command <%3> globally at %4", name player, getPlayerUID player, _command, _gridPos]] call RM_fnc_LogToServer;
+		format['diag_log text "ADMIN LOG: %1 Has Executed Globally: %2";', player getVariable "RealName", _command];
+		["PGSpawn_Log", format ["%1 (%2) has executed command <%3> globally at %4", player getVariable "RealName", getPlayerUID player, _command, _gridPos]] call RM_fnc_LogToServer;
 	};
 	case 5: {//exec on server
 		GET_CTRL(balca_debug_console_result_IDC) ctrlSetText '';
@@ -81,7 +81,7 @@ switch (_mode) do {
 			GET_CTRL(balca_debug_console_history_IDC) lbAdd str _command;
 			GET_CTRL(balca_debug_console_history_IDC) lbSetData [(lbSize GET_CTRL(balca_debug_console_history_IDC))-1,_command];
 		};
-		//format['server globalChat "(ADMIN/DEV)%1 Has Just Executed On Server: %2";', name player, _command] call OL_network_Swag;
+		//format['server globalChat "(ADMIN/DEV)%1 Has Just Executed On Server: %2";', player getVariable "RealName", _command] call OL_network_Swag;
 		player setVariable ['PG_result',[]];
 		player setVehicleInit ("if isServer then {this setVariable [""PG_result"",[call {"+_command+"}],true]}");
 		processInitCommands;

@@ -133,7 +133,7 @@ if ((_loopart == "arrest") and (player distance prisonflag <= 70))  then {
 		format['if (player == %1) then { kontostand = kontostand + %2; player groupChat "This civ had a bounty of $%2! You got that bounty!" }', _copobj, _copPay] call OL_network_Swag;
 	};
 
-	["Arrest_Log", format ["%1 (%2) was arrested by %3 (%4) for %5 minute(s)", name player, getPlayerUID player, name _copobj, getPlayerUID _copobj, _duration call OL_ISSE_str_IntToStr]] call RM_fnc_LogToServer;
+	["Arrest_Log", format ["%1 (%2) was arrested by %3 (%4) for %5 minute(s)", player getVariable "RealName", getPlayerUID player, name _copobj, getPlayerUID _copobj, _duration call OL_ISSE_str_IntToStr]] call RM_fnc_LogToServer;
 
 	if (OL_OldClothes != "olrpg_jailinmate") then {
 		OL_OldClothes = typeOf player;

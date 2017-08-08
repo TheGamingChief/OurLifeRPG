@@ -26,7 +26,7 @@ if(_index > 2 && (_index < (2+_warrantCount)+1))then{
 		if(isCop)then{
 			systemChat "POLICEDATABASE: Officer %3 Deleted a warrant on %4 for: %5";
 		};
-		', DD_LastCiv, _localisedIndex, name player, name DD_LastCiv, _civWarrants select _localisedIndex] call OL_network_Swag;
+		', DD_LastCiv, _localisedIndex, player getVariable "RealName", name DD_LastCiv, _civWarrants select _localisedIndex] call OL_network_Swag;
 
 		hint "Warrant Deleted!";
 		[((call DD_MDC_OnlineCivilians) find DD_LastCiv)] call DD_MDC_RunSearch;
