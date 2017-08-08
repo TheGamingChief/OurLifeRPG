@@ -8,6 +8,7 @@ DD_Modules = DD_Modules + [
   ["OL",    "misc", "CheckWater",          1],
   ["OL",    "misc", "ratioChecker",        1],
   ["OL",    "misc", "TreeFixer",           1],
+  ["OL",    "misc", "TurnMayor",           1],
   ["OL",    "misc", "PDFunctions",         1],
   ["OL",    "misc", "dialogPlayerlist",    1],
   ["OL",    "misc", "EMSFunctions",        1],
