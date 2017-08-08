@@ -162,7 +162,7 @@ if ((_loopart == "arrest") and (player distance prisonflag <= 70))  then {
 
 		if ((((getPosATL player) select 2) > 3) && (vehicle player == player)) then {
 			player setpos getmarkerpos "prisonspawn";
-			player groupChat "Please do not try to glitch, we aint dumb - OLRPG Development Team aka CP & TRG"; // sounds guud
+			player groupChat "Please do not try to glitch, we ain't dumb - OLRPG Development Team aka CP & TRG"; // sounds guud
 		};
 
 		hintsilent format["Time until release: %1\nBail left to pay: $%2", [jail_time / 60 / 60, "HH:MM:SS"] call BIS_fnc_timeToString, jail_bounty];
@@ -206,17 +206,20 @@ if ((_loopart == "arrest") and (player distance prisonflag <= 70))  then {
 
 if (_loopart == "inventcheck") then {
 	_aktionsStarter = _this select 1;
+	if (isNil "_aktionsStarter") exitWith {};
 	(format ['if (player == %1) then {[0, 0, 0, ["inventorycheck", %2, %3, %4]] execVM "maindialogs.sqf";};',_aktionsStarter, INV_LizenzOwner, INV_InventarArray, player]) call OL_network_Swag;
 };
 
 if (_loopart == "patdown") then {
 	_aktionsStarter = _this select 1;
+	if (isNil "_aktionsStarter") exitWith {};
 	(format ['if (player == %2) then {[] call OL_fnc_PatDown; systemChat format["Your weapons have been removed by %1"];};', name _aktionsStarter, player]) call OL_network_Swag;
 };
 
 
 if (_loopart == "licheck") then {
 	_aktionsStarter = _this select 1;
+	if (isNil "_aktionsStarter") exitWith {};
 	(format ['if (player == %1) then {[0, 0, 0, ["licensecheck", %2, %3, %4]] execVM "maindialogs.sqf";};',_aktionsStarter, INV_LizenzOwner, INV_InventarArray, player]) call OL_network_Swag;
 };
 

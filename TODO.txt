@@ -1,65 +1,10 @@
----------------------------------------------------
-[DONE] Warrants delete on NLR
-[DONE] Fix computer
-[DONE] server cleaner remove body bags
-[DONE] multi line warrants
-[DONE] no speed Upgrade for bus
-[DONE] add the yacht
-[DONE] fixed clothes glitch
----------------------------------------------------
-[DONE] vehicle lock over building (getPosATL / getPosASL)
-[DONE] Fixed talking while arrested
-[DONE] Detach while jailing fixed
-[DONE] Dog positions for k9
-[DONE] Cleaned up old holster system
-[DONE] disable pit in air vehicles
-[DONE] Stopped bank tellers from moving
-[DONE] Fixed main bank teller
-[DONE] Made Advanced Navigator free
----------------------------------------------------
-[DONE] Fixed assassin Clothing
-[DONE] Fixed Warrant loss on change clothes
-[DONE] Made drug search give warrant / Notes
-[DONE] Fixed issue with SwagDevs
-[DONE] Fixed SpeedCams
-[DONE] player arrays (E)
----------------------------------------------------
-[DONE] Fix warrants not being removed when arrested.
-[DONE] Increase Air Vehicle saving action so you don't need to crawl
-[DONE] Remove exec on server displaying code in global chat to all players
----------------------------------------------------
-[DONE] Fix This hooker has earned you $ANY
-[DONE] Fix Error Undefined variable in expression: isse_str_inttostr File mpmissions\__CUR_MP.cmr_cicada\worker.sqf
-[DONE] Fix hookers requiring $40001 to buy a hooker instead of $40000
-[DONE] Send person getting comp a message telling them they been comped
-[DONE] Define INV_SavedVehAir, Can't save air vehicle if this is not defined
-[DONE] Set Rob_Log to only log when 100k+ has been robbed.
-[DONE] Add all of Foster's changes (more info can be found in the commit message.
----------------------------------------------------
-[DONE] Remove hooker death when going though drug area.
-[DONE] West Spawn, cars spawn facing 180 degrees from where they should spawn.
-[DONE] Buying cars at West Spawn, spawns them 50m in the air.
-[DONE] When you run away from car retrieve after trying to get your car and you try again you can get several options for the same car.
-[DONE] Says you are throwing spikes when you don't even have spikes.
-[DONE] Fix laptop at voting booth
-[DONE] Make Foster's FTOFunctions Great Again
----------------------------------------------------
-[DONE] Fix cops being able to pit as passenger
-[DONE] Fix UseDrill.sqf and bunnyhop.sqf having the wrong SQF location.
-[DONE] Fix Error Undefined variable in expression: inv_activeshopnumber
-[DONE] Fix Error Undefined variable in expression: ngarray
-[DONE] Fix Error Undefined variable in expression: _pitcar
----------------------------------------------------
-[DONE] MySQLAdapter
-[DONE] ESU stats
-[DONE] Vehicle Table
-[DONE] Impound Vehicles in Table
-[DONE] Priotiry Save
-[DONE] Redo gang system to use cloud
-
 TO DO (CP + TheGamingChief):
 ---------------------------------------------------
 [Will never be done] prevent access gear of locked vehicle
+
+TO DO (Garry + Daniel)
+---------------------------------------------------
+Fix Private Storage
 
 TO DO (Garry)
 ---------------------------------------------------
@@ -70,24 +15,8 @@ If gov is arrested taxes with be reset.
 Remove gov from gov if arrested
 Current gov doesn't show when people join, they need to wait til next election.
 
-ez pz ^
-
 WARNING: Function 'name' - Bryan Telato is dead
-Change, name <object> to <object> getVariable "OL_Name"
+Change, name <object> to <object> getVariable "RealName"
 
-TO DO (daniellllllllllllllllllll)
+One last time list (Garry + CP + Daniel + TheGamingChief + Foster)
 ---------------------------------------------------
-Fix Private Storage
-
-MISC Shit:
----------------------------------------------------
-escape mod menu
-CPR kit?
-
-Replace Wheat with Cotton
-	- Add ability for hookers to speed process
-	- Using "whip" inventory item speeds hookers up 25%
-
-add some ingame settings
-Make a Twitter app
-Stock market lol?
