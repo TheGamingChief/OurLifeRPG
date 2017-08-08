@@ -1,5 +1,4 @@
 player setVariable ["PlayerWarrants", [], true];
-player setVariable ["OL_Name", name player, true];
 player setVariable ["TriedCPR", false, true];
 
 OL_Warrants = [
