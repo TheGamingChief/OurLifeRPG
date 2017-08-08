@@ -13,9 +13,8 @@ if ((_art == "remove") or (_art == "add")) then {
 		if (_license == "PMC_license" and !(_uid in PMC_id)) exitWith { player groupChat "You Are Not A PMC Member"};
     if (_license == "CommandPMC_license" and !(_uid in CommandPMC_id)) exitWith { player groupChat "You Are Not PMC Command"};
 		if (_license == "PatrolBasic_license" and !(iscop)) exitWith { player groupChat "Restricted to Police"};
-		if (_license == "Deputy_license" and !(_uid in Deputy_id)) exitWith { player groupChat "Restricted to Sheriff's Deputies"};
+		if (_license == "Deputy_license" and !(_uid in JrDeputy_id)) exitWith { player groupChat "Restricted to Sheriff's Deputies"};
 		if (_license == "SgtDeputy_license" and !(_uid in SgtDeputy_id)) exitWith { player groupChat "Restricted to Sheriff's Sergeant Deputies"};
-		if (_license == "SgtDeputy_license" and !(_uid in Sheriff_id)) exitWith { player groupChat "Restricted to Sheriff's Sergeant Deputies"};
 		if (_license == "Sheriff_license" and !(_uid in Sheriff_id)) exitWith { player groupChat "Restricted to the Sheriff"};
 		if (_license == "Medal_Winner" and !(_uid in MedalRecipt_id)) exitWith { player groupChat "Restricted to Medal Recipients"};
 		if (_license == "Chief_license" and !(_uid in Chief_id)) exitWith { player groupChat "Restricted to the Chief of Police"};
