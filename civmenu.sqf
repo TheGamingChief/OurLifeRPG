@@ -133,7 +133,7 @@ if ((_loopart == "arrest") and (player distance prisonflag <= 70))  then {
 		format['if (player == %1) then { kontostand = kontostand + %2; player groupChat "This civ had a bounty of $%2! You got that bounty!" }', _copobj, _copPay] call OL_network_Swag;
 	};
 
-	["Arrest_Log", format ["%1 (%2) was arrested by %3 (%4) for %5 minute(s)", player getVariable "RealName", getPlayerUID player, name _copobj, getPlayerUID _copobj, _duration call OL_ISSE_str_IntToStr]] call RM_fnc_LogToServer;
+	["Arrest_Log", format ["%1 (%2) was arrested by %3 (%4) for %5 minute(s)", PlayerName, getPlayerUID player, _copobj getVariable ["RealName", "Error: No Unit"], getPlayerUID _copobj, _duration call OL_ISSE_str_IntToStr]] call RM_fnc_LogToServer;
 
 	if (OL_OldClothes != "olrpg_jailinmate") then {
 		OL_OldClothes = typeOf player;
@@ -213,7 +213,7 @@ if (_loopart == "inventcheck") then {
 if (_loopart == "patdown") then {
 	_aktionsStarter = _this select 1;
 	if (isNil "_aktionsStarter") exitWith {};
-	(format ['if (player == %2) then {[] call OL_fnc_PatDown; systemChat format["Your weapons have been removed by %1"];};', name _aktionsStarter, player]) call OL_network_Swag;
+	(format ['if (player == %2) then {[] call OL_fnc_PatDown; systemChat format["Your weapons have been removed by %1"];};', _aktionsStarter getVariable ["RealName", "Error: No Unit"], player]) call OL_network_Swag;
 };
 
 
@@ -237,7 +237,7 @@ _gridPos = mapGridPosition getpos player;
 ["geld", -(_geld)] call INV_AddInvItem;
 if (_geld >= 100000) then
 {
-	["Rob_Log", format ["%1 (%2) has robbed %3 (%4) for $%5 at %6", name _aktionsStarter, getPlayerUID _aktionsStarter, player, getPlayerUID player, _geld, _gridPos]] call RM_fnc_LogToServer;
+	["Rob_Log", format ["%1 (%2) has robbed %3 (%4) for $%5 at %6", _aktionsStarter getVariable ["RealName", "Error: No Unit"], getPlayerUID _aktionsStarter, player, getPlayerUID player, _geld, _gridPos]] call RM_fnc_LogToServer;
 };
 
 (format ['if (player == %1) then {["geld", %2] call INV_AddInvItem;};hint "%1 stole %2 from %3";',_aktionsStarter, _geld, player]) call OL_network_Swag;

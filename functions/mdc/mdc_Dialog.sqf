@@ -15,7 +15,7 @@ switch(_screen)do{
 		{
 			lbAdd[2100, format["%1",_x]];
 		}forEach (call DD_MDC_OnlineCivilians);
-		lbAdd[1500, format["SUBJECT -- %1", name _unit]];
+		lbAdd[1500, format["SUBJECT -- %1", _unit getVariable ["RealName", "Error: No Unit"]]];
 		LBadd[1500, ""];
 
 		lbAdd[1500, "------  WARRANTS  ------"];

@@ -15,8 +15,5 @@ If gov is arrested taxes with be reset.
 Remove gov from gov if arrested
 Current gov doesn't show when people join, they need to wait til next election.
 
-WARNING: Function 'name' - Bryan Telato is dead
-Change, name <object> to <object> getVariable "RealName"
-
 One last time list (Garry + CP + Daniel + TheGamingChief + Foster)
 ---------------------------------------------------

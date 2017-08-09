@@ -14,7 +14,7 @@ _weaps = [getWeaponCargo _veh] call CP_misc_ArrayCargoCombiner; if (isNil "_weap
 _mags  = [getMagazineCargo _veh] call CP_misc_ArrayCargoCombiner; if (isNil "_mags") then { _mags = [] };
 _gear = [_weaps, _mags];
 
-_status   = ["NOMINAL", getPlayerUID player, player getVariable "RealName"];
+_status   = ["NOMINAL", getPlayerUID player, PlayerName];
 
 _index = [_id, OL_VehicleGarage] call CP_misc_WhereYouAtTho;
 if (_index == -1) then { _index = count OL_VehicleGarage };

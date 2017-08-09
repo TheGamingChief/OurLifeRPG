@@ -39,7 +39,7 @@ if (_timer <= 0) then {
 	player setVariable ["tf_voiceVolume", 1.0, true];
 	player setVariable ["TriedCPR", false, true];
 	player enableSimulation true;
-	format['deleteMarker ("OL_DeadTracker_" + name %1)', player] call OL_network_Swag;
+	format['deleteMarker ("OL_DeadTracker_" + %1)', PlayerName] call OL_network_Swag;
 	uiSleep 2;
 	[RadioArr] call OL_tfar_addRadiosBack;
 };
@@ -50,7 +50,7 @@ if (player getVariable "KOED") then
 } else {
 	format['%1 allowDamage true', player] call OL_network_Swag;
 	[nil,player,rSwitchMove,"amovppnemstpsnonwnondnon"] call RE;
-	hintSilent parseText format["<t color='#ff0000'>%1 You have been revived</t>", player getVariable "RealName"];
+	hintSilent parseText format["<t color='#ff0000'>%1 You have been revived</t>", PlayerName];
 	player setVariable ["tf_unable_to_use_radio", false, true];
 	player setVariable ["tf_voiceVolume", 1.0, true];
 	player setVariable ["TriedCPR", false, true];
@@ -60,7 +60,7 @@ if (player getVariable "KOED") then
 		player setHit ["legs", 1];
 	};
 	player enableSimulation true;
-	format['deleteMarker ("OL_DeadTracker_" + name %1)', player] call OL_network_Swag;
+	format['deleteMarker ("OL_DeadTracker_" + %1)', PlayerName] call OL_network_Swag;
 	uiSleep 2;
 	[RadioArr] call OL_tfar_addRadiosBack;
 	OL_isDead = false;
@@ -72,14 +72,14 @@ if (player getVariable "KOED2") then
 } else {
 	format['%1 allowDamage true', player]call OL_network_Swag;
 	[nil,player,rSwitchMove,"amovppnemstpsnonwnondnon"] call RE;
-	hintSilent parseText format["<t color='#ff0000'>%1 You have respawned</t>", player getVariable "RealName"];
+	hintSilent parseText format["<t color='#ff0000'>%1 You have respawned</t>", PlayerName];
 	player setVariable ["KOED", false, true];
 	player setVariable ["tf_unable_to_use_radio", false, true];
 	player setVariable ["tf_voiceVolume", 1.0, true];
 	player setVariable ["TriedCPR", false, true];
 	{	if (!(_x in weapons player)) then { player addWeapon _x }	} forEach OL_DefaultItems;
 	player enableSimulation true;
-	format['deleteMarker ("OL_DeadTracker_" + name %1)', player]call OL_network_Swag;
+	format['deleteMarker ("OL_DeadTracker_" + %1)', PlayerName] call OL_network_Swag;
 	sleep 2;
 	[RadioArr] call OL_tfar_addRadiosBack;
 	[player, "Remove All Warrants", 0] call OL_player_WarrantRemove;

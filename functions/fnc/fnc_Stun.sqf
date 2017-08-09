@@ -42,7 +42,7 @@ if (_art == "hit") then {
 	"dynamicBlur" ppEffectEnable true;
 	"dynamicBlur" ppEffectAdjust [0];
 	"dynamicBlur" ppEffectCommit StunActiveTime;
-	if (_selection != "Melee") then {[[5, format["%1 was tased by %2", player getVariable "RealName",name _shooter], "true"],"OL_misc_ChatMessage",true,false] call OL_Network_MP};
+	if (_selection != "Melee") then {[[5, format["%1 was tased by %2", PlayerName, _shooter getVariable "RealName"], "true"],"OL_misc_ChatMessage",true,false] call OL_Network_MP};
 
 	if (!(call OL_misc_isProne)) then {
 		[player, "adthpercmstpslowwrfldnon_4", 0, true] call OL_fnc_Animate;

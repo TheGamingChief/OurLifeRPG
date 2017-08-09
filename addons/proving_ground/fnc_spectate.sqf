@@ -27,9 +27,9 @@ spect =
 	_name =  _splr getVariable "RealName";
 	F3_EH = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 0x3D) then {spectate = false;};"];
 	(vehicle _splr) switchCamera "EXTERNAL";
-	format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Admin %1 (%2) has begun Spectating %3 (%4)"}', player getVariable "RealName", getPlayerUID player, name _splr, getPlayerUID _splr] call OL_network_Swag;
-	format['if(getplayeruid player in adminlevel4) then {player sideChat "[Admin Log] Admin %1 (%2) has begun Spectating %3 (%4)"}', player getVariable "RealName", getPlayerUID player, name _splr, getPlayerUID _splr] call OL_network_Swag;
-	["Admin_Log", format ["Admin %1 (%2) has begun Spectating %3 (%4)", player getVariable "RealName", getPlayerUID player, name _splr, getPlayerUID _splr]] call fn_LogToServer;
+	format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Admin %1 (%2) has begun Spectating %3 (%4)"}', PlayerName, getPlayerUID player, _splr getVariable "RealName", getPlayerUID _splr] call OL_network_Swag;
+	format['if(getplayeruid player in adminlevel4) then {player sideChat "[Admin Log] Admin %1 (%2) has begun Spectating %3 (%4)"}', PlayerName, getPlayerUID player, _splr getVariable "RealName", getPlayerUID _splr] call OL_network_Swag;
+	["Admin_Log", format ["Admin %1 (%2) has begun Spectating %3 (%4)", PlayerName, getPlayerUID player, _splr getVariable "RealName", getPlayerUID _splr]] call fn_LogToServer;
 	player attachTo [vehicle _splr, [0,0,-3]];
 	[] execVM "addons\proving_ground\fnc_inon.sqf";
 	titleText ["Spectating...","PLAIN DOWN"];titleFadeOut 4;
@@ -45,8 +45,8 @@ if (isNil "spectate") then {spectate = true;} else {spectate = !spectate;};
 if (spectate) then
 {
 
-	{if ((_x != player) and (getPlayerUID _x != "")) then {nlist set [count nlist, name _x];};} forEach Entities "CAManBase";
-	{if ((count crew _x)>0) then {{if ((_x != player) and (getPlayerUID _x != "")) then {nlist set [count nlist, name _x];};} forEach crew _x;};
+	{if ((_x != player) and (getPlayerUID _x != "")) then {nlist set [count nlist, _x getVariable ["RealName", "Error: No Unit"]];};} forEach Entities "CAManBase";
+	{if ((count crew _x)>0) then {{if ((_x != player) and (getPlayerUID _x != "")) then {nlist set [count nlist, _x getVariable ["RealName", "Error: No Unit"]];};} forEach crew _x;};
 	} foreach (Entities "LandVehicle"+ Entities "Air" + Entities"Ship");
 	shnmenu =
 	{
@@ -70,8 +70,8 @@ if (spectate) then
 	if (selecteditem!= "exitscript") then
 	{
 		_name = selecteditem;
-		{if(format[name _x] == _name) then {[_x] call spect;};} forEach Entities "CAManBase";
-		{if ((count crew _x)>0) then {if(format[name _x] == _name) then {[_x] call spect;};};} foreach (Entities "LandVehicle"+ Entities "Air" + Entities"Ship");
+		{if(format[_x getVariable ["RealName", "Error: No Unit"]] == _name) then {[_x] call spect;};} forEach Entities "CAManBase";
+		{if ((count crew _x)>0) then {if(format[_x getVariable ["RealName", "Error: No Unit"]] == _name) then {[_x] call spect;};};} foreach (Entities "LandVehicle"+ Entities "Air" + Entities"Ship");
 	};
 	spectate = false;
 
@@ -79,9 +79,9 @@ if (spectate) then
 if (!spectate) then
 {
 	titleText ["Back to player...","PLAIN DOWN"];titleFadeOut 4;
-	format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Admin %1 (%2) has stopped Spectating"}', player getVariable "RealName", getPlayerUID player] call OL_network_Swag;
-	format['if(getplayeruid player in adminlevel4) then {player sideChat "[Admin Log] Admin %1 (%2) has stopped Spectating"}', player getVariable "RealName", getPlayerUID player] call OL_network_Swag;
-	["Admin_Log", format ["Admin %1 (%2) has stopped Spectating", player getVariable "RealName", getPlayerUID player]] call fn_LogToServer;
+	format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Admin %1 (%2) has stopped Spectating"}', PlayerName, getPlayerUID player] call OL_network_Swag;
+	format['if(getplayeruid player in adminlevel4) then {player sideChat "[Admin Log] Admin %1 (%2) has stopped Spectating"}', PlayerName, getPlayerUID player] call OL_network_Swag;
+	["Admin_Log", format ["Admin %1 (%2) has stopped Spectating", PlayerName, getPlayerUID player]] call fn_LogToServer;
 	if (bInvisibleOn) then {
 		detach player;
 		player setVelocity [0,0,0];

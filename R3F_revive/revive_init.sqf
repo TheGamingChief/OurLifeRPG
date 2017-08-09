@@ -40,7 +40,7 @@ if !(isServer && isDedicated) then
 		{
 			if (R3F_REV_CFG_afficher_marqueur && alive player) then
 			{
-				deleteMarker ("R3F_REV_mark_" + player getVariable "RealName");
+				deleteMarker ("R3F_REV_mark_" + PlayerName);
 			};
 		};
 
@@ -48,7 +48,7 @@ if !(isServer && isDedicated) then
 		{
 			if (alive player) then
 			{
-				deleteMarker ("RL_Speedy_Mark_" + player getVariable "RealName");
+				deleteMarker ("RL_Speedy_Mark_" + PlayerName);
 			};
 		};
 

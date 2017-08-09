@@ -16,7 +16,7 @@ _upg      = _settings select 4;
 _trunk    = _settings select 5;
 _weaps    = (_settings select 6) select 0;
 _mags     = (_settings select 6) select 1;
-_status   = ["SUBNOMINAL", getPlayerUID player, player getVariable "RealName"];
+_status   = ["SUBNOMINAL", getPlayerUID player, PlayerName];
 
 if (_dmg > 0.9)  then { _dmg = 0.9 };
 if (_fuel < 0.1) then { _fuel = 0.1 };

@@ -387,13 +387,13 @@ fnc_KeyPress_Tilde = {
 
 		player sideChat "%2 (%1) Has hit their panic button, they need immediate backup! Their location has been marked on the map via a map marker! GRID: %3";
 		playSound "beepsimple";
-	}', player, player getVariable "RealName", mapGridPosition player] call OL_network_Swag;
+	}', player, PlayerName, mapGridPosition player] call OL_network_Swag;
 
 	player sidechat "Your panic button is now disabled. It will be available in 60 seconds.";
 	uiSleep 60;
 	backupavailable = true;
 	player sidechat "Your panic button is now available.";
-	deleteMarker ("Backup_" + player getVariable "RealName");
+	deleteMarker ("Backup_" + PlayerName);
 };
 
 fnc_KeyPress_CtrlF3 = {

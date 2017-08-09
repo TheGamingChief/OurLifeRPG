@@ -1,7 +1,7 @@
 //AlPMaker
 _max = 10; snext = false; plist = []; pselect5 = "";
-{if ((_x != player) && (getPlayerUID _x != "")) then {plist set [count plist, name _x];};} forEach entities "CAManBase";
-{if ((count crew _x) > 0) then {{if ((_x != player) && (getPlayerUID _x != "")) then {plist set [count plist, name _x];};} forEach crew _x;};} foreach (entities "LandVehicle" + entities "Air" + entities "Ship");
+{if ((_x != player) && (getPlayerUID _x != "")) then {plist set [count plist, _x getVariable ["RealName", "Error: No Unit"]];};} forEach entities "CAManBase";
+{if ((count crew _x) > 0) then {{if ((_x != player) && (getPlayerUID _x != "")) then {plist set [count plist, _x getVariable ["RealName", "Error: No Unit"]];};} forEach crew _x;};} foreach (entities "LandVehicle" + entities "Air" + entities "Ship");
 smenu =
 {
 	_pmenu = [["",true]];
@@ -16,22 +16,22 @@ _j = 0; _max = 10; if (_max>9) then {_max = 10;};
 while {pselect5 == ""} do
 {
 	[_j, (_j + _max) min (count plist)] call smenu; _j = _j + _max;
-	WaitUntil {pselect5 != "" or snext};	
+	WaitUntil {pselect5 != "" or snext};
 	snext = false;
 };
 if (pselect5 != "exit") then
 {
 	_name = pselect5;
 	{
-		if(name _x == _name) then
+		if((_x getVariable "RealName") == _name) then
 		{
 			hint format ["Teleporting %1", _name];
 			_x attachTo [vehicle player, [2, 2, 0]];
 			sleep 0.25;
 			detach _x;
-			format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Admin %1 Has Teleported %2 To Him"}', player getVariable "RealName", _name] call OL_network_Swag;
-			format['if(getplayeruid player in adminlevel4) then {player sideChat "[Admin Log] Admin %1 Has Teleported %2 To Him"}', player getVariable "RealName", _name] call OL_network_Swag;
-			["Admin_Log", format ["Admin %1 (%2) has Teleported %3 (%4) To Him", player getVariable "RealName", getPlayerUID player, _name, getPlayerUID _name]] call RM_fnc_LogToServer;
+			format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Admin %1 Has Teleported %2 To Him"}', PlayerName, _name] call OL_network_Swag;
+			format['if(getplayeruid player in adminlevel4) then {player sideChat "[Admin Log] Admin %1 Has Teleported %2 To Him"}', PlayerName, _name] call OL_network_Swag;
+			["Admin_Log", format ["Admin %1 (%2) has Teleported %3 (%4) To Him", PlayerName, getPlayerUID player, _name, getPlayerUID _name]] call RM_fnc_LogToServer;
 		};
 	} forEach entities "CAManBase";
 };

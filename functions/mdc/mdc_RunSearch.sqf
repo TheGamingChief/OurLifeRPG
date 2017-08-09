@@ -14,4 +14,4 @@ format ['
 		player setVariable ["Warrants", %1_reason, 				true];
 		"if (player == %2) then { [""view"", %2, %1] call DD_MDC_Dialog };" call OL_network_Swag;
 	};
-', _civ, player, player getVariable "RealName"] call OL_network_Swag;
+', _civ, player, PlayerName] call OL_network_Swag;

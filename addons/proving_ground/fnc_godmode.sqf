@@ -11,7 +11,7 @@ player addeventhandler ["dammaged",{player setdammage 0}];
 (vehicle player) allowDamage false;
 pg_godmode = true;
 hint "GOD mode ON";
-//format['server globalChat "(ADMIN)%1 Has Just Turned On God Mode";', player getVariable "RealName"] call OL_network_Swag;
+//format['server globalChat "(ADMIN)%1 Has Just Turned On God Mode";', PlayerName] call OL_network_Swag;
 sleep 0.001;
 }
 else
@@ -26,6 +26,6 @@ player removeAllEventHandlers "dammaged";
 (vehicle player) allowDamage true;
 pg_godmode = false;
 hint "YOU ARE NO LONGER GOD";
-//format['server globalChat "(ADMIN)%1 Has Just Turned Off God Mode";', player getVariable "RealName"] call OL_network_Swag;
+//format['server globalChat "(ADMIN)%1 Has Just Turned Off God Mode";', PlayerName] call OL_network_Swag;
 sleep 0.001;
 };

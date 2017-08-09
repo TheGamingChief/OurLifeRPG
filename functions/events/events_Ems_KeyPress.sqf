@@ -290,7 +290,7 @@ fnc_KeyPress_U = {
 		if (_tgt getVariable "Attached") exitWith {};
 		ATT_PLY = _tgt;
 		_tgt attachTo [player,[0.6,0.3,0]];
-		hintSilent format ["%1 Attached!", name _tgt];
+		hintSilent format ["%1 Attached!", _tgt getVariable ["RealName", "Error: No Unit"]];
 		_tgt setVariable ["Attached",true,true];
 	};
 };
@@ -301,7 +301,7 @@ fnc_KeyPress_Shift_U = {
 	{
 		if (isNull ATT_PLY) exitWith {};
 		detach ATT_PLY;
-		hintSilent format ["%1 Released!", name _tgt];
+		hintSilent format ["%1 Released!", getVariable ["RealName", "Error: No Unit"]];
 		ATT_PLY setVariable ["Attached",false,true];
 		ATT_PLY = objNull;
 	};

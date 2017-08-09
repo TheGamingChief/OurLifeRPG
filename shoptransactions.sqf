@@ -95,7 +95,7 @@ if (_art == "itemkauf") then
 				if(_control == _gang and count _members > 0)then // this doesn't even work....
 				{
 					_income = _cost/(count _members);
-					format['if(player getVariable "RealName" in %1)then{player groupchat "You received $%2 from a drug sale"; kontostand = kontostand + %2};', _members, _income] call OL_network_Swag;
+					format['if(PlayerName in %1)then{player groupchat "You received $%2 from a drug sale"; kontostand = kontostand + %2};', _members, _income] call OL_network_Swag;
 				};
 			};*/
 		};
@@ -186,7 +186,7 @@ if (_itemart == "item") then
 	[_item, -(_menge)] call INV_AddInvItem;
 	if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};
 	player groupChat format [localize "STRS_inv_shop_sold", (_menge call OL_ISSE_str_IntToStr), (_infos call INV_getitemName), (_cost call OL_ISSE_str_IntToStr)];
-	["Sell_Log", format ["%1 (%2) has sold %3 %4 at %5 for $%6", player getVariable "RealName", getPlayerUID player, _menge, _infos call INV_getitemName, _gridPos, _cost]] call RM_fnc_LogToServer;
+	["Sell_Log", format ["%1 (%2) has sold %3 %4 at %5 for $%6", PlayerName, getPlayerUID player, _menge, _infos call INV_getitemName, _gridPos, _cost]] call RM_fnc_LogToServer;
 	};
 
 if (_itemart == "waffe") then
@@ -212,7 +212,7 @@ if (_itemart == "waffe") then
 		};
 
 	player groupChat format [localize "STRS_inv_buyitems_verkauft", 1, (_infos call INV_getitemName), (_CostMitTax call OL_ISSE_str_IntToStr)];
-	["Sell_Log", format ["%1 (%2) has sold %3 at %4 for $%5", player getVariable "RealName", getPlayerUID player, _infos call INV_getitemName, _gridPos, _CostMitTax]] call RM_fnc_LogToServer;
+	["Sell_Log", format ["%1 (%2) has sold %3 at %4 for $%5", PlayerName, getPlayerUID player, _infos call INV_getitemName, _gridPos, _CostMitTax]] call RM_fnc_LogToServer;
 	};
 
 if (_itemart == "magazin") then
@@ -238,7 +238,7 @@ if (_itemart == "magazin") then
 		};
 
 	player groupChat format [localize "STRS_inv_buyitems_verkauft", (_menge call OL_ISSE_str_IntToStr), (_infos call INV_getitemName), (_cost call OL_ISSE_str_IntToStr)];
-	["Sell_Log", format ["%1 (%2) has sold %3 %4 at %5 for $%6", player getVariable "RealName", getPlayerUID player, _menge, (_infos call INV_getitemName), _gridPos, _cost]] call RM_fnc_LogToServer;
+	["Sell_Log", format ["%1 (%2) has sold %3 %4 at %5 for $%6", PlayerName, getPlayerUID player, _menge, (_infos call INV_getitemName), _gridPos, _cost]] call RM_fnc_LogToServer;
 	_exitvar = 1;
 
 
@@ -257,7 +257,7 @@ if(_itemart == "fahrzeug")then
 	["geld", (_CostMitTax)] call INV_AddInvItem;
 	player groupChat format [localize "STRS_inv_shop_vehiclesold", (_CostMitTax call OL_ISSE_str_IntToStr)];
 
-	["Sell_Log", format ["%1 (%2) has sold %3 at %4 for $%5", player getVariable "RealName", getPlayerUID player, _vehicle, _gridPos, _CostMitTax]] call RM_fnc_LogToServer;
+	["Sell_Log", format ["%1 (%2) has sold %3 at %4 for $%5", PlayerName, getPlayerUID player, _vehicle, _gridPos, _CostMitTax]] call RM_fnc_LogToServer;
 	INV_VehicleArray = INV_VehicleArray - [_vehicle];
 	deleteVehicle _vehicle;
 };

@@ -3,7 +3,7 @@ adminMenuOpen =
 	createDialog "adminMenuTCG";
 	adminMenu_Players = playableUnits;
 	{
-    lbAdd [1500, format ["%1: %6 - Vcl: %2 - Money: $%4 - Bank: $%3", name _x, if(vehicle _x != _x) then {typeOf (vehicle _x)} else {"On Foot"},_x getVariable "Kontostand",_x getVariable "moneyPlayer",weapons _x,getPlayerUID _x]];
+    lbAdd [1500, format ["%1: %6 - Vcl: %2 - Money: $%4 - Bank: $%3", _x getVariable ["RealName", "Error: No Unit"], if(vehicle _x != _x) then {typeOf (vehicle _x)} else {"On Foot"},_x getVariable "Kontostand",_x getVariable "moneyPlayer",weapons _x,getPlayerUID _x]];
   } forEach adminMenu_Players;
 	lbSetCurSel [1500,0];
 };
@@ -12,14 +12,14 @@ adminMenuCrash =
 {
 	_sel = lbCurSel 1500;
 	_selected = adminMenu_Players select _sel;
-	format["if(player getVariable "RealName" == ""%1"") then {for ""_i"" from 0 to 100 do {_d = findDisplay _i; _d closeDisplay 0;};};", name _selected] call OL_network_Swag;
+	format["if(PlayerName == ""%1"") then {for ""_i"" from 0 to 100 do {_d = findDisplay _i; _d closeDisplay 0;};};", _selected getVariable "RealName"] call OL_network_Swag;
 };
 
 adminMenuWarn =
 {
 	_sel = lbCurSel 1500;
 	_selected = adminMenu_Players select _sel;
-	format["[] spawn {server globalChat ""%1 has been warned by an admin.""; if(player getVariable "RealName" == ""%1"") then {closeDialog 0; playSound ""warn""; titleText [""YOU HAVE BEEN WARNED BY AN ADMIN"",""BLACK""]; sleep 5; titleText [""Be good now..."",""PLAIN""];};};", name _selected] call OL_network_Swag;
+	format["[] spawn {server globalChat ""%1 has been warned by an admin.""; if(PlayerName == ""%1"") then {closeDialog 0; playSound ""warn""; titleText [""YOU HAVE BEEN WARNED BY AN ADMIN"",""BLACK""]; sleep 5; titleText [""Be good now..."",""PLAIN""];};};", _selected getVariable "RealName"] call OL_network_Swag;
 };
 
 adminMenuTeleport =
@@ -27,8 +27,8 @@ adminMenuTeleport =
 	_sel = lbCurSel 1500;
 	_selected = adminMenu_Players select _sel;
 	(vehicle player) setPosATL (getPosATL _selected);
-	format['diag_log text "ADMIN LOG: %1 Has Teleported";', player getVariable "RealName"];
-	server globalChat format["You have teleported to %1",name _selected];
+	format['diag_log text "ADMIN LOG: %1 Has Teleported";', PlayerName];
+	server globalChat format["You have teleported to %1", _selected getVariable "RealName"];
 };
 
 SpeedyOutput=
@@ -37,7 +37,7 @@ SpeedyOutput=
 	_selected = adminMenu_Players select _sel;
 	_weapons = weapons _selected;
 	_mags = magazines _selected;
-	_name = name _selected;
+	_name = _selected getVariable "RealName";
 	_uid = getPlayerUID _selected;
 	hint format["UID: %4 \nNAME: \n%1 \n\nWEAPONS: \n\n%2 \n\nMAGAZINES: \n\n%3",_name, _weapons, _mags, _uid];
 };

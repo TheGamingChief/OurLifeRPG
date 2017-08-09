@@ -12,7 +12,7 @@ INV_DialogPlayers = {
 
     if ( ((_Fingame) or (_Fspieler call OL_ISSE_UnitExists)) ) then {
       if (_Fname) then {
-        _Findex = lbAdd [_Fid, format ["%1 - (%2)", _Fspieler, name (call compile _Fspieler)]];
+        _Findex = lbAdd [_Fid, format ["%1 - (%2)", _Fspieler, (call compile _Fspieler) getVariable "RealName"]];
       } else {
         _Findex = lbAdd [_Fid, _Fspieler];
       };

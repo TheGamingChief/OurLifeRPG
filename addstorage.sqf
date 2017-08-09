@@ -56,27 +56,27 @@ if (not([_item, _amount] call INV_CanCarryItems)) then
 
 		if ((_item == "geld") && (_gridPos == "064060") && (vehicle player == player)) then
 		{
-		["money_picked_up_factory", format ["%1 (%2) has picked up $%3 at the vehicle factory (GRID: %4)", player getVariable "RealName", getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+		["money_picked_up_factory", format ["%1 (%2) has picked up $%3 at the vehicle factory (GRID: %4)", PlayerName, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 		};
 
 		if ((_item == "geld") && (_gridPos == "063060") && (vehicle player == player)) then
 		{
-		["money_picked_up_factory", format ["%1 (%2) has picked up $%3 at the vehicle factory (GRID: %4)", player getVariable "RealName", getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+		["money_picked_up_factory", format ["%1 (%2) has picked up $%3 at the vehicle factory (GRID: %4)", PlayerName, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 		};
 
 		if ((_item == "geld") && (_gridPos == "080054") && (vehicle player == player)) then
 		{
-		["money_picked_up_factory", format ["%1 (%2) has picked up $%3 at the weapons factory (GRID: %4)", player getVariable "RealName", getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+		["money_picked_up_factory", format ["%1 (%2) has picked up $%3 at the weapons factory (GRID: %4)", PlayerName, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 		};
 
 		if ((_item == "geld") && (_gridPos == "079054") && (vehicle player == player)) then
 		{
-		["money_picked_up_factory", format ["%1 (%2) has picked up $%3 at the Illegal Weapons factory (GRID: %4)", player getVariable "RealName", getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+		["money_picked_up_factory", format ["%1 (%2) has picked up $%3 at the Illegal Weapons factory (GRID: %4)", PlayerName, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 		};
 
 		if ((_item == "geld") && (vehicle player != player)) then
 		{
-		["money_picked_up_trunk", format ["%1 (%2) has picked up $%3 in a vehicle at GRID: %4", player getVariable "RealName", getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+		["money_picked_up_trunk", format ["%1 (%2) has picked up $%3 in a vehicle at GRID: %4", PlayerName, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 		};
 
 		[_item, _amount] call INV_AddInvItem;
@@ -145,27 +145,27 @@ if (not([_item, -(_amount)] call INV_AddInvItem)) then
 
 		if ((_item == "geld") && (_gridPos == "064060") && (vehicle player == player)) then
 		{
-		["money_dropped_factory", format ["%1 (%2) has dropped $%3 at the vehicle factory (GRID: %4)", player getVariable "RealName", getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+		["money_dropped_factory", format ["%1 (%2) has dropped $%3 at the vehicle factory (GRID: %4)", PlayerName, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 		};
 
 		if ((_item == "geld") && (_gridPos == "063060") && (vehicle player == player)) then
 		{
-		["money_dropped_factory", format ["%1 (%2) has dropped $%3 at the vehicle factory (GRID: %4)", player getVariable "RealName", getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+		["money_dropped_factory", format ["%1 (%2) has dropped $%3 at the vehicle factory (GRID: %4)", PlayerName, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 		};
 
 		if ((_item == "geld") && (_gridPos == "080054") && (vehicle player == player)) then
 		{
-		["money_dropped_factory", format ["%1 (%2) has dropped $%3 at the weapons factory (GRID: %4)", player getVariable "RealName", getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+		["money_dropped_factory", format ["%1 (%2) has dropped $%3 at the weapons factory (GRID: %4)", PlayerName, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 		};
 
 		if ((_item == "geld") && (_gridPos == "079054") && (vehicle player == player)) then
 		{
-		["money_dropped_factory", format ["%1 (%2) has dropped $%3 at the Illegal Weapons factory (GRID: %4)", player getVariable "RealName", getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+		["money_dropped_factory", format ["%1 (%2) has dropped $%3 at the Illegal Weapons factory (GRID: %4)", PlayerName, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 		};
 
 		if ((_item == "geld") && (vehicle player != player)) then
 		{
-		["money_dropped_trunk", format ["%1 (%2) has dropped $%3 in a vehicle at GRID: %4", player getVariable "RealName", getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+		["money_dropped_trunk", format ["%1 (%2) has dropped $%3 in a vehicle at GRID: %4", PlayerName, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 		};
 
 		}
