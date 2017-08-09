@@ -19,8 +19,8 @@ if (iscop) exitWith {
   _JailSubject    = (findDisplay 6960) displayCtrl 1609;
 
   _civName = _civ getVariable ["RealName", "Error: No Unit"];
-
   _Name ctrlSetText format ["Interact - %1", _civName];
+
   _TicketName ctrlSetText format ["Ticket - %1", _civName];
   _JailName ctrlSetText format ["Arrest - %1", _civName];
 
@@ -58,6 +58,8 @@ if (isciv) exitWith {
   _Escorted = (findDisplay 6959) displayCtrl 1605;
   _Gag = (findDisplay 6959) displayCtrl 1607;
   _ThrowInCar = (findDisplay 6959) displayCtrl 1619;
+
+  _civName = _civ getVariable ["RealName", "Error: No Unit"];
   _Name ctrlSetText format ["Interact - %1", _civName];
 
   if (!(_civ call OL_ISSE_IsVictim)) then {

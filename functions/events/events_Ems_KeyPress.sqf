@@ -301,7 +301,7 @@ fnc_KeyPress_Shift_U = {
 	{
 		if (isNull ATT_PLY) exitWith {};
 		detach ATT_PLY;
-		hintSilent format ["%1 Released!", getVariable ["RealName", "Error: No Unit"]];
+		hintSilent format ["%1 Released!", ATT_PLY getVariable ["RealName", "Error: No Unit"]];
 		ATT_PLY setVariable ["Attached",false,true];
 		ATT_PLY = objNull;
 	};

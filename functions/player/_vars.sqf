@@ -26,3 +26,4 @@ OL_DefaultPaycheck_CIV = 1000;
 MayorExtraPay          = 3000;
 
 OL_isMale = true;
+PlayerName = name player;
