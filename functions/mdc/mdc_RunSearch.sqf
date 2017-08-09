@@ -1,4 +1,4 @@
-_index = _this select 0
+_index = _this select 0;
 closeDialog 0;
 _civ = (call DD_MDC_OnlineCivilians) select _index;
 DD_Currentciv = _civ;
