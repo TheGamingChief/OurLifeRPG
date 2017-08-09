@@ -39,7 +39,7 @@ if (_timer <= 0) then {
 	player setVariable ["tf_voiceVolume", 1.0, true];
 	player setVariable ["TriedCPR", false, true];
 	player enableSimulation true;
-	format['deleteMarker ("OL_DeadTracker_" + %1)', PlayerName] call OL_network_Swag;
+	format['deleteMarker ("OL_DeadTracker_" + "%1")', PlayerName] call OL_network_Swag;
 	uiSleep 2;
 	[RadioArr] call OL_tfar_addRadiosBack;
 };
@@ -60,7 +60,7 @@ if (player getVariable "KOED") then
 		player setHit ["legs", 1];
 	};
 	player enableSimulation true;
-	format['deleteMarker ("OL_DeadTracker_" + %1)', PlayerName] call OL_network_Swag;
+	format['deleteMarker ("OL_DeadTracker_" + "%1")', PlayerName] call OL_network_Swag;
 	uiSleep 2;
 	[RadioArr] call OL_tfar_addRadiosBack;
 	OL_isDead = false;
@@ -79,7 +79,7 @@ if (player getVariable "KOED2") then
 	player setVariable ["TriedCPR", false, true];
 	{	if (!(_x in weapons player)) then { player addWeapon _x }	} forEach OL_DefaultItems;
 	player enableSimulation true;
-	format['deleteMarker ("OL_DeadTracker_" + %1)', PlayerName] call OL_network_Swag;
+	format['deleteMarker ("OL_DeadTracker_" + "%1")', PlayerName] call OL_network_Swag;
 	sleep 2;
 	[RadioArr] call OL_tfar_addRadiosBack;
 	[player, "Remove All Warrants", 0] call OL_player_WarrantRemove;
