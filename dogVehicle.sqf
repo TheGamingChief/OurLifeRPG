@@ -10,7 +10,10 @@ switch (_this select 0) do
 		{
 			_pos = [0,-2.5, 0];
 			_dir = 270;
-
+			
+			if (_vehicle isKindOf "olrpg_pdk9cv_slick_fpb") then {
+				_pos = [0.07, -0.7, 0.4];
+			};
 			if (_vehicle isKindOf "olrpg_pdk9cv_fpb") then {
 				_pos = [0.07,-0.7, 0.4];
 			};
