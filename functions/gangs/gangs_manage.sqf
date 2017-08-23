@@ -8,6 +8,6 @@ _members   = _gangArray select 3;
 _members   = [_members] call CP_misc_ArrayStr2Obj;
 
 {
-  _index = lbAdd [1500, format ["%1 - %2", _x getVariable "RealName", _x]];
+  _index = lbAdd [1500, format ["%1 - %2", name _x, _x]];
   lbSetData [1500, _index, format ["%1", _x]];
 } forEach _members;

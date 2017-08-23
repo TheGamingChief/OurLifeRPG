@@ -6,10 +6,10 @@ switch (_this select 0) do {
     if (player distance _vcl > 20) exitWith { player groupChat "You must be within 20m of the vehicle." };
     if (locked _vcl) then {
       format ["%1 lock false", _vcl] call OL_network_Swag;
-      player groupChat "Vehicle Unlocked";
+      player groupChat "Vehicled Unlocked";
     } else {
       format ["%1 lock true", _vcl] call OL_network_Swag;
-      player groupChat "Vehicle Locked";
+      player groupChat "Vehicled Locked";
     };
   };
   case "use": {

@@ -7,7 +7,7 @@ _upg    = _this select 4;
 if (_dmg > 0.9) then { _dmg = 0.9 };
 if (_fuel < 0.1) then { _fuel = 0.1 };
 
-_status   = ["IMPOUNDED", getPlayerUID player, PlayerName];
+_status   = ["IMPOUNDED", getPlayerUID player, name player];
 
 _index = [_id, OL_VehicleGarage] call CP_misc_WhereYouAtTho;
 if (_index == -1) then { _index = count OL_VehicleGarage };

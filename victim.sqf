@@ -37,5 +37,5 @@ if (_killer call OL_ISSE_UnitExists) then {
 		if (player == %8) then {
 			[%1, %5] execVM ""killer.sqf""
 		};
-	", player, _killer, PlayerName, _killer getVariable "RealName", _killedByVehicle, _killerLicense, _murdered, _killerstring] call OL_network_Swag;
+	", player, _killer, name player, name _killer, _killedByVehicle, _killerLicense, _murdered, _killerstring] call OL_network_Swag;
 };

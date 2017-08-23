@@ -2,6 +2,7 @@ if ((_this select 0) == "use") then {
   _vcl = (nearestObjects [player,["Car", "Air", "Truck", "Motorcycle"], 6]) select 0;
 
   if (isNil "_vcl") exitWith { player groupChat "There is no vehicle near you!" };
+  if (typeOf _vcl == "MMT_USMC") exitWith { player groupChat "You cannot syphon fuel from bikes!" };
   if ((fuel _vcl) < 0.1) exitWith { player groupChat "There is not enough fuel in this car to syphon!" };
   if (_vcl getVariable ["OL_Syphon", false]) exitWith { player groupChat "Someone else is syphoning the fuel!" };
 

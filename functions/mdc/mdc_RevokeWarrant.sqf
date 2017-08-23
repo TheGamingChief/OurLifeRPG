@@ -7,7 +7,7 @@ format["
   if (iscop) then {
     player sideChat ""(%1) %2 has removed a '%5' Warrant from (%3) %4!"";
   };
-", player, PlayerName, DD_LastCiv, DD_LastCiv getVariable ["RealName", "Error: No Unit"], _warrantToRemove] call OL_network_Swag;
+", player, name player, DD_LastCiv, name DD_LastCiv, _warrantToRemove] call OL_network_Swag;
 
 hint format["Removed Warrant from %1", DD_LastCiv];
 closeDialog 0;

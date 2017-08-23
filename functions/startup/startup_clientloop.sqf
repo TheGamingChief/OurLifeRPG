@@ -2,7 +2,7 @@ if (isServer) exitWith {};
 waitUntil {!isNil "OL_InitComplete"};
 waitUntil {OL_InitComplete};
 
-[[5, format["// %1 Has Joined Our Life RPG as %2!", PlayerName, player], "true"], "OL_misc_ChatMessage", true, false] call OL_network_MP;
+[[5, format["// %1 Has Joined Our Life RPG as %2!", name player, player], "true"], "OL_misc_ChatMessage", true, false] call OL_network_MP;
 
 _iterations = 0;
 

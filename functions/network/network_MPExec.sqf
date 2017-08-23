@@ -81,7 +81,7 @@ switch (typeName _target) do {
 		};
 	};
 	case "STRING": {
-		if (PlayerName == _target) then {
+		if (name player == _target) then {
 			if (_scheduled) then {
 				_params spawn _functionCode;
 			} else {

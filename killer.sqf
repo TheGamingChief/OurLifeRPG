@@ -14,7 +14,7 @@ if (_victim in civarray) exitWith {
     } else {
       [player, "Murder"] call OL_player_WarrantAdd;
 
-    	INV_LizenzOwner = INV_LizenzOwner - ["Pistollicense", "riflelicense"];
+    	INV_LizenzOwner = INV_LizenzOwner - ["Pistol", "rifle"];
       player groupchat "You are now wanted, and lost your gun licenses!";
     };
   };
