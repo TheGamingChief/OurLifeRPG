@@ -14,7 +14,7 @@ _coef = ceil _coef;
 if (_damage <0.01) exitWith{player groupChat "Vehicle is not damaged!"; hint format ["Vehicle status:\n---------------------\nVehicle is not damaged\n---------------------\nVehicle fuel: %1\nVehicle damage: %2",_fuel, _damage]};
 if (_damage >0.90) exitWith{player groupChat "Vehicle is damaged beyond repair!"; hint format ["Vehicle status:\n---------------------\nVehicle damage is beyond repair!\n---------------------\nVehicle fuel: %1\nVehicle damage: %2",_fuel, _damage]};
 
-_vcl engineOn false;
+format ["%1 engineOn false", _vcl] call OL_network_Swag;
 
 _damage_ok = false;
 _fuel_ok = false;
@@ -36,11 +36,12 @@ for "_wc" from 1 to _coef do {
 		_breaked_out2 = true;
 		hint "You have entered a vehicle, service canceled";
 	};
-	if (!_fuel_ok) then {_fuel = _fuel + _rep_count; _vcl setFuel _fuel; hintsilent format ["Vehicle status:\n---------------------\nVehicle fuel: %1\nVehicle damage: %2",_fuel, _damage]};
+
+	if (!_fuel_ok) then {_fuel = _fuel + _rep_count; format ["%1 setFuel %2", _vcl, _fuel] call OL_network_Swag; hintsilent format ["Vehicle status:\n---------------------\nVehicle fuel: %1\nVehicle damage: %2",_fuel, _damage]};
 	if (_fuel >= 1 && !_fuel_ok) then {_fuel = 1;_fuel_ok = true};
 	if (!_damage_ok) then {_damage = _damage - _rep_count; _vcl setDamage _damage; hintsilent format ["Vehicle status:\n---------------------\nVehicle fuel: %1\nVehicle damage: %2",_fuel, _damage]};
 	if (_damage <= 0.01 && !_damage_ok) then {_damage = 0;_damage_ok = true};
-	if (_damage_ok and _fuel_ok) then {_vcl lock false; _vcl setFuel 1; _vcl setDamage 0; hint "Vehicle repaired and refuled!";player groupChat "You repaired that vehicle"};
+	if (_damage_ok and _fuel_ok) then {_vcl lock false; format ["%1 setFuel 1", _vcl] call OL_network_Swag; _vcl setDamage 0; hint "Vehicle repaired and refuled!";player groupChat "You repaired that vehicle"};
 };
 if (_breaked_out) exitWith {
 	hint "Service canceled";
