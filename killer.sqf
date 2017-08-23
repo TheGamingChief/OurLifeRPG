@@ -9,6 +9,7 @@ if (_victim in civarray) exitWith {
       [player, "Hit and Run"] call OL_player_WarrantAdd;
 
     	INV_LizenzOwner = INV_LizenzOwner - ["car","truck","bus_license","boat"];
+	player systemChat "You've lost your shit bitch. I love you GamingChief!";
     	player groupchat "you have lost your vehicle license for reckless driving!";
     	demerits = 0;
     } else {
