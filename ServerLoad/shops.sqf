@@ -1341,6 +1341,7 @@ _td5 =
 "a2l_kme_res",
 "a2l_kme",
 "laddertruck2",
+"il_silverado_pd",
 "supgrade1",
 "supgrade2",
 "wulf",
