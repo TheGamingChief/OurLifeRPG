@@ -1,4 +1,5 @@
 player setVariable ["PlayerWarrants", [], true];
+player setVariable ["OL_Name", name player, true];
 player setVariable ["TriedCPR", false, true];
 
 OL_Warrants = [
@@ -26,4 +27,3 @@ OL_DefaultPaycheck_CIV = 1000;
 MayorExtraPay          = 3000;
 
 OL_isMale = true;
-PlayerName = name player;

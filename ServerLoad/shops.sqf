@@ -267,7 +267,7 @@ _as = ["V3S_Refuel_TK_GUE_EP1","V3S_Repair_TK_GUE_EP1","An2_1_TK_CIV_EP1","An2_2
 //32
 _assa = ["kyo_ultralight","AH6X_EP1","KA137_PMC","CSJ_Gyroc","Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gazelle","Gazelle1","Gazelle3","tcg_bell206_3","tcg_bell206_4","tcg_bell206_1","tcg_bell206_2","tcg_bell206_5","tcg_bell206", "MH6J_EP1"];
 //33
-_asc = ["can_c130","airnz_C130","luf_c130","qantas_C130","A320MPA", "OL_USEC_ch53_e"];
+_asc = ["can_c130","airnz_C130","luf_c130","qantas_C130","A320MPA", "USEC_ch53_e"];
 
 //34. Scuba Shop
 _sb = ["fishingpole","tcg_wrun","tcg_wave_red","tcg_wave_black","tcg_wave_red2","tcg_wave_sky","tcg_wave_red3"];
@@ -1041,10 +1041,10 @@ _terrorshop =
 
 _terrorboatshop =
 [
-"OL_RHIB",
+"RHIB",
 "fishingpole",
-"OL_PBX",
-"OL_Zodiac",
+"PBX",
+"Zodiac",
 "cl_trawler_fishing_boat",
 "cl_container_boat",
 "cl_sport_fishing_boat",
@@ -1055,7 +1055,7 @@ _terrorboatshop =
 
 _terrorhelishop =
 [
-"OL_UH1H_TK_EP1",
+"UH1H_TK_EP1",
 "Gazelle",
 "Gazelle3",
 "GazelleUN"
@@ -1081,14 +1081,12 @@ _PMC =
 "supgrade3",
 "M24_PMC",
 "5Rnd_762x51_M24",
-"RH_m4aim_PMC",
-"M16A4pmc",
 "m8_carbine",
 "m8_compact",
 "m8_compact_pmc",
 "m8_carbine_pmc",
 "m8_sharpshooter",
-"30Rnd_556x45_Stanag",
+"30Rnd_556x45_G36",
 "C1987_P99_black_PMC",
 "15Rnd_9x19_p99",
 "RH_usp_pmc",
@@ -1110,17 +1108,12 @@ _CommandPMC =
 "supgrade3",
 "M24_PMC",
 "5Rnd_762x51_M24",
-"M16A4pmc",
 "m8_carbine",
 "m8_compact",
 "m8_compact_pmc",
 "m8_carbine_pmc",
 "m8_sharpshooter",
-"30Rnd_556x45_Stanag",
-"G36C_camo",
 "30Rnd_556x45_G36",
-"RH_p90",
-"RH_57x28mm_50RND_Mag",
 "C1987_P99_black_PMC",
 "15Rnd_9x19_p99",
 "RH_usp_pmc",
@@ -1348,7 +1341,6 @@ _td5 =
 "a2l_kme_res",
 "a2l_kme",
 "laddertruck2",
-"il_silverado_pd",
 "supgrade1",
 "supgrade2",
 "wulf",
@@ -1575,9 +1567,9 @@ INV_ItemShops = [
 	[coppo3,										"Senior Patrol Officer Equipment",		coppo3,							ccarspawn,				_coppo3,						_coppo3,						true,  "PO3_id"],
 	[copcpl,										"Corporal Equipment",									copcpl,							ccarspawn2,				_copcpl,						_copcpl,						true,  "Cpl_id"],
 	[copsgt,										"Sergeant Equipment",									copsgt,							ccarspawn2,				_copsgt,						_copsgt,						true,  "Sgt_id"],
-	[copdeputy,									"Sheriff Deputy Equipment",						copdeputy,					ccarspawn1,				_copdeputy,					_copdeputy,					true,  "JrDeputy_id"],
+	[copdeputy,									"Sheriff Deputy Equipment",						copdeputy,					ccarspawn1,				_copdeputy,					_copdeputy,					true,  "Deputy_id"],
 	[copsgtdeputy,							"Sheriff Sgt Deputy Equipment",				copsgtdeputy,				ccarspawn1,				_copsgtdeputy,			_copsgtdeputy,			true,  "SgtDeputy_id"],
-	[copsheriffdnr,							"Sheriff D.N.R",											copsheriffdnr,			ccarspawn1,				_copsheriffdnr,			_copsheriffdnr,			true,  "JrDeputy_id"],
+	[copsheriffdnr,							"Sheriff D.N.R",											copsheriffdnr,			ccarspawn1,				_copsheriffdnr,			_copsheriffdnr,			true,  "Deputy_id"],
 	[copsheriffmks,							"Sheriff Marksman",										copsheriffmks,			dummyobj,					_copsheriffmks,			_copsheriffmks,			true,  "Deputy_id"],
 	[copsheriff,								"Sheriff Command Equipment",					copsheriff,					ccarspawn1,				_copsheriff,				_copsgt,						true,  "Sheriff_id"],
 	[coplt,											"Lieutenant Equipment",								coplt,							ccarspawnlt,			_coplt,							_coplt,							true,  "Lt_id"],

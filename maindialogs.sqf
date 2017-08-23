@@ -74,7 +74,7 @@ if (!(createDialog "liste_1_button")) exitWith {hint "Dialog Error!";};
 	for [{_i=0}, {_i < (count playerarray)}, {_i=_i+1}] do
 	{
 		_spieler = playerarray select _i;
-		if (!isnull _spieler and isPlayer _spieler) then {lbAdd [1, (format ["%1: %2", _spieler, _spieler getVariable "RealName"])];};
+		if (!isnull _spieler and isPlayer _spieler) then {lbAdd [1, (format ["%1: %2", _spieler, name _spieler])];};
 	};
 };
 if (_art == "oilswag") exitWith {
@@ -213,7 +213,7 @@ if (_art == "coplog") exitWith {
 			if (count _currentWarrants > 0) then {
 				_str = "";
 
-				lbAdd [1, format ["%1 (Bounty: %2): %3 is wanted for:",_civilian, [_civilian] call OL_player_WarrantTotal, _civilian getVariable "RealName"]];
+				lbAdd [1, format ["%1 (Bounty: %2): %3 is wanted for:",_civilian, [_civilian] call OL_player_WarrantTotal, name _civilian]];
 				{
 					lbAdd[1, format["%1 (x%2)", _x select 0, _x select 1]];
 				} foreach _currentWarrants;
@@ -289,7 +289,7 @@ if (!(createDialog "gilde_verwaltung")) exitWith {hint "Dialog Error!";};
 
 _members = [];
 private "_i";
-for [{_i=0}, {_i < (count gangsarray)}, {_i=_i+1}] do {if ((PlayerName) in ((gangsarray select _i) select 1)) exitWith {_members = ((gangsarray select _i) select 1)};};
+for [{_i=0}, {_i < (count gangsarray)}, {_i=_i+1}] do {if ((name player) in ((gangsarray select _i) select 1)) exitWith {_members = ((gangsarray select _i) select 1)};};
 
 _index = lbAdd [201, "Yes"];
 lbSetData [201, _index, "true"];

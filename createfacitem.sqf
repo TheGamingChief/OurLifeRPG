@@ -85,7 +85,7 @@ if (_type == "export") then {
         _iarr = _item call INV_getitemArray;
         _price = (_iarr call INV_getitemCostWithTax)*1;
         ['geld',_price] call INV_AddInvItem;
-		["Factory_Log", format ["%1 just got %2 for selling a vehicle!", PlayerName,_price]] call RM_fnc_LogToServer;
+		["Factory_Log", format ["%1 just got %2 for selling a vehicle!", name player,_price]] call RM_fnc_LogToServer;
         player groupchat format["The vehicle has been sold for $%1!",_price];
         call compile format['if(%1avail > 0)then{%1avail = %1avail - 1;};',_item];
     };
@@ -94,7 +94,7 @@ if (_type == "export") then {
         _iarr = _item call INV_getitemArray;
         _price = (_iarr call INV_getitemCostWithTax)*1;
         ['geld',_price] call INV_AddInvItem;
-		["Factory_Log", format ["%1 just got %2 for selling a weapon!", PlayerName,_price]] call RM_fnc_LogToServer;
+		["Factory_Log", format ["%1 just got %2 for selling a weapon!", name player,_price]] call RM_fnc_LogToServer;
         player groupchat format["The weapon has been sold for $%1!",_price];
         call compile format['if(%1avail > 0)then{%1avail = %1avail - 1;};',_item];
     };

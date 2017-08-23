@@ -491,6 +491,8 @@ INV_HasLicense =
 	};
 };
 
+
+// Get Name of license
 INV_GetLicenseName = {
 	private ["_c"];
 	for "_c" from 0 to (count INV_Lizenzen - 1) do {
@@ -691,7 +693,7 @@ INV_findunit = {
 
 	for "_i" from 0 to (count _arr - 1) do {
 		_obj = _arr select _i;
-		if (!isNull _obj && (_obj getVariable "RealName") == _name) exitwith { _unit = _obj };
+		if (!isNull _obj && name _obj == _name) exitwith { _unit = _obj };
 	};
 	_unit;
 };

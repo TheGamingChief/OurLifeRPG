@@ -29,18 +29,19 @@ while {alive _unit && ESP == 1 && !visibleMap} do {
 
 		_dis = player distance _pos;
 		_alpha = abs ((_dis / _minDis) - _fadeDis);
-
+		
 		// credits some wierdo over at bohemia forums
-
+		
 		if (_alpha <= 1) then {
 			_pos2D = worldtoscreen _pos;
-
+			
 			if (count _pos2D > 0) then {
 				//--- Set the position of the control
 				CONTROL ctrlsetposition [(_pos2D select 0) - _w/2, (_pos2D select 1), _w, _h];
-
-				_name = _unit getVariable "RealName";
-
+				
+				//--- Get the Name of the Unit
+				_name = name _unit;
+				
 				//--- Get the health of the Unit
 				_health = format["(%1%2)",100-round ((damage _unit)*100),"%h"];
 				_rank = "";
@@ -48,7 +49,7 @@ while {alive _unit && ESP == 1 && !visibleMap} do {
 				_textShowRank = "";
 							_textShowPInfo = format["<t size='0.28' font='Zeppelin33' color='#0000FF'>(%3m) %1 %2</t>",_name,_health,round (_dis)];
 				_textShow = _textShowRank + _textShowPInfo;
-
+				
 				CONTROL ctrlsetstructuredtext parsetext _textShow;
 				CONTROL ctrlsetfade ((_alpha^3)*3);
 

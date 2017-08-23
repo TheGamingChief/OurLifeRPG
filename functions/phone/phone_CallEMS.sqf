@@ -11,4 +11,4 @@ format ['if (ismedic) then {
     _OL_TrackMarker setMarkerTypeLocal "Warning";
     _OL_TrackMarker setMarkerSizeLocal [0.6,0.6];
     _OL_TrackMarker setMarkerTextLocal format [STR_DEADGUY, name %1];
-}', _unit, _unit getVariable "RealName", _gridPos] call OL_network_Swag;
+}', _unit, name _unit, _gridPos] call OL_network_Swag;

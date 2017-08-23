@@ -23,11 +23,11 @@ if (!([_item, -(_menge)] call INV_AddInvItem)) exitWith {player groupChat locali
 if (_menge < 0) exitWith {player groupChat localize "STRS_give_minus_then";};
 format ["if (player == %1) then {[""bekommen"", ""%2"", %3, %4] execVM ""give.sqf"";};", _playerobject, _item, _menge, player] call OL_network_Swag;
 
-player groupChat format [localize "STRS_inv_inventar_uebergabe_success_self", _playerobject getVariable "RealName", (_menge call OL_ISSE_str_IntToStr), _itemanzeige];
+player groupChat format [localize "STRS_inv_inventar_uebergabe_success_self", name _playerobject, (_menge call OL_ISSE_str_IntToStr), _itemanzeige];
 
 if (_item == "geld") then
 {
-["money_handed_to_player", format ["%1 (%2) has handed $%3 to %4 (%5) at GRID: %6", PlayerName, getPlayerUID player, _menge, _playerobject, getPlayerUID _playerobject, _gridPos]] call RM_fnc_LogToServer;
+["money_handed_to_player", format ["%1 (%2) has handed $%3 to %4 (%5) at GRID: %6", name player, getPlayerUID player, _menge, _playerobject, getPlayerUID _playerobject, _gridPos]] call RM_fnc_LogToServer;
 };
 
 
@@ -43,7 +43,7 @@ if ([_item, _menge] call INV_AddInvItem) then
 
 	{
 
-	player groupChat format[localize "STRS_inv_inventar_gotfromotherplayer", (_menge call OL_ISSE_str_IntToStr), _itemanzeige, _spieler getVariable "RealName"];
+	player groupChat format[localize "STRS_inv_inventar_gotfromotherplayer", (_menge call OL_ISSE_str_IntToStr), _itemanzeige, name _spieler];
 
 	}
 	else

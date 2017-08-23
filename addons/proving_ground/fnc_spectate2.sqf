@@ -1,5 +1,5 @@
 /*
-[AlPmaker Spectator]
+[AlPmaker Spectator] 
 07:44 24/09/12
 v 1.01
 
@@ -12,7 +12,7 @@ v 1.01
 [How to use]:
 
 1) Exec script
-2) Choose player from list
+2) Choose player from list 
 3) \0/ Profit! :)
 
 */
@@ -20,33 +20,33 @@ v 1.01
 if (!(player == vehicle player)) exitWith {player groupchat "You must be outside the vehicle"};
 if (bInvisibleOn) exitWith {player groupchat "You must have invisibility off to spectate"};
 mycv = cameraView;
-spect =
+spect = 
 {
 	_splr = _this select 0;
 	OriginalPOS = getPosATL player;
-	F3_EH = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 0x3D) then {spectate = false;};"];
+	F3_EH = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 0x3D) then {spectate = false;};"];	
 	(vehicle _splr) switchCamera "EXTERNAL";
-	format['if(getplayeruid player in OL_Developer) then {player sideChat "[Dev] Dev %1 (%2) has begun Spectating %3 (%4)"}', PlayerName, getPlayerUID player, _splr getVariable "RealName", getPlayerUID _splr] call OL_network_Swag;
-	["Admin_Log", format ["Dev %1 (%2) has begun Spectating %3 (%4)", PlayerName, getPlayerUID player, _splr getVariable "RealName", getPlayerUID _splr]] call fn_LogToServer;
+	format['if(getplayeruid player in OL_Developer) then {player sideChat "[Dev] Dev %1 (%2) has begun Spectating %3 (%4)"}',name player, getPlayerUID player, name _splr, getPlayerUID _splr] call OL_network_Swag;
+	["Admin_Log", format ["Dev %1 (%2) has begun Spectating %3 (%4)",name player, getPlayerUID player, name _splr, getPlayerUID _splr]] call fn_LogToServer;
 	player attachTo [vehicle _splr, [0,0,-3]];
 	[] execVM "addons\proving_ground\fnc_inon.sqf";
 	titleText ["Spectating...","PLAIN DOWN"];titleFadeOut 4;
 	waitUntil { !(alive _splr) or !(alive player) or !(spectate)};
 	(findDisplay 46) displayRemoveEventHandler ["KeyDown", F3_EH];
-	player switchCamera mycv;
+	player switchCamera mycv;	 
 };
 
 
 _n2sh = 10; _n2c = "Select Player:";shnext = false; nlist = [];  selecteditem = "";
 
 if (isNil "spectate") then {spectate = true;} else {spectate = !spectate;};
-if (spectate) then
+if (spectate) then 
 {
-
-	{if ((_x != player) and (getPlayerUID _x != "")) then {nlist set [count nlist, _x getVariable ["RealName", "Error: No Unit"]];};} forEach Entities "CAManBase";
-	{if ((count crew _x)>0) then {{if ((_x != player) and (getPlayerUID _x != "")) then {nlist set [count nlist, _x getVariable ["RealName", "Error: No Unit"]];};} forEach crew _x;};
+		 
+	{if ((_x != player) and (getPlayerUID _x != "")) then {nlist set [count nlist, name _x];};} forEach Entities "CAManBase";
+	{if ((count crew _x)>0) then {{if ((_x != player) and (getPlayerUID _x != "")) then {nlist set [count nlist, name _x];};} forEach crew _x;};
 	} foreach (Entities "LandVehicle"+ Entities "Air" + Entities"Ship");
-	shnmenu =
+	shnmenu = 
 	{
 		_pmenu = [["",true],[_n2c, [-1], "", -5, [["expression", ""]], "1", "0"]];
 		for "_i" from (_this select 0) to (_this select 1) do
@@ -60,25 +60,25 @@ if (spectate) then
 	while {selecteditem==""} do
 	{
 		[_j,(_j+_n2sh) min (count nlist)] call shnmenu;_j=_j+_n2sh;
-		WaitUntil {selecteditem!="" or shnext};
-		shnext = false;
+		WaitUntil {selecteditem!="" or shnext};	
+		shnext = false;	
 	};
 
-
+	
 	if (selecteditem!= "exitscript") then
 	{
 		_name = selecteditem;
-		{if(format[_x getVariable "RealName"] == _name) then {[_x] call spect;};} forEach Entities "CAManBase";
-		{if ((count crew _x)>0) then {if(format[_x getVariable "RealName"] == _name) then {[_x] call spect;};};} foreach (Entities "LandVehicle"+ Entities "Air" + Entities"Ship");
+		{if(format[name _x] == _name) then {[_x] call spect;};} forEach Entities "CAManBase";
+		{if ((count crew _x)>0) then {if(format[name _x] == _name) then {[_x] call spect;};};} foreach (Entities "LandVehicle"+ Entities "Air" + Entities"Ship");
 	};
 	spectate = false;
-
+	
 };
-if (!spectate) then
-{
+if (!spectate) then 
+{	
 	titleText ["Back to player...","PLAIN DOWN"];titleFadeOut 4;
-	format['if(getplayeruid player in OL_Developer) then {player sideChat "[Dev] Dev %1 (%2) has stopped Spectating"}', PlayerName, getPlayerUID player] call OL_network_Swag;
-	["Admin_Log", format ["Dev %1 (%2) has stopped Spectating", PlayerName, getPlayerUID player]] call fn_LogToServer;
+	format['if(getplayeruid player in OL_Developer) then {player sideChat "[Dev] Dev %1 (%2) has stopped Spectating"}',name player, getPlayerUID player] call OL_network_Swag;
+	["Admin_Log", format ["Dev %1 (%2) has stopped Spectating",name player, getPlayerUID player]] call fn_LogToServer;
 	detach player;
 	player setVelocity [0,0,0];
 	sleep 2;

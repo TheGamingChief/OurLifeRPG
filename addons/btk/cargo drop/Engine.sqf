@@ -86,13 +86,20 @@ if (_Selected == "UnloadCargo") exitWith {
 	};
 };
 
+
+/******************************************************************************
+* Load in - Small
+******************************************************************************/
 if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeS)) exitWith {
 
+	//// Get nearest objects
 	_TransporterPos = _Transporter modelToWorld [0,0,0];
 	_ObjectsInRange = nearestObjects [_Transporter, _ObjectsS, 15];
 
+	//// If no objects, exit with
 	if (count _ObjectsInRange < 1) exitWith {
 
+		//// BTK_Hint - Nothing to load in range
 		hint parseText format ["
 			<t align='left' color='#e5b348' size='1.2'><t shadow='1'shadowColor='#000000'>Cargo Drop</t></t>
 			<img color='#ffffff' image='ol_textures\misc\img_line_ca.paa' align='left' size='0.79' />
@@ -101,11 +108,13 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeS)) exitWith {
 		"];
 	};
 
+	//// Else, select the object from list
 	_Object = _ObjectsInRange select 0;
 	_Object setVariable ["BTK_CargoDrop_ObjectLoaded", true];
 	_Transporter setVariable ["BTK_CargoDrop_TransporterLoaded", true];
 
 
+	//// Get the object name
 	_ObjectName = getText (configFile >> "CfgVehicles" >> (typeOf _Object) >> "displayName");
 
 	//// BTK_Hint - Loading in...
@@ -284,6 +293,7 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeM)) exitWith {
 	_Transporter setVariable ["BTK_CargoDrop_TransporterLoaded", true];
 
 
+	//// Get the object name
 	_ObjectName = getText (configFile >> "CfgVehicles" >> (typeOf _Object) >> "displayName");
 
 	//// BTK_Hint - Loading in...
@@ -475,6 +485,7 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeL)) exitWith {
 	_Transporter setVariable ["BTK_CargoDrop_TransporterLoaded", true];
 
 
+	//// Get the object name
 	_ObjectName = getText (configFile >> "CfgVehicles" >> (typeOf _Object) >> "displayName");
 
 	//// BTK_Hint - Loading in...
@@ -654,6 +665,7 @@ if ((_Selected == "LoadCargo") && (_SelectedTransporterTypeXL)) exitWith {
 	_Transporter setVariable ["BTK_CargoDrop_TransporterLoaded", true];
 
 
+	//// Get the object name
 	_ObjectName = getText (configFile >> "CfgVehicles" >> (typeOf _Object) >> "displayName");
 
 	//// BTK_Hint - Loading in...
