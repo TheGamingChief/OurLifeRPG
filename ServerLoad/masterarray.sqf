@@ -1751,7 +1751,7 @@ INV_AlleItemsArray = [
   ["hideout",["Item","misc"],["hideout","Hideout"],[20000,20000],[20,""],[false,true,false,false,"hideout.sqf"]],
   ["codeb",["Item","carobjects"],["codeb","Digital Code Breaker"],[10000,10000],[3,"","PatrolBasic_license"],[true,true,true,false,"codepick.sqf"]],
   ["safehack",["Item","misc"],["safehack","Vault Code Cracker"],[10000,7500],[5,"terror","PatrolBasic_license"],[true,true,true,true,"useresource.sqf"]],
-  ["lockpick",["Item","carobjects"],["Dietrich","Lockpick"],[3500,3500],[3,"","PatrolBasic_license"],[true,true,true,false,OL_fnc_Lockpick]],
+  ["lockpick",["Item","carobjects"],["Dietrich","Lockpick"],[3500,3500],[3,"","PatrolBasic_license"],[true,true,true,false,"lockpick.sqf"]],
   ["Shovel",["Item","misc"],["Shovel","Shovel"],[550,550],[1,"",""],[true,true,true,false,"mine.sqf"]],
   ["Pickaxe",["Item","misc"],["Pickaxe","Pickaxe"],[1000,1000],[1,"",""],[true,true,true,false,"mine.sqf"]],
   ["JackHammer",["Item","misc"],["JackHammer","Jack Hammer"],[20000,20000],[1,"",""],[true,true,true,false,"mine.sqf"]],
