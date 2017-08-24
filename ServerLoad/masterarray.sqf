@@ -1412,7 +1412,7 @@ INV_AlleFahrzeugeArray = [
   ["tcg_bell206_3",["Fahrzeug","air"],["tcg_bell206_3","Bell 206 Brown"],[90000,90000],[5,"air","",500],[]],
   ["tcg_police_bell206",["Fahrzeug","air"],["tcg_police_bell206","Police Bell 206"],[40000,20000],[5,"air","PDAviation_license",200],[]],
   ["tcg_police_bell206_nofloat",["Fahrzeug","air"],["tcg_police_bell206_nofloat","Police Bell 206 - No Float"],[40000,20000],[5,"air","PDAviation_license",200],[]],
-  ["UH60M_MEV_EP1",["Fahrzeug","air"],["UH60M_MEV_EP1","Black Hawk MEV"],[130000,130000],[1,"PDAviation_license","",200],[]],
+  ["UH60M_MEV_EP1",["Fahrzeug","air"],["UH60M_MEV_EP1","Black Hawk MEV"],[130000,130000],[5,"esul5","esul5",200],[]],
   ["tcg_bell206_4",["Fahrzeug","air"],["tcg_bell206_4","Bell 206 Blue and Yellow"],[90000,90000],[5,"air","",500],[]],
   ["tcg_bell206_2",["Fahrzeug","air"],["tcg_bell206_2","Bell 206 Blue"],[90000,90000],[5,"air","",500],[]],
   ["tcg_bell206_5",["Fahrzeug","air"],["tcg_bell206_5","Bell Red and White"],[90000,90000],[5,"air","",500],[]],
