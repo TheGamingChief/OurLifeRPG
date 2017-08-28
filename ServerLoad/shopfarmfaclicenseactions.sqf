@@ -23,7 +23,7 @@ sleep 10;
 
 //==================================SHOPACTIONS========================================
 
-for [{_i=0}, {_i < (count INV_ItemShops - 1)}, {_i=_i+1}] do
+for [{_i=0}, {_i < (count INV_ItemShops)}, {_i=_i+1}] do
 
 	{
 
