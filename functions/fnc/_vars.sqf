@@ -21,6 +21,8 @@ Radar_Holstered         = false;
 OL_HasDisplayOpen				= false;
 isTearGassed  					= false;
 isFlashBanged 					= false;
+OL_SpeedLimit						= 90;
+
 
 CP_RobScript_pub1 = [
 	["SETTINGS",  "Fionas Pub", "barmoney", "fionasavailable", "Robbed Bar"],
