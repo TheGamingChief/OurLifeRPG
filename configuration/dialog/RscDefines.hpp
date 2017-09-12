@@ -496,18 +496,33 @@ colorSelect[]           = {0, 0, 0, 1.0};
 colorSelectBackground[] = {0.7, 0.7, 0.7, 1};
 colorText[]             = {1, 1, 1, 1};
 colorBackground[]       = {0.8, 0.8, 0.8, 0.3};
-colorScrollbar[] 	= {Dlg_Color_White,1};
+colorScrollbar[] 				= {0.26953125, 0.46484375, 0.734375, 1};
 font                    = FontHTML;
 sizeEx                  = 0.025;
-borderSize 	= 0;
+borderSize 							= 0;
 rowHeight               = 0.04;
-period 			= 1.200000;
-maxHistoryDelay 	= 1.000000;
-autoScrollSpeed 	= -1;
-autoScrollDelay 	= 5;
-autoScrollRewind 	= 0;
+period 									= 1.200000;
+maxHistoryDelay 				= 1.000000;
+autoScrollSpeed 				= -1;
+autoScrollDelay 				= 5;
+autoScrollRewind 				= 0;
 
-class ScrollBar {};
+class ScrollBar
+{
+	color[] = {0.26953125, 0.46484375, 0.734375, 1};
+	colorActive[] = {0.26953125, 0.46484375, 0.734375, 1};
+	colorDisabled[] = {0.26953125, 0.46484375, 0.734375, 1};
+	thumb = "";
+	arrowFull = "";
+	arrowEmpty = "";
+	border = "";
+/*
+	thumb = "\ca\ui\data\ui_scrollbar_thumb_ca.paa";
+	arrowFull = "\ca\ui\data\ui_arrow_top_active_ca.paa";
+	arrowEmpty = "\ca\ui\data\ui_arrow_top_ca.paa";
+	border = "\ca\ui\data\ui_border_scroll_ca.paa";
+*/
+};
 
 };
 

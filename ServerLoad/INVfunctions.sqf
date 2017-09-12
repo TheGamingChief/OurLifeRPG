@@ -26,7 +26,7 @@ INV_AddInvItem = {
 	_Fgesamtgewicht = 0;
 	_Fgesamtgewicht = ( (call INV_GetOwnWeight) + (_Famount * (_Finfos call INV_getitemTypeKg)) );
 		if (_Famount > 0) then {
-			if (_Fgesamtgewicht <= INV_Tragfaehigkeit) then {
+			if (_Fgesamtgewicht <= INV_Weight) then {
 				([_Fitem, _Famount, "INV_InventarArray"] call INV_AddItemStorage);
 			} else {
 				false;
@@ -345,7 +345,7 @@ INV_CanCarryItems = {
 	private ["_Fcheckitem", "_Fcheckzahl"];
 	_Fcheckitem = _this select 0;
 	_Fcheckzahl = _this select 1;
-	if ( ((_Fcheckitem call INV_getitemTypeKg)*_Fcheckzahl) > (INV_Tragfaehigkeit-(call INV_GetOwnWeight)) ) then {
+	if ( ((_Fcheckitem call INV_getitemTypeKg)*_Fcheckzahl) > (INV_Weight-(call INV_GetOwnWeight)) ) then {
 		false;
 	} else {
 		true;

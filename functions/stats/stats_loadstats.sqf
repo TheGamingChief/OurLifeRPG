@@ -268,7 +268,7 @@ if (_key == "no_data") then {
 				kontostand 		  = _bank;
 
 				if ("car" call INV_haslicense) then {
-					demerits = 10
+					OL_DemeritPoints = 10
 				};
 
 				{player addWeapon _x;}forEach _weapons;
@@ -392,7 +392,7 @@ if (_key == "no_data") then {
 			};
 
 			switch (true) do {
-				case (_civnum == emt1 && !(_uid in EMTChief_id)): {
+				case ((_civnum == emt1) && !(_uid in EMTChief_id)): {
 					player groupChat "This slot is reserved for the EMS Chief only! You will be kicked back to the lobby in 10 seconds.";
 					uiSleep 10;
 					endMission "LOSER";
@@ -406,8 +406,8 @@ if (_key == "no_data") then {
 		if (isNil "_statWipeMessage") then { _statWipeMessage = "" };
 
 		if (_statWipeMessage != "") then {
-			player groupChat format["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _statWipeMessage];
-			player groupChat format["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _statWipeMessage];
+			player groupChat format ["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _statWipeMessage];
+			player groupChat format ["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _statWipeMessage];
 
 			INV_InventarArray = [["handy", 1],["schluesselbund", 1]];
 			INV_LizenzOwner   = [];
@@ -424,6 +424,7 @@ if (_key == "no_data") then {
 	};
 };
 
+player setVariable ["OL_StatsLoaded", true, true];
 OL_StatsLoadedFromDB = true;
 saveAvailable = true;
 

@@ -73,9 +73,9 @@ if (_art == "itemkauf") then
 
 		if (((_infos call INV_getitemIsIllegal)) and (! INV_CANDOILLEGAL)) exitWith {player groupChat localize "STRS_inv_buyitems_notallowed"; _exitvar = 1};
 
-		if ((_gesamtgewicht + _inventargewicht) > INV_Tragfaehigkeit) then
+		if ((_gesamtgewicht + _inventargewicht) > INV_Weight) then
 		{
-			_menge = (floor((INV_Tragfaehigkeit - _inventargewicht) / (_infos call INV_getitemTypeKg)));
+			_menge = (floor((INV_Weight - _inventargewicht) / (_infos call INV_getitemTypeKg)));
 			_cost  = _menge*_CostMitTax;
 			if (_menge <= 0) exitWith {player groupChat localize "STRS_inv_buyitems_maxgewicht"; _exitvar = 1;shopactivescript = 0;};
 		};

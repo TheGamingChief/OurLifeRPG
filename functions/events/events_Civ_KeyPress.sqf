@@ -155,7 +155,7 @@ fnc_KeyPress_L = {
 
 	if(!INV_shortcuts)exitwith{};
 	if(isstunned) exitwith {player groupchat "You are stunned!"};
-	_vcls = call CP_misc_NearestCar;
+	_vcls = call CP_misc_NearestCars;
 	if (count _vcls > 0) then {
 		_vcl = _vcls select 0;
 		if(!(_vcl in INV_VehicleArray))exitwith{player groupchat "You do not have the keys to this vehicle.";};
@@ -168,13 +168,11 @@ fnc_KeyPress_T = {
 	if (dialog) then { closeDialog 0 };
 	if (UpgradingCar) exitWith { player groupChat "You can't access the trunk while upgrading a vehicle." };
 
-	_vcl = ([] call CP_misc_NearestCar) select 0;
+	_vcl = ([] call CP_misc_NearestCars) select 0;
 	if (isNil "_vcl") exitWith {};
 
 	if (!(_vcl in INV_VehicleArray)) exitWith { player groupChat "You must have the keys to access the trunk." };
-	if (_vcl getVariable ["OL_TrunkInUse", false]) exitWith { player groupChat "Only one person may use the trunk at a time." };
-
-	[_vcl] call OL_vehicle_Trunk;
+	/*if (_vcl getVariable ["OL_TrunkInUse", false]) exitWith { player groupChat "Only one person may use the trunk at a time." };*/
 
 	if(!isnull _vcl)then{call compile format['[0,0,0,["%3", "public", ["vcl", "%2", %1]]] execVM "storage.sqf";', _vcl, (typeOf _vcl), format["%1_storage", _vcl]];};
 };

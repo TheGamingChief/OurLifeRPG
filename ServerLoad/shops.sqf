@@ -267,7 +267,7 @@ _as = ["V3S_Refuel_TK_GUE_EP1","V3S_Repair_TK_GUE_EP1","An2_1_TK_CIV_EP1","An2_2
 //32
 _assa = ["kyo_ultralight","AH6X_EP1","KA137_PMC","CSJ_Gyroc","Mi17_Civilian","bd5j_civil_3","bd5j_civil_2","bd5j","GazelleUN","Gazelle","Gazelle1","Gazelle3","tcg_bell206_3","tcg_bell206_4","tcg_bell206_1","tcg_bell206_2","tcg_bell206_5","tcg_bell206", "MH6J_EP1"];
 //33
-_asc = ["can_c130","airnz_C130","luf_c130","qantas_C130","A320MPA", "OL_USEC_ch53_e"];
+_asc = ["can_c130","airnz_C130","luf_c130","qantas_C130","A320MPA", "USEC_ch53_e"];
 
 //34. Scuba Shop
 _sb = ["fishingpole","tcg_wrun","tcg_wave_red","tcg_wave_black","tcg_wave_red2","tcg_wave_sky","tcg_wave_red3"];
@@ -1041,10 +1041,10 @@ _terrorshop =
 
 _terrorboatshop =
 [
-"OL_RHIB",
+"RHIB",
 "fishingpole",
-"OL_PBX",
-"OL_Zodiac",
+"PBX",
+"Zodiac",
 "cl_trawler_fishing_boat",
 "cl_container_boat",
 "cl_sport_fishing_boat",
@@ -1055,7 +1055,7 @@ _terrorboatshop =
 
 _terrorhelishop =
 [
-"OL_UH1H_TK_EP1",
+"UH1H_TK_EP1",
 "Gazelle",
 "Gazelle3",
 "GazelleUN"
@@ -1070,65 +1070,83 @@ _shady =
 "lighter"
 ];
 
-_PMC =
-[
-"ziptie",
-"RepairKitsBreaksShops",
-"medikit",
-"bjerk",
-"supgrade1",
-"supgrade2",
-"supgrade3",
-"M24_PMC",
-"5Rnd_762x51_M24",
-"RH_m4aim_PMC",
-"M16A4pmc",
-"m8_carbine",
-"m8_compact",
-"m8_compact_pmc",
-"m8_carbine_pmc",
-"m8_sharpshooter",
-"30Rnd_556x45_Stanag",
-"C1987_P99_black_PMC",
-"15Rnd_9x19_p99",
-"RH_usp_pmc",
-"RH_15Rnd_9x19_usp",
-"olrpg_pmccharger",
-"olrpg_pmctahoe",
-"olrpg_pmcsub6",
-"olrpg_pmcsub12"
+_PMC = [
+	"ziptie", 									// Ziptie
+	"RepairKitsBreaksShops", 		// Repair Kits
+	"medikit", 									// Med kits
+	"bjerk", 										// Beef Jerky
+	"supgrade1", 								// Speed Upgrade 1
+	"supgrade2", 								// Speed Upgrade 2
+	"supgrade3", 								// Speed Upgrade 3
+	"supgrade4", 								// Speed Upgrade 4
+	"supgrade5", 								// Speed Upgrade 5
+	"M24_PMC", 									// M24
+	"5Rnd_762x51_M24", 					// M24 Magazine
+	"m8_carbine", 							// M8 Carbine
+	"m8_compact", 							// M8 Compact
+	"m8_compact_pmc", 					// M8 Compact (PMC)
+	"m8_carbine_pmc", 					// M8 Carbine (PMC)
+	"m8_sharpshooter",  				// M8 Sharpshooter
+	"30Rnd_556x45_G36", 				// M8 Magazines
+	"RH_m4eotech_pmc", 					// M4 EOTech
+	"RH_m4aim_pmc", 						// M4 Aimpoint
+	"RH_m4acog_pmc", 						// M4 ACog
+	"RH_m16a4_pmc",							// M16A4 (Iron Sights)
+	"RH_M16A4aim_pmc",					// M16A4 (Aimpoint)
+	"RH_M16A4eotech_pmc",				// M16A4 (EOTech)
+	"30Rnd_556x45_Stanag_pmc",  // 30 Round Stanag
+	"G36C_camo_pmc",						// G36C Camo
+	"30Rnd_556x45_G36_pmc",			// G36C Magazines
+	"RH_usp_pmc",								// USP Tactical
+	"RH_15Rnd_9x19_usp",				// USP & Sig Magazines
+	"RH_browninghp_pmc",				// Browning HP
+	"RH_13Rnd_9x19_bhp_pmc",		// Browning HP Magazine
+	"olrpg_pmccharger",					// PMC Charger
+	"olrpg_pmctahoe",						// PMC Tahoe
+	"olrpg_pmcsub6",						// PMC Suburban (2006)
+	"olrpg_pmcsub12"						// PMC Suburban (2012)
 ];
 
-_CommandPMC =
-[
-"ziptie",
-"RepairKitsBreaksShops",
-"medikit",
-"bjerk",
-"supgrade1",
-"supgrade2",
-"supgrade3",
-"M24_PMC",
-"5Rnd_762x51_M24",
-"M16A4pmc",
-"m8_carbine",
-"m8_compact",
-"m8_compact_pmc",
-"m8_carbine_pmc",
-"m8_sharpshooter",
-"30Rnd_556x45_Stanag",
-"G36C_camo",
-"30Rnd_556x45_G36",
-"RH_p90",
-"RH_57x28mm_50RND_Mag",
-"C1987_P99_black_PMC",
-"15Rnd_9x19_p99",
-"RH_usp_pmc",
-"RH_15Rnd_9x19_usp",
-"olrpg_pmccharger",
-"olrpg_pmctahoe",
-"olrpg_pmcsub6",
-"olrpg_pmcsub12"
+_CommandPMC = [
+	"ziptie", 									// Ziptie
+	"RepairKitsBreaksShops", 		// Repair Kits
+	"medikit", 									// Med kits
+	"bjerk", 										// Beef Jerky
+	"supgrade1", 								// Speed Upgrade 1
+	"supgrade2", 								// Speed Upgrade 2
+	"supgrade3", 								// Speed Upgrade 3
+	"supgrade4", 								// Speed Upgrade 4
+	"supgrade5", 								// Speed Upgrade 5
+	"M24_PMC", 									// M24
+	"5Rnd_762x51_M24", 					// M24 Magazine
+	"m8_carbine", 							// M8 Carbine
+	"m8_compact", 							// M8 Compact
+	"m8_compact_pmc", 					// M8 Compact (PMC)
+	"m8_carbine_pmc", 					// M8 Carbine (PMC)
+	"m8_sharpshooter",  				// M8 Sharpshooter
+	"30Rnd_556x45_G36", 				// M8 Magazines
+	"RH_m4eotech_pmc", 					// M4 EOTech
+	"RH_m4aim_pmc", 						// M4 Aimpoint
+	"RH_m4acog_pmc", 						// M4 ACog
+	"RH_acraim_pmc", 						// Bush ACR (Aimpoint)
+	"RH_acreotech_pmc", 				// Bush ACR (EOTech)
+	"RH_acracog_pmc", 					// Bush ACR (ACog)
+	"RH_m16a4_pmc",							// M16A4 (Iron Sights)
+	"RH_M16A4aim_pmc",					// M16A4 (Aimpoint)
+	"RH_M16A4eotech_pmc",				// M16A4 (EOTech)
+	"30Rnd_556x45_Stanag_pmc",  // 30 Round Stanag
+	"G36C_camo_pmc",						// G36C Camo
+	"30Rnd_556x45_G36_pmc",			// G36C Magazines
+	"RH_usp_pmc",								// USP Tactical
+	"RH_15Rnd_9x19_usp",				// USP & Sig Magazines
+	"RH_m1911_pmc",							// Kimber M1911
+	"RH_8Rnd_45cal_m1911_pmc",	// Kimber M1911 Magazine
+	"RH_browninghp_pmc",				// Browning HP
+	"RH_13Rnd_9x19_bhp_pmc",		// Browning HP Magazine
+	"olrpg_pmccharger",					// PMC Charger
+	"olrpg_pmctahoe",						// PMC Tahoe
+	"olrpg_pmcsub6",						// PMC Suburban (2006)
+	"olrpg_pmcsub12"						// PMC Suburban (2012)
 ];
 
 _PMCAIR =
@@ -1456,6 +1474,7 @@ _Tow3 =
 "vil_sprinter_armamb",
 "flyers",
 "il_towtruck",
+"a2l_dot_f350_utility",
 "cl_fuel_mackr"
 ];
 
@@ -1466,6 +1485,7 @@ _Tow4 =
 "vil_sprinter_armamb",
 "flyers",
 "il_towtruck",
+"DD_FOR16F150_Orange",
 "cl_fuel_mackr"
 ];
 
@@ -1537,8 +1557,8 @@ INV_ItemShops = [
 	[tdoc3sub,									"EMT 1 Equipment",										dummyobj,						tdocspawnsub,			_td2,								_td2,								true,  "EMT1_id"],
 	[tdoc4,											"FireFighter 2",											dummyobj,						tdocspawn,				_td5,								_td5,								true,  "FD_id"],
 	[tdoc4sub,									"FireFighter 2",											dummyobj,						tdocspawnsub,			_td5,								_td5,								true,  "FD_id"],
-	[tdoc5,											"Air Rescue Equipment",								tdoc5,							jailpad2_1,				_td6,								_td6,								true,  "ESUAviation_id"],
-	[tdoc5sub,									"Air Rescue Equipment",								tdoc5sub,						tdocspawnsubair,	_td6,								_td6,								true,  "ESUAviation_id"],
+	[tdoc5,											"Air Rescue Equipment",								tdoc5,							jailpad2_1,				_td6,								_td6,								true,  "AirESU_ID"],
+	[tdoc5sub,									"Air Rescue Equipment",								tdoc5sub,						tdocspawnsubair,	_td6,								_td6,								true,  "AirESU_ID"],
 	[tdoc6,											"Command Equipment",									dummyobj,						tdocspawn,				_td7,								_td7,								true,  "EMTSupervisor_id"],
 	[tdocsub,										"Command Equipment",									dummyobj,						tdocspawnsub,			_td7,								_td7,								true,  "EMTSupervisor_id"],
 	[tdoc7,											"EMT 2 Equipment",										dummyobj,						tdocspawn,				_td3,								_td3,								true,  "EMT2_id"],
@@ -1577,7 +1597,7 @@ INV_ItemShops = [
 	[copdeputy,									"Sheriff Deputy Equipment",						copdeputy,					ccarspawn1,				_copdeputy,					_copdeputy,					true,  "JrDeputy_id"],
 	[copsgtdeputy,							"Sheriff Sgt Deputy Equipment",				copsgtdeputy,				ccarspawn1,				_copsgtdeputy,			_copsgtdeputy,			true,  "SgtDeputy_id"],
 	[copsheriffdnr,							"Sheriff D.N.R",											copsheriffdnr,			ccarspawn1,				_copsheriffdnr,			_copsheriffdnr,			true,  "JrDeputy_id"],
-	[copsheriffmks,							"Sheriff Marksman",										copsheriffmks,			dummyobj,					_copsheriffmks,			_copsheriffmks,			true,  "Deputy_id"],
+	[copsheriffmks,							"Sheriff Marksman",										copsheriffmks,			dummyobj,					_copsheriffmks,			_copsheriffmks,			true,  "JrDeputy_id"],
 	[copsheriff,								"Sheriff Command Equipment",					copsheriff,					ccarspawn1,				_copsheriff,				_copsgt,						true,  "Sheriff_id"],
 	[coplt,											"Lieutenant Equipment",								coplt,							ccarspawnlt,			_coplt,							_coplt,							true,  "Lt_id"],
 	[copcpt,										"Captain Equipment",									copcpt,							ccarspawncpt,			_copcpt,						_copcpt,						true,  "Cpt_id"],
@@ -1602,8 +1622,8 @@ INV_ItemShops = [
 	[copcoastguard,							"Sheriff Marine Water Craft",					dummyobj,						cgboatspawn,			_copcoastguard,			_copcoastguard,			true,  "Coastguard_id"],
 	[copcoastguardair,					"Sheriff Marine Aviation",						dummyobj,						jailpadcg,				_copcoastguardair,	_copcoastguardair,	true,  "Coastguard_id"],
 	[ftobox,										"F.T.O.",															ftobox,							ftocarspawn,			_copfto,						_copfto,						true,  "FTO_id"],
-	[ftoboxs,										"F.T.O. Supervisor",									ftoboxs,							ftocarspawn,		_copftos,						_copftos,						true,  "FTO_id"],
-	[ftoboxc,										"F.T.O. Command",											ftoboxc,							ftocarspawn,		_copftoc,						_copftoc,						true,  "FTO_id"],
+	[ftoboxs,										"F.T.O. Supervisor",									ftoboxs,						ftocarspawn,			_copftos,						_copftos,						true,  "FTO_id"],
+	[ftoboxc,										"F.T.O. Command",											ftoboxc,						ftocarspawn,			_copftoc,						_copftoc,						true,  "FTO_id"],
 	[Diamond_1,									"Pawn Shop",													dummyobj,						dummyobj,					_js,								_js,								true,  "[getPlayerUID player]"],
 	[hospsell,									"Sell Organs",												dummyobj,						dummyobj,					_hsc,								_hsc,								true,  "[getPlayerUID player]"],
 	[pmcbox,										"PMC Operator",												pmcbox,							pmcspawn,					_PMC,								_PMC,								true,  "PMC_id"],
@@ -1611,15 +1631,11 @@ INV_ItemShops = [
 	[pmcbox2,										"PMC Air",														dummyobj,						pmchelipad,				_PMCAIR,						_PMCAIR,						true,  "PMC_id"],
 	[towfoodshop,								"Flyer's Vending Machine",						dummyobj,						dummyobj,					_Tow,								_Tow,								true,  "Tow_id"],
 	[tow_box,										"Parts Box",													dummyobj,						dummyobj,					_Tow1,							_Tow1,							true,  "Tow_id"],
-	[towcarshop,								"Junior Mechanic",										dummyobj,						tow_spawn,				_Tow2,							_Tow2,							true,  "Tow_id"],
-	[towcarshop_1,							"Senior Supervisor",									dummyobj,						tow_spawn,				_Tow3,							_Tow3,							true,  "Tow_id"],
+	[towcarshop,								"Mechanic",														dummyobj,						tow_spawn,				_Tow2,							_Tow2,							true,  "Tow_id"],
+	[towcarshop_1,							"Senior Mechanic",										dummyobj,						tow_spawn,				_Tow3,							_Tow3,							true,  "Tow_id"],
 	[towcarshop_2,							"Mechanic Supervisor",								dummyobj,						tow_spawn,				_Tow4,							_Tow4,							true,  "Tow_id"]
 ];
 
 {
 	missionNamespace setVariable [format ["OL_SA_%1", _x select 0], _x]
 } forEach INV_ItemShops;
-
-OL_shops_getArray = {
-	missionNamespace getVariable ["OL_SA_%1", _this]
-};

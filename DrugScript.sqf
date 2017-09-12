@@ -46,7 +46,7 @@ if (_art == "Harvest") then
 		_Weight = call INV_GetOwnWeight;
 		_Plant = nearestobject [player, "as_p_fiberPlant_EP1"];
 
-		if (_Weight >= INV_Tragfaehigkeit) exitwith {player groupchat localize "STRS_inv_buyitems_get_zuschwer";};
+		if (_Weight >= INV_Weight) exitwith {player groupchat localize "STRS_inv_buyitems_get_zuschwer";};
 		if (IsCop) exitwith { player groupchat "Cops cannot do this" };
 
 		deletevehicle _Plant;
@@ -61,7 +61,7 @@ if (_art == "Harvest") then
 		_Weight = call INV_GetOwnWeight;
 		_Plant = nearestobject [player, "as_b_PinusM1s_EP1"];
 
-		if (_Weight >= INV_Tragfaehigkeit) exitwith {player groupchat localize "STRS_inv_buyitems_get_zuschwer";};
+		if (_Weight >= INV_Weight) exitwith {player groupchat localize "STRS_inv_buyitems_get_zuschwer";};
 		if (IsCop) exitwith { player groupchat "Cops cannot do this" };
 
 		deletevehicle _Plant;
@@ -77,7 +77,7 @@ if (_art == "Harvest") then
 		_Weight = call INV_GetOwnWeight;
 		_Plant = nearestobject [player, "as_b_PistaciaL1s_EP1"];
 
-		if (_Weight >= INV_Tragfaehigkeit) exitwith {player groupchat localize "STRS_inv_buyitems_get_zuschwer";};
+		if (_Weight >= INV_Weight) exitwith {player groupchat localize "STRS_inv_buyitems_get_zuschwer";};
 		if (IsCop) exitwith { player groupchat "Cops cannot do this" };
 
 		deletevehicle _Plant;

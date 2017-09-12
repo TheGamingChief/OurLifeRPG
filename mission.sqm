@@ -36717,7 +36717,6 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			expCond="true";
 			expActiv="[] call OL_fnc_Speedcams;";
 			class Effects
 			{
@@ -36731,7 +36730,6 @@ class Mission
 			angle=-90.0746;
 			rectangular=1;
 			activationBy="ANY";
-			activationType="GUER D";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";

@@ -10,10 +10,6 @@ TO DO (Garry)
 ---------------------------------------------------
 external trunk
 Add resign button at voting booth for gov.
-If gov goes corrupt SGT+ can reset laws at voting booth
 If gov is arrested taxes with be reset.
 Remove gov from gov if arrested
 Current gov doesn't show when people join, they need to wait til next election.
-
-One last time list (Garry + CP + Daniel + TheGamingChief + Foster)
----------------------------------------------------

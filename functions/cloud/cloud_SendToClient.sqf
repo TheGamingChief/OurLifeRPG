@@ -1,4 +1,4 @@
-_index  = [_this select 0] call DD_cloud_Retrieve;
+_index  = [_this select 0] call DD_cloud_Index;
 _id     = owner (_this select 1);
 _return = [];
 

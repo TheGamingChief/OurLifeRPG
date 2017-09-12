@@ -103,7 +103,7 @@ switch (adminCMD) do
 	};
 	case 16: //Add All Licenses
 	{
-		demerits = 10;
+		OL_DemeritPoints = 10;
 		INV_LizenzOwner = [];
 		{
 			_tmp = _x select 0;

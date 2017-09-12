@@ -21,7 +21,7 @@ _status   = ["SUBNOMINAL", getPlayerUID player, PlayerName];
 if (_dmg > 0.9)  then { _dmg = 0.9 };
 if (_fuel < 0.1) then { _fuel = 0.1 };
 
-_veh = [_class, _shop] call INV_CreateVehicle;
+_veh = [_class, _shop, "Im a Retriever"] call INV_CreateVehicle;
 if (!(isNil "_veh")) then {
     _veh setVariable ["DatabaseID", _dbId, true];
     _veh setVariable ["tuning", _upg, true];

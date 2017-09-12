@@ -1,4 +1,4 @@
-if (INV_hunger < 99) then {
+if (INV_hunger < 100) then {
     INV_hunger = INV_hunger + 1;
 
     if (INV_hunger >= 95) then {    titleText ["You are starving", "plain", 1]; };

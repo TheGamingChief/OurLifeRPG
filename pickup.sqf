@@ -15,11 +15,11 @@ _exitvar    = 0;
 _time       = round time;
 _gridPos = mapGridPosition getpos player;
 
-if ((_ownweight + _itemweight) > INV_Tragfaehigkeit) then 
+if ((_ownweight + _itemweight) > INV_Weight) then 
 
 { 
 
-_amount = (floor((INV_Tragfaehigkeit - _ownweight) / (_infos call INV_getitemTypeKg)));
+_amount = (floor((INV_Weight - _ownweight) / (_infos call INV_getitemTypeKg)));
 
 if (_amount <= 0) exitWith {player groupChat localize "STRS_inv_buyitems_maxgewicht"; _exitvar = 1;pickingup = false;};
 

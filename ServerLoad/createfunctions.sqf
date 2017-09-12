@@ -34,8 +34,7 @@ INV_CreateVehicle = {
   _haloHelis = ["An2_TK_EP1","An2_1_TK_CIV_EP1","MH6J_EP1","UH1H_TK_EP1","UH1H_TK_GUE_EP1","UH60M_MEV_EP1","CH_47F_EP1","C130J_US_EP1","AH6X_EP1","Mi17_CDF","Mi17_Ins","Mi17_Civilian","C130J"];
   _swatVehicles = ["olrpg_swat_command", "olrpg_tahoe_swat_um", "olrpg_swat_bearcat", "olrpg_swat_suburban_um"];
   _swatMarksman = ["olrpg_swat_f350"];
-
-  hint format['Buying a %1 from %2', getText(configFile >> "cfgVehicles" >> _classname >> "displayName"), _logic];
+  hint format ['Buying a %1 from %2', getText(configFile >> "cfgVehicles" >> _classname >> "displayName"), _logic];
 
   if (_classname in _type1) then {
     if (_classname == "fire_atv") then {
@@ -107,19 +106,19 @@ INV_CreateVehicle = {
   if (_classname in _haloHelis) then {
     newvehicle setVehicleInit 'this addAction ["HALO Jump","jump.sqf",[],1,false,true,"","_this in _target"]'; processInitCommands;
   };
-  if (_classname in _swatVehicles) then {
+  if ((_classname in _swatVehicles) && (isNil {_this select 2})) then {
     newvehicle setVehicleInit '
-      this addweaponCargo  ["SWAT",1];
-      this addmagazineCargo ["15Rnd_9x19_M9",8];
-      this addmagazineCargo ["SmokeShell",4];
-      this addmagazineCargo ["RAB_L111A1",4];
-      this addweaponCargo ["M32_EP1",1];
-      this addmagazineCargo ["6Rnd_Smoke_M203",4];
-      this addweaponCargo ["RH_mk14ebrsp",1];
-      this addmagazineCargo ["20Rnd_762x51_DMR",4];
+      this addWeaponCargo ["SWAT", 1];
+      this addWeaponCargo ["M32_EP1", 1];
+      this addWeaponCargo ["RH_mk14ebrsp", 1];
+      this addMagazineCargo ["6Rnd_Smoke_M203", 4];
+      this addMagazineCargo ["RAB_L111A1", 4];
+      this addMagazineCargo ["SmokeShell", 4];
+      this addMagazineCargo ["15Rnd_9x19_M9", 8];
+      this addMagazineCargo ["20Rnd_762x51_DMR", 4];
     '; processInitCommands;
   };
-  if (_classname in _swatMarksman) then {
+  if ((_classname in _swatMarksman) && (isNil {_this select 2})) then {
     newvehicle setVehicleInit '
       this addmagazineCargo ["SmokeShell",4];
       this addmagazineCargo ["RAB_L111A1",4];

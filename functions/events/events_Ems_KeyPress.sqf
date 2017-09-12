@@ -152,7 +152,7 @@ fnc_KeyPress_L = {
 
 	if(!INV_shortcuts)exitwith{};
 	if(isstunned) exitwith {player groupchat "You are stunned!"};
-	_vcls = call CP_misc_NearestCar;
+	_vcls = call CP_misc_NearestCars;
 	if (count _vcls > 0) then {
 		_vcl = _vcls select 0;
 		if(!(_vcl in INV_VehicleArray))exitwith{player groupchat "You do not have the keys to this vehicle.";};

@@ -9,7 +9,7 @@ if ((_art == "remove") or (_art == "add")) then {
 		_name    = ((INV_Lizenzen select _number) select 2);
 		_cost    = ((INV_Lizenzen select _number) select 3);
 		if (_license call INV_HasLicense) exitWith {player groupChat localize "STRS_inv_buylicense_alreadytrue";};
-		if (_license == "car" or _license == "truck") then {demerits = 10};
+		if (_license == "car" or _license == "truck") then {OL_DemeritPoints = 10};
 		if (_license == "PMC_license" and !(_uid in PMC_id)) exitWith { player groupChat "You Are Not A PMC Member"};
     if (_license == "CommandPMC_license" and !(_uid in CommandPMC_id)) exitWith { player groupChat "You Are Not PMC Command"};
 		if (_license == "PatrolBasic_license" and !(iscop)) exitWith { player groupChat "Restricted to Police"};

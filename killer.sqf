@@ -9,12 +9,12 @@ if (_victim in civarray) exitWith {
       [player, "Hit and Run"] call OL_player_WarrantAdd;
 
     	INV_LizenzOwner = INV_LizenzOwner - ["car","truck","bus_license","boat"];
-    	player groupchat "you have lost your vehicle license for reckless driving!";
-    	demerits = 0;
+    	player groupchat "You have lost your vehicle license for reckless driving!";
+    	OL_DemeritPoints = 0;
     } else {
       [player, "Murder"] call OL_player_WarrantAdd;
 
-    	INV_LizenzOwner = INV_LizenzOwner - ["Pistollicense", "riflelicense"];
+    	INV_LizenzOwner = INV_LizenzOwner - ["Pistol", "rifle"];
       player groupchat "You are now wanted, and lost your gun licenses!";
     };
   };
@@ -39,7 +39,7 @@ if (_victim in coparray) then {
 
   		INV_LizenzOwner = INV_LizenzOwner - ["car", "truck", "bus_license", "boat"];
   		player groupchat "you have lost your vehicle licenses for reckless driving!";
-  		demerits = 0;
+  		OL_DemeritPoints = 10;
 		} else {
       [player, "Murder"] call OL_player_WarrantAdd;
 

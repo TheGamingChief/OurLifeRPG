@@ -1,4 +1,3 @@
-
 //If (player getVariable "CLAY_DogStatus" == "Attacking") exitWith {};
 _target = _this select 0;
 if (!(_target isKindOf "Man")) exitWith {};
@@ -9,11 +8,9 @@ player setVariable ["CLAY_DogStatus", "Attacking"];
 _sound = createSoundSource ["Sound_BadDog", getpos _dog, [], 0];
 _sound attachTo [_dog, [0,0,0]];
 
-while {alive _dog && alive _target && player getVariable "CLAY_DogStatus" == "Attacking"} do
-{
+while {alive _dog && alive _target && player getVariable "CLAY_DogStatus" == "Attacking"} do {
 	_dog doMove getPos _target;
-	If (_dog distance _target < 3 && vehicle _target == _target) Then
-	{
+	if (_dog distance _target < 3 && vehicle _target == _target) then {
 		_dog doTarget _target;
 		_dog lookAt _target;
 
@@ -23,13 +20,12 @@ while {alive _dog && alive _target && player getVariable "CLAY_DogStatus" == "At
 
 		_target setHit ["legs", 1];
 		_target setHit ["hands", 1];
-		_target setDammage 0.8;
+		_target setDamage 0.8;
 		player groupchat "The dog has bitten his target";
 		(format ["%1 switchmove ""%2"";", _target, "adthpercmstpslowwrfldnon_4"]) call OL_network_Swag;
 		player setVariable ["CLAY_DogStatus", ""];
-		sleep 12;
+		uiSleep 12;
 		(format ["%1 switchmove ""%2"";", _target, "amovppnemstpsnonwnondnon"]) call OL_network_Swag;
-
 	};
 	sleep 1;
 };

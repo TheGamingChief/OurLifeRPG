@@ -16,7 +16,7 @@ if (playerSide == west) exitWith {
   	case (typeOf player == "olrpg_swatprob" || typeOf player == "olrpg_swatnor" || typeOf player == "olrpg_swatmark" || typeOf player == "olrpg_swatspec" || typeOf player == "olrpg_swatcom"): {
   		_income = _income + 7500;
   	};
-  	case (typeOf player == "olrpg_pdcid" || typeOf player == "olrpg_iauni"): {
+  	case (typeOf player == "olrpg_pdcid" || typeOf player == "olrpg_iauni" || typeOf player == "olrpg_pdcidc"): {
   		_income = _income + 5000;
   	};
   	case (typeOf player == "olrpg_patuni"): {
@@ -139,18 +139,18 @@ if (playerSide == civilian) exitWith {
   player groupChat format [localize "STRS_geld_civmoneyadd", rolestring, (_income call OL_ISSE_str_IntToStr)];
 
   if (isMayor) then {
-    MayorSteuern = MayorSteuern + INV_SteuernGezahlt;
-    MayorSteuern = round((MayorSteuern / 100) * MayorBekommtSteuern);
-    Kontostand = Kontostand + MayorSteuern;
+    MayorTaxes = MayorTaxes + INV_SteuernGezahlt;
+    MayorTaxes = round((((MayorTaxes + INV_SteuernGezahlt) / 100) * MayorBekommtSteuern) + MayorExtraPay);
+    Kontostand = Kontostand + MayorTaxes;
     Kontostand = Kontostand + MayorExtraPay;
 
-    player groupchat format["As a Mayor you get an extra paycheck of $%1. You also got $%2 taxes.", (MayorExtraPay call OL_ISSE_str_IntToStr), (MayorSteuern call OL_ISSE_str_IntToStr)];
+    player groupchat format["As a Mayor you get an extra paycheck of $%1. You also got $%2 taxes.", (MayorExtraPay call OL_ISSE_str_IntToStr), (MayorTaxes call OL_ISSE_str_IntToStr)];
     } else {
       if (INV_SteuernGezahlt > 0) then {
-        format["if (isMayor) then {MayorSteuern = MayorSteuern + %1;};", INV_SteuernGezahlt] call OL_network_Swag;
+        format["if (isMayor) then {MayorTaxes = MayorTaxes + %1;};", INV_SteuernGezahlt] call OL_network_Swag;
     };
   };
 
-  MayorSteuern       = 0;
+  MayorTaxes         = 0;
 	INV_SteuernGezahlt = 0;
 };

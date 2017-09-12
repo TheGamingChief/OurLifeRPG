@@ -1,5 +1,6 @@
 _gangArray = [OL_PlayerGangID] call OL_gangs_getByKey;
 
+if (OL_PlayerGangID == -1) exitWith { player groupChat "You are not in a gang." };
 if (player != (call compile(_gangArray select 2))) exitWith { player groupChat "You are not the leader of this gang." };
 if (!createDialog "UI_GangManager") exitWith { hint "Dialog Error!" };
 
