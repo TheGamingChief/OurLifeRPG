@@ -6,5 +6,8 @@ player setVariable ["Escorted",         false,       true];
 
 waitUntil {!isNil "PlayerName"};
 player setVariable ["RealName",             PlayerName,  true];
-waitUntil {OL_StatsLoadedFromDB};
-player setVariable ["OL_StatsLoaded", true, true];
+
+[] spawn {
+  waitUntil {OL_StatsLoadedFromDB};
+  player setVariable ["OL_StatsLoaded", true, true];
+};

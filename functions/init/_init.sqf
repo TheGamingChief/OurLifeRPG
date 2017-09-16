@@ -45,7 +45,6 @@ if (isClient) then {
 		case west: {
 			[] call OL_events_Cop_KeyEvents;
 			[] call OL_events_Cop_Actions;
-			[] call OL_misc_ratioChecker;
 			[] spawn OL_misc_ratioKick;
 			["SETUP"] call OL_misc_Markers;
 		};

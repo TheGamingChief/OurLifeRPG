@@ -1,4 +1,4 @@
-waitUntil {OL_StatsLoadedFromDB};
+waitUntil {player getVariable "OL_StatsLoaded"};
 _cops = 0;
 _civs = 0;
 
@@ -15,10 +15,10 @@ if ((getPlayerUID player) in OL_SwagDevs || (getPlayerUID player) in adminlevel4
 	};
 } forEach playerarray;
 
-if ((_cops + _civs) <= 10) exitWith {};
 if (_cops > _civs && (_cops + _civs > 10)) exitWith {
-  playSound "alarm1";
+	playSound "alarm1";
   titleText ["You have joined while the ratio is off! Kicking back to lobby in 10 seconds!", "BLACK"];
-  uiSleep 10;
+	player groupChat "You have joined while the ratio if off! Kicking back to lobby in 10 seconds!";
+	uiSleep 10;
   failMission "END1";
 };
