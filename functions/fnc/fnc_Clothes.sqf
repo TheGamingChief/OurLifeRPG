@@ -27,11 +27,6 @@ if (_skinsold != _skin) then {
   _to_become setRank _rank;
   _to_become addscore _score;
   _to_become setPosATL _pos;
-  [] call OL_Events_ActionToggle;
-  [] call OL_startup_EH;
-  [] call OL_startup_setVariables;
-  [] call OL_misc_briefing;
-  [] call OL_player_WarrantGrab;
   execVM "R3F_revive\revive_init.sqf";
 
   {player addWeapon _x} forEach _oldweapons;
@@ -41,6 +36,11 @@ if (_skinsold != _skin) then {
   [_oldplayer] call OL_fnc_ClothesDelete;
   uiSleep 1;
 
+  [] call OL_Events_ActionToggle;
+  [] call OL_startup_EH;
+  [] call OL_misc_briefing;
+  [] call OL_player_WarrantGrab;
+  [] call OL_startup_setVariables;
   [RadioArr] call OL_tfar_addRadiosBack;
   if (!(pg_godmode)) then { player allowDamage true };
 };
