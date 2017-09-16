@@ -4,5 +4,7 @@ player setVariable ["ZipTied",          false,       true];
 player setVariable ["Gagged",           false,       true];
 player setVariable ["Escorted",         false,       true];
 
-waitUntil {!(isNil "PlayerName")};
+waitUntil {!isNil "PlayerName"};
 player setVariable ["RealName",             PlayerName,  true];
+waitUntil {OL_StatsLoadedFromDB};
+player setVariable ["OL_StatsLoadedFromDB", true, true];
