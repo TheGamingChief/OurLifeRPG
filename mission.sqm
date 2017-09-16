@@ -36685,6 +36685,7 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
+			expCond="(player distance speed8) < 50;";
 			expActiv="[] call OL_fnc_Speedcams;";
 			class Effects
 			{
@@ -36701,6 +36702,7 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
+			expCond="(player distance speed2) < 50;";
 			expActiv="[] call OL_fnc_Speedcams;";
 			class Effects
 			{
@@ -36717,6 +36719,7 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
+			expCond="(player distance speed4) < 50;";
 			expActiv="[] call OL_fnc_Speedcams;";
 			class Effects
 			{
@@ -36733,6 +36736,7 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
+			expCond="(player distance speed5) < 50;";
 			expActiv="[] call OL_fnc_Speedcams;";
 			class Effects
 			{
@@ -36749,6 +36753,7 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
+			expCond="(player distance speed6) < 50;";
 			expActiv="[] call OL_fnc_Speedcams;";
 			class Effects
 			{
@@ -36765,6 +36770,7 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
+			expCond="(player distance speed7) < 50;";
 			expActiv="[] call OL_fnc_Speedcams;";
 			class Effects
 			{
@@ -36781,6 +36787,7 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
+			expCond="(player distance speed1) < 50;";
 			expActiv="[] call OL_fnc_Speedcams;";
 			class Effects
 			{
@@ -36791,13 +36798,14 @@ class Mission
 			position[]={3685.406,46.271904,2893.9473};
 			a=6;
 			b=10;
-			angle=-180.21234;
+			angle=-180.21201;
 			rectangular=1;
 			activationBy="ANY";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			expActiv="[] call DD_Common_Speedcam;";
+			expCond="(player distance speed3) < 50;";
+			expActiv="[] call OL_fnc_Speedcams;";
 			class Effects
 			{
 			};
