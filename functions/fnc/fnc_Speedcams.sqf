@@ -1,4 +1,4 @@
-if ((vehicle player == player) || (player != (driver vehicle player)) || (!(vehicle player isKindOf "LandVehicle")) || (speed (vehicle player) <= OL_SpeedLimit) || (iscop) || (isamedic)) exitWith {};
+if ((vehicle player == player) || (player != (driver vehicle player)) || (!(vehicle player isKindOf "LandVehicle")) || (speed (vehicle player) <= OL_SpeedLimit) || (iscop) || (ismedic)) exitWith {};
 if (player distance speed1 >= 20 || player distance speed2 >= 20 || player distance speed3 >= 20 || player distance speed4 >= 20 || player distance speed5 >= 20 || player distance speed6 >= 20 || player distance speed7 >= 20 || player distance speed8 >= 20) exitWith {};
 
 _speed = speed (vehicle player);
