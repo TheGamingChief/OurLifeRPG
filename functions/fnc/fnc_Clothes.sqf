@@ -38,15 +38,9 @@ if (_skinsold != _skin) then {
 
   [] call OL_Events_ActionToggle;
   [] call OL_startup_EH;
-<<<<<<< HEAD
-  [] call OL_misc_briefing;
-  [] call OL_player_WarrantGrab;
-  [] call OL_startup_setVariables;
-=======
   [] call OL_startup_setVariables;
   [] call OL_misc_briefing;
   [] call OL_player_WarrantGrab;
->>>>>>> b3ae50e6cdc2fd4fe202b7d00a11c2b7ad354fb1
   [RadioArr] call OL_tfar_addRadiosBack;
   if (!(pg_godmode)) then { player allowDamage true };
 };
