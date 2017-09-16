@@ -1,13 +1,14 @@
-if ((vehicle player == player) || (player != (driver vehicle player)) || (!(vehicle player isKindOf "LandVehicle")) || (speed (vehicle player) <= OL_SpeedLimit) || (iscop)) exitWith {};
-
-[vehicle player, "speedcam", 25] call CBA_fnc_globalSay3D;
-titleCut ["", "white in", 1];
+if ((vehicle player == player) || (player != (driver vehicle player)) || (!(vehicle player isKindOf "LandVehicle")) || (speed (vehicle player) <= OL_SpeedLimit) || (iscop) || (isamedic)) exitWith {};
 
 _speed = speed (vehicle player);
 
 {
   if (call compile (_x select 0)) exitWith {
+    [vehicle player, "speedcam", 25] call CBA_fnc_globalSay3D;
+    titleCut ["", "white in", 1];
+
     if (_forEachIndex < 7) then {
+      if (OL_DemeritPoints <= 0) exitWith { player groupChat format ["You were flashed by a speedcam going %1!", round _speed] };
       OL_DemeritPoints = OL_DemeritPoints - (call compile (_x select 1));
       player groupChat format ["You were flashed by a speedcam going %1 and lost %2 demerit points. (Demerits: %3)", round _speed, call compile (_x select 1), OL_DemeritPoints];
 
@@ -16,7 +17,8 @@ _speed = speed (vehicle player);
         player groupChat "You have lost your drivers license for speeding!";
       };
     } else {
-      [player, "Speeding - " +  _x select 1] call OL_player_WarrantAdd;
+      player groupChat format ["You were flashed by a speedcam going %1! A warrant has been issued!", round _speed];
+      [player, "Speeding - " + format["%1", _x select 1]] call OL_player_WarrantAdd;
     };
   };
 } forEach OL_SpeedPunishments;
