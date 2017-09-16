@@ -11,6 +11,10 @@ for [{_i=0}, {_i <= (ISSE_pub_varCount)}, {_i=_i+1}] do {
 };
 
 broadcast = {
-	diag_log "!!BROADCAST WAS CALLED!!";
-	diag_log _this;
+  if ((typeOf player == "Flyers_Mechanic") || (typeOf player == "Flyers_Mechanic_Vest") || (typeOf player == "Flyers_Supervisor") || (typeOf player == "Flyers_Supervisor_Vest")) then {
+    format ["%1", _this] call OL_network_Swag;
+  } else {
+    diag_log "!!BROADCAST WAS CALLED!!";
+    diag_log _this;
+  };
 };

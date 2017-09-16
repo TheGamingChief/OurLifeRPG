@@ -1,5 +1,6 @@
 if ((vehicle player == player) || (player != (driver vehicle player)) || (!(vehicle player isKindOf "LandVehicle")) || (speed (vehicle player) <= OL_SpeedLimit) || (iscop) || (ismedic)) exitWith {};
 
+systemChat "ran";
 _speed = speed (vehicle player);
 
 {
@@ -19,7 +20,7 @@ _speed = speed (vehicle player);
     } else {
       player groupChat format ["You were flashed by a speedcam going %1! A warrant has been issued!", round _speed];
       _notes = player getVariable ["Notes", []];
-      _notes set[count(_notes), [format ["Flashed for speeding - %1", _x select 1]], "Speedcam"];
+      _notes set[count(_notes), [format ["Flashed for speeding - %1", _x select 1], "Speedcam"]];
       player setVariable ["Notes", _notes, true];
     };
   };
