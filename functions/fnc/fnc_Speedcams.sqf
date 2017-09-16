@@ -1,6 +1,5 @@
 if ((vehicle player == player) || (player != (driver vehicle player)) || (!(vehicle player isKindOf "LandVehicle")) || (speed (vehicle player) <= OL_SpeedLimit) || (iscop) || (ismedic)) exitWith {};
 
-systemChat "ran";
 _speed = speed (vehicle player);
 
 {
