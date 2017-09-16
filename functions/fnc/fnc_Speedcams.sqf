@@ -1,5 +1,8 @@
 if ((vehicle player == player) || (player != (driver vehicle player)) || (!(vehicle player isKindOf "LandVehicle")) || (speed (vehicle player) <= OL_SpeedLimit) || (iscop) || (isamedic)) exitWith {};
+<<<<<<< HEAD
 if (player distance speed1 >= 20 || player distance speed2 >= 20 || player distance speed3 >= 20 || player distance speed4 >= 20 || player distance speed5 >= 20 || player distance speed6 >= 20 || player distance speed7 >= 20 || player distance speed8 >= 20) exitWith {};
+=======
+>>>>>>> b3ae50e6cdc2fd4fe202b7d00a11c2b7ad354fb1
 
 _speed = speed (vehicle player);
 
@@ -19,9 +22,13 @@ _speed = speed (vehicle player);
       };
     } else {
       player groupChat format ["You were flashed by a speedcam going %1! A warrant has been issued!", round _speed];
+<<<<<<< HEAD
       _notes = player getVariable ["Notes", []];
       _notes set[count(_notes), [format ["Flashed for speeding - %1", _x select 1]], "Speedcam"];
       player setVariable ["Notes", _notes, true];
+=======
+      [player, "Speeding - " + format["%1", _x select 1]] call OL_player_WarrantAdd;
+>>>>>>> b3ae50e6cdc2fd4fe202b7d00a11c2b7ad354fb1
     };
   };
 } forEach OL_SpeedPunishments;

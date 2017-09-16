@@ -4,7 +4,7 @@ _type			 = typeof _vcl;
 _blacklist = ["il_bearcat", "schoolbus", "jailbus", "Ikarus_TK_CIV_EP1", "Ikarus", "MMT_USMC", "MMT_Civ", "cl_wheelchair"];
 if (_vcl == player) exitwith { player groupchat "You must be in a vehicle" };
 if (!(player == driver vehicle player)) exitWith { player groupChat "You must be the driver to tune this" };
-if ((_vcl isKindOf _type call INV_getitemTypeKg > 2) || (_vcl isKindOf "Motorcycle") || (_vcl isKindOf "Ship") || (typeOf _vcl in _blackList)) exitwith { player groupchat "You cannot tune this vehicle" };
+if ((_vcl isKindOf "Motorcycle") || (_vcl isKindOf "Ship") || (_vcl isKindOf "Air") || (typeOf _vcl in _blackList)) exitwith { player groupchat "You cannot tune this vehicle" };
 
 [_item, -1] call INV_AddInvItem;
 
