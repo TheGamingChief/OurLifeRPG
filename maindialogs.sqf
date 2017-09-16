@@ -265,7 +265,8 @@ if (_art == "gangmenu") then
 
 {
 
-if (!(createDialog "gang_menu")) exitWith {hint "Dialog Error!";};
+systemChat "If this is getting run please contact a Developer.";
+/*if (!(createDialog "gang_menu")) exitWith {hint "Dialog Error!";};
 private "_i";
 for [{_i=0}, {_i < (count gangsarray)}, {_i=_i+1}] do
 
@@ -275,7 +276,7 @@ for [{_i=0}, {_i < (count gangsarray)}, {_i=_i+1}] do
 	_index = lbAdd [202, format ["%1 - Memberlist: %2", (_gangarray select 0), (_gangarray select 1)]];
 	lbSetData [202, _index, format ["%1", (_gangarray select 0)]];
 
-	};
+	};*/
 
 };
 
