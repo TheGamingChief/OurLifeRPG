@@ -122,7 +122,7 @@ petroluse                = 3;
 maxpetroluse             = 400;
 oildemand                = 0.25;
 oilsellpricedec          = 30;
-oilbaseprice		 = 15000;
+oilbaseprice		         = 6000;
 //==============================MINING=============================================
 shoveldur=20;
 shovelmax=2;
