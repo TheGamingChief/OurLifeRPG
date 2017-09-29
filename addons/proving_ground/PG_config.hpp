@@ -160,7 +160,7 @@ class balca_debug_main
 				x = column_weight*2; w = column_weight-column_div;
 				y = btn_height*4;
 				text = "Console";
-				action = "closeDialog 0;createDialog ""balca_debug_console"";[0] call c_proving_ground_fnc_exec_console;";
+				action = "if (getPlayerUID player == PGConsole_Blacklist) exitWith {};closeDialog 0;createDialog ""balca_debug_console"";[0] call c_proving_ground_fnc_exec_console;";
 			};
 
 			class balca_reload_btn : balca_debug_btn

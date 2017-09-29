@@ -18,7 +18,10 @@ v 1.01
 */
 
 if (!(player == vehicle player)) exitWith {player groupchat "You must be outside the vehicle"};
-if (bInvisibleOn) exitWith {player groupchat "You must have invisibility off to spectate"};
+if (bInvisibleOn) then {
+		player groupChat "You have invisibility on turning it off...";
+		[] execVM "addons\proving_ground\fnc_inon.sqf";
+};
 mycv = cameraView;
 spect =
 {
@@ -26,8 +29,8 @@ spect =
 	OriginalPOS = getPosATL player;
 	F3_EH = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 0x3D) then {spectate = false;};"];
 	(vehicle _splr) switchCamera "EXTERNAL";
-	format['if(getplayeruid player in OL_Developer) then {player sideChat "[Dev] Dev %1 (%2) has begun Spectating %3 (%4)"}', PlayerName, getPlayerUID player, _splr getVariable "RealName", getPlayerUID _splr] call OL_network_Swag;
-	["Admin_Log", format ["Dev %1 (%2) has begun Spectating %3 (%4)", PlayerName, getPlayerUID player, _splr getVariable "RealName", getPlayerUID _splr]] call fn_LogToServer;
+	format['if(getplayeruid player in OL_Developer) then {player sideChat "[Dev] Dev %1 (%2) has begun Spectating %3 (%4)"}', PlayerName, getPlayerUID player, name _splr, getPlayerUID _splr] call OL_network_Swag;
+	["Admin_Log", format ["Dev %1 (%2) has begun Spectating %3 (%4)", PlayerName, getPlayerUID player, name _splr, getPlayerUID _splr]] call fn_LogToServer;
 	player attachTo [vehicle _splr, [0,0,-3]];
 	[] execVM "addons\proving_ground\fnc_inon.sqf";
 	titleText ["Spectating...","PLAIN DOWN"];titleFadeOut 4;
@@ -68,8 +71,8 @@ if (spectate) then
 	if (selecteditem!= "exitscript") then
 	{
 		_name = selecteditem;
-		{if(format[_x getVariable "RealName"] == _name) then {[_x] call spect;};} forEach Entities "CAManBase";
-		{if ((count crew _x)>0) then {if(format[_x getVariable "RealName"] == _name) then {[_x] call spect;};};} foreach (Entities "LandVehicle"+ Entities "Air" + Entities"Ship");
+		{if(_x getVariable "RealName" == _name) then {[_x] call spect;};} forEach Entities "CAManBase";
+		{if ((count crew _x)>0) then {if((driver _x) getVariable "RealName" == _name) then {[_x] call spect;};};} foreach (Entities "LandVehicle"+ Entities "Air" + Entities"Ship");
 	};
 	spectate = false;
 
@@ -79,9 +82,13 @@ if (!spectate) then
 	titleText ["Back to player...","PLAIN DOWN"];titleFadeOut 4;
 	format['if(getplayeruid player in OL_Developer) then {player sideChat "[Dev] Dev %1 (%2) has stopped Spectating"}', PlayerName, getPlayerUID player] call OL_network_Swag;
 	["Admin_Log", format ["Dev %1 (%2) has stopped Spectating", PlayerName, getPlayerUID player]] call fn_LogToServer;
-	detach player;
-	player setVelocity [0,0,0];
-	sleep 2;
-	player setPosATL OriginalPOS;
-	[] execVM "addons\proving_ground\fnc_inon.sqf";
+	if (bInvisibleOn) then {
+		player allowDamage false;
+		detach player;
+		player setVelocity [0,0,0];
+		uiSleep 0.5;
+		player setPosATL OriginalPOS;
+		[] execVM "addons\proving_ground\fnc_inon.sqf";
+		player allowDamage true;
+	};
 };
