@@ -17,7 +17,7 @@ _speed = speed (vehicle player);
         player groupChat "You have lost your drivers license for speeding!";
       };
     } else {
-      player groupChat format ["You were flashed by a speedcam going %1! A warrant has been issued!", round _speed];
+      player groupChat format ["You were flashed by a speedcam going %1! A note has been issued!", round _speed];
       _notes = player getVariable ["Notes", []];
       _notes set[count(_notes), [format ["Flashed for speeding - %1", _x select 1], "Speedcam"]];
       player setVariable ["Notes", _notes, true];

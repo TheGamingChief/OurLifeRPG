@@ -160,11 +160,7 @@ class balca_debug_main
 				x = column_weight*2; w = column_weight-column_div;
 				y = btn_height*4;
 				text = "Console";
-<<<<<<< HEAD
 				action = "if (getPlayerUID player in PGConsole_Blacklist) exitWith {};closeDialog 0;createDialog ""balca_debug_console"";[0] call c_proving_ground_fnc_exec_console;";
-=======
-				action = "closeDialog 0;createDialog ""balca_debug_console"";[0] call c_proving_ground_fnc_exec_console;";
->>>>>>> parent of 1d4ddff... Merge branch 'development' of https://github.com/TheGamingChief/OurLifeRPG into development
 			};
 
 			class balca_reload_btn : balca_debug_btn
