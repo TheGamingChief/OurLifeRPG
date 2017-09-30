@@ -1626,7 +1626,7 @@ INV_AlleItemsArray = [
   ["lighter",["Item","Shop"],["lighter","lighter"],[15000,250],[0.5,"",""],[true,true,true,false,Item_misc_Lighter]],
   ["kanister",["Item","service"],["kanister","Gas Can"],[5000,2500],[2,"","PatrolBasic_license"],[true,true,true,false,OL_vehicle_Refuel]],
   ["Fuelline",["Item","service"],["Syphon Fuelkit","Syphon Fuel-kit"],[1000,900],[1,"",""],[true,true,true,false,OL_vehicle_Syphon]],
-  ["OilBarrel",["Item","service"],["Oil Barrel","Petroleum"],[2,1],[10,"",""],[true,true,true,false,OL_vehicle_Refuel]],
+  ["OilBarrel",["Item","service"],["Oil Barrel","Petroleum"],[6000,5450],[10,"",""],[true,true,true,false,OL_vehicle_Refuel]],
   ["schluesselbund",["Item","carobjects"],["schluesselbund","Key chain"],[0,0],[0,""],[false,false,false,false,OL_fnc_Keys]],
   ["pistole",["Item","weapon"],["pistole","Concealed Sidearm"],[0,0],[0,""],[false,false,false,false,"nouse.sqf"]],
   ["gewehr",["Item","weapon"],["gewehr","Concealed Rifle"],[0,0],[0,""],[false,false,true,true,"nouse.sqf"]],
