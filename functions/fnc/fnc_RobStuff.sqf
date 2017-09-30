@@ -53,7 +53,7 @@ if (_stationCancel) then {
   _cash = call compile _stationCash;
 
   ['geld', _cash] call INV_AddInvItem;
-  if (_stationWarrant == "Robbed Dunkin Bronuts") then { ['Donut', 12] call INV_AddInvItem };
+  if (_stationWarrant == "Robbed Dunkin Bronuts") then { ['donut', 12] call INV_AddInvItem };
   if (_stationWarrant == "Robbed Casino") then { ['drill', -1] call INV_AddInvItem };
   if (_stationWarrant == "Robbed Pharmacy") then { ['pharm', round random 12] call INV_AddInvItem };
 

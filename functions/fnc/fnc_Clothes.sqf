@@ -11,7 +11,6 @@ _skinsold   = typeOf player;
 
 if (_skinsold != _skin) then {
   private["_group","_var_name"];
-  player allowDamage false;
   _group = (group _oldplayer);
   _to_become = _group createUnit [_skin, (position player), [], 0, "NONE"];
   _var_name = vehicleVarName _oldplayer;

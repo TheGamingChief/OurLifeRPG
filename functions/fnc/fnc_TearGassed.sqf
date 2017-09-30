@@ -1,4 +1,4 @@
-if (!alive player || player getVariable "KOED" || isTearGassed || "Gas_Mask" call INV_GetItemAmount < 1) exitWith {};
+if (!alive player || player getVariable "KOED" || isTearGassed) exitWith {};
 
 isTearGassed = true;
 2 cutText ["","WHITE OUT",0];

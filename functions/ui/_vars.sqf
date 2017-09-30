@@ -88,9 +88,9 @@ OL_ATM_Clothes = [
 			["olrpg_sgtdepuni2", "SgtDeputy_id", "Sergeant Deputy Uniform"],
 			["olrpg_corpdepuni", "Deputy_id",		 "Corporal Deputy Uniform"],
 			["olrpg_snrpdepuni", "Deputy_id",		 "Senior Deputy Uniform"],
-			["olrpg_depuni",		 "JrDeputy_id",	 "Deputy Uniform"],
+			["olrpg_depuni",		 "Deputy_id",		 "Deputy Uniform"],
 			["olrpg_depk9uni",	 "K9_id",				 "Deputy K9 Uniform"],
-			["olrpg_dnrdepuni",	 "JrDeputy_id",	 "DNR Uniform"]
+			["olrpg_dnrdepuni",	 "Deputy_id",		 "DNR Uniform"]
 		]
 	],
 	[copair2,
