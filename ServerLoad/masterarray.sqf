@@ -727,6 +727,7 @@ INV_AlleFahrzeugeArray = [
   ["ibr_van_BNK",["Fahrzeug","car"],["ibr_van_BNK","Sketchy White Van"],[30000,30000],[1,"car","",250],[]],
   ["lcu",["Fahrzeug","boat"],["lcu","CB Island Ferry Boat"],[60000,60000],[1,"fboat","fboat",250],[]],
   ["RHIB",["Fahrzeug","boat"],["RHIB","Pirate RHIB"],[1000000,50000],[1,"terror","",175],[100,[1,2,0,10]]],
+  ["RHIB_swat",["Fahrzeug","boat"],["RHIB","RHIB (S.W.A.T.)"],[75000,50000],[1,"terror","",175],[100,[1,2,0,10]]],
   ["PBX",["Fahrzeug","boat"],["PBX","PBX"],[20000,10000],[1,"terror","",100],[]],
   ["Zodiac",["Fahrzeug","boat"],["Zodiac","CRRC"],[24000,12000],[1,"terror","",175],[]],
   ["UH1H_TK_EP1",["Fahrzeug","air"],["UH1H_TK_EP1","Terrorist Huey"],[1000000,200000],[5,"terror","",1500],[1000,[1,2,0,13]]],
