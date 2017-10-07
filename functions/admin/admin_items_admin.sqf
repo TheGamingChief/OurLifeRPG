@@ -114,4 +114,4 @@ switch (adminCMD) do
 	};
 };
 
-hint "Code Actiavted";
+hint "Code Activated";
