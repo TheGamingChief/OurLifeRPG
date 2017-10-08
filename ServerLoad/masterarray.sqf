@@ -1619,6 +1619,7 @@ INV_AlleItemsArray = [
   ["cpr_kit",["Item","Shop"],["cpr_kit","CPR Kit"],[50000,10000],[2,""],[true,true,true,false,Item_misc_CPR]],
   ["lockpick",["Item","Shop"],["lockpick","Lockpick"],[3500,3500],[2,""],[true,true,true,false,Item_misc_Lockpick]],
   ["Gas_Mask", ["Item", "Shop"], ["Gas_Mask", "Gas Mask"], [150000,75000], [2,""],[true,true,true,false,"nouse.sqf"]],
+  ["Gas_Mask_SWAT", ["Item", "Shop"], ["Gas_Mask_SWAT", "Gas Mask"], [8000,4000], [2,""],[true,true,true,false,"nouse.sqf"]],
   ["medikit",["Item","Shop"],["medikit","Med-kit"],[5000,1500],[2,""],[true,true,true,false,"medkit.sqf"]],
   ["medikit_ems",["Item","Shop"],["medikit","Med-kit"],[1000,500],[2,""],[true,true,true,false,"medkit.sqf"]],
   ["Debit_Card",["Item","Shop"],["Debit_Card","Debit Card"],[1e+006,0],[2,""],[true,true,true,false,"nouse.sqf"]],

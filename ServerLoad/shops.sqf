@@ -776,7 +776,7 @@ _copswat1 =
 [
 "SmokeShell",
 "RAB_L111A1_swat",
-"Gas_Mask",
+"Gas_Mask_SWAT",
 "SWAT",
 "Rnd_9x19_M9",
 "x26",
@@ -795,7 +795,7 @@ _copswat2 =
 [
 "SmokeShell",
 "RAB_L111A1_swat",
-"Gas_Mask",
+"Gas_Mask_SWAT",
 "SWAT",
 "Rnd_9x19_M9",
 "x26",
@@ -819,7 +819,7 @@ _copswat3 =
 [
 "SmokeShell",
 "RAB_L111A1_swat",
-"Gas_Mask",
+"Gas_Mask_SWAT",
 "SWAT",
 "Rnd_9x19_M9",
 "x26",
@@ -844,7 +844,7 @@ _copswat3 =
 //71.4
 _copswat4 =
 [
-"Gas_Mask",
+"Gas_Mask_SWAT",
 "x26",
 "x26_Mag",
 "RH_uspsd_swat",
@@ -864,7 +864,7 @@ _copswat5 =
 [
 "SmokeShell",
 "RAB_L111A1_swat",
-"Gas_Mask",
+"Gas_Mask_SWAT",
 "SWAT",
 "Rnd_9x19_M9",
 "x26",
