@@ -3,9 +3,9 @@ private ["_nearATM", "_clothesArray", "_index"];
 _nearStuff = nearestObjects [getPos player, ["tcg_atm", "olrpg_pdpilot", "TK_GUE_Soldier_Sniper_EP1"], 10] - [player];
 
 if (isNil "_nearStuff") exitWith { player groupChat "wut...... - Garry" };
-if (!createDialog "UI_ListMenu") exitWith { hint "Dialog Error!" };
+if (!createDialog "UI_ListMenuSmall") exitWith { hint "Dialog Error!" };
 
-if (getPlayerUID player in EMT3_id) then { _nearStuff = ["atm5"] };
+if (getPlayerUID player in EMT3_id) then { _nearStuff = ["OL_ATM_MainFire"] };
 
 _clothesArray = missionNamespace getVariable format ["OL_%1_ClothesArray", _nearStuff select 0];
 

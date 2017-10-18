@@ -15,7 +15,7 @@ _Arr1 = [];
 _Arr2 = [];
 
 for [{_i=0}, {_i < (count INV_FarmItemArray)},{_i=_i+1}] do {_Arr1 = _Arr1 + [0]};
-for [{_i=0}, {_i < (count INV_Lizenzen)},{_i=_i+1}] do {_Arr2 = _Arr2 + [0]};
+/*for [{_i=0}, {_i < (count INV_Lizenzen)},{_i=_i+1}] do {_Arr2 = _Arr2 + [0]};*/
 
 shopusearray = [];
 
@@ -105,7 +105,7 @@ for [{_i = 0}, {_i < (count INV_FarmItemArray)}, {_i = _i + 1}] do
 
 
 //======================================LICENSES=========================================
-
+/*
 for [{_i = 0}, {_i <= ((count INV_Lizenzen)) - 1}, {_i = _i + 1}] do {
 
 	_license     = ((INV_Lizenzen select _i) select 0);
@@ -121,12 +121,12 @@ for [{_i = 0}, {_i <= ((count INV_Lizenzen)) - 1}, {_i = _i + 1}] do {
 	  };
 	} forEach ((INV_Lizenzen select _i) select 1);
 
-	if ((_closestLicShop <= 5) and !(((INV_Lizenzen select _i) select 0) call INV_HasLicense) and (_Arr2 select _i == 0)) then {
+	if ((_closestLicShop <= 5) and !(((INV_Lizenzen select _i) select 0) call OL_license_Owns) and (_Arr2 select _i == 0)) then {
 		call compile format ["a_license%1 = player addaction [format[localize ""STRS_inv_actions_buy"", ""%2"", %3], ""addlicense.sqf"", [%1, ""add""]];", _i, _licensename, (_cost call OL_ISSE_str_IntToStr)];
 		_Arr2 set [_i, 1];
 	};
 
-	if ((_closestLicShop > 5) and (_Arr2 select _i == 1) || (_license call INV_HasLicense)) then {
+	if ((_closestLicShop > 5) and (_Arr2 select _i == 1) || (_license call OL_license_Owns)) then {
 		_autismLicName = format["a_license%1", _i];
 
 		if (!(isNil(_autismLicName))) then {
@@ -136,4 +136,4 @@ for [{_i = 0}, {_i <= ((count INV_Lizenzen)) - 1}, {_i = _i + 1}] do {
 	};
 };
 sleep 1;
-};
+};*/

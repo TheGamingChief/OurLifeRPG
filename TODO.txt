@@ -1,13 +1,3 @@
-TO DO (CP + TheGamingChief):
----------------------------------------------------
-[Will never be done] prevent access gear of locked vehicle
-
-TO DO (Garry + Daniel)
----------------------------------------------------
-Fix Private Storage
-
-TO DO (Garry)
----------------------------------------------------
 external trunk
 Add resign button at voting booth for gov.
 If gov is arrested taxes with be reset.

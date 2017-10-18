@@ -11,6 +11,9 @@ OL_PlayerActions = [
   [player addaction ["Get Gun Running Mission", "noscript.sqf", 'call GunRunning_fnc_takeJob', 1, false, true, "", "(player distance guss <= 2) and gunrunavailable"]],
   [player addaction ["Turn in Shipment", "noscript.sqf", 'call GunRunning_fnc_deliverShipment', 1, false, true, "", '(player distance guss <= 2) and gunrun3available']],
   [player addaction ["Pick Up Gun Shipment", "noscript.sqf", '[] spawn GunRunning_fnc_pickupShipment', 1, false, true, "", "(player distance gman <= 2) and gunrun2available"]],
+  [player addaction ["Pet Fosters Chicken", "noscript.sqf", '["pet"] call OL_misc_kfc;', 1, false, true, "", "(player distance kfc1 <= 2 or player distance kfc2 <= 2 or player distance kfc3 <= 2 or player distance kfc4 <= 2) and kfcavailable"]],
+  [player addaction ["Kick Fosters Chicken", "noscript.sqf", '["kick"] call OL_misc_kfc;', 1, false, true, "", "(player distance kfc1 <= 2 or player distance kfc2 <= 2 or player distance kfc3 <= 2 or player distance kfc4 <= 2) and kfc2available"]],
+  [player addaction ["PLEASE READ", "noscript.sqf", '[] call OL_fnc_Blackmarket;', 1, false, true, "", "player distance bmshop <= 5 and isciv"]],
   [player addaction ["Factory Guide", "noscript.sqf", '[] call Factory_fnc_InfoGuide;', 1, false, true, "", '(player distance Vehiclefactory <= 5 || player distance weaponfactory <= 5 || player distance illegalweaponfactory <= 5)']],
   [player addaction ["Pay 1 Line Slots - $1000", "noscript.sqf", '["1line"] call Casino_fnc_playSlots;', 1, false, true, "", "(player distance slots1 <= 2 or player distance slots2 <= 2 or player distance slots3 <= 2 or player distance slots4 <= 2 or player distance slots5 <= 2 or player distance slots6 <= 2 or player distance slots7 <= 2 or player distance slots8 <= 2 or player distance slots9 <= 2 or player distance slots10 <= 2 or player distance slots11 <= 2 or player distance slots12 <= 2) and slots1available and !IsSpinningSlots"]],
   [player addaction ["Pay 2 Line Slots - $10000", "noscript.sqf", '["2line"] call Casino_fnc_playSlots;', 1, false, true, "", "(player distance slots1 <= 2 or player distance slots2 <= 2 or player distance slots3 <= 2 or player distance slots4 <= 2 or player distance slots5 <= 2 or player distance slots6 <= 2 or player distance slots7 <= 2 or player distance slots8 <= 2 or player distance slots9 <= 2 or player distance slots10 <= 2 or player distance slots11 <= 2 or player distance slots12 <= 2) and slots2available and !IsSpinningSlots"]],
@@ -22,7 +25,6 @@ OL_PlayerActions = [
   [player addaction ["Elect a Governor", "maindialogs.sqf", ["wahlen"], 1, false, true, "", "player distance rathaus <= 3"]],
   [player addaction ["Change the Law", "maindialogs.sqf", ["gesetz"], 1, false, true, "", "player distance rathaus <= 3 and isMayor"]],
   [player addaction ["Change taxes", "maindialogs.sqf", ["steuern"], 1, false, true, "", "player distance rathaus <= 3 and isMayor"]],
-//  [player addaction ["Resign as Governor", "noscript.sqf",'[] call OL_governor_Resign;', 1, false, true, "", "player distance rathaus <= 3 and isMayor"]],
   [player addaction ["Make License Plate", "noscript.sqf", '[] call Jail_fnc_createPlates;', 1, false, true, "", "(player distance plate1 <= 3 || player distance plate2 <= 3) and platesavailable"]],
   [player addaction ["Crime Log", "maindialogs.sqf", ["coplog"], 1, false, true, "", "player distance rathaus <= 3"]],
   [player addaction [format ["Buy Hooker ($%1)", huren_cost], "worker.sqf", ["holen"], 1, false, true, "", "player distance hookerking <= 5 and isciv"]],
@@ -30,8 +32,8 @@ OL_PlayerActions = [
   [player addaction ["Process Diamond", "itemprocess.sqf", ["diamond rock", "diamond", 5, ""], 1, false, true, "", "player distance diamond_1 <= 5 and isciv"]],
   [player addaction ["Process Meth", "itemprocess1.sqf", ["pharm", "meth", 2, ""], 1, false, true, "", "player distance methlab <= 5 and isciv"]],
   [player addaction ["Process Oil", "itemprocess.sqf", ["Oil", "OilBarrel", 2, "oil"], 1, false, true, "", "player distance Oil_1 <= 5 and isciv"]],
-  [player addaction ["Process Wheat", "itemprocess.sqf", ["getreide", "Bread", 2, "Baker"], 1, false, true, "", "player distance bakery <= 5 and isciv"]],
-  [player addaction ["Process Strawberries", "itemprocess.sqf", ["straw", "Frozens", 3, "Baker"], 1, false, true, "", "player distance bakery <= 5 and isciv"]],
+  [player addaction ["Process Wheat", "itemprocess.sqf", ["getreide", "Bread", 2, "Baker"], 1, false, true, "", "player distance OL_Shop_Bakery <= 5 and isciv"]],
+  [player addaction ["Process Strawberries", "itemprocess.sqf", ["straw", "Frozens", 3, "Baker"], 1, false, true, "", "player distance OL_Shop_Bakery <= 5 and isciv"]],
   [player addaction ["Process LSD", "itemprocess.sqf", ["Unprocessed_LSD", "lsd", 5, "lsd ga1"], 1, false, true, "", "player distance OL_Shop_Gangarea1 <= 5 and isciv"]],
   [player addaction ["Process Cocaine", "itemprocess.sqf", ["Unprocessed_Cocaine", "cocaine", 5, "cocaine ga1"], 1, false, true, "", "player distance OL_Shop_Gangarea1 <= 5 and isciv"]],
   [player addaction ["Process LSD", "itemprocess.sqf", ["Unprocessed_LSD", "lsd", 5, "lsd ga2"], 1, false, true, "", "player distance OL_Shop_Gangarea2 <= 5 and isciv"]],
@@ -86,5 +88,9 @@ OL_PlayerActions = [
   [player addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'["LandVehicle", LandSaveSpawn] call OL_ui_VehicleMenu;',1,false,true,"","player distance LandSavePoint <= 3"]],
   [player addaction ["[Take Land Vehicle From Storage]","noscript.sqf",'["LandVehicle", SaveSpawn] call OL_ui_VehicleMenu;',1,false,true,"","player distance savepoint <= 3"]],
   [player addaction ["[SAVE YOUR LAND VEHICLE]","noscript.sqf",'_vcls = call CP_misc_NearestCars; [_vcls select 0] call OL_stats_saveVehicles;',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["LandVehicle"], 3] select 0); player distance _vcl < 5 and _vcl in INV_ServerVclArray and _vcl in INV_VehicleArray and (player distance savepoint <= 30 or player distance LandSavePoint <= 30)']],
-  [player addAction ["Open Clothes Menu","noscript.sqf", '[] call OL_ui_ClothesMenu;', 1, false, true, "", "player distance atmuc <= 5 || player distance towatm <= 5 || player distance pmcbank <= 5 || player distance assassinshop <= 5"]]
+
+  // License Menu
+  [player addaction ["Open License Menu", "noscript.sqf", "[] call OL_ui_LicenseMenu;", 1, false, true, "", "player distance OL_ATM_Mall <= 5 || player distance OL_Shop_ClothingStore_1 <= 5 || player distance OL_Shop_ClothingStore_2 <= 5 || player distance OL_Shop_Scuba <= 5 || player distance OL_Shop_Boat <= 5 || player distance OL_Shop_Undercover <= 5 || player distance OL_Shop_DMV <= 5 || player distance OL_Shop_DMV2 <= 5 || player distance OL_Shop_Air <= 5 || player distance OL_Shop_Truckshop <= 5 || player distance OL_Shop_Taxi <= 5 || player distance OL_Shop_Oil <= 5 || player distance OL_Shop_Bakery <= 5 || player distance OL_ATM_Tow <= 5 || player distance OL_Shop_Pharmacy <= 5 || player distance OL_ATM_PMC <= 5 || player distance OL_Shop_Assassin <= 5 || player distance OL_Shop_Terror <= 5 || player distance OL_Shop_Gangarea1 <= 5 || player distance OL_Shop_Gangarea2 <= 5 || player distance OL_Shop_Gangarea3 <= 5 || player distance OL_Shop_Gangarea1 <=5"]],
+  // Clothes Menu
+  [player addaction ["Open Clothes Menu","noscript.sqf", '[] call OL_ui_ClothesMenu;', 1, false, true, "", "player distance atmuc <= 5 || player distance towatm <= 5 || player distance pmcbank <= 5 || player distance OL_Shop_Assassin <= 5"]]
 ];

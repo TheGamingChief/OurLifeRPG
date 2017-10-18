@@ -100,7 +100,7 @@ if (_key == "no_data") then {
 				_licenses 			= ([_stats select 9] call AM_Server_StrToArr);
 
 				INV_InventarArray = _inventory;
-				INV_LizenzOwner   = _licenses;
+				OL_Licenses   		= _licenses;
 				kontostand 		  	= _bank;
 
 				{ player addWeapon _x } forEach _weapons;
@@ -264,10 +264,10 @@ if (_key == "no_data") then {
 				_lic 				= ([_stats select 6] call AM_Server_StrToArr);
 
 				INV_InventarArray = _inventory;
-				INV_LizenzOwner   = _lic;
-				kontostand 		  = _bank;
+				OL_Licenses   		= _lic;
+				kontostand 		  	= _bank;
 
-				if ("car" call INV_haslicense) then {
+				if ("car" call OL_license_Owns) then {
 					OL_DemeritPoints = 10
 				};
 
@@ -324,8 +324,8 @@ if (_key == "no_data") then {
 				_lic 				= ([_stats select 12] call AM_Server_StrToArr);
 
 				INV_InventarArray = _inventory;
-				INV_LizenzOwner   = _lic;
-				kontostand 		  = _bank;
+				OL_Licenses   		= _lic;
+				kontostand 		  	= _bank;
 
 				{ player addWeapon _x; } forEach _weapons;
 
@@ -401,6 +401,8 @@ if (_key == "no_data") then {
 		};
 	};
 
+	OL_PlayTime = [_stats select 15] call AM_Server_StrToArr;
+
 	if (count _stats != 0) then {
 		_statWipeMessage = _stats select 14;
 		if (isNil "_statWipeMessage") then { _statWipeMessage = "" };
@@ -410,7 +412,7 @@ if (_key == "no_data") then {
 			player groupChat format ["Your Statistics have been wiped for %1. If you believe this is a error please contact a Head Administrator.", _statWipeMessage];
 
 			INV_InventarArray = [["handy", 1],["schluesselbund", 1]];
-			INV_LizenzOwner   = [];
+			OL_Licenses   		= [];
 			INV_SavedVehLand  = [];
 			INV_SavedVehAir   = [];
 			kontostand 		  	= 25000;

@@ -28,6 +28,7 @@ waitUntil{scriptDone  _h};
 if (isClient) then {
 	[] spawn OL_player_WarrantGrab;
 	[] spawn OL_gangs_Request;
+	[] spawn OL_misc_requestBolos;
 
   [] spawn {
     waitUntil {!isNil "OL_Hud_HudShow"};

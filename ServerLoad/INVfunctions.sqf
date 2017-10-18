@@ -475,32 +475,6 @@ INV_AddStorageToDialog = {
 	true;
 };
 
-// Check if Player Owns license
-INV_HasLicense =
-{
-	/*if(IsNil "INV_LizenzOwner")exitWith
-	{
-		//if(getplayeruid player in OL_Developer) then {player sideChat "[Dev] INVfunctions - INV_LizenzOwner Error"};
-	};*/
-
-	if ( (_this == "") or (_this in INV_LizenzOwner) ) then
-	{
-		true;
-	} else {
-		false;
-	};
-};
-
-INV_GetLicenseName = {
-	private ["_c"];
-	for "_c" from 0 to (count INV_Lizenzen - 1) do {
-		if (((INV_Lizenzen select _c) select 0) == _this) exitWith {
-			((INV_Lizenzen select _c) select 2);
-		};
-	};
-};
-
-
 // Unknown
 INV_GetScriptFromClass_Mag = {
 	private ["_c", "_result"];

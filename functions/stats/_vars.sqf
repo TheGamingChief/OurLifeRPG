@@ -46,3 +46,4 @@ INV_SavedVehLand      = [];
 INV_SavedVehAir       = [];
 
 OL_VehicleGarage      = [];
+OL_Licenses           = [];

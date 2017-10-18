@@ -1,6 +1,9 @@
 _veh = _this select 0;
 
-if ((count OL_VehicleGarage) >= 5) exitWith { player groupChat "You have reached the Vehicle Storage limit." };
+
+// Daniel is a fucking dumb cunt.
+
+if ((call OL_vehicle_StoredAmount) >= 5) exitWith { player groupChat "You have reached the Vehicle Storage limit." };
 if (isNil "_veh") exitWith { player groupChat "Invalid Selection / Foster" };
 if (damage _veh > 0.9) exitWith { player groupChat "This vehicle is too dammaged" };
 

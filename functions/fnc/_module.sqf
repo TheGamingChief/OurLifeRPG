@@ -8,6 +8,7 @@ DD_Modules = DD_Modules + [
   ["OL",          "fnc",  "TearGassed",       1],
   ["OL",          "fnc",  "FlashBanged",      1],
   ["OL",          "fnc",  "Animate",          1],
+  ["OL",          "fnc",  "Blackmarket",      1],  
   ["OL",          "fnc",  "Stun",             1],
   ["OL",          "fnc",  "setHit",           1],
   ["OL",          "fnc",  "EscortPlayer",     1],

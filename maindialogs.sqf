@@ -22,11 +22,11 @@ if (_art == "licswag") exitWith {
 if (!(createDialog "liste_1_button")) exitWith {hint "Dialog Error!";};
 	lbAdd [1, _trennlinie];
 	lbAdd [1, localize "STRS_statdialog_licenselist"];
-	for [{_i=0}, {_i < (count INV_Lizenzen)}, {_i=_i+1}] do
+	for [{_i=0}, {_i < (count OL_LicenseArray)}, {_i=_i+1}] do
 	{
-		if (((INV_Lizenzen select _i) select 0) call INV_HasLicense) then
+		if (((OL_LicenseArray select _i) select 1) call OL_license_Owns) then
 		{
-			lbAdd [1, ((INV_Lizenzen select _i) select 2)];
+			lbAdd [1, ((OL_LicenseArray select _i) select 0)];
 		};
 	};
 
@@ -131,7 +131,7 @@ if (_art == "inventorycheck") exitWith {
 	for [{_i=0}, {_i < (count _licensearray)}, {_i=_i+1}] do
 	{
 		_lizenz = (_licensearray select _i);
-		lbAdd [1, format ["%1", (_lizenz call INV_GetLicenseName)]];
+		lbAdd [1, format ["%1", (_lizenz call OL_license_name)]];
 	};
 	lbAdd [1, _trennlinie];
 	lbAdd [1, localize "STRS_statdialog_inventarlist"];
@@ -177,7 +177,7 @@ if (_art == "licensecheck") exitWith {
 	for [{_i=0}, {_i < (count _licensearray)}, {_i=_i+1}] do
 	{
 		_lizenz = (_licensearray select _i);
-		lbAdd [1, format ["%1", (_lizenz call INV_GetLicenseName)]];
+		lbAdd [1, format ["%1", (_lizenz call OL_license_name)]];
 	};
 	lbAdd [1, _trennlinie];
 

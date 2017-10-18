@@ -10,7 +10,7 @@ _nitem1  = _item1 call INV_GetItemAmount;
 _name1   = _item1 call INV_getitemName;
 _name2   = _item2 call INV_getitemName;
 
-if(!(_license call INV_HasLicense))exitwith{player groupchat "you do not have the license to do this"};
+if(!(_license call OL_license_Owns))exitwith{player groupchat "you do not have the license to do this"};
 
 _multi = floor(_nitem1/_req);
 _total = _req*_multi;
@@ -36,7 +36,7 @@ if(iscop)exitwith{player groupchat "only civilians can do this!"; processscriptr
  _nitem1 = _item1 call INV_GetItemAmount;
  _name1 = _item1 call INV_getitemName;
  _name2 = _item2 call INV_getitemName;
- if(!(_license call INV_HasLicense))exitwith{player groupchat "you do not have the license to do this";
+ if(!(_license call OL_license_Owns))exitwith{player groupchat "you do not have the license to do this";
  processscriptrunning = 0;};
  _multi = floor(_nitem1/_req); 
 _total = _req*_multi; 

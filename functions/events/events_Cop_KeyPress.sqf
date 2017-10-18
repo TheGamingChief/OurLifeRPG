@@ -74,6 +74,22 @@ fnc_KeyPress_2 = {
 	};
 };
 
+fnc_KeyPress_4 = {
+		if (!INV_shortcuts) exitWith {};
+		if (dialog) exitWith { closeDialog 0 };
+		if (isstunned) exitWith { player groupChat "You are stunned!" };
+
+		["OPEN"] call OL_ui_BoloMenu;
+};
+
+fnc_KeyPress_Shift_4 = {
+	if (!INV_shortcuts) exitWith {};
+	if (dialog) exitWith { closeDialog 0 };
+	if (isstunned) exitWith { player groupChat "You are stunned!" };
+
+	["LIST"] call OL_ui_BoloMenu;
+};
+
 fnc_KeyPress_CtrlF4 = {
 	if(!INV_shortcuts)exitwith{};
 	if(dialog)exitwith{closeDialog 0;};
@@ -177,33 +193,31 @@ fnc_KeyPress_W = {
 	_vcl = vehicle player;
 	_type = typeof vehicle player;
 	_class = typeOf _vcl;
-	if(_vcl == player)exitwith{};
-	if(typeof _vcl == "Smallboat_1" or typeof _vcl == "Smallboat_2") then
+	if (_vcl == player) exitwith {};
+	if ((typeOf _vcl == "Smallboat_1") || (typeOf _vcl == "Smallboat_2")) then {
+		_vel   = velocity _vcl;
+		_speed = speed _vcl;
 
-		{
-
-		_vel = velocity _vcl;
-		_spd = speed _vcl;
-		if(_spd <= 20)then{_vcl setVelocity [(_vel select 0) * 1.001, (_vel select 1) * 1.001, (_vel select 2) * 0.99]};
-		if(_spd <= 30 and _spd > 20)then{_vcl setVelocity [(_vel select 0) * 1.002, (_vel select 1) * 1.002, (_vel select 2) * 0.99]};
-		if(_spd <= 40 and _spd > 30)then{_vcl setVelocity [(_vel select 0) * 1.003, (_vel select 1) * 1.003, (_vel select 2) * 0.99]};
-
+		switch (true) do {
+			case (_speed <= 20): { _vcl setVelocity [(_vel select 0) * 1.001, (_vel select 1) * 1.001, (_vel select 2) * 0.99] };
+			case (_speed <= 30 && _speed > 20): { _vcl setVelocity [(_vel select 0) * 1.002, (_vel select 1) * 1.002, (_vel select 2) * 0.99] };
+			case (_speed <= 40 && _speed > 30): { _vcl setVelocity [(_vel select 0) * 1.003, (_vel select 1) * 1.003, (_vel select 2) * 0.99] };
 		};
+	};
 
 	_lvl = _vcl getvariable "tuning";
-	if(isEngineOn _vcl and !isnil "_lvl") then
-
-		{
-
+	if(isEngineOn _vcl and !isnil "_lvl") then {
 		_vel = velocity _vcl;
-		_spd = speed _vcl;
-		if(_lvl == 1)then{_vcl setVelocity [(_vel select 0) * 1.006, (_vel select 1) * 1.006, (_vel select 2) * 0.99]};
-		if(_lvl == 2)then{_vcl setVelocity [(_vel select 0) * 1.008, (_vel select 1) * 1.008, (_vel select 2) * 0.99]};
-		if(_lvl == 3)then{_vcl setVelocity [(_vel select 0) * 1.010, (_vel select 1) * 1.010, (_vel select 2) * 0.99]};
-        if(_lvl == 4)then{_vcl setVelocity [(_vel select 0) * 1.012, (_vel select 1) * 1.012, (_vel select 2) * 0.99]};
-        if(_lvl == 5)then{_vcl setVelocity [(_vel select 0) * 1.014, (_vel select 1) * 1.014, (_vel select 2) * 0.99]};
-        if(_lvl == 6)then{_vcl setVelocity [(_vel select 0) * 1.018, (_vel select 1) * 1.018, (_vel select 2) * 0.99]};
+
+		switch (_lvl) do {
+			case 6: { _vcl setVelocity [(_vel select 0) * 1.018, (_vel select 1) * 1.018, (_vel select 2) * 0.99] };
+			case 5: { _vcl setVelocity [(_vel select 0) * 1.014, (_vel select 1) * 1.014, (_vel select 2) * 0.99] };
+			case 4: { _vcl setVelocity [(_vel select 0) * 1.012, (_vel select 1) * 1.012, (_vel select 2) * 0.99] };
+			case 3: { _vcl setVelocity [(_vel select 0) * 1.010, (_vel select 1) * 1.010, (_vel select 2) * 0.99] };
+			case 2: { _vcl setVelocity [(_vel select 0) * 1.008, (_vel select 1) * 1.008, (_vel select 2) * 0.99] };
+			case 1: { _vcl setVelocity [(_vel select 0) * 1.006, (_vel select 1) * 1.006, (_vel select 2) * 0.99] };
 		};
+	};
 };
 
 fnc_KeyPress_F5 = {

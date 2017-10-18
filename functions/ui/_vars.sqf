@@ -26,7 +26,7 @@ OL_SpawnPoints =  [
 ];
 
 OL_ATM_Clothes = [
-	[copswatbank,
+	[OL_ATM_SWAT,
 		[
 			["olrpg_swatcom",		"SWAT_ID", "S.W.A.T. Command Uniform"],
 			["olrpg_swatspec",	"SWAT_ID", "S.W.A.T. Specialist Uniform"],
@@ -35,7 +35,7 @@ OL_ATM_Clothes = [
 			["olrpg_swatprob",	"SWAT_ID", "S.W.A.T. Probationary Uniform"]
 		]
 	],
-	[copcmdbank,
+	[OL_ATM_PDCommand,
 		[
 			["olrpg_chiefsuni",		 "Chief_ID", "Chief Of Police Uniform"],
 			["olrpg_astchiefsuni", "Chief_ID", "Assistant Chief Uniform"],
@@ -43,45 +43,45 @@ OL_ATM_Clothes = [
 			["olrpg_pdltvest",		 "Lt_ID",		 "Lieutenant Uniform"]
 		]
 	],
-	[copsgtbank,
+	[OL_ATM_PDSgt,
 		[
 			["olrpg_sgtuni", "Sgt_ID", "Sergeant Uniform"],
 			["olrpg_cpluni", "Cpl_ID", "Corporal Uniform"]
 		]
 	],
-	[copbank,
+	[OL_ATM_PD,
 		[
 			["olrpg_snruni", "PO3_id",								"Senior Patrol Officer Uniform"],
 			["olrpg_patuni", "[getPlayerUID player]", "Patrol Officer Uniform"]
 		]
 	],
-	[IRAatm,
+	[OL_ATM_FTO,
 		[
 			["olrpg_snrftouni",	"FTO_ID", "Senior FTO Uniform"],
 			["olrpg_ftouni",		"FTO_ID", "FTO Uniform"]
 		]
 	],
-	[cidbank,
+	[OL_ATM_CID,
 		[
 			["olrpg_pdcid",	 "Undercover_ID", "CID Command Uniform"],
 			["olrpg_iauni",	 "Undercover_ID", "Internal Affairs Uniform"],
 			["olrpg_pdcidc", "Undercover_ID", "CID Uniform"]
 		]
 	],
-	[copdispatchbank,
+	[OL_ATM_K9,
 		[
 			["olrpg_k9com", "K9_ID", "K9 Command Uniform"],
 			["olrpg_k9nor", "K9_ID", "K9 Uniform"]
 		]
 	],
-	[copairbank,
+	[OL_ATM_PDAviation,
 		[
 			["olrpg_pdpilotcom", "PDAviation_ID", "Aviation Command Uniform"],
 			["olrpg_oppilot",		 "PDAviation_ID", "OP Pilot Uniform"],
 			["olrpg_pdpilot",		 "PDAviation_ID", "Aviation Pilot Uniform"]
 		]
 	],
-	[copsheriffbank,
+	[OL_ATM_Sheriff,
 		[
 			["olrpg_cptdepuni",	 "Sheriff_id", 	 "Captain Deputy Uniform"],
 			["olrpg_ltdepuni",	 "Sheriff_id", 	 "Lieutenant Deputy Uniform"],
@@ -98,13 +98,13 @@ OL_ATM_Clothes = [
 			["olrpg_sdpilot", "PDAviation_id", "Deputy Pilot Uniform"]
 		]
 	],
-	[copcoastguardbank,
+	[OL_ATM_CoastGuard,
 		[
 			["olrpg_sdpilot", "PDAviation_id", "Deputy Pilot Uniform"]
 		]
 	],
 
-	[atm5,
+	[OL_ATM_MainFire,
 		[
 			["KPFS_THW_Press",		"EMT1_id", "Paramedic Uniform"],
 			["yup_uscg_Pilot",		"EMT1_id", "Aviation Pilot Uniform"],
@@ -115,7 +115,7 @@ OL_ATM_Clothes = [
 			["olrpg_firemarshal", "EMT3_id", "Fire Marshal Uniform"]
 		]
 	],
-	[atmsubfire,
+	[OL_ATM_SubFire,
 		[
 			["KPFS_THW_Press",		"EMT1_id", "Paramedic Uniform"],
 			["yup_uscg_Pilot",		"EMT1_id", "Aviation Pilot Uniform"],
@@ -127,7 +127,7 @@ OL_ATM_Clothes = [
 		]
 	],
 
-	[towatm,
+	[OL_ATM_Tow,
 		[
 			["Flyers_Supervisor_Vest", "Tow_id", "Supervisor w/ Vest Uniform"],
 			["Flyers_Supervisor",			 "Tow_id", "Supervisor Uniform"],
@@ -144,7 +144,7 @@ OL_ATM_Clothes = [
 			["TK_CIV_Takistani04_EP1", "Undercover_id", "Turban (Uniform)"]
 		]
 	],
-	[pmcbank,
+	[OL_ATM_PMC,
 		[
 			["FR_Commander",			 "CommandPMC_id",	"General Uniform"],
 			["FR_TL",							 "CommandPMC_id",	"Commander Uniform"],

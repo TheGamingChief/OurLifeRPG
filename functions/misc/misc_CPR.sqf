@@ -3,7 +3,7 @@ if (player getVariable ["KOED", false]) exitWith { player groupChat "You are dea
 if (vehicle player != player) exitWith { player groupChat "This can only be used on foot!" };
 
 _animation = "AinvPknlMstpSnonWrflDnon_medic";
-_license   = "Field_Medic" call INV_HasLicense;
+_license   = "Field_Medic" call OL_license_Owns;
 _chance    = 10;
 _civs      = nearestobjects [position player, ["Man"], 3];
 _civ       = nil;

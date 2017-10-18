@@ -27,8 +27,6 @@ _handler = [] execVM "facharvest.sqf";
 waitUntil {scriptDone _handler};
 _handler = [] execVM "ServerLoad\fishingarray.sqf";
 waitUntil {scriptDone _handler};
-_handler = [] execVM "ServerLoad\licensearray.sqf";
-waitUntil {scriptDone _handler};
 _handler = [] execVM "ServerLoad\vclarrsave.sqf";
 
 if (!dedicatedServer) then { _handler = [] execVM "ServerLoad\shopfarmfaclicenseactions.sqf" };

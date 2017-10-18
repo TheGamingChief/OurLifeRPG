@@ -7,7 +7,7 @@ switch (_mode) do {
 	case 0: {//init
 		_console_history = __uiGet(balca_console_history);
 		if (isNil{_console_history}) then {
-			_console_history = ["[] execVM 'Scripts\Misc\Shutdown.sqf'"];
+			_console_history = ["player setVariable [""KOED"", false, true];  player setVariable [""R3F_REV_est_inconscient"", false, true];'"];
 			__uiSet(balca_console_history,_console_history);
 			{
 				GET_CTRL(balca_debug_console_history_IDC) lbAdd _x;
@@ -37,6 +37,7 @@ switch (_mode) do {
 			GET_CTRL(balca_debug_console_result_IDC) ctrlSetText str _result;
 			__uiSet(balca_console_result,_result);
 		};
+		["PGSpawn_Log", format ["%1 (%2) has executed command <%3> at %4", PlayerName, getPlayerUID player, _command, _gridPos]] call RM_fnc_LogToServer;
 	};
 	case 2: {//fill console from history
 		GET_CTRL(balca_debug_console_edit_IDC) ctrlSetText GET_SELECTED_DATA(balca_debug_console_history_IDC);

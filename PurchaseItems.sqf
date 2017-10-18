@@ -36,9 +36,9 @@ _fn_CreateorAddSomething =
 {
 	if (_type == "License") then
 	{
-		_license = ((INV_Lizenzen select _otherValue1) select 0);
+		_license = ((OL_LicenseArray select _otherValue1) select 1);
 
-		INV_LizenzOwner = INV_LizenzOwner + [_license];
+		OL_Licenses = OL_Licenses + [_license];
 	};
 
 	if (_type == "Item") then

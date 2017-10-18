@@ -1,5 +1,5 @@
 OL_PlayerActions = [
-  [player addAction ["Fire Rescue Rules and Tutorials", "esuhelp.sqf", [1], 1, false, true, "", "player distance atm5 <= 10"]],
+  [player addAction ["Fire Rescue Rules and Tutorials", "esuhelp.sqf", [1], 1, false, true, "", "player distance OL_ATM_MainFire <= 10"]],
   [player addAction ["Use Fire Hose", "ems.sqf", [], 1, false, true, "", '_vcl = (nearestobjects [getpos player, ["firetruck", "ibr_as350", "Laddertruck", "il_f350_brush", "engine", "rescue", "a2l_brush", "a2l_kme_res", "a2l_kme", "a2l_kme_air", "a2l_kme_res116", "a2l_medsquad",
   "a2l_squad"], 40] select 0);player distance _vcl < 50']],
   [player addAction ["Fix Gas Leak", "fixgas.sqf", [], 1, false, true, "", '_vcl = (nearestobjects [getpos player, ["firetruck", "ibr_as350", "Laddertruck", "il_f350_brush", "engine", "rescue", "a2l_brush", "a2l_kme_res", "a2l_kme", "a2l_kme_air", "a2l_kme_res116", "a2l_medsquad",
@@ -60,10 +60,15 @@ OL_PlayerActions = [
   [player addAction ["Buy Dozen Donuts", "noscript.sqf", '["donut 12"] call Shops_fnc_buyDonuts', 1, false, true, "", "player distance donutguy <= 5 || player distance donutguy2 <= 5"]],
   [player addAction ["Unflip vehicle", "noscript.sqf", '_vcls = call CP_misc_NearestCars; [_vcls select 0] call OL_vehicle_Unflip;', 1, false, true, "", '_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and _vcl in INV_VehicleArray']],
   [player addAction ["Repair vehicle", "noscript.sqf", '_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);[_vcl] execVM "repairvehicle.sqf";', 1, true, true, "", '_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);_vcl in INV_ServerVclArray and player distance _vcl < 10']],
-  [player addAction ["Open Clothes Menu", "noscript.sqf", '[] call OL_ui_ClothesMenu', 1, false, true, "", "player distance atm5 <= 5 || player distance atmsubfire <= 5"]],
   [player addAction ["[Transfer to Main Fire House]", "noscript.sqf", 'player setPos (getMarkerPos "respawn_guerrila");player groupChat format["Welcome to the Main Fire House %1!", PlayerName];', 1, false, true, "", 'player distance fire2tele <= 3']],
   [player addAction ["[Transfer to Sub Fire Station]", "noscript.sqf", 'player setPos (getMarkerPos "spawn_subfire");player groupChat format["Welcome to the Sub Fire Station %1!", PlayerName];', 1, false, true, "", 'player distance fire1tele <= 3']],
   [player addAction ["[Take Elevator To Second Floor]", "noscript.sqf", '["Elevator1"] call OL_misc_EMSFunctions', 1, false, true, "", "player distance EMSELI1 <= 5"]],
   [player addAction ["[Take Elevator To First Floor]", "noscript.sqf", '["Elevator2"] call OL_misc_EMSFunctions', 1, false, true, "", "player distance EMSELI2 <= 5"]],
-  [player addAction ["[Clear Helipad]", "noscript.sqf", '["CLEAR"] call OL_misc_EMSFunctions', 1, false, true, "", "(player distance jailpad2_1 <= 5 || player distance jailpad2_1_1 <=5) && ((getPlayerUID player) in AirESU_id)"]]
+  [player addAction ["[Clear Helipad]", "noscript.sqf", '["CLEAR"] call OL_misc_EMSFunctions', 1, false, true, "", "(player distance jailpad2_1 <= 5 || player distance jailpad2_1_1 <=5) && ((getPlayerUID player) in AirESU_id)"]],
+
+  // License Menu
+  [player addAction ["Open License Menu", "noscript.sqf", "[] call OL_ui_LicenseMenu;", 1, false, true, "", "player distance OL_ATM_MainFire <= 5 || player disstance OL_ATM_SubFire <= 5"]],
+
+  // Clothes Menu
+  [player addAction ["Open Clothes Menu", "noscript.sqf", '[] call OL_ui_ClothesMenu', 1, false, true, "", "player distance OL_ATM_MainFire <= 5 || player distance OL_ATM_SubFire <= 5"]]
 ];

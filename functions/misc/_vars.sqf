@@ -1,5 +1,7 @@
 doingSomething    = false;
 OL_isLockpicking	= false;
+kfcavailable 			= true;
+kfc2available 		= true;
 OL_CopMarkerArray = [];
 OL_EMSMarkerArray = [];
 

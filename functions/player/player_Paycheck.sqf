@@ -63,6 +63,8 @@ if (playerSide == west) exitWith {
   	};
   };
 
+  _income = _income + (round(random OL_PlayTime));
+
   if (getPlayerUID player in MedalRecipt_id) then { _income = _income + 1000  };
   if (getPlayerUID player in adminlevel1) 	 then { _income = _income + 2500  };
   if (getPlayerUID player in adminlevel2)    then { _income = _income + 5000  };
@@ -79,30 +81,32 @@ if (playerSide == resistance) exitWith {
 
   switch (true) do {
     case (getPlayerUID player in EMTChief_id): {
-      _income = _income + 12000;
-    };
-    case (getPlayerUID player in EMTCaptain_id): {
-      _income = _income + 11000;
-    };
-    case (getPlayerUID player in EMTLieutenant_id): {
-      _income = _income + 10000;
-    };
-    case (getPlayerUID player in EMTSupervisor_id): {
-      _income = _income + 9000;
-    };
-    case (getPlayerUID player in FD_id): {
-      _income = _income + 8000;
-    };
-    case (getPlayerUID player in EMT3_id): {
-      _income = _income + 7000;
-    };
-    case (getPlayerUID player in EMT2_id): {
       _income = _income + 6000;
     };
-    case (getPlayerUID player in EMT1_id): {
+    case (getPlayerUID player in EMTCaptain_id): {
+      _income = _income + 5500;
+    };
+    case (getPlayerUID player in EMTLieutenant_id): {
       _income = _income + 5000;
     };
+    case (getPlayerUID player in EMTSupervisor_id): {
+      _income = _income + 4500;
+    };
+    case (getPlayerUID player in FD_id): {
+      _income = _income + 4000;
+    };
+    case (getPlayerUID player in EMT3_id): {
+      _income = _income + 3500;
+    };
+    case (getPlayerUID player in EMT2_id): {
+      _income = _income + 3000;
+    };
+    case (getPlayerUID player in EMT1_id): {
+      _income = _income + 2500;
+    };
   };
+
+  _income = _income + (round(random OL_PlayTime));
 
   if (getPlayerUID player in adminlevel1) 	 then { _income = _income + 2500  };
   if (getPlayerUID player in adminlevel2)    then { _income = _income + 5000  };
@@ -121,12 +125,13 @@ if (playerSide == civilian) exitWith {
   if (call OL_gangs_getName != "") then {
     _activeGangMembers = (count (([OL_PlayerGangID] call OL_gangs_getByKey) select 3));
 
-
     if (OL_Shop_Gangarea1 getVariable "control" == (call OL_gangs_getName)) then { _income = _income + (gangincome / _activeGangMembers) };
     if (OL_Shop_Gangarea2 getVariable "control" == (call OL_gangs_getName)) then { _income = _income + (gangincome / _activeGangMembers) };
     if (OL_Shop_Gangarea3 getVariable "control" == (call OL_gangs_getName)) then { _income = _income + (gangincome / _activeGangMembers) };
     if (OL_Shop_Gangarea4 getVariable "control" == (call OL_gangs_getName)) then { _income = _income + (gangincome / _activeGangMembers) };
   };
+
+  _income = _income + (round(random OL_PlayTime));
 
   if (getPlayerUID player in MedalRecipt_id) then { _income = _income + 1000  };
   if (getPlayerUID player in adminlevel1) 	 then { _income = _income + 2500  };
@@ -145,9 +150,9 @@ if (playerSide == civilian) exitWith {
     Kontostand = Kontostand + MayorExtraPay;
 
     player groupchat format["As a Mayor you get an extra paycheck of $%1. You also got $%2 taxes.", (MayorExtraPay call OL_ISSE_str_IntToStr), (MayorTaxes call OL_ISSE_str_IntToStr)];
-    } else {
-      if (INV_SteuernGezahlt > 0) then {
-        format["if (isMayor) then {MayorTaxes = MayorTaxes + %1;};", INV_SteuernGezahlt] call OL_network_Swag;
+  } else {
+    if (INV_SteuernGezahlt > 0) then {
+      format["if (isMayor) then {MayorTaxes = MayorTaxes + %1;};", INV_SteuernGezahlt] call OL_network_Swag;
     };
   };
 

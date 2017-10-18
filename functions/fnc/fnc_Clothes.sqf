@@ -12,6 +12,7 @@ _skinsold   = typeOf player;
 if (_skinsold != _skin) then {
   private["_group","_var_name"];
   player allowDamage false;
+  uiSleep 1;
   _group = (group _oldplayer);
   _to_become = _group createUnit [_skin, (position player), [], 0, "NONE"];
   _var_name = vehicleVarName _oldplayer;
@@ -42,6 +43,7 @@ if (_skinsold != _skin) then {
   [] call OL_startup_setVariables;
   [] call OL_misc_briefing;
   [] call OL_player_WarrantGrab;
+  [] call OL_misc_requestBolos;
   [RadioArr] call OL_tfar_addRadiosBack;
   if (!(pg_godmode)) then { player allowDamage true };
 };

@@ -1,4 +1,4 @@
-class UI_ListMenu {
+class UI_ListMenuSmall {
 	idd = -1;
   controlsBackground[] = {UI_ClothesMenu_Background};
 	controls[] = {
@@ -6,13 +6,10 @@ class UI_ListMenu {
     UI_ClothesMenu_btnExit,
     UI_ClothesMenu_List
   };
-	onLoad = "OL_HasDisplayOpen = true;";
-	onUnload = "OL_HasDisplayOpen = false;";
 
   class UI_ClothesMenu_Background: RscBackground
   {
   	idc = 1800;
-  	//text = "Please Select A Uniform";
   	x = 0.433927 * safezoneW + safezoneX;
   	y = 0.323703 * safezoneH + safezoneY;
   	w = 0.132145 * safezoneW;
@@ -86,6 +83,7 @@ class UI_ListMenuBig {
 	{
 		idc = 1601;
 		text = "Close";
+		action = "closeDialog 0";
 		x = 0.564465 * safezoneW + safezoneX;
 		y = 0.678677 * safezoneH + safezoneY;
 		w = 0.0709109 * safezoneW;

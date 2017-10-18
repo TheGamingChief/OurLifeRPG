@@ -19,6 +19,7 @@ _activeModules = [
 	"misc",
 	"phone",
 	"player",
+	"license",
 	"tfar",
 	"stats",
 	"vehicle",

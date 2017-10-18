@@ -18,7 +18,6 @@ Rifle_Holster           = nil;
 Pistol_Holster          = nil;
 Taser_Holster						= nil;
 Radar_Holstered         = false;
-OL_HasDisplayOpen				= false;
 isTearGassed  					= false;
 isFlashBanged 					= false;
 OL_SpeedLimit						= 90;

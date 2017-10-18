@@ -16,6 +16,7 @@ while {true} do	{
 		[] spawn CP_fnc_VarQueueUpdate;
 		[] spawn OL_misc_FosterFireCheck;
 		["CL"] spawn OL_misc_Markers;
+		OL_PlayTime = OL_PlayTime + 5;
 	};
 
 	//10 Seconds

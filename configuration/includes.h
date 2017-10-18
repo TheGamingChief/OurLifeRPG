@@ -34,3 +34,4 @@
 #include "dialog\ui_checkpoint.hpp"
 #include "dialog\ui_gangmenu.hpp"
 #include "dialog\ui_listmenu.hpp"
+#include "dialog\ui_bolomenu.hpp"

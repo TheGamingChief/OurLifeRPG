@@ -1,4 +1,3 @@
-//If (player getVariable "CLAY_DogStatus" == "Attacking") exitWith {};
 _target = _this select 0;
 if (!(_target isKindOf "Man")) exitWith {};
 

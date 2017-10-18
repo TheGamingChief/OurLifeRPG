@@ -63,8 +63,8 @@ if (_art == "itemkauf") then
 
 	if (_itemart == "Item" and instock) then
 	{
-		if (!(_license1 call INV_HasLicense) and isciv and _license) exitWith {player groupChat format[localize "STRS_inv_buyitems_nolicense", (_license1 call INV_GetLicenseName)]; _exitvar = 1};
-		if (!(_license2 call INV_HasLicense) and iscop and _license) exitWith {player groupChat format[localize "STRS_inv_buyitems_nolicensecop", (_license2 call INV_GetLicenseName)]; _exitvar = 1};
+		if (!(_license1 call OL_license_Owns) and isciv and _license) exitWith {player groupChat format[localize "STRS_inv_buyitems_nolicense", (_license1 call OL_license_name)]; _exitvar = 1};
+		if (!(_license2 call OL_license_Owns) and iscop and _license) exitWith {player groupChat format[localize "STRS_inv_buyitems_nolicensecop", (_license2 call OL_license_name)]; _exitvar = 1};
 
 		_amtragen          = (_item call INV_GetItemAmount);
 		_gesamtmenge       = _amtragen + _menge;
@@ -87,8 +87,8 @@ if (_art == "itemkauf") then
 
 	if (((_itemart == "waffe") or (_itemart == "magazin")) and instock) then
 	{
-		if (!(_license1 call INV_HasLicense) and isciv and _license) exitWith {player groupChat format[localize "STRS_inv_buyitems_nolicense", (_license1 call INV_GetLicenseName)]; _exitvar = 1};
-		if (!(_license2 call INV_HasLicense) and iscop and _license) exitWith {player groupChat format[localize "STRS_inv_buyitems_nolicensecop", (_license2 call INV_GetLicenseName)]; _exitvar = 1};
+		if (!(_license1 call OL_license_Owns) and isciv and _license) exitWith {player groupChat format[localize "STRS_inv_buyitems_nolicense", (_license1 call OL_license_name)]; _exitvar = 1};
+		if (!(_license2 call OL_license_Owns) and iscop and _license) exitWith {player groupChat format[localize "STRS_inv_buyitems_nolicensecop", (_license2 call OL_license_name)]; _exitvar = 1};
 
 		if (_itemart == "Waffe") then
 		{
@@ -103,9 +103,9 @@ if (_art == "itemkauf") then
 	if (_itemart == "fahrzeug" and instock) then
 	{
 		_menge = 1;
-		if (!(_license1 call INV_HasLicense) and isciv and _license) exitWith {player groupChat format[localize "STRS_inv_buyitems_nolicense", (_license1 call INV_GetLicenseName)]; _exitvar = 1};
-		if (!(_license2 call INV_HasLicense) and iscop and _license) exitWith {player groupChat format[localize "STRS_inv_buyitems_nolicensecop", (_license2 call INV_GetLicenseName)]; _exitvar = 1};
-		//if(_shopnumber == 89 && !("mafial" call INV_HasLicense)) exitwith {Player groupchat "You need mafia license for vehicles in this shop."};
+		if (!(_license1 call OL_license_Owns) and isciv and _license) exitWith {player groupChat format[localize "STRS_inv_buyitems_nolicense", (_license1 call OL_license_name)]; _exitvar = 1};
+		if (!(_license2 call OL_license_Owns) and iscop and _license) exitWith {player groupChat format[localize "STRS_inv_buyitems_nolicensecop", (_license2 call OL_license_name)]; _exitvar = 1};
+		//if(_shopnumber == 89 && !("mafial" call OL_license_Owns)) exitwith {Player groupchat "You need mafia license for vehicles in this shop."};
 		if (INV_UsingCarshop == 1)  exitWith {player groupChat localize "STRS_inv_buyvehicles_store_in_use"; _exitvar = 1};
 		[_CostMitTax, (_infos call INV_getitemClassName), "Vehicle", _menge, _einzelCost, _item, (_item call INV_getitemName)] execVM "PurchaseItems.sqf";
 	};

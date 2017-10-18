@@ -9,7 +9,7 @@ if (!(_civ in playableUnits) && isMultiplayer) exitWith { hint "Nothing found" }
 
 format ['
 	if (player == %1) then {
-		player setVariable ["Licenses", INV_LizenzOwner, 	true];
+		player setVariable ["Licenses", OL_Licenses, 			true];
 		player setVariable ["Cars", 		INV_VehicleArray, true];
 		player setVariable ["Warrants", %1_reason, 				true];
 		"if (player == %2) then { [""view"", %2, %1] call DD_MDC_Dialog };" call OL_network_Swag;
