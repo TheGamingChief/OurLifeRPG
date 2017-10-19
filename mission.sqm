@@ -2856,7 +2856,7 @@ class Mission
 					vehicle="Functionary2";
 					leader=1;
 					skill=0.60000002;
-					text="guss";
+					text="OL_Shop_Guss";
 					init="this disableAI ""anim"";this disableAI ""move""; removeallweapons this;this allowdamage false;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2) +0.1];";
 				};
 			};

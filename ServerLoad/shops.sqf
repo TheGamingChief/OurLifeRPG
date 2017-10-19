@@ -87,7 +87,40 @@ _sc3 = ["CHRYSLER_300","RENAULT_CLIO_SPORT_V6","SUBARU_IMPREZA_WRX_STI_AWD","SUB
 //17
 _sc4 = ["MustangGTRyellow_MLOD","Convertible_MLOD","FORD_SHELBY_GT","CORVETTE_Z06","INFINITI_G35","MERCEDES_BENZ_CLK_500","MERCEDES_BENZ_SL_65_AMG","JAGUAR_XK","CADILLAC_CTS","VIL_smart_civil","VIL_smart_civil1"];
 //18
-_sc5 = ["CL_PORSCHE_997","CL_LAMBORGHINI_GT3","KOENIGSEGG_CCX","KOENIGSEGG_CCX1","KOENIGSEGG_CCX2","KOENIGSEGG_CCX3","MCLAREN_F1","MERCEDES_BENZ_SLR","PORSCHE_997_GT3_RSR","PORSCHE_911_TURBO","PORSCHE_911_GT3_RS","LAMBORGHINI_MURCIELAGO","LAMBORGHINI_REVENTON","LAMBORGHINI_GALLARDO","MASERATI_MC12","JAGUAR_XK","BUGATTI_VEYRON","AUDI_TT_QUATTRO_S_LINE","AUDI_FSI_LE_MANS","PAGANI_ZONDA_F","ASTON_MARTIN_DB9"];
+_sc5 = [
+	"DD_MCL13P1_Black",
+	"DD_MCL13P1_Blue",
+	"DD_MCL13P1_Camo",
+	"DD_MCL13P1_DarkGreen",
+	"DD_MCL13P1_DarkRed",
+	"DD_MCL13P1_Green",
+	"DD_MCL13P1_Orange",
+	"DD_MCL13P1_Red",
+	"DD_MCL13P1_UrbanCamo",
+	"DD_MCL13P1_White",
+	"DD_MCL13P1_Yellow",
+	"CL_PORSCHE_997",
+	"CL_LAMBORGHINI_GT3",
+	"KOENIGSEGG_CCX",
+	"KOENIGSEGG_CCX1",
+	"KOENIGSEGG_CCX2",
+	"KOENIGSEGG_CCX3",
+	"MCLAREN_F1",
+	"MERCEDES_BENZ_SLR",
+	"PORSCHE_997_GT3_RSR",
+	"PORSCHE_911_TURBO",
+	"PORSCHE_911_GT3_RS",
+	"LAMBORGHINI_MURCIELAGO",
+	"LAMBORGHINI_REVENTON",
+	"LAMBORGHINI_GALLARDO",
+	"MASERATI_MC12",
+	"JAGUAR_XK",
+	"BUGATTI_VEYRON",
+	"AUDI_TT_QUATTRO_S_LINE",
+	"AUDI_FSI_LE_MANS",
+	"PAGANI_ZONDA_F",
+	"ASTON_MARTIN_DB9"
+];
 //19
 _sc6 = ["NISSAN_GTR_SPECV","NISSAN_GTR_SPECV1","NISSAN_GTR_SPECV2","NISSAN_GTR_SPECV3","NISSAN_350Z","NISSAN_370Z","NISSAN_370Z1","NISSAN_370Z2","NISSAN_370Z3","NISSAN_370Z4","NISSAN_SKYLINE_GT_R_Z","NISSAN_SKYLINE_GT_R_Z1","NISSAN_SKYLINE_GT_R_Z2","NISSAN_SKYLINE_GT_R_Z3"];
 //20
@@ -1520,7 +1553,7 @@ INV_ItemShops = [
 	[OL_Shop_Pistol,						"Licensed Pistol",										OL_Shop_Pistol,			OL_Shop_Pistol,		_pistol,						_pistol,						true,  "[getPlayerUID player]"],
 	[sub,												"Submachine Gun",											sub,								sub,							_sub,								_sub,								true,  "[getPlayerUID player]"],
 	[rifle,											"Licensed Rifle",											rifle,							rifle,						_rifle,							_rifle,							true,  "[getPlayerUID player]"],
-	[guss,											"Illegal Fire Arms",									gussbox,						dummyobj,					_guss,							_guss,							true,  "[getPlayerUID player]"],
+	[OL_Shop_Guss,							"Illegal Fire Arms",									gussbox,						dummyobj,					_guss,							_guss,							true,  "[getPlayerUID player]"],
 	[fuel2,											"Fuel-station Shop",									dummyobj,						dummyobj,					_fs,								_fs,								true,  "[getPlayerUID player]"],
 	[fuel4,											"Fuel-station Shop",									dummyobj,						dummyobj,					_fs,								_fs,								true,  "[getPlayerUID player]"],
 	[fuel5,											"Fuel-station Shop",									dummyobj,						dummyobj,					_fs,								_fs,								true,  "[getPlayerUID player]"],

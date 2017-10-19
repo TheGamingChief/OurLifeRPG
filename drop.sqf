@@ -25,13 +25,13 @@ if (_item call INV_getitemDropable) then {
 
 		if (_item == "geld") then {
 			["money_dropped", format ["%1 (%2) has dropped $%3 at GRID: %4", PlayerName, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
-			_object setVariable ["owner", getPlayerUID player,true];
 		};
 
 		_pos = getposASL player;
 		_object = _class createvehicle _pos;
 		_object setposASL getposASL player;
 		_object setvariable ["droparray", [_amount, _item], true];
+		_object setVariable ["owner", getPlayerUID player, true];
 
 	}	else {
 		player groupChat "You don't have that many objects to drop";

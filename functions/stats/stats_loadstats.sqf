@@ -14,6 +14,7 @@ if (_key == "no_data") then {
 	player groupChat "Welcome to the Community!";
 	INV_SavedVehAir = [];
 	INV_SavedVehLand = [];
+	OL_PlayTime 		 = 0;
 } else {
 	//Get Data
 	_side 	= playerSide;

@@ -40,7 +40,7 @@ switch (_this select 0) do {
     if (dialog) then { closeDialog 0 };
     if (!createDialog "UI_ListMenuBig") exitWith { hint "Dialog Error!" };
 
-    if (count OL_Bolos < 1) exitWith { player groupChat "No bolos to display"; closeDialog 0; };
+    _somethingDisplayed = false;
 
     {
       if ((_x select 4) == "EXPIRED") then {
@@ -52,8 +52,11 @@ switch (_this select 0) do {
         lbAdd [1500, format["End Time: %1", [(_x select 1) / 60 / 60] call BIS_fnc_timeToString]];
         lbAdd [1500, format["Status: %1", _x select 4]];
         lbAdd [1500, "==============================================================================="];
+        _somethingDisplayed = true;
       };
     } forEach OL_Bolos;
+
+    if (!_somethingDisplayed) then { lbAdd [1500, "No expired bolos to display!"] };
 
     ctrlSetText [1600, "View Bolos"];
     buttonSetAction [1600, "['LIST'] call OL_ui_BoloMenu;"];
