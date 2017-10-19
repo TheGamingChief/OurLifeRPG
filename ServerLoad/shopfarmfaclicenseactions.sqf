@@ -15,8 +15,6 @@ _Arr1 = [];
 _Arr2 = [];
 
 for [{_i=0}, {_i < (count INV_FarmItemArray)},{_i=_i+1}] do {_Arr1 = _Arr1 + [0]};
-/*for [{_i=0}, {_i < (count INV_Lizenzen)},{_i=_i+1}] do {_Arr2 = _Arr2 + [0]};*/
-
 shopusearray = [];
 
 sleep 10;
@@ -101,39 +99,3 @@ for [{_i = 0}, {_i < (count INV_FarmItemArray)}, {_i = _i + 1}] do
 		if ((player distance _flag >  5) and (_a3 == 1) and (_f2 == _i)) then {
 		player removeaction INV_action_facbuy;
 		_a3 = 0;		};				};
-
-
-
-//======================================LICENSES=========================================
-/*
-for [{_i = 0}, {_i <= ((count INV_Lizenzen)) - 1}, {_i = _i + 1}] do {
-
-	_license     = ((INV_Lizenzen select _i) select 0);
-	_flag        = ((INV_Lizenzen select _i) select 1);
-	_licensename = ((INV_Lizenzen select _i) select 2);
-	_cost        = ((INV_Lizenzen select _i) select 3);
-	_added       = _Arr2 select _i;
-
-	_closestLicShop = 999;
-	{
-	  if (player distance _x < _closestLicShop) then {
-		_closestLicShop = player distance _x;
-	  };
-	} forEach ((INV_Lizenzen select _i) select 1);
-
-	if ((_closestLicShop <= 5) and !(((INV_Lizenzen select _i) select 0) call OL_license_Owns) and (_Arr2 select _i == 0)) then {
-		call compile format ["a_license%1 = player addaction [format[localize ""STRS_inv_actions_buy"", ""%2"", %3], ""addlicense.sqf"", [%1, ""add""]];", _i, _licensename, (_cost call OL_ISSE_str_IntToStr)];
-		_Arr2 set [_i, 1];
-	};
-
-	if ((_closestLicShop > 5) and (_Arr2 select _i == 1) || (_license call OL_license_Owns)) then {
-		_autismLicName = format["a_license%1", _i];
-
-		if (!(isNil(_autismLicName))) then {
-			call compile format ["player removeaction %1;", _autismLicName];
-			_Arr2 set [_i,0];
-		};
-	};
-};
-sleep 1;
-};*/

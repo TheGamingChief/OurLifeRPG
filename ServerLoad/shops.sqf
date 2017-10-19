@@ -28,16 +28,6 @@ _ass =
 	"RH_9mm_32RND_SD_Mag",
 	"RH_mp5sd6eot_ass",
 	"30rnd_9x19_MP5SD",
-	"RH_krisssd_ass",
-	"RH_krisssdaim_ass",
-	"RH_krisssdeot_ass",
-	"RH_krisssdRFX_ass",
-	"RH_45ACP_30RND_SD_Mag",
-	"RH_umpsd_ass",
-	"RH_umpsdaim_ass",
-	"RH_umpsdeot_ass",
-	"RH_umpsdRFX_ass",
-	"RH_45ACP_25RND_SD_Mag",
 	"RH_mp7sd_ass",
 	"RH_mp7sdaim_ass",
 	"RH_mp7sdeot_ass",
@@ -1209,8 +1199,6 @@ _sub =
 
 _rifle =
 [
-	"BAF_LRR_scoped_gs",
-	"5Rnd_86x70_L115A1",
 	"Huntingrifle",
 	"5x_22_LR_17_HMR",
 	"MBG_Compound_Bow",
@@ -1232,7 +1220,6 @@ _guss =
 	"RH_9mm_32RND_Mag",
 	"RH_TMP_guss",
 	"30Rnd_9x19_MP5",
-	"RH_m1s_guss",
 	"RH_m14_guss",
 	"20Rnd_762x51_DMR",
 	"RH_mp5a4aim_guss",
@@ -1241,22 +1228,11 @@ _guss =
 	"30Rnd_9x19_MP5",
 	"RH_m4aim_guss",
 	"RH_m4eotech_guss",
-	"RH_m4acog_guss",
 	"30Rnd_556x45_Stanag",
-	"RH_UMP_guss",
-	"RH_umpaim_guss",
-	"RH_umpeot_guss",
-	"RH_umpRFX_guss",
-	"RH_45ACP_25RND_Mag",
 	"RH_mp7_guss",
 	"RH_mp7aim_guss",
 	"RH_mp7eot_guss",
-	"RH_46x30mm_40RND_Mag",
-	"RH_hk416aim_guss",
-	"RH_hk416eotech_guss",
-	"RH_hk416acog_guss",
-	"RH_star21_guss",
-	"30Rnd_556x45_Stanag"
+	"RH_46x30mm_40RND_Mag"
 ];
 
 _gangshop_buy =

@@ -47,6 +47,7 @@ switch (_this select 0) do {
         lbAdd [1500, format["Vehicle: %1", (_x select 2) select 0]];
         lbAdd [1500, format["Reason: %1", (_x select 2) select 1]];
         lbAdd [1500, format["Last Seen: %1", (_x select 2) select 2]];
+        lbAdd [1500, format["Submitted By: %1 - %2", (_x select 3) select 1, (_x select 3) select 0]]
         lbAdd [1500, format["Start Time: %1", [(_x select 0) / 60 / 60] call BIS_fnc_timeToString]];
         lbAdd [1500, format["End Time: %1", [(_x select 1) / 60 / 60] call BIS_fnc_timeToString]];
         lbAdd [1500, format["Status: %1", _x select 4]];
