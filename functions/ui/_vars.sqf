@@ -100,7 +100,7 @@ OL_ATM_Clothes = [
 	],
 	[OL_ATM_CoastGuard,
 		[
-			["olrpg_sdpilot", "PDAviation_id", "Deputy Pilot Uniform"]
+			["olrpg_dnrdepuni",	 "JrDeputy_id",	 "DNR Uniform"]
 		]
 	],
 

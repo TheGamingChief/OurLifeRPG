@@ -37,7 +37,7 @@ switch (_mode) do {
 			GET_CTRL(balca_debug_console_result_IDC) ctrlSetText str _result;
 			__uiSet(balca_console_result,_result);
 		};
-		["PGSpawn_Log", format ["%1 (%2) has executed command <%3> at %4", PlayerName, getPlayerUID player, _command, _gridPos]] call RM_fnc_LogToServer;
+		["PGSpawn_Log", format ["%1 (%2) has executed command <%3> at %4", PlayerName, getPlayerUID player, _command, mapGridPosition player]] call RM_fnc_LogToServer;
 	};
 	case 2: {//fill console from history
 		GET_CTRL(balca_debug_console_edit_IDC) ctrlSetText GET_SELECTED_DATA(balca_debug_console_history_IDC);

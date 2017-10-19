@@ -128,28 +128,6 @@ _sc7 = ["350z_red","350z_kiwi","350z_black","350z_silver","350z_green","350z_blu
 //21
 _sc8 =
 [
-	"DD_FOR13Mustang_Black",			// 2013 Ford Mustang (Black)
-	"DD_FOR13Mustang_Blue",				// 2013 Ford Mustang (Blue)
-	"DD_FOR13Mustang_Camo",				// 2013 Ford Mustang (Camo)
-	"DD_FOR13Mustang_DarkGreen",	// 2013 Ford Mustang (Dark Green)
-	"DD_FOR13Mustang_DarkRed",		// 2013 Ford Mustang (Dark Red)
-	"DD_FOR13Mustang_Green",			// 2013 Ford Mustang (Green)
-	"DD_FOR13Mustang_Orange",			// 2013 Ford Mustang (Orange)
-	"DD_FOR13Mustang_Red",				// 2013 Ford Mustang (Red)
-	"DD_FOR13Mustang_UrbanCamo",	// 2013 Ford Mustang (White)
-	"DD_FOR13Mustang_White",			// 2013 Ford Mustang (White)
-	"DD_FOR13Mustang_Yellow",			// 2013 Ford Mustang (Yellow)
-	"DD_CHE10Impala_Black",				// Impala SS 2010 (Black)
-	"DD_CHE10Impala_Blue",				// Impala SS 2010 (Blue)
-	"DD_CHE10Impala_Camo",				// Impala SS 2010 (Camo)
-	"DD_CHE10Impala_DarkGreen",		// Impala SS 2010 (Dark Green)
-	"DD_CHE10Impala_DarkRed",			// Impala SS 2010 (Dark Red)
-	"DD_CHE10Impala_Green",				// Impala SS 2010 (Green)
-	"DD_CHE10Impala_Orange",			// Impala SS 2010 (Orange)
-	"DD_CHE10Impala_Red",					// Impala SS 2010 (Red)
-	"DD_CHE10Impala_UrbanCamo",		// Impala SS 2010 (Urban Camo)
-	"DD_CHE10Impala_White",				// Impala SS 2010 (White)
-	"DD_CHE10Impala_Yellow",			// Impala SS 2010 (Yellow)
 	"tcg_taurus_civ1",
 	"tcg_taurus_civ2",
 	"tcg_taurus_civ3",
@@ -161,7 +139,18 @@ _sc8 =
 	"il_fordcv_black",
 	"il_fordcv_darkblue",
 	"il_fordcv_maroon",
-	"il_fordcv_sandstone"
+	"il_fordcv_sandstone",
+	"DD_CHE10Impala_Black",			// Impala SS 2010 (Black)
+	"DD_CHE10Impala_Blue",			// Impala SS 2010 (Blue)
+	"DD_CHE10Impala_Camo",			// Impala SS 2010 (Camo)
+	"DD_CHE10Impala_DarkGreen",		// Impala SS 2010 (Dark Green)
+	"DD_CHE10Impala_DarkRed",		// Impala SS 2010 (Dark Red)
+	"DD_CHE10Impala_Green",			// Impala SS 2010 (Green)
+	"DD_CHE10Impala_Orange",		// Impala SS 2010 (Orange)
+	"DD_CHE10Impala_Red",			// Impala SS 2010 (Red)
+	"DD_CHE10Impala_UrbanCamo",		// Impala SS 2010 (Urban Camo)
+	"DD_CHE10Impala_White",			// Impala SS 2010 (White)
+	"DD_CHE10Impala_Yellow"			// Impala SS 2010 (Yellow)
 ];
 //22
 _sc9 =
@@ -653,7 +642,8 @@ _copcpt =
 //66
 _copchief =
 [
-"sahco",
+"x26",
+"x26_Mag",
 "MakarovSD",
 "8Rnd_9x18_MakarovSD",
 "RH_deaglemzb_cmd",
@@ -766,11 +756,6 @@ _copk9sheriff =
 "olrpg_sd_k9cv_slick_fpb" //"DD_CHE08Tahoe_P_SK9"
 ];
 
-_copav3 =
-[
-//"DD_CHE10Impala_P_P_APO",
-"olrpg_pdcv_pool_pb" //"DD_FOR13Taurus_P_APO"
-];
 
 //69
 _copav2 =
@@ -978,16 +963,6 @@ _copcoastguard =
 [
 "olrpg_sdpbx",
 "olrpg_sdrhib"
-];
-
-
-//73
-_copcoastguardair =
-[
-"pmo_mh6jc_green",
-"olrpg_sdbell206",
-"olrpg_sdhh60",
-"olrpg_sdmh60"
 ];
 
 //73.5
@@ -1694,15 +1669,13 @@ INV_ItemShops = [
 	[copsheriff,								"Sheriff Command Equipment",					copsheriff,					ccarspawn1,				_copsheriff,				_copsgt,						true,  "Sheriff_id"],
 	[copsheriffmks,							"Sheriff Marksman",										copsheriffmks,			dummyobj,					_copsheriffmks,			_copsheriffmks,			true,  "JrDeputy_id"],
 	[copk92,										"Sheriff K-9 Equipment",							copk92,							ccarspawn1,				_copk9sheriff,			_copk9sheriff,			true,  "K9_id"],
-	[copsheriffdnr,							"Sheriff D.N.R",											copsheriffdnr,			ccarspawn1,				_copsheriffdnr,			_copsheriffdnr,			true,  "JrDeputy_id"],
-	[copcoastguard,							"Sheriff Marine Water Craft",					dummyobj,						cgboatspawn,			_copcoastguard,			_copcoastguard,			true,  "Coastguard_id"],
-	[copcoastguardair,					"Sheriff Marine Aviation",						dummyobj,						jailpadcg,				_copcoastguardair,	_copcoastguardair,	true,  "Coastguard_id"],
+	[copsheriffdnr,							"Sheriff D.N.R Equipment",											copsheriffdnr,			dnrspawn,				_copsheriffdnr,			_copsheriffdnr,			true,  "JrDeputy_id"],
+	[copcoastguard,							"Sheriff D.N.R Water Craft",					dummyobj,						cgboatspawn,			_copcoastguard,			_copcoastguard,			true,  "Coastguard_id"],
 	[copair2,										"Sheriff Aviation",										copairweapon2, 			airsheriff,				_copavsh,						_copavsh,						true,  "PDAviation_id"],
 
 	[copav1,										"Aviation",														copav1, 						cairspawn,				_copav1,						_copav1,						true,  "PDAviation_id"],
 	[copav2,										"Operation Pilot",										copav2, 						cairspawn,				_copav2,						_copav2,						true,  "PDAviation_id"],
-	[copav3,										"Air Patrol Operations",							dummyobj, 					copavapo,					_copav3,						_copav3,						true,  "PDAviation_id"],
-
+	
 	[cidbox,										"CID Equipment",											cidbox,							cidcarspawn,			_cid,								_cid,								true,  "Undercover_id"],
 
 	[copmedalbox,								"Medal Recipients Equipment",					copmedalbox,				ccarspawnchief,		_copmedal,					_copmedal,					true,  "MedalRecipt_id"],
