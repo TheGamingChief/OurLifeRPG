@@ -164,7 +164,7 @@ fnc_KeyPress_L = {
 };
 
 fnc_KeyPress_T = {
-	if (!INV_shortcuts || isstunned) exitwith {};
+	if (!INV_shortcuts || vehicle player == player || isstunned) exitwith {};
 	if (dialog) then { closeDialog 0 };
 	if (UpgradingCar) exitWith { player groupChat "You can't access the trunk while upgrading a vehicle." };
 

@@ -22,15 +22,19 @@ publicVariable "bank_steuer";
 MayorNumber = -1;
 publicVariable "MayorNumber";
 
+
 //kyles second script
 
 if ((_this select 0) == "Arrested") then {
   format ['
     server globalChat "The Governor has been arrested and so laws have been reset!";
+    false call OL_misc_TurnMayor;
+    if (isMayor) then { isMayor = false };
   '] call OL_network_Swag;
 } else {
   format ['
     server globalChat "%1 has just reset the laws";
+    false call OL_misc_TurnMayor;
     if (isMayor) then { isMayor = false };
   ', PlayerName] call OL_network_Swag;
 };
