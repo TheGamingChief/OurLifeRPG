@@ -128,6 +128,28 @@ _sc7 = ["350z_red","350z_kiwi","350z_black","350z_silver","350z_green","350z_blu
 //21
 _sc8 =
 [
+	"DD_FOR13Mustang_Black",			// 2013 Ford Mustang (Black)
+	"DD_FOR13Mustang_Blue",				// 2013 Ford Mustang (Blue)
+	"DD_FOR13Mustang_Camo",				// 2013 Ford Mustang (Camo)
+	"DD_FOR13Mustang_DarkGreen",	// 2013 Ford Mustang (Dark Green)
+	"DD_FOR13Mustang_DarkRed",		// 2013 Ford Mustang (Dark Red)
+	"DD_FOR13Mustang_Green",			// 2013 Ford Mustang (Green)
+	"DD_FOR13Mustang_Orange",			// 2013 Ford Mustang (Orange)
+	"DD_FOR13Mustang_Red",				// 2013 Ford Mustang (Red)
+	"DD_FOR13Mustang_UrbanCamo",	// 2013 Ford Mustang (White)
+	"DD_FOR13Mustang_White",			// 2013 Ford Mustang (White)
+	"DD_FOR13Mustang_Yellow",			// 2013 Ford Mustang (Yellow)
+	"DD_CHE10Impala_Black",				// Impala SS 2010 (Black)
+	"DD_CHE10Impala_Blue",				// Impala SS 2010 (Blue)
+	"DD_CHE10Impala_Camo",				// Impala SS 2010 (Camo)
+	"DD_CHE10Impala_DarkGreen",		// Impala SS 2010 (Dark Green)
+	"DD_CHE10Impala_DarkRed",			// Impala SS 2010 (Dark Red)
+	"DD_CHE10Impala_Green",				// Impala SS 2010 (Green)
+	"DD_CHE10Impala_Orange",			// Impala SS 2010 (Orange)
+	"DD_CHE10Impala_Red",					// Impala SS 2010 (Red)
+	"DD_CHE10Impala_UrbanCamo",		// Impala SS 2010 (Urban Camo)
+	"DD_CHE10Impala_White",				// Impala SS 2010 (White)
+	"DD_CHE10Impala_Yellow",			// Impala SS 2010 (Yellow)
 	"tcg_taurus_civ1",
 	"tcg_taurus_civ2",
 	"tcg_taurus_civ3",
@@ -139,18 +161,7 @@ _sc8 =
 	"il_fordcv_black",
 	"il_fordcv_darkblue",
 	"il_fordcv_maroon",
-	"il_fordcv_sandstone",
-	"DD_CHE10Impala_Black",			// Impala SS 2010 (Black)
-	"DD_CHE10Impala_Blue",			// Impala SS 2010 (Blue)
-	"DD_CHE10Impala_Camo",			// Impala SS 2010 (Camo)
-	"DD_CHE10Impala_DarkGreen",		// Impala SS 2010 (Dark Green)
-	"DD_CHE10Impala_DarkRed",		// Impala SS 2010 (Dark Red)
-	"DD_CHE10Impala_Green",			// Impala SS 2010 (Green)
-	"DD_CHE10Impala_Orange",		// Impala SS 2010 (Orange)
-	"DD_CHE10Impala_Red",			// Impala SS 2010 (Red)
-	"DD_CHE10Impala_UrbanCamo",		// Impala SS 2010 (Urban Camo)
-	"DD_CHE10Impala_White",			// Impala SS 2010 (White)
-	"DD_CHE10Impala_Yellow"			// Impala SS 2010 (Yellow)
+	"il_fordcv_sandstone"
 ];
 //22
 _sc9 =
