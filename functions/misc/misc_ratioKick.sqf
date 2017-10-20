@@ -7,9 +7,11 @@ if ((getPlayerUID player) in OL_SwagDevs || (getPlayerUID player) in adminlevel4
 {
 	if (_x call OL_ISSE_UnitExists) then {
 		if (_x getVariable ["OL_StatsLoaded", false]) then {
-			switch (true) do {
-				case (_x in coparray): { _cops = _cops + 1 };
-				case (_x in civarray): { _civs = _civs + 1 };
+			if (isPlayer _x) then {
+				switch (true) do {
+					case (_x in coparray): 	 { _cops = _cops + 1 };
+					case (_x in civarray): 	 { _civs = _civs + 1 };
+				};
 			};
 		};
 	};

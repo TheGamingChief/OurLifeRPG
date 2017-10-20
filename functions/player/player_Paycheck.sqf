@@ -1,3 +1,4 @@
+if (OL_isAFK) exitWith { player groupChat "You are not receiving due to being AFK." };
 if (player getVariable "KOED" || !(alive player)) exitWith { player groupChat "Sorry but we do not pay people to be dead." };
 
 if (playerSide == west) exitWith {
@@ -63,7 +64,7 @@ if (playerSide == west) exitWith {
   	};
   };
 
-  _income = _income + (round(random OL_PlayTime));
+  _income = _income + ((round(random OL_PlayTime)) / 2);
 
   if (getPlayerUID player in MedalRecipt_id) then { _income = _income + 1000  };
   if (getPlayerUID player in adminlevel1) 	 then { _income = _income + 2500  };
@@ -106,7 +107,7 @@ if (playerSide == resistance) exitWith {
     };
   };
 
-  _income = _income + (round(random OL_PlayTime));
+  _income = _income + ((round(random OL_PlayTime)) / 2);
 
   if (getPlayerUID player in adminlevel1) 	 then { _income = _income + 2500  };
   if (getPlayerUID player in adminlevel2)    then { _income = _income + 5000  };
@@ -131,7 +132,7 @@ if (playerSide == civilian) exitWith {
     if (OL_Shop_Gangarea4 getVariable "control" == (call OL_gangs_getName)) then { _income = _income + (gangincome / _activeGangMembers) };
   };
 
-  _income = _income + (round(random OL_PlayTime));
+  _income = _income + ((round(random OL_PlayTime)) / 2);
 
   if (getPlayerUID player in MedalRecipt_id) then { _income = _income + 1000  };
   if (getPlayerUID player in adminlevel1) 	 then { _income = _income + 2500  };

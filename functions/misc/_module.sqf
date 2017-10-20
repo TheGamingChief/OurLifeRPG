@@ -28,6 +28,7 @@ DD_Modules = DD_Modules + [
   ["OL",    "misc", "Hunger",              1],
   ["OL",    "misc", "TurnMayor",           1],
   ["OL",    "misc", "Radar",               0],
+  ["OL",    "misc", "isAFK",               0],
   ["OL",    "misc", "dogAttack",           1],
   ["OL",    "misc", "dogKilled",           1],
   ["OL",    "misc", "dogSearch",           1],

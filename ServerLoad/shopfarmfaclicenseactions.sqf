@@ -99,3 +99,4 @@ for [{_i = 0}, {_i < (count INV_FarmItemArray)}, {_i = _i + 1}] do
 		if ((player distance _flag >  5) and (_a3 == 1) and (_f2 == _i)) then {
 		player removeaction INV_action_facbuy;
 		_a3 = 0;		};				};
+};
