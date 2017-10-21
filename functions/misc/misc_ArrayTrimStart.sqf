@@ -1,7 +1,7 @@
 _arr    = _this select 0;
 _length = _this select 1;
 
-if ((typeName _arr != "ARRAY") || (count _arr <= _length)) exitWith { diag_log format["CP_misc_ArrayTrimStart: %1", _this] };
+if ((typeName _arr != "ARRAY") || (count _arr <= _length)) exitWith { diag_log format["CP_misc_ArrayTrimStart: %1", _this]; [] };
 
 _return = [];
 _pos    = 0;

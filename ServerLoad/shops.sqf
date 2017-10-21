@@ -128,6 +128,17 @@ _sc7 = ["350z_red","350z_kiwi","350z_black","350z_silver","350z_green","350z_blu
 //21
 _sc8 =
 [
+	"DD_FOR13Mustang_Black",
+	"DD_FOR13Mustang_Blue",
+	"DD_FOR13Mustang_Camo",
+	"DD_FOR13Mustang_DarkGreen",
+	"DD_FOR13Mustang_DarkRed",
+	"DD_FOR13Mustang_Green",
+	"DD_FOR13Mustang_Orange",
+	"DD_FOR13Mustang_Red",
+	"DD_FOR13Mustang_UrbanCamo",
+	"DD_FOR13Mustang_White",
+	"DD_FOR13Mustang_Yellow",
 	"tcg_taurus_civ1",
 	"tcg_taurus_civ2",
 	"tcg_taurus_civ3",
@@ -1675,7 +1686,7 @@ INV_ItemShops = [
 
 	[copav1,										"Aviation",														copav1, 						cairspawn,				_copav1,						_copav1,						true,  "PDAviation_id"],
 	[copav2,										"Operation Pilot",										copav2, 						cairspawn,				_copav2,						_copav2,						true,  "PDAviation_id"],
-	
+
 	[cidbox,										"CID Equipment",											cidbox,							cidcarspawn,			_cid,								_cid,								true,  "Undercover_id"],
 
 	[copmedalbox,								"Medal Recipients Equipment",					copmedalbox,				ccarspawnchief,		_copmedal,					_copmedal,					true,  "MedalRecipt_id"],

@@ -142,7 +142,7 @@ if (playerSide == civilian) exitWith {
   if (getPlayerUID player in OL_SwagDevs)    then { _income = _income + 12500 };
 
   Kontostand = Kontostand + (round _income);
-  player groupChat format [localize "STRS_geld_civmoneyadd", rolestring, (_income call OL_ISSE_str_IntToStr)];
+  player groupChat format [localize "STRS_geld_civmoneyadd", rolestring, ((round _income) call OL_ISSE_str_IntToStr)];
 
   if (isMayor) then {
     MayorTaxes = MayorTaxes + INV_SteuernGezahlt;
