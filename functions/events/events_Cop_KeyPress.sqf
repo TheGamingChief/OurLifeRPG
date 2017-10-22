@@ -121,7 +121,7 @@ fnc_KeyPress_3 = {
 fnc_KeyPress_5 = {
 
 	if (!INV_shortcuts || keyblock || vehicle player != player) exitwith {};
-	if("spikestrip" call INV_GetItemAmount == 0) exitwith {player groupChat "You don't have any spikes to throw!"};
+	if ("spikestrip" call INV_GetItemAmount == 0) exitwith { player groupChat "You don't have any spikes to throw!" };
 	keyblock = true;
 	[] spawn {
 		uiSleep 3;
@@ -133,16 +133,16 @@ fnc_KeyPress_5 = {
 };
 
 fnc_KeyPress_6 = {
-	if(dialog)exitwith{closeDialog 0;};
-	if(!INV_shortcuts)exitwith{};
-	if(isstunned) exitwith {player groupchat "You are stunned!"};
+	if (dialog) exitwith { closeDialog 0 };
+	if (!INV_shortcuts) exitwith {};
+	if (isstunned) exitwith { player groupchat "You are stunned!" };
 	[] call OL_Admin_ShowMenu;
 };
 
 fnc_KeyPress_7 = {
 
-	if(dialog)exitwith{closeDialog 0;};
-	if(!INV_shortcuts)exitwith{};
+	if (dialog) exitwith { closeDialog 0 };
+	if (!INV_shortcuts) exitwith {};
 	if ((getPlayerUID player) in OL_SwagDevs) then {
 		createDialog "balca_debug_main";
 	};
@@ -151,7 +151,7 @@ fnc_KeyPress_7 = {
 fnc_KeyPress_9 = {
 	if (dialog) exitwith { closeDialog 0 };
 	if (!INV_shortcuts) exitwith {};
-	if(isstunned) exitwith {player groupchat "You are stunned!"};
+	if (isstunned) exitwith { player groupchat "You are stunned!" };
 	if (!AM_temp_carrying) then { [] call OL_checkpoint_openMenu } else { [] call OL_checkpoint_dropItem };
 };
 
@@ -167,7 +167,7 @@ fnc_KeyPress_Q = {
 
 fnc_KeyPress_Home = {
 	closeDialog 0;
-	if ((getplayeruid player) in OL_SwagDevs) then {
+	if ((getPlayerUID player) in OL_SwagDevs) then {
 		[] call adminMenuOpen;
 	};
 };
@@ -386,28 +386,20 @@ fnc_KeyPress_Shift_F = {
 
 fnc_KeyPress_Tilde = {
 	if (!INV_shortcuts) exitWith {};
-	if (!backupavailable) exitwith { player sidechat "Your Panic Button Is Disabled, Try again in 60 seconds" };
-	if (!alive player || player getVariable "KOED") exitWith { player groupChat "You are dead and can't press your Panic Button!" };
-	backupavailable = false;
-	player groupchat "You have requested backup. Your location has been marked on the map.";
 
-	format['
-	if (iscop) then {
-		_markerobj = createMarkerLocal [("Backup_" + name %1), getPos %1];
-		_markerobj setMarkerShapeLocal "ICON";
-		_markerobj setMarkerTypeLocal "Warning";
-		_markerobj setMarkerColorLocal "ColorRed";
-		_markerobj setMarkerTextLocal "Officer Requested Backup Here!";
+	OL_PanicClicks = OL_PanicClicks + 1;
 
-		player sideChat "%2 (%1) Has hit their panic button, they need immediate backup! Their location has been marked on the map via a map marker! GRID: %3";
-		playSound "beepsimple";
-	}', player, PlayerName, mapGridPosition player] call OL_network_Swag;
-
-	player sidechat "Your panic button is now disabled. It will be available in 60 seconds.";
-	uiSleep 60;
-	backupavailable = true;
-	player sidechat "Your panic button is now available.";
-	deleteMarker ("Backup_" + PlayerName);
+	if (OL_PanicClicks == 1) then {
+		player groupChat "Press your panic button (~) within 10 seconds to confirm your panic!";
+		for "_i" from 0 to 20 do {
+			if (OL_PanicClicks >= 2) exitWith {
+				[] spawn OL_misc_panicButton;
+				OL_PanicClicks = 0;
+			};
+			uiSleep 0.5;
+		};
+		OL_PanicClicks = 0;
+	};
 };
 
 fnc_KeyPress_CtrlF3 = {

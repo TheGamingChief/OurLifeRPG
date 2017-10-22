@@ -37,6 +37,7 @@ switch (_this select 0) do {
     format['if (player == %1) then {
         INV_VehicleArray = INV_VehicleArray + [%2];
         player groupChat "You have received keys to a vehicle.";
+        [player] call OL_vehicle_KeysToServer;
     };', _civ, _key] call OL_network_Swag;
 
     player groupChat "You gave the keys to the selected player.";

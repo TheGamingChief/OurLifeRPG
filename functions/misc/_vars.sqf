@@ -16,8 +16,10 @@ OL_SpeedUpgrades = [
 	["tow_supgrade3", 3],
 	["supgrade4",     4],
 	["supgrade4_pd",  4],
+	["tow_supgrade4", 4],
 	["supgrade5",     5],
 	["supgrade5_pd",  5],
+	["tow_supgrade5", 5],
 	["speedx",        6]
 ];
 

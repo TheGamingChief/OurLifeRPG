@@ -12,7 +12,7 @@ if (isNil "_key") exitWith {
 
 if (_key == "no_data") then {
 	player groupChat "Welcome to the Community!";
-	INV_SavedVehAir = [];
+	INV_SavedVehAir  = [];
 	INV_SavedVehLand = [];
 	OL_PlayTime 		 = 0;
 } else {
@@ -268,7 +268,7 @@ if (_key == "no_data") then {
 				OL_Licenses   		= _lic;
 				kontostand 		  	= _bank;
 
-				if ("car" call OL_license_Owns) then {
+				if ("OL_License_civ_drivers" call OL_license_Owns) then {
 					OL_DemeritPoints = 10
 				};
 
@@ -402,7 +402,7 @@ if (_key == "no_data") then {
 		};
 	};
 
-	OL_PlayTime = [_stats select 15] call AM_Server_StrToArr;
+	if (_key == "full_stats") then { OL_PlayTime = [_stats select 15] call AM_Server_StrToArr };
 
 	if (count _stats != 0) then {
 		_statWipeMessage = _stats select 14;
@@ -416,6 +416,7 @@ if (_key == "no_data") then {
 			OL_Licenses   		= [];
 			INV_SavedVehLand  = [];
 			INV_SavedVehAir   = [];
+			OL_PlayTime				= 0;
 			kontostand 		  	= 25000;
 			_weapons          = [];
 			_magazines 		 		= [];

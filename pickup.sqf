@@ -1,4 +1,6 @@
-if(pickingup)exitwith{player groupchat "you are already picking up an item"};
+if (pickingup) exitwith { player groupchat "you are already picking up an item" };
+if (player getVariable "KOED") exitWith { player groupChat "You are dead and cannot pick up any items!" };
+
 pickingup = true;
 
 _action	    = _this select 2;
@@ -8,16 +10,16 @@ _item  	    = _this select 1;
 _tamount    = _this select 2;
 _infos      = _item call INV_getitemArray;
 _name       = _infos call INV_getitemName;
-_itemweight = (_infos call INV_getitemTypeKg)*_tamount;   												
-_ownweight  = call INV_GetOwnWeight; 
+_itemweight = (_infos call INV_getitemTypeKg)*_tamount;
+_ownweight  = call INV_GetOwnWeight;
 _amount     = _this select 2;
 _exitvar    = 0;
 _time       = round time;
 _gridPos = mapGridPosition getpos player;
 
-if ((_ownweight + _itemweight) > INV_Weight) then 
+if ((_ownweight + _itemweight) > INV_Weight) then
 
-{ 
+{
 
 _amount = (floor((INV_Weight - _ownweight) / (_infos call INV_getitemTypeKg)));
 
@@ -33,13 +35,13 @@ _object setvariable ["droparray", nil, true];
 if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};
 
 sleep 1;
-	
+
 
 [_item, _amount, "INV_InventarArray"] call INV_CreateItem;
 
-player groupchat format["You picked up %1 %2", _amount, _name];	
+player groupchat format["You picked up %1 %2", _amount, _name];
 
-if (_item == "geld") then 
+if (_item == "geld") then
 {
 ["money_picked_up", format ["%1 (%2) has picked up $%3 at GRID: %4", PlayerName, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
 };
@@ -63,6 +65,3 @@ pickingup = false;
 };
 
 pickingup = false;
-
-
-

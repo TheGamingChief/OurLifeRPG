@@ -7,7 +7,10 @@ _exit             = false;
 if (!(getPlayerUID player in (call compile _licenseWhitelist))) exitWith { player groupChat "You are not whitelisted for this license!" };
 
 if ("geld" call INV_GetItemAmount < _licensePrice) then {
-  if ("Debit_Card" call INV_GetItemAmount > 0) exitWith { Kontostand = Kontostand - _licensePrice };
+  if ("Debit_Card" call INV_GetItemAmount > 0) exitWith {
+    if (Kontostand < _licensePrice) exitWith { _exit = true };
+    Kontostand = Kontostand - _licensePrice;
+  };
   _exit = true;
 } else {
   ["geld", -_licensePrice] call INV_AddInvItem

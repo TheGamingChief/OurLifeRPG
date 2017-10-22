@@ -6,3 +6,4 @@ slave_cost        = 40000;
 INV_getshopnum    = {};
 OL_PlayerActions  = [];
 fn_SirenMode      = 0;
+OL_PanicClicks    = 0;

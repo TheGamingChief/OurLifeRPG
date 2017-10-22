@@ -5,13 +5,11 @@ _str  = "<t color='#FFFFFF' size='1.75'>Ratio Checker!</t><br/><br/>";
 
 {
 	if (_x call OL_ISSE_UnitExists) then {
-		if (_x getVariable ["OL_StatsLoaded", false]) then {
-			if (isPlayer _x) then {
-				switch (true) do {
-					case (_x in coparray): 	 { _cops = _cops + 1 };
-					case (_x in civarray): 	 { _civs = _civs + 1 };
-					case (_x in medicarray): { _ems  = _ems  + 1 };
-				};
+		if (isPlayer _x) then {
+			switch (true) do {
+				case (_x in coparray): 	 { _cops = _cops + 1 };
+				case (_x in civarray): 	 { _civs = _civs + 1 };
+				case (_x in medicarray): { _ems  = _ems  + 1 };
 			};
 		};
 	};

@@ -17,6 +17,13 @@ if (iscop && !(isciv)) exitWith {
       _mrk = OL_CopMarkerArray select _forEachIndex;
       _mrk setMarkerAlphaLocal 1;
       _mrk setMarkerPosLocal (getPos _x);
+      if (_x getVariable ["ZipTied", false]) then {
+        _mrk setMarkerAlphaLocal 0;
+      };
+    } else {
+      _mrk = OL_CopMarkerArray select _forEachIndex;
+      _mrk setMarkerAlpha 0;
+      _mrk setMarkerPosLocal [0, 0, 0];
     };
   } forEach coparray;
 };
@@ -40,6 +47,10 @@ if (ismedic) exitWith {
       _mrk = OL_EMSMarkerArray select _forEachIndex;
       _mrk setMarkerAlphaLocal 1;
       _mrk setMarkerPosLocal (getPos _x);
+    } else {
+      _mrk = OL_EMSMarkerArray select _forEachIndex;
+      _mrk setMarkerAlpha 0;
+      _mrk setMarkerPosLocal [0, 0, 0];
     };
   } forEach medicarray;
 };

@@ -1,4 +1,4 @@
-waitUntil {player getVariable "OL_StatsLoaded"};
+waitUntil {OL_StatsLoadedFromDB};
 _cops = 0;
 _civs = 0;
 
@@ -6,14 +6,12 @@ if ((getPlayerUID player) in OL_SwagDevs || (getPlayerUID player) in adminlevel4
 
 {
 	if (_x call OL_ISSE_UnitExists) then {
-		if (_x getVariable ["OL_StatsLoaded", false]) then {
 			if (isPlayer _x) then {
 				switch (true) do {
 					case (_x in coparray): 	 { _cops = _cops + 1 };
 					case (_x in civarray): 	 { _civs = _civs + 1 };
 				};
 			};
-		};
 	};
 } forEach playerarray;
 

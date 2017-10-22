@@ -2,6 +2,8 @@
 // ["functionPrefix", "module", "functionFile", execute <int>[0 = exec, 1 = fnc, 2 = both]]
 
 DD_Modules = DD_Modules + [
+  ["OL", "vehicle", "KeysToServer", 1],
+  ["OL", "vehicle", "KeysToClient", 1],
   ["OL", "vehicle", "getImpounded", 1],
   ["OL", "vehicle", "getByType",    1],
   ["OL", "vehicle", "FedImpound",   1],

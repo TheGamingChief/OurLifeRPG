@@ -1,10 +1,9 @@
 private["_timer","_esOnline","_weps","_mags","_holder"];
-_timer = if (({ !(isNull _x) && (_x in medicarray) }count playerarray) > 0) then { 720 } else { 60 };
+_timer = if (({ (_x call OL_isse_UnitExists) && (_x in medicarray) && (isPlayer _x) } count playerarray) > 0) then { 720 } else { 60 };
 
 if (player getVariable "KOED") exitWith {};
-if (vehicle player != player) then {
-	player action ["eject", (vehicle player)]
-};
+if (vehicle player != player) then { player action ["eject", (vehicle player)] };
+
 if (!isNil "civmenuciv") then {
 	civmenuciv setVariable ["Escorted",false,true];
 	detach civmenuciv;
@@ -13,9 +12,9 @@ if (!isNil "civmenuciv") then {
 player setVariable ["KOED", true, true];
 player setVariable ["tf_unable_to_use_radio", true, true];
 player setVariable ["tf_voiceVolume", 0, true];
-player setVariable ["ZipTied",false,true];
-player setVariable ["Gagged",false,true];
-player setVariable ["Escorted",false,true];
+player setVariable ["ZipTied", false, true];
+player setVariable ["Gagged", false, true];
+player setVariable ["Escorted", false, true];
 
 format['%1 allowDamage false', player] call OL_network_Swag;
 [] call OL_Events_ActionToggle;

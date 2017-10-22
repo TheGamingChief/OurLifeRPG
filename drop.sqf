@@ -25,6 +25,7 @@ if (_item call INV_getitemDropable) then {
 
 		if (_item == "geld") then {
 			["money_dropped", format ["%1 (%2) has dropped $%3 at GRID: %4", PlayerName, getPlayerUID player, _amount, _gridPos]] call RM_fnc_LogToServer;
+			[] call fnc_SaveStats;
 		};
 
 		_pos = getposASL player;

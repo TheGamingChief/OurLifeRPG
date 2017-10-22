@@ -47,3 +47,5 @@ INV_SavedVehAir       = [];
 
 OL_VehicleGarage      = [];
 OL_Licenses           = [];
+
+OL_PlayTime           = 0;

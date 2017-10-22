@@ -129,6 +129,8 @@ INV_CreateVehicle = {
     ';processInitCommands;
   };
 
+  [player] call OL_vehicle_KeysToServer;
+
   newvehicle;
 };
 

@@ -6,9 +6,9 @@ switch(_screen)do{
 	case "view":
 	{
 		_unit 		= _this select 2;
-		_warrants =	 _unit getVariable ["PlayerWarrants", []];
-		_licenses	= _unit getVariable["Licenses",[]];
-		_vehicles = _unit getVariable["Cars", []];
+		_warrants =	_unit getVariable ["PlayerWarrants", []];
+		_licenses	= _unit getVariable ["Licenses",[]];
+		_vehicles = _unit getVariable ["Cars", []];
 		_notes	  = _unit getVariable ["Notes", []];
 		_dl 			= createDialog "DD_PolicePC";
 
@@ -33,7 +33,7 @@ switch(_screen)do{
 		lbAdd[1500, "------  LICENSES  ------"];
 		if(count(_licenses) > 0)then{
 			{
-				lbAdd[1500, _x];
+				lbAdd[1500, _x call OL_license_name];
 			}foreach _licenses;
 		}else{
 			lbAdd[1500, "No licenses to show."];

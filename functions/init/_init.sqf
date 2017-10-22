@@ -29,6 +29,7 @@ if (isClient) then {
 	[] spawn OL_player_WarrantGrab;
 	[] spawn OL_gangs_Request;
 	[] spawn OL_misc_requestBolos;
+	[[player, side player], "Server_user_requestKeys", false, false] call OL_network_MP;
 
   [] spawn {
     waitUntil {!isNil "OL_Hud_HudShow"};
@@ -59,7 +60,6 @@ if (isClient) then {
 	["Init Client", 80] call OL_Misc_LoadingSetText;
 	[] execVM "ServerLoad\itemactions.sqf";
 	[] execVM "ServerLoad\petrolactions.sqf";
-	/*[] execVM "ServerLoad\SpeedCams.sqf";*/
 	[] execVM "ServerLoad\nametags.sqf";
 	[] execVM "R3F_revive\revive_init.sqf";
 	["ol_textures\images\Gps.paa",-0.06,-0.36] call bis_fnc_customGPS;

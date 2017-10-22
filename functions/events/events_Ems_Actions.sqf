@@ -67,7 +67,7 @@ OL_PlayerActions = [
   [player addAction ["[Clear Helipad]", "noscript.sqf", '["CLEAR"] call OL_misc_EMSFunctions', 1, false, true, "", "(player distance jailpad2_1 <= 5 || player distance jailpad2_1_1 <=5) && ((getPlayerUID player) in AirESU_id)"]],
 
   // License Menu
-  [player addAction ["Open License Menu", "noscript.sqf", "[] call OL_ui_LicenseMenu;", 1, false, true, "", "player distance OL_ATM_MainFire <= 5 || player disstance OL_ATM_SubFire <= 5"]],
+  [player addAction ["Open License Menu", "noscript.sqf", "[] call OL_ui_LicenseMenu;", 1, false, true, "", "player distance OL_ATM_MainFire <= 5 || player distance OL_ATM_SubFire <= 5"]],
 
   // Clothes Menu
   [player addAction ["Open Clothes Menu", "noscript.sqf", '[] call OL_ui_ClothesMenu', 1, false, true, "", "player distance OL_ATM_MainFire <= 5 || player distance OL_ATM_SubFire <= 5"]]
