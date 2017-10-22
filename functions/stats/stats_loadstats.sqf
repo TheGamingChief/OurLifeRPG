@@ -428,7 +428,6 @@ if (_key == "no_data") then {
 	};
 };
 
-player setVariable ["OL_StatsLoaded", true, true];
 OL_StatsLoadedFromDB = true;
 saveAvailable = true;
 
