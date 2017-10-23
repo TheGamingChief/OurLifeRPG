@@ -2,7 +2,7 @@ disableSerialization;
 
 if(isNil "DD_LastCiv")exitWith{};
 
-_civWarrants = DD_LastCiv getVariable["PlayerWarrants", []];
+_civWarrants = DD_LastCiv getVariable ["PlayerWarrants", []];
 
 _l = createDialog "DD_ListPC";
 {

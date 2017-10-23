@@ -18,7 +18,8 @@ OL_Warrants = [
   ["Being a Pimp",            1000],
   ["Drug Trafficking",        3000],
   ["Escaping Jail",           6000],
-  ["Hit and Run",             3000]
+  ["Hit and Run",             3000],
+  ["Evasion",                 1000]
 ];
 
 OL_DefaultPaycheck_COP = 5000;

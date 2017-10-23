@@ -40,3 +40,18 @@ OL_DogPositions = [
 	["olrpg_pdk9taurusfpb", 			[0.1, -0.6, 0.35]],  // Police K-9 Taurus
 	["olrpg_sd_k9taurusfpb", 			[0.1, -0.6, 0.35]]   // Sheriff K-9 Taurus
 ];
+
+OL_Chicken = [
+	"speedx",
+	"safehack",
+	"supgrade5",
+	"RepairKitsBreaksShops",
+	"drill",
+	"supgrade4",
+	"medikit",
+	"lockpick",
+	"ziptie",
+	"codeb",
+	"Gag",
+	"lighter"
+];
