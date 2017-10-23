@@ -32,14 +32,14 @@ OL_LicenseArray = [
   ["Illegal Terrorist License",                        "OL_License_civ_terror",           999999,   ["OL_Shop_Terror"],                                                         "[getPlayerUID player]"],
 
   //Gangs
-  ["West Cocaine Drug Processor's License",            "OL_License_civ_cocaineGA1",       50000,    ["OL_Shop_Gangarea1"],                                                      "[getPlayerUID player]"],
-  ["West LSD Drug Processor's License",                "OL_License_civ_lsdGA1",           50000,    ["OL_Shop_Gangarea1"],                                                      "[getPlayerUID player]"],
-  ["Havana Heroin Drug Processor's License",           "OL_License_civ_heroinGA2",        50000,    ["OL_Shop_Gangarea2"],                                                      "[getPlayerUID player]"],
-  ["Havana LSD Drug Processor's License",              "OL_License_civ_lsdGA2",           50000,    ["OL_Shop_Gangarea2"],                                                      "[getPlayerUID player]"],
-  ["East Heroin Drug Processor's License",             "OL_License_civ_heroinGA3",        50000,    ["OL_Shop_Gangarea3"],                                                      "[getPlayerUID player]"],
-  ["East Marijuana Drug Processor's License",          "OL_License_civ_marijuanaGA3",     50000,    ["OL_Shop_Gangarea3"],                                                      "[getPlayerUID player]"],
-  ["Safe House Heroin Drug Processor's License",       "OL_License_civ_heroinGA4",        50000,    ["OL_Shop_Gangarea4"],                                                      "[getPlayerUID player]"],
-  ["Safe House Marijuana Drug Processor's License",    "OL_License_civ_marijuanaGA4",     50000,    ["OL_Shop_Gangarea4"],                                                      "[getPlayerUID player]"],
+  ["West Cocaine Drug Processor's License",            "OL_License_civ_cocaineGA1",       50000,    ["OL_Shop_Gangarea1", "gangbox1"],                                                      "[getPlayerUID player]"],
+  ["West LSD Drug Processor's License",                "OL_License_civ_lsdGA1",           50000,    ["OL_Shop_Gangarea1", "gangbox1"],                                                      "[getPlayerUID player]"],
+  ["Havana Heroin Drug Processor's License",           "OL_License_civ_heroinGA2",        50000,    ["OL_Shop_Gangarea2", "gangbox2"],                                                      "[getPlayerUID player]"],
+  ["Havana LSD Drug Processor's License",              "OL_License_civ_lsdGA2",           50000,    ["OL_Shop_Gangarea2", "gangbox2"],                                                      "[getPlayerUID player]"],
+  ["East Heroin Drug Processor's License",             "OL_License_civ_heroinGA3",        50000,    ["OL_Shop_Gangarea3", "gangbox3"],                                                      "[getPlayerUID player]"],
+  ["East Marijuana Drug Processor's License",          "OL_License_civ_marijuanaGA3",     50000,    ["OL_Shop_Gangarea3", "gangbox3"],                                                      "[getPlayerUID player]"],
+  ["Safe House Heroin Drug Processor's License",       "OL_License_civ_heroinGA4",        50000,    ["OL_Shop_Gangarea4", "gangbox4"],                                                      "[getPlayerUID player]"],
+  ["Safe House Marijuana Drug Processor's License",    "OL_License_civ_marijuanaGA4",     50000,    ["OL_Shop_Gangarea4", "gangbox4"],                                                      "[getPlayerUID player]"],
 
   //EMS
   ["Untrained EMT License",                            "OL_License_emt_emtUntrained",     100,      ["OL_ATM_MainFire", "OL_ATM_SubFire"],                                      "[getPlayerUID player]"],
