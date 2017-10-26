@@ -1,16 +1,18 @@
 _safe 					= _this select 0;
-_item 					= "safehack";
-_itemAmount 		= _item call INV_GetItemAmount;
+_check 					= {
+		if ("safehack_bm" call INV_GetItemAmount > 0) exitWith { "safehack_bm" };
+		if ("safehack" call INV_GetItemAmount > 0) exitWith { "safehack" };
+};
 
 if (iscop) exitWith {	player groupChat "Police may not crack the safe code!" };
 if (playersNumber west < 4 && !debug) exitwith {player groupchat "You need 4 Police Officers online to rob the Bank!";};
-if (_itemAmount < 1) exitWith	{ player groupChat "You must have a Vault Code Cracker!" };
+if (((call _check) call INV_GetItemAmount < 1)) exitWith	{ player groupChat "You must have a Vault Code Cracker!" };
 if (isCrackingSafe == 1) exitWith	{ player groupChat "You are already cracking a safe!"	};
 
 if (isCrackingSafe == 0) then
 {
 	isCrackingSafe = 1;
-	[_item, -1] call INV_AddInvItem;
+	[call _check, -1] call INV_AddInvItem;
 
 	player playmove "AinvPknlMstpSlayWrflDnon_medic";
 	sleep 5;

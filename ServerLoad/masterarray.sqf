@@ -1841,6 +1841,8 @@ INV_AlleItemsArray = [
   ["FTO_Kit",["Item","misc"],["FTO_Kit","FTO (Required Equipment Kit)"],[48000,24000],[2,"",""],[true,true,true,false,Item_misc_PDKits]],
   ["AVIATION_Kit",["Item","misc"],["AVIATION_Kit","Aviation (Required Equipment Kit)"],[35350,17675],[2,"",""],[true,true,true,false,Item_misc_PDKits]],
 
+  ["JailCracker",["Item","carobjects"],["JailCracker","Jail Door Cracker"],[100000,50000],[5,"",""],[true,true,true,false,Item_misc_crackJailDoor]],
+
   ["supgrade1",["Item","carobjects"],["supgrade1","Shocks 1"],[10000,10000],[5,"",""],[true,true,true,false,Item_misc_SpeedUpgrade]],
   ["supgrade2",["Item","carobjects"],["supgrade2","Fuel Injection 2"],[20000,20000],[10,"",""],[true,true,true,false,Item_misc_SpeedUpgrade]],
   ["supgrade3",["Item","carobjects"],["supgrade3","Violator 3"],[30000,30000],[5,"",""],[true,true,true,false,Item_misc_SpeedUpgrade]],

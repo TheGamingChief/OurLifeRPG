@@ -44,11 +44,9 @@ fnc_KeyPress_3 = {
 	nonlethalweapons = nonlethalweapons + call OL_TFAR_getPlayerRadios;
 	_weapons = weapons player - nonlethalweapons;
 	if (count _weapons > 0) then {
-		{player removeWeapon _x} forEach _weapons
-	};
-	if !(isNil "_weapons") then {
+		{ player removeWeapon _x } forEach _weapons;
 		_holder = createVehicle ["weaponholder", getPosATL player, [], 0, "CAN_COLLIDE"];
-		{_holder addWeaponCargoGlobal [_x,1];}forEach _weapons;
+		{ _holder addWeaponCargoGlobal [_x, 1] } forEach _weapons;
 	};
 };
 

@@ -1,4 +1,3 @@
-if ((_this select 0) == -1) exitWith { hint "Please select a license to purchase!" };
 if (!createDialog "UI_ListMenuSmall") exitWith { hint "Dialog Error!" };
 
 _licenseArea = ((nearestObjects [getPosATL player, ["tcg_atm", "Functionary1_EP1", "Land_bags_stack_EP1", "Barrels", "Infostand_2_EP1", "UNBasicAmmunitionBox_EP1", "FlagCarrierTakistan_EP1"], 5]) select 0);
@@ -25,5 +24,5 @@ if (!_somethingDisplayed) exitWith {
   ctrlEnable [1600, false];
 };
 
-buttonSetAction [1600, "[lbData [1500, (lbCurSel 1500)]] call OL_license_buy; closeDialog 0;"];
+buttonSetAction [1600, "[lbData [1500, (lbCurSel 1500)]] call OL_license_buy; closeDialog 0; [] call OL_ui_LicenseMenu;"];
 lbSetCurSel [1500, 0];

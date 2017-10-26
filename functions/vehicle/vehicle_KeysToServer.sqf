@@ -1,12 +1,5 @@
 if (getPlayerUID (_this select 0) == "") exitWith {};
 
-{
-  if (isNull _x) then {
-    INV_VehicleArray set [_forEachIndex, -1];
-    INV_VehicleArray = INV_VehicleArray - [-1];
-  };
-} forEach INV_VehicleArray;
-
 _data = [INV_VehicleArray] call CP_misc_ArrayObj2Str;
 _var = "NONE";
 

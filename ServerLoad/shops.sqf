@@ -1914,6 +1914,7 @@ _bm = [
 	"supgrade4",													//Interceptor 4
 	"drill",															//StrongArm MiniRig Drill
 	"safehack_bm",												//Vault Code Cracker
+	"JailCracker",												//Jail Door Cracker
 	"Sa58V_CCO_EP1_bm",										//Sa58V CCO
 	"30Rnd_762x39_SA58",									//30Rnd Sa58
 	"RH_mk18dc_bm",												//Mk18 Desert

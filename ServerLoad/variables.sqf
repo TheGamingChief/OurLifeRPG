@@ -23,6 +23,7 @@ isCrackingSafe		      = 0;
 safeCrackFailed			    = 0;
 MayorTaxes              = 0;
 spamcount               = 0;
+processscriptrunning    = 0;
 MayorBekommtSteuern     = 75;
 chiefSteuern            = 0;
 chiefBekommtSteuern     = 75;

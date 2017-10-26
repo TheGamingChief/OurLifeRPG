@@ -88,7 +88,19 @@ if (_key == "no_data") then {
 		};
 	};
 
-	if (_Misc == 6) then { OL_isMale = false };
+	switch (_Misc) do {
+		case 0:  {};
+		case 1:  { OL_CheckpointWL = [getPlayerUID player] };
+		case 2:  {};
+		case 3:  {};
+		case 4:  {};
+		case 5:  {};
+		case 6:  {};
+		case 7:  {};
+		case 8:  {};
+		case 9:  {};
+		case 10: {};
+	};
 
 	//Load Side Ranks
 	switch (_side) do {
@@ -291,20 +303,6 @@ if (_key == "no_data") then {
 					PMC_id 		  	= [getPlayerUID player];
 					CommandPMC_id = [getPlayerUID player];
 				};
-			};
-
-			switch (_Misc) do {
-				case 0:  {};
-				case 1:  {};
-				case 2:  {};
-				case 3:  {};
-				case 4:  {};
-				case 5:  {};
-				case 6:  {};
-				case 7:  {};
-				case 8:  {};
-				case 9:  {};
-				case 10: {};
 			};
 
 			if (_Flyers_Rank != 0) then {

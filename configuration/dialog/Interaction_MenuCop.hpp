@@ -54,7 +54,7 @@ class TGC_CopMenu
 			y = 0.54701 * safezoneH + safezoneY;
 			w = 0.0889128 * safezoneW;
 			h = 0.0287371 * safezoneH;
-			action = "[] call OL_fnc_EscortPlayer; closedialog 0;";
+			action = "[] spawn OL_fnc_EscortPlayer; closedialog 0;";
 		};
 		class TGC_Button_3: RscButtonV2
 		{

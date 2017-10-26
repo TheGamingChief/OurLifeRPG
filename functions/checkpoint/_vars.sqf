@@ -53,12 +53,6 @@ CPB_TOW_classnames = [
 	["Tent_Event",           1000, [0, 2, 2.3], "Tent Event"]
 ];
 
-OL_CheckpointWL = [
-	"76561198055543664", // Mark Stavaros
-	"76561198065459565", // Isaac
-	"76561198045257930"  // Lansing
-];
-
 AM_temp_carrying = false;
 AM_checkpoint_tmpArray = [];
 temp_item = objNull;
