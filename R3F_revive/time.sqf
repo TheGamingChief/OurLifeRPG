@@ -9,15 +9,6 @@ if (!isNil "civmenuciv") then {
 	detach civmenuciv;
 };
 
-nonlethalweapons = nonlethalweapons + call OL_TFAR_getPlayerRadios;
-_weapons = weapons player - nonlethalweapons;
-if (count _weapons > 0) then {
-	_holder = createVehicle ["weaponholder", getPosATL player, [], 0, "CAN_COLLIDE" ];
-	{ player removeWeapon _x } forEach _weapons;
-	{ _holder addWeaponCargoGlobal [_x, 1] }forEach _weapons;
-};
-
-
 player setVariable ["KOED", true, true];
 player setVariable ["tf_unable_to_use_radio", true, true];
 player setVariable ["tf_voiceVolume", 0, true];

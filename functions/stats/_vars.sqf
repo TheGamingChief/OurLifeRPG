@@ -42,6 +42,7 @@ adminlevel4  		      = [];
 adminlevel3 		      = [];
 adminlevel2 		      = [];
 adminlevel1 		      = [];
+OL_CheckpointWL       = [];
 INV_SavedVehLand      = [];
 INV_SavedVehAir       = [];
 
