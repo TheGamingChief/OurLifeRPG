@@ -14,7 +14,6 @@ DD_Modules = DD_Modules + [
   ["OL",    "misc", "EMSFunctions",        1],
   ["OL",    "misc", "FosterFireCheck",     1],
   ["OL",    "misc", "ChatMessage",         1],
-  ["OL",    "misc", "requestBolos",        1],
   ["OL",    "misc", "submitBolo",          1],
   ["OL",    "misc", "ForceFeed",           1],
   ["OL",    "misc", "isPistol",            1],

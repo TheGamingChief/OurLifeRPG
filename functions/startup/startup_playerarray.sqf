@@ -32,7 +32,7 @@ if (isServer) then {
 	rolenumber = (playerarray find player) + 1;
 };
 
-waitUntil {!isNull player || isServer};
+waitUntil {!(isNull player) || isServer};
 role = player;
 rolestring_ucase = toUpper str player;
 

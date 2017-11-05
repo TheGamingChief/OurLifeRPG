@@ -28,7 +28,7 @@ waitUntil{scriptDone  _h};
 if (isClient) then {
 	[] spawn OL_player_WarrantGrab;
 	[] spawn OL_gangs_Request;
-	[] spawn OL_misc_requestBolos;
+	[[], "Server_bolos_Request", false, true] call OL_network_MP;
 	[[player, side player], "Server_user_requestKeys", false, false] call OL_network_MP;
 
   [] spawn {

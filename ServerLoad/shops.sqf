@@ -657,7 +657,7 @@ _sb = [
 _bs = [
 	"fishingpole",												//Fishing Pole
 	"tcg_wrun",														//Jet Ski
-	"tcg_wave_red",												//Armed Pirate Jetski
+	"tcg_wave_red",												//Black Grey Jet Ski
 	"tcg_wave_black",											//Black Jet Ski
 	"tcg_wave_red2",											//Red White Jet Ski
 	"tcg_wave_sky",												//Sky Jet Ski

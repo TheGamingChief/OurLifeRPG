@@ -124,7 +124,7 @@ class RscPicture_1211: RscPicture
 };
 class RscButton_1600: Swag_RscButton
 {
-    action = "[] call OL_phone_ShowMenu";
+    action = "[] call OL_ui_PhoneMenu";
 
 	colorText[] = {0,0,0,0};
 	colorBackground[] = {0,0,0,0};

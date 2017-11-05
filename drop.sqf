@@ -1,17 +1,25 @@
-_item   = _this select 0;
-_amount = _this select 1;
+_item    = _this select 0;
+_amount  = _this select 1;
 _gridPos = mapGridPosition getpos player;
 
-if ((!INV_CanUseInventory) or (!INV_CanDropItem)) exitWith {player groupChat localize "STRS_inv_inventar_cannotdrop";};
+if ((!INV_CanUseInventory) or (!INV_CanDropItem)) exitWith {
+	player groupChat localize "STRS_inv_inventar_cannotdrop"
+};
 
-if(!isnull (nearestobjects[getpos player,["EvMoney","Suitcase"], 1] select 0))exitwith{player groupchat "You cannot drop items on top of each other. move and try again."};
+if (!(isNull (nearestobjects[getpos player,["EvMoney","Suitcase"], 1] select 0))) exitwith {
+	player groupchat "You cannot drop items on top of each other. move and try again."
+};
 
-if (_amount <= 0) exitwith {format["hint ""%1 has dropped %2!"";", (PlayerName), _amount] call OL_network_Swag;};
+if (_amount <= 0) exitwith { format ["hint ""%1 has dropped %2!"";", PlayerName, _amount] call OL_network_Swag };
 
 if (_item call INV_getitemDropable) then {
 	if ([_item, -(_amount)] call INV_AddInvItem) then	{
 		player groupChat localize "STRS_inv_inventar_weggeworfen";
-		if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};
+		if (primaryweapon player == "" and secondaryweapon player == "") then {
+			player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"
+		} else {
+			player playmove "AinvPknlMstpSlayWrflDnon"
+		};
 
 		uiSleep 1.5;
 
@@ -28,12 +36,11 @@ if (_item call INV_getitemDropable) then {
 			[] call fnc_SaveStats;
 		};
 
-		_pos = getposASL player;
+		_pos 		= getposASL player;
 		_object = _class createvehicle _pos;
 		_object setposASL getposASL player;
 		_object setvariable ["droparray", [_amount, _item], true];
 		_object setVariable ["owner", getPlayerUID player, true];
-
 	}	else {
 		player groupChat "You don't have that many objects to drop";
 	};

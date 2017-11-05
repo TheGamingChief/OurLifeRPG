@@ -6,9 +6,31 @@ switch (_this select 0) do {
     if (player distance _vcl > 20) exitWith { player groupChat "You must be within 20m of the vehicle." };
     if (locked _vcl) then {
       format ["%1 lock false", _vcl] call OL_network_Swag;
+
+      hint format["Unlocked the Following:\n Weapons: %1\n Magazines: %2",_vcl getVariable "locked_weapons", _vcl getVariable "locked_magazines"];
+  		_weapons   = _vcl getVariable ["Locked_Vehicle_Weapons",   ""];
+  		_magazines = _vcl getVariable ["Locked_Vehicle_Magazines", ""];
+
+  		{
+        _vcl addWeaponCargoGlobal [((_weapons select 0)select _forEachIndex), ((_weapons select 1)select _forEachIndex)];
+      } forEach (_weapons select 0);
+
+      {
+        _vcl addMagazineCargoGlobal [((_magazines select 0) select _forEachIndex), ((_magazines select 1) select _forEachIndex)];
+      } forEach (_magazines select 0);
+
       player groupChat "Vehicle Unlocked";
+      waitUntil {!locked _vcl};
     } else {
       format ["%1 lock true", _vcl] call OL_network_Swag;
+
+  	  _vcl setVariable ["Locked_Vehicle_Weapons",   getWeaponCargo _vcl];
+  	  _vcl setVariable ["Locked_Vehicle_Magazines", getMagazineCargo _vcl];
+
+  	  clearWeaponCargoGlobal _vcl;
+      clearMagazineCargoGlobal _vcl;
+
+  	  waitUntil {locked _vcl};
       player groupChat "Vehicle Locked";
     };
   };

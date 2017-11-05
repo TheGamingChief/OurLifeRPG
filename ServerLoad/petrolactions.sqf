@@ -2,9 +2,11 @@ _a1 = 0;
 _v1 = 0;
 _f1 = 0;
 
-{_x setFuelCargo 0} foreach (nearestobjects [getpos copbase1, ["gasstation","Land_A_Fuelstation_Feed","Land_Ind_FuelStation_Feed_EP1","Land_benzina_schnell","Land_fuelstation_army"], 20000]);
+{
+	_x setFuelCargo 0
+} forEach (nearestobjects [getPos copbase1, ["gasstation", "Land_A_Fuelstation_Feed", "Land_Ind_FuelStation_Feed_EP1", "Land_benzina_schnell", "Land_fuelstation_army"], 20000]);
 
-while {true} DO
+while {true} do
 {
 	for [{_i = 0}, {_i < (count TankstellenArray)}, { _i = _i + 1}] do
 	{

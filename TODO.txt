@@ -1,5 +1,0 @@
-external trunk
-Add resign button at voting booth for gov.
-If gov is arrested taxes with be reset.
-Remove gov from gov if arrested
-Current gov doesn't show when people join, they need to wait til next election.

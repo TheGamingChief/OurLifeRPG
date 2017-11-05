@@ -1,4 +1,5 @@
 _this spawn {
+	waitUntil {!(isPlayer (_this select 0))};
 	private ["_unit"];
 	_unit = _this select 0;
 	if (!([_unit] call OL_fnc_ClothesCheck)) exitWith {};

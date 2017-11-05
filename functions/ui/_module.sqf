@@ -13,5 +13,7 @@ DD_Modules = DD_Modules + [
   ["OL",  "ui",  "VehicleMenu",        1],
   ["OL",  "ui",  "SpawnMenu_Open",     1],
   ["OL",  "ui",  "SpawnMenu_Pick",     1],
-  ["OL",  "ui",  "SpawnMenu_MoveMap",  1]
+  ["OL",  "ui",  "SpawnMenu_MoveMap",  1],
+
+  ["OL",  "ui",  "PhoneMenu",          1]
 ];
