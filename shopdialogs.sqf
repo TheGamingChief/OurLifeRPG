@@ -107,6 +107,15 @@ if (_stock != -1) then
 
 	};
 
+	if (_name == "RHIB") then {
+		if ((iscop) && (getPlayerUID player in SWAT_id)) then {
+			lbDelete [1,0];
+			INV_ActiveBuyShopArray = INV_ActiveBuyShopArray + [ ["RHIB", _preisOhneTax, 75000, _i] ];
+			_index = lbAdd [1, format ["%1 ($%2)", "RHIB (S.W.A.T.)", (75000 call OL_ISSE_str_IntToStr)] ];
+			INV_ActiveBuyShopArray = INV_ActiveBuyShopArray + [ ["Zodiac", _preisOhneTax, 24000, _i] ];
+		};
+	};
+
 lbSetData [1, _index, format ["%1", _item] ];
 INV_ActiveBuyShopArray = INV_ActiveBuyShopArray + [ [_item, _preisOhneTax, _preis, _i] ];
 

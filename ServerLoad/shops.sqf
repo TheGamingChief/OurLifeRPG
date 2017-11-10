@@ -657,7 +657,7 @@ _sb = [
 _bs = [
 	"fishingpole",												//Fishing Pole
 	"tcg_wrun",														//Jet Ski
-	"tcg_wave_red",												//Black Grey Jet Ski
+	"tcg_wave_red",												//Armed Pirate Jetski
 	"tcg_wave_black",											//Black Jet Ski
 	"tcg_wave_red2",											//Red White Jet Ski
 	"tcg_wave_sky",												//Sky Jet Ski
@@ -1354,7 +1354,7 @@ _copswat5 = [
 
 //SWAT Maritime
 _copswat6 = [
-	"RHIB_swat",													//RHIB (S.W.A.T.)
+	"RHIB",													      //RHIB (S.W.A.T.)
 	"Zodiac"															//CRRC
 ];
 
@@ -1939,38 +1939,6 @@ _bm = [
 	"10Rnd_762x54_SVD"										//10Rnd 7.62mm SVD Mag
 ];
 
-//Flyers Vending Machine
-_Tow = [
-	"wulf",																//Wulf Energy Drink
-	"Bread",															//Cheeseburger
-	"doshd"																//Wolf's Meaty Hot Dog
-];
-
-//Flyers Box
-_Tow1 = [
-	"tow_RepairKitsBreaksShops",					//Repair Kit
-	"tow_gas",														//Gas Can
-	"TreeFixer",													//Tree Fixer
-	"tow_supgrade1",											//Shocks 1
-	"tow_supgrade2",											//Fuel Injection 2
-	"tow_supgrade3",											//Violator 3
-	"tow_supgrade4",											//Interceptor 4
-	"tow_supgrade5",											//Fast And Furious 5
-	"caralarm"														//OnStar Car Alarm
-];
-
-//Flyers Car Shop
-_Tow2 = [
-	"VIL_passat_civil",										//VW Passat (Flyer's Courtesy Car)
-	"VIL_octavia_policeEU",								//Octavia (Traffic Control)
-	"vil_sprinter_armamb",								//Sprinter (Roadside Assistance)
-	"flyers",															//Flyer's Light Duty Tow (Cooter's)
-	"il_towtruck",												//Flyer's Medium Duty Car Carrier
-	"a2l_dot_f350_utility",								//F350 Utility Truck
-	"DD_FOR16F150_Orange",								//2016 Ford F150 (Orange)
-	"cl_fuel_mackr"												//MackR Fuel Truck
-];
-
 INV_ItemShops = [
 	// Civilian
 	[OL_Shop_Undercover,				"Undercover Police Equipment",				OL_Shop_Undercover,	ccarspawnuc,			_undercover,				_undercover,				true,  "Undercover_id"],
@@ -2129,12 +2097,7 @@ INV_ItemShops = [
 	[pmcbox2,										"PMC Air",														dummyobj,						pmchelipad,				_PMCAIR,						_PMCAIR,						true,  "PMC_id"],
 
 	// Black Market
-	[bmshop,										"Black Market Shop",									bmgunbox,						dummyobj,					_bm,									_bm,							true,  "[getPlayerUID player]"],
-
-	// Flyers
-	[towfoodshop,								"Flyer's Vending Machine",						dummyobj,						dummyobj,					_Tow,								_Tow,								true,  "Tow_id"],
-	[tow_box,										"Parts Box",													dummyobj,						dummyobj,					_Tow1,							_Tow1,							true,  "Tow_id"],
-	[towcarshop,								"Mechanic",														dummyobj,						tow_spawn,				_Tow2,							_Tow2,							true,  "Tow_id"]
+	[bmshop,										"Black Market Shop",									bmgunbox,						dummyobj,					_bm,									_bm,							true,  "[getPlayerUID player]"]
 ];
 
 {

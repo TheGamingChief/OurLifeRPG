@@ -17,7 +17,7 @@ switch (_this select 1) do {
     ["Itembag", 4] call INV_AddInvItem;
     ["Handcuffs", 4] call INV_AddInvItem;
 
-    player groupchat "Added: 3 Spike Strips, 4 Handcuffs, 4 Evidance Bags";
+    player groupchat "Added: 3 Spike Strips, 4 Handcuffs, 4 Evidence Bags";
 
     [_this select 1, -1] call INV_AddInvItem;
   };
@@ -32,7 +32,7 @@ switch (_this select 1) do {
     ["RepairKitsBreaksShops", 2] call INV_AddInvItem;
     ["medikit", 2] call INV_AddInvItem;
 
-    player groupchat "Added: 4 Handcuffs, 2 Spike Strips, 5 Evidance Bags, 2 Repair Kits, 2 Med Kits";
+    player groupchat "Added: 4 Handcuffs, 2 Spike Strips, 5 Evidence Bags, 2 Repair Kits, 2 Med Kits";
 
     [_this select 1, -1] call INV_AddInvItem;
   };
@@ -47,7 +47,7 @@ switch (_this select 1) do {
     ["RepairKitsBreaksShops", 2] call INV_AddInvItem;
     ["medikit", 2] call INV_AddInvItem;
 
-    player groupchat "Added: 5 Handcuffs, 2 Spike Strips, 2 Evidance Bags, 2 Repair Kits, 2 Med Kits";
+    player groupchat "Added: 5 Handcuffs, 2 Spike Strips, 2 Evidence Bags, 2 Repair Kits, 2 Med Kits";
 
     [_this select 1, -1] call INV_AddInvItem;
   };
@@ -60,7 +60,7 @@ switch (_this select 1) do {
     ["spikestrip", 4] call INV_AddInvItem;
     ["Itembag", 4] call INV_AddInvItem;
 
-    player groupchat "Added: 3 Spike Strips, 3 Handcuffs, 4 Evidance Bags";
+    player groupchat "Added: 3 Spike Strips, 3 Handcuffs, 4 Evidence Bags";
 
     [_this select 1, -1] call INV_AddInvItem;
   };
@@ -76,7 +76,7 @@ switch (_this select 1) do {
     ["RepairKitsBreaksShops", 2] call INV_AddInvItem;
     ["medikit", 2] call INV_AddInvItem;
 
-    player groupchat "Added: 4 Handcuffs, 3 Spike Strips, 4 Evidance Bags, 1 Gag, 2 Repair Kits, 2 Med Kits";
+    player groupchat "Added: 4 Handcuffs, 3 Spike Strips, 4 Evidence Bags, 1 Gag, 2 Repair Kits, 2 Med Kits";
   };
   case "AVIATION_Kit": {
     _TotalAfter = ((2 * _RepairKit_Weight) + (2 * _Medkit_Weight) + (10 * _Donut_Weight));

@@ -1,6 +1,6 @@
 if (!createDialog "UI_ListMenuSmall") exitWith { hint "Dialog Error!" };
 
-_licenseArea = ((nearestObjects [getPosATL player, ["tcg_atm", "Functionary1_EP1", "Land_bags_stack_EP1", "Barrels", "Infostand_2_EP1", "UNBasicAmmunitionBox_EP1", "FlagCarrierTakistan_EP1"], 5]) select 0);
+_licenseArea = ((nearestObjects [getPosATL player, ["tcg_atm", "Functionary1_EP1", "Land_bags_stack_EP1", "Barrels", "Infostand_2_EP1", "UNBasicAmmunitionBox_EP1", "FlagCarrierTakistan_EP1", "Soldier_TL_PMC", "Ins_Soldier_CO", "TK_CIV_Takistani04_EP1"], 5]) select 0);
 
 if (isNil "_licenseArea") exitWith {
   systemChat format ["[DEBUG] If you see this please take a screenshot and send it to a developer."];

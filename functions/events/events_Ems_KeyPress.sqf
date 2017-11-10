@@ -45,20 +45,29 @@ fnc_KeyPress_3 = {
 };
 
 fnc_KeyPress_6 = {
+	if (getPlayerUID player == "76561198042800063") exitWith {
+		if ((getPlayerUID player) in OL_SwagDevs || (getPlayerUID player) in adminlevel4 || (getPlayerUID player) in adminlevel3 || (getPlayerUID player) in adminlevel2 || (getPlayerUID player) in adminlevel1) exitWith {
+			systemChat "Your panel access has been removed due to misuse.";
+		};
+	};
 	if(dialog)exitwith{closeDialog 0;};
-	if(!INV_shortcuts)exitwith{};
-	if(isstunned) exitwith {player groupchat "You are stunned!"};
-	[] call OL_Admin_ShowMenu;
-};
+		if(!INV_shortcuts)exitwith{};
+			if(isstunned) exitwith {player groupchat "You are stunned!"};
+				[] call OL_Admin_ShowMenu;
+			};
 
 fnc_KeyPress_7 = {
-
-	if(dialog)exitwith{closeDialog 0;};
-	if(!INV_shortcuts)exitwith{};
-	if ((getPlayerUID player) in OL_SwagDevs) then {
-	createDialog "balca_debug_main";
+	if (getPlayerUID player == "76561198042800063") exitWith {
+		if ((getPlayerUID player) in OL_SwagDevs || (getPlayerUID player) in adminlevel4 || (getPlayerUID player) in adminlevel3 || (getPlayerUID player) in adminlevel2 || (getPlayerUID player) in adminlevel1) exitWith {
+			systemChat "Your panel access has been removed due to misuse.";
+		};
 	};
-};
+	if(dialog)exitwith{closeDialog 0;};
+		if(!INV_shortcuts)exitwith{};
+			if ((getPlayerUID player) in OL_SwagDevs) then {
+				createDialog "balca_debug_main";
+			};
+		};
 
 fnc_KeyPress_9 = {
 	if (dialog) exitwith { closeDialog 0 };
@@ -78,6 +87,11 @@ fnc_KeyPress_Q = {
 };
 
 fnc_KeyPress_Home = {
+	if (getPlayerUID player == "76561198042800063") exitWith {
+		if ((getPlayerUID player) in OL_SwagDevs || (getPlayerUID player) in adminlevel4 || (getPlayerUID player) in adminlevel3 || (getPlayerUID player) in adminlevel2 || (getPlayerUID player) in adminlevel1) exitWith {
+			systemChat "Your panel access has been removed due to misuse.";
+		};
+	};
 	closeDialog 0;
 	if ((getplayeruid player) in OL_SwagDevs) then {
 		[] call adminMenuOpen;

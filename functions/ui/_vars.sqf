@@ -126,15 +126,6 @@ OL_ATM_Clothes = [
 			["olrpg_firemarshal", "EMT3_id", "Fire Marshal Uniform"]
 		]
 	],
-
-	[OL_ATM_Tow,
-		[
-			["Flyers_Supervisor_Vest", "Tow_id", "Supervisor w/ Vest Uniform"],
-			["Flyers_Supervisor",			 "Tow_id", "Supervisor Uniform"],
-			["Flyers_Mechanic_Vest",	 "Tow_id", "Mechanic w/ Vest Uniform"],
-			["Flyers_Mechanic",				 "Tow_id", "Mechanic Uniform"]
-		]
-	],
 	[atmuc,
 		[
 			["Functionary1",					 "Undercover_id", "Black Suit (Uniform)"],
