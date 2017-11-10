@@ -58,7 +58,7 @@ if (_art == "holen") exitWith  {
 			};
 
 			//If hooker is within 30m of copbase kill her
-			if ((rolecop == 0) and ((vehicle _hurenname) distance copbase1 <= 30) and (alive _hurenname)) then {
+			if ((rolecop == 0) and ((vehicle _hurenname) distance copbase1 <= 30) and (alive _hurenname)) exitWith {
 				player groupchat  "One of your hookers has died for getting too close to the Police Base!";
 				localhuren = localhuren - 1;
 				_hurenname setdamage 1;
@@ -67,7 +67,7 @@ if (_art == "holen") exitWith  {
 
 			//If hooker is armed kill her
 			_isarmed = _hurenname call INV_unitArmed;
-			if (_isarmed) then {
+			if (_isarmed) exitWith {
 				player groupchat  "You may not arm your hookers! She has died as a result of your ignorance.";
 				localhuren = localhuren - 1;
 				_hurenname setdamage 1;
@@ -77,7 +77,7 @@ if (_art == "holen") exitWith  {
 			sleep 1;
 
 		    //If hooker is driving kill her
-			if (_hurenname == driver vehicle player) then {
+			if (_hurenname == driver vehicle player) exitWith {
 				player groupchat  "You may not have hookers drive! She has died as a result of your ignorance.";
 				localhuren = localhuren - 1;
 				_hurenname setdamage 1;
