@@ -2,7 +2,7 @@ _item    = _this select 0;
 _amount  = _this select 1;
 _gridPos = mapGridPosition getpos player;
 
-if ((!INV_CanUseInventory) or (!INV_CanDropItem)) exitWith {
+if (!INV_CanDropItem) exitWith {
 	player groupChat localize "STRS_inv_inventar_cannotdrop"
 };
 

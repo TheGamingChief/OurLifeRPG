@@ -1,3 +1,5 @@
+if (player call OL_ISSE_IsVictim) exitWith {player groupChat "You can't change clothes at this moment!";};
+
 private ["_nearATM", "_clothesArray", "_index"];
 
 _nearStuff = nearestObjects [getPosATL player, ["tcg_atm", "olrpg_pdpilot", "TK_GUE_Soldier_Sniper_EP1"], 10] - [player];

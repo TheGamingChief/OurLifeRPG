@@ -6,7 +6,7 @@ if (!(_amount call OL_ISSE_str_isInteger))   exitWith {player groupChat localize
 _amount = _amount call OL_ISSE_StrToInt;
 if (_amount > (_item call INV_GetItemAmount)) exitWith {};
 _player = _this select 3;
-if ((player call OL_ISSE_IsVictim) or (!INV_CanUseInventory)) exitWith {player groupChat localize "STRS_inv_cannotUseNow";};
+if (player call OL_ISSE_IsVictim) exitWith {player groupChat localize "STRS_inv_cannotUseNow";};
 INV_InventarGiveReceiver = _player;
 
 if ((_action == "use") and (INV_CanUseItem)) then {

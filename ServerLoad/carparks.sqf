@@ -1,4 +1,3 @@
-INV_CanUseInventory       = true;
 INV_CanUseItem            = true;
 INV_CanDropItem           = true;
 INV_CanGiveItem           = true;

@@ -1,4 +1,4 @@
-if (OL_isAFK) exitWith { player groupChat "You are not receiving due to being AFK." };
+if (OL_isAFK) exitWith { player groupChat "You are not receiving paychecks due to being AFK." };
 if (player getVariable "KOED" || !(alive player)) exitWith { player groupChat "Sorry but we do not pay people to be dead." };
 
 if (playerSide == west) exitWith {
