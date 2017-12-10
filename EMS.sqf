@@ -10,8 +10,8 @@ if ((_fireobject getVariable "isonfire") == 1) then {
 
 	titleText ["You are extinguishing the fire...", "PLAIN DOWN"];
 	titleFadeOut 6;
-
-	[_player, "firehose", 50] call CBA_fnc_globalSay3d;
+	
+	format ["%1 say3D ""firehose"";", _fireobject] call OL_network_Swag;
 	uiSleep 30;
 
 	if (!alive player) exitWith {

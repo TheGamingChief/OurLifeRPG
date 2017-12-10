@@ -124,7 +124,7 @@ class RscPicture_1211: RscPicture
 };
 class RscButton_1600: Swag_RscButton
 {
-    action = "[] call OL_phone_ShowMenu";
+    action = "[""MAIN""] call Phone_fnc_Open";
 
 	colorText[] = {0,0,0,0};
 	colorBackground[] = {0,0,0,0};
@@ -176,7 +176,7 @@ class RscButton_1603: Swag_RscButton
 };
 class RscButton_1604: Swag_RscButton
 {
-    action = "if (OL_StatsLoadedFromDB) then { [] spawn OL_stats_SaveStats };";
+    action = "if (OL_StatsLoadedFromDB) then { [] spawn Stats_fnc_Save };";
 
 	colorText[] = {0,0,0,0};
 	colorBackground[] = {0,0,0,0};

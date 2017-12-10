@@ -21,7 +21,7 @@ _whitelist 			= ((INV_ItemShops select INV_ActiveShopNumber) select 7);
 
 //--------------------------------------BUY-----------------------------------------
 _CopOnlyShops = [copuntrained,copbasic1,copbasic2,copbasic4,copbasic6,copbasicfto,coppo1,coppo2,coppo3,copcpl,copsgt,ftobox,ftoboxs,ftoboxc,cidbox,copdeputy,copsheriff,copsheriffdnr,copsheriffmks,coplt,copcpt,copchief,copmedalbox,copair2,copswat1,copswat2,copswat3,copswat4,copswat5,copswate,copswatvehicle,copcoastguard,copairweapon2,copk92,copsgtdeputy];
-_ESUOnlyShops = [tdoc,tdoc2,tdoc3,tdoc4,tdoc5,tdoc6,tdocsub,tdoc2sub,tdoc3sub,tdoc4sub,tdoc5sub,tdoc6sub,tdoc7,tdoc7sub,tdoc8];
+_ESUOnlyShops = [tdoc,tdoc2,tdoc3,tdoc4,OL_Shop_EMTAir,tdoc6,tdocsub,tdoc2sub,tdoc3sub,tdoc4sub,OL_Shop_EMTAirsub,tdoc6sub,tdoc7,tdoc7sub,tdoc8];
 
 if (_shop in _CopOnlyShops && !iscop) exitWith { player groupChat "Only Cops may use this shop!"; closeDialog 0; };
 if (_shop in _ESUOnlyShops && !ismedic) exitWith { player groupChat "Only EMS may use this shop!"; closeDialog 0; };
@@ -162,15 +162,11 @@ if ((_infos call INV_getitemType) == "Waffe") then
 
 	{
 
-	if (player hasweapon (_infos call INV_getitemClassName)) then
-
-		{
-
+	if (player hasweapon (_infos call INV_getitemClassName)) then {
 		INV_ActiveSellShopArray = INV_ActiveSellShopArray + [ [_item, _preisOhneTax, _preis, _sellnumber] ];
 		_index = lbAdd [101, format["%1 ($%2)", _name, _preis] ];
 		lbSetData [101, _index, _item];
-
-		};
+	};
 
 	};
 
@@ -201,7 +197,7 @@ if ((_infos call INV_getitemType) == "Item") then
 		{
 
 		INV_ActiveSellShopArray = INV_ActiveSellShopArray + [ [_item, _preisOhneTax, _preis, _sellnumber] ];
-		index = lbAdd [101, format["%1 ($%2, %5kg, %4x)", _name, (_preis call OL_ISSE_str_IntToStr), 0, (_item call INV_GetItemAmount), (_infos call INV_getitemTypeKg)] ];
+		_index = lbAdd [101, format["%1 ($%2, %5kg, %4x)", _name, (_preis call OL_ISSE_str_IntToStr), 0, (_item call INV_GetItemAmount), (_infos call INV_getitemTypeKg)] ];
 		lbSetData [101, _index, (format ["%1", _item])];
 
 		};

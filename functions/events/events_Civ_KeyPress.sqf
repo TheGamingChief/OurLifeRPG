@@ -1,8 +1,8 @@
 fnc_KeyPress_ESC = {
 	if (dialog) exitwith { closeDialog 0 };
-	if (isnull (findDisplay 49)) then {
-		call OL_misc_escapemod;
-	};
+	waitUntil {!(isNull (findDisplay 46)) || OL_ESC_Closed};
+	if (OL_ESC_Closed) exitWith { OL_ESC_Closed = false };
+	if (isNull (findDisplay 49)) exitWith { call OL_misc_escapemod };
 };
 
 fnc_KeyPress_1 = {
@@ -10,6 +10,14 @@ fnc_KeyPress_1 = {
 	if(dialog)exitwith{closeDialog 0;};
 	if(isstunned) exitwith {player groupchat "You are stunned!"};
 	["swagswag_life"] call OL_ui_ShowTablet;
+};
+
+fnc_KeyPress_Shift1 = {
+	if (dialog) then { closeDialog 0 };
+	if (!INV_shortcuts) exitWith {};
+	if (isstunned) exitWith { player groupChat "You are stunned!" };
+
+	[] call OL_phone_ActionMenu;
 };
 
 fnc_KeyPress_2 = {
@@ -55,29 +63,25 @@ fnc_KeyPress_5 = {
 };
 
 fnc_KeyPress_6 = {
-	if (getPlayerUID player == "76561198042800063") exitWith {
-		if ((getPlayerUID player) in OL_SwagDevs || (getPlayerUID player) in adminlevel4 || (getPlayerUID player) in adminlevel3 || (getPlayerUID player) in adminlevel2 || (getPlayerUID player) in adminlevel1) exitWith {
-			systemChat "Your panel access has been removed due to misuse.";
-		};
-	};
-	if(dialog)exitwith{closeDialog 0;};
-		if(!INV_shortcuts)exitwith{};
-			if(isstunned) exitwith {player groupchat "You are stunned!"};
-				[] call OL_Admin_ShowMenu;
+	if (getPlayerUID player == "76561198042800063") exitWith { systemChat "Your panel access has been removed due to misuse." };
+	if (dialog) exitwith { closeDialog 0 };
+	if (!INV_shortcuts) exitwith {};
+	if (isstunned) exitwith { player groupChat "You are stunned!" };
+	[] call OL_Admin_ShowMenu;
 };
 
 fnc_KeyPress_7 = {
-	if (getPlayerUID player == "76561198042800063") exitWith {
-		if ((getPlayerUID player) in OL_SwagDevs || (getPlayerUID player) in adminlevel4 || (getPlayerUID player) in adminlevel3 || (getPlayerUID player) in adminlevel2 || (getPlayerUID player) in adminlevel1) exitWith {
-			systemChat "Your panel access has been removed due to misuse.";
-		};
-	};
-	if(dialog)exitwith{closeDialog 0;};
-		if(!INV_shortcuts)exitwith{};
-			if ((getPlayerUID player) in OL_SwagDevs) then {
-				createDialog "balca_debug_main";
-			};
-		};
+	if (getPlayerUID player == "76561198042800063") exitWith { systemChat "Your panel access has been removed due to misuse." };
+	if (dialog) exitwith { closeDialog 0 };
+	if (!INV_shortcuts) exitwith {};
+	if ((getPlayerUID player) in OL_SwagDevs) then { createDialog "balca_debug_main" };
+};
+
+/*fnc_KeyPress_8 = {
+	if (dialog) exitwith { closeDialog 0 };
+	if (!INV_shortcuts) exitwith {};
+	[] call OL_ui_CustomKeysMenu;
+};*/
 
 fnc_KeyPress_9 = {
 	if (dialog) exitWith {closeDialog 0;};
@@ -101,15 +105,9 @@ fnc_KeyPress_Q = {
 };
 
 fnc_KeyPress_Home = {
-	if (getPlayerUID player == "76561198042800063") exitWith {
-		if ((getPlayerUID player) in OL_SwagDevs || (getPlayerUID player) in adminlevel4 || (getPlayerUID player) in adminlevel3 || (getPlayerUID player) in adminlevel2 || (getPlayerUID player) in adminlevel1) exitWith {
-			systemChat "Your panel access has been removed due to misuse.";
-		};
-	};
+	if (getPlayerUID player == "76561198042800063") exitWith { systemChat "Your panel access has been removed due to misuse." };
 	closeDialog 0;
-	if ((getplayeruid player) in OL_SwagDevs) then {
-		[] call adminMenuOpen;
-	};
+	if ((getplayeruid player) in OL_SwagDevs) then { [] call adminMenuOpen };
 };
 
 fnc_KeyPress_O = {
@@ -208,8 +206,8 @@ fnc_KeyPress_E = {
 		_atms   = nearestObjects [_posFind,["Man", "tcg_ATM"],2];
 		_atm    = objNull;
 		_civ    = objNull;
-		if (count _men != 0) then {_civ = _men select 0};
-		if (count _atms != 0) then {_atm = _atms select 0};
+		if (count _men != 0)  then  {_civ = _men select 0  };
+		if (count _atms != 0) then { _atm = _atms select 0 };
 
 		if(isciv && !(isNull _civ) && _civ in playerarray) exitwith {
 			if(isciv && !iscop) then {
@@ -223,11 +221,10 @@ fnc_KeyPress_E = {
 				["TGC_CopMenu"] call OL_ui_InteractionMenu;
 			};
 		};
-			_i = 4;
-			if (!(isNull _civ) && _civ in shopusearray) exitwith {
+		_i = 4;
+		if (!(isNull _civ) && _civ in shopusearray) exitwith {
 			if (iscop && _civ in drugsellarray) exitwith { [_civ] call OL_fnc_DrugSearch };
-			_id = _civ call INV_getshopnum;
-			[0,0,0,[_id]] execVM "shopdialogs.sqf";
+			[_civ] call Shops_fnc_DisplayStoreOptions;
 		};
 		if (!(isNull _atm) && _atm in bankflagarray) exitwith {
 			_i = 4;

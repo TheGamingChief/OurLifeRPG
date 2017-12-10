@@ -74,7 +74,7 @@ if (!(createDialog "liste_1_button")) exitWith {hint "Dialog Error!";};
 	for [{_i=0}, {_i < (count playerarray)}, {_i=_i+1}] do
 	{
 		_spieler = playerarray select _i;
-		if (!isnull _spieler and isPlayer _spieler) then {lbAdd [1, (format ["%1: %2", _spieler, _spieler getVariable "RealName"])];};
+		if (!isnull _spieler and isPlayer _spieler) then {lbAdd [1, (format ["%1: %2", _spieler, _spieler getVariable ["RealName", name player]])];};
 	};
 };
 if (_art == "oilswag") exitWith {
@@ -106,11 +106,11 @@ if (!(createDialog "liste_1_button")) exitWith {hint "Dialog Error!";};
 
 		lbAdd [1, format["Gang Name: %1", _OL_GangsArray select 1]];
 		lbAdd [1, format["Members:"]];
-		if !(isNull _leader) then {lbAdd [1, format["%1 (Leader)", _leader getVariable "RealName"]]};
+		if !(isNull _leader) then {lbAdd [1, format["%1 (Leader)", _leader getVariable ["RealName", name player]]]};
 		private "_j"; /// BUG FIX
 			for [{_j=0}, {_j < (count _members)}, {_j=_j+1}] do
 			{
-				lbAdd [1, format["%1", (call compile (_members select _j)) getVariable "RealName"]];
+				lbAdd [1, format["%1", (call compile (_members select _j)) getVariable ["RealName", name player]]];
 			};
 		lbAdd [1, _trennlinie];
 	};
@@ -213,7 +213,7 @@ if (_art == "coplog") exitWith {
 			if (count _currentWarrants > 0) then {
 				_str = "";
 
-				lbAdd [1, format ["%1 (Bounty: %2): %3 is wanted for:",_civilian, [_civilian] call OL_player_WarrantTotal, _civilian getVariable "RealName"]];
+				lbAdd [1, format ["%1 (Bounty: %2): %3 is wanted for:",_civilian, [_civilian] call OL_player_WarrantTotal, _civilian getVariable ["RealName", name player]]];
 				{
 					lbAdd[1, format["%1 (x%2)", _x select 0, _x select 1]];
 				} foreach _currentWarrants;

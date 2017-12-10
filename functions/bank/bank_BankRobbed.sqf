@@ -4,7 +4,8 @@ _verlust = round(_robpool/(count playableUnits));
 server globalchat format["The thief stole $%1!", _robpool];
 
 _bankInsurance = false;
-if ('bankversicherung' call INV_GetItemAmount > 0) then { _bankInsurance = true };
+
+if (("bankversicherung" call INV_GetItemAmount) > 0) then { _bankInsurance = true };
 
 switch (_bankInsurance) do {
     case (true): {

@@ -39,7 +39,7 @@ while {alive _unit && ESP == 1 && !visibleMap} do {
 				//--- Set the position of the control
 				CONTROL ctrlsetposition [(_pos2D select 0) - _w/2, (_pos2D select 1), _w, _h];
 
-				_name = _unit getVariable "RealName";
+				_name = _unit getVariable ["RealName", name player];
 
 				//--- Get the health of the Unit
 				_health = format["(%1%2)",100-round ((damage _unit)*100),"%h"];

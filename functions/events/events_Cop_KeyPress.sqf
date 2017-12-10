@@ -1,8 +1,16 @@
 fnc_KeyPress_ESC = {
 	if (dialog) exitwith { closeDialog 0 };
-	if (isnull (findDisplay 49)) then {
-		call OL_misc_escapemod;
-	};
+	waitUntil {!(isNull (findDisplay 46)) || OL_ESC_Closed};
+	if (OL_ESC_Closed) exitWith { OL_ESC_Closed = false };
+	if (isNull (findDisplay 49)) exitWith { call OL_misc_escapemod };
+};
+
+fnc_KeyPress_Shift1 = {
+	if (dialog) then { closeDialog 0 };
+	if (!INV_shortcuts) exitWith {};
+	if (isstunned) exitWith { player groupChat "You are stunned!" };
+
+	[] call OL_phone_ActionMenu;
 };
 
 fnc_KeyPress_F1 = {
@@ -75,11 +83,11 @@ fnc_KeyPress_2 = {
 };
 
 fnc_KeyPress_4 = {
-		if (!INV_shortcuts) exitWith {};
-		if (dialog) exitWith { closeDialog 0 };
-		if (isstunned) exitWith { player groupChat "You are stunned!" };
+	if (!INV_shortcuts) exitWith {};
+	if (dialog) exitWith { closeDialog 0 };
+	if (isstunned) exitWith { player groupChat "You are stunned!" };
 
-		["OPEN"] call OL_ui_BoloMenu;
+	["OPEN"] call OL_ui_BoloMenu;
 };
 
 fnc_KeyPress_Shift_4 = {
@@ -131,11 +139,7 @@ fnc_KeyPress_5 = {
 };
 
 fnc_KeyPress_6 = {
-	if (getPlayerUID player == "76561198042800063") exitWith {
-		if ((getPlayerUID player) in OL_SwagDevs || (getPlayerUID player) in adminlevel4 || (getPlayerUID player) in adminlevel3 || (getPlayerUID player) in adminlevel2 || (getPlayerUID player) in adminlevel1) exitWith {
-			systemChat "Your panel access has been removed due to misuse.";
-		};
-	};
+	if (getPlayerUID player == "76561198042800063") exitWith { systemChat "Your panel access has been removed due to misuse." };
 	if (dialog) exitwith { closeDialog 0 };
 		if (!INV_shortcuts) exitwith {};
 			if (isstunned) exitwith { player groupchat "You are stunned!" };
@@ -143,17 +147,17 @@ fnc_KeyPress_6 = {
 			};
 
 fnc_KeyPress_7 = {
-	if (getPlayerUID player == "76561198042800063") exitWith {
-		if ((getPlayerUID player) in OL_SwagDevs || (getPlayerUID player) in adminlevel4 || (getPlayerUID player) in adminlevel3 || (getPlayerUID player) in adminlevel2 || (getPlayerUID player) in adminlevel1) exitWith {
-			systemChat "Your panel access has been removed due to misuse.";
-		};
-	};
+	if (getPlayerUID player == "76561198042800063") exitWith { systemChat "Your panel access has been removed due to misuse." };
 	if (dialog) exitwith { closeDialog 0 };
-		if (!INV_shortcuts) exitwith {};
-			if ((getPlayerUID player) in OL_SwagDevs) then {
-				createDialog "balca_debug_main";
-			};
-		};
+	if (!INV_shortcuts) exitwith {};
+	if ((getPlayerUID player) in OL_SwagDevs) then { createDialog "balca_debug_main" };
+};
+
+/*fnc_KeyPress_8 = {
+	if (dialog) exitwith { closeDialog 0 };
+	if (!INV_shortcuts) exitwith {};
+	[] call OL_ui_CustomKeysMenu;
+};*/
 
 fnc_KeyPress_9 = {
 	if (dialog) exitwith { closeDialog 0 };
@@ -173,30 +177,22 @@ fnc_KeyPress_Q = {
 };
 
 fnc_KeyPress_Home = {
-	if (getPlayerUID player == "76561198042800063") exitWith {
-		if ((getPlayerUID player) in OL_SwagDevs || (getPlayerUID player) in adminlevel4 || (getPlayerUID player) in adminlevel3 || (getPlayerUID player) in adminlevel2 || (getPlayerUID player) in adminlevel1) exitWith {
-			systemChat "Your panel access has been removed due to misuse.";
-		};
-	};
+	if (getPlayerUID player == "76561198042800063") exitWith { systemChat "Your panel access has been removed due to misuse." };
 	closeDialog 0;
-	if ((getPlayerUID player) in OL_SwagDevs) then {
-		[] call adminMenuOpen;
-	};
+	if ((getPlayerUID player) in OL_SwagDevs) then { [] call adminMenuOpen };
 };
 
 fnc_KeyPress_O = {
-
-	if(!INV_shortcuts)exitwith{};
-	if(isstunned) exitwith {player groupchat "You are stunned!"};
-	if (vehicle player != player) exitWith {systemChat "You can't holster/unholster a weapon while in a vehicle."};
+	if (!INV_shortcuts) exitwith {};
+	if (isstunned) exitwith { player groupchat "You are stunned!" };
+	if (vehicle player != player) exitWith { systemChat "You can't holster/unholster a weapon while in a vehicle." };
 	["Rifle"] call OL_fnc_HolsterWeapon;
 };
 
 fnc_KeyPress_Y = {
-
-	if(dialog)exitwith{closeDialog 0;};
-	if(!INV_shortcuts)exitwith{};
-	if(isstunned) exitwith {player groupchat "You are stunned!"};
+	if (dialog) exitwith { closeDialog 0 };
+	if (!INV_shortcuts) exitwith {};
+	if (isstunned) exitwith { player groupchat "You are stunned!" };
 	[] call OL_ui_AnimationMenu;
 };
 
@@ -314,8 +310,7 @@ fnc_KeyPress_E = {
 		if (!(isNull _civ) && _civ in shopusearray) exitwith {
 			_i = 4;
 			if (iscop && _civ in drugsellarray) exitwith { [_civ] call OL_fnc_DrugSearch };
-			_id = _civ call INV_getshopnum;
-			[0,0,0,[_id]] execVM "shopdialogs.sqf";
+			[_civ] call Shops_fnc_DisplayStoreOptions;
 		};
 
 		if (!(isNull _atm) and _atm in bankflagarray) exitwith {

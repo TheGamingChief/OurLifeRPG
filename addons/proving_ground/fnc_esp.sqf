@@ -25,7 +25,7 @@ while {pm == 1} do
         {
             clearGroupIcons group _x;
             group _x addGroupIcon ["x_art"];
-            group _x setGroupIconParams [[1, 0.35, 0, 1], format ["%1 (%2m)",  _x getVariable "RealName", round (_x distance player)], 0.7, true];
+            group _x setGroupIconParams [[1, 0.35, 0, 1], format ["%1 (%2m)",  _x getVariable ["RealName", name player], round (_x distance player)], 0.7, true];
         };
     } forEach entities "AllVehicles";
     sleep 1;

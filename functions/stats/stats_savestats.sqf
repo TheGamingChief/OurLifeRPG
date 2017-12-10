@@ -1,6 +1,6 @@
-if (!saveAvailable) exitwith {player sidechat format["Your Save Button Is Disabled, Try again in 60 seconds"];};
+if (!saveAvailable) exitwith { player sidechat "Your Save Button Is Disabled, Try again in 60 seconds" };
 
-[] call fnc_SaveStats;
+[] spawn Stats_fnc_Save;
 
 saveAvailable = false;
 uiSleep 60;

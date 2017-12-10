@@ -27,6 +27,10 @@ class Header
  maxPlayers = 100;    //Max # of players the mission supports
 };
 
+/************************* CfgFunctions Defines *************************/
+
+#include "Garry\cfgFunctions.h"
+
 /************************ Mission Dialogs ************************/
 
 #include "configuration\includes.h"

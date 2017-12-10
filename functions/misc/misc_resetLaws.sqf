@@ -2,7 +2,7 @@ GesetzArray  = [
   "Always Drive on the RIGHT side of the road",
   "Always Holster weapons in Towns.",
   "Speed limits 60 in town 90 out",
-  "Governor and Gaurds May have any weapon unlicensed",
+  "Governor and Guards May have any weapon unlicensed",
   "Governor is immune to traffic laws if his life is in danger",
   "",
   "",

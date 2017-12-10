@@ -142,3 +142,21 @@ class TGC_RscFrame
 	sizeEx = 0.02;
 	text = "";
 };
+
+class DA_ListBox: RscListbox
+{
+	style = 512;
+	colorSelect[] = { 1, 1, 1, 1 };
+	colorSelectBackground[] = { 0.26953125, 0.46484375, 0.734375, 1 };
+	color[] = { 0.26953125, 0.46484375, 0.734375, 1 };
+	colorActive[] = { 0.26953125, 0.46484375, 0.734375, 1 };
+	colorDisabled[] = { 0.26953125, 0.46484375, 0.734375, 1 };
+	thumb = "\ca\ui\data\ui_scrollbar_thumb_ca.paa";
+	arrowFull = "\ca\ui\data\ui_arrow_top_active_ca.paa";
+	arrowEmpty = "\ca\ui\data\ui_arrow_top_ca.paa";
+	border = "\ca\ui\data\ui_border_scroll_ca.paa";
+	font = "EtelkaNarrowMediumPro";
+	sizeEx = 0.03;
+	rowHeight = 0.05;
+	shadow = 0;
+};

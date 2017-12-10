@@ -1,4 +1,5 @@
 
+
 #define FontM 			"Zeppelin32"
 
 #define FontHTML 		"Zeppelin32"
@@ -311,6 +312,26 @@ sizeEx            = 0.02;
 text              = "";
 
 };
+
+class RscText_G
+{
+	access = 0;
+	type = 0;
+	idc = -1;
+	colorBackground[] = {0,0,0,0};
+	colorText[] = {0.8784,0.8471,0.651,1};
+	text = "";
+	fixedWidth = 0;
+	x = 0;
+	y = 0;
+	h = 0.037;
+	w = 0.3;
+	style = 0;
+	shadow = 2;
+	font = "Zeppelin32";
+	SizeEx = 0.03921;
+};
+
 class D_RscTextTitle
 
 {
@@ -416,6 +437,38 @@ offsetPressedY            = 0;
 borderSize                = 0;
 soundEnter[]              = {"", 0.15, 1};
 
+};
+
+class RscButton_Hidden
+{
+	access = 0;
+	type = 1;
+	text = "";
+	colorText[] = {0,0,0,0};
+	colorDisabled[] = {0,0,0,0};
+	colorBackground[] = {0,0,0,0};
+	colorBackgroundDisabled[] = {0,0,0,0};
+	colorBackgroundActive[] = {0,0,0,0};
+	colorFocused[] = {0,0,0,0};
+	colorShadow[] = {0,0,0,0};
+	colorBorder[] = {0,0,0,0};
+	soundEnter[] = {"\ca\ui\data\sound\onover",0.09,1};
+	soundPush[] = {"\ca\ui\data\sound\new1",0,0};
+	soundClick[] = {"\ca\ui\data\sound\onclick",0.07,1};
+	soundEscape[] = {"\ca\ui\data\sound\onescape",0.09,1};
+	style = 2;
+	x = 0;
+	y = 0;
+	w = 0.095589;
+	h = 0.039216;
+	shadow = 2;
+	font = "Zeppelin32";
+	sizeEx = 0.03921;
+	offsetX = 0.003;
+	offsetY = 0.003;
+	offsetPressedX = 0.002;
+	offsetPressedY = 0.002;
+	borderSize = 0;
 };
 
 class RscDummy : RscButton

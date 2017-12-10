@@ -1,5 +1,6 @@
 saveAvailable         = false;
 OL_StatsLoadedFromDB  = false;
+OL_VehiclesLoadedFromDB = false;
 OL_NeedsStatwipe      = false;
 Reporter_id 	        = [];
 ReporterLead_id 	    = [];
@@ -46,7 +47,9 @@ OL_CheckpointWL       = [];
 INV_SavedVehLand      = [];
 INV_SavedVehAir       = [];
 
-OL_VehicleGarage      = [];
 OL_Licenses           = [];
 
 OL_PlayTime           = 0;
+OL_Cop_PlayTime       = 0;
+OL_EMS_PlayTime       = 0;
+OL_Civ_PlayTime       = 0;

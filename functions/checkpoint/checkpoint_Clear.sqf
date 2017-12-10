@@ -29,15 +29,11 @@ switch (true) do {
       };
   };
   case (ismedic) : {
-    format['if(ismedic) then{player sideChat "%1 has cleared a checkpoint (200m)."}', PlayerName] call OL_network_Swag;
+    format ['if(ismedic) then { player sideChat "%1 has cleared a checkpoint (200m)." }', PlayerName] call OL_network_Swag;
     {
-          if((_x getVariable "AM_CP") == 1) then
-          {
-              deleteVehicle _x;
-          };
-      }foreach nearestObjects[player,["All"],200];
-
-      ["CheckPointClear_Log", format ["Medic %1 (%2) has Cleared a Checkpoint at %3", PlayerName, getPlayerUID player, _gridPos]] call RM_fnc_LogToServer;
+          if ((_x getVariable "AM_CP") == 1) then { deleteVehicle _x };
+    } forEach (nearestObjects [player, ["All"], 200]);
+    ["CheckPointClear_Log", format ["Medic %1 (%2) has Cleared a Checkpoint at %3", PlayerName, getPlayerUID player, _gridPos]] call RM_fnc_LogToServer;
   };
   case (_uid in Tow_ID) : {
     {

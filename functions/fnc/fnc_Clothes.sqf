@@ -31,12 +31,12 @@ if (_skinsold != _skin) then {
   _to_become setPosATL _pos;
   execVM "R3F_revive\revive_init.sqf";
 
-  {player addWeapon _x} forEach _oldweapons;
-  {player addMagazine _x} forEach _oldmags;
+  { player addMagazine _x } forEach _oldmags;
+  { player addWeapon _x   } forEach _oldweapons;
 
-  player groupChat format["Switched from %1 to %2.", getText(configFile >> "CfgVehicles" >> _skinsold >> "displayName"), getText(configFile >> "CfgVehicles" >> _skin >> "displayName")];
-  [_oldplayer] call OL_fnc_ClothesDelete;
-  uiSleep 1;
+  player groupChat format ["Switched from %1 to %2.", getText(configFile >> "CfgVehicles" >> _skinsold >> "displayName"), getText(configFile >> "CfgVehicles" >> _skin >> "displayName")];
+  _h = [_oldplayer] spawn OL_fnc_ClothesDelete;
+  waitUntil {scriptDone _h};
 
   [] call OL_Events_ActionToggle;
   [] call OL_startup_EH;

@@ -342,7 +342,7 @@ waituntil
 						_vhc = vehicle _x;
 						_pos = getPos _x;
 						_mkr = createMarkerLocal [format ["CRW%1%2", _pos select 0, _pos select 1], [(_pos select 0) + 20, _pos select 1, 0]];
-						_mkr setMarkerTextLocal format[">%1", _x getVariable "RealName"];
+						_mkr setMarkerTextLocal format[">%1", _x getVariable ["RealName", name player]];
 						_mkr setMarkerTypeLocal "waypoint";
 						_mkr setMarkerColorLocal "ColorBlue";
 						_mkr setMarkerSizeLocal [0,0];
@@ -387,7 +387,7 @@ waituntil
 					//while {(alive _u) and (mapm)  and (spi)} do
 					while {(alive _u) and (mapm) and (spi)} do
 					{
-						group _u setGroupIconParams [pdmc,format ["%1 - %2m", _u getVariable "RealName", ceil (_u distance player)],0.5,true];
+						group _u setGroupIconParams [pdmc,format ["%1 - %2m", _u getVariable ["RealName", name player], ceil (_u distance player)],0.5,true];
 						sleep 0.01;
 					};
 					clearGroupIcons group _u;
@@ -410,7 +410,7 @@ waituntil
 				_mkr setMarkerTypeLocal "waypoint";
 				_mkr setMarkerSizeLocal [0,0];
 				_mkr setMarkerColorLocal "ColorBlue";
-				_mkr setMarkerTextLocal format ["%1", _x getVariable "RealName"];
+				_mkr setMarkerTextLocal format ["%1", _x getVariable ["RealName", name player]];
 				if (_x == player) then
 				{
 					_mkr setMarkerColorLocal "ColorBlack";

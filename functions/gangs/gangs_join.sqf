@@ -12,6 +12,7 @@ _gang set [3, (_gang select 3) + [str player]];
 _ownerObj   = call compile (_gang select 2);
 _membersObj = [_gang select 3] call CP_misc_ArrayStr2Obj;
 
+gangmember = true;
 OL_PlayerGangID = (_gang select 0);
 player groupChat format['You have joined the %1 gang', _gang select 1];
 format ['

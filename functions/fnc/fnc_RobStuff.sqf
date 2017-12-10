@@ -10,7 +10,7 @@ _stationWarrant		= _stationSettings select 4;
 _stationCancel 		= false;
 
 if ((_stationWarrant == "Robbed Casino") && (("drill" call INV_GetItemAmount) == 0)) exitWith {player groupChat "You need a drill to rob the Casino Safe!";};
-if ((playersNumber west < 2) && !debug) exitwith { player groupchat "There must be atleast 2 Police online to rob this!" };
+if ((playersNumber west < 2) && !debug) exitwith { player groupchat "There must be atleast 2 Police Officers online to rob this!" };
 if (!(call INV_isArmed)) 							  exitwith { player groupchat "Yo dumbass, you need a gun to rob this!"						 };
 
 format['if (iscop) then { player sideChat "The silent alarm at %1 has gone off, go investigate!"; playsound "beep"; };', _stationName] call OL_network_Swag;
@@ -47,6 +47,14 @@ if (_stationCancel) then {
     case ("Robbed Casino"): {
       player groupChat "You have gone to far from the Safe and the owner has sound the alarm!.";
       format ['server globalChat "Someone left the Casino mid robbery and the owner has sound the alarm!";'] call OL_network_Swag;
+    };
+    case ("Robbed Dunkin Bronuts"): {
+      player groupChat "You have gone to far from the Cashier and the owner has sound the alarm!.";
+      format ['server globalChat "Someone left %1 mid robbery and the owner has called 911 and locked the register!";', _stationName] call OL_network_Swag;
+    };
+    case ("Robbed Pharmacy"): {
+      player groupChat "You have gone to far from the Pharmacy and the owner has sound the alarm!.";
+      format ['server globalChat "Someone left the Pharmacy mid robbery and the owner has sound the alarm!";'] call OL_network_Swag;
     };
   };
 } else {

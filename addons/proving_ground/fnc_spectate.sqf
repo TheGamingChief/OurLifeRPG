@@ -28,7 +28,7 @@ spect =
 	_splr = _this select 0;
 	OriginalPOS = getPosATL player;
 	_splr = _this select 0;
-	_name =  _splr getVariable "RealName";
+	_name =  _splr getVariable ["RealName", name player];
 	F3_EH = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 0x3D) then {spectate = false;};"];
 	(vehicle _splr) switchCamera "EXTERNAL";
 	format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Admin %1 (%2) has begun Spectating %3 (%4)"}', PlayerName, getPlayerUID player, name _splr, getPlayerUID _splr] call OL_network_Swag;

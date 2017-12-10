@@ -14,26 +14,21 @@ _f3 = 0;
 _Arr1 = [];
 _Arr2 = [];
 
-for [{_i=0}, {_i < (count INV_FarmItemArray)},{_i=_i+1}] do {_Arr1 = _Arr1 + [0]};
+for [{_i=0}, {_i < (count INV_FarmItemArray)}, {_i=_i+1}] do { _Arr1 = _Arr1 + [0] };
 shopusearray = [];
 
-sleep 10;
+uiSleep 10;
 
 //==================================SHOPACTIONS========================================
 
-for [{_i=0}, {_i < (count INV_ItemShops)}, {_i=_i+1}] do
-
-	{
-
-	_flag   = ((INV_ItemShops select _i) select 0);
-
+for [{_i = 0}, {_i < (count OL_ShopsArray - 1)}, {_i = _i + 1}] do {
+	_flag   		 = ((OL_ShopsArray select _i) select 0);
 	shopusearray = shopusearray + [_flag];
-
-	};
+};
 
 //===================================FARMING===============================================
 
-while {true} DO {
+while {true} do {
 
 for [{_i = 0}, {_i < (count INV_FarmItemArray)}, {_i = _i + 1}] do
 

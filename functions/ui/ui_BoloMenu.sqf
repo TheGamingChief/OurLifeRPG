@@ -8,8 +8,6 @@ switch (_this select 0) do {
     if (dialog) then { closeDialog 0 };
     if (!createDialog "UI_ListMenuBig") exitWith { hint "Dialog Error!" };
 
-    _somethingDisplayed = false;
-
     {
       if ((_x select 4) == "VALID") then {
         lbAdd [1500, format["Vehicle: %1", (_x select 2) select 0]];
@@ -20,7 +18,6 @@ switch (_this select 0) do {
         lbAdd [1500, format["End Time: %1", [(_x select 1) / 60 / 60] call BIS_fnc_timeToString]];
         lbAdd [1500, format["Status: %1", _x select 4]];
         lbAdd [1500, "==============================================================================="];
-        _somethingDisplayed = true;
       };
     } forEach OL_Bolos;
 
@@ -31,7 +28,8 @@ switch (_this select 0) do {
       buttonSetAction [1600, "['EXPIRED'] call OL_ui_BoloMenu"];
     };
 
-    if (!_somethingDisplayed) exitWith {
+    //displayAddEventHandler ["onLBDblClick", "[lbData [1500, lbCurSel 1500]] call OL_ui_BoloMenu; closeDialog 0;"];
+    if ((lbSize 1500) == 0) exitWith {
       lbAdd [1500, "No Bolos To Display"];
     };
   };

@@ -197,7 +197,7 @@ if ((_loopart == "arrest") and (player distance prisonflag <= 70))  then {
 
 			player groupChat localize "STRS_civmenucheck_free_self";
 
-			[] call fnc_SaveStats;
+			[] spawn Stats_fnc_Save;
 		};
 		case ("JailExit_Died"): {
 	    player groupChat "R.I.P.";
@@ -244,7 +244,7 @@ _gridPos = mapGridPosition getpos player;
 if (_geld >= 100000) then
 {
 	["Rob_Log", format ["%1 (%2) has robbed %3 (%4) for $%5 at %6", _aktionsStarter getVariable ["RealName", "Error: No Unit"], getPlayerUID _aktionsStarter, player, getPlayerUID player, _geld, _gridPos]] call RM_fnc_LogToServer;
-	[] call fnc_SaveStats;
+	[] spawn Stats_fnc_Save;
 };
 
 (format ['if (player == %1) then {["geld", %2] call INV_AddInvItem;};hint "%1 stole %2 from %3";',_aktionsStarter, _geld, player]) call OL_network_Swag;

@@ -1,5 +1,7 @@
 INV_shortcuts     = true;
 isstunned  	      = false;
+OL_SavingVehicle  = false;
+OL_ESC_Closed     = false;
 dog_cost          = 1000;
 huren_cost        = 40000;
 slave_cost        = 40000;

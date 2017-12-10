@@ -9,5 +9,7 @@ DD_Modules = DD_Modules + [
   ["OL", "player", "WarrantGetPrice", 1],
   ["OL", "player", "WarrantTotal",    1],
   ["OL", "player", "BoloToServer",    1],
+  ["OL", "player", "ChangeKey",       1],
+  ["OL", "player", "SetupKeys",       1],
   ["OL", "player", "Paycheck",        1]
 ];

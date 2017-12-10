@@ -24,7 +24,7 @@ INV_AddInvItem = {
 	_Famount        = _this select 1;
 	_Finfos         = _Fitem call INV_getitemArray;
 	_Fgesamtgewicht = 0;
-	_Fgesamtgewicht = ( (call INV_GetOwnWeight) + (_Famount * (_Finfos call INV_getitemTypeKg)) );
+	_Fgesamtgewicht = ( (call INV_GetOwnWeight) + (_Famount * (_Fitem call INV_getitemTypeKg)) );
 		if (_Famount > 0) then {
 			if (_Fgesamtgewicht <= INV_Weight) then {
 				([_Fitem, _Famount, "INV_InventarArray"] call INV_AddItemStorage);
@@ -517,39 +517,6 @@ INV_getitemArray = {
 	_Fobjarray
 };
 
-// Get shop array
-INV_getshopArray = {
-	private ["_c", "_Fshoparray"];
-	_Fshoparray = [];
-	if ((typeName _this) == "OBJECT") then {
-		for "_c" from 0 to (count INV_itemshops - 1) do {
-			if (((INV_itemshops select _c) select 0) == _this) then {
-				_Fshoparray = INV_itemshops select _c;
-			};
-		};
-	};
-	if ((typeName _this) == "ARRAY") then {
-		_Fshoparray = _this;
-	};
-	_Fshoparray;
-};
-
-// Get shop number
-
-INV_getshopnum = {
-	private ["_c", "_Fshopnum"];
-	_Fshopnum = [];
-	if ((typeName _this) == "OBJECT") then {
-		for [{_c=0}, {_c < (count INV_itemshops)}, {_c=_c+1}] do {
-			if (((INV_itemshops select _c) select 0) == _this) then {
-				_Fshopnum = _c;
-			};
-		};
-	};
-
-	_Fshopnum;
-};
-
 // Get shopitem number
 
 INV_getshopitemnum =
@@ -665,7 +632,7 @@ INV_findunit = {
 
 	for "_i" from 0 to (count _arr - 1) do {
 		_obj = _arr select _i;
-		if (!isNull _obj && (_obj getVariable "RealName") == _name) exitwith { _unit = _obj };
+		if (!isNull _obj && (_obj getVariable ["RealName", name player]) == _name) exitwith { _unit = _obj };
 	};
 	_unit;
 };
@@ -694,7 +661,10 @@ INV_getitemBuyCost = 			{((_this call INV_getitemArray) select 3) select 0;};
 INV_getitemSellCost = 		{((_this call INV_getitemArray) select 3) select 1;};
 
 //TypeKG = Vehicle Class (1=Light 2=Normal, >3=Large+NotRepairable)
-INV_getitemTypeKg = 			{((_this call INV_getitemArray) select 4) select 0;};
+INV_getitemTypeKg = 			{
+	if (typeName _this == "ARRAY") exitWith {};
+ 	((_this call INV_getitemArray) select 4) select 0;
+};
 INV_getitemLicense = 			{((_this call INV_getitemArray) select 4) select 1;};
 INV_getitemLicense2 = 		{((_this call INV_getitemArray) select 4) select 2;};
 INV_getvehmaxkg = 				{((_this call INV_getitemArray) select 4) select 3;};
@@ -705,18 +675,3 @@ INV_getitemLooseable = 		{((_this call INV_getitemArray) select 5) select 2;};
 INV_getitemIsIllegal = 		{((_this call INV_getitemArray) select 5) select 3;};
 INV_getitemFilename = 		{((_this call INV_getitemArray) select 5) select 4;};
 INV_getitemCostWithTax = 	{((_this call INV_getitemArray) call INV_getitemSteuer);};
-/*
-	{
-		_tmp = [];
-		_tmp = _tmp + [_x select 0];
-		_tmp = _tmp + [_x select 1];
-		_tmp = _tmp + [_x select 2];
-		_tmp = _tmp + [_x select 3];
-		_tmp = _tmp + [_x select 4];
-		_tmp = _tmp + [_x select 5];
-
-		diag_log _tmp;
-	} forEach INV_AlleItemsArray;
-
-	AlleMissionsObjekte = INV_AlleWaffenObjekte + INV_AlleMagazinObjekte + INV_AlleFahrzeugeArray + INV_AlleItemsArray;
-*/

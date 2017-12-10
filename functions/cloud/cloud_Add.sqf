@@ -16,3 +16,5 @@ if ((_cloudPiece) == -1) then{
 	DD_Cloud set [_index, [_cloudVariable, _cloudData, _cloudKey]];
 	true;
 };
+
+if (_cloudKey == "Bolos") then { [[], "Server_bolos_Request", false, true] call OL_network_MP }; // Fix for bolos not automaticlly updating.

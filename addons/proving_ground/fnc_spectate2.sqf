@@ -71,8 +71,8 @@ if (spectate) then
 	if (selecteditem!= "exitscript") then
 	{
 		_name = selecteditem;
-		{if(_x getVariable "RealName" == _name) then {[_x] call spect;};} forEach Entities "CAManBase";
-		{if ((count crew _x)>0) then {if((driver _x) getVariable "RealName" == _name) then {[_x] call spect;};};} foreach (Entities "LandVehicle"+ Entities "Air" + Entities"Ship");
+		{if((_x getVariable ["RealName", name player]) == _name) then {[_x] call spect;};} forEach Entities "CAManBase";
+		{if ((count crew _x)>0) then {if(((driver _x) getVariable ["RealName", name player]) == _name) then {[_x] call spect;};};} foreach (Entities "LandVehicle"+ Entities "Air" + Entities"Ship");
 	};
 	spectate = false;
 

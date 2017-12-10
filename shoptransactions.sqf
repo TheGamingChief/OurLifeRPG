@@ -40,7 +40,8 @@ if (isNil "INV_ActiveShopNumber") then {
  _license1   = _infos call INV_getitemLicense;
  _license2   = _infos call INV_getitemLicense2;
 
-
+if (isNil "_license1") then { _license1 = "" };
+if (isNil "_license2") then { _license2 = "" };
 
 //===========================================================BUY===============================================================
 if (_art == "itemkauf") then
@@ -234,7 +235,7 @@ if(_itemart == "fahrzeug")then
 
 	if((_vehicle distance player) > 25)exitWith{player groupChat "You are too far away from the vehicle!"};
 	if(!(_vehicle in INV_VehicleArray))exitWith{player groupChat "You do not own this vehicle!"};
-	if(!alive _vehicle)exitWith{player groupChat "The vehicle you are trying to sell if blowen up!"};
+	if(!alive _vehicle)exitWith{player groupChat "The vehicle you are trying to sell is blowen up!"};
 
 	["geld", (_CostMitTax)] call INV_AddInvItem;
 	player groupChat format [localize "STRS_inv_shop_vehiclesold", (_CostMitTax call OL_ISSE_str_IntToStr)];

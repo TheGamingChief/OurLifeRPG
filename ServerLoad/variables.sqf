@@ -1,6 +1,7 @@
 Radar_Holstered         = true;
 UpgradingCar            = false;
 loadNotFinsihed         = false;
+OL_CrackingJail         = false;
 saveAvailable           = true;
 backupavailable         = true;
 gettingcar				      = 0;
@@ -18,7 +19,6 @@ Antwort                 = 0;
 CivTimeInPrison         = 0;
 CopLog                  = [];
 murderer                = [];
-actionsToRemove			    = [];
 isCrackingSafe		      = 0;
 safeCrackFailed			    = 0;
 MayorTaxes              = 0;

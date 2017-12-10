@@ -12,7 +12,7 @@ INV_DialogPlayers = {
 
     if ( ((_Fingame) or (_Fspieler call OL_ISSE_UnitExists)) ) then {
       if (_Fname) then {
-        _Findex = lbAdd [_Fid, format ["%1 - (%2)", _Fspieler, (call compile _Fspieler) getVariable "RealName"]];
+        _Findex = lbAdd [_Fid, format ["%1 - (%2)", _Fspieler, (call compile _Fspieler) getVariable ["RealName", name player]]];
       } else {
         _Findex = lbAdd [_Fid, _Fspieler];
       };
@@ -32,8 +32,8 @@ INV_CreateVehicle = {
   _logic     = _this select 1;
   _type1     = ["HMMWV_DES_EP1", "fire_atv"];
   _haloHelis = ["An2_TK_EP1","An2_1_TK_CIV_EP1","MH6J_EP1","UH1H_TK_EP1","UH1H_TK_GUE_EP1","UH60M_MEV_EP1","CH_47F_EP1","C130J_US_EP1","AH6X_EP1","Mi17_CDF","Mi17_Ins","Mi17_Civilian","C130J"];
-  _swatVehicles = ["olrpg_swat_command", "olrpg_tahoe_swat_um", "olrpg_swat_bearcat", "olrpg_swat_suburban_um"];
-  _swatMarksman = ["olrpg_swat_f350"];
+  _swatVehicles = ["olrpg_swat_command", "olrpg_swat", "olrpg_swat_bearcat", "olrpg_swat_command"];
+  _swatMarksman = ["olrpg_swatf350"];
   hint format ['Buying a %1 from %2', getText(configFile >> "cfgVehicles" >> _classname >> "displayName"), _logic];
 
   if (_classname in _type1) then {
@@ -60,6 +60,8 @@ INV_CreateVehicle = {
       newvehicle addWeapon "Intersection";
       newvehicle setVariable ["OL_Owner",   player,               true];
       newvehicle setVariable ["OL_OwnerID", getPlayerUID player,  true];
+      newvehicle setVariable ["OL_OwnerName", name player,        true];
+      newvehicle setVariable ["OL_OwnerSide", playerSide,         true];
     };
     if (_classname == "HMMWV_DES_EP1") then {
       call compile format['
@@ -83,6 +85,8 @@ INV_CreateVehicle = {
        newvehicle addWeapon "TruckHorn";
        newvehicle setVariable ["OL_Owner",   player,               true];
        newvehicle setVariable ["OL_OwnerID", getPlayerUID player,  true];
+       newvehicle setVariable ["OL_OwnerName", name player,        true];
+       newvehicle setVariable ["OL_OwnerSide", playerSide,         true];
     };
   } else {
     call compile format ['
@@ -102,6 +106,8 @@ INV_CreateVehicle = {
     ', player, round(time), INV_CALL_CREATVEHICLE, getpos _logic, getdir _logic];
     newvehicle setVariable ["OL_Owner",   player,               true];
     newvehicle setVariable ["OL_OwnerID", getPlayerUID player,  true];
+    newvehicle setVariable ["OL_OwnerName", name player,        true];
+    newvehicle setVariable ["OL_OwnerSide", playerSide,         true];
   };
   if (_classname in _haloHelis) then {
     newvehicle setVehicleInit 'this addAction ["HALO Jump","jump.sqf",[],1,false,true,"","_this in _target"]'; processInitCommands;

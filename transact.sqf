@@ -57,7 +57,7 @@ if (KontoStand < _steuern) then
 	INV_SteuernGezahlt = (INV_SteuernGezahlt + (_steuern - _transfermoney));
 	(format ["if (INV_ROLESTRING == ""%1"") then {Kontostand = Kontostand + %2; player groupChat format[localize ""STRS_bank_account_getmoney"", %2, %3];};", _targetString, (_transfermoney call OL_ISSE_str_IntToStr), player]) call OL_network_Swag;
 	player groupChat format[localize "STRS_bank_deposit_yes", (_transfermoney call OL_ISSE_str_IntToStr), (bank_steuer call OL_ISSE_str_IntToStr), (_steuern call OL_ISSE_str_IntToStr)];
-	["money_transferred", format ["%1 (%2) has transferred $%3 to %4's (%5) bank at GRID: %6", PlayerName, getPlayerUID player, _transfermoney, _targetString getVariable "RealName", getPlayerUID _targetString, _gridPos]] call RM_fnc_LogToServer;
+	["money_transferred", format ["%1 (%2) has transferred $%3 to %4's (%5) bank at GRID: %6", PlayerName, getPlayerUID player, _transfermoney, _targetString getVariable ["RealName", name player], getPlayerUID _targetString, _gridPos]] call RM_fnc_LogToServer;
 
 	};
 
@@ -89,4 +89,4 @@ if (Kontostand >= _withdraw) then
 
 sleep 2;
 atmscriptrunning = 0;
-[] call fnc_SaveStats;
+[] spawn Stats_fnc_Save;

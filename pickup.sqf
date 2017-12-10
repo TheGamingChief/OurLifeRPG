@@ -10,7 +10,7 @@ _item  	    = _this select 1;
 _tamount    = _this select 2;
 _infos      = _item call INV_getitemArray;
 _name       = _infos call INV_getitemName;
-_itemweight = (_infos call INV_getitemTypeKg)*_tamount;
+_itemweight = (_item call INV_getitemTypeKg)*_tamount;
 _ownweight  = call INV_GetOwnWeight;
 _amount     = _this select 2;
 _exitvar    = 0;
@@ -21,7 +21,7 @@ if ((_ownweight + _itemweight) > INV_Weight) then
 
 {
 
-_amount = (floor((INV_Weight - _ownweight) / (_infos call INV_getitemTypeKg)));
+_amount = (floor((INV_Weight - _ownweight) / (_item call INV_getitemTypeKg)));
 
 if (_amount <= 0) exitWith {player groupChat localize "STRS_inv_buyitems_maxgewicht"; _exitvar = 1;pickingup = false;};
 

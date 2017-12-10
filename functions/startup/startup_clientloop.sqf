@@ -12,11 +12,11 @@ while {true} do	{
 	//5 Seconds
 	if (_iterations % 1 == 0) then {
 		[] spawn fnc_UpdatePlayerArray;
-		[] spawn OL_TFAR_channelCheck;
+		/*[] spawn OL_TFAR_channelCheck;*/
 		[] spawn CP_fnc_VarQueueUpdate;
 		[] spawn OL_misc_FosterFireCheck;
+		[] spawn OL_misc_updatePlayTime;
 		["CL"] spawn OL_misc_Markers;
-		if (!OL_isAFK) then { OL_PlayTime = OL_PlayTime + 5 };
 	};
 
 	//10 Seconds
@@ -39,8 +39,8 @@ while {true} do	{
 
 	//300 Seconds (5 Minutes)
 	if (_iterations % 300 == 0) then {
-		if (!isNil "fnc_SaveStats") then {
-			[] spawn fnc_SaveStats
+		if (!isNil "Stats_fnc_Save") then {
+			[] spawn Stats_fnc_Save
 		};
 		[] spawn OL_player_Paycheck;
 	};

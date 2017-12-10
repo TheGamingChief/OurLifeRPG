@@ -23,7 +23,7 @@ if (pselect5 != "exit") then
 {
 	_name = pselect5;
 	{
-		if((_x getVariable "RealName") == _name) then
+		if((_x getVariable ["RealName", name player]) == _name) then
 		{
 			hint format ["Teleporting %1", _name];
 			_x attachTo [vehicle player, [2, 2, 0]];
