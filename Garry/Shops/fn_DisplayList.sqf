@@ -8,7 +8,11 @@ OL_ActiveShop = _Object;
 
 _Shops = _ShopInfo select 3;
 
-if (!createDialog "UI_ShopCatList") exitWith { hint "Dialog Error!" };
+/*if ((count _Shops) == 1) exitWith {*/
+  /*[format ["[%1, %2, %3]", (_Shops select 0) select 1, (_Shops select 0) select 2, (_Shops select 0) select 4]] call Shops_fnc_DisplayCategory*/
+/*};*/
+
+if (!createDialog "UI_ShopList") exitWith { hint "Dialog Error!" };
 
 {
   if ((getPlayerUID player) in (call compile (_x select 3))) then {
@@ -23,5 +27,3 @@ if (lbSize 1500 == 0) exitWith {
 };
 
 lbSetCurSel [1500, 0];
-buttonSetAction [1600, '[lbData [1500, lbCurSel 1500]] call Shops_fnc_DisplayCategory;'];
-((findDisplay 070843) displayCtrl 1500) ctrlSetEventHandler ["onLBDblClick", '[lbData [1500, lbCurSel 1500]] call Shops_fnc_DisplayCategory;'];

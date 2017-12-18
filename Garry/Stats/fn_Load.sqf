@@ -43,7 +43,7 @@ switch (_AdminRank) do {
 switch (_Misc) do {
   case 0: {};
   case 1: { OL_CheckpointWL = [getPlayerUID player] };
-  case 2: {};
+  case 2: { OL_CopBlacklisted = true };
   case 3: {};
   case 4: {};
   case 5: {};
@@ -52,6 +52,14 @@ switch (_Misc) do {
   case 8: {};
   case 9: {};
   case 10: {};
+};
+
+if (OL_CopBlacklisted && (playerSide == west)) exitWith {
+  player groupChat "You have been blacklisted from playing cop. If you feel this is an error please contact a member of PD High Command.";
+  hint "You have been blacklisted from playing cop. If you feel this is an error please contact a member of PD High Command.";
+  systemChat "You have been blacklisted from playing cop. If you feel this is an error please contact a member of PD High Command.";
+  uiSleep 10;
+  endMission "LOSER";
 };
 
 switch (playerSide) do {
@@ -248,6 +256,15 @@ switch (playerSide) do {
         SrDeputy_id  = [getPlayerUID player];
         CplDeputy_id = [getPlayerUID player];
         SgtDeputy_id = [getPlayerUID player];
+        LtDeputy_id  = [getPlayerUID player];
+      };
+      case 7: {
+        JrDeputy_id  = [getPlayerUID player];
+        Deputy_id 	 = [getPlayerUID player];
+        SrDeputy_id  = [getPlayerUID player];
+        CplDeputy_id = [getPlayerUID player];
+        SgtDeputy_id = [getPlayerUID player];
+        LtDeputy_id  = [getPlayerUID player];
         Sheriff_id   = [getPlayerUId player];
       };
     };

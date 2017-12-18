@@ -12,6 +12,9 @@ _display = (findDisplay 69420) displayCtrl 1100;
 _display ctrlSetStructuredText parseText "";
 
 if (lbSize 1500 == 0) then {
+  lbAdd [1500, "No Messages To Display"];
   ctrlEnable [1601, false];
   ctrlEnable [1600, false];
 };
+
+lbSetCurSel [1500, 0];

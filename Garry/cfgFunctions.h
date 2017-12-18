@@ -4,6 +4,8 @@ class cfgFunctions {
       file = "Garry\Messages";
       class Create {};
       class Delete {};
+      class NotifyEMS {};
+      class NotifyPolice {};
       class Open {};
       class Received {};
       class Refresh {};
@@ -14,7 +16,6 @@ class cfgFunctions {
       class ShowFull {};
     };
   };
-
   class Network {
     class Network_M_Files {
       file = "Garry\Network";
@@ -23,7 +24,6 @@ class cfgFunctions {
       class SetupEvents {};
     };
   };
-
   class Paintball {
     class Paintball_M_Files {
       file = "Garry\Paintball";
@@ -38,8 +38,7 @@ class cfgFunctions {
       class UpdateHits {};
       class WaitLoop {};
     };
-  };
-
+  }
   class Phone {
     class Phone_M_Files {
       file = "Garry\Phone";
@@ -53,7 +52,6 @@ class cfgFunctions {
       class UpdateDisplay {};
     };
   };
-
   class Shops {
     class Shops_M_Files {
       file = "Garry\Shops";
@@ -72,16 +70,15 @@ class cfgFunctions {
       class UpdateText {};
     };
   };
-
   class Stats {
-      class Stats_M_Files {
-        file = "Garry\Stats";
-        class ClientEH {};
-        class CreateWeaponArray {};
-        class Load {};
-        class Request {};
-        class Save {};
-        class SaveVehicle {};
-      };
+    class Stats_M_Files {
+      file = "Garry\Stats";
+      class ClientEH {};
+      class CreateWeaponArray {};
+      class Load {};
+      class Request {};
+      class Save {};
+      class SaveVehicle {};
+    };
   };
 };

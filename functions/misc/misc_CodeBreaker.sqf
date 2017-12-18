@@ -7,5 +7,6 @@ if (player distance PB_3 <= 15) then {
 		[[5, "Jail gate sensor has gone off!", "true"], "OL_misc_ChatMessage", west, false] call OL_network_MP;
 	};
 } else {
-	player groupChat "You are not close enough to a gate to the jail";
+	player groupChat "You are not close enough to a jail gate!";
+	["codeb", 1] call INV_AddInvItem;
 };

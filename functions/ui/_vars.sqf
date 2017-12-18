@@ -57,7 +57,6 @@ OL_ATM_Clothes = [
 	],
 	[OL_ATM_FTO,
 		[
-			["olrpg_snrftouni",	"FTO_ID", "Senior FTO Uniform"],
 			["olrpg_ftouni",		"FTO_ID", "FTO Uniform"]
 		]
 	],

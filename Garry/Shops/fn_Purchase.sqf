@@ -6,6 +6,8 @@ _Amount = (_this select 1) call OL_ISSE_StrToInt;
 _CantAfford = false;
 _Stop = false;
 
+if (_Amount < 0) exitWith { player groupChat "You can't buy a negative of something! Try a positive number!" };
+
 _UseDebitCard = {
   if ("Debit_Card" call INV_GetItemAmount < 1) exitWith { false };
   true;
@@ -43,7 +45,13 @@ if (_Stop) exitWith {};
 _Cost = _Item call INV_getitemCostWithTax;
 _geld = "geld" call INV_GetItemAmount;
 
-if (_geld >= _Cost) then {
+if (_Item == "RHIB") then {
+  if ((iscop) && (getPlayerUID player in SWAT_id)) then {
+    _Cost = 75000;
+  };
+};
+
+if (_geld >= (_Amount * (_Cost))) then {
   ["geld", -(_Amount * (_Cost))] call INV_AddInvItem;
 } else {
   if (call _UseDebitCard) then {

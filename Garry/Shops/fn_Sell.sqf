@@ -23,8 +23,10 @@ if (_isVehicle) then {
 } else {
   if (_Item call INV_GetItemType == "Item") then {
     _OwnAmount = _Item call INV_GetItemAmount;
-    if (_Amount > _OwnAmount) then { _Amount = _OwnAmount };
-    ctrlSetText [102, format ["%1", _OwnAmount]];
+    if (_Amount > _OwnAmount) then {
+      _Amount = _OwnAmount;
+      ctrlSetText [102, format ["%1", _Amount]];
+    };
   };
 };
 
@@ -42,12 +44,21 @@ switch (_ItemType) do {
       _Amount = _realAmount;
       ctrlSetText [102, format ["%1", _Amount]];
     };
-    for "_i" from 0 to _Amount do { player removeMagazine (_Item call INV_getItemClassName) };
+    for "_i" from 0 to (_Amount - 1) do { player removeMagazine (_Item call INV_getItemClassName) };
   };
 };
 
 switch (_ItemType) do {
   case ("Item"): {
+    if ((_Item call INV_getitemIsIllegal) && (_Item call INV_getitemKindOf == "drug")) then {
+  		_list = OL_ActiveShop getvariable "druglist";
+  		if (isNil "_list") then {
+        _list = [[player, _Amount, (_ItemSellPrice / _Amount), _Item call INV_getitemName]]
+      } else {
+        _list = _list + [[player, _Amount, (_ItemSellPrice / _Amount), _Item call INV_getitemName]]
+      };
+  		OL_ActiveShop setVariable ["druglist", _list, true];
+  	};
     ["geld", (_Amount * _ItemSellPrice)] call INV_AddInvItem;
     player groupChat format ["You sold %1 for $%2", _Item call INV_getitemName, (_Amount * _ItemSellPrice)];
   };

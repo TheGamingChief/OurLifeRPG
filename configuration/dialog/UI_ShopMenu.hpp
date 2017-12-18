@@ -2,6 +2,7 @@ class UI_ShopMenu {
   idd = -1;
   movingEnable = true;
   objects[] = { };
+  onKeyDown = "[4, _this select 1] spawn fnc_CloseShop; true;";
 
   class controlsBackground {
   	class DLG_BACK1: RscBackground {
@@ -121,9 +122,68 @@ class UI_ShopMenu {
   };
 };
 
+class UI_ShopList {
+	idd = 070843;
+  movingEnable = true;
+  onKeyDown = "[2, _this select 1] spawn fnc_CloseShop; true;";
+
+  class controlsBackground {
+    class UI_ShopList_Background: RscBackground
+    {
+    	idc = 1800;
+    	x = 0.433927 * safezoneW + safezoneX;
+    	y = 0.323703 * safezoneH + safezoneY;
+    	w = 0.132145 * safezoneW;
+    	h = 0.340842 * safezoneH;
+    };
+    class UI_ShopList_Frame: RscFrame
+    {
+    	idc = 1801;
+  		colorText[] = {0.26953125, 0.46484375, 0.734375, 1};
+    	x = 0.433927 * safezoneW + safezoneX;
+    	y = 0.323703 * safezoneH + safezoneY;
+    	w = 0.132145 * safezoneW;
+    	h = 0.340842 * safezoneH;
+    };
+  };
+
+  class controls {
+    class UI_ShopList_btnSelect: RscButton
+    {
+    	idc = 1600;
+    	text = "Select";
+  		action = "[lbData [1500, lbCurSel 1500]] call Shops_fnc_DisplayCategory;";
+    	x = 0.439433 * safezoneW + safezoneX;
+    	y = 0.629285 * safezoneH + safezoneY;
+    	w = 0.0550605 * safezoneW;
+    	h = 0.0235063 * safezoneH;
+    };
+    class UI_ShopList_btnExit: RscButton
+    {
+    	idc = 1602;
+    	text = "Back";
+  		action = "closeDialog 0;";
+    	x = 0.505506 * safezoneW + safezoneX;
+    	y = 0.629285 * safezoneH + safezoneY;
+    	w = 0.0550605 * safezoneW;
+    	h = 0.0235063 * safezoneH;
+    };
+    class UI_ShopList_List: DA_Listbox
+    {
+    	idc = 1500;
+      onLBDblClick = "[lbData [1500, lbCurSel 1500]] call Shops_fnc_DisplayCategory;";
+    	x = 0.439433 * safezoneW + safezoneX;
+    	y = 0.335456 * safezoneH + safezoneY;
+    	w = 0.121133 * safezoneW;
+    	h = 0.282076 * safezoneH;
+    };
+  };
+};
+
 class UI_ShopCatList {
 	idd = 070843;
   movingEnable = true;
+  onKeyDown = "[3, _this select 1] spawn fnc_CloseShop; true;";
 
   class controlsBackground {
     class UI_ShopCatList_Background: RscBackground
@@ -150,7 +210,7 @@ class UI_ShopCatList {
     {
     	idc = 1600;
     	text = "Select";
-  		action = "";
+  		action = "[lbText [1500, lbCurSel 1500], OL_ActiveShopInfo] call Shops_fnc_DisplayShop;";
     	x = 0.439433 * safezoneW + safezoneX;
     	y = 0.629285 * safezoneH + safezoneY;
     	w = 0.0550605 * safezoneW;
@@ -159,7 +219,7 @@ class UI_ShopCatList {
     class UI_ShopCatList_btnExit: RscButton
     {
     	idc = 1602;
-    	text = "Exit";
+    	text = "Back";
   		action = "closeDialog 0;";
     	x = 0.505506 * safezoneW + safezoneX;
     	y = 0.629285 * safezoneH + safezoneY;
@@ -169,7 +229,65 @@ class UI_ShopCatList {
     class UI_ShopCatList_List: DA_Listbox
     {
     	idc = 1500;
-      onLBDblClick = "";
+      onLBDblClick = "[lbText [1500, lbCurSel 1500], OL_ActiveShopInfo] call Shops_fnc_DisplayShop;";
+    	x = 0.439433 * safezoneW + safezoneX;
+    	y = 0.335456 * safezoneH + safezoneY;
+    	w = 0.121133 * safezoneW;
+    	h = 0.282076 * safezoneH;
+    };
+  };
+};
+
+class UI_ShopOptions {
+	idd = 070843;
+  movingEnable = true;
+  onKeyDown = "[1, _this select 1] spawn fnc_CloseShop; true;";
+
+  class controlsBackground {
+    class UI_ShopOptions_Background: RscBackground
+    {
+    	idc = 1800;
+    	x = 0.433927 * safezoneW + safezoneX;
+    	y = 0.323703 * safezoneH + safezoneY;
+    	w = 0.132145 * safezoneW;
+    	h = 0.340842 * safezoneH;
+    };
+    class UI_ShopOptions_Frame: RscFrame
+    {
+    	idc = 1801;
+  		colorText[] = {0.26953125, 0.46484375, 0.734375, 1};
+    	x = 0.433927 * safezoneW + safezoneX;
+    	y = 0.323703 * safezoneH + safezoneY;
+    	w = 0.132145 * safezoneW;
+    	h = 0.340842 * safezoneH;
+    };
+  };
+
+  class controls {
+    class UI_ShopOptions_btnSelect: RscButton
+    {
+    	idc = 1600;
+    	text = "Select";
+  		action = "";
+    	x = 0.439433 * safezoneW + safezoneX;
+    	y = 0.629285 * safezoneH + safezoneY;
+    	w = 0.0550605 * safezoneW;
+    	h = 0.0235063 * safezoneH;
+    };
+    class UI_ShopOptions_btnExit: RscButton
+    {
+    	idc = 1602;
+    	text = "Exit";
+  		action = "closeDialog 0;";
+    	x = 0.505506 * safezoneW + safezoneX;
+    	y = 0.629285 * safezoneH + safezoneY;
+    	w = 0.0550605 * safezoneW;
+    	h = 0.0235063 * safezoneH;
+    };
+    class UI_ShopOptions_List: DA_Listbox
+    {
+    	idc = 1500;
+      onLBDblClick = "call fnc_DBLClick";
     	x = 0.439433 * safezoneW + safezoneX;
     	y = 0.335456 * safezoneH + safezoneY;
     	w = 0.121133 * safezoneW;

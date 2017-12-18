@@ -36,6 +36,7 @@ if (_HasItems)    then { lbAdd [1500, "Items"]    };
 if (_HasWeapons)  then { lbAdd [1500, "Weapons"]  };
 if (_HasVehicles) then { lbAdd [1500, "Vehicles"] };
 
+OL_ActiveShopInfo = [_BuyArray, _SellArray, _VehicleSpawn];
+
 lbSetCurSel [1500, 0];
 buttonSetAction [1600, format ['[lbText [1500, lbCurSel 1500], [%1, %2, %3]] call Shops_fnc_DisplayShop;', _BuyArray, _SellArray, _VehicleSpawn]];
-((findDisplay 070843) displayCtrl 1500) ctrlSetEventHandler ["onLBDblClick", format ['[lbText [1500, lbCurSel 1500], [%1, %2, %3]] call Shops_fnc_DisplayShop;', _BuyArray, _SellArray, _VehicleSpawn]];

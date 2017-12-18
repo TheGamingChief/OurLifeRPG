@@ -11,6 +11,11 @@ if (!isNil "_firstListItem") then {
     ctrlSetText [3, format ["Buy ($%1, %2kg, %3)", (_firstListAmount * ((_firstListItem select 0) call INV_getitemCostWithTax)), (_firstListAmount * ((_firstListItem select 0) call INV_getitemTypeKg)), _firstListAmount]];
   } else {
     ctrlSetText [3, format ["Buy ($%1, %2)", (_firstListAmount * ((_firstListItem select 0) call INV_getitemCostWithTax)), _firstListAmount]];
+    if ((_firstListItem select 0) == "RHIB") then {
+      if ((iscop) && (getPlayerUID player in SWAT_id)) then {
+        ctrlSetText [3, format ["Buy ($75000, %1)", _firstListAmount]];
+      };
+    };
   };
 };
 

@@ -1,4 +1,4 @@
-if (!createDialog "UI_ListMenuSmall") exitWith { hint "Dialog Error! (UI_ListMenuSmall)" };
+if (!createDialog "UI_ShopOptions") exitWith { hint "Dialog Error! (UI_ShopOptions)" };
 
 _ShopInfo = missionNamespace getVariable format ["%1_Array", _this select 0];
 _Cond = call compile (_ShopInfo select 4);
@@ -9,7 +9,14 @@ if (!_Cond) exitWith {
   lbSetCurSel [1500, 0];
 };
 
+OL_ActiveShop = _this select 0;
+/*_HasWeapons = false;*/
+/*{*/
+  /*if (_x select 5) exitWith { _HasWeapons = true };*/
+/*} forEach (_ShopInfo select 3);*/
+
 lbAdd [1500, "Store Sections"];
+/*if (_HasWeapons) then { lbAdd [1500, "Bought Weapons/Mags"] };*/
 lbAdd [1500, "Bought Weapons/Mags"];
 
 buttonSetAction [1600, format ['
@@ -21,6 +28,6 @@ buttonSetAction [1600, format ['
       [] call Shops_fnc_DisplayStored
     };
   };
-', _this select 0]];
+', OL_ActiveShop]];
 
 lbSetCurSel [1500, 0];

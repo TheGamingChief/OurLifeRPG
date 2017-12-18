@@ -51,7 +51,6 @@ if (_anzahl > 0) then
 
 	{
 
-	systemChat format ["%1", _infos];
 	_index  = lbAdd [1, (format ["%1 (%2x, %3kg)", (_infos call INV_getitemName), (_anzahl call OL_ISSE_str_IntToStr), (_infos call INV_getitemTypeKg)])];
 	lbSetData [1, _index, (format ["%1", _item])];
 

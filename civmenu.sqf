@@ -135,7 +135,7 @@ if ((_loopart == "arrest") and (player distance prisonflag <= 70))  then {
 
 	["Arrest_Log", format ["%1 (%2) was arrested by %3 (%4) for %5 minute(s)", PlayerName, getPlayerUID player, _copobj getVariable ["RealName", "Error: No Unit"], getPlayerUID _copobj, _duration call OL_ISSE_str_IntToStr]] call RM_fnc_LogToServer;
 
-	if (OL_OldClothes != "olrpg_jailinmate") then {
+	if ((typeOf player) != "olrpg_jailinmate") then {
 		OL_OldClothes = typeOf player;
 	};
 

@@ -199,6 +199,12 @@ _sc1 = [
 
 //Charger Shop
 _sc2 = [
+	"cl_charger",
+	"cl_charger_black",
+	"il_charger_blue",
+	"il_charger_black",
+	"il_charger_red",
+	"il_charger_orange",
 	"DD_DOD12Charger_Black",							//2012 Dodge Charger (Black)
 	"DD_DOD12Charger_Blue",								//2012 Dodge Charger (Blue)
 	"DD_DOD12Charger_Camo",								//2012 Dodge Charger (Camo)
@@ -736,8 +742,6 @@ _wigs = [
 	"supgrade1",													//Shocks 1
 	"supgrade2",													//Fuel Injection 2
 	"supgrade3",													//Violator 3
-	"supgrade4",													//Interceptor 4
-	"supgrade5",													//Fast And Furious 5
 	"RepairKitsBreaksShops"								//Repair Kit
 ];
 
@@ -861,7 +865,7 @@ _coppo1 = [
 	"RH_hk416_pd",												//HK416
 	"30Rnd_556x45_Stanag",								//30 Round Stanag
 	"olrpg_pdcv_pb", 											//Crown Victoria (Pushbar)
-	"olrpg_pdtaurus" 											//Ford Taurus
+	"olrpg_m5pd" 													//Ford Taurus
 ];
 
 //PO2 Box
@@ -876,7 +880,8 @@ _coppo2 = [
 	"RH_hk416eotech_pd",									//HK416 Eotech
 	"30Rnd_556x45_Stanag",								//30 Round Stanag
 	"olrpg_pdcv_pb", 											//Crown Victoria (Full Pushbar)
-	"olrpg_pdtaurus" 											//Ford Taurus (Pushbar)
+	"olrpg_m5pd", 												//Ford Taurus (Pushbar)
+	"olrpg_pd_charger"
 ];
 
 //PO3 Box
@@ -892,9 +897,10 @@ _coppo3 = [
 	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot
 	"RH_hk416aim_pd",											//HK416 Aimpoint
 	"30Rnd_556x45_Stanag",								//30 Round Stanag
-	"olrpg_pdupcv_slick_pb", 							//Crown Victoria Slicktop
-	"olrpg_pdtaurus", 										//Ford Taurus (Full Pushbar)
-	"olrpg_pd_charger", 										//Dodge Charger
+	"olrpg_pdcv_pb", 											//Crown Victoria Slicktop
+	"olrpg_m5pd", 												//BMW M5 (Police)
+	"olrpg_pd_charger", 									//Dodge Charger (Police)
+	"olrpg_pdtaurus",											//Ford Taurus (Police)
 	"supgrade3_pd"												//Violator 3
 ];
 
@@ -912,10 +918,11 @@ _copcpl = [
 	"RH_m4sbraim_cmd",										//M4 Magpul SBR Aimpoint
 	"RH_M4sbreotech_cmd",									//M4 Magpul SBR EoTech
 	"30Rnd_556x45_Stanag",								//30 Round Stanag
-	"olrpg_pdupcv_slick_pb", 							//Crown Victoria Slicktop (Pushbar)
-	"olrpg_pdsuptaurus_slick", 						//Ford Taurus Slicktop
-	"olrpg_pdsupervisor_charger_slk", 		//Dodge Charger Slicktop
-	"supgrade3_pd",												//Violator 3
+	"olrpg_pdcv_pb", 											//Crown Victoria Slicktop (Pushbar)
+	"olrpg_m5pd", 												//BMW M5 (Police)
+	"olrpg_pd_charger", 									//Dodge Charger (Police)
+	"olrpg_pdtaurus",											//Ford Taurus (Police)
+	"olrpg_pdsup_slk",										//Chevrolet Tahoe (Supervisor Slicktop)
 	"supgrade4_pd"												//Interceptor 4
 ];
 
@@ -935,35 +942,17 @@ _copsgt = [
 	"RH_M4sbracog_cmd",										//M4 Magpul SBR Acog
 	"30Rnd_556x45_Stanag",								//30 Round Stanag
 	"olrpg_pdupcv_slick_pb", 							//Crown Victoria Slicktop (Pushbar)
-	"olrpg_pdsuptaurus_slick", 						//Ford Taurus Slicktop
-	"olrpg_pdsupervisor_charger_slk", 		//Dodge Charger Slicktop
+	"olrpg_pd_charger_slk", 							//Dodge Charger Slicktop
+	"olrpg_pdtaurus_slick", 							//Ford Taurus Slicktop
 	"olrpg_pdsup_slk", 										//Chevrolet Tahoe Slicktop
+	"olrpg_pdsupsub6",										//
 	"supgrade3_pd",												//Violator 3
 	"supgrade4_pd"												//Interceptor 4
 ];
 
-//Deputy Box
-_copdeputy = [
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
-	"RH_python_sheriff",									//Sheriff Colt Python
-	"RH_6Rnd_357_Mag",										//357 Moon Clip
-	"M1014_sheriff",											//M1014 Shotgun
-	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot
-	"RH_acrbaim_sheriff",									//Black ACR Aimpoint
-	"RH_acrbeotech_sheriff",							//Black ACR Eotech
-	"30Rnd_556x45_Stanag",								//30 Round Stanag
-	"olrpg_sdcv_pb",											//Crown Victoria (Pushbar)
-	"olrpg_sd_charger", 										//Dodge Charger
-	"tcg_taurus_shpb", 										//Ford Taurus (Pushbar)
-	"supgrade1_pd",												//Shocks 1
-	"supgrade2_pd",												//Fuel Injection 2
-	"supgrade3_pd"												//Violator 3
-];
-
 //DNR Box
 _copsheriffdnr = [
-	"olrpg_sddnr", 									//Chevrolet Tahoe (DNR)
+	"olrpg_sddnr", 												//Chevrolet Tahoe (DNR)
 	"olrpg_sdf350_dnr"										//Sheriff F350 (DNR)
 ];
 
@@ -974,55 +963,142 @@ _copsheriffmks = [
 	"5Rnd_762x51_M24"											//5Rnd 762x51 Mag
 ];
 
-//SGT Deputy Box
+//Junior Deputy Box
+_copjrdeputy = [
+	"x26",																//X26 Taser
+	"x26_Mag",														//X26 Taser Charge
+	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
+	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"RH_python_sheriff",									//Sheriff Colt Python - Jr Deputy
+	"RH_6Rnd_357_Mag",										//357 Moon Clip - Jr Deputy
+	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
+	"RH_acrbaim_sheriff",									//Black ACR Aimpoint - Sr Deputy
+	"30Rnd_556x45_Stanag",								//30 Round Stanag - Deputy
+	"olrpg_sdcv_pb"
+];
+
+//Deputy Box
+_copdeputy = [
+	"x26",																//X26 Taser
+	"x26_Mag",														//X26 Taser Charge
+	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
+	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"RH_python_sheriff",									//Sheriff Colt Python - Jr Deputy
+	"RH_6Rnd_357_Mag",										//357 Moon Clip - Jr Deputy
+	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
+	"RH_acrbaim_sheriff",									//Black ACR Aimpoint - Sr Deputy
+	"30Rnd_556x45_Stanag",								//30 Round Stanag - Deputy
+	"olrpg_sdcv_pb",
+	"olrpg_sd_charger"
+];
+
+//Senior Deputy Box
+_copsrdeputy = [
+	"x26",																//X26 Taser
+	"x26_Mag",														//X26 Taser Charge
+	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
+	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"RH_python_sheriff",									//Sheriff Colt Python - Jr Deputy
+	"RH_6Rnd_357_Mag",										//357 Moon Clip - Jr Deputy
+	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
+	"RH_acrbaim_sheriff",									//Black ACR Aimpoint - Sr Deputy
+	"30Rnd_556x45_Stanag",								//30 Round Stanag - Deputy
+	"olrpg_sdcv_pb",
+	"olrpg_sd_charger",
+	"olrpg_sdtaurus"
+];
+
+//Corporal Deputy Box
+_copcpldeputy = [
+	"x26",																//X26 Taser
+	"x26_Mag",														//X26 Taser Charge
+	"MakarovSD",													//MakarovSD
+	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
+	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
+	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"RH_python_sheriff",									//Sheriff Colt Python - Jr Deputy
+	"RH_6Rnd_357_Mag",										//357 Moon Clip - Jr Deputy
+	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
+	"RH_acrbaim_sheriff",									//Black ACR Aimpoint - Sr Deputy
+	"30Rnd_556x45_Stanag",								//30 Round Stanag - Deputy
+	"supgrade3_pd",												//Violator 3
+	"supgrade4_pd",												//Interceptor 4
+	"olrpg_sdcv_slick_pb",
+	"olrpg_sd_charger_slk",
+	"olrpg_sdtaurus_slick",
+	"olrpg_sd_slk"
+];
+
+//Sergeant Deputy Box
 _copsgtdeputy = [
 	"x26",																//X26 Taser
 	"x26_Mag",														//X26 Taser Charge
 	"MakarovSD",													//MakarovSD
 	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
-	"RH_python_sheriff",									//Sheriff Colt Python
-	"RH_6Rnd_357_Mag",										//357 Moon Clip
-	"M1014_sheriff",											//M1014 Shotgun
-	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot
-	"RH_acrbaim_sheriff",									//Black ACR Aimpoint
-	"RH_acrbeotech_sheriff",							//Black ACR Eotech
-	"RH_acrbacog_sheriff",								//Black ACR ACOG
-	"30Rnd_556x45_Stanag",								//30 Round Stanag
-	"M24_sheriff",												//M24 Sniper
-	"5Rnd_762x51_M24",										//5Rnd 762x51 Mag
-	"olrpg_sdpatrolt", 											//hevrolet Tahoe (Supervisor)
-	"olrpg_sdsub6", 											//Chevrolet Suburban (Sheriff)
-	"olrpg_sdf350", 											//Sheriff F350
+	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
+	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"RH_python_sheriff",									//Sheriff Colt Python - Jr Deputy
+	"RH_6Rnd_357_Mag",										//357 Moon Clip - Jr Deputy
+	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
+	"RH_acrbaim_sheriff",									//Black ACR Aimpoint - Sr Deputy
+	"30Rnd_556x45_Stanag",								//30 Round Stanag - Deputy
+	"RH_acrbacog_sheriff",								//Black ACR ACOG - Sgt Deputy
 	"supgrade3_pd",												//Violator 3
-	"supgrade4_pd"												//Interceptor 4
+	"supgrade4_pd",												//Interceptor 4
+	"olrpg_sdcv_slick_pb",
+	"olrpg_sd_charger_slk",
+	"olrpg_sdtaurus_slick",
+	"olrpg_sd_slk",
+	"olrpg_sdf350",
+	"olrpg_sdsub6"
 ];
 
-//Sheriff Command Box
-_copsheriff = [
+//Lieutenant Deputy Box
+_copltdeputy = [
 	"x26",																//X26 Taser
 	"x26_Mag",														//X26 Taser Charge
 	"MakarovSD",													//MakarovSD
 	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
-	"RH_python_sheriff",									//Sheriff Colt Python
-	"RH_6Rnd_357_Mag",										//357 Moon Clip
-	"M1014_sheriff",											//M1014 Shotgun
-	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot
-	"RH_acrbaim_sheriff",									//Black ACR Aimpoint
-	"RH_acrbeotech_sheriff",							//Black ACR Eotech
-	"RH_acrbacog_sheriff",								//Black ACR ACOG
-	"30Rnd_556x45_Stanag",								//30 Round Stanag
+	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
+	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"RH_python_sheriff",									//Sheriff Colt Python - Jr Deputy
+	"RH_6Rnd_357_Mag",										//357 Moon Clip - Jr Deputy
+	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
+	"RH_acrbaim_sheriff",									//Black ACR Aimpoint - Sr Deputy
+	"30Rnd_556x45_Stanag",								//30 Round Stanag - Deputy
+	"RH_acrbacog_sheriff",								//Black ACR ACOG - Sgt Deputy
+	"supgrade3_pd",												//Violator 3
+	"supgrade4_pd",												//Interceptor 4
+	"olrpg_sdlt",													//Chevrolet Tahoe (Lieutenant)
+	"olrpg_sdlt_slk",											//Chevrolet Tahoe (Lieutenant Slicktop)
+	"olrpg_sdltsub6"											//2006 Chevrolet Suburban (Lieutenant)
+];
+
+//Sheriff Box
+_copcptdeputy = [
+	"x26",																//X26 Taser
+	"x26_Mag",														//X26 Taser Charge
+	"MakarovSD",													//MakarovSD
+	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
+	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
+	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"RH_python_sheriff",									//Sheriff Colt Python - Jr Deputy
+	"RH_6Rnd_357_Mag",										//357 Moon Clip - Jr Deputy
+	"RH_acrbacog_sheriff",								//Black ACR ACOG - Sgt Deputy
+	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
+	"RH_acrbaim_sheriff",									//Black ACR Aimpoint - Sr Deputy
+	"30Rnd_556x45_Stanag",								//30 Round Stanag - Deputy
 	"M24_sheriff",												//M24 Sniper
 	"5Rnd_762x51_M24",										//5Rnd 762x51 Mag
 	"Stinger_swat",												//Stinger Launcher
 	"Stinger_mag",												//Stinger Missile
-	"olrpg_sdpatrolt", 										//Chevrolet Tahoe (Supervisor)
-	"olrpg_sdf350", 											//Sheriff F350
-	"olrpg_sdsub6", 											//Chevrolet Suburban (Sheriff)
-	"olrpg_sdcv_pb",											//Crown Victoria Sheriff
+	"olrpg_cpt_cvold",										//Crown Victoria (Captain Bubble Lightbar)
+	"olrpg_sdcapt",												//Chevrolet Tahoe (Captain)
+	"olrpg_sdcapt_slk",										//Chevrolet Tahoe (Captain Slicktop)
+	"olrpg_sdcpt6",												//2006 Chevrolet Suburban (Captain)
 	"olrpg_umcv_dblue", 									//Unmarked Crown Victoria (Blue)
 	"olrpg_umcv_maroon", 									//Unmarked Crown Victoria (Maroon)
 	"olrpg_umcv_grey", 										//Unmarked Crown Victoria (Grey)
-	"olrpg_uctahoe_maroon", 							//Unmarked Tahoe (Maroon)
 	"olrpg_uctahoe_grey", 								//Unmarked Tahoe (Grey)
 	"olrpg_uctahoe_dblue",								//Unmarked Tahoe (Blue)
 	"olrpg_pdtaurus_um", 									//Unmarked Ford Taurus
@@ -1049,11 +1125,12 @@ _coplt = [
 	"30Rnd_556x45_Stanag",								//30 Round Stanag
 	"Stinger_swat",												//Stinger Launcher
 	"Stinger_mag",												//Stinger Missile
-	"olrpg_pdlt", 										//Chevrolet Tahoe (Lt)
+	"olrpg_pdlt", 												//Chevrolet Tahoe (Lt)
+	"olrpg_pdlt_slk",											//Chevrolet Tahoe (Lieutenant Slicktop)
+	"olrpg_pdltsub6",											//2006 Chevrolet Suburban (Lieutenant)
 	"olrpg_umcv_dblue", 									//Unmarked Crown Victoria (Blue)
 	"olrpg_umcv_maroon",									//Unmarked Crown Victoria (Maroon)
 	"olrpg_umcv_grey", 										//Unmarked Crown Victoria (Grey)
-	"olrpg_uctahoe_maroon", 							//Unmarked Tahoe (Maroon)
 	"olrpg_uctahoe_grey", 								//Unmarked Tahoe (Grey)
 	"olrpg_uctahoe_dblue", 								//Unmarked Tahoe (Blue)
 	"supgrade3_pd",												//Violator 3
@@ -1079,14 +1156,48 @@ _copcpt = [
 	"30Rnd_556x45_Stanag",								//30 Round Stanag
 	"Stinger_swat",												//Stinger Launcher
 	"Stinger_mag",												//Stinger Missile
-	"olrpg_pdcapt", 									//Chevrolet Tahoe (Cpt)
+	"olrpg_pdcapt", 											//Chevrolet Tahoe (Cpt)
+	"olrpg_pdcapt_slk",										//Chevrolet Tahoe (Captain Slicktop)
+	"olrpg_pdcptsub6",										//2006 Chevrolet Suburban (Captain)
 	"olrpg_umcv_dblue", 									//Unmarked Crown Victoria (Blue)
 	"olrpg_umcv_maroon", 									//Unmarked Crown Victoria (Maroon)
 	"olrpg_umcv_grey", 										//Unmarked Crown Victoria (Grey)
-	"olrpg_uctahoe_maroon",							 	//Unmarked Tahoe (Maroon)
 	"olrpg_uctahoe_grey", 								//Unmarked Tahoe (Grey)
 	"olrpg_uctahoe_dblue", 								//Unmarked Tahoe (Blue)
 	"olrpg_pdtaurus_um",								 	//Unmarked Ford Taurus
+	"supgrade3_pd",												//Violator 3
+	"supgrade4_pd",												//Interceptor 4
+	"supgrade5_pd",												//Fast And Furious 5
+	"Bait_Kit"														//Bait Kit
+];
+
+//Assistant Chief
+_copastchief = [
+	"PD_Kit",															//PD (Required Equipment Kit)
+	"x26",																//X26 Taser
+	"x26_Mag",														//X26 Taser Charge
+	"MakarovSD",													//MakarovSD
+	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
+	"RH_deaglemzb_cmd",										//Chief Desert Eagle
+	"RH_7Rnd_50_AE",											//Desert Eagle Mag
+	"RH_m4maim_cmd",											//M4 Magpul Aimpoint
+	"RH_m4meotech_cmd",										//M4 Magpul EoTech
+	"RH_m4macog_cmd",											//M4 Magpul Acog
+	"30Rnd_556x45_Stanag",								//30 Round Stanag
+	"LEXX_SCAR_H_CQC_CCO_BLACK_cmd",			//Mk17 CCO
+	"20Rnd_762x51_B_SCAR_pd",							//Mk17 Mag
+	"Stinger_swat",												//Stinger Launcher
+	"Stinger_mag",												//Stinger Missile
+	"olrpg_pdassistantchief", 					  //Chevrolet Tahoe (Ast. Chief)
+	"olrpg_pdassistantchief_slk",					//Chevrolet Tahoe (Assistant Chief Slicktop)
+	"olrpg_pdascsub6",										//2006 Chevrolet Suburban (Assistant Chief)
+	"olrpg_umcv_dblue", 									//Unmarked Crown Victoria (Blue)
+	"olrpg_umcv_maroon", 									//Unmarked Crown Victoria (Maroon)
+	"olrpg_umcv_grey", 										//Unmarked Crown Victoria (Grey)
+	"olrpg_uctahoe_grey", 								//Unmarked Tahoe (Grey)
+	"olrpg_uctahoe_dblue", 								//Unmarked Tahoe (Blue)
+	"olrpg_pdtaurus_um", 									//Unmarked Ford Taurus
+	"olrpg_pd_chargerblack", 							//Unmarked Dodge Charger
 	"supgrade3_pd",												//Violator 3
 	"supgrade4_pd",												//Interceptor 4
 	"supgrade5_pd",												//Fast And Furious 5
@@ -1113,11 +1224,11 @@ _copchief = [
 	"sahco",															//Fosters Car
 	"olrpg_chf_cvold", 										//Crown Victoria Chief
 	"olrpg_pdchief", 											//Chevrolet Tahoe (Chief)
-	"olrpg_pdassistantchief", 								//Chevrolet Tahoe (Ast. Chief)
+	"olrpg_pdchief_slk",									//Chevrolet Tahoe (Chief Slicktop)
+	"olrpg_pdchiefsub6",									//2006 Chevrolet Suburban (Chief)
 	"olrpg_umcv_dblue", 									//Unmarked Crown Victoria (Blue)
 	"olrpg_umcv_maroon", 									//Unmarked Crown Victoria (Maroon)
 	"olrpg_umcv_grey", 										//Unmarked Crown Victoria (Grey)
-	"olrpg_uctahoe_maroon", 							//Unmarked Tahoe (Maroon)
 	"olrpg_uctahoe_grey", 								//Unmarked Tahoe (Grey)
 	"olrpg_uctahoe_dblue", 								//Unmarked Tahoe (Blue)
 	"olrpg_pdtaurus_um", 									//Unmarked Ford Taurus
@@ -1136,11 +1247,9 @@ _copmedal = [
 	"RH_m4meotech_cmd",										//M4 Magpul EoTech
 	"RH_m4macog_cmd",											//M4 Magpul Acog
 	"30Rnd_556x45_Stanag",								//30 Round Stanag
-	"olrpg_pdlt", 										//Chevrolet Tahoe (Lt)
 	"olrpg_umcv_dblue", 									//Unmarked Crown Victoria (Blue)
 	"olrpg_umcv_maroon", 									//Unmarked Crown Victoria (Maroon)
 	"olrpg_umcv_grey", 										//Unmarked Crown Victoria (Grey)
-	"olrpg_uctahoe_maroon", 							//Unmarked Tahoe (Maroon)
 	"olrpg_uctahoe_grey", 								//Unmarked Tahoe (Grey)
 	"olrpg_uctahoe_dblue",							 	//Unmarked Tahoe (Blue)
 	"m5_pd_traffic",											//BMW M5 (Police)
@@ -1170,11 +1279,26 @@ _copk9 = [
 	"RH_8Rnd_45cal_m1911",								//Kimber M1911 Magazine
 	"RH_Mk18_k9",													//Mk18
 	"RH_Mk18eot_k9",											//Mk18 Eotech
+	"30Rnd_556x45_Stanag",								//30 Round Stanag
+	"olrpg_pdk9cv_pb", 										//Crown Victoria (K9)
+	"olrpg_pdtaurusk9",										//Ford Taurus (K9)
+	"olrpg_pdk9"													//Chevrolet Tahoe (K9)
+];
+
+_copk9s = [
+	"K9_Kit",															//K9 (Required Equipment Kit)
+	"x26",																//X26 Taser
+	"x26_Mag",														//X26 Taser Charge
+	"RH_m1911old_k9",											//M1911
+	"RH_8Rnd_45cal_m1911",								//Kimber M1911 Magazine
+	"RH_Mk18_k9",													//Mk18
+	"RH_Mk18eot_k9",											//Mk18 Eotech
 	"RH_Mk18aim_k9",											//Mk18 Aimpoint
 	"30Rnd_556x45_Stanag",								//30 Round Stanag
 	"olrpg_pdk9cv_pb", 										//Crown Victoria (K9)
-	"olrpg_pdtaurusk9", 								//Ford Taurus (K9)
-	"olrpg_pdk9suburban" 									//K-9 Suburban
+	"olrpg_pdtaurusk9",										//Ford Taurus (K9)
+	"olrpg_pdk9",													//Chevrolet Tahoe (K9)
+	"olrpg_pdk9_charger" 								  //Dodge Charger (K9)
 ];
 
 //K9 Command Box
@@ -1192,17 +1316,20 @@ _copk9c = [
 	"20Rnd_762x51_DMR",										//20Rnd 762x51 DMR Mag
 	"M24_k9",															//M24 Sniper
 	"5Rnd_762x51_M24",										//5Rnd 762x51 Mag
-	"olrpg_pdk9cv_pb", 						//Crown Victoria Slicktop (K9)
-	"olrpg_pdtaurusk9", 								//Ford Taurus (K9)
-	"olrpg_pdk9_charger", 									//Dodge Charger (K9)
-	"olrpg_pdk9sub6" 						//K-9 Suburban Slicktop
+	"olrpg_pdk9cv_pb", 										//Crown Victoria (K9)
+	"olrpg_pdtaurusk9",										//Ford Taurus (K9)
+	"olrpg_pdk9",													//Chevrolet Tahoe (K9)
+	"olrpg_pdk9_charger", 								//Dodge Charger (K9)
+	"olrpg_pdk9sub6" 											//K-9 Suburban Slicktop
 ];
 
  //K9 Sheriff Box
 _copk9sheriff = [
-	"olrpg_sdk9sub6",											//Sheriff K-9 Suburban
+	"olrpg_sdk9cv_pb",											//Sheriff K-9 Suburban
 	"olrpg_sdk9_charger", 								//Sheriff K-9 Charger
-	"olrpg_sdtaurusk9" 										//Sheriff K-9 Taurus
+	"olrpg_sdtaurusk9", 										//Sheriff K-9 Taurus
+	"olrpg_sdk9t",
+	"olrpg_sdk9sub6"
 ];
 
 //OP Pilot Box
@@ -1361,6 +1488,7 @@ _copswat6 = [
 _copswatvehicle = [
 	"olrpg_swat", 												//SWAT Tahoe
 	"olrpg_swatf350",											//SWAT F350
+	"olrpg_swat06",												//SWAT Suburban
 	"olrpg_swat_command",									//SWAT Command Suburban
 	"olrpg_swat_bearcat"									//SWAT Bearcat
 ];
@@ -1411,9 +1539,7 @@ _copfto = [
 	"FTO_Kit",														//FTO (Required Equipment Kit)
 	"RH_M4eotech_FTO",										//M4 Eotech
 	"RH_M4aim_FTO",												//M4 Aimpoint
-	"30Rnd_556x45_Stanag",								//30 Round Stanag
-	"olrpg_pdupcv_slick_pb",							//Crown Victoria Slicktop
-	"olrpg_pdtaurus_slick"								//Ford Taurus Slicktop
+	"30Rnd_556x45_Stanag"								  //30 Round Stanag
 ];
 
 //FTO 2 Box
@@ -1422,11 +1548,8 @@ _copftos = [
 	"RH_M4eotech_FTO",										//M4 Eotech
 	"RH_M4aim_FTO",												//M4 Aimpoint
 	"RH_M4acog_FTO",											//M4 Acog
-	"30Rnd_556x45_Stanag",								//30 Round Stanag
-	"olrpg_pdupcv_slick_pb",								//Crown Victoria Slicktop
-	"olrpg_pdtaurus_slick",								//Ford Taurus Slicktop
-	"olrpg_pdsup_slk"									//Chevrolet Tahoe Slicktop
-	];
+	"30Rnd_556x45_Stanag"								  //30 Round Stanag
+];
 
 //FTO Command Box
 _copftoc = [
@@ -1434,10 +1557,7 @@ _copftoc = [
 	"RH_M4eotech_FTO",										//M4 Eotech
 	"RH_M4aim_FTO",												//M4 Aimpoint
 	"RH_M4acog_FTO",											//M4 Acog
-	"30Rnd_556x45_Stanag",								//30 Round Stanag
-	"olrpg_pdupcv_slick_pb",								//Crown Victoria Slicktop
-	"olrpg_pdtaurus_slick",								//Ford Taurus Slicktop
-	"olrpg_pdsup_slk"									//Chevrolet Tahoe Slicktop
+	"30Rnd_556x45_Stanag"								  //30 Round Stanag
 ];
 
 //Undercover Box
@@ -1494,7 +1614,7 @@ _terrorshop = [
 	"vclammo"															//Vehicle Ammo
 ];
 
-//Terror Boat SHop
+//Terror Boat Shop
 _terrorboatshop = [
 	"RHIB",																//Pirate RHIB
 	"fishingpole",												//Fishing Pole
@@ -1937,313 +2057,319 @@ _bm = [
 
 OL_ShopsArray = [
 	[OL_Shop_SWAT, "S.W.A.T. Shops", OL_Shop_SWAT, [
-		["S.W.A.T. Probie", _copswat1, _copswat2, "SWAT_id", "OL_Shop_SWAT_VehSpawn"],
-		["S.W.A.T. Operator", _copswat2, _copswat2, "SWAT_id", "OL_Shop_SWAT_VehSpawn"],
-		["S.W.A.T. Specalist", _copswat3, _copswat3, "SWAT_id", "OL_Shop_SWAT_VehSpawn"],
-		["S.W.A.T. Command", _copswat5, _copswat5, "SWAT_id", "OL_Shop_SWAT_VehSpawn"],
-		["S.W.A.T. Marksman", _copswat4, _copswat4, "SWAT_id", "OL_Shop_SWAT_VehSpawn"],
-		["S.W.A.T. Vehicles", _copswatvehicle, _copswatvehicle, "SWAT_id", "OL_Shop_SWAT_VehSpawn"]
+		["S.W.A.T. Probie", _copswat1, _copswat2, "SWAT_id", "OL_Shop_SWAT_VehSpawn", true],
+		["S.W.A.T. Operator", _copswat2, _copswat2, "SWAT_id", "OL_Shop_SWAT_VehSpawn", true],
+		["S.W.A.T. Specalist", _copswat3, _copswat3, "SWAT_id", "OL_Shop_SWAT_VehSpawn", true],
+		["S.W.A.T. Command", _copswat5, _copswat5, "SWAT_id", "OL_Shop_SWAT_VehSpawn", true],
+		["S.W.A.T. Marksman", _copswat4, _copswat4, "SWAT_id", "OL_Shop_SWAT_VehSpawn", true],
+		["S.W.A.T. Vehicles", _copswatvehicle, _copswatvehicle, "SWAT_id", "OL_Shop_SWAT_VehSpawn", false]
 	], "iscop"],
 	[OL_Shop_EMT, "E.M.T. Shops", OL_Shop_EMT, [
-		["E.M.T. Probie", _td, _td, "[getPlayerUID player]", "OL_Shop_EMTVehSpawn"],
-		["E.M.T. 1", _td2, _td2, "EMT1_id", "OL_Shop_EMTVehSpawn"],
-		["E.M.T. 2", _td3, _td3, "EMT2_id", "OL_Shop_EMTVehSpawn"],
-		["FireFighter 1", _td4, _td4, "EMT3_id", "OL_Shop_EMTVehSpawn"],
-		["FireFighter 2", _td5, _td5, "FD_id", "OL_Shop_EMTVehSpawn"],
-		["E.M.T. Command", _td7, _td7, "EMTSupervisor_id", "OL_Shop_EMTVehSpawn"]
+		["E.M.T. Probie", _td, _td, "[getPlayerUID player]", "OL_Shop_EMTVehSpawn", false],
+		["E.M.T. 1", _td2, _td2, "EMT1_id", "OL_Shop_EMTVehSpawn", false],
+		["E.M.T. 2", _td3, _td3, "EMT2_id", "OL_Shop_EMTVehSpawn", false],
+		["FireFighter 1", _td4, _td4, "EMT3_id", "OL_Shop_EMTVehSpawn", false],
+		["FireFighter 2", _td5, _td5, "FD_id", "OL_Shop_EMTVehSpawn", false],
+		["E.M.T. Command", _td7, _td7, "EMTSupervisor_id", "OL_Shop_EMTVehSpawn", false]
 	], "ismedic"],
 	[OL_Shop_EMTAir, "E.M.T. Air Shops", OL_Shop_EMTAir, [
-		["C.F.R. Aviation", _td6, _td6, "AirESU_id", "OL_CFR_AIRSPAWN"]
+		["C.F.R. Aviation", _td6, _td6, "AirESU_id", "OL_CFR_AIRSPAWN", false]
 	], "ismedic"],
 	[OL_Shop_EMTSub, "E.M.T. Sub-Fire Shops", OL_Shop_EMTSub, [
-		["E.M.T. Probie", _td, _td, "[getPlayerUID player]", "OL_Shop_EMTSubVehSpawn"],
-		["E.M.T. 1", _td2, _td2, "EMT1_id", "OL_Shop_EMTSubVehSpawn"],
-		["E.M.T. 2", _td3, _td3, "EMT2_id", "OL_Shop_EMTSubVehSpawn"],
-		["FireFighter 1", _td4, _td4, "EMT3_id", "OL_Shop_EMTSubVehSpawn"],
-		["FireFighter 2", _td5, _td5, "FD_id", "OL_Shop_EMTSubVehSpawn"],
-		["E.M.T. Command", _td7, _td7, "EMTSupervisor_id", "OL_Shop_EMTSubVehSpawn"],
-		["C.F.R. Aviation", _td6, _td6, "AirESU_id", "tdocspawnsubair"]
+		["E.M.T. Probie", _td, _td, "[getPlayerUID player]", "OL_Shop_EMTSubVehSpawn", false],
+		["E.M.T. 1", _td2, _td2, "EMT1_id", "OL_Shop_EMTSubVehSpawn", false],
+		["E.M.T. 2", _td3, _td3, "EMT2_id", "OL_Shop_EMTSubVehSpawn", false],
+		["FireFighter 1", _td4, _td4, "EMT3_id", "OL_Shop_EMTSubVehSpawn", false],
+		["FireFighter 2", _td5, _td5, "FD_id", "OL_Shop_EMTSubVehSpawn", false],
+		["E.M.T. Command", _td7, _td7, "EMTSupervisor_id", "OL_Shop_EMTSubVehSpawn", false],
+		["C.F.R. Aviation", _td6, _td6, "AirESU_id", "tdocspawnsubair", false]
 	], "ismedic"],
 	[OL_Shop_Undercover, "Undercover Shop", OL_Shop_Undercover, [
-		["Undercover Officer", _undercover, _undercover, "Undercover_id", "OL_Shop_UndercoverVehSpawn"]
+		["Undercover Officer", _undercover, _undercover, "Undercover_id", "OL_Shop_UndercoverVehSpawn", true]
 	], "iscop"],
 	[OL_Shop_ClothingStore, "Civilian Clothing Shop", dummyobj, [
-		["Civilian Clothing", _civilian_Clothing, _civilian_Clothing, "[getPlayerUID player]", "dummyobj"],
-		["Military Surplus Clothing", _tacticalMilitary_Clothing, _tacticalMilitary_Clothing, "[getPlayerUID player]", "dummyobj"],
-		["Tactical Military Clothing", _militarySurplus_Clothing, _militarySurplus_Clothing, "[getPlayerUID player]", "dummyobj"]
+		["Civilian Clothing", _civilian_Clothing, _civilian_Clothing, "[getPlayerUID player]", "dummyobj", false],
+		["Military Surplus Clothing", _tacticalMilitary_Clothing, _tacticalMilitary_Clothing, "[getPlayerUID player]", "dummyobj", false],
+		["Tactical Military Clothing", _militarySurplus_Clothing, _militarySurplus_Clothing, "[getPlayerUID player]", "dummyobj", false]
 	], "isciv"],
 	[OL_Shop_ClothingStoreMSSheriff, "Sheriff Clothing Shop", dummyobj, [
-		["Civilian Clothing", _civilian_Clothing, _civilian_Clothing, "[getPlayerUID player]", "dummyobj"],
-		["Military Surplus Clothing", _tacticalMilitary_Clothing, _tacticalMilitary_Clothing, "[getPlayerUID player]", "dummyobj"]
+		["Civilian Clothing", _civilian_Clothing, _civilian_Clothing, "[getPlayerUID player]", "dummyobj", false],
+		["Military Surplus Clothing", _tacticalMilitary_Clothing, _tacticalMilitary_Clothing, "[getPlayerUID player]", "dummyobj", false]
 	], "isciv"],
 	[OL_Shop_LegalWeapon, "Licensed Weapon Shop", OL_Shop_LegalWeapon, [
-		["Licensed Pistols", _pistol, _pistol, "[getPlayerUID player]", "dummyobj"],
-		["Licensed Submachine Guns", _sub, _sub, "[getPlayerUID player]", "dummyobj"],
-		["Licensed Rifle Guns", _rifle, _rifle, "[getPlayerUID player]", "dummyobj"]
+		["Licensed Pistols", _pistol, _pistol, "[getPlayerUID player]", "dummyobj", true],
+		["Licensed Submachine Guns", _sub, _sub, "[getPlayerUID player]", "dummyobj", true],
+		["Licensed Rifle Guns", _rifle, _rifle, "[getPlayerUID player]", "dummyobj", true]
 	], "isciv"],
 	[OL_Shop_Guss, "Illegal Weapons Dealer", OL_Shop_Guss, [
-		["Illegal Weapons", _guss, _guss, "[getPlayerUID player]", "dummyobj"]
+		["Illegal Weapons", _guss, _guss, "[getPlayerUID player]", "dummyobj", true]
 	], "isciv"],
 	[OL_Shop_Fuel_1, "Gas Station Shop", dummyobj, [
-		["Gas Station Shelf", _fs, _fs, "[getPlayerUID player]", "dummyobj"]
+		["Gas Station Shelf", _fs, _fs, "[getPlayerUID player]", "dummyobj", false]
 	], "true"],
 	[OL_Shop_Fuel_2, "Gas Station Shop", dummyobj, [
-		["Gas Station Shelf", _fs, _fs, "[getPlayerUID player]", "dummyobj"]
+		["Gas Station Shelf", _fs, _fs, "[getPlayerUID player]", "dummyobj", false]
 	], "true"],
 	[OL_Shop_Fuel_3, "Gas Station Shop", dummyobj, [
-		["Gas Station Shelf", _fs, _fs, "[getPlayerUID player]", "dummyobj"]
+		["Gas Station Shelf", _fs, _fs, "[getPlayerUID player]", "dummyobj", false]
 	], "true"],
 	[OL_Shop_Fuel_4, "Gas Station Shop", dummyobj, [
-		["Gas Station Shelf", _fs, _fs, "[getPlayerUID player]", "dummyobj"]
+		["Gas Station Shelf", _fs, _fs, "[getPlayerUID player]", "dummyobj", false]
 	], "true"],
 	[OL_Shop_Fuel_5, "Gas Station Shop", dummyobj, [
-		["Gas Station Shelf", _fs, _fs, "[getPlayerUID player]", "dummyobj"]
+		["Gas Station Shelf", _fs, _fs, "[getPlayerUID player]", "dummyobj", false]
 	], "true"],
 	[OL_Shop_Food_1, "Food Shop", dummyobj, [
-		["Food", _is, _is, "[getPlayerUID player]", "dummyobj"]
+		["Food", _is, _is, "[getPlayerUID player]", "dummyobj", false]
 	], "true"],
 	[OL_Shop_Food_2, "Food Shop", dummyobj, [
-		["Food", _is, _is, "[getPlayerUID player]", "dummyobj"]
+		["Food", _is, _is, "[getPlayerUID player]", "dummyobj", false]
 	], "true"],
 	[OL_Shop_JailFood, "Jail Food Shop", dummyobj, [
-		["Jail Canteen", _cf, _cf, "[getPlayerUID player]", "dummyobj"]
+		["Jail Canteen", _cf, _cf, "[getPlayerUID player]", "dummyobj", false]
 	], "true"],
 	[OL_Shop_Pub1, "Alcohol Shop", dummyobj, [
-		["Alcohol Shelf", _pub, _pub, "[getPlayerUID player]", "dummyobj"]
+		["Alcohol Shelf", _pub, _pub, "[getPlayerUID player]", "dummyobj", false]
 	], "true"],
 	[OL_Shop_Pub2, "Alcohol Shop", dummyobj, [
-		["Alcohol Shelf", _pub, _pub, "[getPlayerUID player]", "dummyobj"]
+		["Alcohol Shelf", _pub, _pub, "[getPlayerUID player]", "dummyobj", false]
 	], "true"],
 	[OL_Shop_Pub3, "Alcohol Shop", dummyobj, [
-		["Alcohol Shelf", _pub, _pub, "[getPlayerUID player]", "dummyobj"]
+		["Alcohol Shelf", _pub, _pub, "[getPlayerUID player]", "dummyobj", false]
 	], "true"],
 	[OL_Shop_Pub4, "Alcohol Shop", dummyobj, [
-		["Alcohol Shelf", _pub, _pub, "[getPlayerUID player]", "dummyobj"]
+		["Alcohol Shelf", _pub, _pub, "[getPlayerUID player]", "dummyobj", false]
 	], "true"],
 	[OL_Shop_Pub5, "Binky's Saloon", dummyobj, [
-		["Binky's Saloon Alcohol Shelf", _pub, _pub, "[getPlayerUID player]", "dummyobj"]
+		["Binky's Saloon Alcohol Shelf", _pub, _pub, "[getPlayerUID player]", "dummyobj", false]
 	], "true"],
 	[OL_Shop_Pub6, "Alcohol Shop", dummyobj, [
-		["Alcohol Shelf", _pub, _pub, "[getPlayerUID player]", "dummyobj"]
+		["Alcohol Shelf", _pub, _pub, "[getPlayerUID player]", "dummyobj", false]
 	], "true"],
 	[OL_Shop_Assassin, "Illegal Assassins Shop", OL_Shop_Assassin, [
-		["Illegal Weapons", _ass, _ass, "[getPlayerUID player]", "dummyobj"]
+		["Illegal Weapons", _ass, _ass, "[getPlayerUID player]", "dummyobj", true]
 	], "isciv"],
 	[OL_Shop_MayorWeapons, "Government Security Shop", OL_Shop_MayorWeapons, [
-		["Government Security", _mgs, _mgs, "[getPlayerUID player]", "OL_Shop_MayorVehSpawn"]
+		["Government Security", _mgs, _mgs, "[getPlayerUID player]", "OL_Shop_MayorVehSpawn", true]
 	], "ismayor"],
 	[OL_Shop_Equipment, "Equipment Shop", OL_Shop_Equipment, [
-		["Equipment", _es, _es, "[getPlayerUID player]", "dummyobj"]
+		["Equipment", _es, _es, "[getPlayerUID player]", "dummyobj", true]
 	], "isciv"],
 	[OL_Shop_EquipmentSheriff, "Equipment Shop", OL_Shop_EquipmentSheriff, [
-		["Equipment", _es, _es, "[getPlayerUID player]", "dummyobj"]
+		["Equipment", _es, _es, "[getPlayerUID player]", "dummyobj", true]
 	], "isciv"],
 	[OL_Shop_EquipmentSpeed, "Tuning Shop", dummyobj, [
-		["Vehicle Tuning", _cu, _cu, "[getPlayerUID player]", "dummyobj"]
+		["Vehicle Tuning", _cu, _cu, "[getPlayerUID player]", "dummyobj", false]
 	], "isciv"],
 	[OL_Shop_rMartEquipment, "Vehicle Items Shop", dummyobj, [
-		["Vehicle Items", _rm, _rm, "[getPlayerUID player]", "dummyobj"]
+		["Vehicle Items", _rm, _rm, "[getPlayerUID player]", "dummyobj", false]
 	], "isciv"],
 	[OL_Shop_UsedCars, "Used Cars", dummyobj, [
-		["Used Vehicle Dealership", _cs1, _cs1, "[getPlayerUID player]", "OL_CIV_LANDSPAWN1"]
+		["Used Vehicle Dealership", _cs1, _cs1, "[getPlayerUID player]", "OL_CIV_LANDSPAWN1", false]
 	], "isciv"],
 	[OL_Shop_UsedCarsSheriff, "Used Cars", dummyobj, [
-		["Used Vehicle Dealership", _cs1, _cs1, "[getPlayerUID player]", "OL_CIV_LANDSPAWN2"]
+		["Used Vehicle Dealership", _cs1, _cs1, "[getPlayerUID player]", "OL_CIV_LANDSPAWN2", false]
 	], "isciv"],
 	[OL_Shop_FarmEquipment, "Farm Equipment", dummyobj, [
-		["Farm Vehicles Dealership", _cs2, _cs2, "[getPlayerUID player]", "OL_Shop_FarmEquipmentVehSpawn"]
+		["Farm Vehicles Dealership", _cs2, _cs2, "[getPlayerUID player]", "OL_Shop_FarmEquipmentVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_MuscleCars, "Muscle Cars", dummyobj, [
-		["Muscle Cars Dealership", _sc1, _sc1, "[getPlayerUID player]", "OL_Shop_MuscleCarVehSpawn"]
+		["Muscle Cars Dealership", _sc1, _sc1, "[getPlayerUID player]", "OL_Shop_MuscleCarVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_ChargerMazda, "Charger & Mazda Dealer", dummyobj, [
-		["Charger & Mazda Dealership", _sc2, _sc2, "[getPlayerUID player]", "OL_Shop_ChargerMazdaVehSpawn"]
+		["Charger & Mazda Dealership", _sc2, _sc2, "[getPlayerUID player]", "OL_Shop_ChargerMazdaVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_LowEndSports, "Low-End Sports Vehicles", dummyobj, [
-		["Low-End Sports Dealership", _sc3, _sc3, "[getPlayerUID player]", "OL_Shop_LowEndSportsVehSpawn"]
+		["Low-End Sports Dealership", _sc3, _sc3, "[getPlayerUID player]", "OL_Shop_LowEndSportsVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_MidEndSports, "Mid-Level Sports Vehicles", dummyobj, [
-		["Mid-Level Sports Dealership", _sc4, _sc4, "[getPlayerUID player]", "OL_Shop_MidLvlSportsVehSpawn"]
+		["Mid-Level Sports Dealership", _sc4, _sc4, "[getPlayerUID player]", "OL_Shop_MidLvlSportsVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_HighEndSports, "High-End Sports Vehicles", dummyobj, [
-		["Mid-Level Sports Dealership", _sc5, _sc5, "[getPlayerUID player]", "OL_Shop_HighEndSportsVehSpawn"]
+		["High-Level Sports Dealership", _sc5, _sc5, "[getPlayerUID player]", "OL_Shop_HighEndSportsVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_Nissan, "Nissan Vehicles", dummyobj, [
-		["Nissan Dealership", _sc6, _sc6, "[getPlayerUID player]", "OL_Shop_NissanVehSpawn"],
-		["Nissan350z Dealership", _sc7, _sc7, "[getPlayerUID player]", "OL_Shop_NissanVehSpawn"]
+		["Nissan Dealership", _sc6, _sc6, "[getPlayerUID player]", "OL_Shop_NissanVehSpawn", false],
+		["Nissan350z Dealership", _sc7, _sc7, "[getPlayerUID player]", "OL_Shop_NissanVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_Ford, "Ford Vehicles", dummyobj, [
-		["Ford Dealership", _sc8, _sc8, "[getPlayerUID player]", "OL_Shop_FordVehSpawn"]
+		["Ford Dealership", _sc8, _sc8, "[getPlayerUID player]", "OL_Shop_FordVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_BMW, "BMW Vehicles", dummyobj, [
-		["BMW Dealership", _sc9, _sc9, "[getPlayerUID player]", "OL_Shop_BMWVehSpawn"]
+		["BMW Dealership", _sc9, _sc9, "[getPlayerUID player]", "OL_Shop_BMWVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_Tahoe, "Tahoe Vehicles", dummyobj, [
-		["Tahoe Dealership", _tahoe, _tahoe, "[getPlayerUID player]", "OL_Shop_TahoeVehSpawn"]
+		["Tahoe Dealership", _tahoe, _tahoe, "[getPlayerUID player]", "OL_Shop_TahoeVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_Pickup, "Pickup Vehicles", dummyobj, [
-		["Pickup Dealership", _ps, _ps, "[getPlayerUID player]", "OL_Shop_PickupVehSpawn"]
+		["Pickup Dealership", _ps, _ps, "[getPlayerUID player]", "OL_Shop_PickupVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_Taxi, "Taxi Vehicles", dummyobj, [
-		["Taxi Dealership", _tx, _tx, "[getPlayerUID player]", "OL_Shop_TaxiVehSpawn"]
+		["Taxi Dealership", _tx, _tx, "[getPlayerUID player]", "OL_Shop_TaxiVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_Bicycle, "Bicycles", dummyobj, [
-		["Bicycle Shop", _bsj, _bsj, "[getPlayerUID player]", "OL_Shop_BicycleVehSpawn"]
+		["Bicycle Shop", _bsj, _bsj, "[getPlayerUID player]", "OL_Shop_BicycleVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_BikeShop, "Mike's Bike's", dummyobj, [
-		["Motorcycle Dealership", _mbs, _mbs, "[getPlayerUID player]", "OL_Shop_BikeShopVehSpawn"],
-		["Quadbike Dealership", _qbs, _qbs, "[getPlayerUID player]", "OL_Shop_BikeShopVehSpawn"],
-		["Sports Motocycle Dealership", _qbss, _qbss, "[getPlayerUID player]", "OL_Shop_BikeShopVehSpawn"]
+		["Motorcycle Dealership", _mbs, _mbs, "[getPlayerUID player]", "OL_Shop_BikeShopVehSpawn", false],
+		["Quadbike Dealership", _qbs, _qbs, "[getPlayerUID player]", "OL_Shop_BikeShopVehSpawn", false],
+		["Sports Motocycle Dealership", _qbss, _qbss, "[getPlayerUID player]", "OL_Shop_BikeShopVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_Truckshop, "Truck and Bus Shops", dummyobj, [
-		["Truck & Bus Dealership", _ts, _ts, "[getPlayerUID player]", "OL_Shop_TruckShopVehSpawn"]
+		["Truck & Bus Dealership", _ts, _ts, "[getPlayerUID player]", "OL_Shop_TruckShopVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_SportsTruck, "Sports Truck Shops", dummyobj, [
-		["Sports Truck Dealership", _sts, _sts, "[getPlayerUID player]", "OL_Shop_SportsTruckShopVehSpawn"]
+		["Sports Truck Dealership", _sts, _sts, "[getPlayerUID player]", "OL_Shop_SportsTruckShopVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_AirShop, "Aircraft Shops", dummyobj, [
-		["Airplane Dealership", _as, _as, "[getPlayerUID player]", "OL_Shop_AirShopVehSpawn"],
-		["Commercial Airplane Dealership", _asc, _asc, "[getPlayerUID player]", "OL_Shop_AirShopVehSpawn"],
-		["Helicopters & Jets", _assa, _assa, "[getPlayerUID player]", "OL_Shop_AirShopVehSpawn"]
+		["Airplane Dealership", _as, _as, "[getPlayerUID player]", "OL_Shop_AirShopVehSpawn", false],
+		["Commercial Airplane Dealership", _asc, _asc, "[getPlayerUID player]", "OL_Shop_AirShopVehSpawn", false],
+		["Helicopters & Jets", _assa, _assa, "[getPlayerUID player]", "OL_Shop_AirShopVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_AirShopChalnik, "Chalnik Aircraft Shop", dummyobj, [
-		["Helicopters & Jets", _assa, _assa, "[getPlayerUID player]", "OL_Shop_AirShopChalnikVehSpawn"],
-		["Airplane Dealership", _as, _as, "[getPlayerUID player]", "OL_Shop_AirShopChalnikVehSpawn"]
+		["Helicopters & Jets", _assa, _assa, "[getPlayerUID player]", "OL_Shop_AirShopChalnikVehSpawn", false],
+		["Airplane Dealership", _as, _as, "[getPlayerUID player]", "OL_Shop_AirShopChalnikVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_Boat1, "Boat Shops", dummyobj, [
-		["Boat Dealership", _bs, _bs, "[getPlayerUID player]", "OL_Shop_BoatVehSpawn"]
+		["Boat Dealership", _bs, _bs, "[getPlayerUID player]", "OL_Shop_BoatVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_Boat2, "Boat Shops", dummyobj, [
-		["Boat Dealership", _bs, _bs, "[getPlayerUID player]", "OL_Shop_BoatSVehSpawn"]
+		["Boat Dealership", _bs, _bs, "[getPlayerUID player]", "OL_Shop_BoatSVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_Bank_Insurance, "Bank Insurance", dummyobj, [
-		["Bank Insurance", _ins, _emptyshop, "[getPlayerUID player]", "dummyobj"]
-	], "isciv"],
+		["Bank Insurance", _ins, _emptyshop, "[getPlayerUID player]", "dummyobj", false]
+	], "true"],
 	[OL_Shop_SellResource, "Sell Resources", dummyobj, [
-		["Sell Resourcese", _rs, _rs, "[getPlayerUID player]", "dummyobj"],
-		["Oil Dealer", _emptyshop, _os, "[getPlayerUID player]", "dummyobj"]
+		["Sell Resourcese", _rs, _rs, "[getPlayerUID player]", "dummyobj", false],
+		["Oil Dealer", _emptyshop, _os, "[getPlayerUID player]", "dummyobj", false]
 	], "isciv"],
 	[OL_Shop_Wigsworths, "Wigworths Imporium", dummyobj, [
-		["Wigworths Speed Upgrades", _wigs, _wigs, "[getPlayerUID player]", "dummyobj"]
+		["Wigworths Speed Upgrades", _wigs, _wigs, "[getPlayerUID player]", "dummyobj", false]
 	], "isciv"],
 	[OL_Shop_WhaleD, "Whale Dealer", dummyobj, [
-		["Whale Dealer", _emptyshop, _ws, "[getPlayerUID player]", "dummyobj"]
+		["Whale Dealer", _emptyshop, _ws, "[getPlayerUID player]", "dummyobj", false]
 	], "isciv"],
 	[OL_Shop_Terror, "Terror Equipment", OL_Shop_Terror, [
-		["Terror Equipment", _terrorshop, _terrorshop, "[getPlayerUID player]", "OL_Shop_TerrorVehSpawn"],
-		["Terror Air Vehicles", _terrorhelishop, _terrorhelishop, "[getPlayerUID player]", "OL_Shop_TerrorVehSpawn"],
-		["Terror Boats", _terrorboatshop, _terrorboatshop, "[getPlayerUID player]", "OL_Shop_TerrorBoatSpawn"]
+		["Terror Equipment", _terrorshop, _terrorshop, "[getPlayerUID player]", "OL_Shop_TerrorVehSpawn", true],
+		["Terror Air Vehicles", _terrorhelishop, _terrorhelishop, "[getPlayerUID player]", "OL_Shop_TerrorVehSpawn", false],
+		["Terror Boats", _terrorboatshop, _terrorboatshop, "[getPlayerUID player]", "OL_Shop_TerrorBoatSpawn", false]
 	], "isciv"],
 	[OL_Shop_BarelyLegal, "Barely Legal", OL_Shop_BarelyLegal, [
-		["Barely Legal", _shady, _shady, "[getPlayerUID player]", "dummyobj"]
+		["Barely Legal", _shady, _shady, "[getPlayerUID player]", "dummyobj", false]
 	], "isciv"],
 	[OL_Shop_GangBox, "Gang Shop", OL_Shop_GangBox, [
-		["Gang Shop", _gangshop_buy, _gangshop_buy, "[getPlayerUID player]", "dummyobj"]
+		["Gang Shop", _gangshop_buy, _gangshop_buy, "[getPlayerUID player]", "dummyobj", true]
 	], "isciv"],
 	[OL_Shop_GangBox1, "Gang Shop", OL_Shop_GangBox1, [
-		["Gang Shop", _gangshop_buy, _gangshop_buy, "[getPlayerUID player]", "dummyobj"]
+		["Gang Shop", _gangshop_buy, _gangshop_buy, "[getPlayerUID player]", "dummyobj", true]
 	], "isciv"],
 	[OL_Shop_GangBox2, "Gang Shop", OL_Shop_GangBox2, [
-		["Gang Shop", _gangshop_buy, _gangshop_buy, "[getPlayerUID player]", "dummyobj"]
+		["Gang Shop", _gangshop_buy, _gangshop_buy, "[getPlayerUID player]", "dummyobj", true]
 	], "isciv"],
 	[OL_Shop_GangBox3, "Gang Shop", OL_Shop_GangBox3, [
-		["Gang Shop", _gangshop_buy, _gangshop_buy, "[getPlayerUID player]", "dummyobj"]
+		["Gang Shop", _gangshop_buy, _gangshop_buy, "[getPlayerUID player]", "dummyobj", true]
 	], "isciv"],
 	[OL_Shop_PawnShop, "Pawn Shop", dummyobj, [
-		["Diamond Pawn Shop", _js, _js, "[getPlayerUID player]", "dummyobj"]
+		["Diamond Pawn Shop", _js, _js, "[getPlayerUID player]", "dummyobj", false]
 	], "isciv"],
 	[OL_Shop_Pharmacy, "Pharmacy", dummyobj, [
-		["Pharmacy", _psc, _emptyshop, "[getPlayerUID player]", "pharmspawn"]
+		["Pharmacy", _psc, _emptyshop, "[getPlayerUID player]", "pharmspawn", false]
 	], "isciv"],
 	[OL_Shop_Cocaine, "Cocaine Dealer", dummyobj, [
-		["Cocaine Dealer", _dsc, _dsc, "[getPlayerUID player]", "dummyobj"]
+		["Cocaine Dealer", _dsc, _dsc, "[getPlayerUID player]", "dummyobj", false]
 	], "isciv"],
 	[OL_Shop_Marijuana, "Marijuana Dealer", dummyobj, [
-		["Marijuana Dealer", _dsm, _dsm, "[getPlayerUID player]", "dummyobj"]
+		["Marijuana Dealer", _dsm, _dsm, "[getPlayerUID player]", "dummyobj", false]
 	], "isciv"],
 	[OL_Shop_LSD, "LSD Dealer", dummyobj, [
-		["LSD Dealer", _emptyshop, _dsl, "[getPlayerUID player]", "dummyobj"]
+		["LSD Dealer", _emptyshop, _dsl, "[getPlayerUID player]", "dummyobj", false]
 	], "isciv"],
 	[OL_Shop_Heroin, "Heroin Dealer", dummyobj, [
-		["Heroin Dealer", _dsh, _dsh, "[getPlayerUID player]", "dummyobj"]
+		["Heroin Dealer", _dsh, _dsh, "[getPlayerUID player]", "dummyobj", false]
 	], "isciv"],
 	[OL_Shop_Meth, "Meth Dealer", dummyobj, [
-		["Meth Dealer", _msc, _msc, "[getPlayerUID player]", "dummyobj"]
+		["Meth Dealer", _msc, _msc, "[getPlayerUID player]", "dummyobj", false]
 	], "isciv"],
 	[OL_Shop_Organs, "Organ Dealer", dummyobj, [
-		["Organ Dealer", _hsc, _hsc, "[getPlayerUID player]", "dummyobj"]
+		["Organ Dealer", _hsc, _hsc, "[getPlayerUID player]", "dummyobj", false]
 	], "isciv"],
 	[OL_Shop_Cop_Untrained, "Untrained Patrol Officer Equipment", OL_Shop_Cop_Untrained, [
-		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_POVehSpawn"],
-		["Untrained Patrol Officer Equipment", _copuntrained, _copuntrained, "[getPlayerUID player]", "OL_Shop_Cop_POVehSpawn"]
+		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_POVehSpawn", true],
+		["Untrained Patrol Officer Equipment", _copuntrained, _copuntrained, "[getPlayerUID player]", "OL_Shop_Cop_POVehSpawn", true]
 	], "iscop"],
 	[OL_Shop_Cop_PO, "Police Equipment", OL_Shop_Cop_PO, [
-		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_POVehSpawn"],
-		["Rookie Patrol Officer Equipment", _coppo1, _coppo1, "PO1_id", "OL_Shop_Cop_POVehSpawn"],
-		["Patrol Officer Equipment", _coppo2, _coppo2, "PO2_id", "OL_Shop_Cop_POVehSpawn"],
-		["Senior Patrol Officer Equipment", _coppo3, _coppo3, "PO3_id", "OL_Shop_Cop_POVehSpawn"]
+		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_POVehSpawn", true],
+		["Rookie Patrol Officer Equipment", _coppo1, _coppo1, "PO1_id", "OL_Shop_Cop_POVehSpawn", true],
+		["Patrol Officer Equipment", _coppo2, _coppo2, "PO2_id", "OL_Shop_Cop_POVehSpawn", true],
+		["Senior Patrol Officer Equipment", _coppo3, _coppo3, "PO3_id", "OL_Shop_Cop_POVehSpawn", true]
 	], "iscop"],
 	[OL_Shop_Cop_SPV, "Police Supervisor Equipment", OL_Shop_Cop_SPV, [
-		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_SPVVehSpawn"],
-		["Corporal Equipment", _copcpl, _copcpl, "Cpl_id", "OL_Shop_Cop_SPVVehSpawn"],
-		["Sergeant Equipment", _copsgt, _copsgt, "Sgt_id", "OL_Shop_Cop_SPVVehSpawn"]
+		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_SPVVehSpawn", true],
+		["Corporal Equipment", _copcpl, _copcpl, "Cpl_id", "OL_Shop_Cop_SPVVehSpawn", true],
+		["Sergeant Equipment", _copsgt, _copsgt, "Sgt_id", "OL_Shop_Cop_SPVVehSpawn", true]
 	], "iscop"],
 	[OL_Shop_Cop_CMD, "Police Command Equipment", OL_Shop_Cop_CMD, [
-		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_CMDVehSpawn"],
-		["Medal Equipment", _copmedal, _copmedal, "MedalRecipt_id", "OL_Shop_Cop_CMDVehSpawn"],
-		["Lieutenant Equipment", _coplt, _coplt, "Lt_id", "OL_Shop_Cop_CMDVehSpawn"],
-		["Captain Equipment", _copcpt, _copcpt, "Cpt_id", "OL_Shop_Cop_CMDVehSpawn"],
-		["Chief Equipment", _copchief, _copchief, "Chief_id", "OL_Shop_Cop_CMDVehSpawn"]
+		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_CMDVehSpawn", true],
+		["Medal Equipment", _copmedal, _copmedal, "MedalRecipt_id", "OL_Shop_Cop_CMDVehSpawn", true],
+		["Lieutenant Equipment", _coplt, _coplt, "Lt_id", "OL_Shop_Cop_CMDVehSpawn", true],
+		["Captain Equipment", _copcpt, _copcpt, "Cpt_id", "OL_Shop_Cop_CMDVehSpawn", true],
+		["Assistant Chief Equipment", _copastchief, _copastchief, "Chief_id", "OL_Shop_Cop_CMDVehSpawn", true],
+		["Chief Equipment", _copchief, _copchief, "Chief_id", "OL_Shop_Cop_CMDVehSpawn", true]
 	], "iscop"],
 	[OL_Shop_Cop_FTO, "Police FTO Equipment", OL_Shop_Cop_FTO, [
-		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_FTOVehSpawn"],
-		["F.T.O. Equipment", _copfto, _copfto, "FTO_id", "OL_Shop_Cop_FTOVehSpawn"],
-		["F.T.O. Supervisor", _copftos, _copftos, "FTO_id", "OL_Shop_Cop_FTOVehSpawn"],
-		["F.T.O. Command", _copftoc, _copftoc, "FTO_id", "OL_Shop_Cop_FTOVehSpawn"]
+		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_FTOVehSpawn", true],
+		["F.T.O. Equipment", _copfto, _copfto, "FTO_id", "OL_Shop_Cop_FTOVehSpawn", true],
+		["F.T.O. Supervisor", _copftos, _copftos, "FTO_id", "OL_Shop_Cop_FTOVehSpawn", true],
+		["F.T.O. Command", _copftoc, _copftoc, "FTO_id", "OL_Shop_Cop_FTOVehSpawn", true]
 	], "iscop"],
 	[OL_Shop_Cop_K9, "Police K9 Equipment", OL_Shop_Cop_K9, [
-		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_K9VehSpawn"],
-		["K-9 Probation", _copk9p, _copk9p, "K9_id", "OL_Shop_Cop_K9VehSpawn"],
-		["K-9 Officer", _copk9, _copk9, "K9_id", "OL_Shop_Cop_K9VehSpawn"],
-		["K-9 Command", _copk9c, _copk9c, "K9_id", "OL_Shop_Cop_K9VehSpawn"]
+		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_K9VehSpawn", true],
+		["K-9 Probation", _copk9p, _copk9p, "K9_id", "OL_Shop_Cop_K9VehSpawn", true],
+		["K-9 Officer", _copk9, _copk9, "K9_id", "OL_Shop_Cop_K9VehSpawn", true],
+		["K-9 Senior", _copk9s, _copk9s, "K9_id", "OL_Shop_Cop_K9VehSpawn", true],
+		["K-9 Command", _copk9c, _copk9c, "K9_id", "OL_Shop_Cop_K9VehSpawn", true]
 	], "iscop"],
 	[OL_Shop_Cop_SheriffEquipment, "Sheriff Equipment", OL_Shop_Cop_SheriffEquipment, [
-		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_COP_LANDSPAWN2"],
-		["Sheriff Deputy Equipment", _copdeputy, _copdeputy, "JrDeputy_id", "OL_COP_LANDSPAWN2"],
-		["Sheriff Sergeant Deputy Equipment", _copsgtdeputy, _copsgtdeputy, "SgtDeputy_id", "OL_COP_LANDSPAWN2"],
-		["Sheriff Command", _copsheriff, _copsheriff, "Sheriff_id", "OL_COP_LANDSPAWN2"]
+		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_COP_LANDSPAWN2", true],
+		["Junior Deputy", _copjrdeputy, _copjrdeputy, "JrDeputy_id", "OL_COP_LANDSPAWN2", true],
+		["Deputy", _copdeputy, _copdeputy, "Deputy_id", "OL_COP_LANDSPAWN2", true],
+		["Senior Deputy", _copsrdeputy, _copsrdeputy, "SrDeputy_id", "OL_COP_LANDSPAWN2", true],
+		["Corporal Deputy", _copcpldeputy, _copcpldeputy, "CplDeputy_id", "OL_COP_LANDSPAWN2", true],
+		["Sergeant Deputy", _copsgtdeputy, _copsgtdeputy, "SgtDeputy_id", "OL_COP_LANDSPAWN2", true],
+		["Lieutenant Deputy", _copltdeputy, _copltdeputy, "LtDeputy_id", "OL_COP_LANDSPAWN2", true],
+		["Captain Deputy", _copcptdeputy, _copcptdeputy, "Sheriff_id", "OL_COP_LANDSPAWN2", true]
 	], "iscop"],
 	[OL_Shop_Cop_SheriffDivision, "Sheriff Division Equipment", OL_Shop_Cop_SheriffDivision, [
-		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_COP_LANDSPAWN2"],
-		["Sheriff K-9", _copk9sheriff, _copk9sheriff, "K9_id", "OL_COP_LANDSPAWN2"],
-		["Sheriff Marksman", _copsheriffmks, _copsheriffmks, "JrDeputy_id", "OL_COP_LANDSPAWN2"],
-		["Sheriff D.N.R. Equipment", _copsheriffdnr, _copsheriffdnr, "JrDeputy_id", "OL_COP_LANDSPAWN2"]
+		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_COP_LANDSPAWN2", true],
+		["Sheriff K-9", _copk9sheriff, _copk9sheriff, "K9_id", "OL_COP_LANDSPAWN2", false],
+		["Sheriff Marksman", _copsheriffmks, _copsheriffmks, "JrDeputy_id", "OL_COP_LANDSPAWN2", true],
+		["Sheriff D.N.R. Equipment", _copsheriffdnr, _copsheriffdnr, "JrDeputy_id", "OL_COP_LANDSPAWN2", false]
 	], "iscop"],
 	[OL_Shop_Cop_SheriffDNR, "Sheriff D.N.R. Equipment", OL_Shop_Cop_SheriffDNR, [
-		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_SheriffDNRVehSpawn"],
-		["S.W.A.T. Watercraft", _copswat6, _copswat6, "SWAT_id", "OL_Shop_Cop_SheriffDNRVehSpawn"],
-		["Sheriff D.N.R. Watercraft", _copcoastguard, _copcoastguard, "Coastguard_id", "OL_Shop_Cop_SheriffDNRVehSpawn"]
+		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_SheriffWCBoatSpawn", true],
+		["S.W.A.T. Watercraft", _copswat6, _copswat6, "SWAT_id", "OL_Shop_Cop_SheriffWCBoatSpawn", false],
+		["Sheriff D.N.R. Watercraft", _copcoastguard, _copcoastguard, "Coastguard_id", "OL_Shop_Cop_SheriffWCBoatSpawn", false]
 	], "iscop"],
 	[OL_Shop_Cop_SheriffAvitaion, "Sheriff Aviation Equipment", OL_Shop_Cop_SheriffAvitaion, [
-		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_SheriffAviationVehSpawn"],
-		["Sheriff Aviation", _copavsh, _copavsh, "PDAviation_id", "OL_Shop_Cop_SheriffAviationVehSpawn"]
+		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_SheriffAviationVehSpawn", true],
+		["Sheriff Aviation", _copavsh, _copavsh, "PDAviation_id", "OL_Shop_Cop_SheriffAviationVehSpawn", true]
 	], "iscop"],
 	[OL_Shop_Cop_Avitaion, "Police Aviation Equipment", OL_Shop_Cop_Avitaion, [
-		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_AviationVehSpawn"],
-		["Police Aviation", _copav1, _copav1, "PDAviation_id", "OL_Shop_Cop_AviationVehSpawn"],
-		["Police Operational Pilot", _copav2, _copav2, "PDAviation_id", "OL_Shop_Cop_AviationVehSpawn"]
+		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_AviationVehSpawn", true],
+		["Police Aviation", _copav1, _copav1, "PDAviation_id", "OL_Shop_Cop_AviationVehSpawn", true],
+		["Police Operational Pilot", _copav2, _copav2, "PDAviation_id", "OL_Shop_Cop_AviationVehSpawn", true]
 	], "iscop"],
 	[OL_Shop_Cop_CID, "Police CID Equipment", OL_Shop_Cop_CID, [
-		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_CIDVehSpawn"],
-		["Police CID", _cid, _cid, "Undercover_id", "OL_Shop_Cop_CIDVehSpawn"]
+		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_CIDVehSpawn", true],
+		["Police CID", _cid, _cid, "Undercover_id", "OL_Shop_Cop_CIDVehSpawn", true]
 	], "iscop"],
 	[OL_Shop_PMC, "PMC Equipment", OL_Shop_PMC, [
-		["PMC Operator", _PMC, _PMC, "PMC_id", "OL_Shop_PMCVehSpawn"],
-		["PMC Command", _CommandPMC, _CommandPMC, "PMCCommand_id", "OL_Shop_PMCVehSpawn"],
-		["PMC Air", _PMCair, _PMCair, "PMC_id", "OL_Shop_PMCVehSpawn"]
+		["PMC Operator", _PMC, _PMC, "PMC_id", "OL_Shop_PMCVehSpawn", true],
+		["PMC Command", _CommandPMC, _CommandPMC, "PMCCommand_id", "OL_Shop_PMCVehSpawn", true],
+		["PMC Air", _PMCair, _PMCair, "PMC_id", "OL_Shop_PMCVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_BM, "Black Market", OL_Shop_BM, [
-		["Black Market", _bm, _bm, "[getPlayerUID player]", "dummyobj"]
+		["Black Market", _bm, _bm, "[getPlayerUID player]", "dummyobj", true]
 	], "isciv"]
 ];
 

@@ -60,18 +60,23 @@ switch (_classname call INV_getitemType) do {
       switch (_x call INV_getitemKindOf) do {
         case ("pistol"): { _magCountSecd = _magCountSecd + 1 };
         case ("rifle"):  { _magCountPrim = _magCountPrim + 1 };
+        case ("sniper"): { _magCountPrim = _magCountPrim + 1 };
       };
     } forEach (magazines player);
 
     _secSlotsLeft = 8 - _magCountSecd;
     _priSlotsLeft = 12 - _magCountPrim;
 
+    _old_amountToTake = _amountToTake;
+
+    if (_classname call INV_getitemKindOf == "launcher") then { _amountToTake = _amountToTake * 6 };
+
     if ((_classname call INV_getitemKindOf == "pistol") && (_amountToTake > _secSlotsLeft)) then { _amountToTake = _secSlotsLeft };
     if ((_classname call INV_getitemKindOf == "launcher") && (_amountToTake > _priSlotsLeft)) then { _amountToTake = _priSlotsLeft };
     if ((_classname call INV_getitemKindOf == "sniper") && (_amountToTake > _priSlotsLeft)) then { _amountToTake = _priSlotsLeft };
     if ((_classname call INV_getitemKindOf == "rifle") && (_amountToTake > _priSlotsLeft)) then { _amountToTake = _priSlotsLeft };
 
-    if (_amountToTake == 0) exitWith {
+    if (_amountToTake <= 0) exitWith {
       player groupChat "Your magazines is full.";
       _Stop = true;
     };
@@ -84,11 +89,12 @@ switch (_classname call INV_getitemType) do {
       player groupChat "Your primary magazines is full.";
       _Stop = true;
     };
-
     if (((_classname call INV_getitemKindOf == "launcher") && ((_magCountPrim + _amountToTake) > 12))) exitWith {
       player groupChat "Your primary magazines is full.";
       _Stop = true;
     };
+
+    if (_classname call INV_getitemKindOf == "launcher") then { _amountToTake = _old_amountToTake };
 
     _curStuff = OL_StoredMagazines select _index;
     OL_StoredMagazines set [_index, -1];

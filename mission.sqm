@@ -795,7 +795,7 @@ class Mission
 					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
-					text="cgboatspawn";
+					text="OL_Shop_Cop_SheriffWCBoatSpawn";
 				};
 			};
 		};
@@ -2100,7 +2100,7 @@ class Mission
 					vehicle="LocationLogic";
 					leader=1;
 					skill=0.60000002;
-					init="building21 = (position this nearestobject 156358)";
+					init="building21 = (position this nearestobject 156358);building21 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500]";
 				};
 			};
 		};
@@ -2119,7 +2119,7 @@ class Mission
 					vehicle="LocationLogic";
 					leader=1;
 					skill=0.60000002;
-					init="building23 = (position this nearestobject 156357)";
+					init="building23 = (position this nearestobject 156357);building23 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500]";
 				};
 			};
 		};
@@ -2138,7 +2138,7 @@ class Mission
 					vehicle="LocationLogic";
 					leader=1;
 					skill=0.60000002;
-					init="building24 = (position this nearestobject 156356)";
+					init="building24 = (position this nearestobject 156356);building24 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500]";
 				};
 			};
 		};
@@ -2157,7 +2157,7 @@ class Mission
 					vehicle="LocationLogic";
 					leader=1;
 					skill=0.60000002;
-					init="building28 = (position this nearestobject 156364)";
+					init="building28 = (position this nearestobject 156364);building28 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500]";
 				};
 			};
 		};
@@ -2176,7 +2176,7 @@ class Mission
 					vehicle="LocationLogic";
 					leader=1;
 					skill=0.60000002;
-					init="building27 = (position this nearestobject 156363)";
+					init="building27 = (position this nearestobject 156363);building27 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500]";
 				};
 			};
 		};
@@ -2195,7 +2195,7 @@ class Mission
 					vehicle="LocationLogic";
 					leader=1;
 					skill=0.60000002;
-					init="building26 = (position this nearestobject 156362)";
+					init="building26 = (position this nearestobject 156362);building26 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500]";
 				};
 			};
 		};
@@ -2214,7 +2214,7 @@ class Mission
 					vehicle="LocationLogic";
 					leader=1;
 					skill=0.60000002;
-					init="building25 = (position this nearestobject 156361)";
+					init="building25 = (position this nearestobject 156361);building25 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500]";
 				};
 			};
 		};
@@ -2233,7 +2233,7 @@ class Mission
 					vehicle="LocationLogic";
 					leader=1;
 					skill=0.60000002;
-					init="building29 = (position this nearestobject 156359)";
+					init="building29 = (position this nearestobject 156359);building29 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500]";
 				};
 			};
 		};
@@ -2550,7 +2550,7 @@ class Mission
 					vehicle="LocationLogic";
 					leader=1;
 					skill=0.60000002;
-					init="building22 = (position this nearestobject 156368)";
+					init="building22 = (position this nearestobject 156368);building22 attachto [this, [0,0,0]]; this setPos [getPos this select 0, getPos this select 1, -500]";
 				};
 			};
 		};

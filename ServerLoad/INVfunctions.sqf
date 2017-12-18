@@ -661,10 +661,7 @@ INV_getitemBuyCost = 			{((_this call INV_getitemArray) select 3) select 0;};
 INV_getitemSellCost = 		{((_this call INV_getitemArray) select 3) select 1;};
 
 //TypeKG = Vehicle Class (1=Light 2=Normal, >3=Large+NotRepairable)
-INV_getitemTypeKg = 			{
-	if (typeName _this == "ARRAY") exitWith {};
- 	((_this call INV_getitemArray) select 4) select 0;
-};
+INV_getitemTypeKg = 			{ ((_this call INV_getitemArray) select 4) select 0; };
 INV_getitemLicense = 			{((_this call INV_getitemArray) select 4) select 1;};
 INV_getitemLicense2 = 		{((_this call INV_getitemArray) select 4) select 2;};
 INV_getvehmaxkg = 				{((_this call INV_getitemArray) select 4) select 3;};

@@ -12,11 +12,13 @@ _HasWeapon = {
 
 _inSellArray = {
   _return = false;
+  if (_this == "ATV_US_EP1") exitWith { true };
   {
     if (_this == _x) exitWith { _return = true };
   } forEach _SellArray;
   _return;
 };
+
 
 _NearVehicles = {
   _ret = [];
@@ -56,6 +58,13 @@ switch (_Category) do {
       if (_x call INV_getitemType == "Fahrzeug") then {
         _index = lbAdd [1, format ["%1 ($%2)", _x call INV_getitemName, _x call INV_getitemCostWithTax]];
         lbSetData [1, _index, format ['[%1, %2, %3]', str (_x), OL_ActiveShop, _VehicleSpawn]];
+        if (_x == "RHIB") then {
+          if ((iscop) && (getPlayerUID player in SWAT_id)) then {
+            lbDelete [1,0];
+            _index = lbAdd [1, format ["%1 ($%2)", "RHIB (S.W.A.T.)", (75000 call OL_ISSE_str_IntToStr)]];
+            lbSetData [1, _index, format ['[%1, %2, %3]', str (_x), OL_ActiveShop, _VehicleSpawn]];
+          };
+        };
       };
     } forEach _BuyArray;
 

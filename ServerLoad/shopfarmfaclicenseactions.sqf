@@ -21,7 +21,7 @@ uiSleep 10;
 
 //==================================SHOPACTIONS========================================
 
-for [{_i = 0}, {_i < (count OL_ShopsArray - 1)}, {_i = _i + 1}] do {
+for [{_i = 0}, {_i < (count OL_ShopsArray)}, {_i = _i + 1}] do {
 	_flag   		 = ((OL_ShopsArray select _i) select 0);
 	shopusearray = shopusearray + [_flag];
 };

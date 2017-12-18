@@ -45,7 +45,7 @@ CP_RobScript_OL_Shop_Pub2 = [
 	["GROUPCHAT", "Nathan has handed you the money! Now get out of there before the cops show up!", 							0]
 ];
 
-CP_RobScript_OL_Shop_OL_Shop_Pub3 = [
+CP_RobScript_OL_Shop_Pub3 = [
 	["SETTINGS",  "Macks Bar", "barmoney2", "macksavailable", "Robbed Bar"],
 	["GROUPCHAT", "You are now robbing the pub, Please stay near Mack for 30 seconds to receive the money", 	    2],
 	["TITLETEXT", "Put your hands up old man, this is a robbery!", 																							  5],
@@ -177,7 +177,7 @@ CP_RobScript_OL_Shop_Fuel_5 = [
 	["GROUPCHAT", "The employee has handed you the money! Now get out of there before the cops show up!", 							0]
 ];
 
-CP_RobScript_OL_Shop_Fuel_3 = [
+CP_RobScript_OL_Shop_Fuel_1 = [
 	["SETTINGS",  "Mikes Hard Gas", "station7money", "mikesavailable", "Robbed Station"],
 	["GROUPCHAT", "You are now robbing Mikes Hard Gas, Please stay near the Clerk for 20 seconds to receive the money",	2],
 	["TITLETEXT", "Put your hands up this is a robbery!", 																							      					5],
@@ -187,7 +187,7 @@ CP_RobScript_OL_Shop_Fuel_3 = [
 	["GROUPCHAT", "The clerk has handed you the money! Now get out of there before the cops show up!", 									0]
 ];
 
-CP_RobScript_OL_Shop_Fuel_1 = [
+CP_RobScript_OL_Shop_Fuel_3 = [
 	["SETTINGS",  "Gas Hause", "station8money", "hausavailable", "Robbed Station"],
 	["GROUPCHAT", "You are now robbing Gas Hause, Please stay near the Clerk for 20 seconds to receive the money",			2],
 	["TITLETEXT", "Put your hands up this is a robbery!", 																							      					5],
