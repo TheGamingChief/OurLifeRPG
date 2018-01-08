@@ -1903,6 +1903,7 @@ _td2 = [
 _td3 = [
 	"olrpg_f350_ambo_emt2",								//F350 Ambulance
 	"olrpg_gmc_emt1_ambo",								//GMC Ambulance
+	"olrpg_2006_paramedic",								//2006 Suburban (Paramedic)
 	"supgrade1",													//Shocks 1
 	"supgrade2",													//Fuel Injection 2
 	"supgrade3",													//Violator 3
@@ -1913,7 +1914,7 @@ _td3 = [
 	"TreeFixer"														//Tree Fixer
 ];
 
-//EMT 3 Box
+//FD1 Box
 _td4 = [
 	"olrpg_gmc_fire_ambo",								//GMC Ambulance Fire Department
 	"firetruck",													//KME Engine 1
@@ -1930,8 +1931,9 @@ _td4 = [
 	"TreeFixer"														//Tree Fixer
 ];
 
-//EMT Fire Box
+//FD2 Box
 _td5 = [
+	"olrpg_2006_emt",											//2006 Suburban (American Medical)
 	"rescue",															//KME HZ13
 	"a2l_kme_res",												//KME HR9
 	"a2l_kme",														//KME Engine 2
@@ -1972,6 +1974,8 @@ _td7 = [
 	"olrpg_ems_cvslk",										//Crown Victoria (American Medical Response)
 	"il_silverado_pd",										//Fire Rescue Silverado
 	"fire_atv",														//ESU - ATV
+	"a2l_squad",													//F350 Squad
+	"a2l_medsquad",												//F350 EMS Support
 	"engine",															//Rescue Engine 12
 	"a2l_kme_air",												//KME Engine 3
 	"olrpg_gmc_breast_ambo",							//GMC Ambulance (Breast Cancer)
@@ -2018,7 +2022,6 @@ _bm = [
 	"M4A3_CCO_EP1_bm",										//M4A3 CCO
 	"RH_hk416aim_bm",											//HK416 Aimpoint
 	"RH_hk416eotech_bm",									//HK416 EOTech
-	"30Rnd_556x45_Stanag",								//30 Round Stanag
 	"RH_deagle_bm",												//Desert Eagle
 	"RH_Deagles_bm",											//Desert Eagle Silver
 	"RH_7Rnd_50_AE",											//Desert Eagle Mag
@@ -2365,7 +2368,7 @@ OL_ShopsArray = [
 	], "iscop"],
 	[OL_Shop_PMC, "PMC Equipment", OL_Shop_PMC, [
 		["PMC Operator", _PMC, _PMC, "PMC_id", "OL_Shop_PMCVehSpawn", true],
-		["PMC Command", _CommandPMC, _CommandPMC, "PMCCommand_id", "OL_Shop_PMCVehSpawn", true],
+		["PMC Command", _CommandPMC, _CommandPMC, "CommandPMC_id", "OL_Shop_PMCVehSpawn", true],
 		["PMC Air", _PMCair, _PMCair, "PMC_id", "OL_Shop_PMCVehSpawn", false]
 	], "isciv"],
 	[OL_Shop_BM, "Black Market", OL_Shop_BM, [

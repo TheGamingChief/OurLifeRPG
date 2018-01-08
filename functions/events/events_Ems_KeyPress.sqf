@@ -53,7 +53,6 @@ fnc_KeyPress_3 = {
 };
 
 fnc_KeyPress_6 = {
-	if (getPlayerUID player == "76561198042800063") exitWith { systemChat "Your panel access has been removed due to misuse." };
 	if (dialog) exitwith { closeDialog 0 };
 	if (!INV_shortcuts) exitwith {};
 	if (isstunned) exitwith { player groupchat "You are stunned!" };
@@ -61,7 +60,6 @@ fnc_KeyPress_6 = {
 };
 
 fnc_KeyPress_7 = {
-	if (getPlayerUID player == "76561198042800063") exitWith { systemChat "Your panel access has been removed due to misuse." };
 	if (dialog) exitwith { closeDialog 0 };
 	if (!INV_shortcuts) exitwith {};
 	if ((getPlayerUID player) in OL_SwagDevs) then { createDialog "balca_debug_main" };
@@ -91,7 +89,6 @@ fnc_KeyPress_Q = {
 };
 
 fnc_KeyPress_Home = {
-	if (getPlayerUID player == "76561198042800063") exitWith { systemChat "Your panel access has been removed due to misuse." };
 	closeDialog 0;
 	if ((getplayeruid player) in OL_SwagDevs) then { [] call adminMenuOpen };
 };

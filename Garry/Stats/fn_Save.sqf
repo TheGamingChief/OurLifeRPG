@@ -10,6 +10,7 @@ systemChat format ["%1", switch (playerSide) do {
   case resistance: { "C.F.R."         };
 }];
 
+OL_NeedsStatwipe = false;
 saveAvailable = false;
 uiSleep 60;
 saveAvailable = true;

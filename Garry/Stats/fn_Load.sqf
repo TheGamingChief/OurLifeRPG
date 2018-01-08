@@ -78,11 +78,16 @@ switch (playerSide) do {
 
     switch (_PMC_Rank) do {
       case 0: {};
-      case 1: { PMC_id        = [getPlayerUID player] };
-      case 2: { CommandPMC_id = [getPlayerUID player] };
+      case 1: {
+        PMC_id        = [getPlayerUID player];
+      };
+      case 2: {
+        PMC_id        = [getPlayerUID player];
+        CommandPMC_id = [getPlayerUID player];
+      };
     };
 
-    if (_PD_UnderCover != 0) then { Undercover_id = [getplayeruid player] };
+    if (_PD_UnderCover != 0) then { Undercover_id = [getplayeruid player]; };
   };
   case resistance: {
     Kontostand        = _stats select 3;

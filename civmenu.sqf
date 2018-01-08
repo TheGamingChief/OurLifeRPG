@@ -166,11 +166,6 @@ if ((_loopart == "arrest") and (player distance prisonflag <= 70))  then {
 		if (jail_time <= 0)    								  exitWith { _exitart = "JailExit_TimeServed"  };
 		if (player distance prison_logic >= 50) exitWith { _exitart = "JailExit_Escaped"		 };
 
-		if ((((getPosATL player) select 2) > 3) && (vehicle player == player)) then {
-			player setpos getmarkerpos "prisonspawn";
-			player groupChat "Please do not try to glitch, we ain't dumb - OLRPG Development Team aka CP & TRG"; // sounds guud
-		};
-
 		hintsilent format["Time until release: %1\nBail left to pay: $%2", [jail_time / 60 / 60, "HH:MM:SS"] call BIS_fnc_timeToString, jail_bounty];
 
 		jail_time = jail_time - 1;

@@ -6,3 +6,4 @@ if (!(_vcl in INV_VehicleArray)) exitWith { player groupChat "VEHICLE SAVE FAILE
 deleteVehicle _vcl;
 
 server globalChat "VEHICLE SAVED";
+[] spawn Stats_fnc_Save;
