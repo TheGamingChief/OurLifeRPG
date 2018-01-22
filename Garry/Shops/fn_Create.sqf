@@ -1197,7 +1197,7 @@ _copastchief = [
 	"olrpg_uctahoe_grey", 								//Unmarked Tahoe (Grey)
 	"olrpg_uctahoe_dblue", 								//Unmarked Tahoe (Blue)
 	"olrpg_pdtaurus_um", 									//Unmarked Ford Taurus
-	"olrpg_pd_chargerblack", 							//Unmarked Dodge Charger
+	"olrpg_pdchargerblack", 							//Unmarked Dodge Charger
 	"supgrade3_pd",												//Violator 3
 	"supgrade4_pd",												//Interceptor 4
 	"supgrade5_pd",												//Fast And Furious 5
@@ -1232,7 +1232,7 @@ _copchief = [
 	"olrpg_uctahoe_grey", 								//Unmarked Tahoe (Grey)
 	"olrpg_uctahoe_dblue", 								//Unmarked Tahoe (Blue)
 	"olrpg_pdtaurus_um", 									//Unmarked Ford Taurus
-	"olrpg_pd_chargerblack", 							//Unmarked Dodge Charger
+	"olrpg_pdchargerblack", 							//Unmarked Dodge Charger
 	"supgrade3_pd",												//Violator 3
 	"supgrade4_pd",												//Interceptor 4
 	"supgrade5_pd",												//Fast And Furious 5
@@ -2078,14 +2078,16 @@ OL_ShopsArray = [
 	[OL_Shop_EMTAir, "E.M.T. Air Shops", OL_Shop_EMTAir, [
 		["C.F.R. Aviation", _td6, _td6, "AirESU_id", "OL_CFR_AIRSPAWN", false]
 	], "ismedic"],
+	[OL_Shop_EMTAirsub, "E.M.T. Sub-Fire Air Shops", OL_Shop_EMTAirsub, [
+		["C.F.R. Aviation", _td6, _td6, "AirESU_id", "tdocspawnsubair", false]
+	], "ismedic"],
 	[OL_Shop_EMTSub, "E.M.T. Sub-Fire Shops", OL_Shop_EMTSub, [
 		["E.M.T. Probie", _td, _td, "[getPlayerUID player]", "OL_Shop_EMTSubVehSpawn", false],
 		["E.M.T. 1", _td2, _td2, "EMT1_id", "OL_Shop_EMTSubVehSpawn", false],
 		["E.M.T. 2", _td3, _td3, "EMT2_id", "OL_Shop_EMTSubVehSpawn", false],
 		["FireFighter 1", _td4, _td4, "EMT3_id", "OL_Shop_EMTSubVehSpawn", false],
 		["FireFighter 2", _td5, _td5, "FD_id", "OL_Shop_EMTSubVehSpawn", false],
-		["E.M.T. Command", _td7, _td7, "EMTSupervisor_id", "OL_Shop_EMTSubVehSpawn", false],
-		["C.F.R. Aviation", _td6, _td6, "AirESU_id", "tdocspawnsubair", false]
+		["E.M.T. Command", _td7, _td7, "EMTSupervisor_id", "OL_Shop_EMTSubVehSpawn", false]
 	], "ismedic"],
 	[OL_Shop_Undercover, "Undercover Shop", OL_Shop_Undercover, [
 		["Undercover Officer", _undercover, _undercover, "Undercover_id", "OL_Shop_UndercoverVehSpawn", true]

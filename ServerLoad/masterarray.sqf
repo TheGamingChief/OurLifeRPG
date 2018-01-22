@@ -1046,7 +1046,7 @@ INV_AlleFahrzeugeArray = [
   ["olrpg_pdsuptaurus_slick",["Fahrzeug","car"],["olrpg_pdsuptaurus_slick","Ford Taurus Slicktop"],[20000,15000],[1,"", "OL_License_cop_basicPatrol",150],[]],
   ["olrpg_pd_charger",["Fahrzeug","car"],["olrpg_pd_charger","Dodge Charger (Police)"],[25000,15000],[1,"", "OL_License_cop_basicPatrol",150],[]],
   ["olrpg_pdsupervisor_charger_slk",["Fahrzeug","car"],["olrpg_pdsupervisor_charger_slk","Dodge Charger Slicktop"],[25000,15000],[1,"", "OL_License_cop_basicPatrol",150],[]],
-  ["olrpg_pd_chargerblack",["Fahrzeug","car"],["olrpg_pd_chargerblack","Unmarked Dodge Charger"],[25000,15000],[1,"", "OL_License_cop_basicPatrol",150],[]],
+  ["olrpg_pdchargerblack",["Fahrzeug","car"],["olrpg_pdchargerblack","Unmarked Dodge Charger"],[25000,15000],[1,"", "OL_License_cop_basicPatrol",150],[]],
   ["olrpg_sd_charger",["Fahrzeug","car"],["olrpg_sd_charger","Dodge Charger (Sheriff)"],[25000,15000],[1,"", "OL_License_cop_basicPatrol",150],[]],
   ["olrpg_sd_charger_slick",["Fahrzeug","car"],["olrpg_sd_charger_slick","Dodge Charger Slicktop"],[25000,15000],[1,"", "OL_License_cop_basicPatrol",150],[]],
   ["olrpg_sdf350_dnr",["Fahrzeug","car"],["olrpg_sdf350_dnr","Sheriff F350 (DNR)"],[40000,2500],[2,"", "OL_License_cop_basicPatrol",200],[]],

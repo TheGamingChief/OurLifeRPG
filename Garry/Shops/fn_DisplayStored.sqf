@@ -1,6 +1,6 @@
 if (!createDialog "UI_ListMenuBig") exitWith { hint "Dialog Error! (UI_ListMenuBig)" };
 
-_nearObjects = (nearestObjects [getPosATL player, ["Infostand_2_EP1", "Functionary2", "ibr_arl_officer", "olrpg_pdpilot"], 5]) - [player];
+_nearObjects = (nearestObjects [getPosATL player, ["Infostand_2_EP1", "Functionary2", "olrpg_pdpilot"], 5]) - [player];
 _nearObjects = _nearObjects select 0;
 
 if (!(["OL_Shop_", str (_nearObjects)] call OL_misc_StringStartsWith)) exitWith { closeDialog 0 };

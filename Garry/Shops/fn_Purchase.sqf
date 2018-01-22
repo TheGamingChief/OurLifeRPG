@@ -43,6 +43,7 @@ if ((_Item call INV_getitemType) == "Item") then {
 if (_Stop) exitWith {};
 
 _Cost = _Item call INV_getitemCostWithTax;
+_Tax = _Cost - (_Item call INV_getitemBuyCost);
 _geld = "geld" call INV_GetItemAmount;
 
 if (_Item == "RHIB") then {
@@ -87,5 +88,6 @@ switch (_Item call INV_getitemType) do {
 
 ["Buy_Log", format ["%1 (%2) has purchased %3 %4 at %5 for $%6", PlayerName, getPlayerUID player, _Amount, _Item call INV_getitemName, mapGridPosition player, _Amount * _Cost]] call RM_fnc_LogToServer;
 player groupChat format ["You have purchased %1 %2 for $%3", _Amount, _Item call INV_getitemName, _Amount * _Cost];
+INV_SteuernGezahlt = INV_SteuernGezahlt + _Tax;
 
 [_this select 2, _this select 3, _this select 4] call Shops_fnc_RefreshMenu;
