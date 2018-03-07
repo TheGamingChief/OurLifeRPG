@@ -3,14 +3,14 @@ _currentWeapon = currentWeapon player;
 nonlethalweapons = nonlethalweapons + call OL_TFAR_getPlayerRadios;
 
 if (_art == "Taser") exitWith {
-	if ((currentWeapon player != "MakarovSD") && (currentWeapon player != "x26") && (isNil "Taser_Holster")) exitWith { systemChat "Taser not present." };
+	if ((currentWeapon player != "DDOPP_X3") && (currentWeapon player != "DDOPP_X3_B") && (isNil "Taser_Holster")) exitWith { systemChat "Taser not present." };
 
 	if (isNil "Taser_Holster") then {
 		hint parsetext format ["<t size='1.5'>%1<br /><img size='5' image='%2'/><t color='#FF0000' size='2'>Holstered",getText (configFile >> "cfgWeapons" >> _currentWeapon >> "displayName"),getText (configFile >> "cfgWeapons" >> _currentWeapon >> "picture")];
     player removeWeapon _currentWeapon;
 		Taser_Holster = _currentWeapon;
 	} else {
-		if (!(_currentWeapon == "")) exitWith { systemChat "You can't unholster while you have a taser out." };
+		if (call OL_misc_hasPistol) exitWith { systemChat "You can't unholster while you have a pistol out." };
 		hint parsetext format ["<t size='1.5'>%1<br /><img size='5' image='%2'/><t color='#66FF33' size='2'>Unholstered",getText (configFile >> "cfgWeapons" >> Taser_Holster >> "displayName"),getText (configFile >> "cfgWeapons" >> Taser_Holster >> "picture")];
 		player addWeapon Taser_Holster;
 		player selectWeapon (Taser_Holster);
@@ -67,7 +67,7 @@ if (_art == "Pistol") exitWith {
 
 if (_art == "Radar") exitWith {
 	if (!Radar_Holstered) then {
-		if(currentWeapon player == "OL_Radargun") then {
+		if (currentWeapon player == "OL_Radargun") then {
 			player removeWeapon "OL_Radargun";
 			Radar_Holstered = true;
 		};

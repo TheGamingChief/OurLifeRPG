@@ -6,13 +6,11 @@ _damage 		= _this select 2;
 _source 		= _this select 3;
 _projectile = _this select 4;
 _nvcls		  = nearestObjects [getPos _unit, ["LandVehicle"], 5];
-_TaserMags	= ["B_12Gauge_74Slug", "B_9x18_SD"];
 _PBWeapons  = ["cal68_angel_dye", "cal68_angel_rasta", "cal68_egosl", "cal68_angel_kitty", "cal68_invert_mini_dye"];
 
+if (_projectile in DDOPP_taser_arrBullet) exitWith { [_unit, _source, DDOPP_taser_koTime] spawn DDOPP_taser_victimFx };
 if ((player == _unit) && (player != _source) && (_selection == "body") && (_projectile == "cal68_specpaint2")) exitWith { [] call Paintball_fnc_UpdateHits };
 if (_projectile == "cal68_specpaint2") exitWith {};
-
-if ((player == _unit) && (_projectile in _TaserMags)) exitwith { ["hit", _source, _selection, _damage] spawn OL_fnc_Stun };
 
 [_selection, _damage, _source, _nvcls] spawn {
 	_selection	= _this select 0;

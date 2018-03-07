@@ -20,4 +20,9 @@ if (_exit) exitWith { player groupChat format ["You do not have enough money to 
 
 OL_Licenses set [count (OL_Licenses), _licenseArray select 1];
 
+if ((_licenseArray select 1) == "OL_License_civ_drivers") then {
+  OL_DemeritPoints = 10;
+  player setVariable ["OL_Has_Drivers_License", true, true]
+};
+
 player groupChat format ["You purchased license %1 for $%2", _licenseArray select 0, _licensePrice];

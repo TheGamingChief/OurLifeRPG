@@ -24,21 +24,16 @@ OL_SpeedUpgrades = [
 ];
 
 OL_DogPositions = [
-	["olrpg_pdk9cv_pb", 					[0.07, -0.7, 0.4]], // Police K-9 CV
-	["olrpg_pdk9cv_slick_fpb", 		[0.07, -0.7, 0.4]], // Police K-9 CV (Slicktop)
-	["olrpg_sd_k9cv_fpb", 				[0.07, -0.7, 0.4]], // Sheriff K-9 CV
-	["olrpg_sd_k9cv_slick_fpb", 	[0.07, -0.7, 0.4]], // Sheriff K-9 CV (Slicktop)
-
-	["olrpg_pdk9suburban", 				[0.1, -2.6, -0.55]], // Police K-9 Suburban
-	["olrpg_pdk9sub6", 	[0.1, -2.6, -0.55]], // Police K-9 Suburban (Slicktop)
-	["olrpg_sdk9sub6", 				[0.1, -2.6, -0.55]], // Sheriff K-9 Suburban
-	["olrpg_sdk9sub6_slick", 	[0.1, -2.6, -0.55]], // Sheriff K-9 Suburban (Slicktop)
-
-	["olrpg_pdk9_charger", 				[0.1, -1.0, -0.2]],  // Police K-9 Charger
-	["olrpg_sdk9_charger", 				[0.1, -1.0, -0.2]],  // Sheriff K-9 Charger
-
-	["olrpg_pdtaurusk9", 			[0.1, -0.6, 0.35]],  // Police K-9 Taurus
-	["olrpg_sdtaurusk9", 			[0.1, -0.6, 0.35]]   // Sheriff K-9 Taurus
+	["olrpg_pdk9cv_pb", 	 [0.07, -0.7, 0.4]],
+	["olrpg_sdk9cv_pb", 	 [0.07, -0.7, 0.4]],
+	["olrpg_pdk9sub6", 		 [0.1, -2.9, -0.90]],
+	["olrpg_sdk9sub6", 		 [0.1, -2.9, -0.90]],
+	["olrpg_pdk9_charger", [0.1, -1.0, -0.2]],
+	["olrpg_sdk9_charger", [0.1, -1.0, -0.2]],
+	["olrpg_pdtaurusk9", 	 [0.1, -0.6, 0.35]],
+	["olrpg_sdtaurusk9", 	 [0.1, -0.6, 0.35]],
+	["olrpg_pdk9", 				 [0.1, -0.80, 0.80]],
+	["olrpg_sdk9t", 			 [0.1, -0.80, 0.80]]
 ];
 
 OL_Chicken = [

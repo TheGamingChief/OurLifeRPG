@@ -20,6 +20,7 @@ if (!(PG_Godmode)) then {
   (vehicle player) removeAllEventHandlers "handleDamage";
   (vehicle player) allowDamage true;
   [] call OL_startup_setVariables;
+  if ("OL_License_civ_drivers" in OL_Licenses) then { player setVariable ["OL_Has_Drivers_License", true, true] };
   [] call OL_startup_EH;
 
   PG_Godmode = false;

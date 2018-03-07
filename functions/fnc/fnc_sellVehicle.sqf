@@ -20,7 +20,7 @@ if (player distance _vcl <= 10) then {
   deleteVehicle _vcl;
 };
 
-player groupChat format["Heres your money! $%1",_pay];
+player groupChat format["Here's your money! $%1",_pay];
 ["geld",_pay] call INV_AddInvItem;
 [player, "Chopped Vehicle"] call OL_player_WarrantAdd;
 chopavailable = true;

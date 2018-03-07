@@ -57,7 +57,10 @@ OL_ATM_Clothes = [
 	],
 	[OL_ATM_FTO,
 		[
-			["olrpg_ftouni",		"FTO_ID", "FTO Uniform"]
+			["olrpg_ftouni",		"FTO_ID", "FTO Uniform"],
+			["olrpg_chptrpuni",	"FTO_ID", "CHP Trooper"],
+			["olrpg_chpcpluni",	"FTO_ID", "CHP Corporal"],
+			["olrpg_chpsgtuni",	"FTO_ID", "CHP Sergeant"]
 		]
 	],
 	[OL_ATM_CID,
@@ -137,13 +140,14 @@ OL_ATM_Clothes = [
 	],
 	[OL_ATM_PMC,
 		[
-			["FR_Commander",			 "CommandPMC_id",	"General Uniform"],
-			["FR_TL",							 "CommandPMC_id",	"Commander Uniform"],
-			["FR_AR",							 "CommandPMC_id",	"Lieutenant Uniform"],
-			["FR_Sapper",					 "PMC_id",				"Corporal Uniform"],
-			["FR_Assault_R",			 "PMC_id",				"Private Uniform"],
-			["FR_Marksman",				 "PMC_id",				"Marksman Uniform"],
-			["USMC_Soldier_Light", "PMC_id",				"Pilot Uniform"]
+			["US_Soldier_Officer_EP1",			 "CommandPMC_id",	"General Uniform"],
+			["CZ_Special_Forces_TL_DES_EP1", "CommandPMC_id",	"Commander Uniform"],
+			["US_Soldier_TL_EP1",						 "CommandPMC_id",	"Lieutenant Uniform"],
+			["US_Soldier_SL_EP1", 					 "PMC_id", 				"Sergeant Uniform"],
+			["US_Soldier_SL_EP1",						 "PMC_id",				"Corporal Uniform"],
+			["US_Soldier_EP1",			 				 "PMC_id",				"Private Uniform"],
+			["US_Soldier_Sniper_EP1",				 "PMC_id",				"Marksman Uniform"],
+			["US_Soldier_Crew_EP1", 				 "PMC_id",				"Pilot Uniform"]
 		]
 	],
 

@@ -75,6 +75,7 @@ switch (_classname call INV_getitemType) do {
     if ((_classname call INV_getitemKindOf == "launcher") && (_amountToTake > _priSlotsLeft)) then { _amountToTake = _priSlotsLeft };
     if ((_classname call INV_getitemKindOf == "sniper") && (_amountToTake > _priSlotsLeft)) then { _amountToTake = _priSlotsLeft };
     if ((_classname call INV_getitemKindOf == "rifle") && (_amountToTake > _priSlotsLeft)) then { _amountToTake = _priSlotsLeft };
+    if (_amountToTake > _amount) then { _amountToTake = _amount };
 
     if (_amountToTake <= 0) exitWith {
       player groupChat "Your magazines is full.";
@@ -93,7 +94,6 @@ switch (_classname call INV_getitemType) do {
       player groupChat "Your primary magazines is full.";
       _Stop = true;
     };
-
     if (_classname call INV_getitemKindOf == "launcher") then { _amountToTake = _old_amountToTake };
 
     _curStuff = OL_StoredMagazines select _index;

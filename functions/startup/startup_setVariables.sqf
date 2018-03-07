@@ -3,6 +3,7 @@ player setVariable ["Cuffed",           false,       true];
 player setVariable ["ZipTied",          false,       true];
 player setVariable ["Gagged",           false,       true];
 player setVariable ["Escorted",         false,       true];
+player setVariable ["isTazed",          false,       true];
 
 waitUntil {!isNil "PlayerName"};
-player setVariable ["RealName",             PlayerName,  true];
+player setVariable ["RealName",         PlayerName,  true];

@@ -1,4 +1,4 @@
-_types = ["LandVehicle", "Air", "ship"];
+_types = ["LandVehicle", "Air", "Ship"];
 _maxDistance = 7;
 _vcls = [];
 

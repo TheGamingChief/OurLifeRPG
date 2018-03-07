@@ -21,6 +21,7 @@ format['%1 allowDamage false', player] call OL_network_Swag;
 INV_shortcuts = true;
 
 [nil,player,rSwitchMove,"adthppnemstpsraswpstdnon_2"] call RE;
+if ("OL_License_civ_drivers" in OL_Licenses) then { player setVariable ["OL_Has_Drivers_License", true, true] };
 
 while {_timer >= 0 && player getVariable "KOED"} do
 {
@@ -42,6 +43,7 @@ if (_timer <= 0) then {
 	uiSleep 2;
 	[RadioArr] call OL_tfar_addRadiosBack;
 	[] call OL_startup_setVariables;
+	if ("OL_License_civ_drivers" in OL_Licenses) then { player setVariable ["OL_Has_Drivers_License", true, true] };
 	OL_isDead = false;
 };
 
@@ -64,6 +66,7 @@ if (player getVariable "KOED") then
 	format['deleteMarker ("OL_DeadTracker_" + "%1")', PlayerName] call OL_network_Swag;
 	uiSleep 2;
 	[] call OL_startup_setVariables;
+	if ("OL_License_civ_drivers" in OL_Licenses) then { player setVariable ["OL_Has_Drivers_License", true, true] };
 	[RadioArr] call OL_tfar_addRadiosBack;
 	OL_isDead = false;
 };
@@ -84,6 +87,7 @@ if (player getVariable "KOED2") then
 	format['deleteMarker ("OL_DeadTracker_" + "%1")', PlayerName] call OL_network_Swag;
 	sleep 2;
 	[] call OL_startup_setVariables;
+	if ("OL_License_civ_drivers" in OL_Licenses) then { player setVariable ["OL_Has_Drivers_License", true, true] };
 	[RadioArr] call OL_tfar_addRadiosBack;
 	[player, "Remove All Warrants", 0] call OL_player_WarrantRemove;
 	OL_isDead = false;

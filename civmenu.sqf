@@ -127,6 +127,7 @@ if ((_loopart == "arrest") and (player distance prisonflag <= 70))  then {
 	if (!(player call OL_ISSE_IsVictim)) exitwith {(format ["if (player == %1) then {player groupchat localize ""STRS_inventory_checknohands""};", _copobj]) call OL_network_Swag;};
 	isstunned = false;
 	[] call OL_startup_SetVariables;
+	if ("OL_License_civ_drivers" in OL_Licenses) then { player setVariable ["OL_Has_Drivers_License", true, true] };
 
 	_copPay = [player] call OL_player_WarrantTotal;
 	if (_copPay > 0) then {

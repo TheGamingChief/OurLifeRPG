@@ -339,6 +339,7 @@ if (_statWipeMessage != "") then {
 OL_StatsLoadedFromDB = true;
 saveAvailable = true;
 
+if ("OL_License_civ_drivers" in OL_Licenses) then { player setVariable ["OL_Has_Drivers_License", true, true] } else { player setVariable ["OL_Has_Drivers_License", false, true] };
 if (needReload player == 1) then { reload player };
 
 [] call INV_RemoveEmptyItems;

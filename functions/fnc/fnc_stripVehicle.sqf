@@ -4,7 +4,9 @@ private ["_vcl", "_tune", "_payout"];
 player groupChat "Please get back into your vehicle to strip it. You have 10 seconds!";
 uiSleep 10;
 _vcl = vehicle player;
-if (player == _vcl) exitwith {player groupchat "You have must be in a vehicle to use this shop!";};
+_tuneLevel = _vcl getvariable "tuning";
+if (player == _vcl) exitWith {player groupchat "You have must be in a vehicle to use this shop!";};
+if ((isNil "_tuneLevel") || (_tuneLevel == 0)) exitWith {player groupChat "I can't seem to find anything to strip from this crap vehicle!"};
 
 player groupChat "Stripping car of nice things! Please Wait!";
 uiSleep 5;

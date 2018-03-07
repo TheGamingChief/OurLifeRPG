@@ -54,7 +54,10 @@ switch(_screen)do{
 
 		{ lbAdd [1500, _x select 0] } forEach OL_Warrants;
 
-		buttonSetAction [1600, "[DD_LastCiv, (OL_Warrants select (lbCurSel 1500)) select 0] call OL_player_WarrantAdd; player groupChat ""Warrant Added!""; closeDialog 0;"];
+		buttonSetAction [1600, "[DD_LastCiv, (OL_Warrants select (lbCurSel 1500)) select 0] call OL_player_WarrantAdd;
+			player groupChat ""Warrant Added!"";
+			[""WarrantAdd_Log"", format [""%1 (%2) added a warrant to %3 (%4) for %5"", PlayerName, getPlayerUID player, DD_LastCiv, getPlayerUID DD_LastCiv, (OL_Warrants select (lbCurSel 1500)) select 0]] call RM_fnc_LogToServer;
+			closeDialog 0;"];
 	};
 	default{
 		_dl = createDialog "DD_PolicePC";

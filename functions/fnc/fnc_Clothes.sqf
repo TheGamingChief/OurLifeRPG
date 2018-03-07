@@ -43,6 +43,7 @@ if (_skinsold != _skin) then {
   [] call OL_startup_setVariables;
   [] call OL_misc_briefing;
   [] call OL_player_WarrantGrab;
+  if ("OL_License_civ_drivers" in OL_Licenses) then { player setVariable ["OL_Has_Drivers_License", true, true] };
   [[], "Server_bolos_Request", false, true] call OL_network_MP;
   [RadioArr] call OL_tfar_addRadiosBack;
   if (!(pg_godmode)) then { player allowDamage true };

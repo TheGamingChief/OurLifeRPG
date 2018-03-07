@@ -27,5 +27,5 @@ if (lbSize 1500 == 0) exitWith {
 };
 
 lbSetCurSel [1500, 0];
-buttonSetAction [1600, "[lbData [1500, lbCurSel 1500]] call Shops_fnc_TakeItem;"];
+buttonSetAction [1600, "[lbData [1500, lbCurSel 1500], lbValue [1500, lbCurSel 1500]] call Shops_fnc_TakeItem;"];
 ctrlSetText [1600, "Take Item"];

@@ -141,7 +141,8 @@ class Mission
 		"jerseybarrier",
 		"traffic_drum_by_darius",
 		"camp_armory_misc_laptop",
-		"yup_uscg_pilots"
+		"yup_uscg_pilots",
+		"ddopp_taserpack"
 	};
 	addOnsAuto[]=
 	{
@@ -157,7 +158,7 @@ class Mission
 		"ibr_police",
 		"cl_wheelchair",
 		"cacharacters_pmc",
-		"yup_uscg_pilots",
+		"ddopp_taserpack",
 		"as_eu_oa_signs",
 		"caweapons_e",
 		"CABuildings",
@@ -1490,7 +1491,7 @@ class Mission
 					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
-					text="milpspawn";
+					text="OL_COP_AIRSPAWN";
 				};
 			};
 		};
@@ -5374,19 +5375,20 @@ class Mission
 		};
 		class Item251
 		{
-			side="WEST";
+			side="LOGIC";
 			class Vehicles
 			{
 				items=1;
 				class Item0
 				{
-					position[]={7642.5508,0.18734434,8516.0898};
-					azimut=-83.520897;
+					position[]={4569.0718,54,5585.1489};
+					azimut=-89.135696;
 					id=2954;
-					side="WEST";
-					vehicle="yup_uscg_Pilot";
+					side="LOGIC";
+					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
+					text="OL_CIV_AIRSPAWN";
 				};
 			};
 		};
@@ -5398,14 +5400,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4569.0718,54,5585.1489};
-					azimut=-89.135696;
-					id=2955;
+					position[]={-29.263365,0.17822696,6257.79};
+					id=2956;
 					side="LOGIC";
-					vehicle="Logic";
+					vehicle="DDOPP_TaserInit";
 					leader=1;
 					skill=0.60000002;
-					text="OL_CIV_AIRSPAWN";
 				};
 			};
 		};
@@ -32515,7 +32515,7 @@ class Mission
 		{
 			position[]={7855.7031,33.419212,1170.7751};
 			azimut=90;
-			id=2956;
+			id=2955;
 			side="EMPTY";
 			vehicle="Infostand_2_EP1";
 			skill=0.60000002;
@@ -37025,7 +37025,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="(player distance speed8) < 50;";
-			expActiv="[] call OL_fnc_Speedcams;";
+			expActiv="""8"" call OL_fnc_Speedcams;";
 			class Effects
 			{
 			};
@@ -37042,7 +37042,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="(player distance speed2) < 50;";
-			expActiv="[] call OL_fnc_Speedcams;";
+			expActiv="""2"" call OL_fnc_Speedcams;";
 			class Effects
 			{
 			};
@@ -37059,7 +37059,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="(player distance speed4) < 50;";
-			expActiv="[] call OL_fnc_Speedcams;";
+			expActiv="""4"" call OL_fnc_Speedcams;";
 			class Effects
 			{
 			};
@@ -37076,7 +37076,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="(player distance speed5) < 50;";
-			expActiv="[] call OL_fnc_Speedcams;";
+			expActiv="""5"" call OL_fnc_Speedcams;";
 			class Effects
 			{
 			};
@@ -37093,7 +37093,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="(player distance speed6) < 50;";
-			expActiv="[] call OL_fnc_Speedcams;";
+			expActiv="""6"" call OL_fnc_Speedcams;";
 			class Effects
 			{
 			};
@@ -37110,7 +37110,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="(player distance speed7) < 50;";
-			expActiv="[] call OL_fnc_Speedcams;";
+			expActiv="""7"" call OL_fnc_Speedcams;";
 			class Effects
 			{
 			};
@@ -37127,7 +37127,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="(player distance speed1) < 50;";
-			expActiv="[] call OL_fnc_Speedcams;";
+			expActiv="""1"" call OL_fnc_Speedcams;";
 			class Effects
 			{
 			};
@@ -37144,7 +37144,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="(player distance speed3) < 50;";
-			expActiv="[] call OL_fnc_Speedcams;";
+			expActiv="""3"" call OL_fnc_Speedcams;";
 			class Effects
 			{
 			};

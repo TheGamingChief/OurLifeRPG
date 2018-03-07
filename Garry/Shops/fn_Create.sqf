@@ -88,6 +88,8 @@ _ass = [
 	"RH_46x30mm_40RND_SD_Mag",						//MP7 SD Mag
 	"RH_mk12mod1sd_ass",									//Mk12 Mod1 SD SPR
 	"20Rnd_556x45_Stanag",								//20Rnd AR-15 and HK416 Magazine
+	"VSS_vintorez",												//VSS Vintorez
+	"10Rnd_9x39_SP5_VSS",									//10Rnd VSS
 	"C1987_P99_black_sd",									//P99 SD
 	"15Rnd_9x19_p99_sd"										//P99 15Rnd SD Mag
 ];
@@ -844,11 +846,11 @@ _coptraffic = [
 //Untrained Box
 _copuntrained = [
 	"PD_Kit",															//PD (Required Equipment Kit)
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
-	"RH_m9",															//M9 Pistol
-	"Rnd_9x19_M9",												//15Rnd 9mm M9/92FS Mag
-	"M1014_pd",														//M1014 Shotgun
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
+	"rh_G19_pd",													//Glock 19
+	"RH_19Rnd_9x19_g18",									//Glock 19 and 17 Mag
+	"tcg_remington_pd",										//Remington 870 Shotgun
 	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot
 	"olrpg_pdcv_pb" 											//Crown Victoria (Pushbar)
 ];
@@ -856,10 +858,12 @@ _copuntrained = [
 //PO1 Box
 _coppo1 = [
 	"PD_Kit",															//PD (Required Equipment Kit)
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
 	"rh_p226_pd",													//SIGG P226
 	"RH_15Rnd_9x19_usp_pd",								//SIGG Mag
+	"rh_G19_pd",													//Glock 19
+	"RH_19Rnd_9x19_g18",									//Glock 19 and 17 Mag
 	"M1014_pd",														//M1014 Shotgun
 	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot
 	"RH_hk416_pd",												//HK416
@@ -871,12 +875,15 @@ _coppo1 = [
 //PO2 Box
 _coppo2 = [
 	"PD_Kit",															//PD (Required Equipment Kit)
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
 	"rh_p226_pd",													//SIGG P226
 	"RH_15Rnd_9x19_usp_pd",								//SIGG Mag
+	"rh_G19_pd",													//Glock 19
+	"RH_19Rnd_9x19_g18",									//Glock 19 and 17 Mag
 	"M1014_pd",														//M1014 Shotgun
 	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot
+	"RH_hk416aim_pd",											//HK416 Aimpoint
 	"RH_hk416eotech_pd",									//HK416 Eotech
 	"30Rnd_556x45_Stanag",								//30 Round Stanag
 	"olrpg_pdcv_pb", 											//Crown Victoria (Full Pushbar)
@@ -887,15 +894,17 @@ _coppo2 = [
 //PO3 Box
 _coppo3 = [
 	"PD_Kit",															//PD (Required Equipment Kit)
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
-	"MakarovSD",													//MakarovSD
-	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
 	"rh_p226_pd",													//SIGG P226
 	"RH_15Rnd_9x19_usp_pd",								//SIGG Mag
+	"rh_G19_pd",													//Glock 19
+	"RH_19Rnd_9x19_g18",									//Glock 19 and 17 Mag
 	"M1014_pd",														//M1014 Shotgun
 	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot
+	"RH_hk416acog_pd",										//HK416 ACOG
 	"RH_hk416aim_pd",											//HK416 Aimpoint
+	"RH_hk416eotech_pd",									//HK416 Eotech
 	"30Rnd_556x45_Stanag",								//30 Round Stanag
 	"olrpg_pdcv_pb", 											//Crown Victoria Slicktop
 	"olrpg_m5pd", 												//BMW M5 (Police)
@@ -907,16 +916,16 @@ _coppo3 = [
 //CPL Box
 _copcpl = [
 	"PD_Kit",															//PD (Required Equipment Kit)
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
-	"MakarovSD",													//MakarovSD
-	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
+	"DDOPP_X3_b",												  //X3 Taser Black
+	"DDOPP_3Rnd_X3",										  //X3 Taser Cartridge
+	"rh_G19_pd",													//Glock 19
+	"RH_19Rnd_9x19_g18",									//Glock 19 and 17 Mag
 	"rh_p226_pd",													//SIGG P226
 	"RH_15Rnd_9x19_usp_pd",								//SIGG Mag
 	"M1014_pd",														//M1014 Shotgun
 	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot
-	"RH_m4sbraim_cmd",										//M4 Magpul SBR Aimpoint
-	"RH_M4sbreotech_cmd",									//M4 Magpul SBR EoTech
+	"RH_m4maim_pd",												//M4 Magpul Aimpoint
+	"RH_m4meotech_pd",										//M4 Magpul EoTech
 	"30Rnd_556x45_Stanag",								//30 Round Stanag
 	"olrpg_pdcv_pb", 											//Crown Victoria Slicktop (Pushbar)
 	"olrpg_m5pd", 												//BMW M5 (Police)
@@ -929,17 +938,17 @@ _copcpl = [
 //SGT Box
 _copsgt = [
 	"PD_Kit",															//PD (Required Equipment Kit)
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
-	"MakarovSD",													//MakarovSD
-	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
+	"DDOPP_X3_b",												  //X3 Taser Black
+	"DDOPP_3Rnd_X3",										  //X3 Taser Cartridge
+	"rh_G19_pd",													//Glock 19
+	"RH_19Rnd_9x19_g18",									//Glock 19 and 17 Mag
 	"rh_p226_pd",													//SIGG P226
 	"RH_15Rnd_9x19_usp_pd",								//SIGG Mag
 	"M1014_pd",														//M1014 Shotgun
 	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot
-	"RH_m4sbraim_cmd",										//M4 Magpul SBR Aimpoint
-	"RH_M4sbreotech_cmd",									//M4 Magpul SBR EoTech
-	"RH_M4sbracog_cmd",										//M4 Magpul SBR Acog
+	"RH_m4maim_pd",												//M4 Magpul Aimpoint
+	"RH_m4meotech_pd",										//M4 Magpul EoTech
+	"RH_m4macog_pd",											//M4 Magpul Acog
 	"30Rnd_556x45_Stanag",								//30 Round Stanag
 	"olrpg_pdupcv_slick_pb", 							//Crown Victoria Slicktop (Pushbar)
 	"olrpg_pd_charger_slk", 							//Dodge Charger Slicktop
@@ -965,28 +974,27 @@ _copsheriffmks = [
 
 //Junior Deputy Box
 _copjrdeputy = [
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
-	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
-	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"DDOPP_X3",												    //X3 Taser
+	"DDOPP_3Rnd_X3",										  //X3 Taser Cartridge
 	"RH_python_sheriff",									//Sheriff Colt Python - Jr Deputy
 	"RH_6Rnd_357_Mag",										//357 Moon Clip - Jr Deputy
-	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
-	"RH_acrbaim_sheriff",									//Black ACR Aimpoint - Sr Deputy
+	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
+	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"RH_acrb_sheriff",										//Black ACR Iron Sight - Deputy
 	"30Rnd_556x45_Stanag",								//30 Round Stanag - Deputy
 	"olrpg_sdcv_pb"
 ];
 
 //Deputy Box
 _copdeputy = [
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
-	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
-	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"DDOPP_X3",												    //X3 Taser
+	"DDOPP_3Rnd_X3",										  //X3 Taser Cartridge
 	"RH_python_sheriff",									//Sheriff Colt Python - Jr Deputy
 	"RH_6Rnd_357_Mag",										//357 Moon Clip - Jr Deputy
-	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
+	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
+	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
 	"RH_acrbaim_sheriff",									//Black ACR Aimpoint - Sr Deputy
+	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
 	"30Rnd_556x45_Stanag",								//30 Round Stanag - Deputy
 	"olrpg_sdcv_pb",
 	"olrpg_sd_charger"
@@ -994,14 +1002,15 @@ _copdeputy = [
 
 //Senior Deputy Box
 _copsrdeputy = [
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
-	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
-	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"DDOPP_X3",												    //X3 Taser
+	"DDOPP_3Rnd_X3",										  //X3 Taser Cartridge
 	"RH_python_sheriff",									//Sheriff Colt Python - Jr Deputy
 	"RH_6Rnd_357_Mag",										//357 Moon Clip - Jr Deputy
-	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
+	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
+	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"RH_acrbacog_sheriff",								//Black ACR Acog
 	"RH_acrbaim_sheriff",									//Black ACR Aimpoint - Sr Deputy
+	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
 	"30Rnd_556x45_Stanag",								//30 Round Stanag - Deputy
 	"olrpg_sdcv_pb",
 	"olrpg_sd_charger",
@@ -1010,16 +1019,17 @@ _copsrdeputy = [
 
 //Corporal Deputy Box
 _copcpldeputy = [
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
-	"MakarovSD",													//MakarovSD
-	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
-	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
-	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"DDOPP_X3_b",												  //X3 Taser
+	"DDOPP_3Rnd_X3",										  //X3 Taser Cartridge
 	"RH_python_sheriff",									//Sheriff Colt Python - Jr Deputy
 	"RH_6Rnd_357_Mag",										//357 Moon Clip - Jr Deputy
-	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
+	"RH_anacmaf_sheriff",
+	"RH_6Rnd_44_Mag",
+	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
+	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"RH_acrbacog_sheriff",								//Black ACR Acog
 	"RH_acrbaim_sheriff",									//Black ACR Aimpoint - Sr Deputy
+	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
 	"30Rnd_556x45_Stanag",								//30 Round Stanag - Deputy
 	"supgrade3_pd",												//Violator 3
 	"supgrade4_pd",												//Interceptor 4
@@ -1031,18 +1041,18 @@ _copcpldeputy = [
 
 //Sergeant Deputy Box
 _copsgtdeputy = [
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
-	"MakarovSD",													//MakarovSD
-	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
-	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
-	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"DDOPP_X3_b",												  //X3 Taser
+	"DDOPP_3Rnd_X3",										  //X3 Taser Cartridge
 	"RH_python_sheriff",									//Sheriff Colt Python - Jr Deputy
 	"RH_6Rnd_357_Mag",										//357 Moon Clip - Jr Deputy
-	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
+	"RH_anacmaf_sheriff",
+	"RH_6Rnd_44_Mag",
+	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
+	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"RH_acrbacog_sheriff",								//Black ACR Acog
 	"RH_acrbaim_sheriff",									//Black ACR Aimpoint - Sr Deputy
+	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
 	"30Rnd_556x45_Stanag",								//30 Round Stanag - Deputy
-	"RH_acrbacog_sheriff",								//Black ACR ACOG - Sgt Deputy
 	"supgrade3_pd",												//Violator 3
 	"supgrade4_pd",												//Interceptor 4
 	"olrpg_sdcv_slick_pb",
@@ -1055,18 +1065,18 @@ _copsgtdeputy = [
 
 //Lieutenant Deputy Box
 _copltdeputy = [
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
-	"MakarovSD",													//MakarovSD
-	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
-	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
-	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"DDOPP_X3_b",												  //X3 Taser
+	"DDOPP_3Rnd_X3",										  //X3 Taser Cartridge
 	"RH_python_sheriff",									//Sheriff Colt Python - Jr Deputy
 	"RH_6Rnd_357_Mag",										//357 Moon Clip - Jr Deputy
-	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
+	"RH_anacg_sheriff",
+	"RH_6Rnd_44_Mag",
+	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
+	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"RH_acrbacog_sheriff",								//Black ACR Acog
 	"RH_acrbaim_sheriff",									//Black ACR Aimpoint - Sr Deputy
+	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
 	"30Rnd_556x45_Stanag",								//30 Round Stanag - Deputy
-	"RH_acrbacog_sheriff",								//Black ACR ACOG - Sgt Deputy
 	"supgrade3_pd",												//Violator 3
 	"supgrade4_pd",												//Interceptor 4
 	"olrpg_sdlt",													//Chevrolet Tahoe (Lieutenant)
@@ -1076,17 +1086,17 @@ _copltdeputy = [
 
 //Sheriff Box
 _copcptdeputy = [
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
-	"MakarovSD",													//MakarovSD
-	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
-	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
-	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"DDOPP_X3_b",												  //X3 Taser
+	"DDOPP_3Rnd_X3",										  //X3 Taser Cartridge
 	"RH_python_sheriff",									//Sheriff Colt Python - Jr Deputy
 	"RH_6Rnd_357_Mag",										//357 Moon Clip - Jr Deputy
-	"RH_acrbacog_sheriff",								//Black ACR ACOG - Sgt Deputy
-	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
+	"RH_anacg_sheriff",
+	"RH_6Rnd_44_Mag",
+	"M1014_sheriff",											//M1014 Shotgun - Jr Deputy
+	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot - Jr Deputy
+	"RH_acrbacog_sheriff",								//Black ACR Acog
 	"RH_acrbaim_sheriff",									//Black ACR Aimpoint - Sr Deputy
+	"RH_acrbeotech_sheriff",							//Black ACR Eotech - Deputy
 	"30Rnd_556x45_Stanag",								//30 Round Stanag - Deputy
 	"M24_sheriff",												//M24 Sniper
 	"5Rnd_762x51_M24",										//5Rnd 762x51 Mag
@@ -1111,21 +1121,23 @@ _copcptdeputy = [
 //LT Box
 _coplt = [
 	"PD_Kit",															//PD (Required Equipment Kit)
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
-	"MakarovSD",													//MakarovSD
-	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
+	"DDOPP_X3_b",												  //X3 Taser Black
+	"DDOPP_3Rnd_X3",										  //X3 Taser Cartridge
+	"rh_G19_pd",													//Glock 19
+	"RH_19Rnd_9x19_g18",									//Glock 19 and 17 Mag
 	"rh_p226_pd",													//SIGG P226
 	"RH_15Rnd_9x19_usp_pd",								//SIGG Mag
+	"RH_uspm_pd",													//USP Match
+	"RH_12Rnd_45cal_usp",									//12 Round USP Match Mag
 	"M1014_pd",														//M1014 Shotgun
 	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot
-	"RH_m4maim_cmd",											//M4 Magpul Aimpoint
-	"RH_m4meotech_cmd",										//M4 Magpul EoTech
-	"RH_m4macog_cmd",											//M4 Magpul Acog
+	"RH_masbaim_pd",											//Masada Black Aim
+	"RH_masbeotech_pd",										//Masada Black EOTech
+	"RH_masbacog_pd",											//Masada Black Acog
 	"30Rnd_556x45_Stanag",								//30 Round Stanag
 	"Stinger_swat",												//Stinger Launcher
 	"Stinger_mag",												//Stinger Missile
-	"olrpg_pdlt", 												//Chevrolet Tahoe (Lt)
+	"olrpg_pdlt", 												//Chevrolet Tahoe (Lieutenant)
 	"olrpg_pdlt_slk",											//Chevrolet Tahoe (Lieutenant Slicktop)
 	"olrpg_pdltsub6",											//2006 Chevrolet Suburban (Lieutenant)
 	"olrpg_umcv_dblue", 									//Unmarked Crown Victoria (Blue)
@@ -1142,17 +1154,19 @@ _coplt = [
 //CPT Box
 _copcpt = [
 	"PD_Kit",															//PD (Required Equipment Kit)
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
-	"MakarovSD",													//MakarovSD
-	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
+	"DDOPP_X3_b",												  //X3 Taser Black
+	"DDOPP_3Rnd_X3",										  //X3 Taser Cartridge
+	"rh_G19_pd",													//Glock 19
+	"RH_19Rnd_9x19_g18",									//Glock 19 and 17 Mag
 	"rh_p226_pd",													//SIGG P226
 	"RH_15Rnd_9x19_usp_pd",								//SIGG Mag
+	"RH_uspm_pd",													//USP Match
+	"RH_12Rnd_45cal_usp",									//12 Round USP Match Mag
 	"M1014_pd",														//M1014 Shotgun
 	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot
-	"RH_m4maim_cmd",											//M4 Magpul Aimpoint
-	"RH_m4meotech_cmd",										//M4 Magpul EoTech
-	"RH_m4macog_cmd",											//M4 Magpul Acog
+	"RH_masbaim_pd",											//Masada Black Aim
+	"RH_masbeotech_pd",										//Masada Black EOTech
+	"RH_masbacog_pd",											//Masada Black Acog
 	"30Rnd_556x45_Stanag",								//30 Round Stanag
 	"Stinger_swat",												//Stinger Launcher
 	"Stinger_mag",												//Stinger Missile
@@ -1174,16 +1188,18 @@ _copcpt = [
 //Assistant Chief
 _copastchief = [
 	"PD_Kit",															//PD (Required Equipment Kit)
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
-	"MakarovSD",													//MakarovSD
-	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
+	"DDOPP_X3_b",												  //X3 Taser Black
+	"DDOPP_3Rnd_X3",										  //X3 Taser Cartridge
+	"rh_G19_pd",													//Glock 19
+	"RH_19Rnd_9x19_g18",									//Glock 19 and 17 Mag
+	"rh_p226_pd",													//SIGG P226
+	"RH_15Rnd_9x19_usp_pd",								//SIGG Mag
+	"RH_uspm_pd",													//USP Match
+	"RH_12Rnd_45cal_usp",									//12 Round USP Match Mag
 	"RH_deaglemzb_cmd",										//Chief Desert Eagle
 	"RH_7Rnd_50_AE",											//Desert Eagle Mag
-	"RH_m4maim_cmd",											//M4 Magpul Aimpoint
-	"RH_m4meotech_cmd",										//M4 Magpul EoTech
-	"RH_m4macog_cmd",											//M4 Magpul Acog
-	"30Rnd_556x45_Stanag",								//30 Round Stanag
+	"M1014_pd",														//M1014 Shotgun
+	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot
 	"LEXX_SCAR_H_CQC_CCO_BLACK_cmd",			//Mk17 CCO
 	"20Rnd_762x51_B_SCAR_pd",							//Mk17 Mag
 	"Stinger_swat",												//Stinger Launcher
@@ -1207,16 +1223,18 @@ _copastchief = [
 //Chief Box
 _copchief = [
 	"PD_Kit",															//PD (Required Equipment Kit)
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
-	"MakarovSD",													//MakarovSD
-	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
+	"DDOPP_X3_b",												  //X3 Taser Black
+	"DDOPP_3Rnd_X3",										  //X3 Taser Cartridge
+	"rh_G19_pd",													//Glock 19
+	"RH_19Rnd_9x19_g18",									//Glock 19 and 17 Mag
+	"rh_p226_pd",													//SIGG P226
+	"RH_15Rnd_9x19_usp_pd",								//SIGG Mag
+	"RH_uspm_pd",													//USP Match
+	"RH_12Rnd_45cal_usp",									//12 Round USP Match Mag
 	"RH_deaglemzb_cmd",										//Chief Desert Eagle
 	"RH_7Rnd_50_AE",											//Desert Eagle Mag
-	"RH_m4maim_cmd",											//M4 Magpul Aimpoint
-	"RH_m4meotech_cmd",										//M4 Magpul EoTech
-	"RH_m4macog_cmd",											//M4 Magpul Acog
-	"30Rnd_556x45_Stanag",								//30 Round Stanag
+	"M1014_pd",														//M1014 Shotgun
+	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot
 	"LEXX_SCAR_H_CQC_CCO_BLACK_cmd",			//Mk17 CCO
 	"20Rnd_762x51_B_SCAR_pd",							//Mk17 Mag
 	"Stinger_swat",												//Stinger Launcher
@@ -1241,12 +1259,19 @@ _copchief = [
 
 //PD Medal Box
 _copmedal = [
-	"MakarovSD",													//MakarovSD
-	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
-	"RH_m4maim_cmd",											//M4 Magpul Aimpoint
-	"RH_m4meotech_cmd",										//M4 Magpul EoTech
-	"RH_m4macog_cmd",											//M4 Magpul Acog
+	"DDOPP_X3",												    //X3 Taser
+	"DDOPP_X3_b",												  //X3 Taser Black
+	"DDOPP_3Rnd_X3",										  //X3 Taser Cartridge
+	"RH_masbaim_pd",											//Masada Black Aim
+	"RH_masbeotech_pd",										//Masada Black EOTech
+	"RH_masbacog_pd",											//Masada Black Acog
 	"30Rnd_556x45_Stanag",								//30 Round Stanag
+	"rh_G19_pd",													//Glock 19
+	"RH_19Rnd_9x19_g18",									//Glock 19 and 17 Mag
+	"rh_p226_pd",													//SIGG P226
+	"RH_15Rnd_9x19_usp_pd",								//SIGG Mag
+	"RH_uspm_pd",													//USP Match
+	"RH_12Rnd_45cal_usp",									//12 Round USP Match Mag
 	"olrpg_umcv_dblue", 									//Unmarked Crown Victoria (Blue)
 	"olrpg_umcv_maroon", 									//Unmarked Crown Victoria (Maroon)
 	"olrpg_umcv_grey", 										//Unmarked Crown Victoria (Grey)
@@ -1261,8 +1286,8 @@ _copmedal = [
 //K9 Box
 _copk9p = [
 	"K9_Kit",															//K9 (Required Equipment Kit)
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
 	"RH_m1911old_k9",											//M1911
 	"RH_8Rnd_45cal_m1911",								//Kimber M1911 Magazine
 	"RH_Mk18_k9",													//Mk18
@@ -1273,8 +1298,8 @@ _copk9p = [
 //K9 Box 2
 _copk9 = [
 	"K9_Kit",															//K9 (Required Equipment Kit)
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
 	"RH_m1911old_k9",											//M1911
 	"RH_8Rnd_45cal_m1911",								//Kimber M1911 Magazine
 	"RH_Mk18_k9",													//Mk18
@@ -1287,8 +1312,8 @@ _copk9 = [
 
 _copk9s = [
 	"K9_Kit",															//K9 (Required Equipment Kit)
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
 	"RH_m1911old_k9",											//M1911
 	"RH_8Rnd_45cal_m1911",								//Kimber M1911 Magazine
 	"RH_Mk18_k9",													//Mk18
@@ -1304,8 +1329,8 @@ _copk9s = [
 //K9 Command Box
 _copk9c = [
 	"K9_Kit",															//K9 (Required Equipment Kit)
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
 	"RH_m1911old_k9",											//M1911
 	"RH_8Rnd_45cal_m1911",								//Kimber M1911 Magazine
 	"RH_Mk18eot_k9",											//Mk18 Eotech
@@ -1320,16 +1345,29 @@ _copk9c = [
 	"olrpg_pdtaurusk9",										//Ford Taurus (K9)
 	"olrpg_pdk9",													//Chevrolet Tahoe (K9)
 	"olrpg_pdk9_charger", 								//Dodge Charger (K9)
-	"olrpg_pdk9sub6" 											//K-9 Suburban Slicktop
+	"olrpg_pdk9sub6" 										  //K-9 Suburban Slicktop
 ];
 
  //K9 Sheriff Box
 _copk9sheriff = [
-	"olrpg_sdk9cv_pb",											//Sheriff K-9 Suburban
+	"K9_Kit",															//K9 (Required Equipment Kit)
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
+	"RH_m1911old_k9",											//M1911
+	"RH_8Rnd_45cal_m1911",								//Kimber M1911 Magazine
+	"RH_Mk18eot_k9",											//Mk18 Eotech
+	"RH_Mk18aim_k9",											//Mk18 Aimpoint
+	"RH_Mk18acog_k9",											//Mk18 Acog
+	"30Rnd_556x45_Stanag",								//30 Round Stanag
+	"RH_m21_k9",													//M21 Sniper Rifle
+	"20Rnd_762x51_DMR",										//20Rnd 762x51 DMR Mag
+	"M24_k9",															//M24 Sniper
+	"5Rnd_762x51_M24",										//5Rnd 762x51 Mag
+	"olrpg_sdk9cv_pb",										//Sheriff K-9 Suburban
 	"olrpg_sdk9_charger", 								//Sheriff K-9 Charger
-	"olrpg_sdtaurusk9", 										//Sheriff K-9 Taurus
-	"olrpg_sdk9t",
-	"olrpg_sdk9sub6"
+	"olrpg_sdtaurusk9", 									//Sheriff K-9 Taurus
+	"olrpg_sdk9t",												//Sheriff K-9 Tahoe
+	"olrpg_sdk9sub6"											//Sheriff K-9 Suburban
 ];
 
 //OP Pilot Box
@@ -1370,13 +1408,13 @@ _copavsh = [
 //Probie SWAT Box
 _copswat1 = [
 	"SWAT_Kit",														//SWAT (Required Equipment Kit)
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
 	"SmokeShell",													//Tear Gas Grenade
 	"RAB_L111A1_swat",										//Flashbang
 	"Gas_Mask_SWAT",											//Gas Mask
 	"SWAT",																//SWAT Shield
 	"Rnd_9x19_M9",												//15Rnd 9mm M9/92FS Mag
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
 	"M1014_pd",														//M1014 Shotgun
 	"8Rnd_B_Beneli_Pellets",							//12 Gauge Buckshot
 	"RH_M4a1_swat",												//M4A1
@@ -1389,13 +1427,13 @@ _copswat1 = [
 //Operator SWAT Box
 _copswat2 = [
 	"SWAT_Kit",														//SWAT (Required Equipment Kit)
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
 	"SmokeShell",													//Tear Gas Grenade
 	"RAB_L111A1_swat",										//Flashbang
 	"Gas_Mask_SWAT",											//Gas Mask
 	"SWAT",																//SWAT Shield
 	"Rnd_9x19_M9",												//15Rnd 9mm M9/92FS Mag
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
 	"RH_usp_swat",												//USP
 	"RH_15Rnd_9x19_usp_swat",							//USP Mag
 	"RH_M4a1eotech_swat",									//M4A1 Eotech
@@ -1413,13 +1451,13 @@ _copswat2 = [
 //Specialist SWAT Box
 _copswat3 = [
 	"SWAT_Kit",														//SWAT (Required Equipment Kit)
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
 	"SmokeShell",													//Tear Gas Grenade
 	"RAB_L111A1_swat",										//Flashbang
 	"Gas_Mask_SWAT",											//Gas Mask
 	"SWAT",																//SWAT Shield
 	"Rnd_9x19_M9",												//15Rnd 9mm M9/92FS Mag
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
 	"RH_usp_swat",												//USP
 	"RH_15Rnd_9x19_usp_swat",							//USP Mag
 	"RH_M4sdeotech_swat",									//M4A1 SD Eotech
@@ -1440,9 +1478,9 @@ _copswat3 = [
 //Marksman SWAT Box
 _copswat4 = [
 	"SWAT_Kit",														//SWAT (Required Equipment Kit)
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
 	"Gas_Mask_SWAT",											//Gas Mask
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
 	"RH_uspsd_swat",											//USP Silenced
 	"RH_15Rnd_9x19_uspsd_swat",						//USP SD Mag
 	"RH_M4sdaim_wdl_swat",								//M4A1 SD Aimpoint Camo
@@ -1458,13 +1496,13 @@ _copswat4 = [
 //Command SWAT Box
 _copswat5 = [
 	"SWAT_Kit",														//SWAT (Required Equipment Kit)
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
 	"SmokeShell",													//Tear Gas Grenade
 	"RAB_L111A1_swat",										//Flashbang
 	"Gas_Mask_SWAT",											//Gas Mask
 	"SWAT",																//SWAT Shield
 	"Rnd_9x19_M9",												//15Rnd 9mm M9/92FS Mag
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
 	"RH_usp_swat",												//USP
 	"RH_15Rnd_9x19_usp_swat",							//USP Mag
 	"RH_M4sdacog_swat",										//M4A1 SD ACOG
@@ -1496,8 +1534,8 @@ _copswatvehicle = [
 //CID Box
 _cid = [
 	"CID_Kit",														//CID (Required Equipment Kit)
-	"x26",																//X26 Taser
-	"x26_Mag",														//X26 Taser Charge
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
 	"RH_p226_cid",												//SIG P226
 	"RH_15Rnd_9x19_usp_pd",								//SIGG Mag
 	"RH_M16a4_cid",												//M16A4 Iron Sights
@@ -1537,39 +1575,63 @@ _copcoastguard = [
 //FTO Box
 _copfto = [
 	"FTO_Kit",														//FTO (Required Equipment Kit)
-	"RH_M4eotech_FTO",										//M4 Eotech
-	"RH_M4aim_FTO",												//M4 Aimpoint
-	"30Rnd_556x45_Stanag"								  //30 Round Stanag
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
+	"RH_m4sbreotech_cmd",										//M4 Eotech
+	"RH_m4sbraim_cmd",												//M4 Aimpoint
+	"RH_m4sbracog_cmd",
+	"30Rnd_556x45_Stanag",								//30 Round Stanag
+	"olrpg_pd_charger_slk",								//Dodge Charger (Police Slicktop)
+	"olrpg_pdtaurus_slick",								//Ford Taurus Slicktop
+	"olrpg_pdptcv_slick_pb"								//Crown Victoria (Police Slicktop)
 ];
 
 //FTO 2 Box
 _copftos = [
 	"FTO_Kit",														//FTO (Required Equipment Kit)
-	"RH_M4eotech_FTO",										//M4 Eotech
-	"RH_M4aim_FTO",												//M4 Aimpoint
-	"RH_M4acog_FTO",											//M4 Acog
-	"30Rnd_556x45_Stanag"								  //30 Round Stanag
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
+	"RH_m4sbreotech_cmd",										//M4 Eotech
+	"RH_m4sbraim_cmd",												//M4 Aimpoint
+	"RH_m4sbracog_cmd",
+	"30Rnd_556x45_Stanag",								//30 Round Stanag
+	"olrpg_pd_charger_slk",								//Dodge Charger (Police Slicktop)
+	"olrpg_pdtaurus_slick",								//Ford Taurus Slicktop
+	"olrpg_pdptcv_slick_pb"								//Crown Victoria (Police Slicktop)
 ];
 
 //FTO Command Box
 _copftoc = [
 	"FTO_Kit",														//FTO (Required Equipment Kit)
-	"RH_M4eotech_FTO",										//M4 Eotech
-	"RH_M4aim_FTO",												//M4 Aimpoint
-	"RH_M4acog_FTO",											//M4 Acog
-	"30Rnd_556x45_Stanag"								  //30 Round Stanag
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
+	"RH_m4sbreotech_cmd",										//M4 Eotech
+	"RH_m4sbraim_cmd",												//M4 Aimpoint
+	"RH_m4sbracog_cmd",
+	"30Rnd_556x45_Stanag",								//30 Round Stanag
+	"olrpg_pd_charger_slk",								//Dodge Charger (Police Slicktop)
+	"olrpg_pdtaurus_slick",								//Ford Taurus Slicktop
+	"olrpg_pdptcv_slick_pb"								//Crown Victoria (Police Slicktop)
+];
+
+//CHP
+_copchp = [
+	"olrpg_pdhpcv_pb",										//Crown Victoria (CHP)
+	"olrpg_hw_charger",										//Dodge Charger (CHP)
+	"olrpg_pdtaurushw",										//Ford Taurus (CHP)
+	"olrpg_pdhwtahoe"											//Chevrolet Tahoe (CHP)
 ];
 
 //Undercover Box
 _undercover = [
+	"DDOPP_X3",														//X3 Taser
+	"DDOPP_3Rnd_X3",											//X3 Taser Cartridge
 	"tcg_taurus_civ2",										//Taurus Black
 	"tahoe_black_cb",											//Black Pimp Tahoe
 	"suburban_black",											//Suburban 2008 Black
 	"transit_pink",												//Transit Pink
 	"monaco_red",													//Monaco Red
 	"CL_LAMBORGHINI_GT3",									//Racing Lamborghini
-	"MakarovSD",													//MakarovSD
-	"8Rnd_9x18_MakarovSD",								//8Rnd Makarov SD Mag
 	"RH_g19_cid",													//Glock 19
 	"RH_17Rnd_9x19_g19",									//Glock 19 Mag
 	"RH_bull_cid",												//Raging Bull
@@ -1606,10 +1668,16 @@ _terrorshop = [
 	"AK_47_S",														//AKS
 	"RH_akm",															//AK47 Modernized
 	"30Rnd_762x39_AK47",									//30rd AK/RK95/HK32 Mag
+	"RH_AK107",														//AK-107
+	"30Rnd_545x39_AK",										//30Rnd AK-107
 	"RH_m14maf",													//M14 Long Rifle
 	"20Rnd_762x51_DMR",										//20Rnd 762x51 DMR Mag
+	"RH_ar10s",														//AR-10 Scope
+	"RH_20Rnd_762x51_AR10",								//20Rnd AR-10
 	"RPG18",															//RPG-18
 	"RPG18_mag",													//RPG-18 Rocket
+	"RPG7V",															//RPG-7V
+	"PG7V",																//RPG-7V Rocket
 	"V3S_Reammo_TK_GUE_EP1",							//V3S Reammo Truck
 	"vclammo"															//Vehicle Ammo
 ];
@@ -1658,21 +1726,20 @@ _PMC = [
 	"supgrade5", 													//Speed Upgrade 5
 	"M24_PMC", 														//M24
 	"5Rnd_762x51_M24", 										//M24 Magazine
-	"m8_carbine", 												//M8 Carbine
-	"m8_compact", 												//M8 Compact
-	"m8_compact_pmc", 										//M8 Compact (PMC)
-	"m8_carbine_pmc", 										//M8 Carbine (PMC)
-	"m8_sharpshooter",  									//M8 Sharpshooter
-	"30Rnd_556x45_G36", 									//M8 Magazines
 	"RH_m4eotech_pmc", 										//M4 EOTech
 	"RH_m4aim_pmc", 											//M4 Aimpoint
 	"RH_m4acog_pmc", 											//M4 ACog
 	"RH_m16a4_pmc",												//M16A4 (Iron Sights)
 	"RH_M16A4aim_pmc",										//M16A4 (Aimpoint)
 	"RH_M16A4eotech_pmc",									//M16A4 (EOTech)
+	"RH_mk18dcaim",
+	"RH_mk18dceot",
+	"RH_Mk18dcacog",
 	"30Rnd_556x45_Stanag_pmc",  					//30 Round Stanag
-	"G36C_camo_pmc",											//G36C Camo
-	"30Rnd_556x45_G36_pmc",								//G36C Magazines
+	"RH_P90aim",
+	"RH_P90eot",
+	"RH_P90",
+	"RH_57x28mm_50RND_Mag",
 	"RH_usp_pmc",													//USP Tactical
 	"RH_15Rnd_9x19_usp",									//USP & Sig Magazines
 	"RH_browninghp_pmc",									//Browning HP
@@ -1785,7 +1852,7 @@ _rifle = [
 	"MBG_Arrow_N",												//Arrow
 	"tcg_mossberg",												//Mossberg 500 Shotgun
 	"LeeEnfieldmaf",											//Lee Enfield
-	"x_303",															//10Rnds Lee Enfield
+	"10x_303",													  //10Rnds Lee Enfield
 	"tcg_combat",													//Mini 12 Gauge
 	"Saiga12K",														//Saiga 12
 	"8Rnd_B_Saiga12_Pellets",							//8Rnd Saiga Buckshot
@@ -1808,11 +1875,21 @@ _guss = [
 	"30Rnd_9x19_MP5",											//30Rnd 9mm MP5 Mag
 	"RH_m4aim_guss",											//M4 Aim
 	"RH_m4eotech_guss",										//M4 Eotech
+	"RH_M4m_guss",												//M4A1 Magpul
 	"30Rnd_556x45_Stanag",								//30Rnd 5.56x45 Stanag Mag
 	"RH_mp7_guss",												//HK MP-7
 	"RH_mp7aim_guss",											//HK MP-7 CCO
 	"RH_mp7eot_guss",											//HK MP-7 Holo
-	"RH_46x30mm_40RND_Mag"								//40rnd Mp7 mag
+	"RH_46x30mm_40RND_Mag",								//40rnd Mp7 mag
+	"RH_kriss_guss",											//TDI Kriss
+	"RH_krissaim_guss",										//TDI Kriss CCO
+	"RH_krisseot_guss",										//TDI Kriss Holo
+	"RH_krissRFX_guss",										//TDI Kriss RFX
+	"RH_45ACP_30RND_Mag",									//Kriss 30Rnd Magazine
+	"RH_g18",															//Glock 18
+	"RH_19Rnd_9x19_g18_guss",							//Glock 18 mag
+	"RH_tec9",														//Intratec TEC9
+	"RH_30Rnd_9x19_tec"										//Tec9 mag
 ];
 
 //Gang Shop
@@ -1967,6 +2044,8 @@ _td7 = [
 	"olrpg_emschief",											//Chevy Tahoe (Chief of EMS)
 	"olrpg_emsdistrictchief",						  //Chevy Tahoe (District Chief)
 	"olrpg_emsyoshi",											//Chevy Tahoe (Yoshi)
+	"olrpg_emscpt",											  //Chevy Tahoe (EMS Captain)
+	"olrpg_fdcpt",											  //Chevy Tahoe (Fire Department Captain)
 	"olrpg_emslt",											  //Chevy Tahoe (EMS Lt)
 	"olrpg_fdlt",												  //Chevy Tahoe (Fire Deparment Lt)
 	"olrpg_emssupervisor",								//Chevy Tahoe (Fire Deparment Supervisor)
@@ -2009,8 +2088,9 @@ _bm = [
 	"medikit",														//Med-kit
 	"supgrade3",													//Violator 3
 	"supgrade4",													//Interceptor 4
+	"supgrade5",													//Fast & Furious 5
 	"drill",															//StrongArm MiniRig Drill
-	"safehack_bm",												//Vault Code Cracker
+	"safehack",														//Vault Code Cracker
 	"JailCracker",												//Jail Door Cracker
 	"Sa58V_CCO_EP1_bm",										//Sa58V CCO
 	"30Rnd_762x39_SA58",									//30Rnd Sa58
@@ -2022,27 +2102,31 @@ _bm = [
 	"M4A3_CCO_EP1_bm",										//M4A3 CCO
 	"RH_hk416aim_bm",											//HK416 Aimpoint
 	"RH_hk416eotech_bm",									//HK416 EOTech
-	"RH_deagle_bm",												//Desert Eagle
-	"RH_Deagles_bm",											//Desert Eagle Silver
-	"RH_7Rnd_50_AE",											//Desert Eagle Mag
+	"RH_PDR_bm",													//Magpul PDR
+	"RH_pdraim_bm",												//Magpul PDR (Aimpoint)
+	"RH_pdreot_bm",												//Magpul PDR (EOTech)
+	"RH_m4maim_bm",												//M4A1 Magpul (Aimpoint)
+	"RH_m4meotech_bm",										//M4A1 Magpul (EOTech)
+	"30Rnd_556x45_Stanag_bm",							//30 Round Stanag
+	"MP5A5_bm",														//MP5A5
+	"RH_pp2000_bm",												//PP2000
+	"RH_pp2000aim_bm",										//PP2000 (Aimpoint)
+	"30Rnd_9x19_MP5_bm",									//30Round MP5/PP2000 Mag
+	"KPFS_PM63_bm",												//PM63RAK
+	"KPFS_25Rnd_pm_bm",										//PM63RAK Magazine
 	"RH_aks47s_bm",												//AK47 Silver
 	"RH_rk95_bm",													//RK95
 	"RH_Rk95aim_bm",											//RK95 Aimpoint
 	"30Rnd_762x39_AK47",									//30rd AK/RK95/HK32 Mag
+	"FN_FAL",															//FN FAL
+	"20Rnd_762x51_FNFAL",									//FN FAL Mag
 	"BAF_LRR_scoped_bm",									//L115A3
 	"5Rnd_86x70_L115A1",									//5 Round Lapua Sniper Ammo
 	"RH_SVD_bm",													//SVD
 	"10Rnd_762x54_SVD",										//10Rnd 7.62mm SVD Mag
-	"RH_PDR_bm",													//Magpul PDR
-	"RH_pdraim_bm",												//Magpul PDR (Aimpoint)
-	"RH_pdreot_bm",												//Magpul PDR (EOTech)
-	"30Rnd_556x45_Stanag_bm",							//30 Round Stanag
-	"MP5A5_bm",														//MP5A5
-	"30Rnd_9x19_MP5_bm",									//30 Round MP5 Mag
-	"RH_pp2000_bm",												//PP2000
-	"RH_pp2000aim_bm",										//PP2000 (Aimpoint)
-	"KPFS_PM3_bm",												//PM63RAK
-	"KPFS_25Rnd_pm_bm"										//PM63RAK Magazine
+	"RH_deagle_bm",												//Desert Eagle
+	"RH_Deagles_bm",											//Desert Eagle Silver
+	"RH_7Rnd_50_AE"											  //Desert Eagle Mag
 ];
 
 
@@ -2325,7 +2409,8 @@ OL_ShopsArray = [
 		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_FTOVehSpawn", true],
 		["F.T.O. Equipment", _copfto, _copfto, "FTO_id", "OL_Shop_Cop_FTOVehSpawn", true],
 		["F.T.O. Supervisor", _copftos, _copftos, "FTO_id", "OL_Shop_Cop_FTOVehSpawn", true],
-		["F.T.O. Command", _copftoc, _copftoc, "FTO_id", "OL_Shop_Cop_FTOVehSpawn", true]
+		["F.T.O. Command", _copftoc, _copftoc, "FTO_id", "OL_Shop_Cop_FTOVehSpawn", true],
+		["Cicada Highway Patrol", _copchp, _copchp, "FTO_id", "OL_Shop_Cop_FTOVehSpawn", true]
 	], "iscop"],
 	[OL_Shop_Cop_K9, "Police K9 Equipment", OL_Shop_Cop_K9, [
 		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_K9VehSpawn", true],

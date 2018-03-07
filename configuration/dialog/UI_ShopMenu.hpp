@@ -2,7 +2,7 @@ class UI_ShopMenu {
   idd = -1;
   movingEnable = true;
   objects[] = { };
-  onKeyDown = "[4, _this select 1] spawn fnc_CloseShop; true;";
+  onUnload = "if ((_this select 1) == 2) then { [3, 1] spawn fnc_CloseShop }; true;";
 
   class controlsBackground {
   	class DLG_BACK1: RscBackground {
@@ -51,6 +51,7 @@ class UI_ShopMenu {
       text = "1";
       colorText[] = {0.26953125, 0.46484375, 0.734375, 1};
       onKeyDown = "[] call Shops_fnc_UpdateText;";
+      onKeyUp = "[] call Shops_fnc_UpdateText;";
     	x = 0.04;
       y = 0.60;
     	w = 0.20;
@@ -103,6 +104,7 @@ class UI_ShopMenu {
       h = 0.04;
     	text = "1";
       onKeyDown = "[] call Shops_fnc_UpdateText;";
+      onKeyUp = "[] call Shops_fnc_UpdateText;";
   	};
   	class itemliste2 : DA_ListBox { // sell list
     	idc = 101;

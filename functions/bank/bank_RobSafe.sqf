@@ -12,6 +12,8 @@ if (alive player) then {
 	player groupChat format["You successfully robbed the Bank for %1. Escape before the cops show up!", robpoolsafe1];
 };
 
+["BankRob_Log", format ["%1 (%2) has robbed the bank for %1.", PlayerName, getPlayerUID player, robpoolsafe1]] call RM_fnc_LogToServer;
+
 format['[%1] call OL_bank_BankRobbed', robpoolsafe1] call OL_network_Swag;
 
 robpoolsafe1 = 0;

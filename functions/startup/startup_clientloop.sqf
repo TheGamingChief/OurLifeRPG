@@ -12,7 +12,7 @@ while {true} do	{
 	//5 Seconds
 	if (_iterations % 1 == 0) then {
 		[] spawn fnc_UpdatePlayerArray;
-		/*[] spawn OL_TFAR_channelCheck;*/
+		[] spawn OL_TFAR_channelCheck;
 		[] spawn CP_fnc_VarQueueUpdate;
 		[] spawn OL_misc_FosterFireCheck;
 		[] spawn OL_misc_updatePlayTime;
@@ -28,6 +28,7 @@ while {true} do	{
 
 	//15 Seconds
 	if (_iterations % 15 == 0) then {
+		if ((!("OL_License_civ_drivers" in OL_Licenses)) && (player getVariable ["OL_Has_Drivers_License", true])) then { player setVariable ["OL_Has_Drivers_License", false, true] };
 		if (Kontostand > OL_BankLimit) then { Kontostand = OL_BankLimit; player groupChat localize "STRS_maxbank"; };
 		if ("geld" call INV_GetItemAmount > OL_MoneyLimit) then { ["geld", OL_MoneyLimit] call INV_SetItemAmount; player groupChat localize "STRS_maxmoney"; };
 	};

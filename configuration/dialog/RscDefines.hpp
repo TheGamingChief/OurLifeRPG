@@ -154,7 +154,7 @@ class RscFrame
 
   colorBackground[] = {Dlg_ColorScheme_Red, 1}; // unused?
   colorText[] = {Dlg_ColorScheme_Yellow, 1}; // unused?
-  font = FontM_R;
+  font = FontM;
 
   text = "";
 };
@@ -523,8 +523,8 @@ font = FontHTML;
 sizeEx = 0.02;
 colorText[] = {1, 1, 1, 1};
 colorSelection[] = {0.5, 0.5, 0.5, 1};
-autocomplete = false;text = "";
-
+autocomplete = false;
+text = "";
 };
 
 class TGC_RscEdit
@@ -629,4 +629,15 @@ style   = 0;
 color[] = {0.2, 0.2, 0.2, 1};
 colorActive[] = {1, 1, 1, 1};
 
+};
+
+class RscProgress
+{
+	type = 8;
+	style = 0;
+	texture = "#(argb,8,8,3)color(0,65,105,225)";
+	shadow = 2;
+	colorFrame[] = {1, 1, 1, 1};
+	colorBackground[] = {1, 1, 1, 1};
+	colorBar[] = {0.17,0.36,1,1};
 };
