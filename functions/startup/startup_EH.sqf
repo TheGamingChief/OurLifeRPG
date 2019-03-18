@@ -2,7 +2,11 @@ player addEventHandler ["fired", {
   ["fired", (_this select 4), (_this select 1)] spawn OL_fnc_Stun;
   _this spawn OL_events_HandleSmokes;
 }];
-player addEventHandler ["handleDamage", { _this call OL_fnc_setHit }];
+
+player addEventHandler ["handleDamage", {
+  _this spawn OL_fnc_setHit;
+  false;
+}];
 
 "serverStationUpdate" addPublicVariableEventHandler {
   {
@@ -16,10 +20,10 @@ player addEventHandler ["handleDamage", { _this call OL_fnc_setHit }];
   if (typeName _this == "ARRAY") then {
     switch (_this select 0) do {
       case (format["%1_Warrants", getPlayerUID player]): {
-          player setVariable ["PlayerWarrants", _this select 1, true];
+        player setVariable ["PlayerWarrants", _this select 1, true];
       };
       default {
-          call compile format["%1 = %2", _this select 0, _this select 1];
+        call compile format["%1 = %2", _this select 0, _this select 1];
       };
     };
   };

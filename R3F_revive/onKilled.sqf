@@ -11,7 +11,7 @@ R3F_REV_fil_exec_attente_reanimation = [] spawn
 {
 	private ["_position_avant_mort", "_hauteur_ATL_avant_mort", "_direction_avant_mort", "_chargeurs_avant_mort", "_armes_avant_mort", "_sacados_avant_mort", "_unit"];
 
-	call OL_misc_CheckWater;
+	_handle = [] spawn OL_misc_CheckWater;
 
 	_position_avant_mort = getPos R3F_REV_corps_avant_mort;
 	_hauteur_ATL_avant_mort = getPosATL R3F_REV_corps_avant_mort select 2;

@@ -3,12 +3,13 @@ _item 					= "safehack";
 _itemAmount 		= _item call INV_GetItemAmount;
 
 if (iscop) exitWith {	player groupChat "Police may not crack the safe code!" };
-if (playersNumber west < 4 && !debug) exitwith {player groupchat "You need 4 Police Officers online to rob the Bank!";};
-if (_itemAmount < 1) exitWith	{ player groupChat "You must have a Vault Code Cracker!" };
-if (isCrackingSafe == 1) exitWith	{ player groupChat "You are already cracking a safe!"	};
+if (playersNumber west < 4 && !debug) exitwith { player groupchat "You need 4 police officers online to rob the bank!"; };
+if (_itemAmount < 1) exitWith	{ player groupChat "You must have a vault code cracker!"; };
+if (isCrackingSafe == 1) exitWith	{ player groupChat "You are already cracking a safe!";	};
 
 if (isCrackingSafe == 0) then
 {
+	["CrackSafe_Log", format ["%1 (%2) is attempting to crack the safe.", PlayerName, getPlayerUID player]] call RM_fnc_LogToServer;
 	isCrackingSafe = 1;
 	[_item, -1] call INV_AddInvItem;
 
@@ -34,7 +35,7 @@ if (isCrackingSafe == 0) then
 		isCrackingSafe = 0;
 	};
 
-	player sideChat format["Your cracker reads: [%1]", safeCodeSet];
+	player sideChat format ["Your cracker reads: [%1]", safeCodeSet];
 
 	safeCrackFailed = 0;
 	isCrackingSafe = 0;

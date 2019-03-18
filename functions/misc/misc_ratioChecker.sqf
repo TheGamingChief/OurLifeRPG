@@ -5,10 +5,12 @@ _str  = "<t color='#FFFFFF' size='1.75'>Ratio Checker!</t><br/><br/>";
 
 {
 	if (_x call OL_ISSE_UnitExists) then {
-		switch (true) do {
-			case (_x in coparray): 	 { _cops = _cops + 1 };
-			case (_x in civarray): 	 { _civs = _civs + 1 };
-			case (_x in medicarray): { _ems  = _ems  + 1 };
+		if (isPlayer _x) then {
+			switch (true) do {
+				case (_x in coparray): 	 { _cops = _cops + 1 };
+				case (_x in civarray): 	 { _civs = _civs + 1 };
+				case (_x in medicarray): { _ems  = _ems  + 1 };
+			};
 		};
 	};
 } forEach playerarray;
@@ -18,9 +20,7 @@ if (iscop) exitWith {
 		_str = _str + format ["<t color='#0000FF' size='1.50'>Cops: %1<br/>", _cops];
 		_str = _str + format ["<t color='#999999' size='1.50'>Civs: %1<br/><br/>", _civs];
 		_str = _str + "<t color='#FF0000' size='2'>RATIO IS BAD (FIX IT)!";
-		if ((_cops + _civs) > 10) then {
-			playSound "alarm1";
-		};
+		playSound "alarm1";
 	} else {
 		_str = _str + format ["<t color='#0000FF' size='1.50'>Cops: %1<br/>", _cops];
 		_str = _str + format ["<t color='#999999' size='1.50'>Civs: %1<br/><br/>", _civs];

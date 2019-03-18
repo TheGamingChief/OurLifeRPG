@@ -1,10 +1,15 @@
 [1,     [false,false,false],  {[] spawn fnc_KeyPress_ESC; false;},      "keydown", "KeyPress_ESC"] call CBA_fnc_addKeyHandler;
+[1,     [false,false,false],  {OL_ESC_Closed = true; false;},          "keyup",   "KeyPress_ESC_Up"] call CBA_fnc_addKeyHandler;
 [2,     [false,false,false],  {[] spawn fnc_KeyPress_1; true;},         "keydown", "KeyPress_1"] call CBA_fnc_addKeyHandler;
+[2,     [true,false,false],   {[] spawn fnc_KeyPress_Shift1; true;},  "keydown", "KeyPress_Shift1"] call CBA_fnc_addKeyHandler;
 [3,     [false,false,false],  {[] spawn fnc_KeyPress_2; true;},         "keydown", "KeyPress_2"] call CBA_fnc_addKeyHandler;
 [4,     [false,false,false],  {[] spawn fnc_KeyPress_3; true;},         "keydown", "KeyPress_3"] call CBA_fnc_addKeyHandler;
+[5,     [false,false,false],  {[] spawn fnc_KeyPress_4; true;},         "keydown", "KeyPress_4"] call CBA_fnc_addKeyHandler;
+[5,     [true,false,false],   {[] spawn fnc_KeyPress_Shift_4; true;},   "keydown", "KeyPress_Shift_4"] call CBA_fnc_addKeyHandler;
 [6,     [false,false,false],  {[] spawn fnc_KeyPress_5; true;},         "keydown", "KeyPress_5"] call CBA_fnc_addKeyHandler;
 [7,     [false,false,false],  {[] spawn fnc_KeyPress_6; true;},         "keydown", "KeyPress_6"] call CBA_fnc_addKeyHandler;
 [8,     [false,false,false],  {[] spawn fnc_KeyPress_7; true;},         "keydown", "KeyPress_7"] call CBA_fnc_addKeyHandler;
+[9,     [false,false,false],  {[] spawn fnc_KeyPress_8; true;},         "keydown", "KeyPress_8"] call CBA_fnc_addKeyHandler;
 [10,    [false,false,false],  {[] spawn fnc_KeyPress_9; true;},         "keydown", "KeyPress_9"] call CBA_fnc_addKeyHandler;
 [16,    [false,false,false],  {[] spawn fnc_KeyPress_Q; false;},        "keydown", "KeyPress_Q"] call CBA_fnc_addKeyHandler;
 [17,    [false,false,false],  {[] spawn fnc_KeyPress_W; false;},        "keydown", "KeyPress_W"] call CBA_fnc_addKeyHandler;

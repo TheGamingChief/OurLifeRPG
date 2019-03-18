@@ -1,39 +1,53 @@
-if ((vehicle player != player) || (player != (driver vehicle player)) || (!(vehicle player isKindOf "LandVehicle")) || (speed (vehicle player) <= 90)) exitWith {};
+if ((vehicle player == player) || (player != (driver vehicle player)) || (!(vehicle player isKindOf "LandVehicle")) || (iscop) || (ismedic)) exitWith {};
+_speed = speed (vehicle player);
 
-[vehicle player, "speedcam", 50] call CBA_fnc_globalSay3D;
-titleCut ["", "white in", 1];
+if (_speed > OL_SpeedLimit) then {
+  {
+    if (call compile (_x select 0)) exitWith {
+      [vehicle player, "speedcam", 25] call CBA_fnc_globalSay3D;
+      titleCut ["", "white in", 1];
 
-_spd = speed vehicle player;
+      if (_forEachIndex < 7) then {
+        if (OL_DemeritPoints <= 0) exitWith { player groupChat format ["You were flashed by a speedcam going %1!", round _speed] };
+        OL_DemeritPoints = OL_DemeritPoints - (call compile (_x select 1));
+        player groupChat format ["You were flashed by a speedcam going %1 and lost %2 demerit points. (Demerits: %3)", round _speed, call compile (_x select 1), OL_DemeritPoints];
+      } else {
+        player groupChat format ["You were flashed by a speedcam going %1! A note has been issued!", round _speed];
+        _notes = player getVariable ["Notes", []];
+        _notes set[count(_notes), [format ["Flashed for speeding - %1", _x select 1], "Speedcam"]];
+        player setVariable ["Notes", _notes, true];
+        OL_DemeritPoints = 0;
+      };
 
-switch (true) do {
-  case (_spd >= 100 && _spd < 110): { _punishment = 1 };
-  case (_spd >= 110 && _spd < 120): { _punishment = 2 };
-  case (_spd >= 120 && _spd < 130): { _punishment = 3 };
-  case (_spd >= 130 && _spd < 140): { _punishment = 4 };
-  case (_spd >= 140 && _spd < 150): { _punishment = 5 };
-  case (_spd >= 150 && _spd < 160): { _punishment = 6 };
-  case (_spd >= 160 && _spd < 170): { _punishment = 7 };
-  case (_spd >= 170 && _spd < 180): { _punishment = "170/180" };
-  case (_spd >= 180 && _spd < 190): { _punishment = "180/190" };
-  case (_spd >= 200 && _spd < 210): { _punishment = "200/210" };
-  case (_spd >= 210 && _spd < 220): { _punishment = "210/220" };
-  case (_spd >= 220 && _spd < 230): { _punishment = "220/230" };
-  case (_spd >= 230 && _spd < 240): { _punishment = "230/240" };
-  case (_spd >= 240 && _spd < 250): { _punishment = "240/250" };
-  case (_spd >= 250 && _spd < 260): { _punishment = "250/260" };
-  case (_spd >= 260 && _spd < 270): { _punishment = "260/270" };
-  case (_spd >= 270 && _spd < 280): { _punishment = "270/280" };
-  case (_spd >= 280 && _spd < 290): { _punishment = "280/290" };
-  case (_spd >= 290 && _spd < 300): { _punishment = "290/300" };
+      if ((OL_DemeritPoints <= 0) && (("OL_License_civ_drivers") in OL_Licenses)) then {
+        OL_Licenses = OL_Licenses - ["OL_License_civ_drivers"];
+        player groupChat "You have lost your drivers license for speeding!";
+      };
+    };
+  } forEach OL_SpeedPunishments;
+};
+_vehicleOwner = (vehicle player) getVariable ["OL_Owner", objNull];
+if (isNull _vehicleOwner) exitWith {};
+_ownerWarrants = _vehicleOwner getVariable ["PlayerWarrants", []];
+_ownerLicense  = _vehicleOwner getVariable ["OL_Has_Drivers_License", false];
+_vehDir = round (direction (vehicle player));
+_direction = switch (true) do {
+  case (_vehDir >= 340 && _vehDir <= 359): { "North" };
+  case (_vehDir >= 0 && _vehDir <= 20): { "North"} ;
+  case (_vehDir > 20   && _vehDir < 60):   { "North East" };
+  case (_vehDir >= 60  && _vehDir <= 120): { "East" };
+  case (_vehDir > 120  && _vehDir < 160):  { "South East" };
+  case (_vehDir >= 160 && _vehDir <= 200): { "South" };
+  case (_vehDir > 200  && _vehDir < 240):  { "South West" };
+  case (_vehDir >= 240 && _vehDir <= 290): { "West" };
+  case (_vehDir > 290  && _vehDir < 340):  { "North West" };
 };
 
-if (typeName _punishment == "STRING") then {
-  [player, "Speeding - " + _punishment] call OL_player_WarrantAdd;
-} else {
-  OL_DemeritPoints = OL_DemeritPoints - _punishment;
-
-  if (OL_DemeritPoints <= 0) then {
-    INV_LizenzOwner = INV_LizenzOwner - ["car"];
-    player sideChat "You have lost your drivers license for speeding!";
-  };
+if (!_ownerLicense) then {
+  [[2, format ["[ANPR HIT] Speedcam %1, %2, %3, %4. (No License)", _this, _direction, getText (configFile >> "cfgVehicles" >> (typeOf (vehicle player)) >> "displayName"), _vehicleOwner], "getPlayerUID player in FTO_id"], "OL_misc_ChatMessage", west, false, true] call OL_Network_MP;
+  ["ANPR_Log", format ["[ANPR HIT] Speedcam %1, %2, %3, %4. (No License)", _this, _direction, getText (configFile >> "cfgVehicles" >> (typeOf (vehicle player)) >> "displayName"), _vehicleOwner]] call RM_fnc_LogToServer;
+};
+if ((count _ownerWarrants) != 0) then {
+  [[2, format ["[ANPR HIT] Speedcam %1, %2, %3, %4. (Warrants)", _this, _direction, getText (configFile >> "cfgVehicles" >> (typeOf (vehicle player)) >> "displayName"), _vehicleOwner], "getPlayerUID player in FTO_id"], "OL_misc_ChatMessage", west, false, true] call OL_Network_MP;
+  ["ANPR_Log", format ["[ANPR HIT] Speedcam %1, %2, %3, %4. (Warrants)", _this, _direction, getText (configFile >> "cfgVehicles" >> (typeOf (vehicle player)) >> "displayName"), _vehicleOwner]] call RM_fnc_LogToServer;
 };

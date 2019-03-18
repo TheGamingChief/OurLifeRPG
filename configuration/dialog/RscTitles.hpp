@@ -46,6 +46,7 @@ class RadarText
 #define screenheight (1 - safeZoney*2)
 #include "hud.hpp"
 #include "radargun.hpp"
+#include "UI_Progressbar.hpp"
 
 class RL_Dialog_loading
 {

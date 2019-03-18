@@ -7,7 +7,7 @@ for "_i" from 0 to 15 do {
   if (player distance _vcl > 10) exitWith { player groupChat "You went too far away from the vehicle." };
 
   if (_i >= 15) exitWith {
-    _vcl setVectorUp [0.1, 0.1, 1];
+    format ['%1 setVectorUp [0.1, 0.1, 1];', _vcl] call OL_network_Swag;
     player groupChat "Your vehicle has been unflipped.";
   };
 

@@ -15,12 +15,11 @@ _activeModules = [
 	"checkpoint",
 	"cloud",
 	"isse",
-	"network",
 	"misc",
 	"phone",
 	"player",
+	"license",
 	"tfar",
-	"stats",
 	"vehicle",
 	"ui",
 	"init"
@@ -33,13 +32,13 @@ DD_Modules = [];
 		case ("init"): {
 			[_x] spawn {
 				waitUntil { modularSystemComplete };
-				call compile preprocessFile format["functions\%1\_vars.sqf", (_this select 0)];
-				call compile preprocessFile format["functions\%1\_init.sqf", (_this select 0)];
+				call compile preprocessFile format ["functions\%1\_vars.sqf", (_this select 0)];
+				call compile preprocessFile format ["functions\%1\_init.sqf", (_this select 0)];
 			};
 		};
 		default {
-			call compile preprocessFile format["functions\%1\_vars.sqf", (_x)];
-			call compile preprocessFile format["functions\%1\_module.sqf", (_x)];
+			call compile preprocessFile format ["functions\%1\_vars.sqf", (_x)];
+			call compile preprocessFile format ["functions\%1\_module.sqf", (_x)];
 		};
 	};
 } forEach _activeModules;
@@ -66,7 +65,7 @@ if (isNil "DD_Modules") exitWith {
 		};
 	', _x select 0, _x select 1, _x select 2, _x select 3];
 
-	if (_showActiveJob) then { systemChat toUpper format["Loading Module: %1 - %2", _x select 1, _x select 2] };
+	if (_showActiveJob) then { systemChat toUpper format ["Loading Module: %1 - %2", _x select 1, _x select 2] };
 } forEach DD_Modules;
 
 waitUntil { (isNull (findDisplay 53)) || isServer };

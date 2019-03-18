@@ -60,7 +60,7 @@ if(vehicle player iskindof "SHIP") then
 		{
 		titletext ["Nothing Caught you might Recast...", "PLAIN DOWN"];
 		};
-		_avail = floor (INV_Tragfaehigkeit - (call INV_GetOwnWeight));
+		_avail = floor (INV_Weight - (call INV_GetOwnWeight));
 		totalamount = totalamount + _amount;
 			
 	if((totalamount*2) >= _avail)exitwith{totalamount = (_avail/2); player groupchat "You cannot hold any more"; _i=6;};	
@@ -91,7 +91,7 @@ if(vehicle player iskindof "SHIP") then
 		{
 		titletext ["Nothing Caught you might Recast...", "PLAIN DOWN"];
 		};
-		_avail = floor (INV_Tragfaehigkeit - (call INV_GetOwnWeight));
+		_avail = floor (INV_Weight - (call INV_GetOwnWeight));
 		totalamount = totalamount + _amount;
 			
 	if((totalamount*2) >= _avail)exitwith{totalamount = (_avail/2); player groupchat "You cannot hold any more"; _i=6;};	
@@ -122,7 +122,7 @@ totalamount=0;
 		titletext ["Nothing Caught try recasting...", "PLAIN DOWN"];
 		};
 		sleep 5;
-		_avail = floor (INV_Tragfaehigkeit - (call INV_GetOwnWeight));
+		_avail = floor (INV_Weight - (call INV_GetOwnWeight));
 		totalamount = totalamount + _amount;
 		if((totalamount*2) >= _avail)exitwith{totalamount = (_avail/2); player groupchat "maximum weight reached"; _i=6;};
 		player groupchat format["You got %1 %2.", _amount, _name];
@@ -143,7 +143,7 @@ totalamount=0;
 		titletext ["Fishing Whale takes time..", "PLAIN DOWN", 0.1];
 		
 		sleep 15;
-		_avail = floor (INV_Tragfaehigkeit - (call INV_GetOwnWeight));
+		_avail = floor (INV_Weight - (call INV_GetOwnWeight));
 			
 		totalamount = totalamount + _amount;
 		if((totalamount*2) >= _avail)exitwith{totalamount = (_avail/2); player groupchat "maximum weight reached"; _i=6;};

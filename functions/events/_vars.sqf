@@ -1,8 +1,11 @@
 INV_shortcuts     = true;
 isstunned  	      = false;
+OL_SavingVehicle  = false;
+OL_ESC_Closed     = false;
 dog_cost          = 1000;
 huren_cost        = 40000;
 slave_cost        = 40000;
 INV_getshopnum    = {};
 OL_PlayerActions  = [];
 fn_SirenMode      = 0;
+OL_PanicClicks    = 0;

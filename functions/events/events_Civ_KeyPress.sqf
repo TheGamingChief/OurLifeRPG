@@ -1,8 +1,8 @@
 fnc_KeyPress_ESC = {
 	if (dialog) exitwith { closeDialog 0 };
-	if (isnull (findDisplay 49)) then {
-		call OL_misc_escapemod;
-	};
+	waitUntil {!(isNull (findDisplay 46)) || OL_ESC_Closed};
+	if (OL_ESC_Closed) exitWith { OL_ESC_Closed = false };
+	if (isNull (findDisplay 49)) exitWith { call OL_misc_escapemod };
 };
 
 fnc_KeyPress_1 = {
@@ -10,6 +10,14 @@ fnc_KeyPress_1 = {
 	if(dialog)exitwith{closeDialog 0;};
 	if(isstunned) exitwith {player groupchat "You are stunned!"};
 	["swagswag_life"] call OL_ui_ShowTablet;
+};
+
+fnc_KeyPress_Shift1 = {
+	if (dialog) then { closeDialog 0 };
+	if (!INV_shortcuts) exitWith {};
+	if (isstunned) exitWith { player groupChat "You are stunned!" };
+
+	[] call OL_phone_ActionMenu;
 };
 
 fnc_KeyPress_2 = {
@@ -44,11 +52,9 @@ fnc_KeyPress_3 = {
 	nonlethalweapons = nonlethalweapons + call OL_TFAR_getPlayerRadios;
 	_weapons = weapons player - nonlethalweapons;
 	if (count _weapons > 0) then {
-		{player removeWeapon _x} forEach _weapons
-	};
-	if !(isNil "_weapons") then {
+		{ player removeWeapon _x } forEach _weapons;
 		_holder = createVehicle ["weaponholder", getPosATL player, [], 0, "CAN_COLLIDE"];
-		{_holder addWeaponCargoGlobal [_x,1];}forEach _weapons;
+		{ _holder addWeaponCargoGlobal [_x, 1] } forEach _weapons;
 	};
 };
 
@@ -57,20 +63,23 @@ fnc_KeyPress_5 = {
 };
 
 fnc_KeyPress_6 = {
-	if(dialog)exitwith{closeDialog 0;};
-	if(!INV_shortcuts)exitwith{};
-	if(isstunned) exitwith {player groupchat "You are stunned!"};
+	if (dialog) exitwith { closeDialog 0 };
+	if (!INV_shortcuts) exitwith {};
+	if (isstunned) exitwith { player groupChat "You are stunned!" };
 	[] call OL_Admin_ShowMenu;
 };
 
 fnc_KeyPress_7 = {
-
-	if(dialog)exitwith{closeDialog 0;};
-	if(!INV_shortcuts)exitwith{};
-	if ((getPlayerUID player) in OL_SwagDevs) then {
-	createDialog "balca_debug_main";
-	};
+	if (dialog) exitwith { closeDialog 0 };
+	if (!INV_shortcuts) exitwith {};
+	if ((getPlayerUID player) in OL_SwagDevs) then { createDialog "balca_debug_main" };
 };
+
+/*fnc_KeyPress_8 = {
+	if (dialog) exitwith { closeDialog 0 };
+	if (!INV_shortcuts) exitwith {};
+	[] call OL_ui_CustomKeysMenu;
+};*/
 
 fnc_KeyPress_9 = {
 	if (dialog) exitWith {closeDialog 0;};
@@ -95,9 +104,7 @@ fnc_KeyPress_Q = {
 
 fnc_KeyPress_Home = {
 	closeDialog 0;
-	if ((getplayeruid player) in OL_SwagDevs) then {
-		[] call adminMenuOpen;
-	};
+	if ((getplayeruid player) in OL_SwagDevs) then { [] call adminMenuOpen };
 };
 
 fnc_KeyPress_O = {
@@ -155,7 +162,7 @@ fnc_KeyPress_L = {
 
 	if(!INV_shortcuts)exitwith{};
 	if(isstunned) exitwith {player groupchat "You are stunned!"};
-	_vcls = call CP_misc_NearestCar;
+	_vcls = call CP_misc_NearestCars;
 	if (count _vcls > 0) then {
 		_vcl = _vcls select 0;
 		if(!(_vcl in INV_VehicleArray))exitwith{player groupchat "You do not have the keys to this vehicle.";};
@@ -168,13 +175,11 @@ fnc_KeyPress_T = {
 	if (dialog) then { closeDialog 0 };
 	if (UpgradingCar) exitWith { player groupChat "You can't access the trunk while upgrading a vehicle." };
 
-	_vcl = ([] call CP_misc_NearestCar) select 0;
+	_vcl = ([] call CP_misc_NearestCars) select 0;
 	if (isNil "_vcl") exitWith {};
 
 	if (!(_vcl in INV_VehicleArray)) exitWith { player groupChat "You must have the keys to access the trunk." };
-	if (_vcl getVariable ["OL_TrunkInUse", false]) exitWith { player groupChat "Only one person may use the trunk at a time." };
-
-	[_vcl] call OL_vehicle_Trunk;
+	/*if (_vcl getVariable ["OL_TrunkInUse", false]) exitWith { player groupChat "Only one person may use the trunk at a time." };*/
 
 	if(!isnull _vcl)then{call compile format['[0,0,0,["%3", "public", ["vcl", "%2", %1]]] execVM "storage.sqf";', _vcl, (typeOf _vcl), format["%1_storage", _vcl]];};
 };
@@ -198,8 +203,8 @@ fnc_KeyPress_E = {
 		_atms   = nearestObjects [_posFind,["Man", "tcg_ATM"],2];
 		_atm    = objNull;
 		_civ    = objNull;
-		if (count _men != 0) then {_civ = _men select 0};
-		if (count _atms != 0) then {_atm = _atms select 0};
+		if (count _men != 0)  then  {_civ = _men select 0  };
+		if (count _atms != 0) then { _atm = _atms select 0 };
 
 		if(isciv && !(isNull _civ) && _civ in playerarray) exitwith {
 			if(isciv && !iscop) then {
@@ -213,11 +218,10 @@ fnc_KeyPress_E = {
 				["TGC_CopMenu"] call OL_ui_InteractionMenu;
 			};
 		};
-			_i = 4;
-			if (!(isNull _civ) && _civ in shopusearray) exitwith {
+		_i = 4;
+		if (!(isNull _civ) && _civ in shopusearray) exitwith {
 			if (iscop && _civ in drugsellarray) exitwith { [_civ] call OL_fnc_DrugSearch };
-			_id = _civ call INV_getshopnum;
-			[0,0,0,[_id]] execVM "shopdialogs.sqf";
+			[_civ] call Shops_fnc_DisplayStoreOptions;
 		};
 		if (!(isNull _atm) && _atm in bankflagarray) exitwith {
 			_i = 4;

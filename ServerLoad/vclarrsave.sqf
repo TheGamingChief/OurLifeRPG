@@ -11,6 +11,7 @@ while {true} do {
 		if (isNull (INV_VehicleArray select _i)) then {
 			INV_VehicleArray set [_i, ""];
 			INV_VehicleArray = INV_VehicleArray - [""];
+			[player] call OL_vehicle_KeysToServer;
 		};
 	};
 

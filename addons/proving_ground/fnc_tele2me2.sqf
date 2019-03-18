@@ -1,7 +1,7 @@
 //AlPMaker
 _max = 10; snext = false; plist = []; pselect5 = "";
-{if ((_x != player) && (getPlayerUID _x != "")) then {plist set [count plist, name _x];};} forEach entities "CAManBase";
-{if ((count crew _x) > 0) then {{if ((_x != player) && (getPlayerUID _x != "")) then {plist set [count plist, name _x];};} forEach crew _x;};} foreach (entities "LandVehicle" + entities "Air" + entities "Ship");
+{if ((_x != player) && (getPlayerUID _x != "")) then {plist set [count plist, _x getVariable ["RealName", "Error: No Unit"]];};} forEach entities "CAManBase";
+{if ((count crew _x) > 0) then {{if ((_x != player) && (getPlayerUID _x != "")) then {plist set [count plist, _x getVariable ["RealName", "Error: No Unit"]];};} forEach crew _x;};} foreach (entities "LandVehicle" + entities "Air" + entities "Ship");
 smenu =
 {
 	_pmenu = [["",true]];
@@ -16,21 +16,21 @@ _j = 0; _max = 10; if (_max>9) then {_max = 10;};
 while {pselect5 == ""} do
 {
 	[_j, (_j + _max) min (count plist)] call smenu; _j = _j + _max;
-	WaitUntil {pselect5 != "" or snext};	
+	WaitUntil {pselect5 != "" or snext};
 	snext = false;
 };
 if (pselect5 != "exit") then
 {
 	_name = pselect5;
 	{
-		if(name _x == _name) then
+		if((_x getVariable ["RealName", name player]) == _name) then
 		{
 			hint format ["Teleporting %1", _name];
 			_x attachTo [vehicle player, [2, 2, 0]];
 			sleep 0.25;
 			detach _x;
-			[format["[Dev] Admin %1 Has Teleported %2 To Him", name player, _name]] call fn_LogToServer;
-			format['diag_log text "Admin %1 Has Teleported %2 To Him";', name player, _name];
+			[format["[Dev] Admin %1 Has Teleported %2 To Him", PlayerName, _name]] call fn_LogToServer;
+			format['diag_log text "Admin %1 Has Teleported %2 To Him";', PlayerName, _name];
 		};
 	} forEach entities "CAManBase";
 };

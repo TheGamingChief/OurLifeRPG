@@ -291,7 +291,7 @@ illegalweaponqueue = [];
 
 INV_ItemFabriken = [];
 
-if (!isCop) then {
+if (isciv) then {
 INV_ItemFabriken = [
 	[Vehiclefactory,"factory1","Vehicle's Factory",dummyobj,[vfacspawn1,vfacspawn2,vfacspawn3],_vehiclefactory,150000,"Fabrikablage1","vehiclequeue",10,1],
 	[weaponfactory,"factory2","Weapon's Factory",wfgunbox,dummyobj,_weaponfactory,250000,"Fabrikablage2","weaponqueue",10,1],

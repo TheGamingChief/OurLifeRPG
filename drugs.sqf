@@ -135,6 +135,31 @@ if (_item == "marijuana") then
 
 	};
 
+
+if (_item == "heroin") then
+
+	{
+	Flare = "SmokeShellPurple" createVehicle position player;
+	if (vehicle player != player) then { Flare attachTo [vehicle player,[0,0,0.]];}
+		else {Flare attachTo [player,[0,0,0.]];};
+
+	while {time < _endeZeit} do
+
+		{
+
+		"colorCorrections" ppEffectEnable true;
+		"colorCorrections" ppEffectAdjust [1, 1, 0, [0,0,0,0.5], [random 5 - random 5,random 5 - random 5,random 5 - random 5,random 1], [random 5 - random 5,random 5 - random 5,random 5 - random 5, random 1]];
+		"colorCorrections" ppEffectCommit 1;
+		"chromAberration" ppEffectEnable true;
+		"chromAberration" ppEffectAdjust [0.01,0.01,true];
+		"chromAberration" ppEffectCommit 1;
+
+		sleep 3;
+
+		};
+
+	};
+
 if (_item == "meth") then
 
 	{

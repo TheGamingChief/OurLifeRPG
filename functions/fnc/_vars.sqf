@@ -8,7 +8,7 @@ strn 						 				= objnull;
 fn_SirenMode 				 		= 0;
 strn_array 					 		= [];
 shopactivescript        = 0;
-OL_DemeritPoints				= 0;
+OL_DemeritPoints				= 10;
 platesavailable         = true;
 gunrunavailable         = true;
 gunrun2available        = true;
@@ -18,10 +18,12 @@ Rifle_Holster           = nil;
 Pistol_Holster          = nil;
 Taser_Holster						= nil;
 Radar_Holstered         = false;
-OL_HasDisplayOpen				= false;
-OL_Lockpicking					= false;
+isTearGassed  					= false;
+isFlashBanged 					= false;
+OL_SpeedLimit						= 90;
 
-CP_RobScript_pub1 = [
+
+CP_RobScript_OL_Shop_Pub1 = [
 	["SETTINGS",  "Fionas Pub", "barmoney", "fionasavailable", "Robbed Bar"],
 	["GROUPCHAT", "You are now robbing the pub, Please stay near the Fiona for 30 seconds to receive the money", 	2],
 	["TITLETEXT", "Put your hands up bitch, this is a robbery!", 																									5],
@@ -32,7 +34,7 @@ CP_RobScript_pub1 = [
 	["GROUPCHAT", "Fiona has handed you the money! Now get out of there before the cops show up!", 								0]
 ];
 
-CP_RobScript_pub2 = [
+CP_RobScript_OL_Shop_Pub2 = [
 	["SETTINGS",  "Southside Pub", "barmoney1", "southavailable", "Robbed Bar"],
 	["GROUPCHAT", "You are now robbing the pub, Please stay near Nathan for 30 seconds to receive the money", 	  2],
 	["TITLETEXT", "Put your hands up man, this is a robbery!", 																									  5],
@@ -43,7 +45,7 @@ CP_RobScript_pub2 = [
 	["GROUPCHAT", "Nathan has handed you the money! Now get out of there before the cops show up!", 							0]
 ];
 
-CP_RobScript_pub3 = [
+CP_RobScript_OL_Shop_Pub3 = [
 	["SETTINGS",  "Macks Bar", "barmoney2", "macksavailable", "Robbed Bar"],
 	["GROUPCHAT", "You are now robbing the pub, Please stay near Mack for 30 seconds to receive the money", 	    2],
 	["TITLETEXT", "Put your hands up old man, this is a robbery!", 																							  5],
@@ -54,7 +56,7 @@ CP_RobScript_pub3 = [
 	["GROUPCHAT", "Mack has handed you the money! Now get out of there before the cops show up!", 							  0]
 ];
 
-CP_RobScript_pub4 = [
+CP_RobScript_OL_Shop_Pub4 = [
 	["SETTINGS",  "Hermanns Haxe Cellar", "barmoney3", "hermannsavailable", "Robbed Bar"],
 	["GROUPCHAT", "You are now robbing the bar, Please stay near Hermann for 30 seconds to receive the money", 	  2],
 	["TITLETEXT", "Put your hands up old man, this is a robbery!", 																							  5],
@@ -65,7 +67,7 @@ CP_RobScript_pub4 = [
 	["GROUPCHAT", "Hermann has handed you the money! Now get out of there before the cops show up!", 							0]
 ];
 
-CP_RobScript_pub5 = [
+CP_RobScript_OL_Shop_Pub5 = [
 	["SETTINGS",  "Binkys Casket Saloon", "barmoney5", "binkysavailable", "Robbed Bar"],
 	["GROUPCHAT", "You are now robbing the bar, Please stay near Binky for 30 seconds to receive the money", 	    2],
 	["TITLETEXT", "Put your hands up bro, this is a robbery!", 																							      5],
@@ -131,7 +133,7 @@ CP_RobScript_cvault = [
   ["PLAYSOUND", "Splat",                                                                                        0]
 ];
 
-CP_RobScript_pharmacy = [
+CP_RobScript_OL_Shop_Pharmacy = [
 	["SETTINGS",  "Pharmacy", "pharmmoney", "pharmacyavailable", "Robbed Pharmacy"],
 	["GROUPCHAT", "You are robbing the pharmacy, stay near Dr. Pacard for 30 seconds to receive the money", 	    2],
 	["TITLETEXT", "Put your hands up Doc this is a robbery!", 																							      3],
@@ -145,7 +147,7 @@ CP_RobScript_pharmacy = [
   ["GROUPCHAT", "Dr. Pacard hands you the money! Now get out of there before the cops show up!", 							  0]
 ];
 
-CP_RobScript_fuel2 = [
+CP_RobScript_OL_Shop_Fuel_2 = [
 	["SETTINGS",  "Gas n Porn", "station2money", "pornavailable", "Robbed Station"],
 	["GROUPCHAT", "You are now robbing Gas n Porn, Please stay near the Clerk for 20 seconds to receive the money", 		2],
 	["TITLETEXT", "Put your hands up this is a robbery!", 																							      					5],
@@ -155,7 +157,7 @@ CP_RobScript_fuel2 = [
 	["GROUPCHAT", "The employee has handed you the money! Now get out of there before the cops show up!", 							0]
 ];
 
-CP_RobScript_fuel4 = [
+CP_RobScript_OL_Shop_Fuel_4 = [
 	["SETTINGS",  "Gas n Pit", "station4money", "gaspitavailable", "Robbed Station"],
 	["GROUPCHAT", "You are now robbing Gas n Pit, Please stay near the Clerk for 20 seconds to receive the money",		  2],
 	["TITLETEXT", "Put your hands up this is a robbery!", 																							      					5],
@@ -165,7 +167,7 @@ CP_RobScript_fuel4 = [
 	["GROUPCHAT", "The employee has handed you the money! Now get out of there before the cops show up!", 							0]
 ];
 
-CP_RobScript_fuel5 = [
+CP_RobScript_OL_Shop_Fuel_5 = [
 	["SETTINGS",  "Gas n Chips", "station5money", "gaschipsavailable", "Robbed Station"],
 	["GROUPCHAT", "You are now robbing Gas n Chips, Please stay near the Clerk for 20 seconds to receive the money",		2],
 	["TITLETEXT", "Put your hands up this is a robbery!", 																							      					5],
@@ -175,7 +177,7 @@ CP_RobScript_fuel5 = [
 	["GROUPCHAT", "The employee has handed you the money! Now get out of there before the cops show up!", 							0]
 ];
 
-CP_RobScript_fuel7 = [
+CP_RobScript_OL_Shop_Fuel_1 = [
 	["SETTINGS",  "Mikes Hard Gas", "station7money", "mikesavailable", "Robbed Station"],
 	["GROUPCHAT", "You are now robbing Mikes Hard Gas, Please stay near the Clerk for 20 seconds to receive the money",	2],
 	["TITLETEXT", "Put your hands up this is a robbery!", 																							      					5],
@@ -185,7 +187,7 @@ CP_RobScript_fuel7 = [
 	["GROUPCHAT", "The clerk has handed you the money! Now get out of there before the cops show up!", 									0]
 ];
 
-CP_RobScript_fuel8 = [
+CP_RobScript_OL_Shop_Fuel_3 = [
 	["SETTINGS",  "Gas Hause", "station8money", "hausavailable", "Robbed Station"],
 	["GROUPCHAT", "You are now robbing Gas Hause, Please stay near the Clerk for 20 seconds to receive the money",			2],
 	["TITLETEXT", "Put your hands up this is a robbery!", 																							      					5],
@@ -193,4 +195,36 @@ CP_RobScript_fuel8 = [
 	["TITLETEXT", "Clerk: Damn registers stuck!", 																							     									  5],
 	["TITLETEXT", "Clerk: Here, take the money!", 																							      									5],
 	["GROUPCHAT", "The clerk has handed you the money! Now get out of there before the cops show up!", 									0]
+];
+
+OL_DebitCardSignup = [
+	["While signing up for a debit card, you must remain in the lobby of the bank or you will not receive your debit card.", 							0],
+	["The Bank Teller asks you to have a seat and start filling out paperwork for your debit card.", 																			10],
+	["After you return the papers to the Bank Teller with your information and I.D. the Bank Teller starts processing your paperwork.", 	10],
+	["The Bank Teller has completed processing your paperwork but has some questions about your account.",																10],
+	["After answering the Bank Teller's questions the Bank Teller hands you your brand new debit card.",																	0],
+	["If you lose your debit card, come back to the bank and get a new one.",																															0],
+	["The bank has excellent fraud prevention so you will not need to worry about anyone being able to use your debit card.",							0]
+];
+
+OL_SpeedPunishments = [
+  ["_speed >= 100 && _speed < 110", "1"],
+  ["_speed >= 110 && _speed < 120", "2"],
+  ["_speed >= 120 && _speed < 130", "3"],
+  ["_speed >= 130 && _speed < 140", "4"],
+  ["_speed >= 140 && _speed < 150", "5"],
+  ["_speed >= 150 && _speed < 160", "6"],
+  ["_speed >= 160 && _speed < 170", "7"],
+  ["_speed >= 170 && _speed < 180", "170/180"],
+  ["_speed >= 180 && _speed < 190", "180/190"],
+  ["_speed >= 200 && _speed < 210", "200/210"],
+  ["_speed >= 210 && _speed < 220", "210/220"],
+  ["_speed >= 220 && _speed < 230", "220/230"],
+  ["_speed >= 230 && _speed < 240", "230/240"],
+  ["_speed >= 240 && _speed < 250", "240/250"],
+  ["_speed >= 250 && _speed < 260", "250/260"],
+  ["_speed >= 260 && _speed < 270", "260/270"],
+  ["_speed >= 270 && _speed < 280", "270/280"],
+  ["_speed >= 280 && _speed < 290", "280/290"],
+  ["_speed >= 290 && _speed < 300", "290/300"]
 ];

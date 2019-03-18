@@ -1,5 +1,4 @@
 //==================================DELIVERY MISSION=========================================
-
 workplacejob_deliverymsg = [
   "STRS_workplacemission_deliverymsg_1",
   "STRS_workplacemission_deliverymsg_2",
@@ -62,9 +61,9 @@ workplacejob_taxi_maxmoney      = 10000;
 taximaxdistance			            = 7000;
 taximindistance			            = 2000;
 
-//========================================ASSASSINATION============================================
-
+//========================================ASSASSINATION=====================================
 workplacejob_assassion_failed = false;
+
 //========================================HOSTAGE===========================================
 workplacejob_hostage_break    = 5;
 workplacejob_hostage_failed   = false;

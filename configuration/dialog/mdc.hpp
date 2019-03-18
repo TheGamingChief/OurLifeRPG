@@ -52,9 +52,9 @@ class DD_PolicePC {
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			action = "[] call DD_MDC_WarrantMenu;";
+      action = "['create_warrant'] call DD_mdc_Dialog;";
 
-			text = "Remove Warrant";
+			text = "Create Warrant";
 			x = 0.195797 * safezoneW + safezoneX;
 			y = 0.3625 * safezoneH + safezoneY;
 			w = 0.0931235 * safezoneW;
@@ -63,9 +63,9 @@ class DD_PolicePC {
 		class RscButton_1601: RscButton
 		{
 			idc = 1601;
-			action = "[] call DD_mdc_RemoveAllWarrants;";
+      action = "[] call DD_MDC_WarrantMenu;";
 
-			text = "Remove All Warrants";
+			text = "Remove Warrant";
 			x = 0.195797 * safezoneW + safezoneX;
 			y = 0.4175 * safezoneH + safezoneY;
 			w = 0.0931235 * safezoneW;
@@ -74,9 +74,9 @@ class DD_PolicePC {
 		class RscButton_1602: RscButton
 		{
 			idc = 1602;
-			action = "_l = createDialog ""DD_NotesPC""; buttonSetAction[1600, ""[(ctrlText 1400)] call DD_MDC_AddNote""];";
+      action = "[] call DD_mdc_RemoveAllWarrants;";
 
-			text = "Create Note";
+			text = "Remove All Warrants";
 			x = 0.195797 * safezoneW + safezoneX;
 			y = 0.4725 * safezoneH + safezoneY;
 			w = 0.0931235 * safezoneW;
@@ -85,9 +85,9 @@ class DD_PolicePC {
 		class RscButton_1603: RscButton
 		{
 			idc = 1603;
-			action = "[] call DD_MDC_NoteMenu;";
+      action = "_l = createDialog ""DD_NotesPC""; buttonSetAction[1600, ""[(ctrlText 1400)] call DD_MDC_AddNote""];";
 
-			text = "Remove Note";
+			text = "Create Note";
 			x = 0.195797 * safezoneW + safezoneX;
 			y = 0.5275 * safezoneH + safezoneY;
 			w = 0.0931235 * safezoneW;
@@ -97,7 +97,6 @@ class DD_PolicePC {
 		{
 			idc = 1606;
 			action = "[lbCursel 2100] call DD_MDC_RunSearch";
-
 			text = "Run Search";
 			x = 0.193149 * safezoneW + safezoneX;
 			y = 0.2875 * safezoneH + safezoneY;
@@ -107,23 +106,25 @@ class DD_PolicePC {
 		class RscButton_164: RscButton
 		{
 			idc = 164;
-			action = "[lbCursel 1500] call DD_MDC_LicenseMenu;";
-
-			text = "Revoke License";
+      action = "[] call DD_MDC_NoteMenu;";
+			text = "Remove Note";
 			x = 0.195797 * safezoneW + safezoneX;
 			y = 0.5825 * safezoneH + safezoneY;
 			w = 0.0931235 * safezoneW;
 			h = 0.04125 * safezoneH;
 		};
-		/*class RscButton_1605: RscButton
+		class RscButton_1605: RscButton
 		{
 			idc = 1605;
-			text = "Delete Entry";
+      action = "[lbCursel 1500] call DD_MDC_LicenseMenu;";
+
+			text = "Revoke License";
 			x = 0.195797 * safezoneW + safezoneX;
 			y = 0.6375 * safezoneH + safezoneY;
 			w = 0.0931235 * safezoneW;
 			h = 0.04125 * safezoneH;
 		};
+    /*
 		class RscButton_1606: RscButton
 		{
 			idc = 1606;
@@ -138,9 +139,9 @@ class DD_PolicePC {
 
 
 
-class DD_NotesPC{
-	idc	 = -1;
-	class controls{
+class DD_NotesPC {
+	idd = -1;
+	class controls {
 		class RscFrame_1800: RscBackground
 		{
 			idc = 1800;
@@ -175,7 +176,6 @@ class DD_NotesPC{
 			w = 0.151741 * safezoneW;
 			h = 0.0415385 * safezoneH;
 		};
-
 	};
 };
 

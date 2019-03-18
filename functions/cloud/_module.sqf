@@ -3,6 +3,7 @@
 
 DD_Modules = DD_Modules + [
 	["DD", "cloud", "add", 					1],
+	["DD", "cloud", "index", 				1],
 	["DD", "cloud", "retrieve", 		1],
 	["DD", "cloud", "publish", 			1],
 	["DD", "cloud", "delete", 			1],

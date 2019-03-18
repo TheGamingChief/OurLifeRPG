@@ -11,10 +11,10 @@ if (count OL_GangsArray > 0) then {
     _owner    = call compile _owner;
     _members  = [_members] call CP_misc_ArrayStr2Obj;
 
-    _memberNames = [name _owner];
+    _memberNames = [_owner getVariable ["RealName", name player]];
     {
       if (_x call OL_ISSE_UnitExists) then {
-        _memberNames = _memberNames + [name _x];
+        _memberNames = _memberNames + [_x getVariable ["RealName", name player]];
       };
     } forEach _members;
 

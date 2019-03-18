@@ -5,7 +5,7 @@ if (isNil "DD_LastCiv") exitWith {
 };
 
 _notes = DD_LastCiv getVariable ["Notes", []];
-_notes set[count(_notes), [_note, name player]];
+_notes set[count(_notes), [_note, PlayerName]];
 
 DD_LastCiv setVariable ["Notes", _notes, true];
 

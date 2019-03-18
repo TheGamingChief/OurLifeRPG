@@ -26,7 +26,7 @@ if (count _configPath == 1) then
 	ctrlSetText [101, "ROOT"];
 } else
 {
-	// TODO: Cutting off the Name
+	// TODO: Cutting off theName
 	// _lenRootName = count (toArray ConfigRoot);
 	// _cfgNameArray = toarray (_configPath select ((count _configPath) -1));
 

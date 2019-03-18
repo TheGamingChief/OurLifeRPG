@@ -7,9 +7,9 @@ _members = _gang select 3;
 _members = _members - [str _player];
 _gang set [3, _members];
 
-[["UPDATE", _gang], "Server_gangs_Update", false, true] call OL_network_MP;
+[["UPDATE", _gang], "Server_Gangs_Update", false, true, false] call OL_network_MP;
 
-player groupChat format ["You have kicked %1 from the gang!", name _player];
+player groupChat format ["You have kicked %1 from the gang!", _player getVariable ["RealName", name player]];
 format ['
   if (player == %1) then {
     player groupChat "You have been kicked from your gang!";

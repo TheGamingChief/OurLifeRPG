@@ -21,13 +21,11 @@ _handler = [] execVM "ServerLoad\carparks.sqf";
 waitUntil {scriptDone _handler};
 _handler = [] execVM "ServerLoad\masterarray.sqf";
 waitUntil {scriptDone _handler};
-_handler = [] execVM "ServerLoad\shops.sqf";
+_handler = [] spawn Shops_fnc_Create;
 waitUntil {scriptDone _handler};
 _handler = [] execVM "facharvest.sqf";
 waitUntil {scriptDone _handler};
 _handler = [] execVM "ServerLoad\fishingarray.sqf";
-waitUntil {scriptDone _handler};
-_handler = [] execVM "ServerLoad\licensearray.sqf";
 waitUntil {scriptDone _handler};
 _handler = [] execVM "ServerLoad\vclarrsave.sqf";
 

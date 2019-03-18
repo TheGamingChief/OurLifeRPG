@@ -1,11 +1,13 @@
+if (player call OL_ISSE_IsVictim) exitWith {player groupChat "You can't change clothes at this moment!";};
+
 private ["_nearATM", "_clothesArray", "_index"];
 
-_nearStuff = nearestObjects [getPos player, ["tcg_atm", "olrpg_pdpilot", "TK_GUE_Soldier_Sniper_EP1"], 10] - [player];
+_nearStuff = nearestObjects [getPosATL player, ["tcg_atm", "olrpg_pdpilot", "TK_GUE_Soldier_Sniper_EP1"], 10] - [player];
 
 if (isNil "_nearStuff") exitWith { player groupChat "wut...... - Garry" };
-if (!createDialog "UI_ListMenu") exitWith { hint "Dialog Error!" };
+if (!createDialog "UI_ListMenuSmall") exitWith { hint "Dialog Error!" };
 
-if (getPlayerUID player in EMT3_id) then { _nearStuff = ["atm5"] };
+if (getPlayerUID player in EMT3_id) then { _nearStuff = ["OL_ATM_MainFire"] };
 
 _clothesArray = missionNamespace getVariable format ["OL_%1_ClothesArray", _nearStuff select 0];
 
@@ -15,7 +17,7 @@ if (isNil "_clothesArray") exitWith {
 };
 
 {
-  if (getPlayerUID player in (call compile (_x select 1))) then {
+  if ((getPlayerUID player in (call compile (_x select 1))) && (typeOf player != (_x select 0))) then {
     _index = lbAdd [1500, format["%1", _x select 2]];
     lbSetData [1500, _index, _x select 0];
   };

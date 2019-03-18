@@ -1,8 +1,8 @@
 fnc_KeyPress_ESC = {
 	if (dialog) exitwith { closeDialog 0 };
-	if (isnull (findDisplay 49)) then {
-		call OL_misc_escapemod;
-	};
+	waitUntil {!(isNull (findDisplay 46)) || OL_ESC_Closed};
+	if (OL_ESC_Closed) exitWith { OL_ESC_Closed = false };
+	if (isNull (findDisplay 49)) exitWith { call OL_misc_escapemod };
 };
 
 fnc_KeyPress_1 = {
@@ -11,6 +11,14 @@ fnc_KeyPress_1 = {
 	if(dialog)exitwith{closeDialog 0;};
 	if(isstunned) exitwith {player groupchat "You are stunned!"};
 	["swagswag_lifeesu"] call OL_ui_ShowTablet;
+};
+
+fnc_KeyPress_Shift1 = {
+	if (dialog) then { closeDialog 0 };
+	if (!INV_shortcuts) exitWith {};
+	if (isstunned) exitWith { player groupChat "You are stunned!" };
+
+	[] call OL_phone_ActionMenu;
 };
 
 fnc_KeyPress_2 = {
@@ -38,29 +46,30 @@ fnc_KeyPress_3 = {
 	nonlethalweapons = nonlethalweapons + call OL_TFAR_getPlayerRadios;
 	_weapons = weapons player - nonlethalweapons;
 	if (count _weapons > 0) then {
-		{player removeWeapon _x} forEach _weapons
-	};
-	if !(isNil "_weapons") then {
+		{ player removeWeapon _x } forEach _weapons;
 		_holder = createVehicle ["weaponholder", getPosATL player, [], 0, "CAN_COLLIDE"];
-		{_holder addWeaponCargoGlobal [_x,1];}forEach _weapons;
+		{ _holder addWeaponCargoGlobal [_x, 1] } forEach _weapons;
 	};
 };
 
 fnc_KeyPress_6 = {
-	if(dialog)exitwith{closeDialog 0;};
-	if(!INV_shortcuts)exitwith{};
-	if(isstunned) exitwith {player groupchat "You are stunned!"};
+	if (dialog) exitwith { closeDialog 0 };
+	if (!INV_shortcuts) exitwith {};
+	if (isstunned) exitwith { player groupchat "You are stunned!" };
 	[] call OL_Admin_ShowMenu;
 };
 
 fnc_KeyPress_7 = {
-
-	if(dialog)exitwith{closeDialog 0;};
-	if(!INV_shortcuts)exitwith{};
-	if ((getPlayerUID player) in OL_SwagDevs) then {
-	createDialog "balca_debug_main";
-	};
+	if (dialog) exitwith { closeDialog 0 };
+	if (!INV_shortcuts) exitwith {};
+	if ((getPlayerUID player) in OL_SwagDevs) then { createDialog "balca_debug_main" };
 };
+
+/*fnc_KeyPress_8 = {
+	if (dialog) exitwith { closeDialog 0 };
+	if (!INV_shortcuts) exitwith {};
+	[] call OL_ui_CustomKeysMenu;
+};*/
 
 fnc_KeyPress_9 = {
 	if (dialog) exitwith { closeDialog 0 };
@@ -81,9 +90,7 @@ fnc_KeyPress_Q = {
 
 fnc_KeyPress_Home = {
 	closeDialog 0;
-	if ((getplayeruid player) in OL_SwagDevs) then {
-		[] call adminMenuOpen;
-	};
+	if ((getplayeruid player) in OL_SwagDevs) then { [] call adminMenuOpen };
 };
 
 fnc_KeyPress_O = {
@@ -152,7 +159,7 @@ fnc_KeyPress_L = {
 
 	if(!INV_shortcuts)exitwith{};
 	if(isstunned) exitwith {player groupchat "You are stunned!"};
-	_vcls = call CP_misc_NearestCar;
+	_vcls = call CP_misc_NearestCars;
 	if (count _vcls > 0) then {
 		_vcl = _vcls select 0;
 		if(!(_vcl in INV_VehicleArray))exitwith{player groupchat "You do not have the keys to this vehicle.";};
@@ -207,8 +214,7 @@ fnc_KeyPress_E = {
 		if (!(isNull _civ) && _civ in shopusearray) exitwith {
 			_i = 4;
 			if (iscop && _civ in drugsellarray) exitwith { [_civ] call OL_fnc_DrugSearch };
-			_id = _civ call INV_getshopnum;
-			[0,0,0,[_id]] execVM "shopdialogs.sqf";
+			[_civ] call Shops_fnc_DisplayStoreOptions;
 		};
 
 		if(!(isNull _atm) and _atm in bankflagarray) exitwith {
@@ -290,7 +296,7 @@ fnc_KeyPress_U = {
 		if (_tgt getVariable "Attached") exitWith {};
 		ATT_PLY = _tgt;
 		_tgt attachTo [player,[0.6,0.3,0]];
-		hintSilent format ["%1 Attached!", name _tgt];
+		hintSilent format ["%1 Attached!", _tgt getVariable ["RealName", "Error: No Unit"]];
 		_tgt setVariable ["Attached",true,true];
 	};
 };
@@ -301,7 +307,7 @@ fnc_KeyPress_Shift_U = {
 	{
 		if (isNull ATT_PLY) exitWith {};
 		detach ATT_PLY;
-		hintSilent format ["%1 Released!", name _tgt];
+		hintSilent format ["%1 Released!", ATT_PLY getVariable ["RealName", "Error: No Unit"]];
 		ATT_PLY setVariable ["Attached",false,true];
 		ATT_PLY = objNull;
 	};

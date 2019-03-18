@@ -127,15 +127,16 @@ if ((_loopart == "arrest") and (player distance prisonflag <= 70))  then {
 	if (!(player call OL_ISSE_IsVictim)) exitwith {(format ["if (player == %1) then {player groupchat localize ""STRS_inventory_checknohands""};", _copobj]) call OL_network_Swag;};
 	isstunned = false;
 	[] call OL_startup_SetVariables;
+	if ("OL_License_civ_drivers" in OL_Licenses) then { player setVariable ["OL_Has_Drivers_License", true, true] };
 
 	_copPay = [player] call OL_player_WarrantTotal;
 	if (_copPay > 0) then {
 		format['if (player == %1) then { kontostand = kontostand + %2; player groupChat "This civ had a bounty of $%2! You got that bounty!" }', _copobj, _copPay] call OL_network_Swag;
 	};
 
-	["Arrest_Log", format ["%1 (%2) was arrested by %3 (%4) for %5 minute(s)", name player, getPlayerUID player, name _copobj, getPlayerUID _copobj, _duration call OL_ISSE_str_IntToStr]] call RM_fnc_LogToServer;
+	["Arrest_Log", format ["%1 (%2) was arrested by %3 (%4) for %5 minute(s)", PlayerName, getPlayerUID player, _copobj getVariable ["RealName", "Error: No Unit"], getPlayerUID _copobj, _duration call OL_ISSE_str_IntToStr]] call RM_fnc_LogToServer;
 
-	if (OL_OldClothes != "olrpg_jailinmate") then {
+	if ((typeOf player) != "olrpg_jailinmate") then {
 		OL_OldClothes = typeOf player;
 	};
 
@@ -155,15 +156,16 @@ if ((_loopart == "arrest") and (player distance prisonflag <= 70))  then {
 	jail_time = (_duration) * 60;
 	jail_bounty = (jail_time) * jail_multiplier;
 
+	//Kyles first script :) (Luke basiclly wrote it)
+	if (isMayor) then {
+		isMayor = false;
+		["Arrested"] call OL_misc_resetLaws;
+	};
+
 	while {true} do {
 		if (!(alive player))                    exitWith { _exitart = "JailExit_Died"			   };
 		if (jail_time <= 0)    								  exitWith { _exitart = "JailExit_TimeServed"  };
 		if (player distance prison_logic >= 50) exitWith { _exitart = "JailExit_Escaped"		 };
-
-		if ((((getPosATL player) select 2) > 3) && (vehicle player == player)) then {
-			player setpos getmarkerpos "prisonspawn";
-			player groupChat "Please do not try to glitch, we aint dumb - OLRPG Development Team aka CP & TRG"; // sounds guud
-		};
 
 		hintsilent format["Time until release: %1\nBail left to pay: $%2", [jail_time / 60 / 60, "HH:MM:SS"] call BIS_fnc_timeToString, jail_bounty];
 
@@ -191,7 +193,7 @@ if ((_loopart == "arrest") and (player distance prisonflag <= 70))  then {
 
 			player groupChat localize "STRS_civmenucheck_free_self";
 
-			[] call fnc_SaveStats;
+			[] spawn Luke_Stats_Save;
 		};
 		case ("JailExit_Died"): {
 	    player groupChat "R.I.P.";
@@ -206,18 +208,21 @@ if ((_loopart == "arrest") and (player distance prisonflag <= 70))  then {
 
 if (_loopart == "inventcheck") then {
 	_aktionsStarter = _this select 1;
-	(format ['if (player == %1) then {[0, 0, 0, ["inventorycheck", %2, %3, %4]] execVM "maindialogs.sqf";};',_aktionsStarter, INV_LizenzOwner, INV_InventarArray, player]) call OL_network_Swag;
+	if (isNil "_aktionsStarter") exitWith {};
+	(format ['if (player == %1) then {[0, 0, 0, ["inventorycheck", %2, %3, %4]] execVM "maindialogs.sqf";};',_aktionsStarter, OL_Licenses, INV_InventarArray, player]) call OL_network_Swag;
 };
 
 if (_loopart == "patdown") then {
 	_aktionsStarter = _this select 1;
-	(format ['if (player == %2) then {[] call OL_fnc_PatDown; systemChat format["Your weapons have been removed by %1"];};', name _aktionsStarter, player]) call OL_network_Swag;
+	if (isNil "_aktionsStarter") exitWith {};
+	(format ['if (player == %2) then {[] call OL_fnc_PatDown; systemChat format["Your weapons have been removed by %1"];};', _aktionsStarter getVariable ["RealName", "Error: No Unit"], player]) call OL_network_Swag;
 };
 
 
 if (_loopart == "licheck") then {
 	_aktionsStarter = _this select 1;
-	(format ['if (player == %1) then {[0, 0, 0, ["licensecheck", %2, %3, %4]] execVM "maindialogs.sqf";};',_aktionsStarter, INV_LizenzOwner, INV_InventarArray, player]) call OL_network_Swag;
+	if (isNil "_aktionsStarter") exitWith {};
+	(format ['if (player == %1) then {[0, 0, 0, ["licensecheck", %2, %3, %4]] execVM "maindialogs.sqf";};',_aktionsStarter, OL_Licenses, INV_InventarArray, player]) call OL_network_Swag;
 };
 
 if (_loopart == "stealmoney") then
@@ -234,7 +239,8 @@ _gridPos = mapGridPosition getpos player;
 ["geld", -(_geld)] call INV_AddInvItem;
 if (_geld >= 100000) then
 {
-	["Rob_Log", format ["%1 (%2) has robbed %3 (%4) for $%5 at %6", name _aktionsStarter, getPlayerUID _aktionsStarter, player, getPlayerUID player, _geld, _gridPos]] call RM_fnc_LogToServer;
+	["Rob_Log", format ["%1 (%2) has robbed %3 (%4) for $%5 at %6", _aktionsStarter getVariable ["RealName", "Error: No Unit"], getPlayerUID _aktionsStarter, player, getPlayerUID player, _geld, _gridPos]] call RM_fnc_LogToServer;
+	[] spawn Luke_Stats_Save;
 };
 
 (format ['if (player == %1) then {["geld", %2] call INV_AddInvItem;};hint "%1 stole %2 from %3";',_aktionsStarter, _geld, player]) call OL_network_Swag;

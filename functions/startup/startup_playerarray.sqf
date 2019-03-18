@@ -13,7 +13,7 @@ playerstringarray = ["Civ1","Civ2","Civ3","Civ4","Civ5","Civ6","Civ7","Civ8","Ci
 
 for [{_i=0}, {_i < (count playerstringarray)}, {_i=_i+1}] do {
 	if (isNil (playerstringarray select _i)) then {
-		call compile format["%1 = objNull;", (playerstringarray select _i)];
+		call compile format ["%1 = objNull;", (playerstringarray select _i)];
 	};
 };
 
@@ -32,6 +32,7 @@ if (isServer) then {
 	rolenumber = (playerarray find player) + 1;
 };
 
+waitUntil {!(isNull player) || isServer};
 role = player;
 rolestring_ucase = toUpper str player;
 

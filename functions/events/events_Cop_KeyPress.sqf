@@ -1,8 +1,16 @@
 fnc_KeyPress_ESC = {
 	if (dialog) exitwith { closeDialog 0 };
-	if (isnull (findDisplay 49)) then {
-		call OL_misc_escapemod;
-	};
+	waitUntil {!(isNull (findDisplay 46)) || OL_ESC_Closed};
+	if (OL_ESC_Closed) exitWith { OL_ESC_Closed = false };
+	if (isNull (findDisplay 49)) exitWith { call OL_misc_escapemod };
+};
+
+fnc_KeyPress_Shift1 = {
+	if (dialog) then { closeDialog 0 };
+	if (!INV_shortcuts) exitWith {};
+	if (isstunned) exitWith { player groupChat "You are stunned!" };
+
+	[] call OL_phone_ActionMenu;
 };
 
 fnc_KeyPress_F1 = {
@@ -74,6 +82,22 @@ fnc_KeyPress_2 = {
 	};
 };
 
+fnc_KeyPress_4 = {
+	if (!INV_shortcuts) exitWith {};
+	if (dialog) exitWith { closeDialog 0 };
+	if (isstunned) exitWith { player groupChat "You are stunned!" };
+
+	["OPEN"] call OL_ui_BoloMenu;
+};
+
+fnc_KeyPress_Shift_4 = {
+	if (!INV_shortcuts) exitWith {};
+	if (dialog) exitWith { closeDialog 0 };
+	if (isstunned) exitWith { player groupChat "You are stunned!" };
+
+	["LIST"] call OL_ui_BoloMenu;
+};
+
 fnc_KeyPress_CtrlF4 = {
 	if(!INV_shortcuts)exitwith{};
 	if(dialog)exitwith{closeDialog 0;};
@@ -94,18 +118,16 @@ fnc_KeyPress_3 = {
 	nonlethalweapons = nonlethalweapons + call OL_TFAR_getPlayerRadios;
 	_weapons = weapons player - nonlethalweapons;
 	if (count _weapons > 0) then {
-		{player removeWeapon _x} forEach _weapons
-	};
-	if !(isNil "_weapons") then {
+		{ player removeWeapon _x } forEach _weapons;
 		_holder = createVehicle ["weaponholder", getPosATL player, [], 0, "CAN_COLLIDE"];
-		{_holder addWeaponCargoGlobal [_x,1];}forEach _weapons;
+		{ _holder addWeaponCargoGlobal [_x, 1] } forEach _weapons;
 	};
 };
 
 fnc_KeyPress_5 = {
 
 	if (!INV_shortcuts || keyblock || vehicle player != player) exitwith {};
-	if("spikestrip" call INV_GetItemAmount == 0) exitwith {player groupChat "You don't have any spikes to throw!"};
+	if ("spikestrip" call INV_GetItemAmount == 0) exitwith { player groupChat "You don't have any spikes to throw!" };
 	keyblock = true;
 	[] spawn {
 		uiSleep 3;
@@ -117,25 +139,28 @@ fnc_KeyPress_5 = {
 };
 
 fnc_KeyPress_6 = {
-	if(dialog)exitwith{closeDialog 0;};
-	if(!INV_shortcuts)exitwith{};
-	if(isstunned) exitwith {player groupchat "You are stunned!"};
-	[] call OL_Admin_ShowMenu;
-};
+	if (dialog) exitwith { closeDialog 0 };
+		if (!INV_shortcuts) exitwith {};
+			if (isstunned) exitwith { player groupchat "You are stunned!" };
+				[] call OL_Admin_ShowMenu;
+			};
 
 fnc_KeyPress_7 = {
-
-	if(dialog)exitwith{closeDialog 0;};
-	if(!INV_shortcuts)exitwith{};
-	if ((getPlayerUID player) in OL_SwagDevs) then {
-		createDialog "balca_debug_main";
-	};
+	if (dialog) exitwith { closeDialog 0 };
+	if (!INV_shortcuts) exitwith {};
+	if ((getPlayerUID player) in OL_SwagDevs) then { createDialog "balca_debug_main" };
 };
+
+/*fnc_KeyPress_8 = {
+	if (dialog) exitwith { closeDialog 0 };
+	if (!INV_shortcuts) exitwith {};
+	[] call OL_ui_CustomKeysMenu;
+};*/
 
 fnc_KeyPress_9 = {
 	if (dialog) exitwith { closeDialog 0 };
 	if (!INV_shortcuts) exitwith {};
-	if(isstunned) exitwith {player groupchat "You are stunned!"};
+	if (isstunned) exitwith { player groupchat "You are stunned!" };
 	if (!AM_temp_carrying) then { [] call OL_checkpoint_openMenu } else { [] call OL_checkpoint_dropItem };
 };
 
@@ -151,24 +176,20 @@ fnc_KeyPress_Q = {
 
 fnc_KeyPress_Home = {
 	closeDialog 0;
-	if ((getplayeruid player) in OL_SwagDevs) then {
-		[] call adminMenuOpen;
-	};
+	if ((getPlayerUID player) in OL_SwagDevs) then { [] call adminMenuOpen };
 };
 
 fnc_KeyPress_O = {
-
-	if(!INV_shortcuts)exitwith{};
-	if(isstunned) exitwith {player groupchat "You are stunned!"};
-	if (vehicle player != player) exitWith {systemChat "You can't holster/unholster a weapon while in a vehicle."};
+	if (!INV_shortcuts) exitwith {};
+	if (isstunned) exitwith { player groupchat "You are stunned!" };
+	if (vehicle player != player) exitWith { systemChat "You can't holster/unholster a weapon while in a vehicle." };
 	["Rifle"] call OL_fnc_HolsterWeapon;
 };
 
 fnc_KeyPress_Y = {
-
-	if(dialog)exitwith{closeDialog 0;};
-	if(!INV_shortcuts)exitwith{};
-	if(isstunned) exitwith {player groupchat "You are stunned!"};
+	if (dialog) exitwith { closeDialog 0 };
+	if (!INV_shortcuts) exitwith {};
+	if (isstunned) exitwith { player groupchat "You are stunned!" };
 	[] call OL_ui_AnimationMenu;
 };
 
@@ -177,33 +198,31 @@ fnc_KeyPress_W = {
 	_vcl = vehicle player;
 	_type = typeof vehicle player;
 	_class = typeOf _vcl;
-	if(_vcl == player)exitwith{};
-	if(typeof _vcl == "Smallboat_1" or typeof _vcl == "Smallboat_2") then
+	if (_vcl == player) exitwith {};
+	if ((typeOf _vcl == "Smallboat_1") || (typeOf _vcl == "Smallboat_2")) then {
+		_vel   = velocity _vcl;
+		_speed = speed _vcl;
 
-		{
-
-		_vel = velocity _vcl;
-		_spd = speed _vcl;
-		if(_spd <= 20)then{_vcl setVelocity [(_vel select 0) * 1.001, (_vel select 1) * 1.001, (_vel select 2) * 0.99]};
-		if(_spd <= 30 and _spd > 20)then{_vcl setVelocity [(_vel select 0) * 1.002, (_vel select 1) * 1.002, (_vel select 2) * 0.99]};
-		if(_spd <= 40 and _spd > 30)then{_vcl setVelocity [(_vel select 0) * 1.003, (_vel select 1) * 1.003, (_vel select 2) * 0.99]};
-
+		switch (true) do {
+			case (_speed <= 20): { _vcl setVelocity [(_vel select 0) * 1.001, (_vel select 1) * 1.001, (_vel select 2) * 0.99] };
+			case (_speed <= 30 && _speed > 20): { _vcl setVelocity [(_vel select 0) * 1.002, (_vel select 1) * 1.002, (_vel select 2) * 0.99] };
+			case (_speed <= 40 && _speed > 30): { _vcl setVelocity [(_vel select 0) * 1.003, (_vel select 1) * 1.003, (_vel select 2) * 0.99] };
 		};
+	};
 
 	_lvl = _vcl getvariable "tuning";
-	if(isEngineOn _vcl and !isnil "_lvl") then
-
-		{
-
+	if(isEngineOn _vcl and !isnil "_lvl") then {
 		_vel = velocity _vcl;
-		_spd = speed _vcl;
-		if(_lvl == 1)then{_vcl setVelocity [(_vel select 0) * 1.006, (_vel select 1) * 1.006, (_vel select 2) * 0.99]};
-		if(_lvl == 2)then{_vcl setVelocity [(_vel select 0) * 1.008, (_vel select 1) * 1.008, (_vel select 2) * 0.99]};
-		if(_lvl == 3)then{_vcl setVelocity [(_vel select 0) * 1.010, (_vel select 1) * 1.010, (_vel select 2) * 0.99]};
-        if(_lvl == 4)then{_vcl setVelocity [(_vel select 0) * 1.012, (_vel select 1) * 1.012, (_vel select 2) * 0.99]};
-        if(_lvl == 5)then{_vcl setVelocity [(_vel select 0) * 1.014, (_vel select 1) * 1.014, (_vel select 2) * 0.99]};
-        if(_lvl == 6)then{_vcl setVelocity [(_vel select 0) * 1.018, (_vel select 1) * 1.018, (_vel select 2) * 0.99]};
+
+		switch (_lvl) do {
+			case 6: { _vcl setVelocity [(_vel select 0) * 1.018, (_vel select 1) * 1.018, (_vel select 2) * 0.99] };
+			case 5: { _vcl setVelocity [(_vel select 0) * 1.014, (_vel select 1) * 1.014, (_vel select 2) * 0.99] };
+			case 4: { _vcl setVelocity [(_vel select 0) * 1.012, (_vel select 1) * 1.012, (_vel select 2) * 0.99] };
+			case 3: { _vcl setVelocity [(_vel select 0) * 1.010, (_vel select 1) * 1.010, (_vel select 2) * 0.99] };
+			case 2: { _vcl setVelocity [(_vel select 0) * 1.008, (_vel select 1) * 1.008, (_vel select 2) * 0.99] };
+			case 1: { _vcl setVelocity [(_vel select 0) * 1.006, (_vel select 1) * 1.006, (_vel select 2) * 0.99] };
 		};
+	};
 };
 
 fnc_KeyPress_F5 = {
@@ -222,7 +241,7 @@ fnc_KeyPress_L = {
 
 	if(!INV_shortcuts)exitwith{};
 	if(isstunned) exitwith {player groupchat "You are stunned!"};
-	_vcls = call CP_misc_NearestCar;
+	_vcls = call CP_misc_NearestCars;
 	if (count _vcls > 0) then {
 		_vcl = _vcls select 0;
 		if(!(_vcl in INV_VehicleArray))exitwith{player groupchat "You do not have the keys to this vehicle.";};
@@ -251,8 +270,8 @@ fnc_KeyPress_T = {
 };
 
 fnc_KeyPress_R = {
-	if ((vehicle player == player) || ((vehicle player) iskindof "Air") || (player != driver (vehicle player))) exitWith {};
-	[] spawn OL_fnc_Pit;
+	if ((vehicle player == player) || ((vehicle player) isKindOf "Air") || (player != driver (vehicle player))) exitWith {};
+	[] spawn Luke_Police_Pit;
 };
 
 
@@ -288,8 +307,7 @@ fnc_KeyPress_E = {
 		if (!(isNull _civ) && _civ in shopusearray) exitwith {
 			_i = 4;
 			if (iscop && _civ in drugsellarray) exitwith { [_civ] call OL_fnc_DrugSearch };
-			_id = _civ call INV_getshopnum;
-			[0,0,0,[_id]] execVM "shopdialogs.sqf";
+			[_civ] call Shops_fnc_DisplayStoreOptions;
 		};
 
 		if (!(isNull _atm) and _atm in bankflagarray) exitwith {
@@ -372,28 +390,20 @@ fnc_KeyPress_Shift_F = {
 
 fnc_KeyPress_Tilde = {
 	if (!INV_shortcuts) exitWith {};
-	if (!backupavailable) exitwith { player sidechat "Your Panic Button Is Disabled, Try again in 60 seconds" };
-	if (!alive player || player getVariable "KOED") exitWith { player groupChat "You are dead and can't press your Panic Button!" };
-	backupavailable = false;
-	player groupchat "You have requested backup. Your location has been marked on the map.";
 
-	format['
-	if (iscop) then {
-		_markerobj = createMarkerLocal [("Backup_" + name %1), getPos %1];
-		_markerobj setMarkerShapeLocal "ICON";
-		_markerobj setMarkerTypeLocal "Warning";
-		_markerobj setMarkerColorLocal "ColorRed";
-		_markerobj setMarkerTextLocal "Officer Requested Backup Here!";
+	OL_PanicClicks = OL_PanicClicks + 1;
 
-		player sideChat "%2 (%1) Has hit their panic button, they need immediate backup! Their location has been marked on the map via a map marker! GRID: %3";
-		playSound "beepsimple";
-	}', player, name player, mapGridPosition player] call OL_network_Swag;
-
-	player sidechat "Your panic button is now disabled. It will be available in 60 seconds.";
-	uiSleep 60;
-	backupavailable = true;
-	player sidechat "Your panic button is now available.";
-	deleteMarker ("Backup_" + name player);
+	if (OL_PanicClicks == 1) then {
+		player groupChat "Press your panic button (~) within 10 seconds to confirm your panic!";
+		for "_i" from 0 to 20 do {
+			if (OL_PanicClicks >= 2) exitWith {
+				[] spawn OL_misc_panicButton;
+				OL_PanicClicks = 0;
+			};
+			uiSleep 0.5;
+		};
+		OL_PanicClicks = 0;
+	};
 };
 
 fnc_KeyPress_CtrlF3 = {

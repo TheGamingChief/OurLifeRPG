@@ -9,14 +9,18 @@ if (iscop && !(isciv)) exitWith {
       _mrk setMarkerColorLocal "ColorBlue";
       _mrk setMarkerSizeLocal  [1.2, 1.2];
       OL_CopMarkerArray set [count OL_CopMarkerArray, _mrk];
-      } forEach coparray;
+    } forEach coparray;
   };
 
   {
-    if (_x call OL_ISSE_UnitExists) then {
+    if (!(isNull _x)) then {
       _mrk = OL_CopMarkerArray select _forEachIndex;
       _mrk setMarkerAlphaLocal 1;
       _mrk setMarkerPosLocal (getPos _x);
+    } else {
+      _mrk = OL_CopMarkerArray select _forEachIndex;
+      _mrk setMarkerAlphaLocal 0;
+      _mrk setMarkerPosLocal [0, 0, 0];
     };
   } forEach coparray;
 };
@@ -36,10 +40,14 @@ if (ismedic) exitWith {
   };
 
   {
-    if (_x call OL_ISSE_UnitExists) then {
+    if (!(isNull _x)) then {
       _mrk = OL_EMSMarkerArray select _forEachIndex;
       _mrk setMarkerAlphaLocal 1;
       _mrk setMarkerPosLocal (getPos _x);
+    } else {
+      _mrk = OL_EMSMarkerArray select _forEachIndex;
+      _mrk setMarkerAlphaLocal 0;
+      _mrk setMarkerPosLocal [0, 0, 0];
     };
   } forEach medicarray;
 };

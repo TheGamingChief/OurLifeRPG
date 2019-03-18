@@ -6,5 +6,6 @@ DD_Modules = DD_Modules + [
 	["OL", "checkpoint", "dropItem", 	 	 1],
 	["OL", "checkpoint", "PurchaseItem", 1],
 	["OL", "checkpoint", "ReBuy",		 		 1],
-	["OL", "checkpoint", "Clear",				 1]
+	["OL", "checkpoint", "Clear",				 1],
+	["OL", "checkpoint", "Delete",       1]
 ];

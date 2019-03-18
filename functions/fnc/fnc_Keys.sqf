@@ -6,10 +6,10 @@ switch (_this select 0) do {
     if (player distance _vcl > 20) exitWith { player groupChat "You must be within 20m of the vehicle." };
     if (locked _vcl) then {
       format ["%1 lock false", _vcl] call OL_network_Swag;
-      player groupChat "Vehicled Unlocked";
+      player groupChat "Vehicle Unlocked";
     } else {
       format ["%1 lock true", _vcl] call OL_network_Swag;
-      player groupChat "Vehicled Locked";
+      player groupChat "Vehicle Locked";
     };
   };
   case "use": {
@@ -27,16 +27,26 @@ switch (_this select 0) do {
     buttonSetAction [5, "if ((lbCurSel 1) > -1) then { [""GIVE"", (INV_VehicleArray select lbCurSel 1), lbCurSel 1] call OL_fnc_Keys }; closedialog 0;"];
   };
   case "GIVE": {
-    _civ = INV_PLAYERLIST select (call compile (INV_InventarGiveReceiver));
+    _civ = playerarray select (call compile (INV_InventarGiveReceiver));
     _key = _this select 1;
 
+    _isPlayer = {
+      if (isNull _this) exitWith { false };
+      if (str(_this) == "<null>") exitWith { false };
+      if (str(_this) == "<NULL-Object>") exitWith { false };
+      if (!(isPlayer _this)) exitWith { false };
+      if (getPlayerUID _this == "") exitWith { false };
+      true;
+    };
+
     if (_civ == player) exitWith { player groupChat "You cannot gives keys to yourself." };
-    if (!(_civ call OL_ISSE_UnitExists)) exitWith { player groupChat "The person you are trying to give keys to doesn't actually exist." };
+    if (!(_civ call _isPlayer)) exitWith { player groupChat "The person you are trying to give keys to doesn't actually exist." };
     if (player distance _civ > 20) exitWith { player groupChat "You must be within 20m of the player you are trying to give keys too." };
 
     format['if (player == %1) then {
         INV_VehicleArray = INV_VehicleArray + [%2];
         player groupChat "You have received keys to a vehicle.";
+        [player] call OL_vehicle_KeysToServer;
     };', _civ, _key] call OL_network_Swag;
 
     player groupChat "You gave the keys to the selected player.";

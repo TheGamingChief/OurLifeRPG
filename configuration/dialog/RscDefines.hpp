@@ -1,4 +1,5 @@
 
+
 #define FontM 			"Zeppelin32"
 
 #define FontHTML 		"Zeppelin32"
@@ -153,7 +154,7 @@ class RscFrame
 
   colorBackground[] = {Dlg_ColorScheme_Red, 1}; // unused?
   colorText[] = {Dlg_ColorScheme_Yellow, 1}; // unused?
-  font = FontM_R;
+  font = FontM;
 
   text = "";
 };
@@ -311,6 +312,26 @@ sizeEx            = 0.02;
 text              = "";
 
 };
+
+class RscText_G
+{
+	access = 0;
+	type = 0;
+	idc = -1;
+	colorBackground[] = {0,0,0,0};
+	colorText[] = {0.8784,0.8471,0.651,1};
+	text = "";
+	fixedWidth = 0;
+	x = 0;
+	y = 0;
+	h = 0.037;
+	w = 0.3;
+	style = 0;
+	shadow = 2;
+	font = "Zeppelin32";
+	SizeEx = 0.03921;
+};
+
 class D_RscTextTitle
 
 {
@@ -418,6 +439,38 @@ soundEnter[]              = {"", 0.15, 1};
 
 };
 
+class RscButton_Hidden
+{
+	access = 0;
+	type = 1;
+	text = "";
+	colorText[] = {0,0,0,0};
+	colorDisabled[] = {0,0,0,0};
+	colorBackground[] = {0,0,0,0};
+	colorBackgroundDisabled[] = {0,0,0,0};
+	colorBackgroundActive[] = {0,0,0,0};
+	colorFocused[] = {0,0,0,0};
+	colorShadow[] = {0,0,0,0};
+	colorBorder[] = {0,0,0,0};
+	soundEnter[] = {"\ca\ui\data\sound\onover",0.09,1};
+	soundPush[] = {"\ca\ui\data\sound\new1",0,0};
+	soundClick[] = {"\ca\ui\data\sound\onclick",0.07,1};
+	soundEscape[] = {"\ca\ui\data\sound\onescape",0.09,1};
+	style = 2;
+	x = 0;
+	y = 0;
+	w = 0.095589;
+	h = 0.039216;
+	shadow = 2;
+	font = "Zeppelin32";
+	sizeEx = 0.03921;
+	offsetX = 0.003;
+	offsetY = 0.003;
+	offsetPressedX = 0.002;
+	offsetPressedY = 0.002;
+	borderSize = 0;
+};
+
 class RscDummy : RscButton
 
 {
@@ -470,8 +523,8 @@ font = FontHTML;
 sizeEx = 0.02;
 colorText[] = {1, 1, 1, 1};
 colorSelection[] = {0.5, 0.5, 0.5, 1};
-autocomplete = false;text = "";
-
+autocomplete = false;
+text = "";
 };
 
 class TGC_RscEdit
@@ -496,18 +549,33 @@ colorSelect[]           = {0, 0, 0, 1.0};
 colorSelectBackground[] = {0.7, 0.7, 0.7, 1};
 colorText[]             = {1, 1, 1, 1};
 colorBackground[]       = {0.8, 0.8, 0.8, 0.3};
-colorScrollbar[] 	= {Dlg_Color_White,1};
+colorScrollbar[] 				= {0.26953125, 0.46484375, 0.734375, 1};
 font                    = FontHTML;
 sizeEx                  = 0.025;
-borderSize 	= 0;
+borderSize 							= 0;
 rowHeight               = 0.04;
-period 			= 1.200000;
-maxHistoryDelay 	= 1.000000;
-autoScrollSpeed 	= -1;
-autoScrollDelay 	= 5;
-autoScrollRewind 	= 0;
+period 									= 1.200000;
+maxHistoryDelay 				= 1.000000;
+autoScrollSpeed 				= -1;
+autoScrollDelay 				= 5;
+autoScrollRewind 				= 0;
 
-class ScrollBar {};
+class ScrollBar
+{
+	color[] = {0.26953125, 0.46484375, 0.734375, 1};
+	colorActive[] = {0.26953125, 0.46484375, 0.734375, 1};
+	colorDisabled[] = {0.26953125, 0.46484375, 0.734375, 1};
+	thumb = "";
+	arrowFull = "";
+	arrowEmpty = "";
+	border = "";
+/*
+	thumb = "\ca\ui\data\ui_scrollbar_thumb_ca.paa";
+	arrowFull = "\ca\ui\data\ui_arrow_top_active_ca.paa";
+	arrowEmpty = "\ca\ui\data\ui_arrow_top_ca.paa";
+	border = "\ca\ui\data\ui_border_scroll_ca.paa";
+*/
+};
 
 };
 
@@ -561,4 +629,15 @@ style   = 0;
 color[] = {0.2, 0.2, 0.2, 1};
 colorActive[] = {1, 1, 1, 1};
 
+};
+
+class RscProgress
+{
+	type = 8;
+	style = 0;
+	texture = "#(argb,8,8,3)color(0,65,105,225)";
+	shadow = 2;
+	colorFrame[] = {1, 1, 1, 1};
+	colorBackground[] = {1, 1, 1, 1};
+	colorBar[] = {0.17,0.36,1,1};
 };

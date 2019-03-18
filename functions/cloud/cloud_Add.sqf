@@ -3,7 +3,7 @@ _cloudVariable = _this select 0;
 _cloudData = _this select 1;
 _cloudKey = _this select 2;
 
-_cloudPiece = [_cloudVariable] call DD_Cloud_Retrieve;
+_cloudPiece = [_cloudVariable] call DD_cloud_Index;
 if ((_cloudPiece) == -1) then{
 	DD_Cloud set[count(DD_Cloud), [_cloudVariable, _cloudData, _cloudKey]];
 	true;
@@ -16,3 +16,5 @@ if ((_cloudPiece) == -1) then{
 	DD_Cloud set [_index, [_cloudVariable, _cloudData, _cloudKey]];
 	true;
 };
+
+if (_cloudKey == "Bolos") then { [[], "Server_Bolos_Request", false, true, false] call OL_network_MP }; // Fix for bolos not automaticlly updating.

@@ -8,13 +8,13 @@ _civLics  = DD_LastCiv getVariable["Licenses", []];
 
 
 _license = _civLics select _index;
-if(_license in ["cocaine ga1","lsd ga1","heroin ga2", "lsd ga2", "heroin ga3", "marijuana ga3","heroin ga4","marijuana ga4", "assassinlic","terror"])exitWith{hint "You cannot remove that license, sir. Please stop."};
-if !(((getplayeruid player) in Cpl_id) or ((getplayeruid player) in Deputy_id)) exitWith{hint "You need to a Corporal or higher to do this!"};
+if(_license in ["OL_License_civ_cocaineGA1","OL_License_civ_lsdGA1","OL_License_civ_heroinGA2","OL_License_civ_lsdGA2","OL_License_civ_heroinGA3","OL_License_civ_marijuanaGA3","OL_License_civ_heroinGA4","OL_License_civ_marijuanaGA4","OL_License_civ_assassin","OL_License_civ_terror"])exitWith{hint "You cannot remove that license, sir. Please stop."};
+if (!(getplayeruid player in Cpl_id)) exitWith{hint "You need to a Corporal or higher to do this!"};
 
 format['
 	if(player == %1)then{
-		INV_LizenzOwner set[%5, -1];
-		INV_LizenzOwner = INV_LizenzOwner - [-1];
+		OL_Licenses set[%5, -1];
+		OL_Licenses = OL_Licenses - [-1];
 
 		systemChat "Officer %3 has revoked your %2 License.";
 	};
@@ -22,7 +22,7 @@ format['
 	if(isCop)then{
 		systemChat "POLICEDATABSE: Officer %3 has revoked %4s %2 License.";
 	};
-', DD_LastCiv, _license, name player, name DD_LastCiv, _index] call OL_network_Swag;
+', DD_LastCiv, _license, PlayerName, DD_LastCiv getVariable ["RealName", "Error: No Unit"], _index] call OL_network_Swag;
 
 closeDialog 0;
 

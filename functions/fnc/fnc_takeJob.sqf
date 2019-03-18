@@ -10,19 +10,19 @@ fn_LeftgussNotification = {
 };
 
 1001 cutText ["Guss: So here's the Job...","PLAIN DOWN"];
-if (player distance guss >= 5) exitWith { [] call fn_LeftgussNotification };
+if (player distance OL_Shop_Guss >= 5) exitWith { [] call fn_LeftgussNotification };
 uiSleep 3;
 1001 cutText ["Guss: You go pickup my weapons shipment from the location marked on your map","PLAIN DOWN"];
-if (player distance guss >= 5) exitWith { [] call fn_LeftgussNotification };
+if (player distance OL_Shop_Guss >= 5) exitWith { [] call fn_LeftgussNotification };
 uiSleep 3;
 1001 cutText ["Guss: You bring back the shipment in the allotted time.","PLAIN DOWN"];
-if (player distance guss >= 5) exitWith { [] call fn_LeftgussNotification };
+if (player distance OL_Shop_Guss >= 5) exitWith { [] call fn_LeftgussNotification };
 uiSleep 3;
 1001 cutText ["Guss: You receive the biggest payout of your life.","PLAIN DOWN"];
-if (player distance guss >= 5) exitWith { [] call fn_LeftgussNotification };
+if (player distance OL_Shop_Guss >= 5) exitWith { [] call fn_LeftgussNotification };
 uiSleep 3;
 1001 cutText ["Guss: You fail to make it in time or get caught by the cops the Deals Over!.","PLAIN DOWN"];
-if (player distance guss >= 5) exitWith { [] call fn_LeftgussNotification };
+if (player distance OL_Shop_Guss >= 5) exitWith { [] call fn_LeftgussNotification };
 
 _grLocation = ["gman1m","gman2m","gman3m","gman5m","gman5m","gman6m","gman7m","gman8m"];
 _grSelection = _grLocation call bis_fnc_selectrandom;
@@ -49,7 +49,7 @@ gman disableAI "FSM";
 uiSleep 3;
 
 1001 cutText ["Guss: The location has been marked on your map, you have 6 minutes to get there.","PLAIN DOWN"];
-if (player distance guss >= 5) exitWith {[] call fn_LeftgussNotification;};
+if (player distance OL_Shop_Guss >= 5) exitWith {[] call fn_LeftgussNotification;};
 uiSleep 3;
 1001 cutText ["Guss: Good Luck!","PLAIN DOWN"];
 gunrun2available = true;

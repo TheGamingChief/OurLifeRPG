@@ -42,7 +42,17 @@ CPB_BASE_classnames = [
 ];
 
 CPB_EMS_classnames = [
-	["land_ladder",          2000,  [0, 2, 3.9], "Large Ladder"]
+	["land_ladder",          2000, [0, 2, 3.9], "Large Ladder"],
+	["jerseybarrierc", 			 1000, [0, 2, 0.5], "Jersey Barrier"],
+	["il_barrier", 					 2000, [0, 2, 0.4], "Short Concreate Barrier"],
+	["Arrow_Sign_Both",      1000, [0, 2, 1.9], "Arrow Sign (Both)"],
+	["Arrow_Sign_Left",      1000, [0, 2, 1.9], "Arrow Sign (Left)"],
+	["Arrow_Sign_Right",     1000, [0, 2, 1.9], "Arrow Sign (Right)"],
+	["Traffic_Drum",         1000, [0, 2, 0.7], "Traffic Drum"],
+	["Tent_Event",           1000, [0, 2, 2.3], "Tent Event"],
+	["FlagCarrierUSA_EP1", 	 1,    [0, 2, 4.0], "Merican Flag"],
+	["tcg_sign60", 					 1000, [0, 2, 1.0], "Speed Limit Sign (60)"],
+	["tcg_sign90", 					 1000, [0, 2, 1.0], "Speed Limit Sign (90)"]
 ];
 
 CPB_TOW_classnames = [
@@ -51,12 +61,6 @@ CPB_TOW_classnames = [
 	["Arrow_Sign_Right",     1000, [0, 2, 1.9], "Arrow Sign (Right)"],
 	["Traffic_Drum",         1000, [0, 2, 0.7], "Traffic Drum"],
 	["Tent_Event",           1000, [0, 2, 2.3], "Tent Event"]
-];
-
-OL_CheckpointWL = [
-	"76561198055543664", // Mark Stavaros
-	"76561198065459565", // Isaac
-	"76561198045257930"  // Lansing
 ];
 
 AM_temp_carrying = false;

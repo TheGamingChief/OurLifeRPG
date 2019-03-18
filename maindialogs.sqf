@@ -22,11 +22,11 @@ if (_art == "licswag") exitWith {
 if (!(createDialog "liste_1_button")) exitWith {hint "Dialog Error!";};
 	lbAdd [1, _trennlinie];
 	lbAdd [1, localize "STRS_statdialog_licenselist"];
-	for [{_i=0}, {_i < (count INV_Lizenzen)}, {_i=_i+1}] do
+	for [{_i=0}, {_i < (count OL_LicenseArray)}, {_i=_i+1}] do
 	{
-		if (((INV_Lizenzen select _i) select 0) call INV_HasLicense) then
+		if (((OL_LicenseArray select _i) select 1) call OL_license_Owns) then
 		{
-			lbAdd [1, ((INV_Lizenzen select _i) select 2)];
+			lbAdd [1, ((OL_LicenseArray select _i) select 0)];
 		};
 	};
 
@@ -74,7 +74,7 @@ if (!(createDialog "liste_1_button")) exitWith {hint "Dialog Error!";};
 	for [{_i=0}, {_i < (count playerarray)}, {_i=_i+1}] do
 	{
 		_spieler = playerarray select _i;
-		if (!isnull _spieler and isPlayer _spieler) then {lbAdd [1, (format ["%1: %2", _spieler, name _spieler])];};
+		if (!isnull _spieler and isPlayer _spieler) then {lbAdd [1, (format ["%1: %2", _spieler, _spieler getVariable ["RealName", name player]])];};
 	};
 };
 if (_art == "oilswag") exitWith {
@@ -106,11 +106,11 @@ if (!(createDialog "liste_1_button")) exitWith {hint "Dialog Error!";};
 
 		lbAdd [1, format["Gang Name: %1", _OL_GangsArray select 1]];
 		lbAdd [1, format["Members:"]];
-		if !(isNull _leader) then {lbAdd [1, format["%1 (Leader)", _leader getVariable "RealName"]]};
+		if !(isNull _leader) then {lbAdd [1, format["%1 (Leader)", _leader getVariable ["RealName", name player]]]};
 		private "_j"; /// BUG FIX
 			for [{_j=0}, {_j < (count _members)}, {_j=_j+1}] do
 			{
-				lbAdd [1, format["%1", (call compile (_members select _j)) getVariable "RealName"]];
+				lbAdd [1, format["%1", (call compile (_members select _j)) getVariable ["RealName", name player]]];
 			};
 		lbAdd [1, _trennlinie];
 	};
@@ -131,7 +131,7 @@ if (_art == "inventorycheck") exitWith {
 	for [{_i=0}, {_i < (count _licensearray)}, {_i=_i+1}] do
 	{
 		_lizenz = (_licensearray select _i);
-		lbAdd [1, format ["%1", (_lizenz call INV_GetLicenseName)]];
+		lbAdd [1, format ["%1", (_lizenz call OL_license_name)]];
 	};
 	lbAdd [1, _trennlinie];
 	lbAdd [1, localize "STRS_statdialog_inventarlist"];
@@ -177,7 +177,7 @@ if (_art == "licensecheck") exitWith {
 	for [{_i=0}, {_i < (count _licensearray)}, {_i=_i+1}] do
 	{
 		_lizenz = (_licensearray select _i);
-		lbAdd [1, format ["%1", (_lizenz call INV_GetLicenseName)]];
+		lbAdd [1, format ["%1", (_lizenz call OL_license_name)]];
 	};
 	lbAdd [1, _trennlinie];
 
@@ -213,7 +213,7 @@ if (_art == "coplog") exitWith {
 			if (count _currentWarrants > 0) then {
 				_str = "";
 
-				lbAdd [1, format ["%1 (Bounty: %2): %3 is wanted for:",_civilian, [_civilian] call OL_player_WarrantTotal, name _civilian]];
+				lbAdd [1, format ["%1 (Bounty: %2): %3 is wanted for:",_civilian, [_civilian] call OL_player_WarrantTotal, _civilian getVariable ["RealName", name player]]];
 				{
 					lbAdd[1, format["%1 (x%2)", _x select 0, _x select 1]];
 				} foreach _currentWarrants;
@@ -265,7 +265,8 @@ if (_art == "gangmenu") then
 
 {
 
-if (!(createDialog "gang_menu")) exitWith {hint "Dialog Error!";};
+systemChat "If this is getting run please contact a Developer.";
+/*if (!(createDialog "gang_menu")) exitWith {hint "Dialog Error!";};
 private "_i";
 for [{_i=0}, {_i < (count gangsarray)}, {_i=_i+1}] do
 
@@ -275,7 +276,7 @@ for [{_i=0}, {_i < (count gangsarray)}, {_i=_i+1}] do
 	_index = lbAdd [202, format ["%1 - Memberlist: %2", (_gangarray select 0), (_gangarray select 1)]];
 	lbSetData [202, _index, format ["%1", (_gangarray select 0)]];
 
-	};
+	};*/
 
 };
 
@@ -289,7 +290,7 @@ if (!(createDialog "gilde_verwaltung")) exitWith {hint "Dialog Error!";};
 
 _members = [];
 private "_i";
-for [{_i=0}, {_i < (count gangsarray)}, {_i=_i+1}] do {if ((name player) in ((gangsarray select _i) select 1)) exitWith {_members = ((gangsarray select _i) select 1)};};
+for [{_i=0}, {_i < (count gangsarray)}, {_i=_i+1}] do {if ((PlayerName) in ((gangsarray select _i) select 1)) exitWith {_members = ((gangsarray select _i) select 1)};};
 
 _index = lbAdd [201, "Yes"];
 lbSetData [201, _index, "true"];

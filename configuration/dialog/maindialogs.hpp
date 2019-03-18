@@ -81,6 +81,7 @@ class liste_1_button
 
 	class background : RscBgRahmen
 	{
+		colorText[] = {0.26953125, 0.46484375, 0.734375, 1};
 		x = 0.21;
 		y = 0.05;
 		w = 0.52;
@@ -89,7 +90,7 @@ class liste_1_button
 		text = $STRD_description_spielerliste_header;
 	};
 
-	class spielerliste : RscListBox
+	class spielerliste : DA_ListBox
 	{
 		idc = 1;
 		x = 0.22;

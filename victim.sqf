@@ -27,15 +27,12 @@ if (_killer call OL_ISSE_UnitExists) then {
 			} forEach _nearVehicles;
 		};
 
+	if ((_murdered) && (!_killedByVehicle)) then { ["Death_Log", format ["%1 (%2) was killed by %3 (%4)", PlayerName, getPlayerUID player, _killer getVariable ["RealName", name _killer], getPlayerUID _killer]] call RM_fnc_LogToServer };
+	if (_killedByVehicle) then { ["Death_Log", format ["%3 (%4) killed %1 (%2) with a vehicle.", PlayerName, getPlayerUID player, _killer getVariable ["RealName", name _killer], getPlayerUID _killer]] call RM_fnc_LogToServer };
+
 	format ["
-		if (%7 and !%5) then {
-			server globalChat ""%3 was killed by %4""
-		};
-		if (%5) then {
-			server globalChat ""%4 killed %3 with a vehicle. Intentionally running over another player with out reason is against server rules""
-		};
-		if (player == %8) then {
-			[%1, %5] execVM ""killer.sqf""
-		};
-	", player, _killer, name player, name _killer, _killedByVehicle, _killerLicense, _murdered, _killerstring] call OL_network_Swag;
+		if (%7 and !%5) then { server globalChat ""%3 was killed by %4"" };
+		if (%5) then { server globalChat ""%4 killed %3 with a vehicle. Intentionally running over another player with out reason is against server rules"" };
+		if (player == %8) then { [%1, %5] execVM ""killer.sqf"" };
+	", player, _killer, PlayerName, _killer getVariable ["RealName", "Error: No Unit"], _killedByVehicle, _killerLicense, _murdered, _killerstring] call OL_network_Swag;
 };

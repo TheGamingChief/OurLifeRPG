@@ -80,4 +80,4 @@ if(iscop) then {
 	waitUntil {alive player};
 	deleteVehicle role;
 };
-INV_hunger = 5;
+INV_hunger = 0;

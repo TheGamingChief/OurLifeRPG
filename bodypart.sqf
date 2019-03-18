@@ -1,9 +1,3 @@
-////////////////////////////////////
-////			         //
-//      Copyright � TCG         //
-//www.tcgaming.enjin.com       //
-////////////////////////////////
-
 _art = _this select 0;
 if(iscop)exitwith{};
 if(working)exitwith{player groupChat "Your still gathering parts";};
@@ -21,7 +15,7 @@ sleep 5;
 titletext ["Gathering Body Part", "PLAIN DOWN", 1];
 sleep 1;
 titletext [format ["You got a %1!", _randres], "PLAIN"];
-_avail = floor (INV_Tragfaehigkeit - (call INV_GetOwnWeight));
+_avail = floor (INV_Weight - (call INV_GetOwnWeight));
 totalamount = totalamount + _amount;
 if((totalamount*3) >= _avail)exitwith{totalamount = (_avail/3); player groupchat "maximum weight reached"; _i=6;};
 player groupchat format["You got %1 %2.", _amount, _randres];

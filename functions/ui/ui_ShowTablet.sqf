@@ -23,7 +23,7 @@ for [{_c=0}, {_c < (count INV_playerStringList)}, {_c=_c+1}] do {
 	};
 };
 
-lbAdd [1501,format ["Name: %1 | Bank: $%2", name player, Kontostand call OL_ISSE_str_IntToStr]];
+lbAdd [1501,format ["Name: %1 | Bank: $%2", PlayerName, Kontostand call OL_ISSE_str_IntToStr]];
 lbAdd [1501,format ["Player ID: %1", getplayerUID player]];
 
 lbSetCurSel [21009, 0];
