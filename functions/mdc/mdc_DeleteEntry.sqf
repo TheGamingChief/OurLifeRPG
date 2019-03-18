@@ -3,7 +3,7 @@ if(isNil "DD_LastCiv")exitWith{
 	hint "Please select a civilian.";
 };
 
-if !(((getplayeruid player) in Cpl_id) or ((getplayeruid player) in Deputy_id)) exitWith{hint "You need to a Corporal or higher to do this!"};
+if (!(getplayeruid player in Cpl_id)) exitWith{hint "You need to a Corporal or higher to do this!"};
 
 _civWarrants = DD_LastCiv getVariable["Warrants", []];
 _civNotes = DD_LastCiv getVariable["Notes", []];

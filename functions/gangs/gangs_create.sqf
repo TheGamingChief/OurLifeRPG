@@ -15,7 +15,7 @@ _members  = [];
 _locked   = false;
 
 _data = [_id, _name, _owner, _members, _locked];
-[["ADD", _data], "Server_gangs_Update", false, true] call OL_network_MP;
+[["ADD", _data], "Server_Gangs_Update", false, true, false] call OL_network_MP;
 
 OL_PlayerGangID = _id;
 player groupChat format['You have created a gang called: %1', _name];

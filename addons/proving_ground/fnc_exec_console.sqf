@@ -7,7 +7,7 @@ switch (_mode) do {
 	case 0: {//init
 		_console_history = __uiGet(balca_console_history);
 		if (isNil{_console_history}) then {
-			_console_history = ["player setVariable [""KOED"", false, true];  player setVariable [""R3F_REV_est_inconscient"", false, true];"];
+			_console_history = ["player setVariable [""KOED"", false, true];  player setVariable [""R3F_REV_est_inconscient"", false, true];", "(vehicle player) setVariable [""Tuning"", 6, true];"];
 			__uiSet(balca_console_history,_console_history);
 			{
 				GET_CTRL(balca_debug_console_history_IDC) lbAdd _x;

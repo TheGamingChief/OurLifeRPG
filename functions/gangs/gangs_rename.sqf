@@ -8,7 +8,7 @@ if (count _dupeCheck > 0) exitWith { player groupChat "There is already a gang c
 
 _gang set [1, _newName];
 
-[["UPDATE", _gang], "Server_gangs_Update", false, true] call OL_network_MP;
+[["UPDATE", _gang], "Server_Gangs_Update", false, true, false] call OL_network_MP;
 
 _ownerObj   = call compile (_gang select 2);
 _membersObj = [_gang select 3] call CP_misc_ArrayStr2Obj;

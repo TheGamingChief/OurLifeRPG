@@ -9,7 +9,7 @@ _civLics  = DD_LastCiv getVariable["Licenses", []];
 
 _license = _civLics select _index;
 if(_license in ["OL_License_civ_cocaineGA1","OL_License_civ_lsdGA1","OL_License_civ_heroinGA2","OL_License_civ_lsdGA2","OL_License_civ_heroinGA3","OL_License_civ_marijuanaGA3","OL_License_civ_heroinGA4","OL_License_civ_marijuanaGA4","OL_License_civ_assassin","OL_License_civ_terror"])exitWith{hint "You cannot remove that license, sir. Please stop."};
-if !(((getplayeruid player) in Cpl_id) or ((getplayeruid player) in Deputy_id)) exitWith{hint "You need to a Corporal or higher to do this!"};
+if (!(getplayeruid player in Cpl_id)) exitWith{hint "You need to a Corporal or higher to do this!"};
 
 format['
 	if(player == %1)then{

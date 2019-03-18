@@ -21,7 +21,7 @@ switch (_this select 0) do {
       };
     } forEach OL_Bolos;
 
-    if (!(getPlayerUID player in Cpl_id) && !(getPlayerUID player in CplDeputy_id)) then {
+    if (!(getPlayerUID player in Cpl_id)) then {
       ctrlShow [1600, false]
     } else {
       ctrlSetText [1600, "View Expired Bolos"];

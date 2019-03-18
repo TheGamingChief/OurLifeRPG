@@ -3,7 +3,7 @@ _gang = [_this select 0] call OL_gangs_getByKey; if (count _gang == 0) exitWith 
 _newOwner = false;
 
 if (count (_gang select 3) == 0) exitWith {
-  [["REMOVE", [OL_PlayerGangID]], "Server_gangs_Update", false, true] call OL_network_MP;
+  [["REMOVE", [OL_PlayerGangID]], "Server_Gangs_Update", false, true, false] call OL_network_MP;
   player groupChat format['You have disbanded the "%1" gang', _gang select 1];
   OL_PlayerGangID = -1;
 };
@@ -19,7 +19,7 @@ if (str player == _gang select 2) then {
   _gang set [3, _members];
 };
 
-[["UPDATE", _gang], "Server_gangs_Update", false, true] call OL_network_MP;
+[["UPDATE", _gang], "Server_Gangs_Update", false, true, false] call OL_network_MP;
 OL_PlayerGangID = -1;
 
 _ownerObj   = call compile (_gang select 2);

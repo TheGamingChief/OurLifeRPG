@@ -58,12 +58,12 @@ if (player getVariable "KOED") then
 	player setVariable ["tf_voiceVolume", 1.0, true];
 	player setVariable ["TriedCPR", false, true];
 	{	if (!(_x in weapons player)) then { player addWeapon _x }	} forEach OL_DefaultItems;
-	if (getPlayerUID player != "76561198073512197") then {
+	if (!(getPlayerUID player in ["76561198073512197", "76561198291985397", "76561198122962728", "76561198121243186"])) then {
 		player groupchat "Your legs are broken and need to be healed by EMS!";
 		player setHit ["legs", 1];
 	};
 	player enableSimulation true;
-	format['deleteMarker ("OL_DeadTracker_" + "%1")', PlayerName] call OL_network_Swag;
+	format ['deleteMarker ("OL_DeadTracker_" + "%1")', PlayerName] call OL_network_Swag;
 	uiSleep 2;
 	[] call OL_startup_setVariables;
 	if ("OL_License_civ_drivers" in OL_Licenses) then { player setVariable ["OL_Has_Drivers_License", true, true] };

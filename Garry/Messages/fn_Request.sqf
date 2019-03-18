@@ -1,1 +1,1 @@
-[[OL_PhoneNumber, getPlayerUID player], "Messages_fnc_ServerRequest", false, false, true] call Network_fnc_MP;
+[[OL_PhoneNumber, getPlayerUID player], "Server_Messages_ServerRequest", false, false, true] call OL_Network_MP;

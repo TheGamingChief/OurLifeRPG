@@ -1,4 +1,4 @@
-[[], "Phone_fnc_RefreshNumbers", false, false, true] call Network_fnc_MP;
+[[], "Server_Phone_RefreshNumbers", false, false, true] call OL_Network_MP;
 
 _ret = [];
 

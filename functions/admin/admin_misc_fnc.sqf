@@ -64,7 +64,7 @@ adminMenuUnlock =
 
 adminMenuClean =
 {
-	"if (isServer) then { [] call fnc_Server_Optimizer };" call OL_network_Swag;
+	"if (isServer) then { [] call Server_Misc_Optimizer };" call OL_network_Swag;
 };
 
 

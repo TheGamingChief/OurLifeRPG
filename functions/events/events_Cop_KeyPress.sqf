@@ -270,8 +270,8 @@ fnc_KeyPress_T = {
 };
 
 fnc_KeyPress_R = {
-	if ((vehicle player == player) || ((vehicle player) iskindof "Air") || (player != driver (vehicle player))) exitWith {};
-	[] spawn OL_fnc_Pit;
+	if ((vehicle player == player) || ((vehicle player) isKindOf "Air") || (player != driver (vehicle player))) exitWith {};
+	[] spawn Luke_Police_Pit;
 };
 
 

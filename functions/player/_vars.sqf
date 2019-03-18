@@ -23,8 +23,8 @@ OL_Warrants = [
 ];
 
 OL_DefaultPaycheck_COP = 5000;
-OL_DefaultPaycheck_EMS = 2500;
-OL_DefaultPaycheck_CIV = 1000;
+OL_DefaultPaycheck_EMS = 4000;
+OL_DefaultPaycheck_CIV = 3000;
 MayorExtraPay          = 3000;
 
 OL_isMale = true;

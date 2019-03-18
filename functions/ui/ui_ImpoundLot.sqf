@@ -10,7 +10,7 @@ if ((_this select 0) == "RETRIEVE") exitWith {
     case civilian: { _side = "CIV" };
   };
 
-  [[_this select 1, player getVariable ["realname", name player], getPlayerUID player, _side], "Stats_fnc_RetrieveImpoundedVehicles", false, false, true] call Network_fnc_MP;
+  [[_this select 1, player getVariable ["realname", name player], getPlayerUID player, _side], "Server_Stats_FetchImpounded", false, false, true] call OL_Network_MP;
 };
 
 if ((_this select 0) == "DISPLAY") exitWith {

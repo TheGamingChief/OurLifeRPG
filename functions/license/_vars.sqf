@@ -11,7 +11,7 @@ OL_LicenseArray = [
   ["Boat License",                                     "OL_License_civ_boat",             1500,     ["OL_Shop_DMV", "OL_Shop_DMV2"],                                                                        "[getPlayerUID player]"],
   ["Ferry Captain License",                            "OL_License_civ_ferryCaptain",     2000,     ["OL_Shop_DMV", "OL_Shop_DMV2"],                                                                        "[getPlayerUID player]"],
   ["Comm. Air License",                                "OL_License_civ_commercialAir",    100000,   ["OL_Shop_AirShop"],                                                                                    "[getPlayerUID player]"],
-  ["Air License",                                      "OL_License_civ_air",              20000,    ["OL_Shop_AirShop", "OL_ATM_PMC"],                                                                      "[getPlayerUID player]"],
+  ["Air License",                                      "OL_License_civ_air",              20000,    ["OL_Shop_AirShop"],                                                                      "[getPlayerUID player]"],
   ["Bus License",                                      "OL_License_civ_bus",              1000,     ["OL_Shop_Truckshop"],                                                                                  "[getPlayerUID player]"],
   ["Truck License",                                    "OL_License_civ_truck",            5000,     ["OL_Shop_Truckshop"],                                                                                  "[getPlayerUID player]"],
   ["Taxi License",                                     "OL_License_civ_taxi",             5000,     ["OL_Shop_Taxi"],                                                                                       "[getPlayerUID player]"],
@@ -20,10 +20,6 @@ OL_LicenseArray = [
   ["Baker's License",                                  "OL_License_civ_bakers",           10000,    ["OL_Shop_Bakery"],                                                                                     "[getPlayerUID player]"],
   ["Towing License",                                   "OL_License_civ_Towing",           30000,    ["OL_Shop_Truckshop"],                                                                                  "[getPlayerUID player]"],
   ["Field Medic Training",                             "OL_License_civ_FieldMedic",       75000,    ["OL_Shop_Pharmacy"],                                                                                   "[getPlayerUID player]"],
-
-  //PMC
-  ["PMC License",                                      "OL_License_civ_PMC",              50000,    ["OL_ATM_PMC"],                                                                                         "PMC_id"],
-  ["PMC Cmd. License",                                 "OL_License_civ_PMCCommand",       50000,    ["OL_ATM_PMC"],                                                                                         "CommandPMC_id"],
 
   //Terror
   ["Assassin Weapons Fee",                             "OL_License_civ_assassin",         500000,   ["OL_Shop_Assassin"],                                                                                   "[getPlayerUID player]"],
@@ -56,17 +52,13 @@ OL_LicenseArray = [
   ["Sergeant License",                                 "OL_License_cop_Sergeant",         10000,    ["OL_ATM_PDSgt"],                                                                                       "Sgt_id"],
   ["Corporal License",                                 "OL_License_cop_Corporal",         10000,    ["OL_ATM_PDSgt"],                                                                                       "Cpl_id"],
 
-  //Sheriff
-  ["Sheriff License",                                  "OL_License_cop_Sheriff",          10000,    ["OL_ATM_Sheriff"],                                                                                     "Sheriff_id"],
-  ["Sgt Deputy License",                               "OL_License_cop_SgtDeputy",        10000,    ["OL_ATM_Sheriff"],                                                                                     "SgtDeputy_id"],
-  ["Deputy License",                                   "OL_License_cop_Deputy",           10000,    ["OL_ATM_Sheriff"],                                                                                     "JrDeputy_id"],
-
   //Divisions
   ["FTO License",                                      "OL_License_cop_FTO",              10000,    ["OL_ATM_FTO"],                                                                                         "FTO_id"],
-  ["K-9 Officer License",                              "OL_License_cop_k9",               10000,    ["OL_ATM_K9", "OL_ATM_Sheriff"],                                                                        "K9_id"],
+  ["Internal Affairs License",                         "OL_License_cop_IA",               1,        ["OL_ATM_CID"],                                                                                         "IA_id"],
+  ["K-9 Officer License",                              "OL_License_cop_k9",               10000,    ["OL_ATM_PD", "OL_ATM_Sheriff"],                                                                        "K9_id"],
   ["PD Aviation License",                              "OL_License_cop_pdAviation",       10000,    ["OL_ATM_PDAviation"],                                                                                  "PDAviation_id"],
   ["S.W.A.T. License",                                 "OL_License_cop_swat",             10000,    ["OL_ATM_SWAT"],                                                                                        "SWAT_id"],
   ["Maritime License",                                 "OL_License_cop_maritime",         10000,    ["OL_ATM_CoastGuard"],                                                                                  "CoastGuard_id"],
-  ["CID License",                                      "OL_License_cop_CID",              10000,    ["OL_ATM_CID"],                                                                                         "Undercover_id"],
+  ["CID License",                                      "OL_License_cop_CID",              10000,    ["OL_ATM_K9"],                                                                                         "Undercover_id"],
   ["Undercover License",                               "OL_License_cop_Undercover",       10000,    ["OL_ATM_UC"],                                                                                          "Undercover_id"]
 ];

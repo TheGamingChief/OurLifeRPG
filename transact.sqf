@@ -89,4 +89,4 @@ if (Kontostand >= _withdraw) then
 
 sleep 2;
 atmscriptrunning = 0;
-[] spawn Stats_fnc_Save;
+[] spawn Luke_Stats_Save;

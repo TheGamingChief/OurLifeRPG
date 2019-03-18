@@ -116,12 +116,10 @@ INV_CreateVehicle = {
     newvehicle setVehicleInit '
       this addWeaponCargo ["SWAT", 1];
       this addWeaponCargo ["M32_EP1", 1];
-      this addWeaponCargo ["RH_mk14ebrsp", 1];
       this addMagazineCargo ["6Rnd_Smoke_M203", 4];
       this addMagazineCargo ["RAB_L111A1", 4];
       this addMagazineCargo ["SmokeShell", 4];
       this addMagazineCargo ["15Rnd_9x19_M9", 8];
-      this addMagazineCargo ["20Rnd_762x51_DMR", 4];
     '; processInitCommands;
   };
   if ((_classname in _swatMarksman) && (isNil {_this select 2})) then {

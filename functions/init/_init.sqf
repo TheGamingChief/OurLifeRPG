@@ -1,3 +1,5 @@
+waitUntil {!isNil "Luke_Server_Ready"};
+waitUntil {Luke_Server_Ready};
 OL_LoadedMission = true;
 
 666 cutRsc ["UI_Progressbar", "PLAIN"];
@@ -5,11 +7,11 @@ OL_LoadedMission = true;
 ["Init Briefing", 5] 				call OL_misc_Progressbar;
 [] call OL_misc_briefing;
 ["Init Functions", 10] 			call OL_misc_Progressbar;
-[playercount, rolenumber] 	call OL_network_SwagSetup;
+[playercount, rolenumber] 	call OL_Network_SetupEvents;
 ["Exec Inv Variables", 20] 	call OL_misc_Progressbar;
 waitUntil {!isNil "playerarray" && !(isNil "iscop")};
 _h = [playerarray, playerstringarray, !iscop] execVM "ServerLoad\INVvars.sqf";
-waituntil{scriptDone  _h};
+waitUntil {scriptDone _h};
 ["Exec Bank", 30] 					call OL_misc_Progressbar;
 _h = [] execVM "functions\bank\_vars.sqf";
 waitUntil{scriptDone  _h};
@@ -27,9 +29,8 @@ waitUntil{scriptDone  _h};
 if (isClient) then {
 	[] spawn OL_player_WarrantGrab;
 	[] spawn OL_gangs_Request;
-	[[], "Server_bolos_Request", false, true] call OL_network_MP;
-	[[player, side player], "Server_user_requestKeys", false, false] call OL_network_MP;
-	[[getPlayerUID player], "Server_phone_RequestInfo", false, true] call OL_network_MP;
+	[[], "Server_Bolos_Request", false, true, false] call OL_network_MP;
+	[[player, side player], "Server_User_RequestKeys", false, false, true] call OL_network_MP;
 
   [] spawn {
     waitUntil {!isNil "OL_Hud_HudShow"};
@@ -52,6 +53,7 @@ if (isClient) then {
 			[] call OL_events_Cop_Actions;
 			[] spawn OL_misc_ratioKick;
 			["SETUP"] call OL_misc_Markers;
+			[] call Luke_Police_Init;
 		};
 		case resistance: {
 			[] call OL_events_Ems_KeyEvents;
@@ -71,13 +73,13 @@ if (isClient) then {
 
 	if (isMultiplayer) then {
 		["Loading Statistics", 90] call OL_misc_Progressbar;
-		waitUntil {!isNil "Stats_fnc_ClientEH"};
+		waitUntil {!isNil "Luke_Stats_Init"};
 		player groupChat "OLRPG Stat System Loading...";
-		[] call Stats_fnc_ClientEH;
-		[] call Network_fnc_SetupEvents;
-		_handle = [] spawn Stats_fnc_Request;
+		[] call Luke_Stats_Init;
+		_handle = [] spawn Luke_Stats_Request;
 		waitUntil {scriptDone _handle};
 		waitUntil {OL_StatsLoadedFromDB};
+		[] call Luke_AntiCheat_Check;
 	};
 };
 

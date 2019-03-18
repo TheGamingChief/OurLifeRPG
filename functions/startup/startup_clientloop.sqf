@@ -2,7 +2,7 @@ if (isServer) exitWith {};
 waitUntil {!isNil "OL_InitComplete"};
 waitUntil {OL_InitComplete};
 
-[[5, format["// %1 Has Joined Our Life RPG as %2!", PlayerName, player], "true"], "OL_misc_ChatMessage", true, false] call OL_network_MP;
+[[5, format["// %1 Has Joined Our Life RPG as %2!", PlayerName, player], "true"], "OL_misc_ChatMessage", true, false, true] call OL_network_MP;
 
 _iterations = 0;
 
@@ -36,12 +36,13 @@ while {true} do	{
 	//60 Seconds
   if (_iterations % 60 == 0) then {
       [] spawn OL_misc_Hunger;
+			[] spawn Luke_AntiCheat_Check;
   };
 
 	//300 Seconds (5 Minutes)
 	if (_iterations % 300 == 0) then {
-		if (!isNil "Stats_fnc_Save") then {
-			[] spawn Stats_fnc_Save
+		if (!isNil "Luke_Stats_Save") then {
+			[] spawn Luke_Stats_Save
 		};
 		[] spawn OL_player_Paycheck;
 	};

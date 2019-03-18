@@ -13,10 +13,10 @@ _type   = switch (_mode) do {
 if (isNil "_type") exitWith { player globalChat "Foster broke fnc_Animate" };
 
 if (_global) then {
-  [format ["%1 %2 '%3'", _unit, _type, _anim], "OL_fnc_NoScript", true, false] call OL_network_MP;
+  [format ["%1 %2 '%3'", _unit, _type, _anim], "OL_fnc_NoScript", true, false, true] call OL_network_MP;
   if (!isNil "_length") then {
     uiSleep _length;
-    [format ['%1 switchMove "normal"', _unit], "OL_fnc_NoScript", true, false] call OL_network_MP;
+    [format ['%1 switchMove "normal"', _unit], "OL_fnc_NoScript", true, false, true] call OL_network_MP;
   };
 } else {
   call compile format["%1 %2 '%3'", _unit, _type, _anim];

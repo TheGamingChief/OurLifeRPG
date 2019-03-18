@@ -46,7 +46,7 @@ _color = _veh getVariable ["OL_Vehicle_Color", "#FFFFFF"];
 _licenseplate = _veh getVariable ["OL_Vehicle_LicensePlate", "0000000"];
 
 if (!isNull _owner) then {
-	[[_id, _class, _dmg, _fuel, _upg, _color, _licenseplate], "OL_vehicle_StoreImpound", _owner, true] call OL_network_MP;
+	[[_id, _class, _dmg, _fuel, _upg, _color, _licenseplate], "OL_vehicle_StoreImpound", _owner, true, false] call OL_network_MP;
 } else {
 	_status = ["IMPOUNDED", _veh getVariable "OL_OwnerID", _veh getVariable "OL_OwnerName"];
 	pv_SaveVehicleRequest = [[_id, _class, _dmg, _fuel, _upg, [], [[],[]], _color, _licenseplate, _status], _veh getVariable "OL_OwnerSide"];

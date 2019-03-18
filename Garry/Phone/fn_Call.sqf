@@ -1,3 +1,5 @@
+if (true) exitWith { systemChat "Not Implemented" };
+
 _PhoneNumber  = _this select 0;
 _ReceiverInfo = ["PHONENUMBER", _PhoneNumber] call Phone_fnc_RetrieveInfo;
 
@@ -30,4 +32,4 @@ if (_inContacts) then {
   _display ctrlSetStructuredText parseText format ["<t align='center' color='#FFFFFF'>%1</t><br/><t align='center' color='#FFFFFF'>Calling...", _PhoneNumber]
 };
 
-[[player, OL_PhoneNumber], "Phone_fnc_RecivingCall", _ReceiverID, false, true] call Network_fnc_MP;
+[[player, OL_PhoneNumber], "Phone_fnc_RecivingCall", _ReceiverID, false, true] call OL_Network_MP;

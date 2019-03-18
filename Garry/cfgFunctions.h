@@ -16,29 +16,6 @@ class cfgFunctions {
       class ShowFull {};
     };
   };
-  class Network {
-    class Network_M_Files {
-      file = "Garry\Network";
-      class MP {};
-      class MPExec {};
-      class SetupEvents {};
-    };
-  };
-  class Paintball {
-    class Paintball_M_Files {
-      file = "Garry\Paintball";
-      class Counts {};
-      class EndPlayer {};
-      class JoinRequest {};
-      class LeaveRequest {};
-      class Notification {};
-      class Open {};
-      class RefreshUI {};
-      class StartPlayer {};
-      class UpdateHits {};
-      class WaitLoop {};
-    };
-  }
   class Phone {
     class Phone_M_Files {
       file = "Garry\Phone";
@@ -68,17 +45,6 @@ class cfgFunctions {
       class Sell {};
       class TakeItem {};
       class UpdateText {};
-    };
-  };
-  class Stats {
-    class Stats_M_Files {
-      file = "Garry\Stats";
-      class ClientEH {};
-      class CreateWeaponArray {};
-      class Load {};
-      class Request {};
-      class Save {};
-      class SaveVehicle {};
     };
   };
 };

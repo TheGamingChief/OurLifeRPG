@@ -44,10 +44,10 @@ _direction = switch (true) do {
 };
 
 if (!_ownerLicense) then {
-  [[2, format ["[ANPR HIT] Speedcam %1, %2, %3, %4. (No License)", _this, _direction, getText (configFile >> "cfgVehicles" >> (typeOf (vehicle player)) >> "displayName"), _vehicleOwner], "true"], "OL_misc_ChatMessage", west, false, true] call Network_fnc_MP;
+  [[2, format ["[ANPR HIT] Speedcam %1, %2, %3, %4. (No License)", _this, _direction, getText (configFile >> "cfgVehicles" >> (typeOf (vehicle player)) >> "displayName"), _vehicleOwner], "getPlayerUID player in FTO_id"], "OL_misc_ChatMessage", west, false, true] call OL_Network_MP;
   ["ANPR_Log", format ["[ANPR HIT] Speedcam %1, %2, %3, %4. (No License)", _this, _direction, getText (configFile >> "cfgVehicles" >> (typeOf (vehicle player)) >> "displayName"), _vehicleOwner]] call RM_fnc_LogToServer;
 };
 if ((count _ownerWarrants) != 0) then {
-  [[2, format ["[ANPR HIT] Speedcam %1, %2, %3, %4. (Warrants)", _this, _direction, getText (configFile >> "cfgVehicles" >> (typeOf (vehicle player)) >> "displayName"), _vehicleOwner], "true"], "OL_misc_ChatMessage", west, false, true] call Network_fnc_MP;
+  [[2, format ["[ANPR HIT] Speedcam %1, %2, %3, %4. (Warrants)", _this, _direction, getText (configFile >> "cfgVehicles" >> (typeOf (vehicle player)) >> "displayName"), _vehicleOwner], "getPlayerUID player in FTO_id"], "OL_misc_ChatMessage", west, false, true] call OL_Network_MP;
   ["ANPR_Log", format ["[ANPR HIT] Speedcam %1, %2, %3, %4. (Warrants)", _this, _direction, getText (configFile >> "cfgVehicles" >> (typeOf (vehicle player)) >> "displayName"), _vehicleOwner]] call RM_fnc_LogToServer;
 };

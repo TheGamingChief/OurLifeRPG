@@ -9,7 +9,7 @@ _nvcls		  = nearestObjects [getPos _unit, ["LandVehicle"], 5];
 _PBWeapons  = ["cal68_angel_dye", "cal68_angel_rasta", "cal68_egosl", "cal68_angel_kitty", "cal68_invert_mini_dye"];
 
 if (_projectile in DDOPP_taser_arrBullet) exitWith { [_unit, _source, DDOPP_taser_koTime] spawn DDOPP_taser_victimFx };
-if ((player == _unit) && (player != _source) && (_selection == "body") && (_projectile == "cal68_specpaint2")) exitWith { [] call Paintball_fnc_UpdateHits };
+if ((player == _unit) && (player != _source) && (_selection == "body") && (_projectile == "cal68_specpaint2")) exitWith { [] call Luke_Paintball_UpdateHits };
 if (_projectile == "cal68_specpaint2") exitWith {};
 
 [_selection, _damage, _source, _nvcls] spawn {

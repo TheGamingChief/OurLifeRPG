@@ -5,6 +5,6 @@ _locked = _gang select 4;
 _locked = !_locked;
 
 _gang set [4, _locked];
-[["UPDATE", _gang], "Server_gangs_Update", false, true] call OL_network_MP;
+[["UPDATE", _gang], "Server_Gangs_Update", false, true, false] call OL_network_MP;
 
 player groupChat format ["The gangs Locked status is now: %1", _locked];

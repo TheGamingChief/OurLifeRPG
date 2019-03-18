@@ -17,4 +17,4 @@ if ((_cloudPiece) == -1) then{
 	true;
 };
 
-if (_cloudKey == "Bolos") then { [[], "Server_bolos_Request", false, true] call OL_network_MP }; // Fix for bolos not automaticlly updating.
+if (_cloudKey == "Bolos") then { [[], "Server_Bolos_Request", false, true, false] call OL_network_MP }; // Fix for bolos not automaticlly updating.

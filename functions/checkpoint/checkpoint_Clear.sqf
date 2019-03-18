@@ -13,7 +13,7 @@ switch (true) do {
       ["CheckPointClear_Log", format ["Admin %1 (%2) has Cleared a Checkpoint at %3", PlayerName, getPlayerUID player, _gridPos]] call RM_fnc_LogToServer;
   };
   case (isCop) : {
-    if ((_uid in cpl_id) or (_uid in Deputy_id)) then {
+    if (_uid in cpl_id) then {
 
         format['if(isCop) then{player sideChat "%1 has cleared a checkpoint (200m)."}', PlayerName] call OL_network_Swag;
       {

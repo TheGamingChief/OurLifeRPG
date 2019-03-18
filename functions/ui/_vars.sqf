@@ -39,7 +39,7 @@ OL_ATM_Clothes = [
 		[
 			["olrpg_chiefsuni",		 "Chief_ID", "Chief Of Police Uniform"],
 			["olrpg_astchiefsuni", "Chief_ID", "Assistant Chief Uniform"],
-			["olrpg_captainuni",		 "Cpt_ID",	 "Captain Uniform"],
+			["olrpg_captainuni",	 "Cpt_ID",	 "Captain Uniform"],
 			["olrpg_pdltvest",		 "Lt_ID",		 "Lieutenant Uniform"]
 		]
 	],
@@ -52,61 +52,32 @@ OL_ATM_Clothes = [
 	[OL_ATM_PD,
 		[
 			["olrpg_snruni", "PO3_id",								"Senior Patrol Officer Uniform"],
-			["olrpg_patuni", "[getPlayerUID player]", "Patrol Officer Uniform"]
+			["olrpg_patuni", "[getPlayerUID player]", "Patrol Officer Uniform"],
+			["olrpg_k9nor", "K9_ID", "K9 Uniform"]
 		]
 	],
 	[OL_ATM_FTO,
 		[
-			["olrpg_ftouni",		"FTO_ID", "FTO Uniform"],
-			["olrpg_chptrpuni",	"FTO_ID", "CHP Trooper"],
-			["olrpg_chpcpluni",	"FTO_ID", "CHP Corporal"],
-			["olrpg_chpsgtuni",	"FTO_ID", "CHP Sergeant"]
+			["olrpg_ftouni",		"FTO_ID", "FTO Uniform"]
 		]
 	],
 	[OL_ATM_CID,
 		[
-			["olrpg_pdcid",	 "Undercover_ID", "CID Command Uniform"],
-			["olrpg_iauni",	 "Undercover_ID", "Internal Affairs Uniform"],
-			["olrpg_pdcidc", "Undercover_ID", "CID Uniform"]
+			["olrpg_iauni",	 "Undercover_ID", "Internal Affairs Uniform"]
 		]
 	],
 	[OL_ATM_K9,
 		[
-			["olrpg_k9com", "K9_ID", "K9 Command Uniform"],
-			["olrpg_k9marksman", "K9_ID", "K9 Marksman Uniform"],
-			["olrpg_k9nor", "K9_ID", "K9 Uniform"]
+			["olrpg_pdcid",	 "Undercover_ID", "CID Command Uniform"],
+			["olrpg_pdcidc", "Undercover_ID", "CID Uniform"]
 		]
 	],
 	[OL_ATM_PDAviation,
 		[
-			["olrpg_pdpilotcom", "PDAviation_ID", "Aviation Command Uniform"],
 			["olrpg_oppilot",		 "PDAviation_ID", "OP Pilot Uniform"],
 			["olrpg_pdpilot",		 "PDAviation_ID", "Aviation Pilot Uniform"]
 		]
 	],
-	[OL_ATM_Sheriff,
-		[
-			["olrpg_cptdepuni",	 "Sheriff_id", 	 "Captain Deputy Uniform"],
-			["olrpg_ltdepuni",	 "Sheriff_id", 	 "Lieutenant Deputy Uniform"],
-			["olrpg_sgtdepuni2", "SgtDeputy_id", "Sergeant Deputy Uniform"],
-			["olrpg_corpdepuni", "Deputy_id",		 "Corporal Deputy Uniform"],
-			["olrpg_snrpdepuni", "Deputy_id",		 "Senior Deputy Uniform"],
-			["olrpg_depuni",		 "JrDeputy_id",	 "Deputy Uniform"],
-			["olrpg_depk9uni",	 "K9_id",				 "Deputy K9 Uniform"],
-			["olrpg_dnrdepuni",	 "JrDeputy_id",	 "DNR Uniform"]
-		]
-	],
-	[OL_Shop_Cop_SheriffAvitaion,
-		[
-			["olrpg_sdpilot", "PDAviation_id", "Deputy Pilot Uniform"]
-		]
-	],
-	[OL_ATM_CoastGuard,
-		[
-			["olrpg_dnrdepuni",	 "JrDeputy_id",	 "DNR Uniform"]
-		]
-	],
-
 	[OL_ATM_MainFire,
 		[
 			["KPFS_THW_Press",		"EMT1_id", "Paramedic Uniform"],
@@ -138,18 +109,6 @@ OL_ATM_Clothes = [
 			["TK_CIV_Takistani04_EP1", "Undercover_id", "Turban (Uniform)"]
 		]
 	],
-	[OL_ATM_PMC,
-		[
-			["US_Soldier_Officer_EP1",			 "CommandPMC_id",	"General Uniform"],
-			["CZ_Special_Forces_TL_DES_EP1", "CommandPMC_id",	"Commander Uniform"],
-			["US_Soldier_TL_EP1",						 "CommandPMC_id",	"Lieutenant Uniform"],
-			["US_Soldier_SL_EP1", 					 "PMC_id", 				"Sergeant Uniform"],
-			["US_Soldier_SL_EP1",						 "PMC_id",				"Corporal Uniform"],
-			["US_Soldier_EP1",			 				 "PMC_id",				"Private Uniform"],
-			["US_Soldier_Sniper_EP1",				 "PMC_id",				"Marksman Uniform"],
-			["US_Soldier_Crew_EP1", 				 "PMC_id",				"Pilot Uniform"]
-		]
-	],
 
 	[OL_Shop_Assassin,
 		[
@@ -158,9 +117,7 @@ OL_ATM_Clothes = [
 	]
 ];
 
-{
-	missionNamespace setVariable [format ["OL_%1_ClothesArray", _x select 0], _x]
-} forEach OL_ATM_Clothes;
+{ missionNamespace setVariable [format ["OL_%1_ClothesArray", _x select 0], _x] } forEach OL_ATM_Clothes;
 
 OL_InteractionMenu_Key = 18;
 
@@ -170,7 +127,7 @@ OL_CustomKeys_Actions  = [
 	"PISTOL HOLSTER"
 ];
 
-OL_CustomKeys 				 = [
+OL_CustomKeys = [
   ["A", 30],
   ["B", 48],
   ["C", 46],

@@ -10,7 +10,7 @@ if (_PhoneNumber == "411") exitWith { [player, _Message] call Messages_fnc_Notif
 _isValid = ["PHONENUMBER", _PhoneNumber] call Phone_fnc_RetrieveInfo;
 if (count _isValid < 1) exitWith { systemChat "[Message Error] Unable to send message due to the the number being invalid." };
 
-[[_Message, _PhoneNumber, player getVariable ["realname", name player], getPlayerUID player, OL_PhoneNumber, [time / 60 / 60] call BIS_fnc_timeToString], "Messages_fnc_SendMessage", false, false, true] call Network_fnc_MP;
+[[_Message, _PhoneNumber, player getVariable ["realname", name player], getPlayerUID player, OL_PhoneNumber, [time / 60 / 60] call BIS_fnc_timeToString], "Server_Messages_SendMessage", false, false, true] call OL_Network_MP;
 
 if (dialog) then { closeDialog 0 };
 

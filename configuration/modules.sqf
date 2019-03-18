@@ -15,13 +15,11 @@ _activeModules = [
 	"checkpoint",
 	"cloud",
 	"isse",
-	"network",
 	"misc",
 	"phone",
 	"player",
 	"license",
 	"tfar",
-	"stats",
 	"vehicle",
 	"ui",
 	"init"

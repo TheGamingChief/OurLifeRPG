@@ -176,7 +176,7 @@ class RscButton_1603: Swag_RscButton
 };
 class RscButton_1604: Swag_RscButton
 {
-    action = "if (OL_StatsLoadedFromDB) then { [] spawn Stats_fnc_Save };";
+    action = "if (OL_StatsLoadedFromDB) then { [true] spawn Luke_Stats_Save };";
 
 	colorText[] = {0,0,0,0};
 	colorBackground[] = {0,0,0,0};

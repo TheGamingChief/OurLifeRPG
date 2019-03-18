@@ -99,7 +99,7 @@ switch (adminCMD) do
 	};
 	case 14: //Server Cleaner
 	{
-		"if (isServer) then { [] call fnc_Server_Optimizer };" call OL_network_Swag; closeDialog 0;
+		"if (isServer) then { [] call Server_Misc_Optimizer };" call OL_network_Swag; closeDialog 0;
 		format['if(getplayeruid player in OL_Developer) then {player sideChat "[Admin Log] Admin %1 has executed server cleaner"}', PlayerName] call OL_network_Swag;
 		format['if(getplayeruid player in adminlevel4) then {player sideChat "[Admin Log] Admin %1 has executed server cleaner"}', PlayerName] call OL_network_Swag;
 		["Admin_Log", format ["Senior Admin %1 (%2) has ran server cleaner", PlayerName, getPlayerUID player]] call RM_fnc_LogToServer;

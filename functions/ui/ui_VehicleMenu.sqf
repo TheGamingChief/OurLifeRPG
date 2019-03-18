@@ -5,7 +5,7 @@ if ((_this select 0) == "FETCH") exitWith {
   ctrlEnable [1600, false];
   ctrlShow [1601, false];
 
-  [[getPlayerUID player, playerSide, _this select 1, _this select 2], "Stats_fnc_RetrieveSavedVehicles", false, false, true] call Network_fnc_MP;
+  [[getPlayerUID player, playerSide, _this select 1, _this select 2], "Server_Stats_FetchSaved", false, false, true] call OL_Network_MP;
 };
 
 if ((_this select 0) == "DISPLAY") exitWith {

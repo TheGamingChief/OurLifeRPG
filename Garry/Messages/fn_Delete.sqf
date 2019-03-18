@@ -2,7 +2,7 @@ _this        = call compile (_this select 0);
 _MessageID   = _this select 0;
 _PhoneNumber = _this select 2;
 
-[[_MessageID, _PhoneNumber], "Messages_fnc_DeleteByID", false, false, true] call Network_fnc_MP;
+[[_MessageID, _PhoneNumber], "Server_Messages_DeleteByID", false, false, true] call OL_Network_MP;
 
 _index = {
   if ((_x select 0) == _MessageID) exitWith { _forEachIndex }
