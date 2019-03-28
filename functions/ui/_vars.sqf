@@ -28,9 +28,9 @@ OL_SpawnPoints =  [
 OL_ATM_Clothes = [
 	[OL_ATM_SWAT,
 		[
-			["olrpg_swatcom",		"SWAT_ID", "S.W.A.T. Command Uniform"],
-			["olrpg_swatspec",	"SWAT_ID", "S.W.A.T. Specialist Uniform"],
-			["olrpg_swatmark",	"SWAT_ID", "S.W.A.T. Marksman Uniform"],
+			["olrpg_swatcom",		"CommandSWAT_id", "S.W.A.T. Command Uniform"],
+			["olrpg_swatspec",	"CommandSWAT_id", "S.W.A.T. Specialist Uniform"],
+			["olrpg_swatmark",	"CommandSWAT_id", "S.W.A.T. Marksman Uniform"],
 			["olrpg_swatnor",		"SWAT_ID", "S.W.A.T. Operator Uniform"],
 			["olrpg_swatprob",	"SWAT_ID", "S.W.A.T. Probationary Uniform"]
 		]
