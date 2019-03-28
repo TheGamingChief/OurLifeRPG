@@ -2818,7 +2818,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop1";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="1 - Patrol Officer (Untrained)";
+					description="1 - Patrol Officer";
 				};
 			};
 		};
@@ -2840,7 +2840,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop2";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="2 - Patrol Officer (Untrained)";
+					description="2 - Patrol Officer";
 				};
 			};
 		};
@@ -2862,7 +2862,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop3";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="3 - Patrol Officer (Untrained)";
+					description="3 - Patrol Officer";
 				};
 			};
 		};
@@ -2884,7 +2884,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop4";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="4 - Patrol Officer (Untrained)";
+					description="4 - Patrol Officer";
 				};
 			};
 		};
@@ -2906,7 +2906,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop5";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="5 - Patrol Officer (Untrained)";
+					description="5 - Patrol Officer";
 				};
 			};
 		};
@@ -2928,7 +2928,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop6";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="6 - Patrol Officer (Trained)";
+					description="6 - Patrol Officer";
 				};
 			};
 		};
@@ -2950,7 +2950,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop7";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="7 - Patrol Officer (Trained)";
+					description="7 - Patrol Officer";
 				};
 			};
 		};
@@ -2972,7 +2972,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop8";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="8 - Patrol Officer (Trained)";
+					description="8 - Patrol Officer";
 				};
 			};
 		};
@@ -2994,7 +2994,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop9";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="9 - Patrol Officer (Trained)";
+					description="9 - Patrol Officer";
 				};
 			};
 		};
@@ -3016,7 +3016,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop10";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="10 - Patrol Officer (Trained)";
+					description="10 - Patrol Officer";
 				};
 			};
 		};
@@ -3038,7 +3038,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop11";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="11 - Patrol Officer (Trained)";
+					description="11 - Patrol Officer";
 				};
 			};
 		};
@@ -3060,7 +3060,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop12";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="12 - Patrol Officer (Trained)";
+					description="12 - Patrol Officer";
 				};
 			};
 		};
@@ -3082,7 +3082,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop13";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="13 - Patrol Officer (Trained)";
+					description="13 - Patrol Officer";
 				};
 			};
 		};
@@ -3104,7 +3104,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop14";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="14 - Patrol Officer (Trained)";
+					description="14 - Patrol Officer";
 				};
 			};
 		};
@@ -3126,7 +3126,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop15";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="15 - Patrol Officer (Trained)";
+					description="15 - Patrol Officer";
 				};
 			};
 		};
@@ -3148,7 +3148,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop16";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="16 - Patrol Officer (Trained)";
+					description="16 - Patrol Officer";
 				};
 			};
 		};
@@ -3170,7 +3170,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop17";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="17 - Patrol Officer (Trained)";
+					description="17 - Patrol Officer";
 				};
 			};
 		};
@@ -3192,7 +3192,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop18";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="18 - Patrol Officer (Trained)";
+					description="18 - Patrol Officer";
 				};
 			};
 		};
@@ -3214,7 +3214,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop19";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="19 - Patrol Officer (Trained)";
+					description="19 - Patrol Officer";
 				};
 			};
 		};
@@ -3236,7 +3236,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop20";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="20 - Patrol Officer (Trained)";
+					description="20 - Patrol Officer";
 				};
 			};
 		};
@@ -3258,7 +3258,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop21";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="21 - Patrol Officer (Trained)";
+					description="21 - Patrol Officer";
 				};
 			};
 		};
@@ -3280,7 +3280,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop22";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="22 - Patrol Officer (Trained)";
+					description="22 - Patrol Officer";
 				};
 			};
 		};
@@ -3302,7 +3302,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop23";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="23 - Patrol Officer (Trained)";
+					description="23 - Patrol Officer";
 				};
 			};
 		};
@@ -3324,7 +3324,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop24";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="24 - Patrol Officer (Trained)";
+					description="24 - Patrol Officer";
 				};
 			};
 		};
@@ -3346,7 +3346,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop25";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="25 - Patrol Officer (Trained)";
+					description="25 - Patrol Officer";
 				};
 			};
 		};
@@ -3368,7 +3368,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop26";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="26 - Patrol Officer (Trained)";
+					description="26 - Patrol Officer";
 				};
 			};
 		};
@@ -3390,7 +3390,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop27";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="27 - Patrol Officer (Trained)";
+					description="27 - Patrol Officer";
 				};
 			};
 		};
@@ -3412,7 +3412,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop28";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="28 - Patrol Officer (Trained)";
+					description="28 - Patrol Officer";
 				};
 			};
 		};
@@ -3434,7 +3434,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop29";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="29 - Patrol Officer (Trained)";
+					description="29 - Patrol Officer";
 				};
 			};
 		};
@@ -3456,7 +3456,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop30";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="30 - Patrol Officer (Trained)";
+					description="30 - Patrol Officer";
 				};
 			};
 		};
@@ -3478,7 +3478,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop31";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="31 - Patrol Officer (Trained)";
+					description="31 - Patrol Officer";
 				};
 			};
 		};
@@ -3500,7 +3500,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop32";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="32 - Patrol Officer (Trained)";
+					description="32 - Patrol Officer";
 				};
 			};
 		};
@@ -3522,7 +3522,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop33";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="33 - Patrol Officer (Trained)";
+					description="33 - Patrol Officer";
 				};
 			};
 		};
@@ -3544,7 +3544,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop34";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="34 - Patrol Officer (Trained)";
+					description="34 - Patrol Officer";
 				};
 			};
 		};
@@ -3566,7 +3566,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop35";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="35 - Patrol Officer (Trained)";
+					description="35 - Patrol Officer";
 				};
 			};
 		};
@@ -3588,7 +3588,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop36";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="36 - Patrol Officer (Trained)";
+					description="36 - Patrol Officer";
 				};
 			};
 		};
@@ -3610,7 +3610,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop37";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="37 - Patrol Officer (Trained)";
+					description="37 - Patrol Officer";
 				};
 			};
 		};
@@ -3632,7 +3632,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop38";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="38 - Patrol Officer (Trained)";
+					description="38 - Patrol Officer";
 				};
 			};
 		};
@@ -3654,7 +3654,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop39";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="39 - Patrol Officer (Trained)";
+					description="39 - Patrol Officer";
 				};
 			};
 		};
@@ -3676,7 +3676,7 @@ class Mission
 					skill=0.60000002;
 					text="Cop40";
 					init="removeAllWeapons this; this setpos [getpos this select 0, getpos this select 1, (getpos this select 2)];";
-					description="40 - Patrol Officer (Trained)";
+					description="40 - Patrol Officer";
 				};
 			};
 		};
@@ -31396,7 +31396,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=408;
+		items=407;
 		class Item0
 		{
 			position[]={4563.4185,9.150219,2440.3647};
@@ -34859,15 +34859,6 @@ class Mission
 		};
 		class Item403
 		{
-			position[]={6150.0698,0.14915577,7409.3579};
-			name="CID_1";
-			text="C.I.D";
-			type="mil_dot";
-			colorName="ColorBlue";
-			angle=-65.931396;
-		};
-		class Item404
-		{
 			position[]={4814.063,117.67017,5169.5684};
 			name="CID_2";
 			text="Internal Affairs";
@@ -34875,7 +34866,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-65.931396;
 		};
-		class Item405
+		class Item404
 		{
 			position[]={2229.7996,0.31372786,905.10083};
 			name="policebase_1_1_1_1";
@@ -34884,7 +34875,7 @@ class Mission
 			colorName="ColorBlack";
 			angle=-86.870804;
 		};
-		class Item406
+		class Item405
 		{
 			position[]={4899.8374,110,5342.165};
 			name="dogdog1";
@@ -34893,7 +34884,7 @@ class Mission
 			b=0.5;
 			angle=33.179501;
 		};
-		class Item407
+		class Item406
 		{
 			position[]={3560.0449,53.173229,3133.9255};
 			name="dogdog2";

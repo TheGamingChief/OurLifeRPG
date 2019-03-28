@@ -1840,18 +1840,18 @@ OL_ShopsArray = [
 		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_Shop_Cop_POVehSpawn", true],
 		["S.W.A.T. Probie", _copswat1, _copswat2, "SWAT_id", "OL_Shop_SWAT_VehSpawn", true],
 		["S.W.A.T. Operator", _copswat2, _copswat2, "SWAT_id", "OL_Shop_SWAT_VehSpawn", true],
-		["S.W.A.T. Specalist", _copswat3, _copswat3, "SWAT_id", "OL_Shop_SWAT_VehSpawn", true],
-		["S.W.A.T. Command", _copswat5, _copswat5, "SWAT_id", "OL_Shop_SWAT_VehSpawn", true],
-		["S.W.A.T. Marksman", _copswat4, _copswat4, "SWAT_id", "OL_Shop_SWAT_VehSpawn", true],
+		["S.W.A.T. Specalist", _copswat3, _copswat3, "CommandSWAT_id", "OL_Shop_SWAT_VehSpawn", true],
+		["S.W.A.T. Command", _copswat5, _copswat5, "CommandSWAT_id", "OL_Shop_SWAT_VehSpawn", true],
+		["S.W.A.T. Marksman", _copswat4, _copswat4, "CommandSWAT_id", "OL_Shop_SWAT_VehSpawn", true],
 		["S.W.A.T. Vehicles", _copswatvehicle, _copswatvehicle, "SWAT_id", "OL_Shop_SWAT_VehSpawn", false]
 	], "iscop"],
 	[OL_Shop_SWAT_1, "S.W.A.T. Shops", OL_Shop_SWAT_1, [
 		["Basic Police Gear", _copbasic, _copbasic, "[getPlayerUID player]", "OL_COP_SPD2", true],
 		["S.W.A.T. Probie", _copswat1, _copswat2, "SWAT_id", "OL_COP_SPD2", true],
 		["S.W.A.T. Operator", _copswat2, _copswat2, "SWAT_id", "OL_COP_SPD2", true],
-		["S.W.A.T. Specalist", _copswat3, _copswat3, "SWAT_id", "OL_COP_SPD2", true],
-		["S.W.A.T. Command", _copswat5, _copswat5, "SWAT_id", "OL_COP_SPD2", true],
-		["S.W.A.T. Marksman", _copswat4, _copswat4, "SWAT_id", "OL_COP_SPD2", true],
+		["S.W.A.T. Specalist", _copswat3, _copswat3, "CommandSWAT_id", "OL_COP_SPD2", true],
+		["S.W.A.T. Command", _copswat5, _copswat5, "CommandSWAT_id", "OL_COP_SPD2", true],
+		["S.W.A.T. Marksman", _copswat4, _copswat4, "CommandSWAT_id", "OL_COP_SPD2", true],
 		["S.W.A.T. Vehicles", _copswatvehicle, _copswatvehicle, "SWAT_id", "OL_COP_SPD2", false]
 	], "iscop"],
 	[OL_Shop_EMT, "E.M.T. Shops", OL_Shop_EMT, [
